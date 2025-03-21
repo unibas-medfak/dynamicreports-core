@@ -45,11 +45,6 @@ public class JasperJsonExporterBuilder extends
   }
 
   /**
-   * <p>
-   * setCharacterWidth.
-   * </p>
-   *
-   * @param characterWidth a {@link java.lang.Float} object.
    * @return a
    *         {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder}
    *         object.
