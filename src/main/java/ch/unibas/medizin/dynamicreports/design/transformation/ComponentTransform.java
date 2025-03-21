@@ -36,7 +36,6 @@ import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignHyperlinkC
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignImage;
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignLine;
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignList;
-import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignMap;
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignRectangle;
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignSubreport;
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignTextField;
@@ -212,9 +211,6 @@ public class ComponentTransform {
         }
         if (component instanceof DRICrosstab) {
             return crosstab((DRICrosstab) component, resetType, resetGroup);
-        }
-        if (component instanceof DRIMap) {
-            return map((DRIMap) component, resetType, resetGroup);
         }
         if (component instanceof DRICustomComponent) {
             return customComponent((DRICustomComponent) component, resetType, resetGroup);
@@ -818,20 +814,6 @@ public class ComponentTransform {
         final DRDesignCrosstab designCrosstab = accessor.getCrosstabTransform().transform(crosstab, resetType, resetGroup);
         component(designCrosstab, crosstab, crosstab.getStyle(), false, DefaultStyleType.NONE);
         return designCrosstab;
-    }
-
-    // map
-    private DRDesignMap map(final DRIMap map, final ResetType resetType, final DRDesignGroup resetGroup) throws DRException {
-        final DRDesignMap designMap = new DRDesignMap();
-        component(designMap, map, map.getStyle(), false, DefaultStyleType.NONE);
-        designMap.setLatitudeExpression(accessor.getExpressionTransform().transformExpression(map.getLatitudeExpression()));
-        designMap.setLongitudeExpression(accessor.getExpressionTransform().transformExpression(map.getLongitudeExpression()));
-        designMap.setZoomExpression(accessor.getExpressionTransform().transformExpression(map.getZoomExpression()));
-        designMap.setWidth(accessor.getTemplateTransform().getMapWidth(map));
-        designMap.setHeight(accessor.getTemplateTransform().getMapHeight(map));
-        designMap.setEvaluationTime(evaluationTimeFromResetType(resetType));
-        designMap.setEvaluationGroup(resetGroup);
-        return designMap;
     }
 
     // custom component

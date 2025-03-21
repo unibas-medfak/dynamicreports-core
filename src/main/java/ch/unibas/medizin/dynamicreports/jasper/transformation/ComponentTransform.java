@@ -41,7 +41,6 @@ import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignGen
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignImage;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignLine;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignList;
-import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignMap;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignRectangle;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignSubreport;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignTextField;
@@ -61,7 +60,6 @@ import ch.unibas.medizin.dynamicreports.report.component.DRIDesignCustomComponen
 import ch.unibas.medizin.dynamicreports.report.constant.ComponentPositionType;
 import ch.unibas.medizin.dynamicreports.report.constant.ListType;
 import ch.unibas.medizin.dynamicreports.report.constant.StretchType;
-import net.sf.jasperreports.components.map.StandardMapComponent;
 import net.sf.jasperreports.engine.JRGenericElementType;
 import net.sf.jasperreports.engine.design.JRDesignBreak;
 import net.sf.jasperreports.engine.design.JRDesignComponentElement;
@@ -147,9 +145,6 @@ public class ComponentTransform {
             jrElements = component(jrElement, component, listType);
         } else if (component instanceof DRIDesignCrosstab) {
             final JRDesignElement jrElement = accessor.getCrosstabTransform().transform((DRIDesignCrosstab) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignMap) {
-            final JRDesignElement jrElement = map((DRIDesignMap) component);
             jrElements = component(jrElement, component, listType);
         } else if (component instanceof DRIDesignCustomComponent) {
             final JRDesignElement jrElement = customComponent(component);
@@ -437,25 +432,6 @@ public class ComponentTransform {
             jrDesignGenericElement.addParameter(accessor.getExpressionTransform().getGenericElementParameterExpression(parameterExpression));
         }
         return jrDesignGenericElement;
-    }
-
-    // map
-    private JRDesignElement map(final DRIDesignMap map) {
-        final StandardMapComponent jrMap = new StandardMapComponent();
-        final EvaluationTime evaluationTime = map.getEvaluationTime();
-        jrMap.setEvaluationTime(ConstantTransform.evaluationTime(evaluationTime));
-        if (evaluationTime != null && evaluationTime.equals(EvaluationTime.GROUP) && map.getEvaluationGroup() != null) {
-            jrMap.setEvaluationGroup(accessor.getGroupTransform().getGroup(map.getEvaluationGroup()).getName());
-        }
-        jrMap.setLatitudeExpression(accessor.getExpressionTransform().getExpression(map.getLatitudeExpression()));
-        jrMap.setLongitudeExpression(accessor.getExpressionTransform().getExpression(map.getLongitudeExpression()));
-        jrMap.setZoomExpression(accessor.getExpressionTransform().getExpression(map.getZoomExpression()));
-
-        final JRDesignComponentElement jrComponent = new JRDesignComponentElement();
-        jrComponent.setComponent(jrMap);
-        //jrComponent.setComponentKey(new ComponentKey(ComponentsExtensionsRegistryFactory.NAMESPACE, "jr", "map"));
-
-        return jrComponent;
     }
 
     // custom component
