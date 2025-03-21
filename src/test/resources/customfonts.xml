@@ -3,15 +3,15 @@
 <fontFamilies>
 
   <fontFamily name="Arimo">
-    <normal>net/sf/dynamicreports/test/fonts/Arimo-Regular.ttf</normal>
-    <bold>net/sf/dynamicreports/test/fonts/Arimo-Bold.ttf</bold>
-    <italic>net/sf/dynamicreports/test/fonts/Arimo-Italic.ttf</italic>
+    <normal>ch/unibas/medizin/dynamicreports/test/fonts/Arimo-Regular.ttf</normal>
+    <bold>ch/unibas/medizin/dynamicreports/test/fonts/Arimo-Bold.ttf</bold>
+    <italic>ch/unibas/medizin/dynamicreports/test/fonts/Arimo-Italic.ttf</italic>
     <pdfEncoding>Identity-H</pdfEncoding>
     <pdfEmbedded>true</pdfEmbedded>
   </fontFamily>
 
   <fontFamily name="FreeUniversal">
-    <normal>net/sf/dynamicreports/test/fonts/FreeUniversal-Regular.ttf</normal>
+    <normal>ch/unibas/medizin/dynamicreports/test/fonts/FreeUniversal-Regular.ttf</normal>
   </fontFamily>
 
 </fontFamilies>

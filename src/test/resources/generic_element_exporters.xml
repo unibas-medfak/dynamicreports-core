@@ -21,7 +21,7 @@
         </property>
     </bean>
 
-    <bean id="customHtmlExportHandler" class="net.sf.dynamicreports.test.jasper.component.CustomHtmlHandler">
+    <bean id="customHtmlExportHandler" class="ch.unibas.medizin.dynamicreports.test.jasper.component.CustomHtmlHandler">
     </bean>
 
 </beans>
