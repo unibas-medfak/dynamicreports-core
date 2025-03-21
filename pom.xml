@@ -6,14 +6,14 @@
 
     <groupId>ch.unibas.medizin</groupId>
     <artifactId>dynamicreports-core</artifactId>
-    <version>0.0.2</version>
+    <version>0.9.0</version>
     <packaging>jar</packaging>
 
     <name>DynamicReports</name>
     <url>https://github.com/unibas-medfak/dynamicreports-core</url>
     <description>
         DynamicReports is an open source Java reporting library based on
-        JasperReports. It allows to create dynamic report designs and it doesn't
+        JasperReports. It allows to create dynamic report designs, and it doesn't
         need a visual report designer.
         You can very quickly create reports and produce documents that can be
         displayed, printed or exported into many popular formats such as PDF,
@@ -27,6 +27,12 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/unibas-medfak/dynamicreports-core.git</connection>
+        <developerConnection>scm:git:https://github.com/unibas-medfak/dynamicreports-core.git</developerConnection>
+        <url>https://github.com/unibas-medfak/dynamicreports-core</url>
+    </scm>
 
     <distributionManagement>
         <repository>
@@ -184,6 +190,61 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <failOnError>false</failOnError>
+                    <sourceFileExcludes>
+                        <sourceFileExclude>
+                            ${project.basedir}/target</sourceFileExclude>
+                    </sourceFileExcludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.7</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.7.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
             </plugin>
         </plugins>
     </build>
