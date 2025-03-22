@@ -39,26 +39,26 @@ public interface DRIDesignCrosstabDataset extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignDataset} object.
      */
-    public DRIDesignDataset getSubDataset();
+    DRIDesignDataset getSubDataset();
 
     /**
      * <p>getDataPreSorted.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getDataPreSorted();
+    Boolean getDataPreSorted();
 
     /**
      * <p>getResetType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.constant.ResetType} object.
      */
-    public ResetType getResetType();
+    ResetType getResetType();
 
     /**
      * <p>getResetGroup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignGroup} object.
      */
-    public DRIDesignGroup getResetGroup();
+    DRIDesignGroup getResetGroup();
 }

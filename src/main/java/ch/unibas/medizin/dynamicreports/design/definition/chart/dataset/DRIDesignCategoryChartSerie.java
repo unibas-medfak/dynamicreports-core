@@ -35,12 +35,12 @@ public interface DRIDesignCategoryChartSerie extends DRIDesignChartSerie {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getValueExpression();
+    DRIDesignExpression getValueExpression();
 
     /**
      * <p>getLabelExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getLabelExpression();
+    DRIDesignExpression getLabelExpression();
 }

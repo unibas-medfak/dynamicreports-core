@@ -39,14 +39,14 @@ public interface JasperReportHandler {
      *
      * @param jasperReportBuilders a {@link ch.unibas.medizin.dynamicreports.jasper.builder.JasperReportBuilder} object.
      */
-    public void concatenate(JasperReportBuilder... jasperReportBuilders);
+    void concatenate(JasperReportBuilder... jasperReportBuilders);
 
     /**
      * <p>setContinuousPageNumbering.</p>
      *
      * @param continuousPageNumbering a boolean.
      */
-    public void setContinuousPageNumbering(boolean continuousPageNumbering);
+    void setContinuousPageNumbering(boolean continuousPageNumbering);
 
     /**
      * <p>getPrintList.</p>
@@ -54,5 +54,5 @@ public interface JasperReportHandler {
      * @return a {@link java.util.List} object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    public List<JasperPrint> getPrintList() throws DRException;
+    List<JasperPrint> getPrintList() throws DRException;
 }

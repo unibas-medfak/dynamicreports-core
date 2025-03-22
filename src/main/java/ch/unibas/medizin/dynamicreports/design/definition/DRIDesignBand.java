@@ -40,40 +40,40 @@ public interface DRIDesignBand extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getSplitType();
+    SplitType getSplitType();
 
     /**
      * <p>getBandComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignComponent} object.
      */
-    public DRIDesignComponent getBandComponent();
+    DRIDesignComponent getBandComponent();
 
     /**
      * <p>getList.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.base.component.DRDesignList} object.
      */
-    public DRDesignList getList();
+    DRDesignList getList();
 
     /**
      * <p>getHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getHeight();
+    Integer getHeight();
 
     /**
      * <p>getPrintWhenExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getPrintWhenExpression();
+    DRIDesignExpression getPrintWhenExpression();
 }

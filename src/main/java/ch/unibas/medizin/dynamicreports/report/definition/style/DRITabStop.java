@@ -37,12 +37,12 @@ public interface DRITabStop extends Serializable {
      *
      * @return a int.
      */
-    public int getPosition();
+    int getPosition();
 
     /**
      * <p>getAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.TabStopAlignment} object.
      */
-    public TabStopAlignment getAlignment();
+    TabStopAlignment getAlignment();
 }

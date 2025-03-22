@@ -33,54 +33,54 @@ public interface DRIPiePlot extends DRIBasePlot {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCircular();
+    Boolean getCircular();
 
     /**
      * <p>getShowLabels.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowLabels();
+    Boolean getShowLabels();
 
     /**
      * <p>getShowValues.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowValues();
+    Boolean getShowValues();
 
     /**
      * <p>getValuePattern.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getValuePattern();
+    String getValuePattern();
 
     /**
      * <p>getShowPercentages.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowPercentages();
+    Boolean getShowPercentages();
 
     /**
      * <p>getPercentValuePattern.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPercentValuePattern();
+    String getPercentValuePattern();
 
     /**
      * <p>getLabelFormat.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLabelFormat();
+    String getLabelFormat();
 
     /**
      * <p>getLegendLabelFormat.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLegendLabelFormat();
+    String getLegendLabelFormat();
 }

@@ -33,6 +33,6 @@ public interface DRITemplateStyle extends DRIReportStyle {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
 }

@@ -39,47 +39,47 @@ public interface DRIDataset extends Serializable {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIField<?>> getFields();
+    List<? extends DRIField<?>> getFields();
 
     /**
      * <p>getVariables.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIVariable<?>> getVariables();
+    List<? extends DRIVariable<?>> getVariables();
 
     /**
      * <p>getSorts.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRISort> getSorts();
+    List<? extends DRISort> getSorts();
 
     /**
      * <p>getQuery.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIQuery} object.
      */
-    public DRIQuery getQuery();
+    DRIQuery getQuery();
 
     /**
      * <p>getConnectionExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Connection> getConnectionExpression();
+    DRIExpression<Connection> getConnectionExpression();
 
     /**
      * <p>getDataSourceExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getDataSourceExpression();
+    DRIExpression<?> getDataSourceExpression();
 
     /**
      * <p>getFilterExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Boolean> getFilterExpression();
+    DRIExpression<Boolean> getFilterExpression();
 }

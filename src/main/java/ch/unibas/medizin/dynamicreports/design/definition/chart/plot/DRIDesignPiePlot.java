@@ -33,19 +33,19 @@ public interface DRIDesignPiePlot extends DRIDesignBasePlot {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCircular();
+    Boolean getCircular();
 
     /**
      * <p>getLabelFormat.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLabelFormat();
+    String getLabelFormat();
 
     /**
      * <p>getLegendLabelFormat.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLegendLabelFormat();
+    String getLegendLabelFormat();
 }

@@ -38,12 +38,12 @@ public interface DRISort extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getExpression();
+    DRIExpression<?> getExpression();
 
     /**
      * <p>getOrderType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.OrderType} object.
      */
-    public OrderType getOrderType();
+    OrderType getOrderType();
 }

@@ -35,19 +35,19 @@ public interface JasperIImageExporter extends JasperIExporter {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageGap();
+    Integer getPageGap();
 
     /**
      * <p>getImageType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.constant.ImageType} object.
      */
-    public ImageType getImageType();
+    ImageType getImageType();
 
     /**
      * <p>getZoomRatio.</p>
      *
      * @return a {@link java.lang.Float} object.
      */
-    public Float getZoomRatio();
+    Float getZoomRatio();
 }

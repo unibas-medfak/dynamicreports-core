@@ -39,19 +39,19 @@ public interface DRIDesignChartDataset extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignDataset} object.
      */
-    public DRIDesignDataset getSubDataset();
+    DRIDesignDataset getSubDataset();
 
     /**
      * <p>getResetType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.constant.ResetType} object.
      */
-    public ResetType getResetType();
+    ResetType getResetType();
 
     /**
      * <p>getResetGroup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignGroup} object.
      */
-    public DRIDesignGroup getResetGroup();
+    DRIDesignGroup getResetGroup();
 }

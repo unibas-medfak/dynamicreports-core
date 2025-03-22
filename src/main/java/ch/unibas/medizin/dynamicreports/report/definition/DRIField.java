@@ -36,12 +36,12 @@ public interface DRIField<T> extends DRIExpression<T>, DRIValue<T> {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType} object.
      */
-    public DRIDataType<? super T, T> getDataType();
+    DRIDataType<? super T, T> getDataType();
 
     /**
      * <p>getDescription.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getDescription();
+    String getDescription();
 }

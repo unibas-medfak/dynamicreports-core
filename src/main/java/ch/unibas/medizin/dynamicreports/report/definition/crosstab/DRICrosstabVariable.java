@@ -36,26 +36,26 @@ public interface DRICrosstabVariable<T> extends DRISystemExpression<T>, DRIValue
 
     /** {@inheritDoc} */
     @Override
-    public Class<? super T> getValueClass();
+    Class<? super T> getValueClass();
 
     /**
      * <p>getValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getValueExpression();
+    DRIExpression<?> getValueExpression();
 
     /**
      * <p>getCalculation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
-    public Calculation getCalculation();
+    Calculation getCalculation();
 
     /**
      * <p>getPercentageType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.CrosstabPercentageType} object.
      */
-    public CrosstabPercentageType getPercentageType();
+    CrosstabPercentageType getPercentageType();
 }

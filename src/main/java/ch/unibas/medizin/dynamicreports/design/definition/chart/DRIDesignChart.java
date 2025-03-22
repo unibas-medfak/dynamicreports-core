@@ -43,68 +43,68 @@ public interface DRIDesignChart extends DRIDesignHyperLinkComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ChartType} object.
      */
-    public ChartType getChartType();
+    ChartType getChartType();
 
     /**
      * <p>getDataset.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.chart.dataset.DRIDesignChartDataset} object.
      */
-    public DRIDesignChartDataset getDataset();
+    DRIDesignChartDataset getDataset();
 
     /**
      * <p>getPlot.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignPlot} object.
      */
-    public DRIDesignPlot getPlot();
+    DRIDesignPlot getPlot();
 
     /**
      * <p>getCustomizers.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIChartCustomizer> getCustomizers();
+    List<DRIChartCustomizer> getCustomizers();
 
     /**
      * <p>getTitle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.chart.DRIDesignChartTitle} object.
      */
-    public DRIDesignChartTitle getTitle();
+    DRIDesignChartTitle getTitle();
 
     /**
      * <p>getSubtitle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.chart.DRIDesignChartSubtitle} object.
      */
-    public DRIDesignChartSubtitle getSubtitle();
+    DRIDesignChartSubtitle getSubtitle();
 
     /**
      * <p>getLegend.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.chart.DRIDesignChartLegend} object.
      */
-    public DRIDesignChartLegend getLegend();
+    DRIDesignChartLegend getLegend();
 
     /**
      * <p>getEvaluationTime.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.constant.EvaluationTime} object.
      */
-    public EvaluationTime getEvaluationTime();
+    EvaluationTime getEvaluationTime();
 
     /**
      * <p>getEvaluationGroup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignGroup} object.
      */
-    public DRIDesignGroup getEvaluationGroup();
+    DRIDesignGroup getEvaluationGroup();
 
     /**
      * <p>getTheme.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getTheme();
+    String getTheme();
 }

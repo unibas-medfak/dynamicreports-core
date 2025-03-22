@@ -36,12 +36,12 @@ public interface DRIFormatField extends DRIHyperLinkComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<String> getFormatExpression();
+    DRIExpression<String> getFormatExpression();
 
     /**
      * <p>getHorizontalTextAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment} object.
      */
-    public HorizontalTextAlignment getHorizontalTextAlignment();
+    HorizontalTextAlignment getHorizontalTextAlignment();
 }

@@ -38,48 +38,48 @@ public interface DRIXyBlockPlot extends DRIAxisPlot {
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getBlockWidth();
+    Double getBlockWidth();
 
     /**
      * <p>getBlockHeight.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getBlockHeight();
+    Double getBlockHeight();
 
     /**
      * <p>getBlockAnchor.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.RectangleAnchor} object.
      */
-    public RectangleAnchor getBlockAnchor();
+    RectangleAnchor getBlockAnchor();
 
     /**
      * <p>getDefaultLowerBound.</p>
      *
      * @return a double.
      */
-    public double getDefaultLowerBound();
+    double getDefaultLowerBound();
 
     /**
      * <p>getDefaultUpperBound.</p>
      *
      * @return a double.
      */
-    public double getDefaultUpperBound();
+    double getDefaultUpperBound();
 
     /**
      * <p>getDefaultPaint.</p>
      *
      * @return a {@link java.awt.Paint} object.
      */
-    public Paint getDefaultPaint();
+    Paint getDefaultPaint();
 
     /**
      * <p>getPaintScales.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIPaintScale> getPaintScales();
+    List<DRIPaintScale> getPaintScales();
 
 }

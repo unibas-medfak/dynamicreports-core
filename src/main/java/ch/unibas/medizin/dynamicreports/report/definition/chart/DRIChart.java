@@ -40,54 +40,54 @@ public interface DRIChart extends DRIHyperLinkComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ChartType} object.
      */
-    public ChartType getChartType();
+    ChartType getChartType();
 
     /**
      * <p>getDataset.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRIChartDataset} object.
      */
-    public DRIChartDataset getDataset();
+    DRIChartDataset getDataset();
 
     /**
      * <p>getPlot.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIPlot} object.
      */
-    public DRIPlot getPlot();
+    DRIPlot getPlot();
 
     /**
      * <p>getCustomizers.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIChartCustomizer> getCustomizers();
+    List<DRIChartCustomizer> getCustomizers();
 
     /**
      * <p>getTitle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartTitle} object.
      */
-    public DRIChartTitle getTitle();
+    DRIChartTitle getTitle();
 
     /**
      * <p>getSubtitle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartSubtitle} object.
      */
-    public DRIChartSubtitle getSubtitle();
+    DRIChartSubtitle getSubtitle();
 
     /**
      * <p>getLegend.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartLegend} object.
      */
-    public DRIChartLegend getLegend();
+    DRIChartLegend getLegend();
 
     /**
      * <p>getTheme.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getTheme();
+    String getTheme();
 }

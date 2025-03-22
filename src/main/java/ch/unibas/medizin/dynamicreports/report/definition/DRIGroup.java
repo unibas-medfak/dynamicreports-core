@@ -41,152 +41,152 @@ public interface DRIGroup extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getValueField.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRITextField} object.
      */
-    public DRITextField<?> getValueField();
+    DRITextField<?> getValueField();
 
     /**
      * <p>getTitleExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getTitleExpression();
+    DRIExpression<?> getTitleExpression();
 
     /**
      * <p>getTitleStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getTitleStyle();
+    DRIReportStyle getTitleStyle();
 
     /**
      * <p>getTitleWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getTitleWidth();
+    Integer getTitleWidth();
 
     /**
      * <p>getHeaderLayout.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.GroupHeaderLayout} object.
      */
-    public GroupHeaderLayout getHeaderLayout();
+    GroupHeaderLayout getHeaderLayout();
 
     /**
      * <p>getHideColumn.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getHideColumn();
+    Boolean getHideColumn();
 
     /**
      * <p>getGroupByDataType.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupByDataType();
+    Boolean getGroupByDataType();
 
     /**
      * <p>getShowColumnHeaderAndFooter.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowColumnHeaderAndFooter();
+    Boolean getShowColumnHeaderAndFooter();
 
     /**
      * <p>getAddToTableOfContents.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getAddToTableOfContents();
+    Boolean getAddToTableOfContents();
 
     /**
      * <p>getPrintSubtotalsWhenExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Boolean> getPrintSubtotalsWhenExpression();
+    DRIExpression<Boolean> getPrintSubtotalsWhenExpression();
 
     /**
      * <p>getPadding.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPadding();
+    Integer getPadding();
 
     /**
      * <p>getStartInNewPage.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getStartInNewPage();
+    Boolean getStartInNewPage();
 
     /**
      * <p>getStartInNewColumn.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getStartInNewColumn();
+    Boolean getStartInNewColumn();
 
     /**
      * <p>getReprintHeaderOnEachPage.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getReprintHeaderOnEachPage();
+    Boolean getReprintHeaderOnEachPage();
 
     /**
      * <p>getResetPageNumber.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getResetPageNumber();
+    Boolean getResetPageNumber();
 
     /**
      * <p>getMinHeightToStartNewPage.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getMinHeightToStartNewPage();
+    Integer getMinHeightToStartNewPage();
 
     /**
      * <p>getFooterPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.GroupFooterPosition} object.
      */
-    public GroupFooterPosition getFooterPosition();
+    GroupFooterPosition getFooterPosition();
 
     /**
      * <p>getKeepTogether.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getKeepTogether();
+    Boolean getKeepTogether();
 
     /**
      * <p>getHeaderWithSubtotal.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getHeaderWithSubtotal();
+    Boolean getHeaderWithSubtotal();
 
     /**
      * <p>getHeaderBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIBand} object.
      */
-    public DRIBand getHeaderBand();
+    DRIBand getHeaderBand();
 
     /**
      * <p>getFooterBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIBand} object.
      */
-    public DRIBand getFooterBand();
+    DRIBand getFooterBand();
 }

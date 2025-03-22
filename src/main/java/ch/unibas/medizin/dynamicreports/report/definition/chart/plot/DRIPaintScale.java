@@ -36,20 +36,20 @@ public interface DRIPaintScale extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLabel();
+    String getLabel();
 
     /**
      * <p>getValue.</p>
      *
      * @return a double.
      */
-    public double getValue();
+    double getValue();
 
     /**
      * <p>getPaint.</p>
      *
      * @return a {@link java.awt.Paint} object.
      */
-    public Paint getPaint();
+    Paint getPaint();
 
 }

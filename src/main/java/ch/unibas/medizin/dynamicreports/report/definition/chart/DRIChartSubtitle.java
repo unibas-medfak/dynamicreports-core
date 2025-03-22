@@ -39,19 +39,19 @@ public interface DRIChartSubtitle extends Serializable {
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getColor();
+    Color getColor();
 
     /**
      * <p>getFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont} object.
      */
-    public DRIFont getFont();
+    DRIFont getFont();
 
     /**
      * <p>getTitle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<String> getTitle();
+    DRIExpression<String> getTitle();
 }

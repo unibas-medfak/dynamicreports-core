@@ -35,19 +35,19 @@ public interface DRIXyListCell extends Serializable {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getX();
+    Integer getX();
 
     /**
      * <p>getY.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getY();
+    Integer getY();
 
     /**
      * <p>getComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getComponent();
+    DRIComponent getComponent();
 }

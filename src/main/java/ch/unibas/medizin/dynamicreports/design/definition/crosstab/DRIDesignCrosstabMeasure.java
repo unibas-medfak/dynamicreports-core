@@ -39,33 +39,33 @@ public interface DRIDesignCrosstabMeasure extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getValueClass.</p>
      *
      * @return a {@link java.lang.Class} object.
      */
-    public Class<?> getValueClass();
+    Class<?> getValueClass();
 
     /**
      * <p>getValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getValueExpression();
+    DRIDesignExpression getValueExpression();
 
     /**
      * <p>getCalculation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
-    public Calculation getCalculation();
+    Calculation getCalculation();
 
     /**
      * <p>getPercentageType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.CrosstabPercentageType} object.
      */
-    public CrosstabPercentageType getPercentageType();
+    CrosstabPercentageType getPercentageType();
 }

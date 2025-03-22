@@ -39,89 +39,89 @@ public interface DRIDesignThermometerPlot extends DRIDesignPlot {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getDataRangeLowExpression();
+    DRIDesignExpression getDataRangeLowExpression();
 
     /**
      * <p>getDataRangeHighExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getDataRangeHighExpression();
+    DRIDesignExpression getDataRangeHighExpression();
 
     /**
      * <p>getValueColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getValueColor();
+    Color getValueColor();
 
     /**
      * <p>getValueMask.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getValueMask();
+    String getValueMask();
 
     /**
      * <p>getValueFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignFont} object.
      */
-    public DRIDesignFont getValueFont();
+    DRIDesignFont getValueFont();
 
     /**
      * <p>getValueLocation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ValueLocation} object.
      */
-    public ValueLocation getValueLocation();
+    ValueLocation getValueLocation();
 
     /**
      * <p>getMercuryColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getMercuryColor();
+    Color getMercuryColor();
 
     /**
      * <p>getLowDataRangeLowExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getLowDataRangeLowExpression();
+    DRIDesignExpression getLowDataRangeLowExpression();
 
     /**
      * <p>getLowDataRangeHighExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getLowDataRangeHighExpression();
+    DRIDesignExpression getLowDataRangeHighExpression();
 
     /**
      * <p>getMediumDataRangeLowExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getMediumDataRangeLowExpression();
+    DRIDesignExpression getMediumDataRangeLowExpression();
 
     /**
      * <p>getMediumDataRangeHighExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getMediumDataRangeHighExpression();
+    DRIDesignExpression getMediumDataRangeHighExpression();
 
     /**
      * <p>getHighDataRangeLowExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getHighDataRangeLowExpression();
+    DRIDesignExpression getHighDataRangeLowExpression();
 
     /**
      * <p>getHighDataRangeHighExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getHighDataRangeHighExpression();
+    DRIDesignExpression getHighDataRangeHighExpression();
 }

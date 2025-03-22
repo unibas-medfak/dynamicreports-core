@@ -37,63 +37,63 @@ public interface DRIDesignTemplateDesign extends Serializable {
      *
      * @return a int.
      */
-    public int getTitleComponentsCount();
+    int getTitleComponentsCount();
 
     /**
      * <p>getPageHeaderComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getPageHeaderComponentsCount();
+    int getPageHeaderComponentsCount();
 
     /**
      * <p>getPageFooterComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getPageFooterComponentsCount();
+    int getPageFooterComponentsCount();
 
     /**
      * <p>getColumnHeaderComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getColumnHeaderComponentsCount();
+    int getColumnHeaderComponentsCount();
 
     /**
      * <p>getColumnFooterComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getColumnFooterComponentsCount();
+    int getColumnFooterComponentsCount();
 
     /**
      * <p>getLastPageFooterComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getLastPageFooterComponentsCount();
+    int getLastPageFooterComponentsCount();
 
     /**
      * <p>getSummaryComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getSummaryComponentsCount();
+    int getSummaryComponentsCount();
 
     /**
      * <p>getNoDataComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getNoDataComponentsCount();
+    int getNoDataComponentsCount();
 
     /**
      * <p>getBackgroundComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getBackgroundComponentsCount();
+    int getBackgroundComponentsCount();
 
     /**
      * <p>getDesign.</p>
@@ -101,5 +101,5 @@ public interface DRIDesignTemplateDesign extends Serializable {
      * @return a {@link java.lang.Object} object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    public Object getDesign() throws DRException;
+    Object getDesign() throws DRException;
 }

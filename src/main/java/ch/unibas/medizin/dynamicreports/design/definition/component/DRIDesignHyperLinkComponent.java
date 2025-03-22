@@ -36,19 +36,19 @@ public interface DRIDesignHyperLinkComponent extends DRIDesignComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getAnchorNameExpression();
+    DRIDesignExpression getAnchorNameExpression();
 
     /**
      * <p>getBookmarkLevel.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getBookmarkLevel();
+    Integer getBookmarkLevel();
 
     /**
      * <p>getHyperLink.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignHyperLink} object.
      */
-    public DRIDesignHyperLink getHyperLink();
+    DRIDesignHyperLink getHyperLink();
 }

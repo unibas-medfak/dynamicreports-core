@@ -39,82 +39,82 @@ public interface DRIDesignGroup extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getGroupExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getGroupExpression();
+    DRIDesignExpression getGroupExpression();
 
     /**
      * <p>getHeaderBands.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIDesignBand> getHeaderBands();
+    List<? extends DRIDesignBand> getHeaderBands();
 
     /**
      * <p>getFooterBands.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIDesignBand> getFooterBands();
+    List<? extends DRIDesignBand> getFooterBands();
 
     /**
      * <p>isStartInNewPage.</p>
      *
      * @return a boolean.
      */
-    public boolean isStartInNewPage();
+    boolean isStartInNewPage();
 
     /**
      * <p>isStartInNewColumn.</p>
      *
      * @return a boolean.
      */
-    public boolean isStartInNewColumn();
+    boolean isStartInNewColumn();
 
     /**
      * <p>isReprintHeaderOnEachPage.</p>
      *
      * @return a boolean.
      */
-    public boolean isReprintHeaderOnEachPage();
+    boolean isReprintHeaderOnEachPage();
 
     /**
      * <p>isResetPageNumber.</p>
      *
      * @return a boolean.
      */
-    public boolean isResetPageNumber();
+    boolean isResetPageNumber();
 
     /**
      * <p>getMinHeightToStartNewPage.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getMinHeightToStartNewPage();
+    Integer getMinHeightToStartNewPage();
 
     /**
      * <p>getFooterPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.GroupFooterPosition} object.
      */
-    public GroupFooterPosition getFooterPosition();
+    GroupFooterPosition getFooterPosition();
 
     /**
      * <p>isKeepTogether.</p>
      *
      * @return a boolean.
      */
-    public boolean isKeepTogether();
+    boolean isKeepTogether();
 
     /**
      * <p>isHeaderWithSubtotal.</p>
      *
      * @return a boolean.
      */
-    public boolean isHeaderWithSubtotal();
+    boolean isHeaderWithSubtotal();
 }

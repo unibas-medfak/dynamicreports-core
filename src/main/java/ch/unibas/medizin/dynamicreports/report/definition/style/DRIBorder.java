@@ -35,26 +35,26 @@ public interface DRIBorder extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen} object.
      */
-    public DRIPen getTopPen();
+    DRIPen getTopPen();
 
     /**
      * <p>getLeftPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen} object.
      */
-    public DRIPen getLeftPen();
+    DRIPen getLeftPen();
 
     /**
      * <p>getBottomPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen} object.
      */
-    public DRIPen getBottomPen();
+    DRIPen getBottomPen();
 
     /**
      * <p>getRightPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen} object.
      */
-    public DRIPen getRightPen();
+    DRIPen getRightPen();
 }

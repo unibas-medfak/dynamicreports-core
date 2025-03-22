@@ -40,96 +40,96 @@ public interface DRIMeterPlot extends DRIPlot {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<? extends Number> getDataRangeLowExpression();
+    DRIExpression<? extends Number> getDataRangeLowExpression();
 
     /**
      * <p>getDataRangeHighExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<? extends Number> getDataRangeHighExpression();
+    DRIExpression<? extends Number> getDataRangeHighExpression();
 
     /**
      * <p>getValueColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getValueColor();
+    Color getValueColor();
 
     /**
      * <p>getValueMask.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getValueMask();
+    String getValueMask();
 
     /**
      * <p>getValueFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont} object.
      */
-    public DRIFont getValueFont();
+    DRIFont getValueFont();
 
     /**
      * <p>getShape.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.MeterShape} object.
      */
-    public MeterShape getShape();
+    MeterShape getShape();
 
     /**
      * <p>getIntervals.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIMeterInterval> getIntervals();
+    List<DRIMeterInterval> getIntervals();
 
     /**
      * <p>getMeterAngle.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getMeterAngle();
+    Integer getMeterAngle();
 
     /**
      * <p>getUnits.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getUnits();
+    String getUnits();
 
     /**
      * <p>getTickInterval.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getTickInterval();
+    Double getTickInterval();
 
     /**
      * <p>getMeterBackgroundColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getMeterBackgroundColor();
+    Color getMeterBackgroundColor();
 
     /**
      * <p>getNeedleColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getNeedleColor();
+    Color getNeedleColor();
 
     /**
      * <p>getTickColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getTickColor();
+    Color getTickColor();
 
     /**
      * <p>getTickLabelFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont} object.
      */
-    public DRIFont getTickLabelFont();
+    DRIFont getTickLabelFont();
 }

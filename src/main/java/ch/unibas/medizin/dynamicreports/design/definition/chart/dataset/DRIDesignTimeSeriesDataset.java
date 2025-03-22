@@ -35,5 +35,5 @@ public interface DRIDesignTimeSeriesDataset extends DRIDesignSeriesDataset {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.TimePeriod} object.
      */
-    public TimePeriod getTimePeriodType();
+    TimePeriod getTimePeriodType();
 }

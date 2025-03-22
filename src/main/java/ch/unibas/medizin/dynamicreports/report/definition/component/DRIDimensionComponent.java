@@ -38,61 +38,61 @@ public interface DRIDimensionComponent extends DRIComponent {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getWidth();
+    Integer getWidth();
 
     /**
      * <p>getHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getHeight();
+    Integer getHeight();
 
     /**
      * <p>getWidthType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType} object.
      */
-    public ComponentDimensionType getWidthType();
+    ComponentDimensionType getWidthType();
 
     /**
      * <p>getHeightType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType} object.
      */
-    public ComponentDimensionType getHeightType();
+    ComponentDimensionType getHeightType();
 
     /**
      * <p>getPositionType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ComponentPositionType} object.
      */
-    public ComponentPositionType getPositionType();
+    ComponentPositionType getPositionType();
 
     /**
      * <p>getStretchType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.StretchType} object.
      */
-    public StretchType getStretchType();
+    StretchType getStretchType();
 
     /**
      * <p>getPrintInFirstWholeBand.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getPrintInFirstWholeBand();
+    Boolean getPrintInFirstWholeBand();
 
     /**
      * <p>getPrintWhenDetailOverflows.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getPrintWhenDetailOverflows();
+    Boolean getPrintWhenDetailOverflows();
 
     /**
      * <p>getPrintWhenGroupChanges.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIGroup} object.
      */
-    public DRIGroup getPrintWhenGroupChanges();
+    DRIGroup getPrintWhenGroupChanges();
 }

@@ -41,61 +41,61 @@ public interface DRISubtotal<T> extends DRIExpression<T>, DRIValue<T> {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.column.DRIColumn} object.
      */
-    public DRIColumn<?> getShowInColumn();
+    DRIColumn<?> getShowInColumn();
 
     /**
      * <p>getValueField.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRITextField} object.
      */
-    public DRITextField<T> getValueField();
+    DRITextField<T> getValueField();
 
     /**
      * <p>getLabelExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getLabelExpression();
+    DRIExpression<?> getLabelExpression();
 
     /**
      * <p>getLabelStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getLabelStyle();
+    DRIReportStyle getLabelStyle();
 
     /**
      * <p>getLabelPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Position} object.
      */
-    public Position getLabelPosition();
+    Position getLabelPosition();
 
     /**
      * <p>getLabelWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getLabelWidth();
+    Integer getLabelWidth();
 
     /**
      * <p>getLabelWidthType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType} object.
      */
-    public ComponentDimensionType getLabelWidthType();
+    ComponentDimensionType getLabelWidthType();
 
     /**
      * <p>getPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SubtotalPosition} object.
      */
-    public SubtotalPosition getPosition();
+    SubtotalPosition getPosition();
 
     /**
      * <p>getGroup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIGroup} object.
      */
-    public DRIGroup getGroup();
+    DRIGroup getGroup();
 }

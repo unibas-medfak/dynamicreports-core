@@ -33,12 +33,12 @@ public interface DRIHighLowPlot extends DRIAxisPlot {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowOpenTicks();
+    Boolean getShowOpenTicks();
 
     /**
      * <p>getShowCloseTicks.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowCloseTicks();
+    Boolean getShowCloseTicks();
 }

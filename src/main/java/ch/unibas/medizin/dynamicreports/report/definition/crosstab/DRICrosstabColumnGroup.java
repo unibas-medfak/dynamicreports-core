@@ -33,12 +33,12 @@ public interface DRICrosstabColumnGroup<T> extends DRICrosstabGroup<T> {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getHeaderHeight();
+    Integer getHeaderHeight();
 
     /**
      * <p>getTotalHeaderWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getTotalHeaderWidth();
+    Integer getTotalHeaderWidth();
 }

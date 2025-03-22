@@ -37,40 +37,40 @@ public interface DRIDesignHyperLink extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getAnchorExpression();
+    DRIDesignExpression getAnchorExpression();
 
     /**
      * <p>getPageExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getPageExpression();
+    DRIDesignExpression getPageExpression();
 
     /**
      * <p>getReferenceExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getReferenceExpression();
+    DRIDesignExpression getReferenceExpression();
 
     /**
      * <p>getTooltipExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getTooltipExpression();
+    DRIDesignExpression getTooltipExpression();
 
     /**
      * <p>getType.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getType();
+    String getType();
 
     /**
      * <p>getTarget.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getTarget();
+    String getTarget();
 }

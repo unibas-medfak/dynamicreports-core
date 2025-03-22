@@ -35,26 +35,26 @@ public interface DRIDesignGanttChartSerie extends DRIDesignChartSerie {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getStartDateExpression();
+    DRIDesignExpression getStartDateExpression();
 
     /**
      * <p>getEndDateExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getEndDateExpression();
+    DRIDesignExpression getEndDateExpression();
 
     /**
      * <p>getPercentExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getPercentExpression();
+    DRIDesignExpression getPercentExpression();
 
     /**
      * <p>getLabelExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getLabelExpression();
+    DRIDesignExpression getLabelExpression();
 }

@@ -39,19 +39,19 @@ public interface DRIBand extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getSplitType();
+    SplitType getSplitType();
 
     /**
      * <p>getList.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIList} object.
      */
-    public DRIList getList();
+    DRIList getList();
 
     /**
      * <p>getPrintWhenExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Boolean> getPrintWhenExpression();
+    DRIExpression<Boolean> getPrintWhenExpression();
 }

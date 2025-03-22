@@ -39,75 +39,75 @@ public interface DRIDesignAxisFormat extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getLabelExpression();
+    DRIDesignExpression getLabelExpression();
 
     /**
      * <p>getLabelFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignFont} object.
      */
-    public DRIDesignFont getLabelFont();
+    DRIDesignFont getLabelFont();
 
     /**
      * <p>getLabelColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getLabelColor();
+    Color getLabelColor();
 
     /**
      * <p>getTickLabelFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignFont} object.
      */
-    public DRIDesignFont getTickLabelFont();
+    DRIDesignFont getTickLabelFont();
 
     /**
      * <p>getTickLabelColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getTickLabelColor();
+    Color getTickLabelColor();
 
     /**
      * <p>getTickLabelMask.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getTickLabelMask();
+    String getTickLabelMask();
 
     /**
      * <p>getVerticalTickLabels.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getVerticalTickLabels();
+    Boolean getVerticalTickLabels();
 
     /**
      * <p>getTickLabelRotation.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getTickLabelRotation();
+    Double getTickLabelRotation();
 
     /**
      * <p>getLineColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getLineColor();
+    Color getLineColor();
 
     /**
      * <p>getRangeMinValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getRangeMinValueExpression();
+    DRIDesignExpression getRangeMinValueExpression();
 
     /**
      * <p>getRangeMaxValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getRangeMaxValueExpression();
+    DRIDesignExpression getRangeMaxValueExpression();
 }

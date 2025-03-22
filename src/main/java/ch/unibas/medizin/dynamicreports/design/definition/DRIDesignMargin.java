@@ -35,26 +35,26 @@ public interface DRIDesignMargin extends Serializable {
      *
      * @return a int.
      */
-    public int getTop();
+    int getTop();
 
     /**
      * <p>getLeft.</p>
      *
      * @return a int.
      */
-    public int getLeft();
+    int getLeft();
 
     /**
      * <p>getBottom.</p>
      *
      * @return a int.
      */
-    public int getBottom();
+    int getBottom();
 
     /**
      * <p>getRight.</p>
      *
      * @return a int.
      */
-    public int getRight();
+    int getRight();
 }

@@ -35,5 +35,5 @@ public interface ColumnGridComponentBuilder {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGridComponent} object.
      */
-    public DRIColumnGridComponent build();
+    DRIColumnGridComponent build();
 }

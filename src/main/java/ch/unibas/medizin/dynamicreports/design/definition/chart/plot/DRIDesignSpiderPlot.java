@@ -40,82 +40,82 @@ public interface DRIDesignSpiderPlot extends DRIDesignPlot {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getMaxValueExpression();
+    DRIDesignExpression getMaxValueExpression();
 
     /**
      * <p>getRotation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SpiderRotation} object.
      */
-    public SpiderRotation getRotation();
+    SpiderRotation getRotation();
 
     /**
      * <p>getTableOrder.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.TableOrder} object.
      */
-    public TableOrder getTableOrder();
+    TableOrder getTableOrder();
 
     /**
      * <p>getWebFilled.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getWebFilled();
+    Boolean getWebFilled();
 
     /**
      * <p>getStartAngle.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getStartAngle();
+    Double getStartAngle();
 
     /**
      * <p>getHeadPercent.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getHeadPercent();
+    Double getHeadPercent();
 
     /**
      * <p>getInteriorGap.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getInteriorGap();
+    Double getInteriorGap();
 
     /**
      * <p>getAxisLineColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getAxisLineColor();
+    Color getAxisLineColor();
 
     /**
      * <p>getAxisLineWidth.</p>
      *
      * @return a {@link java.lang.Float} object.
      */
-    public Float getAxisLineWidth();
+    Float getAxisLineWidth();
 
     /**
      * <p>getLabelFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignFont} object.
      */
-    public DRIDesignFont getLabelFont();
+    DRIDesignFont getLabelFont();
 
     /**
      * <p>getLabelGap.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getLabelGap();
+    Double getLabelGap();
 
     /**
      * <p>getLabelColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getLabelColor();
+    Color getLabelColor();
 }

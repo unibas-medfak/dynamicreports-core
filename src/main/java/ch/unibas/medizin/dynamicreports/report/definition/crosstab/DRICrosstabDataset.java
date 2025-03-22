@@ -37,12 +37,12 @@ public interface DRICrosstabDataset extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIDataset} object.
      */
-    public DRIDataset getSubDataset();
+    DRIDataset getSubDataset();
 
     /**
      * <p>getDataPreSorted.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getDataPreSorted();
+    Boolean getDataPreSorted();
 }

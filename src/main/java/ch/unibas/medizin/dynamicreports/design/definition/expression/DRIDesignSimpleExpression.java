@@ -36,12 +36,12 @@ public interface DRIDesignSimpleExpression extends DRIDesignExpression {
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      * @return a {@link java.lang.Object} object.
      */
-    public Object evaluate(ReportParameters reportParameters);
+    Object evaluate(ReportParameters reportParameters);
 
     /**
      * <p>getParameterName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getParameterName();
+    String getParameterName();
 }

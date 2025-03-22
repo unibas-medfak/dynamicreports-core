@@ -38,26 +38,26 @@ public interface DRIDesignList extends DRIDesignComponent {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIDesignComponent> getComponents();
+    List<? extends DRIDesignComponent> getComponents();
 
     /**
      * <p>getType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ListType} object.
      */
-    public ListType getType();
+    ListType getType();
 
     /**
      * <p>getComponentGroupType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.constant.ComponentGroupType} object.
      */
-    public ComponentGroupType getComponentGroupType();
+    ComponentGroupType getComponentGroupType();
 
     /**
      * <p>getBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignComponent} object.
      */
-    public DRIDesignComponent getBackgroundComponent();
+    DRIDesignComponent getBackgroundComponent();
 }

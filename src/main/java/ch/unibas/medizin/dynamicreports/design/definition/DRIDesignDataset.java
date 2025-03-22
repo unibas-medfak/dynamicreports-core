@@ -42,82 +42,82 @@ public interface DRIDesignDataset extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getFields.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignField> getFields();
+    Collection<DRIDesignField> getFields();
 
     /**
      * <p>getVariables.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignVariable> getVariables();
+    Collection<DRIDesignVariable> getVariables();
 
     /**
      * <p>getSystemExpressions.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignSystemExpression> getSystemExpressions();
+    Collection<DRIDesignSystemExpression> getSystemExpressions();
 
     /**
      * <p>getJasperExpressions.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignJasperExpression> getJasperExpressions();
+    Collection<DRIDesignJasperExpression> getJasperExpressions();
 
     /**
      * <p>getSimpleExpressions.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignSimpleExpression> getSimpleExpressions();
+    Collection<DRIDesignSimpleExpression> getSimpleExpressions();
 
     /**
      * <p>getComplexExpressions.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignComplexExpression> getComplexExpressions();
+    Collection<DRIDesignComplexExpression> getComplexExpressions();
 
     /**
      * <p>getSorts.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignSort> getSorts();
+    Collection<DRIDesignSort> getSorts();
 
     /**
      * <p>getQuery.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignQuery} object.
      */
-    public DRIDesignQuery getQuery();
+    DRIDesignQuery getQuery();
 
     /**
      * <p>getConnectionExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getConnectionExpression();
+    DRIDesignExpression getConnectionExpression();
 
     /**
      * <p>getDataSourceExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getDataSourceExpression();
+    DRIDesignExpression getDataSourceExpression();
 
     /**
      * <p>getFilterExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getFilterExpression();
+    DRIDesignExpression getFilterExpression();
 }

@@ -33,12 +33,12 @@ public interface DRIDesignAxisPlot extends DRIDesignBasePlot {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignAxisFormat} object.
      */
-    public DRIDesignAxisFormat getXAxisFormat();
+    DRIDesignAxisFormat getXAxisFormat();
 
     /**
      * <p>getYAxisFormat.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignAxisFormat} object.
      */
-    public DRIDesignAxisFormat getYAxisFormat();
+    DRIDesignAxisFormat getYAxisFormat();
 }

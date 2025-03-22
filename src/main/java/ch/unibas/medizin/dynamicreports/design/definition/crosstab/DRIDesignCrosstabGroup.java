@@ -39,54 +39,54 @@ public interface DRIDesignCrosstabGroup extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getTotalPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.CrosstabTotalPosition} object.
      */
-    public CrosstabTotalPosition getTotalPosition();
+    CrosstabTotalPosition getTotalPosition();
 
     /**
      * <p>getOrderType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.OrderType} object.
      */
-    public OrderType getOrderType();
+    OrderType getOrderType();
 
     /**
      * <p>getExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getExpression();
+    DRIDesignExpression getExpression();
 
     /**
      * <p>getOrderByExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getOrderByExpression();
+    DRIDesignExpression getOrderByExpression();
 
     /**
      * <p>getComparatorExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getComparatorExpression();
+    DRIDesignExpression getComparatorExpression();
 
     /**
      * <p>getHeader.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCrosstabCellContent} object.
      */
-    public DRIDesignCrosstabCellContent getHeader();
+    DRIDesignCrosstabCellContent getHeader();
 
     /**
      * <p>getTotalHeader.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCrosstabCellContent} object.
      */
-    public DRIDesignCrosstabCellContent getTotalHeader();
+    DRIDesignCrosstabCellContent getTotalHeader();
 }

@@ -35,12 +35,12 @@ public interface DRIParameterExpression extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getValueExpression();
+    DRIExpression<?> getValueExpression();
 }

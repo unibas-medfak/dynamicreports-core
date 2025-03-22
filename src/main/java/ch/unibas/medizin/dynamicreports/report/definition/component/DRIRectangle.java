@@ -35,13 +35,13 @@ public interface DRIRectangle extends DRIDimensionComponent {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getRadius();
+    Integer getRadius();
 
     /**
      * <p>getPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen} object.
      */
-    public DRIPen getPen();
+    DRIPen getPen();
 
 }

@@ -38,82 +38,82 @@ public interface DRIDesignCrosstab extends DRIDesignComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCrosstabDataset} object.
      */
-    public DRIDesignCrosstabDataset getDataset();
+    DRIDesignCrosstabDataset getDataset();
 
     /**
      * <p>isRepeatColumnHeaders.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean isRepeatColumnHeaders();
+    Boolean isRepeatColumnHeaders();
 
     /**
      * <p>isRepeatRowHeaders.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean isRepeatRowHeaders();
+    Boolean isRepeatRowHeaders();
 
     /**
      * <p>getColumnBreakOffset.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getColumnBreakOffset();
+    Integer getColumnBreakOffset();
 
     /**
      * <p>getIgnoreWidth.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreWidth();
+    Boolean getIgnoreWidth();
 
     /**
      * <p>getRunDirection.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.RunDirection} object.
      */
-    public RunDirection getRunDirection();
+    RunDirection getRunDirection();
 
     /**
      * <p>getWhenNoDataCell.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCrosstabCellContent} object.
      */
-    public DRIDesignCrosstabCellContent getWhenNoDataCell();
+    DRIDesignCrosstabCellContent getWhenNoDataCell();
 
     /**
      * <p>getHeaderCell.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCrosstabCellContent} object.
      */
-    public DRIDesignCrosstabCellContent getHeaderCell();
+    DRIDesignCrosstabCellContent getHeaderCell();
 
     /**
      * <p>getColumnGroups.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIDesignCrosstabColumnGroup> getColumnGroups();
+    List<? extends DRIDesignCrosstabColumnGroup> getColumnGroups();
 
     /**
      * <p>getRowGroups.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIDesignCrosstabRowGroup> getRowGroups();
+    List<? extends DRIDesignCrosstabRowGroup> getRowGroups();
 
     /**
      * <p>getCells.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIDesignCrosstabCell> getCells();
+    List<? extends DRIDesignCrosstabCell> getCells();
 
     /**
      * <p>getMeasures.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIDesignCrosstabMeasure> getMeasures();
+    List<DRIDesignCrosstabMeasure> getMeasures();
 }

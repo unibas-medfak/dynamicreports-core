@@ -37,19 +37,19 @@ public interface DRICrosstabCellStyle extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabRowGroup} object.
      */
-    public DRICrosstabRowGroup<?> getRowGroup();
+    DRICrosstabRowGroup<?> getRowGroup();
 
     /**
      * <p>getColumnGroup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabColumnGroup} object.
      */
-    public DRICrosstabColumnGroup<?> getColumnGroup();
+    DRICrosstabColumnGroup<?> getColumnGroup();
 
     /**
      * <p>getStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getStyle();
+    DRIReportStyle getStyle();
 }

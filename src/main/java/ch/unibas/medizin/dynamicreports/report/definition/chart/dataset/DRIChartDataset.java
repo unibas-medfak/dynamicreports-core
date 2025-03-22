@@ -37,6 +37,6 @@ public interface DRIChartDataset extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIDataset} object.
      */
-    public DRIDataset getSubDataset();
+    DRIDataset getSubDataset();
 
 }

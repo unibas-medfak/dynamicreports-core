@@ -38,12 +38,12 @@ public interface DRIDesignChartSerie extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getSeriesExpression();
+    DRIDesignExpression getSeriesExpression();
 
     /**
      * <p>getItemHyperLink.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignHyperLink} object.
      */
-    public DRIDesignHyperLink getItemHyperLink();
+    DRIDesignHyperLink getItemHyperLink();
 }

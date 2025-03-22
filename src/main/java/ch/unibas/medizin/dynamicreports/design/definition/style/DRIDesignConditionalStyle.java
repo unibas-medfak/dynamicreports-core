@@ -36,12 +36,12 @@ public interface DRIDesignConditionalStyle extends DRIDesignBaseStyle {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getConditionExpression();
+    DRIDesignExpression getConditionExpression();
 
     /**
      * <p>getDataset.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignDataset} object.
      */
-    public DRIDesignDataset getDataset();
+    DRIDesignDataset getDataset();
 }

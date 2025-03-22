@@ -37,47 +37,47 @@ public interface DRIPage extends Serializable {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getWidth();
+    Integer getWidth();
 
     /**
      * <p>getHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getHeight();
+    Integer getHeight();
 
     /**
      * <p>getOrientation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.PageOrientation} object.
      */
-    public PageOrientation getOrientation();
+    PageOrientation getOrientation();
 
     /**
      * <p>getMargin.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIMargin} object.
      */
-    public DRIMargin getMargin();
+    DRIMargin getMargin();
 
     /**
      * <p>getColumnsPerPage.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getColumnsPerPage();
+    Integer getColumnsPerPage();
 
     /**
      * <p>getColumnSpace.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getColumnSpace();
+    Integer getColumnSpace();
 
     /**
      * <p>getIgnorePageWidth.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnorePageWidth();
+    Boolean getIgnorePageWidth();
 }

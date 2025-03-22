@@ -41,33 +41,33 @@ public interface DRIComponent extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getStyle();
+    DRIReportStyle getStyle();
 
     /**
      * <p>getPrintWhenExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Boolean> getPrintWhenExpression();
+    DRIExpression<Boolean> getPrintWhenExpression();
 
     /**
      * <p>getRemoveLineWhenBlank.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getRemoveLineWhenBlank();
+    Boolean getRemoveLineWhenBlank();
 
     /**
      * <p>getPropertyExpressions.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIPropertyExpression> getPropertyExpressions();
+    List<DRIPropertyExpression> getPropertyExpressions();
 
     /**
      * <p>getTableOfContentsHeading.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRITableOfContentsHeading} object.
      */
-    public DRITableOfContentsHeading getTableOfContentsHeading();
+    DRITableOfContentsHeading getTableOfContentsHeading();
 }

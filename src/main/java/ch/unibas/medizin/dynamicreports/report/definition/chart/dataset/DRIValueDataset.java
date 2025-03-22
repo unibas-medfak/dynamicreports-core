@@ -35,5 +35,5 @@ public interface DRIValueDataset extends DRIChartDataset {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getValueExpression();
+    DRIExpression<?> getValueExpression();
 }

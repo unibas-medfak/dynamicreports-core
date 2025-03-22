@@ -38,19 +38,19 @@ public interface DRIColumnGridListCell extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalCellComponentAlignment} object.
      */
-    public HorizontalCellComponentAlignment getHorizontalAlignment();
+    HorizontalCellComponentAlignment getHorizontalAlignment();
 
     /**
      * <p>getVerticalAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAlignment} object.
      */
-    public VerticalCellComponentAlignment getVerticalAlignment();
+    VerticalCellComponentAlignment getVerticalAlignment();
 
     /**
      * <p>getComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGridComponent} object.
      */
-    public DRIColumnGridComponent getComponent();
+    DRIColumnGridComponent getComponent();
 }

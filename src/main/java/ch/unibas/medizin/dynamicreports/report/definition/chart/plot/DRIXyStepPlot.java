@@ -33,6 +33,6 @@ public interface DRIXyStepPlot extends DRIAxisPlot {
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getStepPoint();
+    Double getStepPoint();
 
 }

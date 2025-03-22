@@ -37,55 +37,55 @@ public interface DRIAxisPlot extends DRIBasePlot {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIAxisFormat} object.
      */
-    public DRIAxisFormat getXAxisFormat();
+    DRIAxisFormat getXAxisFormat();
 
     /**
      * <p>getYAxisFormat.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIAxisFormat} object.
      */
-    public DRIAxisFormat getYAxisFormat();
+    DRIAxisFormat getYAxisFormat();
 
     /**
      * <p>getShowValues.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowValues();
+    Boolean getShowValues();
 
     /**
      * <p>getValuePattern.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getValuePattern();
+    String getValuePattern();
 
     /**
      * <p>getShowPercentages.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowPercentages();
+    Boolean getShowPercentages();
 
     /**
      * <p>getPercentValuePattern.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPercentValuePattern();
+    String getPercentValuePattern();
 
     /**
      * <p>getSeriesOrderBy.</p>
      *
      * @return a {@link java.util.Comparator} object.
      */
-    public Comparator<String> getSeriesOrderBy();
+    Comparator<String> getSeriesOrderBy();
 
     /**
      * <p>getSeriesOrderType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.OrderType} object.
      */
-    public OrderType getSeriesOrderType();
+    OrderType getSeriesOrderType();
 
 }

@@ -33,5 +33,5 @@ public interface JasperIOdsExporter extends JasperIExcelExporter {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getFlexibleRowHeight();
+    Boolean getFlexibleRowHeight();
 }

@@ -33,5 +33,5 @@ public interface DRICurrentDate extends DRIFormatField {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPattern();
+    String getPattern();
 }

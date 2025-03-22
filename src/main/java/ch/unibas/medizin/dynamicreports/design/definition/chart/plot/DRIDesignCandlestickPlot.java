@@ -33,5 +33,5 @@ public interface DRIDesignCandlestickPlot extends DRIDesignAxisPlot {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowVolume();
+    Boolean getShowVolume();
 }

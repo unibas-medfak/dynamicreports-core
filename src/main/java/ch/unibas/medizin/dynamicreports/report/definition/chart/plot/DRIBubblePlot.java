@@ -35,5 +35,5 @@ public interface DRIBubblePlot extends DRIAxisPlot {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ScaleType} object.
      */
-    public ScaleType getScaleType();
+    ScaleType getScaleType();
 }

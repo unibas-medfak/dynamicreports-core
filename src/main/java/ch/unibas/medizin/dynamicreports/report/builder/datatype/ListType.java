@@ -71,7 +71,7 @@ public class ListType extends AbstractDataType<List, List> {
                     result.append("\n");
                 }
                 if (value != null) {
-                    result.append(value.toString());
+                    result.append(value);
                 }
             }
             return result.toString();

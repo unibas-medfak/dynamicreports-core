@@ -35,12 +35,12 @@ public interface DRIQuery extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getText();
+    String getText();
 
     /**
      * <p>getLanguage.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLanguage();
+    String getLanguage();
 }

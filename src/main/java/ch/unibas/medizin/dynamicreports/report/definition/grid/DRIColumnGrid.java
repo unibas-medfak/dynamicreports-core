@@ -35,5 +35,5 @@ public interface DRIColumnGrid extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGridList} object.
      */
-    public DRIColumnGridList getList();
+    DRIColumnGridList getList();
 }

@@ -33,19 +33,19 @@ public interface JasperIDocxExporter extends JasperIExporter {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getFramesAsNestedTables();
+    Boolean getFramesAsNestedTables();
 
     /**
      * <p>getFlexibleRowHeight.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getFlexibleRowHeight();
+    Boolean getFlexibleRowHeight();
 
     /**
      * <p>getIgnoreHyperLink.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreHyperLink();
+    Boolean getIgnoreHyperLink();
 }

@@ -38,26 +38,26 @@ public interface DRIDesignCrosstabCellContent extends Serializable {
      *
      * @return a int.
      */
-    public int getWidth();
+    int getWidth();
 
     /**
      * <p>getHeight.</p>
      *
      * @return a int.
      */
-    public int getHeight();
+    int getHeight();
 
     /**
      * <p>getComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignComponent} object.
      */
-    public DRIDesignComponent getComponent();
+    DRIDesignComponent getComponent();
 
     /**
      * <p>getStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignStyle} object.
      */
-    public DRIDesignStyle getStyle();
+    DRIDesignStyle getStyle();
 }

@@ -35,20 +35,20 @@ public interface DRIMap extends DRIDimensionComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Float> getLatitudeExpression();
+    DRIExpression<Float> getLatitudeExpression();
 
     /**
      * <p>getLongitudeExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Float> getLongitudeExpression();
+    DRIExpression<Float> getLongitudeExpression();
 
     /**
      * <p>getZoomExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Integer> getZoomExpression();
+    DRIExpression<Integer> getZoomExpression();
 
 }

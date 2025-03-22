@@ -37,33 +37,33 @@ public interface DRIVariable<T> extends DRIExpression<T>, DRIValue<T> {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
-    public Calculation getCalculation();
+    Calculation getCalculation();
 
     /**
      * <p>getResetType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Evaluation} object.
      */
-    public Evaluation getResetType();
+    Evaluation getResetType();
 
     /**
      * <p>getResetGroup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIGroup} object.
      */
-    public DRIGroup getResetGroup();
+    DRIGroup getResetGroup();
 
     /**
      * <p>getValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getValueExpression();
+    DRIExpression<?> getValueExpression();
 
     /**
      * <p>getInitialValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getInitialValueExpression();
+    DRIExpression<?> getInitialValueExpression();
 }

@@ -37,6 +37,6 @@ public interface DRIDesignTableOfContentsHeading extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignTextField} object.
      */
-    public DRIDesignTextField getReferenceField();
+    DRIDesignTextField getReferenceField();
 
 }

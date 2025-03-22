@@ -32,19 +32,19 @@ public interface DRIParameter<T> extends DRIValue<T>, Serializable {
 
     /** {@inheritDoc} */
     @Override
-    public String getName();
+    String getName();
 
     /**
      * <p>getValueClass.</p>
      *
      * @return a {@link java.lang.Class} object.
      */
-    public Class<T> getValueClass();
+    Class<T> getValueClass();
 
     /**
      * <p>getValue.</p>
      *
      * @return a T object.
      */
-    public T getValue();
+    T getValue();
 }

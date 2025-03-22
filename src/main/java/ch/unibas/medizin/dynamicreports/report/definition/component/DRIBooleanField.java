@@ -38,47 +38,47 @@ public interface DRIBooleanField extends DRIHyperLinkComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Boolean> getValueExpression();
+    DRIExpression<Boolean> getValueExpression();
 
     /**
      * <p>getComponentType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.BooleanComponentType} object.
      */
-    public BooleanComponentType getComponentType();
+    BooleanComponentType getComponentType();
 
     /**
      * <p>getEmptyWhenNullValue.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getEmptyWhenNullValue();
+    Boolean getEmptyWhenNullValue();
 
     /**
      * <p>getImageWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getImageWidth();
+    Integer getImageWidth();
 
     /**
      * <p>getImageHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getImageHeight();
+    Integer getImageHeight();
 
     /**
      * <p>getHorizontalImageAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalImageAlignment} object.
      */
-    public HorizontalImageAlignment getHorizontalImageAlignment();
+    HorizontalImageAlignment getHorizontalImageAlignment();
 
     /**
      * <p>getHorizontalTextAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment} object.
      */
-    public HorizontalTextAlignment getHorizontalTextAlignment();
+    HorizontalTextAlignment getHorizontalTextAlignment();
 }

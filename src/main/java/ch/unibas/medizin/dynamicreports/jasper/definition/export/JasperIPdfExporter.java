@@ -40,187 +40,187 @@ public interface JasperIPdfExporter extends JasperIExporter {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCreatingBatchModeBookmarks();
+    Boolean getCreatingBatchModeBookmarks();
 
     /**
      * <p>getCompressed.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCompressed();
+    Boolean getCompressed();
 
     /**
      * <p>getEncrypted.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getEncrypted();
+    Boolean getEncrypted();
 
     /**
      * <p>getBitKey128.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getBitKey128();
+    Boolean getBitKey128();
 
     /**
      * <p>getUserPassword.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getUserPassword();
+    String getUserPassword();
 
     /**
      * <p>getOwnerPassword.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getOwnerPassword();
+    String getOwnerPassword();
 
     /**
      * <p>getPermissions.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<PdfPermission> getPermissions();
+    List<PdfPermission> getPermissions();
 
     /**
      * <p>getPdfVersion.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.constant.PdfVersion} object.
      */
-    public PdfVersion getPdfVersion();
+    PdfVersion getPdfVersion();
 
     /**
      * <p>getMetadataTitle.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getMetadataTitle();
+    String getMetadataTitle();
 
     /**
      * <p>getMetadataAuthor.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getMetadataAuthor();
+    String getMetadataAuthor();
 
     /**
      * <p>getMetadataSubject.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getMetadataSubject();
+    String getMetadataSubject();
 
     /**
      * <p>getMetadataKeyWords.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getMetadataKeyWords();
+    String getMetadataKeyWords();
 
     /**
      * <p>getMetadataCreator.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getMetadataCreator();
+    String getMetadataCreator();
 
     /**
      * <p>getForceSvgShapes.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getForceSvgShapes();
+    Boolean getForceSvgShapes();
 
     /**
      * <p>getPdfJavaScript.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPdfJavaScript();
+    String getPdfJavaScript();
 
     /**
      * <p>getTagged.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getTagged();
+    Boolean getTagged();
 
     /**
      * <p>getTagLanguage.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getTagLanguage();
+    String getTagLanguage();
 
     /**
      * <p>getCollapseMissingBookmarkLevels.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCollapseMissingBookmarkLevels();
+    Boolean getCollapseMissingBookmarkLevels();
 
     /**
      * <p>getSizePageToContent.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getSizePageToContent();
+    Boolean getSizePageToContent();
 
     /**
      * <p>getIgnoreHyperLink.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreHyperLink();
+    Boolean getIgnoreHyperLink();
 
     /**
      * <p>getForceLineBreakPolicy.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getForceLineBreakPolicy();
+    Boolean getForceLineBreakPolicy();
 
     /**
      * <p>getPrintScaling.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.PdfPrintScaling} object.
      */
-    public PdfPrintScaling getPrintScaling();
+    PdfPrintScaling getPrintScaling();
 
     /**
      * <p>getPdfaConformance.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.PdfaConformance} object.
      */
-    public PdfaConformance getPdfaConformance();
+    PdfaConformance getPdfaConformance();
 
     /**
      * <p>getIccProfilePath.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getIccProfilePath();
+    String getIccProfilePath();
 
     /**
      * <p>getAllowedPermissionsHint.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getAllowedPermissionsHint();
+    String getAllowedPermissionsHint();
 
     /**
      * <p>getDeniedPermissionsHint.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getDeniedPermissionsHint();
+    String getDeniedPermissionsHint();
 
     /**
      * <p>getDisplayMetadataTitle.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getDisplayMetadataTitle();
+    Boolean getDisplayMetadataTitle();
 }

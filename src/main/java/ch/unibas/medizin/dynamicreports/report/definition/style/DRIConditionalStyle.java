@@ -35,5 +35,5 @@ public interface DRIConditionalStyle extends DRIBaseStyle {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Boolean> getConditionExpression();
+    DRIExpression<Boolean> getConditionExpression();
 }

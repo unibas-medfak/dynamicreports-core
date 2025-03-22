@@ -35,33 +35,33 @@ public interface DRIDesignSubreport extends DRIDesignComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getReportExpression();
+    DRIDesignExpression getReportExpression();
 
     /**
      * <p>getParametersExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getParametersExpression();
+    DRIDesignExpression getParametersExpression();
 
     /**
      * <p>getConnectionExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getConnectionExpression();
+    DRIDesignExpression getConnectionExpression();
 
     /**
      * <p>getDataSourceExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getDataSourceExpression();
+    DRIDesignExpression getDataSourceExpression();
 
     /**
      * <p>getRunToBottom.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getRunToBottom();
+    Boolean getRunToBottom();
 }

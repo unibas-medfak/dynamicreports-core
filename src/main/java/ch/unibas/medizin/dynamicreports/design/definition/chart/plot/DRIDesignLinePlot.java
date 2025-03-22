@@ -33,12 +33,12 @@ public interface DRIDesignLinePlot extends DRIDesignAxisPlot {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowShapes();
+    Boolean getShowShapes();
 
     /**
      * <p>getShowLines.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowLines();
+    Boolean getShowLines();
 }

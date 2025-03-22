@@ -37,26 +37,26 @@ public interface DRIList extends DRIDimensionComponent {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIListCell> getListCells();
+    List<? extends DRIListCell> getListCells();
 
     /**
      * <p>getType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ListType} object.
      */
-    public ListType getType();
+    ListType getType();
 
     /**
      * <p>getGap.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getGap();
+    Integer getGap();
 
     /**
      * <p>getBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getBackgroundComponent();
+    DRIComponent getBackgroundComponent();
 }

@@ -36,13 +36,13 @@ public interface DRILine extends DRIDimensionComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.LineDirection} object.
      */
-    public LineDirection getDirection();
+    LineDirection getDirection();
 
     /**
      * <p>getPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen} object.
      */
-    public DRIPen getPen();
+    DRIPen getPen();
 
 }

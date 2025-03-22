@@ -55,313 +55,313 @@ public interface DRIDesignReport extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignTemplateDesign} object.
      */
-    public DRIDesignTemplateDesign getTemplateDesign();
+    DRIDesignTemplateDesign getTemplateDesign();
 
     /**
      * <p>getReportName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getReportName();
+    String getReportName();
 
     /**
      * <p>getLocale.</p>
      *
      * @return a {@link java.util.Locale} object.
      */
-    public Locale getLocale();
+    Locale getLocale();
 
     /**
      * <p>getResourceBundle.</p>
      *
      * @return a {@link java.util.ResourceBundle} object.
      */
-    public ResourceBundle getResourceBundle();
+    ResourceBundle getResourceBundle();
 
     /**
      * <p>getResourceBundleName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getResourceBundleName();
+    String getResourceBundleName();
 
     /**
      * <p>isIgnorePagination.</p>
      *
      * @return a boolean.
      */
-    public boolean isIgnorePagination();
+    boolean isIgnorePagination();
 
     /**
      * <p>getProperties.</p>
      *
      * @return a {@link java.util.Properties} object.
      */
-    public Properties getProperties();
+    Properties getProperties();
 
     /**
      * <p>getQuery.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignQuery} object.
      */
-    public DRIDesignQuery getQuery();
+    DRIDesignQuery getQuery();
 
     /**
      * <p>getPage.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignPage} object.
      */
-    public DRIDesignPage getPage();
+    DRIDesignPage getPage();
 
     /**
      * <p>getWhenNoDataType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.WhenNoDataType} object.
      */
-    public WhenNoDataType getWhenNoDataType();
+    WhenNoDataType getWhenNoDataType();
 
     /**
      * <p>getWhenResourceMissingType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.WhenResourceMissingType} object.
      */
-    public WhenResourceMissingType getWhenResourceMissingType();
+    WhenResourceMissingType getWhenResourceMissingType();
 
     /**
      * <p>isTitleOnANewPage.</p>
      *
      * @return a boolean.
      */
-    public boolean isTitleOnANewPage();
+    boolean isTitleOnANewPage();
 
     /**
      * <p>isSummaryOnANewPage.</p>
      *
      * @return a boolean.
      */
-    public boolean isSummaryOnANewPage();
+    boolean isSummaryOnANewPage();
 
     /**
      * <p>isSummaryWithPageHeaderAndFooter.</p>
      *
      * @return a boolean.
      */
-    public boolean isSummaryWithPageHeaderAndFooter();
+    boolean isSummaryWithPageHeaderAndFooter();
 
     /**
      * <p>isFloatColumnFooter.</p>
      *
      * @return a boolean.
      */
-    public boolean isFloatColumnFooter();
+    boolean isFloatColumnFooter();
 
     /**
      * <p>getPrintOrder.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Orientation} object.
      */
-    public Orientation getPrintOrder();
+    Orientation getPrintOrder();
 
     /**
      * <p>getColumnDirection.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.RunDirection} object.
      */
-    public RunDirection getColumnDirection();
+    RunDirection getColumnDirection();
 
     /**
      * <p>getLanguage.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLanguage();
+    String getLanguage();
 
     /**
      * <p>isTableOfContents.</p>
      *
      * @return a boolean.
      */
-    public boolean isTableOfContents();
+    boolean isTableOfContents();
 
     /**
      * <p>getTableOfContentsHeadings.</p>
      *
      * @return a {@link java.util.Map} object.
      */
-    public Map<String, JasperTocHeading> getTableOfContentsHeadings();
+    Map<String, JasperTocHeading> getTableOfContentsHeadings();
 
     /**
      * <p>getTableOfContentsCustomizer.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRITableOfContentsCustomizer} object.
      */
-    public DRITableOfContentsCustomizer getTableOfContentsCustomizer();
+    DRITableOfContentsCustomizer getTableOfContentsCustomizer();
 
     /**
      * <p>getFilterExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getFilterExpression();
+    DRIDesignExpression getFilterExpression();
 
     /**
      * <p>getParameters.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignParameter> getParameters();
+    Collection<DRIDesignParameter> getParameters();
 
     /**
      * <p>getParameterValues.</p>
      *
      * @return a {@link java.util.Map} object.
      */
-    public Map<String, Object> getParameterValues();
+    Map<String, Object> getParameterValues();
 
     /**
      * <p>getScriptlets.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIScriptlet> getScriptlets();
+    Collection<DRIScriptlet> getScriptlets();
 
     /**
      * <p>getFields.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignField> getFields();
+    Collection<DRIDesignField> getFields();
 
     /**
      * <p>getSystemExpressions.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignSystemExpression> getSystemExpressions();
+    Collection<DRIDesignSystemExpression> getSystemExpressions();
 
     /**
      * <p>getJasperExpressions.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignJasperExpression> getJasperExpressions();
+    Collection<DRIDesignJasperExpression> getJasperExpressions();
 
     /**
      * <p>getSimpleExpressions.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignSimpleExpression> getSimpleExpressions();
+    Collection<DRIDesignSimpleExpression> getSimpleExpressions();
 
     /**
      * <p>getStyles.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignStyle> getStyles();
+    Collection<DRIDesignStyle> getStyles();
 
     /**
      * <p>getGroups.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<? extends DRIDesignGroup> getGroups();
+    Collection<? extends DRIDesignGroup> getGroups();
 
     /**
      * <p>getVariables.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignVariable> getVariables();
+    Collection<DRIDesignVariable> getVariables();
 
     /**
      * <p>getComplexExpressions.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignComplexExpression> getComplexExpressions();
+    Collection<DRIDesignComplexExpression> getComplexExpressions();
 
     /**
      * <p>getSorts.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignSort> getSorts();
+    Collection<DRIDesignSort> getSorts();
 
     /**
      * <p>getDatasets.</p>
      *
      * @return a {@link java.util.Collection} object.
      */
-    public Collection<DRIDesignDataset> getDatasets();
+    Collection<DRIDesignDataset> getDatasets();
 
     /**
      * <p>getTitleBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getTitleBand();
+    DRIDesignBand getTitleBand();
 
     /**
      * <p>getPageHeaderBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getPageHeaderBand();
+    DRIDesignBand getPageHeaderBand();
 
     /**
      * <p>getPageFooterBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getPageFooterBand();
+    DRIDesignBand getPageFooterBand();
 
     /**
      * <p>getColumnHeaderBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getColumnHeaderBand();
+    DRIDesignBand getColumnHeaderBand();
 
     /**
      * <p>getColumnFooterBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getColumnFooterBand();
+    DRIDesignBand getColumnFooterBand();
 
     /**
      * <p>getDetailBands.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIDesignBand> getDetailBands();
+    List<? extends DRIDesignBand> getDetailBands();
 
     /**
      * <p>getLastPageFooterBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getLastPageFooterBand();
+    DRIDesignBand getLastPageFooterBand();
 
     /**
      * <p>getSummaryBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getSummaryBand();
+    DRIDesignBand getSummaryBand();
 
     /**
      * <p>getNoDataBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getNoDataBand();
+    DRIDesignBand getNoDataBand();
 
     /**
      * <p>getBackgroundBand.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignBand} object.
      */
-    public DRIDesignBand getBackgroundBand();
+    DRIDesignBand getBackgroundBand();
 }

@@ -33,5 +33,5 @@ public interface JasperIXmlExporter extends JasperIExporter {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getEmbeddingImages();
+    Boolean getEmbeddingImages();
 }

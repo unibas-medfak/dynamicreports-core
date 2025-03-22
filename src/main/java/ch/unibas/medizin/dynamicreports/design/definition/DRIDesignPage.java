@@ -37,47 +37,47 @@ public interface DRIDesignPage extends Serializable {
      *
      * @return a int.
      */
-    public int getWidth();
+    int getWidth();
 
     /**
      * <p>getHeight.</p>
      *
      * @return a int.
      */
-    public int getHeight();
+    int getHeight();
 
     /**
      * <p>getOrientation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.PageOrientation} object.
      */
-    public PageOrientation getOrientation();
+    PageOrientation getOrientation();
 
     /**
      * <p>getMargin.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignMargin} object.
      */
-    public DRIDesignMargin getMargin();
+    DRIDesignMargin getMargin();
 
     /**
      * <p>getColumnsPerPage.</p>
      *
      * @return a int.
      */
-    public int getColumnsPerPage();
+    int getColumnsPerPage();
 
     /**
      * <p>getColumnSpace.</p>
      *
      * @return a int.
      */
-    public int getColumnSpace();
+    int getColumnSpace();
 
     /**
      * <p>getColumnWidth.</p>
      *
      * @return a int.
      */
-    public int getColumnWidth();
+    int getColumnWidth();
 }

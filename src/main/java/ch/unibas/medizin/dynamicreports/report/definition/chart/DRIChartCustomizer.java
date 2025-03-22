@@ -39,5 +39,5 @@ public interface DRIChartCustomizer extends Serializable {
      * @param chart            a {@link org.jfree.chart.JFreeChart} object.
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void customize(JFreeChart chart, ReportParameters reportParameters);
+    void customize(JFreeChart chart, ReportParameters reportParameters);
 }

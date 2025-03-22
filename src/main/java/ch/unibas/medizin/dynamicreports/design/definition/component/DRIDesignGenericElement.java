@@ -39,34 +39,34 @@ public interface DRIDesignGenericElement extends DRIDesignComponent {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getGenericElementNamespace();
+    String getGenericElementNamespace();
 
     /**
      * <p>getGenericElementName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getGenericElementName();
+    String getGenericElementName();
 
     /**
      * <p>getEvaluationTime.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.constant.EvaluationTime} object.
      */
-    public EvaluationTime getEvaluationTime();
+    EvaluationTime getEvaluationTime();
 
     /**
      * <p>getEvaluationGroup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignGroup} object.
      */
-    public DRIDesignGroup getEvaluationGroup();
+    DRIDesignGroup getEvaluationGroup();
 
     /**
      * <p>getParameterExpressions.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIDesignParameterExpression> getParameterExpressions();
+    List<DRIDesignParameterExpression> getParameterExpressions();
 
 }

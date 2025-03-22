@@ -37,13 +37,13 @@ public interface DRIMultiPageList extends DRIDimensionComponent {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIComponent> getComponents();
+    List<DRIComponent> getComponents();
 
     /**
      * <p>getSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getSplitType();
+    SplitType getSplitType();
 
 }

@@ -35,20 +35,20 @@ public interface DRIDifferencePlot extends DRIAxisPlot {
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getPositiveColor();
+    Color getPositiveColor();
 
     /**
      * <p>getNegativeColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getNegativeColor();
+    Color getNegativeColor();
 
     /**
      * <p>getShowShapes.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowShapes();
+    Boolean getShowShapes();
 
 }

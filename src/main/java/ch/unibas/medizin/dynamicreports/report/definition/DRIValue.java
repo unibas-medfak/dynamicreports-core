@@ -33,5 +33,5 @@ public interface DRIValue<T> {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 }

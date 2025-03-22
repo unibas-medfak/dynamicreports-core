@@ -33,12 +33,12 @@ public interface JasperICsvExporter extends JasperIExporter {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getFieldDelimiter();
+    String getFieldDelimiter();
 
     /**
      * <p>getRecordDelimiter.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getRecordDelimiter();
+    String getRecordDelimiter();
 }

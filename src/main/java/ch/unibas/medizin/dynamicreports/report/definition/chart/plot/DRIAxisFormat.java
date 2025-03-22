@@ -39,75 +39,75 @@ public interface DRIAxisFormat extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<String> getLabelExpression();
+    DRIExpression<String> getLabelExpression();
 
     /**
      * <p>getLabelFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont} object.
      */
-    public DRIFont getLabelFont();
+    DRIFont getLabelFont();
 
     /**
      * <p>getLabelColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getLabelColor();
+    Color getLabelColor();
 
     /**
      * <p>getTickLabelFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont} object.
      */
-    public DRIFont getTickLabelFont();
+    DRIFont getTickLabelFont();
 
     /**
      * <p>getTickLabelColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getTickLabelColor();
+    Color getTickLabelColor();
 
     /**
      * <p>getTickLabelMask.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getTickLabelMask();
+    String getTickLabelMask();
 
     /**
      * <p>getVerticalTickLabels.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getVerticalTickLabels();
+    Boolean getVerticalTickLabels();
 
     /**
      * <p>getTickLabelRotation.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getTickLabelRotation();
+    Double getTickLabelRotation();
 
     /**
      * <p>getLineColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getLineColor();
+    Color getLineColor();
 
     /**
      * <p>getRangeMinValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<? extends Number> getRangeMinValueExpression();
+    DRIExpression<? extends Number> getRangeMinValueExpression();
 
     /**
      * <p>getRangeMaxValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<? extends Number> getRangeMaxValueExpression();
+    DRIExpression<? extends Number> getRangeMaxValueExpression();
 }

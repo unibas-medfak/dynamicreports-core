@@ -40,159 +40,159 @@ public interface DRICrosstab extends DRIDimensionComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabDataset} object.
      */
-    public DRICrosstabDataset getDataset();
+    DRICrosstabDataset getDataset();
 
     /**
      * <p>isRepeatColumnHeaders.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean isRepeatColumnHeaders();
+    Boolean isRepeatColumnHeaders();
 
     /**
      * <p>isRepeatRowHeaders.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean isRepeatRowHeaders();
+    Boolean isRepeatRowHeaders();
 
     /**
      * <p>getColumnBreakOffset.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getColumnBreakOffset();
+    Integer getColumnBreakOffset();
 
     /**
      * <p>getIgnoreWidth.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreWidth();
+    Boolean getIgnoreWidth();
 
     /**
      * <p>getRunDirection.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.RunDirection} object.
      */
-    public RunDirection getRunDirection();
+    RunDirection getRunDirection();
 
     /**
      * <p>getCellWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getCellWidth();
+    Integer getCellWidth();
 
     /**
      * <p>getCellHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getCellHeight();
+    Integer getCellHeight();
 
     /**
      * <p>getHighlightOddRows.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getHighlightOddRows();
+    Boolean getHighlightOddRows();
 
     /**
      * <p>getOddRowStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRISimpleStyle} object.
      */
-    public DRISimpleStyle getOddRowStyle();
+    DRISimpleStyle getOddRowStyle();
 
     /**
      * <p>getHighlightEvenRows.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getHighlightEvenRows();
+    Boolean getHighlightEvenRows();
 
     /**
      * <p>getEvenRowStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRISimpleStyle} object.
      */
-    public DRISimpleStyle getEvenRowStyle();
+    DRISimpleStyle getEvenRowStyle();
 
     /**
      * <p>getGroupStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getGroupStyle();
+    DRIReportStyle getGroupStyle();
 
     /**
      * <p>getGroupTotalStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getGroupTotalStyle();
+    DRIReportStyle getGroupTotalStyle();
 
     /**
      * <p>getGrandTotalStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getGrandTotalStyle();
+    DRIReportStyle getGrandTotalStyle();
 
     /**
      * <p>getCellStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getCellStyle();
+    DRIReportStyle getCellStyle();
 
     /**
      * <p>getMeasureTitleStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getMeasureTitleStyle();
+    DRIReportStyle getMeasureTitleStyle();
 
     /**
      * <p>getWhenNoDataCell.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabCellContent} object.
      */
-    public DRICrosstabCellContent getWhenNoDataCell();
+    DRICrosstabCellContent getWhenNoDataCell();
 
     /**
      * <p>getHeaderCell.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabCellContent} object.
      */
-    public DRICrosstabCellContent getHeaderCell();
+    DRICrosstabCellContent getHeaderCell();
 
     /**
      * <p>getColumnGroups.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRICrosstabColumnGroup<?>> getColumnGroups();
+    List<DRICrosstabColumnGroup<?>> getColumnGroups();
 
     /**
      * <p>getRowGroups.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRICrosstabRowGroup<?>> getRowGroups();
+    List<DRICrosstabRowGroup<?>> getRowGroups();
 
     /**
      * <p>getVariables.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRICrosstabVariable<?>> getVariables();
+    List<DRICrosstabVariable<?>> getVariables();
 
     /**
      * <p>getMeasures.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRICrosstabMeasure<?>> getMeasures();
+    List<DRICrosstabMeasure<?>> getMeasures();
 }

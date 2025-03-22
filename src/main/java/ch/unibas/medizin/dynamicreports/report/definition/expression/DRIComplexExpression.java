@@ -38,7 +38,7 @@ public interface DRIComplexExpression<T> extends DRIExpression<T> {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIExpression<?>> getExpressions();
+    List<DRIExpression<?>> getExpressions();
 
     /**
      * Evaluates the expression.
@@ -47,5 +47,5 @@ public interface DRIComplexExpression<T> extends DRIExpression<T> {
      * @param reportParameters access to report fields, variables, parameters, expressions, and other report values
      * @return the result of the expression evaluation
      */
-    public T evaluate(List<?> values, ReportParameters reportParameters);
+    T evaluate(List<?> values, ReportParameters reportParameters);
 }

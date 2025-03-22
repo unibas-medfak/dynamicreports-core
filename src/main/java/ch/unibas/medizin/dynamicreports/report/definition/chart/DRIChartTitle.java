@@ -35,5 +35,5 @@ public interface DRIChartTitle extends DRIChartSubtitle {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Position} object.
      */
-    public Position getPosition();
+    Position getPosition();
 }

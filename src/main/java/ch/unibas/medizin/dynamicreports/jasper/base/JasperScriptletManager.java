@@ -30,7 +30,7 @@ public interface JasperScriptletManager {
     /**
      * Property key used for selecting thread safe implementation.
      */
-    public static final String USE_THREAD_SAFE_SCRIPLET_MANAGER_PROPERTY_KEY = "ch.unibas.medizin.dynamicreports.useThreadSafeScriptletManager";
+    String USE_THREAD_SAFE_SCRIPLET_MANAGER_PROPERTY_KEY = "ch.unibas.medizin.dynamicreports.useThreadSafeScriptletManager";
 
     /**
      * Getter for the {@link ch.unibas.medizin.dynamicreports.jasper.base.JasperScriptlet} instance.

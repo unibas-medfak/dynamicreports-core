@@ -37,7 +37,7 @@ public interface DRIDesignComplexExpression extends DRIDesignExpression {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIDesignExpression> getExpressions();
+    List<DRIDesignExpression> getExpressions();
 
     /**
      * <p>evaluate.</p>
@@ -46,12 +46,12 @@ public interface DRIDesignComplexExpression extends DRIDesignExpression {
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      * @return a {@link java.lang.Object} object.
      */
-    public Object evaluate(List<?> values, ReportParameters reportParameters);
+    Object evaluate(List<?> values, ReportParameters reportParameters);
 
     /**
      * <p>getParameterName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getParameterName();
+    String getParameterName();
 }

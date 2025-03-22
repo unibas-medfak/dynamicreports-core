@@ -35,27 +35,27 @@ public interface DRIWaterfallBarPlot extends DRIBarPlot {
      *
      * @return a {@link java.awt.Paint} object.
      */
-    public Paint getFirstBarPaint();
+    Paint getFirstBarPaint();
 
     /**
      * <p>getLastBarPaint.</p>
      *
      * @return a {@link java.awt.Paint} object.
      */
-    public Paint getLastBarPaint();
+    Paint getLastBarPaint();
 
     /**
      * <p>getPositiveBarPaint.</p>
      *
      * @return a {@link java.awt.Paint} object.
      */
-    public Paint getPositiveBarPaint();
+    Paint getPositiveBarPaint();
 
     /**
      * <p>getNegativeBarPaint.</p>
      *
      * @return a {@link java.awt.Paint} object.
      */
-    public Paint getNegativeBarPaint();
+    Paint getNegativeBarPaint();
 
 }

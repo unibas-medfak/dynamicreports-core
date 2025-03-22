@@ -35,5 +35,5 @@ public interface DRIDesignValueDataset extends DRIDesignChartDataset {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getValueExpression();
+    DRIDesignExpression getValueExpression();
 }

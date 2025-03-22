@@ -38,19 +38,19 @@ public interface DRIDesignPen extends Serializable {
      *
      * @return a {@link java.lang.Float} object.
      */
-    public Float getLineWidth();
+    Float getLineWidth();
 
     /**
      * <p>getLineStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.LineStyle} object.
      */
-    public LineStyle getLineStyle();
+    LineStyle getLineStyle();
 
     /**
      * <p>getLineColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getLineColor();
+    Color getLineColor();
 }

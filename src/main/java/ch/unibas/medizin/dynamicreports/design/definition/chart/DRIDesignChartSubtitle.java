@@ -39,19 +39,19 @@ public interface DRIDesignChartSubtitle extends Serializable {
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getColor();
+    Color getColor();
 
     /**
      * <p>getFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignFont} object.
      */
-    public DRIDesignFont getFont();
+    DRIDesignFont getFont();
 
     /**
      * <p>getTitle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getTitle();
+    DRIDesignExpression getTitle();
 }

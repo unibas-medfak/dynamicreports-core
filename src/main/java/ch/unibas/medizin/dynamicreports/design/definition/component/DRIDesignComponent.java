@@ -43,110 +43,110 @@ public interface DRIDesignComponent extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getUniqueName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getUniqueName();
+    String getUniqueName();
 
     /**
      * <p>getStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignStyle} object.
      */
-    public DRIDesignStyle getStyle();
+    DRIDesignStyle getStyle();
 
     /**
      * <p>getX.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getX();
+    Integer getX();
 
     /**
      * <p>getY.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getY();
+    Integer getY();
 
     /**
      * <p>getWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getWidth();
+    Integer getWidth();
 
     /**
      * <p>getHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getHeight();
+    Integer getHeight();
 
     /**
      * <p>getPrintWhenExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getPrintWhenExpression();
+    DRIDesignExpression getPrintWhenExpression();
 
     /**
      * <p>isRemoveLineWhenBlank.</p>
      *
      * @return a boolean.
      */
-    public boolean isRemoveLineWhenBlank();
+    boolean isRemoveLineWhenBlank();
 
     /**
      * <p>getPropertyExpressions.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIDesignPropertyExpression> getPropertyExpressions();
+    List<DRIDesignPropertyExpression> getPropertyExpressions();
 
     /**
      * <p>getPositionType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ComponentPositionType} object.
      */
-    public ComponentPositionType getPositionType();
+    ComponentPositionType getPositionType();
 
     /**
      * <p>getStretchType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.StretchType} object.
      */
-    public StretchType getStretchType();
+    StretchType getStretchType();
 
     /**
      * <p>isPrintInFirstWholeBand.</p>
      *
      * @return a boolean.
      */
-    public boolean isPrintInFirstWholeBand();
+    boolean isPrintInFirstWholeBand();
 
     /**
      * <p>isPrintWhenDetailOverflows.</p>
      *
      * @return a boolean.
      */
-    public boolean isPrintWhenDetailOverflows();
+    boolean isPrintWhenDetailOverflows();
 
     /**
      * <p>getPrintWhenGroupChanges.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignGroup} object.
      */
-    public DRIDesignGroup getPrintWhenGroupChanges();
+    DRIDesignGroup getPrintWhenGroupChanges();
 
     /**
      * <p>getTableOfContentsHeading.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignTableOfContentsHeading} object.
      */
-    public DRIDesignTableOfContentsHeading getTableOfContentsHeading();
+    DRIDesignTableOfContentsHeading getTableOfContentsHeading();
 }

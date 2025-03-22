@@ -35,19 +35,19 @@ public interface DRIXyzChartSerie extends DRIChartSerie {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getXValueExpression();
+    DRIExpression<?> getXValueExpression();
 
     /**
      * <p>getYValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getYValueExpression();
+    DRIExpression<?> getYValueExpression();
 
     /**
      * <p>getZValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getZValueExpression();
+    DRIExpression<?> getZValueExpression();
 }

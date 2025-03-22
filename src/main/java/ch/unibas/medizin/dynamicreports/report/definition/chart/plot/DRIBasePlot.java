@@ -39,19 +39,19 @@ public interface DRIBasePlot extends DRIPlot {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Orientation} object.
      */
-    public Orientation getOrientation();
+    Orientation getOrientation();
 
     /**
      * <p>getSeriesColors.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<Color> getSeriesColors();
+    List<Color> getSeriesColors();
 
     /**
      * <p>getSeriesColorsByName.</p>
      *
      * @return a {@link java.util.Map} object.
      */
-    public Map<String, Color> getSeriesColorsByName();
+    Map<String, Color> getSeriesColorsByName();
 }

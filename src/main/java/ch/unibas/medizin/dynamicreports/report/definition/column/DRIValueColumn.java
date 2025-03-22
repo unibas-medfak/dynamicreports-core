@@ -37,5 +37,5 @@ public interface DRIValueColumn<T> extends DRIExpression<T>, DRIColumn<DRITextFi
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getPrintRepeatedDetailValues();
+    Boolean getPrintRepeatedDetailValues();
 }

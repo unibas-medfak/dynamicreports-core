@@ -33,47 +33,47 @@ public interface JasperITextExporter extends JasperIExporter {
      *
      * @return a {@link java.lang.Float} object.
      */
-    public Float getCharacterWidth();
+    Float getCharacterWidth();
 
     /**
      * <p>getCharacterHeight.</p>
      *
      * @return a {@link java.lang.Float} object.
      */
-    public Float getCharacterHeight();
+    Float getCharacterHeight();
 
     /**
      * <p>getPageWidthInChars.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageWidthInChars();
+    Integer getPageWidthInChars();
 
     /**
      * <p>getPageHeightInChars.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageHeightInChars();
+    Integer getPageHeightInChars();
 
     /**
      * <p>getPageSeparator.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPageSeparator();
+    String getPageSeparator();
 
     /**
      * <p>getLineSeparator.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLineSeparator();
+    String getLineSeparator();
 
     /**
      * <p>getTrimLineRight.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getTrimLineRight();
+    Boolean getTrimLineRight();
 }

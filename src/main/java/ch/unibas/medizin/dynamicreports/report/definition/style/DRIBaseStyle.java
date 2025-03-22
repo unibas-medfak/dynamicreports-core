@@ -44,111 +44,111 @@ public interface DRIBaseStyle extends Serializable {
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getForegroundColor();
+    Color getForegroundColor();
 
     /**
      * <p>getBackgroundColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getBackgroundColor();
+    Color getBackgroundColor();
 
     /**
      * <p>getRadius.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getRadius();
+    Integer getRadius();
 
     /**
      * <p>getImageScale.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ImageScale} object.
      */
-    public ImageScale getImageScale();
+    ImageScale getImageScale();
 
     /**
      * <p>getHorizontalImageAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalImageAlignment} object.
      */
-    public HorizontalImageAlignment getHorizontalImageAlignment();
+    HorizontalImageAlignment getHorizontalImageAlignment();
 
     /**
      * <p>getVerticalImageAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.VerticalImageAlignment} object.
      */
-    public VerticalImageAlignment getVerticalImageAlignment();
+    VerticalImageAlignment getVerticalImageAlignment();
 
     /**
      * <p>getHorizontalTextAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment} object.
      */
-    public HorizontalTextAlignment getHorizontalTextAlignment();
+    HorizontalTextAlignment getHorizontalTextAlignment();
 
     /**
      * <p>getVerticalTextAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.VerticalTextAlignment} object.
      */
-    public VerticalTextAlignment getVerticalTextAlignment();
+    VerticalTextAlignment getVerticalTextAlignment();
 
     /**
      * <p>getBorder.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIBorder} object.
      */
-    public DRIBorder getBorder();
+    DRIBorder getBorder();
 
     /**
      * <p>getPadding.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPadding} object.
      */
-    public DRIPadding getPadding();
+    DRIPadding getPadding();
 
     /**
      * <p>getFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont} object.
      */
-    public DRIFont getFont();
+    DRIFont getFont();
 
     /**
      * <p>getRotation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Rotation} object.
      */
-    public Rotation getRotation();
+    Rotation getRotation();
 
     /**
      * <p>getPattern.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPattern();
+    String getPattern();
 
     /**
      * <p>getMarkup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Markup} object.
      */
-    public Markup getMarkup();
+    Markup getMarkup();
 
     /**
      * <p>getParagraph.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIParagraph} object.
      */
-    public DRIParagraph getParagraph();
+    DRIParagraph getParagraph();
 
     /**
      * <p>getLinePen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen} object.
      */
-    public DRIPen getLinePen();
+    DRIPen getLinePen();
 
 }

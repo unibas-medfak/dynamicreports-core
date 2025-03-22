@@ -33,5 +33,5 @@ public interface DRICategoryDataset extends DRISeriesDataset {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getUseSeriesAsCategory();
+    Boolean getUseSeriesAsCategory();
 }

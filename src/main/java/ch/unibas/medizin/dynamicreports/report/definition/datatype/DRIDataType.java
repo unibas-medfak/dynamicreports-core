@@ -42,21 +42,21 @@ public interface DRIDataType<U, T extends U> extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPattern();
+    String getPattern();
 
     /**
      * <p>getValueFormatter.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFormatter} object.
      */
-    public DRIValueFormatter<?, ? extends U> getValueFormatter();
+    DRIValueFormatter<?, ? extends U> getValueFormatter();
 
     /**
      * <p>getHorizontalTextAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment} object.
      */
-    public HorizontalTextAlignment getHorizontalTextAlignment();
+    HorizontalTextAlignment getHorizontalTextAlignment();
 
     /**
      * <p>valueToString.</p>
@@ -65,7 +65,7 @@ public interface DRIDataType<U, T extends U> extends Serializable {
      * @param locale a {@link java.util.Locale} object.
      * @return a {@link java.lang.String} object.
      */
-    public String valueToString(U value, Locale locale);
+    String valueToString(U value, Locale locale);
 
     /**
      * <p>valueToString.</p>
@@ -74,7 +74,7 @@ public interface DRIDataType<U, T extends U> extends Serializable {
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      * @return a {@link java.lang.String} object.
      */
-    public String valueToString(DRIValue<? extends U> value, ReportParameters reportParameters);
+    String valueToString(DRIValue<? extends U> value, ReportParameters reportParameters);
 
     /**
      * <p>valueToString.</p>
@@ -83,7 +83,7 @@ public interface DRIDataType<U, T extends U> extends Serializable {
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      * @return a {@link java.lang.String} object.
      */
-    public String valueToString(String name, ReportParameters reportParameters);
+    String valueToString(String name, ReportParameters reportParameters);
 
     /**
      * <p>stringToValue.</p>
@@ -93,7 +93,7 @@ public interface DRIDataType<U, T extends U> extends Serializable {
      * @return a T object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    public T stringToValue(String value, Locale locale) throws DRException;
+    T stringToValue(String value, Locale locale) throws DRException;
 
     /**
      * <p>stringToValue.</p>
@@ -103,7 +103,7 @@ public interface DRIDataType<U, T extends U> extends Serializable {
      * @return a T object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    public T stringToValue(DRIValue<String> value, ReportParameters reportParameters) throws DRException;
+    T stringToValue(DRIValue<String> value, ReportParameters reportParameters) throws DRException;
 
     /**
      * <p>stringToValue.</p>
@@ -113,12 +113,12 @@ public interface DRIDataType<U, T extends U> extends Serializable {
      * @return a T object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    public T stringToValue(String name, ReportParameters reportParameters) throws DRException;
+    T stringToValue(String name, ReportParameters reportParameters) throws DRException;
 
     /**
      * <p>getValueClass.</p>
      *
      * @return a {@link java.lang.Class} object.
      */
-    public Class<T> getValueClass();
+    Class<T> getValueClass();
 }

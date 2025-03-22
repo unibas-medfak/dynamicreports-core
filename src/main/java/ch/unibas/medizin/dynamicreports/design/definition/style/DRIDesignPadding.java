@@ -35,26 +35,26 @@ public interface DRIDesignPadding extends Serializable {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getTop();
+    Integer getTop();
 
     /**
      * <p>getLeft.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getLeft();
+    Integer getLeft();
 
     /**
      * <p>getBottom.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getBottom();
+    Integer getBottom();
 
     /**
      * <p>getRight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getRight();
+    Integer getRight();
 }

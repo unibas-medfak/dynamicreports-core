@@ -38,33 +38,33 @@ public interface DRISubreport extends DRIDimensionComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getReportExpression();
+    DRIExpression<?> getReportExpression();
 
     /**
      * <p>getParametersExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Map<String, Object>> getParametersExpression();
+    DRIExpression<Map<String, Object>> getParametersExpression();
 
     /**
      * <p>getConnectionExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<Connection> getConnectionExpression();
+    DRIExpression<Connection> getConnectionExpression();
 
     /**
      * <p>getDataSourceExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getDataSourceExpression();
+    DRIExpression<?> getDataSourceExpression();
 
     /**
      * <p>getRunToBottom.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getRunToBottom();
+    Boolean getRunToBottom();
 }

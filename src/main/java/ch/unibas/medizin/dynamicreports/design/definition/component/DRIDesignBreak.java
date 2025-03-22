@@ -35,6 +35,6 @@ public interface DRIDesignBreak extends DRIDesignComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.BreakType} object.
      */
-    public BreakType getType();
+    BreakType getType();
 
 }

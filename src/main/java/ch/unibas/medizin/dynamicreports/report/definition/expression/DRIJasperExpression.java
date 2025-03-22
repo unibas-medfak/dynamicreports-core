@@ -33,5 +33,5 @@ public interface DRIJasperExpression<T> extends DRIExpression<T> {
      *
      * @return the jasper expression
      */
-    public String getExpression();
+    String getExpression();
 }

@@ -35,5 +35,5 @@ public interface DRIDesignChartTitle extends DRIDesignChartSubtitle {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Position} object.
      */
-    public Position getPosition();
+    Position getPosition();
 }

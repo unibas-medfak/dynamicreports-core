@@ -35,6 +35,6 @@ public interface DRIEllipse extends DRIDimensionComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen} object.
      */
-    public DRIPen getPen();
+    DRIPen getPen();
 
 }

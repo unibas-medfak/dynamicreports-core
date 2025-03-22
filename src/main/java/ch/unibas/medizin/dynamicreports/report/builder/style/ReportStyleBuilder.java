@@ -37,12 +37,12 @@ public interface ReportStyleBuilder extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getStyle();
+    DRIReportStyle getStyle();
 
     /**
      * <p>build.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle build();
+    DRIReportStyle build();
 }

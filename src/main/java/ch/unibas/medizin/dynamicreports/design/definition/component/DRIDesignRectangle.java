@@ -35,13 +35,13 @@ public interface DRIDesignRectangle extends DRIDesignComponent {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getRadius();
+    Integer getRadius();
 
     /**
      * <p>getPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignPen} object.
      */
-    public DRIDesignPen getPen();
+    DRIDesignPen getPen();
 
 }

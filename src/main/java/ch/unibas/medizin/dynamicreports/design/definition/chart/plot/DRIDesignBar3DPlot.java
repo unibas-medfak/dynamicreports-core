@@ -33,19 +33,19 @@ public interface DRIDesignBar3DPlot extends DRIDesignAxisPlot {
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getXOffset();
+    Double getXOffset();
 
     /**
      * <p>getYOffset.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getYOffset();
+    Double getYOffset();
 
     /**
      * <p>getShowLabels.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowLabels();
+    Boolean getShowLabels();
 }

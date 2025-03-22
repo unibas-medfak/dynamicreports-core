@@ -35,7 +35,7 @@ public interface DRICustomValues extends Serializable {
     /**
      * Constant <code>NAME="CUSTOM_VALUES"</code>
      */
-    public static final String NAME = "CUSTOM_VALUES";
+    String NAME = "CUSTOM_VALUES";
 
     /**
      * <p>setSystemValue.</p>
@@ -43,7 +43,7 @@ public interface DRICustomValues extends Serializable {
      * @param name  a {@link java.lang.String} object.
      * @param value a {@link java.lang.Object} object.
      */
-    public void setSystemValue(String name, Object value);
+    void setSystemValue(String name, Object value);
 
     /**
      * <p>addTocHeading.</p>
@@ -53,26 +53,26 @@ public interface DRICustomValues extends Serializable {
      * @param text        a {@link java.lang.String} object.
      * @param customValue a {@link java.lang.Object} object.
      */
-    public void addTocHeading(int level, String id, String text, Object customValue);
+    void addTocHeading(int level, String id, String text, Object customValue);
 
     /**
      * <p>getTocHeadings.</p>
      *
      * @return a {@link java.util.Map} object.
      */
-    public Map<String, JasperTocHeading> getTocHeadings();
+    Map<String, JasperTocHeading> getTocHeadings();
 
     /**
      * <p>setTocHeadings.</p>
      *
      * @param tocHeadings a {@link java.util.Map} object.
      */
-    public void setTocHeadings(Map<String, JasperTocHeading> tocHeadings);
+    void setTocHeadings(Map<String, JasperTocHeading> tocHeadings);
 
     /**
      * <p>setSubreportWidth.</p>
      *
      * @param subreportWidth a {@link java.lang.Integer} object.
      */
-    public void setSubreportWidth(Integer subreportWidth);
+    void setSubreportWidth(Integer subreportWidth);
 }

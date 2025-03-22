@@ -35,19 +35,19 @@ public interface DRIStyle extends DRIBaseStyle, DRIReportStyle {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getParentStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getParentStyle();
+    DRIReportStyle getParentStyle();
 
     /**
      * <p>getConditionalStyles.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIConditionalStyle> getConditionalStyles();
+    List<? extends DRIConditionalStyle> getConditionalStyles();
 }

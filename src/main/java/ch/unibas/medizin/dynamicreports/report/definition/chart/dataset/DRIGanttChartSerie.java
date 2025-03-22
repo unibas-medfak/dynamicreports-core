@@ -35,26 +35,26 @@ public interface DRIGanttChartSerie extends DRIChartSerie {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getStartDateExpression();
+    DRIExpression<?> getStartDateExpression();
 
     /**
      * <p>getEndDateExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getEndDateExpression();
+    DRIExpression<?> getEndDateExpression();
 
     /**
      * <p>getPercentExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getPercentExpression();
+    DRIExpression<?> getPercentExpression();
 
     /**
      * <p>getLabelExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getLabelExpression();
+    DRIExpression<?> getLabelExpression();
 }

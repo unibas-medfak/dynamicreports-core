@@ -33,5 +33,5 @@ public interface JasperIXlsxExporter extends JasperIExcelExporter {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getMacroTemplate();
+    String getMacroTemplate();
 }

@@ -39,33 +39,33 @@ public interface DRIChartLegend extends Serializable {
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getColor();
+    Color getColor();
 
     /**
      * <p>getBackgroundColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getBackgroundColor();
+    Color getBackgroundColor();
 
     /**
      * <p>getShowLegend.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowLegend();
+    Boolean getShowLegend();
 
     /**
      * <p>getFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont} object.
      */
-    public DRIFont getFont();
+    DRIFont getFont();
 
     /**
      * <p>getPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Position} object.
      */
-    public Position getPosition();
+    Position getPosition();
 }

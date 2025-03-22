@@ -40,38 +40,38 @@ public interface DRITableOfContentsCustomizer extends Serializable {
      *
      * @param report a {@link ch.unibas.medizin.dynamicreports.report.builder.ReportBuilder} object.
      */
-    public void setReport(ReportBuilder<?> report);
+    void setReport(ReportBuilder<?> report);
 
     /**
      * <p>setHeadingList.</p>
      *
      * @param headingList a {@link java.util.List} object.
      */
-    public void setHeadingList(List<JasperTocHeading> headingList);
+    void setHeadingList(List<JasperTocHeading> headingList);
 
     /**
      * <p>setHeadings.</p>
      *
      * @param headings a int.
      */
-    public void setHeadings(int headings);
+    void setHeadings(int headings);
 
     /**
      * <p>setLevels.</p>
      *
      * @param levels a int.
      */
-    public void setLevels(int levels);
+    void setLevels(int levels);
 
     /**
      * <p>customize.</p>
      */
-    public void customize();
+    void customize();
 
     /**
      * <p>getPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.TableOfContentsPosition} object.
      */
-    public TableOfContentsPosition getPosition();
+    TableOfContentsPosition getPosition();
 }

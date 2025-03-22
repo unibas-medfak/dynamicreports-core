@@ -35,5 +35,5 @@ public interface DRIGroupedCategoryChartSerie extends DRICategoryChartSerie {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getGroupExpression();
+    DRIExpression<?> getGroupExpression();
 }

@@ -41,75 +41,75 @@ public interface JasperTransformAccessor {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignReport} object.
      */
-    public DRIDesignReport getReport();
+    DRIDesignReport getReport();
 
     /**
      * <p>getDesign.</p>
      *
      * @return a {@link net.sf.jasperreports.engine.design.JasperDesign} object.
      */
-    public JasperDesign getDesign();
+    JasperDesign getDesign();
 
     /**
      * <p>getCustomValues.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.base.JasperCustomValues} object.
      */
-    public JasperCustomValues getCustomValues();
+    JasperCustomValues getCustomValues();
 
     /**
      * <p>getParameters.</p>
      *
      * @return a {@link java.util.Map} object.
      */
-    public Map<String, Object> getParameters();
+    Map<String, Object> getParameters();
 
     /**
      * <p>getParameterValues.</p>
      *
      * @return a {@link java.util.Map} object.
      */
-    public Map<String, Object> getParameterValues();
+    Map<String, Object> getParameterValues();
 
     /**
      * <p>getStartPageNumber.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getStartPageNumber();
+    Integer getStartPageNumber();
 
     /**
      * <p>getMasterReportParameters.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public ReportParameters getMasterReportParameters();
+    ReportParameters getMasterReportParameters();
 
     /**
      * <p>getReportTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.ReportTransform} object.
      */
-    public ReportTransform getReportTransform();
+    ReportTransform getReportTransform();
 
     /**
      * <p>transformToMainDataset.</p>
      */
-    public void transformToMainDataset();
+    void transformToMainDataset();
 
     /**
      * <p>transformToDataset.</p>
      *
      * @param dataset a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignDataset} object.
      */
-    public void transformToDataset(DRIDesignDataset dataset);
+    void transformToDataset(DRIDesignDataset dataset);
 
     /**
      * <p>getExpressionTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.AbstractExpressionTransform} object.
      */
-    public AbstractExpressionTransform getExpressionTransform();
+    AbstractExpressionTransform getExpressionTransform();
 
     /**
      * <p>getExpressionTransform.</p>
@@ -117,47 +117,47 @@ public interface JasperTransformAccessor {
      * @param dataset a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignDataset} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.AbstractExpressionTransform} object.
      */
-    public AbstractExpressionTransform getExpressionTransform(DRIDesignDataset dataset);
+    AbstractExpressionTransform getExpressionTransform(DRIDesignDataset dataset);
 
     /**
      * <p>getGroupTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.GroupTransform} object.
      */
-    public GroupTransform getGroupTransform();
+    GroupTransform getGroupTransform();
 
     /**
      * <p>getComponentTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.ComponentTransform} object.
      */
-    public ComponentTransform getComponentTransform();
+    ComponentTransform getComponentTransform();
 
     /**
      * <p>getStyleTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.StyleTransform} object.
      */
-    public StyleTransform getStyleTransform();
+    StyleTransform getStyleTransform();
 
     /**
      * <p>getChartTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.ChartTransform} object.
      */
-    public ChartTransform getChartTransform();
+    ChartTransform getChartTransform();
 
     /**
      * <p>getCrosstabTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.CrosstabTransform} object.
      */
-    public CrosstabTransform getCrosstabTransform();
+    CrosstabTransform getCrosstabTransform();
 
     /**
      * <p>getDatasetTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.DatasetTransform} object.
      */
-    public DatasetTransform getDatasetTransform();
+    DatasetTransform getDatasetTransform();
 }

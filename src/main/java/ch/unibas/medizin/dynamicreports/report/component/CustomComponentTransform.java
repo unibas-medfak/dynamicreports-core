@@ -43,7 +43,7 @@ public interface CustomComponentTransform<T extends DRIComponent, U extends DRID
      * @param component a {@link java.lang.Object} object.
      * @return a boolean.
      */
-    public boolean isTransform(Object component);
+    boolean isTransform(Object component);
 
     /**
      * <p>designComponent.</p>
@@ -55,7 +55,7 @@ public interface CustomComponentTransform<T extends DRIComponent, U extends DRID
      * @return a U object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    public U designComponent(DesignTransformAccessor accessor, T component, ResetType resetType, DRDesignGroup resetGroup) throws DRException;
+    U designComponent(DesignTransformAccessor accessor, T component, ResetType resetType, DRDesignGroup resetGroup) throws DRException;
 
     /**
      * <p>jasperComponent.</p>
@@ -64,6 +64,6 @@ public interface CustomComponentTransform<T extends DRIComponent, U extends DRID
      * @param component a U object.
      * @return a {@link net.sf.jasperreports.engine.JRComponentElement} object.
      */
-    public JRComponentElement jasperComponent(JasperTransformAccessor accessor, U component);
+    JRComponentElement jasperComponent(JasperTransformAccessor accessor, U component);
 
 }

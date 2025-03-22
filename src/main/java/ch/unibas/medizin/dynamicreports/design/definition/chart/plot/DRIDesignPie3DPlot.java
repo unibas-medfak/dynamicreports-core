@@ -33,5 +33,5 @@ public interface DRIDesignPie3DPlot extends DRIDesignPiePlot {
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getDepthFactor();
+    Double getDepthFactor();
 }

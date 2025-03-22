@@ -35,5 +35,5 @@ public interface DRIDesignMultiAxisPlot extends DRIDesignAxisPlot {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIDesignChartAxis> getAxes();
+    List<DRIDesignChartAxis> getAxes();
 }

@@ -41,7 +41,7 @@ public final class CrosstabValueExpression<T> extends AbstractSystemExpression<T
      *
      * @param group a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.AbstractCrosstabGroupBuilder} object.
      */
-    protected CrosstabValueExpression(AbstractCrosstabGroupBuilder<?, ?, ?> group) {
+    CrosstabValueExpression(AbstractCrosstabGroupBuilder<?, ?, ?> group) {
         super(group.getName());
     }
 
@@ -50,7 +50,7 @@ public final class CrosstabValueExpression<T> extends AbstractSystemExpression<T
      *
      * @param measure a {@link ch.unibas.medizin.dynamicreports.report.definition.DRICrosstabValue} object.
      */
-    protected CrosstabValueExpression(DRICrosstabValue<T> measure) {
+    CrosstabValueExpression(DRICrosstabValue<T> measure) {
         super(measure.getName());
     }
 
@@ -60,7 +60,7 @@ public final class CrosstabValueExpression<T> extends AbstractSystemExpression<T
      * @param measure a {@link ch.unibas.medizin.dynamicreports.report.definition.DRICrosstabValue} object.
      * @param group   a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.AbstractCrosstabGroupBuilder} object.
      */
-    protected CrosstabValueExpression(DRICrosstabValue<T> measure, AbstractCrosstabGroupBuilder<?, ?, ?> group) {
+    CrosstabValueExpression(DRICrosstabValue<T> measure, AbstractCrosstabGroupBuilder<?, ?, ?> group) {
         super(measure.getName() + "_" + group.getName() + "_ALL");
     }
 
@@ -71,7 +71,7 @@ public final class CrosstabValueExpression<T> extends AbstractSystemExpression<T
      * @param rowGroup    a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabRowGroupBuilder} object.
      * @param columnGroup a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabColumnGroupBuilder} object.
      */
-    protected CrosstabValueExpression(DRICrosstabValue<T> measure, CrosstabRowGroupBuilder<?> rowGroup, CrosstabColumnGroupBuilder<?> columnGroup) {
+    CrosstabValueExpression(DRICrosstabValue<T> measure, CrosstabRowGroupBuilder<?> rowGroup, CrosstabColumnGroupBuilder<?> columnGroup) {
         super(measure.getName() + "_" + rowGroup.getName() + "_" + columnGroup.getName() + "_ALL");
     }
 }

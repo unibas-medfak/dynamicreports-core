@@ -35,12 +35,12 @@ public interface DRICategoryChartSerie extends DRIChartSerie {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getValueExpression();
+    DRIExpression<?> getValueExpression();
 
     /**
      * <p>getLabelExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getLabelExpression();
+    DRIExpression<?> getLabelExpression();
 }

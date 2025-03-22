@@ -33,5 +33,5 @@ public interface DRIDesignCrosstabRowGroup extends DRIDesignCrosstabGroup {
      *
      * @return a int.
      */
-    public int getWidth();
+    int getWidth();
 }

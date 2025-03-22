@@ -35,19 +35,19 @@ public interface DRIDesignXyChartSerie extends DRIDesignChartSerie {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getXValueExpression();
+    DRIDesignExpression getXValueExpression();
 
     /**
      * <p>getYValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getYValueExpression();
+    DRIDesignExpression getYValueExpression();
 
     /**
      * <p>getLabelExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getLabelExpression();
+    DRIDesignExpression getLabelExpression();
 }

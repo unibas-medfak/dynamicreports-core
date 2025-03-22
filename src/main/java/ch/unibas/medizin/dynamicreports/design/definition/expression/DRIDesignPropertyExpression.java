@@ -35,12 +35,12 @@ public interface DRIDesignPropertyExpression extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getValueExpression();
+    DRIDesignExpression getValueExpression();
 }

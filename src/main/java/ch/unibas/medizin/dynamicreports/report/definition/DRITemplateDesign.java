@@ -41,14 +41,14 @@ public interface DRITemplateDesign<T> extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getReportName();
+    String getReportName();
 
     /**
      * <p>getFields.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIField<?>> getFields();
+    List<DRIField<?>> getFields();
 
     /**
      * <p>isDefinedParameter.</p>
@@ -56,175 +56,175 @@ public interface DRITemplateDesign<T> extends Serializable {
      * @param name a {@link java.lang.String} object.
      * @return a boolean.
      */
-    public boolean isDefinedParameter(String name);
+    boolean isDefinedParameter(String name);
 
     /**
      * <p>getResourceBundleName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getResourceBundleName();
+    String getResourceBundleName();
 
     /**
      * <p>getIgnorePagination.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnorePagination();
+    Boolean getIgnorePagination();
 
     /**
      * <p>getWhenNoDataType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.WhenNoDataType} object.
      */
-    public WhenNoDataType getWhenNoDataType();
+    WhenNoDataType getWhenNoDataType();
 
     /**
      * <p>getWhenResourceMissingType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.WhenResourceMissingType} object.
      */
-    public WhenResourceMissingType getWhenResourceMissingType();
+    WhenResourceMissingType getWhenResourceMissingType();
 
     /**
      * <p>getTitleOnANewPage.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getTitleOnANewPage();
+    Boolean getTitleOnANewPage();
 
     /**
      * <p>getSummaryOnANewPage.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getSummaryOnANewPage();
+    Boolean getSummaryOnANewPage();
 
     /**
      * <p>getSummaryWithPageHeaderAndFooter.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getSummaryWithPageHeaderAndFooter();
+    Boolean getSummaryWithPageHeaderAndFooter();
 
     /**
      * <p>getFloatColumnFooter.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getFloatColumnFooter();
+    Boolean getFloatColumnFooter();
 
     /**
      * <p>getPageWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageWidth();
+    Integer getPageWidth();
 
     /**
      * <p>getPageHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageHeight();
+    Integer getPageHeight();
 
     /**
      * <p>getPageOrientation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.PageOrientation} object.
      */
-    public PageOrientation getPageOrientation();
+    PageOrientation getPageOrientation();
 
     /**
      * <p>getPageMargin.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIMargin} object.
      */
-    public DRIMargin getPageMargin();
+    DRIMargin getPageMargin();
 
     /**
      * <p>getPageColumnsPerPage.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageColumnsPerPage();
+    Integer getPageColumnsPerPage();
 
     /**
      * <p>getPageColumnSpace.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageColumnSpace();
+    Integer getPageColumnSpace();
 
     /**
      * <p>getPageColumnWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageColumnWidth();
+    Integer getPageColumnWidth();
 
     /**
      * <p>getTitleComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getTitleComponentsCount();
+    int getTitleComponentsCount();
 
     /**
      * <p>getPageHeaderComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getPageHeaderComponentsCount();
+    int getPageHeaderComponentsCount();
 
     /**
      * <p>getPageFooterComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getPageFooterComponentsCount();
+    int getPageFooterComponentsCount();
 
     /**
      * <p>getColumnHeaderComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getColumnHeaderComponentsCount();
+    int getColumnHeaderComponentsCount();
 
     /**
      * <p>getColumnFooterComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getColumnFooterComponentsCount();
+    int getColumnFooterComponentsCount();
 
     /**
      * <p>getLastPageFooterComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getLastPageFooterComponentsCount();
+    int getLastPageFooterComponentsCount();
 
     /**
      * <p>getSummaryComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getSummaryComponentsCount();
+    int getSummaryComponentsCount();
 
     /**
      * <p>getNoDataComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getNoDataComponentsCount();
+    int getNoDataComponentsCount();
 
     /**
      * <p>getBackgroundComponentsCount.</p>
      *
      * @return a int.
      */
-    public int getBackgroundComponentsCount();
+    int getBackgroundComponentsCount();
 
     /**
      * <p>getDesign.</p>
@@ -232,5 +232,5 @@ public interface DRITemplateDesign<T> extends Serializable {
      * @return a T object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    public T getDesign() throws DRException;
+    T getDesign() throws DRException;
 }

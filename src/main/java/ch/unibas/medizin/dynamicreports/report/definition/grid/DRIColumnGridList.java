@@ -37,19 +37,19 @@ public interface DRIColumnGridList extends DRIColumnGridComponent {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIColumnGridListCell> getListCells();
+    List<? extends DRIColumnGridListCell> getListCells();
 
     /**
      * <p>getType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ListType} object.
      */
-    public ListType getType();
+    ListType getType();
 
     /**
      * <p>getGap.</p>
      *
      * @return a int.
      */
-    public int getGap();
+    int getGap();
 }

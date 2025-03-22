@@ -35,6 +35,6 @@ public interface DRIXyList extends DRIDimensionComponent {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIXyListCell> getXyListCells();
+    List<? extends DRIXyListCell> getXyListCells();
 
 }

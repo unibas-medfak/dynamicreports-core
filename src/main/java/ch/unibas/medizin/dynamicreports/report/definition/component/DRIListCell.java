@@ -38,19 +38,19 @@ public interface DRIListCell extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalCellComponentAlignment} object.
      */
-    public HorizontalCellComponentAlignment getHorizontalAlignment();
+    HorizontalCellComponentAlignment getHorizontalAlignment();
 
     /**
      * <p>getVerticalAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAlignment} object.
      */
-    public VerticalCellComponentAlignment getVerticalAlignment();
+    VerticalCellComponentAlignment getVerticalAlignment();
 
     /**
      * <p>getComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getComponent();
+    DRIComponent getComponent();
 }

@@ -37,33 +37,33 @@ public interface DRIImage extends DRIHyperLinkComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getImageExpression();
+    DRIExpression<?> getImageExpression();
 
     /**
      * <p>getImageScale.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ImageScale} object.
      */
-    public ImageScale getImageScale();
+    ImageScale getImageScale();
 
     /**
      * <p>getUsingCache.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getUsingCache();
+    Boolean getUsingCache();
 
     /**
      * <p>getLazy.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getLazy();
+    Boolean getLazy();
 
     /**
      * <p>getHorizontalImageAlignment.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalImageAlignment} object.
      */
-    public HorizontalImageAlignment getHorizontalImageAlignment();
+    HorizontalImageAlignment getHorizontalImageAlignment();
 }

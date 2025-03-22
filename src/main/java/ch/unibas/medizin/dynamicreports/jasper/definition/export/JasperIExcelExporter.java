@@ -39,271 +39,271 @@ public interface JasperIExcelExporter extends JasperIExporter {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getOnePagePerSheet();
+    Boolean getOnePagePerSheet();
 
     /**
      * <p>getRemoveEmptySpaceBetweenRows.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getRemoveEmptySpaceBetweenRows();
+    Boolean getRemoveEmptySpaceBetweenRows();
 
     /**
      * <p>getRemoveEmptySpaceBetweenColumns.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getRemoveEmptySpaceBetweenColumns();
+    Boolean getRemoveEmptySpaceBetweenColumns();
 
     /**
      * <p>getWhitePageBackground.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getWhitePageBackground();
+    Boolean getWhitePageBackground();
 
     /**
      * <p>getDetectCellType.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getDetectCellType();
+    Boolean getDetectCellType();
 
     /**
      * <p>getSheetNames.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<String> getSheetNames();
+    List<String> getSheetNames();
 
     /**
      * <p>getFontSizeFixEnabled.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getFontSizeFixEnabled();
+    Boolean getFontSizeFixEnabled();
 
     /**
      * <p>getImageBorderFixEnabled.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getImageBorderFixEnabled();
+    Boolean getImageBorderFixEnabled();
 
     /**
      * <p>getMaxRowsPerSheet.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getMaxRowsPerSheet();
+    Integer getMaxRowsPerSheet();
 
     /**
      * <p>getIgnoreGraphics.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreGraphics();
+    Boolean getIgnoreGraphics();
 
     /**
      * <p>getCollapseRowSpan.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCollapseRowSpan();
+    Boolean getCollapseRowSpan();
 
     /**
      * <p>getIgnoreCellBorder.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreCellBorder();
+    Boolean getIgnoreCellBorder();
 
     /**
      * <p>getIgnoreCellBackground.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreCellBackground();
+    Boolean getIgnoreCellBackground();
 
     /**
      * <p>getPassword.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPassword();
+    String getPassword();
 
     /**
      * <p>getIgnorePageMargins.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnorePageMargins();
+    Boolean getIgnorePageMargins();
 
     /**
      * <p>getWrapText.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getWrapText();
+    Boolean getWrapText();
 
     /**
      * <p>getCellLocked.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCellLocked();
+    Boolean getCellLocked();
 
     /**
      * <p>getCellHidden.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCellHidden();
+    Boolean getCellHidden();
 
     /**
      * <p>getSheetHeaderLeft.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getSheetHeaderLeft();
+    String getSheetHeaderLeft();
 
     /**
      * <p>getSheetHeaderCenter.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getSheetHeaderCenter();
+    String getSheetHeaderCenter();
 
     /**
      * <p>getSheetHeaderRight.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getSheetHeaderRight();
+    String getSheetHeaderRight();
 
     /**
      * <p>getSheetFooterLeft.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getSheetFooterLeft();
+    String getSheetFooterLeft();
 
     /**
      * <p>getSheetFooterCenter.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getSheetFooterCenter();
+    String getSheetFooterCenter();
 
     /**
      * <p>getSheetFooterRight.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getSheetFooterRight();
+    String getSheetFooterRight();
 
     /**
      * <p>getFormatPatternsMap.</p>
      *
      * @return a {@link java.util.Map} object.
      */
-    public Map<String, String> getFormatPatternsMap();
+    Map<String, String> getFormatPatternsMap();
 
     /**
      * <p>getIgnoreHyperLink.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreHyperLink();
+    Boolean getIgnoreHyperLink();
 
     /**
      * <p>getIgnoreAnchors.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreAnchors();
+    Boolean getIgnoreAnchors();
 
     /**
      * <p>getFitWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getFitWidth();
+    Integer getFitWidth();
 
     /**
      * <p>getFitHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getFitHeight();
+    Integer getFitHeight();
 
     /**
      * <p>getPageScale.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageScale();
+    Integer getPageScale();
 
     /**
      * <p>getSheetDirection.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.RunDirection} object.
      */
-    public RunDirection getSheetDirection();
+    RunDirection getSheetDirection();
 
     /**
      * <p>getColumnWidthRatio.</p>
      *
      * @return a {@link java.lang.Float} object.
      */
-    public Float getColumnWidthRatio();
+    Float getColumnWidthRatio();
 
     /**
      * <p>getUseTimeZone.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getUseTimeZone();
+    Boolean getUseTimeZone();
 
     /**
      * <p>getFirstPageNumber.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getFirstPageNumber();
+    Integer getFirstPageNumber();
 
     /**
      * <p>getShowGridLines.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowGridLines();
+    Boolean getShowGridLines();
 
     /**
      * <p>getImageAnchorType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ImageAnchorType} object.
      */
-    public ImageAnchorType getImageAnchorType();
+    ImageAnchorType getImageAnchorType();
 
     /**
      * <p>getCreateCustomPalette.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCreateCustomPalette();
+    Boolean getCreateCustomPalette();
 
     /**
      * <p>getWorkbookTemplate.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getWorkbookTemplate();
+    String getWorkbookTemplate();
 
     /**
      * <p>getKeepWorkbookTemplateSheets.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getKeepWorkbookTemplateSheets();
+    Boolean getKeepWorkbookTemplateSheets();
 }

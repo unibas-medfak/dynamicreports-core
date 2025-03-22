@@ -36,54 +36,54 @@ public interface DRIHighLowDataset extends DRIChartDataset {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getSeriesExpression();
+    DRIExpression<?> getSeriesExpression();
 
     /**
      * <p>getDateExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getDateExpression();
+    DRIExpression<?> getDateExpression();
 
     /**
      * <p>getHighExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getHighExpression();
+    DRIExpression<?> getHighExpression();
 
     /**
      * <p>getLowExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getLowExpression();
+    DRIExpression<?> getLowExpression();
 
     /**
      * <p>getOpenExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getOpenExpression();
+    DRIExpression<?> getOpenExpression();
 
     /**
      * <p>getCloseExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getCloseExpression();
+    DRIExpression<?> getCloseExpression();
 
     /**
      * <p>getVolumeExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getVolumeExpression();
+    DRIExpression<?> getVolumeExpression();
 
     /**
      * <p>getItemHyperLink.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIHyperLink} object.
      */
-    public DRIHyperLink getItemHyperLink();
+    DRIHyperLink getItemHyperLink();
 }

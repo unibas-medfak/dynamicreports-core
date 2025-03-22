@@ -36,54 +36,54 @@ public interface DRIDesignHighLowDataset extends DRIDesignChartDataset {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getSeriesExpression();
+    DRIDesignExpression getSeriesExpression();
 
     /**
      * <p>getDateExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getDateExpression();
+    DRIDesignExpression getDateExpression();
 
     /**
      * <p>getHighExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getHighExpression();
+    DRIDesignExpression getHighExpression();
 
     /**
      * <p>getLowExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getLowExpression();
+    DRIDesignExpression getLowExpression();
 
     /**
      * <p>getOpenExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getOpenExpression();
+    DRIDesignExpression getOpenExpression();
 
     /**
      * <p>getCloseExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getCloseExpression();
+    DRIDesignExpression getCloseExpression();
 
     /**
      * <p>getVolumeExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getVolumeExpression();
+    DRIDesignExpression getVolumeExpression();
 
     /**
      * <p>getItemHyperLink.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignHyperLink} object.
      */
-    public DRIDesignHyperLink getItemHyperLink();
+    DRIDesignHyperLink getItemHyperLink();
 }

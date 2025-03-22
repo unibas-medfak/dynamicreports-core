@@ -33,49 +33,49 @@ public interface DRIScriptlet {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * Called before the report is initialized.
      *
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void beforeReportInit(ReportParameters reportParameters);
+    void beforeReportInit(ReportParameters reportParameters);
 
     /**
      * Called after the report is initialized.
      *
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void afterReportInit(ReportParameters reportParameters);
+    void afterReportInit(ReportParameters reportParameters);
 
     /**
      * Called before each page is initialized.
      *
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void beforePageInit(ReportParameters reportParameters);
+    void beforePageInit(ReportParameters reportParameters);
 
     /**
      * Called after each page is initialized.
      *
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void afterPageInit(ReportParameters reportParameters);
+    void afterPageInit(ReportParameters reportParameters);
 
     /**
      * Called before each column is initialized.
      *
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void beforeColumnInit(ReportParameters reportParameters);
+    void beforeColumnInit(ReportParameters reportParameters);
 
     /**
      * Called after each column is initialized.
      *
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void afterColumnInit(ReportParameters reportParameters);
+    void afterColumnInit(ReportParameters reportParameters);
 
     /**
      * Called before a group is initialized.
@@ -83,7 +83,7 @@ public interface DRIScriptlet {
      * @param groupName        the group name
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void beforeGroupInit(String groupName, ReportParameters reportParameters);
+    void beforeGroupInit(String groupName, ReportParameters reportParameters);
 
     /**
      * Called after a group is initialized.
@@ -91,19 +91,19 @@ public interface DRIScriptlet {
      * @param groupName        the group name
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void afterGroupInit(String groupName, ReportParameters reportParameters);
+    void afterGroupInit(String groupName, ReportParameters reportParameters);
 
     /**
      * Called before evaluating each detail.
      *
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void beforeDetailEval(ReportParameters reportParameters);
+    void beforeDetailEval(ReportParameters reportParameters);
 
     /**
      * Called after evaluating each detail.
      *
      * @param reportParameters a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public void afterDetailEval(ReportParameters reportParameters);
+    void afterDetailEval(ReportParameters reportParameters);
 }

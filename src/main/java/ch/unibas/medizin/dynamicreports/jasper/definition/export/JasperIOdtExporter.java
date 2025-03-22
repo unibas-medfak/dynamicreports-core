@@ -33,12 +33,12 @@ public interface JasperIOdtExporter extends JasperIExporter {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getFlexibleRowHeight();
+    Boolean getFlexibleRowHeight();
 
     /**
      * <p>getIgnoreHyperLink.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnoreHyperLink();
+    Boolean getIgnoreHyperLink();
 }

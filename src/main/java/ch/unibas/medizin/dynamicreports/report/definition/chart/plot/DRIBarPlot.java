@@ -33,19 +33,19 @@ public interface DRIBarPlot extends DRIAxisPlot {
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowLabels();
+    Boolean getShowLabels();
 
     /**
      * <p>getShowTickLabels.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowTickLabels();
+    Boolean getShowTickLabels();
 
     /**
      * <p>getShowTickMarks.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowTickMarks();
+    Boolean getShowTickMarks();
 }

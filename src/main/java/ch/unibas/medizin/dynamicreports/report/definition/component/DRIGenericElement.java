@@ -37,20 +37,20 @@ public interface DRIGenericElement extends DRIDimensionComponent {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getGenericElementNamespace();
+    String getGenericElementNamespace();
 
     /**
      * <p>getGenericElementName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getGenericElementName();
+    String getGenericElementName();
 
     /**
      * <p>getParameterExpressions.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIParameterExpression> getParameterExpressions();
+    List<DRIParameterExpression> getParameterExpressions();
 
 }

@@ -38,33 +38,33 @@ public interface DRIDesignMeterInterval extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLabel();
+    String getLabel();
 
     /**
      * <p>getBackgroundColor.</p>
      *
      * @return a {@link java.awt.Color} object.
      */
-    public Color getBackgroundColor();
+    Color getBackgroundColor();
 
     /**
      * <p>getAlpha.</p>
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getAlpha();
+    Double getAlpha();
 
     /**
      * <p>getDataRangeLowExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getDataRangeLowExpression();
+    DRIDesignExpression getDataRangeLowExpression();
 
     /**
      * <p>getDataRangeHighExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getDataRangeHighExpression();
+    DRIDesignExpression getDataRangeHighExpression();
 }

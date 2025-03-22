@@ -35,5 +35,5 @@ public interface DRILayeredBarPlot extends DRIBarPlot {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<Double> getSeriesBarWidths();
+    List<Double> getSeriesBarWidths();
 }

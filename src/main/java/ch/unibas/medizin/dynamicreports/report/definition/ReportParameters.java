@@ -33,7 +33,7 @@ public interface ReportParameters {
     /**
      * Constant <code>CROSSTAB_ROW_COUNTER="CROSSTAB_ROW_NUMBER"</code>
      */
-    public static final String CROSSTAB_ROW_COUNTER = "CROSSTAB_ROW_NUMBER";
+    String CROSSTAB_ROW_COUNTER = "CROSSTAB_ROW_NUMBER";
 
     /**
      * <p>getValue.</p>
@@ -42,7 +42,7 @@ public interface ReportParameters {
      * @param <T>  a T object.
      * @return a T object.
      */
-    public <T> T getValue(String name);
+    <T> T getValue(String name);
 
     /**
      * <p>getValue.</p>
@@ -51,7 +51,7 @@ public interface ReportParameters {
      * @param <T>   a T object.
      * @return a T object.
      */
-    public <T> T getValue(DRIValue<T> value);
+    <T> T getValue(DRIValue<T> value);
 
     /**
      * <p>getFieldValue.</p>
@@ -60,7 +60,7 @@ public interface ReportParameters {
      * @param <T>  a T object.
      * @return a T object.
      */
-    public <T> T getFieldValue(String name);
+    <T> T getFieldValue(String name);
 
     /**
      * <p>getVariableValue.</p>
@@ -69,7 +69,7 @@ public interface ReportParameters {
      * @param <T>  a T object.
      * @return a T object.
      */
-    public <T> T getVariableValue(String name);
+    <T> T getVariableValue(String name);
 
     /**
      * <p>getParameterValue.</p>
@@ -78,49 +78,49 @@ public interface ReportParameters {
      * @param <T>  a T object.
      * @return a T object.
      */
-    public <T> T getParameterValue(String name);
+    <T> T getParameterValue(String name);
 
     /**
      * <p>getPageNumber.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageNumber();
+    Integer getPageNumber();
 
     /**
      * <p>getColumnNumber.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getColumnNumber();
+    Integer getColumnNumber();
 
     /**
      * <p>getReportRowNumber.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getReportRowNumber();
+    Integer getReportRowNumber();
 
     /**
      * <p>getPageRowNumber.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageRowNumber();
+    Integer getPageRowNumber();
 
     /**
      * <p>getColumnRowNumber.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getColumnRowNumber();
+    Integer getColumnRowNumber();
 
     /**
      * <p>getCrosstabRowNumber.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getCrosstabRowNumber();
+    Integer getCrosstabRowNumber();
 
     /**
      * <p>getGroupCount.</p>
@@ -128,21 +128,21 @@ public interface ReportParameters {
      * @param groupName a {@link java.lang.String} object.
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getGroupCount(String groupName);
+    Integer getGroupCount(String groupName);
 
     /**
      * <p>getConnection.</p>
      *
      * @return a {@link java.sql.Connection} object.
      */
-    public Connection getConnection();
+    Connection getConnection();
 
     /**
      * <p>getLocale.</p>
      *
      * @return a {@link java.util.Locale} object.
      */
-    public Locale getLocale();
+    Locale getLocale();
 
     /**
      * <p>getScriptlet.</p>
@@ -150,7 +150,7 @@ public interface ReportParameters {
      * @param name a {@link java.lang.String} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIScriptlet} object.
      */
-    public DRIScriptlet getScriptlet(String name);
+    DRIScriptlet getScriptlet(String name);
 
     /**
      * <p>getMessage.</p>
@@ -158,7 +158,7 @@ public interface ReportParameters {
      * @param key a {@link java.lang.String} object.
      * @return a {@link java.lang.String} object.
      */
-    public String getMessage(String key);
+    String getMessage(String key);
 
     /**
      * <p>getMessage.</p>
@@ -167,19 +167,19 @@ public interface ReportParameters {
      * @param arguments an array of {@link java.lang.Object} objects.
      * @return a {@link java.lang.String} object.
      */
-    public String getMessage(String key, Object[] arguments);
+    String getMessage(String key, Object[] arguments);
 
     /**
      * <p>getMasterParameters.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.ReportParameters} object.
      */
-    public ReportParameters getMasterParameters();
+    ReportParameters getMasterParameters();
 
     /**
      * <p>getSubreportWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getSubreportWidth();
+    Integer getSubreportWidth();
 }

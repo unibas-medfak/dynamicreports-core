@@ -37,12 +37,12 @@ public interface DRIDesignSeriesDataset extends DRIDesignChartDataset {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getValueExpression();
+    DRIDesignExpression getValueExpression();
 
     /**
      * <p>getSeries.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIDesignChartSerie> getSeries();
+    List<? extends DRIDesignChartSerie> getSeries();
 }

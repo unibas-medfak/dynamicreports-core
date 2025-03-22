@@ -35,26 +35,26 @@ public interface DRIDesignBorder extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignPen} object.
      */
-    public DRIDesignPen getTopPen();
+    DRIDesignPen getTopPen();
 
     /**
      * <p>getLeftPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignPen} object.
      */
-    public DRIDesignPen getLeftPen();
+    DRIDesignPen getLeftPen();
 
     /**
      * <p>getBottomPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignPen} object.
      */
-    public DRIDesignPen getBottomPen();
+    DRIDesignPen getBottomPen();
 
     /**
      * <p>getRightPen.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignPen} object.
      */
-    public DRIDesignPen getRightPen();
+    DRIDesignPen getRightPen();
 }

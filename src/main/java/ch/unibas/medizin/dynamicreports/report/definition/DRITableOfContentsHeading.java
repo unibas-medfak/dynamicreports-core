@@ -37,20 +37,20 @@ public interface DRITableOfContentsHeading extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRITableOfContentsHeading} object.
      */
-    public DRITableOfContentsHeading getParentHeading();
+    DRITableOfContentsHeading getParentHeading();
 
     /**
      * <p>getLabelExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<String> getLabelExpression();
+    DRIExpression<String> getLabelExpression();
 
     /**
      * <p>getCustomValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getCustomValueExpression();
+    DRIExpression<?> getCustomValueExpression();
 
 }

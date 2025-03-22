@@ -35,26 +35,26 @@ public interface DRIDesignCrosstabCell extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getRowTotalGroup.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getRowTotalGroup();
+    String getRowTotalGroup();
 
     /**
      * <p>getColumnTotalGroup.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getColumnTotalGroup();
+    String getColumnTotalGroup();
 
     /**
      * <p>getContent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCrosstabCellContent} object.
      */
-    public DRIDesignCrosstabCellContent getContent();
+    DRIDesignCrosstabCellContent getContent();
 }

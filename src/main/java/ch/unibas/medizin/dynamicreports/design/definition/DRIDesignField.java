@@ -35,12 +35,12 @@ public interface DRIDesignField extends DRIDesignExpression {
      *
      * @return a boolean.
      */
-    public boolean isExternal();
+    boolean isExternal();
 
     /**
      * <p>getDescription.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getDescription();
+    String getDescription();
 }

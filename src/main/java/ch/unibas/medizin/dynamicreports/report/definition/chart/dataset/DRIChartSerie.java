@@ -38,12 +38,12 @@ public interface DRIChartSerie extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getSeriesExpression();
+    DRIExpression<?> getSeriesExpression();
 
     /**
      * <p>getItemHyperLink.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIHyperLink} object.
      */
-    public DRIHyperLink getItemHyperLink();
+    DRIHyperLink getItemHyperLink();
 }

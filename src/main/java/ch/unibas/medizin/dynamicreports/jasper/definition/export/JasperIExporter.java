@@ -38,69 +38,69 @@ public interface JasperIExporter extends Serializable {
      *
      * @return a {@link java.io.Writer} object.
      */
-    public Writer getOutputWriter();
+    Writer getOutputWriter();
 
     /**
      * <p>getOutputStream.</p>
      *
      * @return a {@link java.io.OutputStream} object.
      */
-    public OutputStream getOutputStream();
+    OutputStream getOutputStream();
 
     /**
      * <p>getOutputFile.</p>
      *
      * @return a {@link java.io.File} object.
      */
-    public File getOutputFile();
+    File getOutputFile();
 
     /**
      * <p>getOutputFileName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getOutputFileName();
+    String getOutputFileName();
 
     /**
      * <p>getPageIndex.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageIndex();
+    Integer getPageIndex();
 
     /**
      * <p>getStartPageIndex.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getStartPageIndex();
+    Integer getStartPageIndex();
 
     /**
      * <p>getEndPageIndex.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getEndPageIndex();
+    Integer getEndPageIndex();
 
     /**
      * <p>getCharacterEncoding.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getCharacterEncoding();
+    String getCharacterEncoding();
 
     /**
      * <p>getOffsetX.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getOffsetX();
+    Integer getOffsetX();
 
     /**
      * <p>getOffsetY.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getOffsetY();
+    Integer getOffsetY();
 
 }

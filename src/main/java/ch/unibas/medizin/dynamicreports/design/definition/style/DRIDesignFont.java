@@ -35,61 +35,61 @@ public interface DRIDesignFont extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getFontName();
+    String getFontName();
 
     /**
      * <p>getBold.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getBold();
+    Boolean getBold();
 
     /**
      * <p>getItalic.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getItalic();
+    Boolean getItalic();
 
     /**
      * <p>getUnderline.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getUnderline();
+    Boolean getUnderline();
 
     /**
      * <p>getStrikeThrough.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getStrikeThrough();
+    Boolean getStrikeThrough();
 
     /**
      * <p>getFontSize.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getFontSize();
+    Integer getFontSize();
 
     /**
      * <p>getPdfFontName.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPdfFontName();
+    String getPdfFontName();
 
     /**
      * <p>getPdfEncoding.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getPdfEncoding();
+    String getPdfEncoding();
 
     /**
      * <p>getPdfEmbedded.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getPdfEmbedded();
+    Boolean getPdfEmbedded();
 }

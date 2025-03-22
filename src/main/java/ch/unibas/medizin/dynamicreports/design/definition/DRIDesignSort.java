@@ -38,12 +38,12 @@ public interface DRIDesignSort extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getExpression();
+    DRIDesignExpression getExpression();
 
     /**
      * <p>getOrderType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.OrderType} object.
      */
-    public OrderType getOrderType();
+    OrderType getOrderType();
 }

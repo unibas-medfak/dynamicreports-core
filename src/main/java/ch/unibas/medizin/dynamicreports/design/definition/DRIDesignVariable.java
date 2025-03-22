@@ -37,33 +37,33 @@ public interface DRIDesignVariable extends DRIDesignExpression {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getValueExpression();
+    DRIDesignExpression getValueExpression();
 
     /**
      * <p>getInitialValueExpression.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      */
-    public DRIDesignExpression getInitialValueExpression();
+    DRIDesignExpression getInitialValueExpression();
 
     /**
      * <p>getCalculation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
-    public Calculation getCalculation();
+    Calculation getCalculation();
 
     /**
      * <p>getResetType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.constant.ResetType} object.
      */
-    public ResetType getResetType();
+    ResetType getResetType();
 
     /**
      * <p>getResetGroup.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignGroup} object.
      */
-    public DRIDesignGroup getResetGroup();
+    DRIDesignGroup getResetGroup();
 }

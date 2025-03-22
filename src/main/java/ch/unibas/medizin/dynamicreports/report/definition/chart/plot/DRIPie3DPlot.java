@@ -33,5 +33,5 @@ public interface DRIPie3DPlot extends DRIPiePlot {
      *
      * @return a {@link java.lang.Double} object.
      */
-    public Double getDepthFactor();
+    Double getDepthFactor();
 }

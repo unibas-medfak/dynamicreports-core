@@ -35,27 +35,27 @@ public interface DRIPageXofY extends DRIFormatField {
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageXWidth();
+    Integer getPageXWidth();
 
     /**
      * <p>getPageXWidthType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType} object.
      */
-    public ComponentDimensionType getPageXWidthType();
+    ComponentDimensionType getPageXWidthType();
 
     /**
      * <p>getPageYWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageYWidth();
+    Integer getPageYWidth();
 
     /**
      * <p>getPageYWidthType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType} object.
      */
-    public ComponentDimensionType getPageYWidthType();
+    ComponentDimensionType getPageYWidthType();
 
 }

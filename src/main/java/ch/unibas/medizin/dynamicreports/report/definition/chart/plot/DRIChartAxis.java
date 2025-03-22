@@ -38,12 +38,12 @@ public interface DRIChartAxis extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.AxisPosition} object.
      */
-    public AxisPosition getPosition();
+    AxisPosition getPosition();
 
     /**
      * <p>getChart.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChart} object.
      */
-    public DRIChart getChart();
+    DRIChart getChart();
 }

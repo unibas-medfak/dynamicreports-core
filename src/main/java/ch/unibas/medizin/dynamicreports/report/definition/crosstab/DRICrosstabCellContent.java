@@ -38,12 +38,12 @@ public interface DRICrosstabCellContent extends Serializable {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIList} object.
      */
-    public DRIList getList();
+    DRIList getList();
 
     /**
      * <p>getStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getStyle();
+    DRIReportStyle getStyle();
 }

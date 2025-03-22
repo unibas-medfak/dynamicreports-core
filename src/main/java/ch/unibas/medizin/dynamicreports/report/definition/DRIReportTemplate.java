@@ -54,867 +54,867 @@ public interface DRIReportTemplate extends Serializable {
      *
      * @return a {@link java.util.List} object.
      */
-    public List<DRIStyle> getTemplateStyles();
+    List<DRIStyle> getTemplateStyles();
 
     /**
      * <p>getLocale.</p>
      *
      * @return a {@link java.util.Locale} object.
      */
-    public Locale getLocale();
+    Locale getLocale();
 
     /**
      * <p>getShowColumnTitle.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowColumnTitle();
+    Boolean getShowColumnTitle();
 
     /**
      * <p>getShowColumnValues.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getShowColumnValues();
+    Boolean getShowColumnValues();
 
     /**
      * <p>getIgnorePagination.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnorePagination();
+    Boolean getIgnorePagination();
 
     /**
      * <p>getWhenNoDataType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.WhenNoDataType} object.
      */
-    public WhenNoDataType getWhenNoDataType();
+    WhenNoDataType getWhenNoDataType();
 
     /**
      * <p>getWhenResourceMissingType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.WhenResourceMissingType} object.
      */
-    public WhenResourceMissingType getWhenResourceMissingType();
+    WhenResourceMissingType getWhenResourceMissingType();
 
     /**
      * <p>getTitleOnANewPage.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getTitleOnANewPage();
+    Boolean getTitleOnANewPage();
 
     /**
      * <p>getSummaryOnANewPage.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getSummaryOnANewPage();
+    Boolean getSummaryOnANewPage();
 
     /**
      * <p>getSummaryWithPageHeaderAndFooter.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getSummaryWithPageHeaderAndFooter();
+    Boolean getSummaryWithPageHeaderAndFooter();
 
     /**
      * <p>getFloatColumnFooter.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getFloatColumnFooter();
+    Boolean getFloatColumnFooter();
 
     /**
      * <p>getPrintOrder.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Orientation} object.
      */
-    public Orientation getPrintOrder();
+    Orientation getPrintOrder();
 
     /**
      * <p>getColumnDirection.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.RunDirection} object.
      */
-    public RunDirection getColumnDirection();
+    RunDirection getColumnDirection();
 
     /**
      * <p>getLanguage.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getLanguage();
+    String getLanguage();
 
     /**
      * <p>getUseFieldNameAsDescription.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getUseFieldNameAsDescription();
+    Boolean getUseFieldNameAsDescription();
 
     /**
      * <p>getHighlightDetailOddRows.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getHighlightDetailOddRows();
+    Boolean getHighlightDetailOddRows();
 
     /**
      * <p>getDetailOddRowStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRISimpleStyle} object.
      */
-    public DRISimpleStyle getDetailOddRowStyle();
+    DRISimpleStyle getDetailOddRowStyle();
 
     /**
      * <p>getHighlightDetailEvenRows.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getHighlightDetailEvenRows();
+    Boolean getHighlightDetailEvenRows();
 
     /**
      * <p>getDetailEvenRowStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRISimpleStyle} object.
      */
-    public DRISimpleStyle getDetailEvenRowStyle();
+    DRISimpleStyle getDetailEvenRowStyle();
 
     /**
      * <p>getDefaultFont.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont} object.
      */
-    public DRIFont getDefaultFont();
+    DRIFont getDefaultFont();
 
     /**
      * <p>getTextStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getTextStyle();
+    DRIReportStyle getTextStyle();
 
     /**
      * <p>getColumnTitleStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getColumnTitleStyle();
+    DRIReportStyle getColumnTitleStyle();
 
     /**
      * <p>getColumnStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getColumnStyle();
+    DRIReportStyle getColumnStyle();
 
     /**
      * <p>getGroupTitleStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getGroupTitleStyle();
+    DRIReportStyle getGroupTitleStyle();
 
     /**
      * <p>getGroupStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getGroupStyle();
+    DRIReportStyle getGroupStyle();
 
     /**
      * <p>getSubtotalStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getSubtotalStyle();
+    DRIReportStyle getSubtotalStyle();
 
     /**
      * <p>getImageStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getImageStyle();
+    DRIReportStyle getImageStyle();
 
     /**
      * <p>getChartStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getChartStyle();
+    DRIReportStyle getChartStyle();
 
     /**
      * <p>getPageWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageWidth();
+    Integer getPageWidth();
 
     /**
      * <p>getPageHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageHeight();
+    Integer getPageHeight();
 
     /**
      * <p>getPageOrientation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.PageOrientation} object.
      */
-    public PageOrientation getPageOrientation();
+    PageOrientation getPageOrientation();
 
     /**
      * <p>getPageMargin.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIMargin} object.
      */
-    public DRIMargin getPageMargin();
+    DRIMargin getPageMargin();
 
     /**
      * <p>getPageColumnsPerPage.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageColumnsPerPage();
+    Integer getPageColumnsPerPage();
 
     /**
      * <p>getPageColumnSpace.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getPageColumnSpace();
+    Integer getPageColumnSpace();
 
     /**
      * <p>getIgnorePageWidth.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getIgnorePageWidth();
+    Boolean getIgnorePageWidth();
 
     /**
      * <p>getColumnPrintRepeatedDetailValues.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getColumnPrintRepeatedDetailValues();
+    Boolean getColumnPrintRepeatedDetailValues();
 
     /**
      * <p>getColumnWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getColumnWidth();
+    Integer getColumnWidth();
 
     /**
      * <p>getGroupHeaderLayout.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.GroupHeaderLayout} object.
      */
-    public GroupHeaderLayout getGroupHeaderLayout();
+    GroupHeaderLayout getGroupHeaderLayout();
 
     /**
      * <p>getGroupHideColumn.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupHideColumn();
+    Boolean getGroupHideColumn();
 
     /**
      * <p>getGroupShowColumnHeaderAndFooter.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupShowColumnHeaderAndFooter();
+    Boolean getGroupShowColumnHeaderAndFooter();
 
     /**
      * <p>getGroupPadding.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getGroupPadding();
+    Integer getGroupPadding();
 
     /**
      * <p>getGroupStartInNewPage.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupStartInNewPage();
+    Boolean getGroupStartInNewPage();
 
     /**
      * <p>getGroupStartInNewColumn.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupStartInNewColumn();
+    Boolean getGroupStartInNewColumn();
 
     /**
      * <p>getGroupReprintHeaderOnEachPage.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupReprintHeaderOnEachPage();
+    Boolean getGroupReprintHeaderOnEachPage();
 
     /**
      * <p>getGroupResetPageNumber.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupResetPageNumber();
+    Boolean getGroupResetPageNumber();
 
     /**
      * <p>getGroupFooterPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.GroupFooterPosition} object.
      */
-    public GroupFooterPosition getGroupFooterPosition();
+    GroupFooterPosition getGroupFooterPosition();
 
     /**
      * <p>getGroupKeepTogether.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupKeepTogether();
+    Boolean getGroupKeepTogether();
 
     /**
      * <p>getGroupHeaderWithSubtotal.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getGroupHeaderWithSubtotal();
+    Boolean getGroupHeaderWithSubtotal();
 
     /**
      * <p>getSubtotalLabelPosition.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.Position} object.
      */
-    public Position getSubtotalLabelPosition();
+    Position getSubtotalLabelPosition();
 
     /**
      * <p>getTableOfContents.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getTableOfContents();
+    Boolean getTableOfContents();
 
     /**
      * <p>getTableOfContentsCustomizer.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRITableOfContentsCustomizer} object.
      */
-    public DRITableOfContentsCustomizer getTableOfContentsCustomizer();
+    DRITableOfContentsCustomizer getTableOfContentsCustomizer();
 
     /**
      * <p>getTextFieldWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getTextFieldWidth();
+    Integer getTextFieldWidth();
 
     /**
      * <p>getImageHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getImageHeight();
+    Integer getImageHeight();
 
     /**
      * <p>getImageWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getImageWidth();
+    Integer getImageWidth();
 
     /**
      * <p>getListgap.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getListgap();
+    Integer getListgap();
 
     /**
      * <p>getMultiPageListHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getMultiPageListHeight();
+    Integer getMultiPageListHeight();
 
     /**
      * <p>getMultiPageListWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getMultiPageListWidth();
+    Integer getMultiPageListWidth();
 
     /**
      * <p>getChartHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getChartHeight();
+    Integer getChartHeight();
 
     /**
      * <p>getChartWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getChartWidth();
+    Integer getChartWidth();
 
     /**
      * <p>getSubreportHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getSubreportHeight();
+    Integer getSubreportHeight();
 
     /**
      * <p>getSubreportWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getSubreportWidth();
+    Integer getSubreportWidth();
 
     /**
      * <p>getCrosstabHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getCrosstabHeight();
+    Integer getCrosstabHeight();
 
     /**
      * <p>getCrosstabWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getCrosstabWidth();
+    Integer getCrosstabWidth();
 
     /**
      * <p>getCrosstabHighlightOddRows.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCrosstabHighlightOddRows();
+    Boolean getCrosstabHighlightOddRows();
 
     /**
      * <p>getCrosstabOddRowStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRISimpleStyle} object.
      */
-    public DRISimpleStyle getCrosstabOddRowStyle();
+    DRISimpleStyle getCrosstabOddRowStyle();
 
     /**
      * <p>getCrosstabHighlightEvenRows.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getCrosstabHighlightEvenRows();
+    Boolean getCrosstabHighlightEvenRows();
 
     /**
      * <p>getCrosstabEvenRowStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRISimpleStyle} object.
      */
-    public DRISimpleStyle getCrosstabEvenRowStyle();
+    DRISimpleStyle getCrosstabEvenRowStyle();
 
     /**
      * <p>getCrosstabGroupStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getCrosstabGroupStyle();
+    DRIReportStyle getCrosstabGroupStyle();
 
     /**
      * <p>getCrosstabGroupTotalStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getCrosstabGroupTotalStyle();
+    DRIReportStyle getCrosstabGroupTotalStyle();
 
     /**
      * <p>getCrosstabGrandTotalStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getCrosstabGrandTotalStyle();
+    DRIReportStyle getCrosstabGrandTotalStyle();
 
     /**
      * <p>getCrosstabCellStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getCrosstabCellStyle();
+    DRIReportStyle getCrosstabCellStyle();
 
     /**
      * <p>getCrosstabMeasureTitleStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getCrosstabMeasureTitleStyle();
+    DRIReportStyle getCrosstabMeasureTitleStyle();
 
     /**
      * <p>getChartSeriesColors.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<Color> getChartSeriesColors();
+    List<Color> getChartSeriesColors();
 
     /**
      * <p>getChartValuePattern.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getChartValuePattern();
+    String getChartValuePattern();
 
     /**
      * <p>getChartPercentValuePattern.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getChartPercentValuePattern();
+    String getChartPercentValuePattern();
 
     /**
      * <p>getChartTheme.</p>
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getChartTheme();
+    String getChartTheme();
 
     /**
      * <p>getBooleanComponentType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.BooleanComponentType} object.
      */
-    public BooleanComponentType getBooleanComponentType();
+    BooleanComponentType getBooleanComponentType();
 
     /**
      * <p>getBooleanEmptyWhenNullValue.</p>
      *
      * @return a {@link java.lang.Boolean} object.
      */
-    public Boolean getBooleanEmptyWhenNullValue();
+    Boolean getBooleanEmptyWhenNullValue();
 
     /**
      * <p>getBooleanImageWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getBooleanImageWidth();
+    Integer getBooleanImageWidth();
 
     /**
      * <p>getBooleanImageHeight.</p>
      *
      * @return a {@link java.lang.Integer} object.
      */
-    public Integer getBooleanImageHeight();
+    Integer getBooleanImageHeight();
 
     /**
      * <p>getBooleanColumnStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getBooleanColumnStyle();
+    DRIReportStyle getBooleanColumnStyle();
 
     /**
      * <p>getDefaultSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getDefaultSplitType();
+    SplitType getDefaultSplitType();
 
     /**
      * <p>getTitleSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getTitleSplitType();
+    SplitType getTitleSplitType();
 
     /**
      * <p>getPageHeaderSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getPageHeaderSplitType();
+    SplitType getPageHeaderSplitType();
 
     /**
      * <p>getPageFooterSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getPageFooterSplitType();
+    SplitType getPageFooterSplitType();
 
     /**
      * <p>getColumnHeaderSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getColumnHeaderSplitType();
+    SplitType getColumnHeaderSplitType();
 
     /**
      * <p>getColumnFooterSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getColumnFooterSplitType();
+    SplitType getColumnFooterSplitType();
 
     /**
      * <p>getGroupHeaderSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getGroupHeaderSplitType();
+    SplitType getGroupHeaderSplitType();
 
     /**
      * <p>getGroupFooterSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getGroupFooterSplitType();
+    SplitType getGroupFooterSplitType();
 
     /**
      * <p>getDetailHeaderSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getDetailHeaderSplitType();
+    SplitType getDetailHeaderSplitType();
 
     /**
      * <p>getDetailSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getDetailSplitType();
+    SplitType getDetailSplitType();
 
     /**
      * <p>getDetailFooterSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getDetailFooterSplitType();
+    SplitType getDetailFooterSplitType();
 
     /**
      * <p>getLastPageFooterSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getLastPageFooterSplitType();
+    SplitType getLastPageFooterSplitType();
 
     /**
      * <p>getSummarySplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getSummarySplitType();
+    SplitType getSummarySplitType();
 
     /**
      * <p>getNoDataSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getNoDataSplitType();
+    SplitType getNoDataSplitType();
 
     /**
      * <p>getBackgroundSplitType.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      */
-    public SplitType getBackgroundSplitType();
+    SplitType getBackgroundSplitType();
 
     /**
      * <p>getTitleStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getTitleStyle();
+    DRIReportStyle getTitleStyle();
 
     /**
      * <p>getPageHeaderStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getPageHeaderStyle();
+    DRIReportStyle getPageHeaderStyle();
 
     /**
      * <p>getPageFooterStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getPageFooterStyle();
+    DRIReportStyle getPageFooterStyle();
 
     /**
      * <p>getColumnHeaderStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getColumnHeaderStyle();
+    DRIReportStyle getColumnHeaderStyle();
 
     /**
      * <p>getColumnFooterStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getColumnFooterStyle();
+    DRIReportStyle getColumnFooterStyle();
 
     /**
      * <p>getGroupHeaderStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getGroupHeaderStyle();
+    DRIReportStyle getGroupHeaderStyle();
 
     /**
      * <p>getGroupFooterStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getGroupFooterStyle();
+    DRIReportStyle getGroupFooterStyle();
 
     /**
      * <p>getDetailHeaderStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getDetailHeaderStyle();
+    DRIReportStyle getDetailHeaderStyle();
 
     /**
      * <p>getDetailStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getDetailStyle();
+    DRIReportStyle getDetailStyle();
 
     /**
      * <p>getDetailFooterStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getDetailFooterStyle();
+    DRIReportStyle getDetailFooterStyle();
 
     /**
      * <p>getLastPageFooterStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getLastPageFooterStyle();
+    DRIReportStyle getLastPageFooterStyle();
 
     /**
      * <p>getSummaryStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getSummaryStyle();
+    DRIReportStyle getSummaryStyle();
 
     /**
      * <p>getNoDataStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getNoDataStyle();
+    DRIReportStyle getNoDataStyle();
 
     /**
      * <p>getBackgroundStyle.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
      */
-    public DRIReportStyle getBackgroundStyle();
+    DRIReportStyle getBackgroundStyle();
 
     /**
      * <p>getTitleBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getTitleBackgroundComponent();
+    DRIComponent getTitleBackgroundComponent();
 
     /**
      * <p>getPageHeaderBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getPageHeaderBackgroundComponent();
+    DRIComponent getPageHeaderBackgroundComponent();
 
     /**
      * <p>getPageFooterBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getPageFooterBackgroundComponent();
+    DRIComponent getPageFooterBackgroundComponent();
 
     /**
      * <p>getColumnHeaderBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getColumnHeaderBackgroundComponent();
+    DRIComponent getColumnHeaderBackgroundComponent();
 
     /**
      * <p>getColumnFooterBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getColumnFooterBackgroundComponent();
+    DRIComponent getColumnFooterBackgroundComponent();
 
     /**
      * <p>getGroupHeaderBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getGroupHeaderBackgroundComponent();
+    DRIComponent getGroupHeaderBackgroundComponent();
 
     /**
      * <p>getGroupFooterBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getGroupFooterBackgroundComponent();
+    DRIComponent getGroupFooterBackgroundComponent();
 
     /**
      * <p>getDetailHeaderBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getDetailHeaderBackgroundComponent();
+    DRIComponent getDetailHeaderBackgroundComponent();
 
     /**
      * <p>getDetailBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getDetailBackgroundComponent();
+    DRIComponent getDetailBackgroundComponent();
 
     /**
      * <p>getDetailFooterBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getDetailFooterBackgroundComponent();
+    DRIComponent getDetailFooterBackgroundComponent();
 
     /**
      * <p>getLastPageFooterBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getLastPageFooterBackgroundComponent();
+    DRIComponent getLastPageFooterBackgroundComponent();
 
     /**
      * <p>getSummaryBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getSummaryBackgroundComponent();
+    DRIComponent getSummaryBackgroundComponent();
 
     /**
      * <p>getNoDataBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getNoDataBackgroundComponent();
+    DRIComponent getNoDataBackgroundComponent();
 
     /**
      * <p>getBackgroundBackgroundComponent.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent} object.
      */
-    public DRIComponent getBackgroundBackgroundComponent();
+    DRIComponent getBackgroundBackgroundComponent();
 
 }

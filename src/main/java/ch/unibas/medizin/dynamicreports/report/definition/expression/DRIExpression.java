@@ -36,12 +36,12 @@ public interface DRIExpression<T> extends Serializable {
      *
      * @return a {@link java.lang.String} object.
      */
-    public String getName();
+    String getName();
 
     /**
      * <p>getValueClass.</p>
      *
      * @return a {@link java.lang.Class} object.
      */
-    public Class<? super T> getValueClass();
+    Class<? super T> getValueClass();
 }

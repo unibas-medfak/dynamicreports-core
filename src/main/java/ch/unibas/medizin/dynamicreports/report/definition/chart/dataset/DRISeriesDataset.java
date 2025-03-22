@@ -38,19 +38,19 @@ public interface DRISeriesDataset extends DRIChartDataset {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
-    public DRIExpression<?> getValueExpression();
+    DRIExpression<?> getValueExpression();
 
     /**
      * <p>getSeries.</p>
      *
      * @return a {@link java.util.List} object.
      */
-    public List<? extends DRIChartSerie> getSeries();
+    List<? extends DRIChartSerie> getSeries();
 
     /**
      * <p>getItemHyperLink.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIHyperLink} object.
      */
-    public DRIHyperLink getItemHyperLink();
+    DRIHyperLink getItemHyperLink();
 }

@@ -33,5 +33,5 @@ public interface DRIDesignCategoryDataset extends DRIDesignSeriesDataset {
      *
      * @return a boolean.
      */
-    public boolean isUseSeriesAsCategory();
+    boolean isUseSeriesAsCategory();
 }

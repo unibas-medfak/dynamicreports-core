@@ -35,6 +35,6 @@ public interface DRIDesignEllipse extends DRIDesignComponent {
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignPen} object.
      */
-    public DRIDesignPen getPen();
+    DRIDesignPen getPen();
 
 }

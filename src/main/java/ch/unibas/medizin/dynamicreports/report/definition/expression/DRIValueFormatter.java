@@ -40,12 +40,12 @@ public interface DRIValueFormatter<T, U> extends Serializable {
      * @param reportParameters access to report fields, variables, parameters, expressions, and other report values
      * @return the formatted value
      */
-    public T format(U value, ReportParameters reportParameters);
+    T format(U value, ReportParameters reportParameters);
 
     /**
      * <p>getValueClass.</p>
      *
      * @return a {@link java.lang.Class} object.
      */
-    public Class<T> getValueClass();
+    Class<T> getValueClass();
 }

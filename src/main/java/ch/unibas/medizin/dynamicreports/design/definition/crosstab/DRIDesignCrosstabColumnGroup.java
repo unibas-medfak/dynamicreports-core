@@ -33,5 +33,5 @@ public interface DRIDesignCrosstabColumnGroup extends DRIDesignCrosstabGroup {
      *
      * @return a int.
      */
-    public int getHeight();
+    int getHeight();
 }
