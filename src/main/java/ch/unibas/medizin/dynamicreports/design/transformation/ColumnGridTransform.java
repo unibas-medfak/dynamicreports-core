@@ -255,7 +255,7 @@ public class ColumnGridTransform {
         }
     }
 
-    private class GridList {
+    private static class GridList {
         private final HorizontalCellComponentAlignment horizontalCellAlignment;
         private final DRDesignList list;
 

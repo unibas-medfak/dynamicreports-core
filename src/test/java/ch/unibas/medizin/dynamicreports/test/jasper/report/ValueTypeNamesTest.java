@@ -65,7 +65,7 @@ public class ValueTypeNamesTest extends AbstractJasperValueTest implements Seria
         return dataSource;
     }
 
-    private class ColumnExpression extends AbstractSimpleExpression<String> {
+    private static class ColumnExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override

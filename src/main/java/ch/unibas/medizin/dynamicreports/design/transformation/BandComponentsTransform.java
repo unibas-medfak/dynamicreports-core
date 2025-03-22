@@ -416,7 +416,7 @@ class BandComponentsTransform {
         }
     }
 
-    private class GroupCellDimension {
+    private static class GroupCellDimension {
         private int headerWidth;
         private int headerHeight;
         private int totalHeaderWidth;

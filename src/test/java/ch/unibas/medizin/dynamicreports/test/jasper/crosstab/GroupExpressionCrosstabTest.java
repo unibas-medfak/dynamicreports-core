@@ -147,7 +147,7 @@ public class GroupExpressionCrosstabTest extends AbstractJasperCrosstabValueTest
         return dataSource;
     }
 
-    private class GroupExpression1 extends AbstractSimpleExpression<Integer> {
+    private static class GroupExpression1 extends AbstractSimpleExpression<Integer> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -159,7 +159,7 @@ public class GroupExpressionCrosstabTest extends AbstractJasperCrosstabValueTest
         }
     }
 
-    private class GroupExpression2 extends AbstractSimpleExpression<String> {
+    private static class GroupExpression2 extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override

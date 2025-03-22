@@ -127,7 +127,7 @@ public class SubreportTest extends AbstractJasperValueTest implements Serializab
         }
     }
 
-    private class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
+    private static class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -151,7 +151,7 @@ public class SubreportTest extends AbstractJasperValueTest implements Serializab
         }
     }
 
-    private class SubreportTitleExpression extends AbstractSimpleExpression<String> {
+    private static class SubreportTitleExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override

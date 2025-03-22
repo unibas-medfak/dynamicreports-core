@@ -91,7 +91,7 @@ public class JasperSubreportTest extends AbstractJasperValueTest implements Seri
         return new JREmptyDataSource(3);
     }
 
-    private class SubreportExpression extends AbstractSimpleExpression<JasperReport> {
+    private static class SubreportExpression extends AbstractSimpleExpression<JasperReport> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -107,7 +107,7 @@ public class JasperSubreportTest extends AbstractJasperValueTest implements Seri
         }
     }
 
-    private class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
+    private static class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
         private static final long serialVersionUID = 1L;
 
         @Override

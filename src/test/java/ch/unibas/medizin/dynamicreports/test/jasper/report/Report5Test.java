@@ -86,7 +86,7 @@ public class Report5Test extends AbstractJasperValueTest {
         return report;
     }
 
-    private class SubreportParametersExpression extends AbstractSimpleExpression<Map<String, Object>> {
+    private static class SubreportParametersExpression extends AbstractSimpleExpression<Map<String, Object>> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -98,7 +98,7 @@ public class Report5Test extends AbstractJasperValueTest {
         }
     }
 
-    private class ResourceBundle extends ListResourceBundle {
+    private static class ResourceBundle extends ListResourceBundle {
 
         @Override
         protected Object[][] getContents() {

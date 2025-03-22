@@ -60,7 +60,7 @@ public class ChartData1Test extends AbstractJasperChartTest implements Serializa
                       .series(cht.serie(column2), cht.serie("field3", Integer.class).setLabel("f3"), cht.serie(column2.multiply(2).add(1)).setLabel("exp")), cht.barChart()
                                                                                                                                                                 .setCategory("field1", String.class)
                                                                                                                                                                 .customizers(new Customizer1(),
-                                                                                                                                                                             new Customizer2())
+                                                                                                                                                                        new Customizer2())
                                                                                                                                                                 .setUseSeriesAsCategory(true)
                                                                                                                                                                 .series(cht.serie(column2),
                                                                                                                                                                         cht.serie("field3",
@@ -114,7 +114,7 @@ public class ChartData1Test extends AbstractJasperChartTest implements Serializa
         return dataSource;
     }
 
-    private class ValueExpression extends AbstractSimpleExpression<Double> {
+    private static class ValueExpression extends AbstractSimpleExpression<Double> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -125,7 +125,7 @@ public class ChartData1Test extends AbstractJasperChartTest implements Serializa
         }
     }
 
-    private class CategoryExpression extends AbstractSimpleExpression<String> {
+    private static class CategoryExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -134,7 +134,7 @@ public class ChartData1Test extends AbstractJasperChartTest implements Serializa
         }
     }
 
-    private class TitleExpression extends AbstractSimpleExpression<String> {
+    private static class TitleExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -143,7 +143,7 @@ public class ChartData1Test extends AbstractJasperChartTest implements Serializa
         }
     }
 
-    private class Customizer1 implements DRIChartCustomizer, Serializable {
+    private static class Customizer1 implements DRIChartCustomizer, Serializable {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -152,7 +152,7 @@ public class ChartData1Test extends AbstractJasperChartTest implements Serializa
         }
     }
 
-    private class Customizer2 implements DRIChartCustomizer, Serializable {
+    private static class Customizer2 implements DRIChartCustomizer, Serializable {
         private static final long serialVersionUID = 1L;
 
         @Override

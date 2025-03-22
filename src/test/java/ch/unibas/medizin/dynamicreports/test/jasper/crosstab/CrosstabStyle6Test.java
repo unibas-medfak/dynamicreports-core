@@ -105,7 +105,7 @@ public class CrosstabStyle6Test extends AbstractJasperCrosstabStyleTest implemen
     return dataSource;
   }
 
-  private class ConditionExpression extends AbstractSimpleExpression<Boolean> {
+  private static class ConditionExpression extends AbstractSimpleExpression<Boolean> {
     private static final long serialVersionUID = 1L;
 
     @Override

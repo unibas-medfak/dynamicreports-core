@@ -131,7 +131,7 @@ public class LayeredBarChartTest extends AbstractJasperChartTest implements Seri
     return dataSource;
   }
 
-  private class ChartCustomizer implements DRIChartCustomizer, Serializable {
+  private static class ChartCustomizer implements DRIChartCustomizer, Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     @Override

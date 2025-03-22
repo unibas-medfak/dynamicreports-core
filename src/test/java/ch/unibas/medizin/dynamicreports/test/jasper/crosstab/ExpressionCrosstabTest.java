@@ -137,7 +137,7 @@ public class ExpressionCrosstabTest extends AbstractJasperCrosstabValueTest impl
         return dataSource;
     }
 
-    private class MeasureExpression1 extends AbstractSimpleExpression<Double> {
+    private static class MeasureExpression1 extends AbstractSimpleExpression<Double> {
         private static final long serialVersionUID = 1L;
 
         @Override

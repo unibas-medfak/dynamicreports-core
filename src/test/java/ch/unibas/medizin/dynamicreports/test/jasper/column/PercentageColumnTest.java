@@ -87,7 +87,7 @@ public class PercentageColumnTest extends AbstractJasperValueTest implements Ser
         return dataSource;
     }
 
-    private class ColumnValueFormatter extends AbstractValueFormatter<String, Double> {
+    private static class ColumnValueFormatter extends AbstractValueFormatter<String, Double> {
         private static final long serialVersionUID = 1L;
 
         @Override

@@ -140,7 +140,7 @@ public class FilterTest extends AbstractJasperCrosstabValueTest implements Seria
         return dataSource;
     }
 
-    private class FilterExpression extends AbstractSimpleExpression<Boolean> {
+    private static class FilterExpression extends AbstractSimpleExpression<Boolean> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -150,7 +150,7 @@ public class FilterTest extends AbstractJasperCrosstabValueTest implements Seria
         }
     }
 
-    private class CrosstabFilterExpression extends AbstractSimpleExpression<Boolean> {
+    private static class CrosstabFilterExpression extends AbstractSimpleExpression<Boolean> {
         private static final long serialVersionUID = 1L;
 
         @Override

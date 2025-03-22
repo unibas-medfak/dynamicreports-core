@@ -101,7 +101,7 @@ public class SubDatasourceTest extends AbstractJasperValueTest implements Serial
         return dataSource;
     }
 
-    public class SubData {
+    public static class SubData {
         private String field3;
         private String field4;
 

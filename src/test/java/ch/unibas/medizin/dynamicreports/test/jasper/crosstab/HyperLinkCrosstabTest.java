@@ -121,7 +121,7 @@ public class HyperLinkCrosstabTest extends AbstractJasperCrosstabValueTest imple
         return dataSource;
     }
 
-    private class HyperLinkExpression1 extends AbstractComplexExpression<String> {
+    private static class HyperLinkExpression1 extends AbstractComplexExpression<String> {
         private static final long serialVersionUID = 1L;
 
         public HyperLinkExpression1(AbstractCrosstabGroupBuilder<?, ?, ?> group) {
@@ -135,7 +135,7 @@ public class HyperLinkCrosstabTest extends AbstractJasperCrosstabValueTest imple
 
     }
 
-    private class HyperLinkExpression2 extends AbstractComplexExpression<String> {
+    private static class HyperLinkExpression2 extends AbstractComplexExpression<String> {
         private static final long serialVersionUID = 1L;
 
         public HyperLinkExpression2(AbstractCrosstabGroupBuilder<?, ?, ?> group1, AbstractCrosstabGroupBuilder<?, ?, ?> group2, CrosstabMeasureBuilder<?> measure) {

@@ -70,7 +70,7 @@ public class BreakTest extends AbstractJasperPositionTest implements Serializabl
         return new JREmptyDataSource(3);
     }
 
-    public class Expression1 extends AbstractSimpleExpression<Boolean> {
+    public static class Expression1 extends AbstractSimpleExpression<Boolean> {
         private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
         @Override
@@ -79,7 +79,7 @@ public class BreakTest extends AbstractJasperPositionTest implements Serializabl
         }
     }
 
-    public class Expression2 extends AbstractSimpleExpression<Boolean> {
+    public static class Expression2 extends AbstractSimpleExpression<Boolean> {
         private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
         @Override

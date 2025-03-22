@@ -97,7 +97,7 @@ public class Subreport5Test extends AbstractJasperValueTest implements Serializa
         }
     }
 
-    private class SubreportDataSourceExpression extends AbstractComplexExpression<JRDataSource> {
+    private static class SubreportDataSourceExpression extends AbstractComplexExpression<JRDataSource> {
         private static final long serialVersionUID = 1L;
 
         public SubreportDataSourceExpression() {

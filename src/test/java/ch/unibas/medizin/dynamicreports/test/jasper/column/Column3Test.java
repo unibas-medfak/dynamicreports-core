@@ -123,7 +123,7 @@ public class Column3Test extends AbstractJasperValueTest implements Serializable
 
     }
 
-    private class ColumnValueFormatter extends AbstractValueFormatter<String, Double> {
+    private static class ColumnValueFormatter extends AbstractValueFormatter<String, Double> {
         private static final long serialVersionUID = 1L;
 
         @Override

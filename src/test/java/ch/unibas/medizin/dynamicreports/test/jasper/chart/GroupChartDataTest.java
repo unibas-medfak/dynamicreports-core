@@ -127,7 +127,7 @@ public class GroupChartDataTest extends AbstractJasperChartTest implements Seria
         return dataSource;
     }
 
-    private class ValueExpression extends AbstractSimpleExpression<Double> {
+    private static class ValueExpression extends AbstractSimpleExpression<Double> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -138,7 +138,7 @@ public class GroupChartDataTest extends AbstractJasperChartTest implements Seria
         }
     }
 
-    private class TitleExpression extends AbstractSimpleExpression<String> {
+    private static class TitleExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -147,7 +147,7 @@ public class GroupChartDataTest extends AbstractJasperChartTest implements Seria
         }
     }
 
-    private class Customizer implements DRIChartCustomizer, Serializable {
+    private static class Customizer implements DRIChartCustomizer, Serializable {
         private static final long serialVersionUID = 1L;
 
         @Override

@@ -101,7 +101,7 @@ public class BandChartDataTest extends AbstractJasperChartTest implements Serial
         return dataSource;
     }
 
-    private class TitleExpression extends AbstractSimpleExpression<String> {
+    private static class TitleExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         private final String variableName;

@@ -113,7 +113,7 @@ public class Report1Test extends AbstractJasperValueTest {
     return dataSource;
   }
 
-  private class ResourceBundle extends ListResourceBundle {
+  private static class ResourceBundle extends ListResourceBundle {
 
     @Override
     protected Object[][] getContents() {

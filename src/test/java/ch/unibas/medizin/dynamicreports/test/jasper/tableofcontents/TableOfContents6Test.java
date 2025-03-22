@@ -150,7 +150,7 @@ public class TableOfContents6Test extends AbstractJasperValueTest {
         }
     }
 
-    public class TocCustomValue {
+    public static class TocCustomValue {
         private String field2;
         private String field3;
 

@@ -130,7 +130,7 @@ public class SubreportPositionTest extends AbstractJasperPositionTest implements
         return report;
     }
 
-    private class SubreportExpression extends AbstractSimpleExpression<JasperReportBuilder> {
+    private static class SubreportExpression extends AbstractSimpleExpression<JasperReportBuilder> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -147,7 +147,7 @@ public class SubreportPositionTest extends AbstractJasperPositionTest implements
         }
     }
 
-    private class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
+    private static class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
         private static final long serialVersionUID = 1L;
 
         @Override

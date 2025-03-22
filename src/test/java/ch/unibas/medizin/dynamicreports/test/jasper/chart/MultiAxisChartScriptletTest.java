@@ -96,7 +96,7 @@ public class MultiAxisChartScriptletTest extends AbstractJasperChartTest impleme
         return dataSource;
     }
 
-    private class Customizer1 implements DRIChartCustomizer, Serializable {
+    private static class Customizer1 implements DRIChartCustomizer, Serializable {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -106,7 +106,7 @@ public class MultiAxisChartScriptletTest extends AbstractJasperChartTest impleme
         }
     }
 
-    private class Customizer2 implements DRIChartCustomizer, Serializable {
+    private static class Customizer2 implements DRIChartCustomizer, Serializable {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -118,7 +118,7 @@ public class MultiAxisChartScriptletTest extends AbstractJasperChartTest impleme
         }
     }
 
-    private class Customizer3 implements DRIChartCustomizer, Serializable {
+    private static class Customizer3 implements DRIChartCustomizer, Serializable {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -128,7 +128,7 @@ public class MultiAxisChartScriptletTest extends AbstractJasperChartTest impleme
         }
     }
 
-    private class Customizer4 implements DRIChartCustomizer, Serializable {
+    private static class Customizer4 implements DRIChartCustomizer, Serializable {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -138,7 +138,7 @@ public class MultiAxisChartScriptletTest extends AbstractJasperChartTest impleme
         }
     }
 
-    private class Customizer5 implements DRIChartCustomizer, Serializable {
+    private static class Customizer5 implements DRIChartCustomizer, Serializable {
         private static final long serialVersionUID = 1L;
 
         @Override

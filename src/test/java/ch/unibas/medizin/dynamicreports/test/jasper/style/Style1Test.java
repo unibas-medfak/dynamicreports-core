@@ -169,7 +169,7 @@ public class Style1Test extends AbstractJasperStyleTest implements Serializable 
     return dataSource;
   }
 
-  private class ConditionExpression extends AbstractSimpleExpression<Boolean> {
+  private static class ConditionExpression extends AbstractSimpleExpression<Boolean> {
     private static final long serialVersionUID = 1L;
 
     private final List<Integer> values;

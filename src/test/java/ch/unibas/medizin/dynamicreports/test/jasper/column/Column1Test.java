@@ -120,7 +120,7 @@ public class Column1Test extends AbstractJasperValueTest implements Serializable
         return dataSource;
     }
 
-    private class ColumnValueFormatter extends AbstractValueFormatter<String, BigDecimal> {
+    private static class ColumnValueFormatter extends AbstractValueFormatter<String, BigDecimal> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -129,7 +129,7 @@ public class Column1Test extends AbstractJasperValueTest implements Serializable
         }
     }
 
-    private class PatternExpression extends AbstractSimpleExpression<String> {
+    private static class PatternExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override

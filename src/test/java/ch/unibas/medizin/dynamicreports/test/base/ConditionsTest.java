@@ -116,7 +116,7 @@ public class ConditionsTest {
     A, B, C, D, E, F
   }
 
-  private class TestReportParameters implements ReportParameters {
+  private static class TestReportParameters implements ReportParameters {
     private final Object value;
 
     public TestReportParameters(Object value) {

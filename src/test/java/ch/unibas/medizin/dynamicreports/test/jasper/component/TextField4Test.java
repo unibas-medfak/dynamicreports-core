@@ -74,7 +74,7 @@ public class TextField4Test extends AbstractJasperValueTest implements Serializa
         return dataSource;
     }
 
-    private class TextExpression extends AbstractSimpleExpression<String> {
+    private static class TextExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override

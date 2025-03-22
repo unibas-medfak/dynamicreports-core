@@ -89,7 +89,7 @@ public class CustomGroupTest extends AbstractJasperValueTest implements Serializ
         return dataSource;
     }
 
-    private class YearExpression extends AbstractSimpleExpression<String> {
+    private static class YearExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override

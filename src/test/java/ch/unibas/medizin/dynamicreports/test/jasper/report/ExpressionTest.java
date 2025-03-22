@@ -64,7 +64,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
     }
 
     @SuppressWarnings("rawtypes")
-    private class Expression1 extends AbstractSimpleExpression {
+    private static class Expression1 extends AbstractSimpleExpression {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -73,7 +73,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
         }
     }
 
-    private class Expression2<T> extends AbstractSimpleExpression<T> {
+    private static class Expression2<T> extends AbstractSimpleExpression<T> {
         private static final long serialVersionUID = 1L;
 
         private final T value;
@@ -88,7 +88,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
         }
     }
 
-    private class Expression3 extends AbstractSimpleExpression<Integer> {
+    private static class Expression3 extends AbstractSimpleExpression<Integer> {
         private static final long serialVersionUID = 1L;
 
         @Override

@@ -70,7 +70,7 @@ public class TableOfContents8Test extends AbstractJasperValueTest implements Ser
         return dataSource;
     }
 
-    private class PrintWhenExpression extends AbstractSimpleExpression<Boolean> {
+    private static class PrintWhenExpression extends AbstractSimpleExpression<Boolean> {
         private static final long serialVersionUID = 1L;
 
         @Override

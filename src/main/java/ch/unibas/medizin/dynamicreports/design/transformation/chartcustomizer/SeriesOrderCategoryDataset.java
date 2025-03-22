@@ -156,7 +156,7 @@ public class SeriesOrderCategoryDataset implements CategoryDataset, Serializable
         dataset.setGroup(group);
     }
 
-    private class SeriesComparator implements Comparator<String> {
+    private static class SeriesComparator implements Comparator<String> {
 
         @Override
         public int compare(String o1, String o2) {

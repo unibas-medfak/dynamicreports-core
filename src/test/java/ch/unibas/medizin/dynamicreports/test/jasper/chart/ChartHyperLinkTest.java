@@ -63,11 +63,11 @@ public class ChartHyperLinkTest extends AbstractJasperChartTest implements Seria
                                                                                                                                                                       .setLabel("1")
                                                                                                                                                                       .setItemHyperLink(
                                                                                                                                                                           hyperLink().setTooltip(
-                                                                                                                                                                              new TooltipExpression(
-                                                                                                                                                                                  "2"))),
+                                                                                                                                                                                  new TooltipExpression(
+                                                                                                                                                                                          "2"))),
                                                                                                                                                                    cht.serie(column2).setLabel("2"))
                                                                                                                                                            .setItemHyperLink(hyperLink().setTooltip(
-                                                                                                                                                               new TooltipExpression("3"))));
+                                                                                                                                                                   new TooltipExpression("3"))));
     }
 
     @Override
@@ -124,7 +124,7 @@ public class ChartHyperLinkTest extends AbstractJasperChartTest implements Seria
         return dataSource;
     }
 
-    private class TooltipExpression extends AbstractSimpleExpression<String> {
+    private static class TooltipExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
         private final String name;
 

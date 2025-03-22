@@ -131,7 +131,7 @@ public class PageNumber3Test extends AbstractJasperValueTest implements Serializ
         return new JREmptyDataSource(2);
     }
 
-    private class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
+    private static class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
         private static final long serialVersionUID = 1L;
 
         @Override

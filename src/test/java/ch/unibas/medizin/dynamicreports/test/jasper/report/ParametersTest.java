@@ -91,7 +91,7 @@ public class ParametersTest extends AbstractJasperValueTest implements Serializa
         }
     }
 
-    private class TitleExpression extends AbstractSimpleExpression<String> {
+    private static class TitleExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override

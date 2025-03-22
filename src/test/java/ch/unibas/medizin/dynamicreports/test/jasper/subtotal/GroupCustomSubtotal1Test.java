@@ -132,7 +132,7 @@ public class GroupCustomSubtotal1Test extends AbstractJasperValueTest implements
         }
     }
 
-    private class ValueExpression3 extends AbstractComplexExpression<String> {
+    private static class ValueExpression3 extends AbstractComplexExpression<String> {
         private static final long serialVersionUID = 1L;
         private int count = 1;
 

@@ -82,7 +82,7 @@ public class TableOfContents4Test extends AbstractJasperValueTest implements Ser
         return dataSource;
     }
 
-    private class PageHeaderExpression extends AbstractSimpleExpression<String> {
+    private static class PageHeaderExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         @Override

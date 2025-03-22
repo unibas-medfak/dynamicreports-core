@@ -81,7 +81,7 @@ public class Subreport6Test extends AbstractJasperValueTest implements Serializa
         }
     }
 
-    private class Subreport2Expression extends AbstractSimpleExpression<JasperReportBuilder> {
+    private static class Subreport2Expression extends AbstractSimpleExpression<JasperReportBuilder> {
         private static final long serialVersionUID = 1L;
 
         @Override

@@ -85,7 +85,7 @@ public class Image1Test extends AbstractJasperTest {
         return false;
     }
 
-    private class TestImage extends BufferedImage implements Serializable {
+    private static class TestImage extends BufferedImage implements Serializable {
         private static final long serialVersionUID = 1L;
 
         public TestImage() {

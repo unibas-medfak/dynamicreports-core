@@ -198,7 +198,7 @@ public class TableOfContents1Test extends AbstractJasperValueTest implements Ser
         return dataSource;
     }
 
-    private class LabelExpression extends AbstractSimpleExpression<String> {
+    private static class LabelExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
         private int index = 1;

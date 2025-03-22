@@ -152,7 +152,7 @@ public class Subtotal1Test extends AbstractJasperValueTest implements Serializab
         return dataSource;
     }
 
-    private class ColumnValueFormatter extends AbstractValueFormatter<String, String> {
+    private static class ColumnValueFormatter extends AbstractValueFormatter<String, String> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -161,7 +161,7 @@ public class Subtotal1Test extends AbstractJasperValueTest implements Serializab
         }
     }
 
-    private class ColumnValueFormatter2 extends AbstractValueFormatter<String, Integer> {
+    private static class ColumnValueFormatter2 extends AbstractValueFormatter<String, Integer> {
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -170,7 +170,7 @@ public class Subtotal1Test extends AbstractJasperValueTest implements Serializab
         }
     }
 
-    private class ColumnCalculationExpression extends AbstractSimpleExpression<Integer> {
+    private static class ColumnCalculationExpression extends AbstractSimpleExpression<Integer> {
         private static final long serialVersionUID = 1L;
 
         @Override

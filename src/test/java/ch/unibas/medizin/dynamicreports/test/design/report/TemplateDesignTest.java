@@ -204,7 +204,7 @@ public class TemplateDesignTest {
         }
     }
 
-    public class TestTemplateDesign extends AbstractTemplateDesign<Object> {
+    public static class TestTemplateDesign extends AbstractTemplateDesign<Object> {
         private static final long serialVersionUID = 1L;
 
         @Override
