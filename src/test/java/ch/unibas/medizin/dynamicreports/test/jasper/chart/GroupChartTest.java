@@ -78,7 +78,7 @@ public class GroupChartTest extends AbstractJasperChartTest implements Serializa
         chartCountTest("summary.chart2", 1);
         chartCategoryCountTest("summary.chart2", 0, 2);
         chartSeriesCountTest("summary.chart2", 0, 1);
-        chartDataTest("summary.chart2", 0, categories, series, new Number[][] {{2l}, {2l}});
+        chartDataTest("summary.chart2", 0, categories, series, new Number[][] {{2L}, {2L}});
     }
 
     @Override
