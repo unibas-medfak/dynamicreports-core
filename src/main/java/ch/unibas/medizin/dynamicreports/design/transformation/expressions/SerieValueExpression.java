@@ -70,7 +70,7 @@ public class SerieValueExpression extends AbstractSimpleExpression<Number> {
     public Number evaluate(ReportParameters reportParameters) {
         if (reportParameters.getReportRowNumber() <= 1) {
             resetValue = null;
-            values = new HashMap<Object, Double>();
+            values = new HashMap<>();
         }
 
         Object resetValue = null;
@@ -91,7 +91,7 @@ public class SerieValueExpression extends AbstractSimpleExpression<Number> {
                 throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
         }
         if (this.resetValue != null && !this.resetValue.equals(resetValue)) {
-            this.values = new HashMap<Object, Double>();
+            this.values = new HashMap<>();
         }
         this.resetValue = resetValue;
 

@@ -88,7 +88,7 @@ public class DRChart extends DRHyperLinkComponent implements DRIChart {
     @Override
     protected void init() {
         super.init();
-        this.customizers = new ArrayList<DRIChartCustomizer>();
+        this.customizers = new ArrayList<>();
         this.title = new DRChartTitle();
         this.subtitle = new DRChartSubtitle();
         this.legend = new DRChartLegend();

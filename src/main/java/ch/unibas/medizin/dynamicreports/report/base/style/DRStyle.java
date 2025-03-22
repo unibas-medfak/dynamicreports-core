@@ -45,7 +45,7 @@ public class DRStyle extends DRBaseStyle implements DRIStyle {
     @Override
     protected void init() {
         super.init();
-        conditionalStyles = new ArrayList<DRConditionalStyle>();
+        conditionalStyles = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

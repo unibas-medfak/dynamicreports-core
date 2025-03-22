@@ -70,8 +70,8 @@ public class DRDesignList extends DRDesignComponent implements DRIDesignList {
     @Override
     protected void init() {
         super.init();
-        this.listCells = new ArrayList<DRDesignListCell>();
-        this.components = new ArrayList<DRDesignComponent>();
+        this.listCells = new ArrayList<>();
+        this.components = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

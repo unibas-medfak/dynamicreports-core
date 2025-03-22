@@ -73,10 +73,10 @@ public class DRCrosstab extends DRDimensionComponent implements DRICrosstab {
     protected void init() {
         super.init();
         dataset = new DRCrosstabDataset();
-        columnGroups = new ArrayList<DRICrosstabColumnGroup<?>>();
-        rowGroups = new ArrayList<DRICrosstabRowGroup<?>>();
-        variables = new ArrayList<DRICrosstabVariable<?>>();
-        measures = new ArrayList<DRICrosstabMeasure<?>>();
+        columnGroups = new ArrayList<>();
+        rowGroups = new ArrayList<>();
+        variables = new ArrayList<>();
+        measures = new ArrayList<>();
 
         whenNoDataCell = new DRCrosstabCellContent();
         headerCell = new DRCrosstabCellContent();

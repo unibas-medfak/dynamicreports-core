@@ -58,7 +58,7 @@ public class DRDesignChart extends DRDesignHyperlinkComponent implements DRIDesi
      */
     public DRDesignChart() {
         super("chart");
-        customizers = new ArrayList<DRIChartCustomizer>();
+        customizers = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

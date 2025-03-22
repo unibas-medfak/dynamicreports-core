@@ -46,7 +46,7 @@ public class CrosstabVariableBuilder<T> extends AbstractBuilder<CrosstabVariable
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected CrosstabVariableBuilder(ValueColumnBuilder<?, ?> column, Calculation calculation) {
-        super(new DRCrosstabVariable<T>(column.build(), calculation));
+        super(new DRCrosstabVariable<>(column.build(), calculation));
     }
 
     /**
@@ -56,7 +56,7 @@ public class CrosstabVariableBuilder<T> extends AbstractBuilder<CrosstabVariable
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected CrosstabVariableBuilder(FieldBuilder<?> field, Calculation calculation) {
-        super(new DRCrosstabVariable<T>(field.getField(), calculation));
+        super(new DRCrosstabVariable<>(field.getField(), calculation));
     }
 
     /**
@@ -66,7 +66,7 @@ public class CrosstabVariableBuilder<T> extends AbstractBuilder<CrosstabVariable
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected CrosstabVariableBuilder(DRIExpression<?> expression, Calculation calculation) {
-        super(new DRCrosstabVariable<T>(expression, calculation));
+        super(new DRCrosstabVariable<>(expression, calculation));
     }
 
     /**

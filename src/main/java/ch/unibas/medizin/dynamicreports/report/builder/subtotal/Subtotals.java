@@ -39,7 +39,7 @@ public class Subtotals {
     // calculation
     public static <T> AggregationSubtotalBuilder<T> aggregate(ValueColumnBuilder<?, ?> subtotalColumn, Calculation calculation) {
         Validate.notNull(subtotalColumn, "subtotalColumn must not be null");
-        return new AggregationSubtotalBuilder<T>(subtotalColumn, calculation);
+        return new AggregationSubtotalBuilder<>(subtotalColumn, calculation);
     }
 
     public static <T> AggregationSubtotalBuilder<T> aggregate(String fieldName, Class<?> valueClass, ColumnBuilder<?, ?> showInColumn, Calculation calculation) {
@@ -48,12 +48,12 @@ public class Subtotals {
 
     public static <T> AggregationSubtotalBuilder<T> aggregate(FieldBuilder<?> field, ColumnBuilder<?, ?> showInColumn, Calculation calculation) {
         Validate.notNull(showInColumn, "showInColumn must not be null");
-        return new AggregationSubtotalBuilder<T>(field, showInColumn, calculation);
+        return new AggregationSubtotalBuilder<>(field, showInColumn, calculation);
     }
 
     public static <T> AggregationSubtotalBuilder<T> aggregate(DRIExpression<?> expression, ColumnBuilder<?, ?> showInColumn, Calculation calculation) {
         Validate.notNull(showInColumn, "showInColumn must not be null");
-        return new AggregationSubtotalBuilder<T>(expression, showInColumn, calculation);
+        return new AggregationSubtotalBuilder<>(expression, showInColumn, calculation);
     }
 
     // sum
@@ -212,7 +212,7 @@ public class Subtotals {
     // custom
     public static <T> CustomSubtotalBuilder<T> customValue(DRIExpression<T> expression, ColumnBuilder<?, ?> showInColumn) {
         Validate.notNull(showInColumn, "showInColumn must not be null");
-        return new CustomSubtotalBuilder<T>(expression, showInColumn);
+        return new CustomSubtotalBuilder<>(expression, showInColumn);
     }
 
     // percentage

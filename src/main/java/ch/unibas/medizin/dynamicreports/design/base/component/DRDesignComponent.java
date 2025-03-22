@@ -74,7 +74,7 @@ public abstract class DRDesignComponent implements DRIDesignComponent {
      * <p>init.</p>
      */
     protected void init() {
-        propertyExpressions = new ArrayList<DRIDesignPropertyExpression>();
+        propertyExpressions = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

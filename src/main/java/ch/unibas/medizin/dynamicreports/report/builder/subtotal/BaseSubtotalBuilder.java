@@ -54,7 +54,7 @@ public abstract class BaseSubtotalBuilder<T extends BaseSubtotalBuilder<T, U>, U
      * @param showInColumn a {@link ch.unibas.medizin.dynamicreports.report.builder.column.ColumnBuilder} object.
      */
     protected BaseSubtotalBuilder(ColumnBuilder<?, ?> showInColumn) {
-        super(new DRSubtotal<U>(showInColumn.build()));
+        super(new DRSubtotal<>(showInColumn.build()));
     }
 
     /**

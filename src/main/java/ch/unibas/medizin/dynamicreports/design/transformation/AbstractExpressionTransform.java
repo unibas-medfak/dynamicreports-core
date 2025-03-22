@@ -98,14 +98,14 @@ public abstract class AbstractExpressionTransform {
     }
 
     private void init() {
-        fields = new LinkedHashMap<String, DRIDesignField>();
-        variables = new LinkedHashMap<String, DRIDesignVariable>();
-        systemExpressions = new HashMap<String, DRIDesignSystemExpression>();
-        jasperExpressions = new HashMap<String, DRIDesignJasperExpression>();
-        simpleExpressions = new HashMap<String, DRIDesignSimpleExpression>();
-        complexExpressions = new HashMap<String, DRIDesignComplexExpression>();
-        expressions = new HashMap<DRIExpression<?>, DRIDesignExpression>();
-        sorts = new ArrayList<DRIDesignSort>();
+        fields = new LinkedHashMap<>();
+        variables = new LinkedHashMap<>();
+        systemExpressions = new HashMap<>();
+        jasperExpressions = new HashMap<>();
+        simpleExpressions = new HashMap<>();
+        complexExpressions = new HashMap<>();
+        expressions = new HashMap<>();
+        sorts = new ArrayList<>();
     }
 
     /**

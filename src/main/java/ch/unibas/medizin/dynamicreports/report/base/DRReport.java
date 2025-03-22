@@ -130,16 +130,16 @@ public class DRReport implements DRIReport {
 
     private void init() {
         this.template = new DRReportTemplate();
-        this.templateStyles = new ArrayList<DRIStyle>();
-        this.columns = new ArrayList<DRColumn<?>>();
-        this.groups = new ArrayList<DRGroup>();
-        this.subtotals = new ArrayList<DRSubtotal<?>>();
-        this.fields = new ArrayList<DRField<?>>();
-        this.variables = new ArrayList<DRVariable<?>>();
-        this.sorts = new ArrayList<DRSort>();
-        this.parameters = new ArrayList<DRParameter<?>>();
-        this.scriptlets = new ArrayList<DRIScriptlet>();
-        this.detailRowHighlighters = new ArrayList<DRConditionalStyle>();
+        this.templateStyles = new ArrayList<>();
+        this.columns = new ArrayList<>();
+        this.groups = new ArrayList<>();
+        this.subtotals = new ArrayList<>();
+        this.fields = new ArrayList<>();
+        this.variables = new ArrayList<>();
+        this.sorts = new ArrayList<>();
+        this.parameters = new ArrayList<>();
+        this.scriptlets = new ArrayList<>();
+        this.detailRowHighlighters = new ArrayList<>();
         this.properties = new Properties();
         this.page = new DRPage();
 
@@ -518,7 +518,7 @@ public class DRReport implements DRIReport {
     public void addParameterValue(String name, Object value) {
         Validate.notNull(name, "parameter name must not be null");
         if (parameterValues == null) {
-            parameterValues = new HashMap<String, Object>();
+            parameterValues = new HashMap<>();
         }
         this.parameterValues.put(name, value);
     }

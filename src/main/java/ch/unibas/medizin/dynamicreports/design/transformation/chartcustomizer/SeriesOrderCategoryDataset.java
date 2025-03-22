@@ -53,7 +53,7 @@ public class SeriesOrderCategoryDataset implements CategoryDataset, Serializable
      */
     public SeriesOrderCategoryDataset(CategoryDataset dataset, Comparator<String> seriesOrderBy, OrderType seriesOrderType) {
         this.dataset = dataset;
-        this.rowKeys = new ArrayList<String>();
+        this.rowKeys = new ArrayList<>();
         for (int i = 0; i < dataset.getRowCount(); i++) {
             String serieName = (String) dataset.getRowKey(i);
             this.rowKeys.add(serieName);

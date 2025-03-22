@@ -83,8 +83,8 @@ public class StyleTransform {
     }
 
     private void init() {
-        styles = new LinkedHashMap<String, DRIDesignStyle>();
-        designStyles = new HashMap<String, DRDesignStyle>();
+        styles = new LinkedHashMap<>();
+        designStyles = new HashMap<>();
         templateStyles = accessor.getTemplateTransform().getTemplateStyles();
     }
 
@@ -260,7 +260,7 @@ public class StyleTransform {
         designParagraph.setSpacingBefore(paragraph.getSpacingBefore());
         designParagraph.setSpacingAfter(paragraph.getSpacingAfter());
         designParagraph.setTabStopWidth(paragraph.getTabStopWidth());
-        List<DRIDesignTabStop> designTabStops = new ArrayList<DRIDesignTabStop>();
+        List<DRIDesignTabStop> designTabStops = new ArrayList<>();
         for (DRITabStop tabStop : paragraph.getTabStops()) {
             DRDesignTabStop designTabStop = new DRDesignTabStop();
             designTabStop.setPosition(tabStop.getPosition());

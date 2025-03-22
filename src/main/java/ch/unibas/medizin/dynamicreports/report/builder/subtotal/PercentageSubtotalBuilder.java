@@ -118,11 +118,11 @@ public class PercentageSubtotalBuilder extends BaseSubtotalBuilder<PercentageSub
             getObject().getValueField().setDataType(DataTypes.percentageType());
         }
 
-        DRVariable<Number> actualExpression = new DRVariable<Number>(expression, Calculation.SUM);
+        DRVariable<Number> actualExpression = new DRVariable<>(expression, Calculation.SUM);
         actualExpression.setResetType(Evaluation.GROUP);
         actualExpression.setResetGroup(getObject().getGroup());
 
-        DRVariable<Number> totalExpression = new DRVariable<Number>(expression, Calculation.SUM);
+        DRVariable<Number> totalExpression = new DRVariable<>(expression, Calculation.SUM);
         if (totalType != null) {
             switch (totalType) {
                 case REPORT:

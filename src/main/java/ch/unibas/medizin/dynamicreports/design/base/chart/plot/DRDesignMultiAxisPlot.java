@@ -42,7 +42,7 @@ public class DRDesignMultiAxisPlot extends DRDesignAxisPlot implements DRIDesign
      * <p>Constructor for DRDesignMultiAxisPlot.</p>
      */
     public DRDesignMultiAxisPlot() {
-        axes = new ArrayList<DRIDesignChartAxis>();
+        axes = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

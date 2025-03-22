@@ -53,7 +53,7 @@ public class DatasetParametersExpression extends AbstractDesignSimpleExpression 
     /** {@inheritDoc} */
     @Override
     public Object evaluate(ReportParameters reportParameters) {
-        Map<String, Object> parameters = new HashMap<String, Object>(this.parameters);
+        Map<String, Object> parameters = new HashMap<>(this.parameters);
         parameters.put(JasperReportParameters.MASTER_REPORT_PARAMETERS, reportParameters);
         return parameters;
     }

@@ -57,7 +57,7 @@ public abstract class DRComponent implements DRIComponent {
      * <p>init.</p>
      */
     protected void init() {
-        propertyExpressions = new ArrayList<DRIPropertyExpression>();
+        propertyExpressions = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

@@ -38,7 +38,7 @@ public class JasperPrintListHandler extends AbstractPrintListHandler {
      * <p>Constructor for JasperPrintListHandler.</p>
      */
     public JasperPrintListHandler() {
-        printList = new ArrayList<JasperPrint>();
+        printList = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

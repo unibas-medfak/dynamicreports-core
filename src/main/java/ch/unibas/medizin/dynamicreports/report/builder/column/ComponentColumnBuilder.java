@@ -44,7 +44,7 @@ public class ComponentColumnBuilder extends ColumnBuilder<ComponentColumnBuilder
      * @param component a {@link ch.unibas.medizin.dynamicreports.report.builder.component.ComponentBuilder} object.
      */
     protected ComponentColumnBuilder(ComponentBuilder<?, ?> component) {
-        super(new DRColumn<DRComponent>(component.getComponent()));
+        super(new DRColumn<>(component.getComponent()));
     }
 
     /**

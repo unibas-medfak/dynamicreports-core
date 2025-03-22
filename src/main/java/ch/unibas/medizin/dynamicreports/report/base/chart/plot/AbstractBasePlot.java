@@ -55,8 +55,8 @@ public abstract class AbstractBasePlot implements DRIBasePlot {
      * <p>init.</p>
      */
     protected void init() {
-        this.seriesColors = new ArrayList<Color>();
-        this.seriesColorsByName = new HashMap<String, Color>();
+        this.seriesColors = new ArrayList<>();
+        this.seriesColorsByName = new HashMap<>();
     }
 
     /** {@inheritDoc} */

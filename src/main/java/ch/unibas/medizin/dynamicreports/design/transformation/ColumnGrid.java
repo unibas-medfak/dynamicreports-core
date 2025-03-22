@@ -41,7 +41,7 @@ class ColumnGrid {
      * <p>Constructor for ColumnGrid.</p>
      */
     public ColumnGrid() {
-        columnsLists = new HashMap<DRIColumn<?>, DRDesignList>();
+        columnsLists = new HashMap<>();
         isEmpty = true;
     }
 

@@ -77,8 +77,8 @@ public class SubtotalTransform {
         ColumnGrid pageFooter = accessor.getColumnGridTransform().createColumnGrid();
         ColumnGrid columnHeader = accessor.getColumnGridTransform().createColumnGrid();
         ColumnGrid columnFooter = accessor.getColumnGridTransform().createColumnGrid();
-        Map<DRIGroup, ColumnGrid> groupHeader = new HashMap<DRIGroup, ColumnGrid>();
-        Map<DRIGroup, ColumnGrid> groupFooter = new HashMap<DRIGroup, ColumnGrid>();
+        Map<DRIGroup, ColumnGrid> groupHeader = new HashMap<>();
+        Map<DRIGroup, ColumnGrid> groupFooter = new HashMap<>();
         ColumnGrid lastPageFooter = accessor.getColumnGridTransform().createColumnGrid();
         ColumnGrid summary = accessor.getColumnGridTransform().createColumnGrid();
 

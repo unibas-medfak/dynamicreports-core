@@ -68,7 +68,7 @@ public class SeriesColorsByNameCustomizer implements DRIChartCustomizer {
         if (chart.getPlot() instanceof CategoryPlot) {
             CategoryItemRenderer renderer = chart.getCategoryPlot().getRenderer();
             CategoryDataset dataset = chart.getCategoryPlot().getDataset();
-            Set<String> legend = new LinkedHashSet<String>();
+            Set<String> legend = new LinkedHashSet<>();
             if (dataset != null) {
                 for (int i = 0; i < dataset.getRowCount(); i++) {
                     String key = (String) dataset.getRowKey(i);

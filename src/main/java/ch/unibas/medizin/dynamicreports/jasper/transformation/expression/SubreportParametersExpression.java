@@ -60,7 +60,7 @@ public class SubreportParametersExpression extends AbstractDesignComplexExpressi
     @Override
     @SuppressWarnings("unchecked")
     public Object evaluate(List<?> values, ReportParameters reportParameters) {
-        Map<String, Object> parameters = new HashMap<String, Object>();
+        Map<String, Object> parameters = new HashMap<>();
         parameters.putAll(subreportExpression.getReportDesign().getParameters());
         if (subreportExpression.getReportBuilder().getReport().getParameterValues() != null) {
             parameters.putAll(subreportExpression.getReportBuilder().getReport().getParameterValues());

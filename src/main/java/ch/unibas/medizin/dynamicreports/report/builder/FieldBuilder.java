@@ -41,7 +41,7 @@ public class FieldBuilder<T> extends AbstractBuilder<FieldBuilder<T>, DRField<T>
      * @param valueClass a {@link java.lang.Class} object.
      */
     protected FieldBuilder(String name, Class<? super T> valueClass) {
-        super(new DRField<T>(name, valueClass));
+        super(new DRField<>(name, valueClass));
     }
 
     /**

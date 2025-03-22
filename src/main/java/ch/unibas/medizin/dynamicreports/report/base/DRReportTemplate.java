@@ -200,8 +200,8 @@ public class DRReportTemplate implements DRIReportTemplate {
      * <p>Constructor for DRReportTemplate.</p>
      */
     public DRReportTemplate() {
-        this.templateStyles = new ArrayList<DRIStyle>();
-        this.chartSeriesColors = new ArrayList<Color>();
+        this.templateStyles = new ArrayList<>();
+        this.chartSeriesColors = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

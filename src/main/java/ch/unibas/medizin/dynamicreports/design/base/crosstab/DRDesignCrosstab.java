@@ -62,10 +62,10 @@ public class DRDesignCrosstab extends DRDesignComponent implements DRIDesignCros
     @Override
     protected void init() {
         super.init();
-        columnGroups = new ArrayList<DRDesignCrosstabColumnGroup>();
-        rowGroups = new ArrayList<DRDesignCrosstabRowGroup>();
-        cells = new ArrayList<DRDesignCrosstabCell>();
-        measures = new ArrayList<DRIDesignCrosstabMeasure>();
+        columnGroups = new ArrayList<>();
+        rowGroups = new ArrayList<>();
+        cells = new ArrayList<>();
+        measures = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

@@ -44,7 +44,7 @@ public class DRDesignSeriesDataset extends DRDesignChartDataset implements DRIDe
      * <p>Constructor for DRDesignSeriesDataset.</p>
      */
     public DRDesignSeriesDataset() {
-        series = new ArrayList<DRIDesignChartSerie>();
+        series = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

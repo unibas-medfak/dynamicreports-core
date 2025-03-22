@@ -47,7 +47,7 @@ public class DRSeriesDataset extends DRChartDataset implements DRISeriesDataset 
      * <p>Constructor for DRSeriesDataset.</p>
      */
     public DRSeriesDataset() {
-        series = new ArrayList<DRIChartSerie>();
+        series = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

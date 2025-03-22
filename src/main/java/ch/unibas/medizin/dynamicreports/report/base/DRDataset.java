@@ -54,9 +54,9 @@ public class DRDataset implements DRIDataset {
     }
 
     private void init() {
-        this.fields = new ArrayList<DRField<?>>();
-        this.variables = new ArrayList<DRVariable<?>>();
-        this.sorts = new ArrayList<DRSort>();
+        this.fields = new ArrayList<>();
+        this.variables = new ArrayList<>();
+        this.sorts = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

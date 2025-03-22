@@ -62,7 +62,7 @@ public class DRSubtotal<T> implements DRISubtotal<T> {
     }
 
     private void init() {
-        valueField = new DRTextField<T>();
+        valueField = new DRTextField<>();
     }
 
     /** {@inheritDoc} */

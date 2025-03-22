@@ -48,7 +48,7 @@ public abstract class ValueColumnBuilder<T extends ValueColumnBuilder<T, U>, U> 
      * <p>Constructor for ValueColumnBuilder.</p>
      */
     protected ValueColumnBuilder() {
-        super(new DRValueColumn<>(new DRTextField<U>()));
+        super(new DRValueColumn<>(new DRTextField<>()));
     }
 
     /**

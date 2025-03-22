@@ -56,7 +56,7 @@ public class DRDesignStyle extends DRDesignBaseStyle implements DRIDesignStyle {
      */
     public DRDesignStyle(String name) {
         this.name = Validate.notBlank(name);
-        this.conditionalStyles = new ArrayList<DRDesignConditionalStyle>();
+        this.conditionalStyles = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

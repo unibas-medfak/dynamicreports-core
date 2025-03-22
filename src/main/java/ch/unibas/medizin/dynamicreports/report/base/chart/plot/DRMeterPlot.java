@@ -60,7 +60,7 @@ public class DRMeterPlot implements DRIMeterPlot {
      * <p>Constructor for DRMeterPlot.</p>
      */
     public DRMeterPlot() {
-        intervals = new ArrayList<DRIMeterInterval>();
+        intervals = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

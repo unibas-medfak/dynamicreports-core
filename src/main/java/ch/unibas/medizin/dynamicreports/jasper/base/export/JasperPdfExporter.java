@@ -71,7 +71,7 @@ public class JasperPdfExporter extends AbstractJasperExporter implements JasperI
      * <p>Constructor for JasperPdfExporter.</p>
      */
     public JasperPdfExporter() {
-        permissions = new ArrayList<PdfPermission>();
+        permissions = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

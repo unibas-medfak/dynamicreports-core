@@ -82,7 +82,7 @@ public abstract class AbstractJasperExcelExporter extends AbstractJasperExporter
      * <p>Constructor for AbstractJasperExcelExporter.</p>
      */
     public AbstractJasperExcelExporter() {
-        this.sheetNames = new ArrayList<String>();
+        this.sheetNames = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

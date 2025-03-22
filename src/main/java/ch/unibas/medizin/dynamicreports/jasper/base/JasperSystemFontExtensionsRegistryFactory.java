@@ -53,7 +53,7 @@ public class JasperSystemFontExtensionsRegistryFactory implements ExtensionsRegi
     @Override
     public ExtensionsRegistry createRegistry(String registryId, JRPropertiesMap properties) {
         List<PropertySuffix> fontFamiliesProperties = JRPropertiesUtil.getProperties(properties, SYSTEM_FONT_FAMILIES_PROPERTY_PREFIX);
-        List<String> fontFamiliesLocations = new ArrayList<String>();
+        List<String> fontFamiliesLocations = new ArrayList<>();
         if (Defaults.getDefaults().isLoadSystemFonts()) {
             for (Iterator<PropertySuffix> it = fontFamiliesProperties.iterator(); it.hasNext(); ) {
                 PropertySuffix fontFamiliesProp = it.next();

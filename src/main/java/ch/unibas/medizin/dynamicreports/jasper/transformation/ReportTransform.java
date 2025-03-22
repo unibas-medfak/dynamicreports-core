@@ -82,7 +82,7 @@ public class ReportTransform {
         if (report.isTableOfContents()) {
             Map<String, JasperTocHeading> tocHeadings = report.getTableOfContentsHeadings();
             if (tocHeadings == null) {
-                tocHeadings = new LinkedHashMap<String, JasperTocHeading>();
+                tocHeadings = new LinkedHashMap<>();
             }
             accessor.getCustomValues().setTocHeadings(tocHeadings);
         }

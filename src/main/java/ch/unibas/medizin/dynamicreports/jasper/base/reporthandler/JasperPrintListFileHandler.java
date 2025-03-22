@@ -70,7 +70,7 @@ public class JasperPrintListFileHandler extends AbstractPrintListHandler {
             this.directory = new File(directory);
         }
         printList = new PrintList();
-        tempFiles = new ArrayList<File>();
+        tempFiles = new ArrayList<>();
     }
 
     /** {@inheritDoc} */
@@ -121,7 +121,7 @@ public class JasperPrintListFileHandler extends AbstractPrintListHandler {
 
         @Override
         public Iterator<JasperPrint> iterator() {
-            return new Iterator<JasperPrint>() {
+            return new Iterator<>() {
                 private final Iterator<File> it = tempFiles.iterator();
 
                 @Override

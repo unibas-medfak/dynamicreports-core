@@ -42,7 +42,7 @@ public class DRXyList extends DRDimensionComponent implements DRIXyList {
     @Override
     protected void init() {
         super.init();
-        this.xyListCells = new ArrayList<DRXyListCell>();
+        this.xyListCells = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

@@ -226,7 +226,7 @@ public class JasperReportParameters implements ReportParameters {
 
     // complex expression
     private Object getComplexExpressionValue(String name) {
-        List<Object> values = new ArrayList<Object>();
+        List<Object> values = new ArrayList<>();
         DRIDesignComplexExpression complexExpression = jasperScriptlet.getComplexExpression(name);
         for (DRIDesignExpression valueExpression : complexExpression.getExpressions()) {
             values.add(getValue(valueExpression.getName()));

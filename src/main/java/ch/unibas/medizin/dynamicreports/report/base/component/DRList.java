@@ -64,7 +64,7 @@ public class DRList extends DRDimensionComponent implements DRIList {
     @Override
     protected void init() {
         super.init();
-        this.listCells = new ArrayList<DRListCell>();
+        this.listCells = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

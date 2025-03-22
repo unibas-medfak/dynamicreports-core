@@ -57,7 +57,7 @@ public class ReportTransform {
      */
     public ReportTransform(DesignTransformAccessor accessor) {
         this.accessor = accessor;
-        parameters = new ArrayList<DRIDesignParameter>();
+        parameters = new ArrayList<>();
     }
 
     /**

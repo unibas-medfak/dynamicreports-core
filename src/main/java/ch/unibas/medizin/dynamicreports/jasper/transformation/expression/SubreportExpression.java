@@ -71,8 +71,8 @@ public class SubreportExpression extends AbstractDesignComplexExpression {
         addExpression(reportExpression);
         this.pageWidth = pageWidth;
         this.name = ReportUtils.generateUniqueName("subreportExpression");
-        reportDesigns = new HashMap<ReportBuilder<?>, JasperReportDesign>();
-        jasperReports = new HashMap<ReportBuilder<?>, JasperReport>();
+        reportDesigns = new HashMap<>();
+        jasperReports = new HashMap<>();
     }
 
     /** {@inheritDoc} */

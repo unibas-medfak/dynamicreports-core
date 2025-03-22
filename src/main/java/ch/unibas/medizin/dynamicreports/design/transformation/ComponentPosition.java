@@ -359,7 +359,7 @@ class ComponentPosition {
     }
 
     private static int splitHorizontalListWhenOverflowWidth(String name, DRDesignList list, int availableWidth) throws DRException {
-        List<DRDesignListCell> listCells = new ArrayList<DRDesignListCell>(list.getListCells());
+        List<DRDesignListCell> listCells = new ArrayList<>(list.getListCells());
         list.getListCells().clear();
         list.getComponents().clear();
 

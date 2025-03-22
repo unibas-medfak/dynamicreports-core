@@ -44,7 +44,7 @@ public class DRMultiAxisPlot extends DRAxisPlot implements DRIMultiAxisPlot {
      * <p>Constructor for DRMultiAxisPlot.</p>
      */
     public DRMultiAxisPlot() {
-        axes = new ArrayList<DRIChartAxis>();
+        axes = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

@@ -52,7 +52,7 @@ public class Conditions {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.EqualValueExpression} object.
      */
     public static <T extends Number> EqualValueExpression<T> equal(DRIValue<T> value, Number... number) {
-        return new EqualValueExpression<T>(value, number);
+        return new EqualValueExpression<>(value, number);
     }
 
     /**
@@ -77,7 +77,7 @@ public class Conditions {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.UnEqualValueExpression} object.
      */
     public static <T extends Number> UnEqualValueExpression<T> unEqual(DRIValue<T> value, Number... number) {
-        return new UnEqualValueExpression<T>(value, number);
+        return new UnEqualValueExpression<>(value, number);
     }
 
     /**
@@ -88,7 +88,7 @@ public class Conditions {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.SmallerValueExpression} object.
      */
     public static <T extends Number> SmallerValueExpression<T> smaller(DRIValue<T> value, Number number) {
-        return new SmallerValueExpression<T>(value, number);
+        return new SmallerValueExpression<>(value, number);
     }
 
     /**
@@ -99,7 +99,7 @@ public class Conditions {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.SmallerOrEqualsValueExpression} object.
      */
     public static <T extends Number> SmallerOrEqualsValueExpression<T> smallerOrEquals(DRIValue<T> value, Number number) {
-        return new SmallerOrEqualsValueExpression<T>(value, number);
+        return new SmallerOrEqualsValueExpression<>(value, number);
     }
 
     /**
@@ -110,7 +110,7 @@ public class Conditions {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.GreaterValueExpression} object.
      */
     public static <T extends Number> GreaterValueExpression<T> greater(DRIValue<T> value, Number number) {
-        return new GreaterValueExpression<T>(value, number);
+        return new GreaterValueExpression<>(value, number);
     }
 
     /**
@@ -121,7 +121,7 @@ public class Conditions {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.GreaterOrEqualsValueExpression} object.
      */
     public static <T extends Number> GreaterOrEqualsValueExpression<T> greaterOrEquals(DRIValue<T> value, Number number) {
-        return new GreaterOrEqualsValueExpression<T>(value, number);
+        return new GreaterOrEqualsValueExpression<>(value, number);
     }
 
     /**
@@ -133,7 +133,7 @@ public class Conditions {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.BetweenValueExpression} object.
      */
     public static <T extends Number> BetweenValueExpression<T> between(DRIValue<T> value, Number min, Number max) {
-        return new BetweenValueExpression<T>(value, min, max);
+        return new BetweenValueExpression<>(value, min, max);
     }
 
     /**
@@ -145,6 +145,6 @@ public class Conditions {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.NotBetweenValueExpression} object.
      */
     public static <T extends Number> NotBetweenValueExpression<T> notBetween(DRIValue<T> value, Number min, Number max) {
-        return new NotBetweenValueExpression<T>(value, min, max);
+        return new NotBetweenValueExpression<>(value, min, max);
     }
 }

@@ -53,7 +53,7 @@ public abstract class AbstractComplexExpression<T> implements DRIComplexExpressi
      */
     protected AbstractComplexExpression() {
         this.name = ReportUtils.generateUniqueName("complexExpression");
-        this.expressions = new ArrayList<DRIExpression<?>>();
+        this.expressions = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

@@ -51,8 +51,8 @@ public class DatasetTransform {
      */
     public DatasetTransform(JasperTransformAccessor accessor) {
         this.accessor = accessor;
-        datasetParameters = new HashMap<DRIDesignDataset, Map<String, Object>>();
-        datasetExpressions = new HashMap<DRIDesignDataset, DatasetExpressionTransform>();
+        datasetParameters = new HashMap<>();
+        datasetExpressions = new HashMap<>();
     }
 
     /**
@@ -74,7 +74,7 @@ public class DatasetTransform {
 
     // dataset
     private JRDesignDataset dataset(DRIDesignDataset dataset) {
-        Map<String, Object> parameters = new HashMap<String, Object>();
+        Map<String, Object> parameters = new HashMap<>();
         datasetParameters.put(dataset, parameters);
         JRDesignDataset jrDataset = new JRDesignDataset(false);
         jrDataset.setName(dataset.getName());

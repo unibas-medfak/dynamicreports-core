@@ -64,7 +64,7 @@ public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBu
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected CrosstabMeasureBuilder(final ValueColumnBuilder<?, ?> column, final Calculation calculation) {
-        super(new DRCrosstabMeasure<T>(Crosstabs.variable(column, calculation).build()));
+        super(new DRCrosstabMeasure<>(Crosstabs.variable(column, calculation).build()));
         if (calculation.equals(Calculation.COUNT) || calculation.equals(Calculation.DISTINCT_COUNT)) {
             setDataType(DataTypes.longType());
         } else if (calculation.equals(Calculation.AVERAGE) || calculation.equals(Calculation.STANDARD_DEVIATION) || calculation.equals(Calculation.VARIANCE)) {
@@ -83,7 +83,7 @@ public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBu
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected CrosstabMeasureBuilder(final FieldBuilder<?> field, final Calculation calculation) {
-        super(new DRCrosstabMeasure<T>(Crosstabs.variable(field, calculation).build()));
+        super(new DRCrosstabMeasure<>(Crosstabs.variable(field, calculation).build()));
         if (calculation.equals(Calculation.COUNT) || calculation.equals(Calculation.DISTINCT_COUNT)) {
             setDataType(DataTypes.longType());
         } else if (calculation.equals(Calculation.AVERAGE) || calculation.equals(Calculation.STANDARD_DEVIATION) || calculation.equals(Calculation.VARIANCE)) {
@@ -100,7 +100,7 @@ public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBu
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected CrosstabMeasureBuilder(final DRIExpression<?> expression, final Calculation calculation) {
-        super(new DRCrosstabMeasure<T>(Crosstabs.variable(expression, calculation).build()));
+        super(new DRCrosstabMeasure<>(Crosstabs.variable(expression, calculation).build()));
         if (calculation.equals(Calculation.COUNT) || calculation.equals(Calculation.DISTINCT_COUNT)) {
             setDataType(DataTypes.longType());
         } else if (calculation.equals(Calculation.AVERAGE) || calculation.equals(Calculation.STANDARD_DEVIATION) || calculation.equals(Calculation.VARIANCE)) {
@@ -116,7 +116,7 @@ public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBu
      * @param expression a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
     protected CrosstabMeasureBuilder(final DRIExpression<?> expression) {
-        super(new DRCrosstabMeasure<T>(expression));
+        super(new DRCrosstabMeasure<>(expression));
     }
 
     /**

@@ -68,7 +68,7 @@ public class BandTransform {
      */
     public BandTransform(DesignTransformAccessor accessor) {
         this.accessor = accessor;
-        this.detailBands = new ArrayList<DRDesignBand>();
+        this.detailBands = new ArrayList<>();
     }
 
     /**
@@ -159,7 +159,7 @@ public class BandTransform {
         pageFooterBand = bandComponents.prepareBand(pageFooterBand, maxWidth, templateDesign.getPageFooterComponentsCount());
         columnHeaderBand = bandComponents.prepareBand(columnHeaderBand, maxColumnWidth, templateDesign.getColumnHeaderComponentsCount());
         columnFooterBand = bandComponents.prepareBand(columnFooterBand, maxColumnWidth, templateDesign.getColumnFooterComponentsCount());
-        List<DRDesignBand> removeDetailBands = new ArrayList<DRDesignBand>();
+        List<DRDesignBand> removeDetailBands = new ArrayList<>();
         for (DRDesignBand detailBand : detailBands) {
             if (bandComponents.prepareBand(detailBand, maxColumnWidth, 0) == null) {
                 removeDetailBands.add(detailBand);
@@ -189,7 +189,7 @@ public class BandTransform {
         }
 
         for (DRDesignGroup group : accessor.getGroupTransform().getGroups()) {
-            List<DRDesignBand> bands = new ArrayList<DRDesignBand>();
+            List<DRDesignBand> bands = new ArrayList<>();
             for (DRDesignBand band : group.getHeaderBands()) {
                 DRDesignBand newBand = bandComponents.prepareBand(band, maxColumnWidth, 0);
                 if (newBand != null) {
@@ -197,7 +197,7 @@ public class BandTransform {
                 }
             }
             group.setHeaderBands(bands);
-            bands = new ArrayList<DRDesignBand>();
+            bands = new ArrayList<>();
             for (DRDesignBand band : group.getFooterBands()) {
                 DRDesignBand newBand = bandComponents.prepareBand(band, maxColumnWidth, 0);
                 if (newBand != null) {

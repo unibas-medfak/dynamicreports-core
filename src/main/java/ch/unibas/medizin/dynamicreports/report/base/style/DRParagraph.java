@@ -51,7 +51,7 @@ public class DRParagraph implements DRIParagraph {
      * <p>Constructor for DRParagraph.</p>
      */
     public DRParagraph() {
-        tabStops = new ArrayList<DRITabStop>();
+        tabStops = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

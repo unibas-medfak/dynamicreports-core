@@ -60,7 +60,7 @@ public class JasperSubreportParametersExpression extends AbstractDesignComplexEx
         if (!values.isEmpty()) {
             parameters = (Map<String, Object>) values.get(0);
         } else {
-            parameters = new HashMap<String, Object>();
+            parameters = new HashMap<>();
         }
         parameters.put(JasperReportParameters.MASTER_REPORT_PARAMETERS, reportParameters);
         return parameters;

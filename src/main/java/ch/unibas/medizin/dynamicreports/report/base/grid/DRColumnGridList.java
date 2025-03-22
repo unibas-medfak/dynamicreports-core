@@ -58,7 +58,7 @@ public class DRColumnGridList implements DRIColumnGridList {
      */
     public DRColumnGridList(ListType type) {
         setType(type);
-        this.listCells = new ArrayList<DRColumnGridListCell>();
+        this.listCells = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

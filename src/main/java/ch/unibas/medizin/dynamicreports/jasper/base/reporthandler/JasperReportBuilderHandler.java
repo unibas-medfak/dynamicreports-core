@@ -42,7 +42,7 @@ public class JasperReportBuilderHandler implements JasperReportHandler {
      * <p>Constructor for JasperReportBuilderHandler.</p>
      */
     public JasperReportBuilderHandler() {
-        jasperReportBuilders = new ArrayList<JasperReportBuilder>();
+        jasperReportBuilders = new ArrayList<>();
         continuousPageNumbering = false;
     }
 
@@ -63,7 +63,7 @@ public class JasperReportBuilderHandler implements JasperReportHandler {
     /** {@inheritDoc} */
     @Override
     public List<JasperPrint> getPrintList() throws DRException {
-        List<JasperPrint> printList = new ArrayList<JasperPrint>();
+        List<JasperPrint> printList = new ArrayList<>();
         int pageNumber = 1;
         for (JasperReportBuilder jasperReportBuilder : jasperReportBuilders) {
             if (continuousPageNumbering) {

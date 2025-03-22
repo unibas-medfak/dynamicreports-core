@@ -55,7 +55,7 @@ class BandComponentsTransform {
      */
     public BandComponentsTransform(DesignTransformAccessor accessor) {
         this.accessor = accessor;
-        componentNames = new HashMap<String, Integer>();
+        componentNames = new HashMap<>();
     }
 
     /**
@@ -169,7 +169,7 @@ class BandComponentsTransform {
                     return list;
                 }
             } else {
-                List<DRDesignComponent> components = new ArrayList<DRDesignComponent>();
+                List<DRDesignComponent> components = new ArrayList<>();
                 for (DRDesignComponent listComponent : list.getComponents()) {
                     DRDesignComponent comp = removeEmptyComponents(listComponent);
                     if (comp != null) {
@@ -293,8 +293,8 @@ class BandComponentsTransform {
         DRICrosstab crosstab = accessor.getCrosstabTransform().getCrosstab(designCrosstab);
         int cellWidth = accessor.getTemplateTransform().getCrosstabCellWidth(crosstab, designCrosstab);
         int cellHeight = accessor.getTemplateTransform().getCrosstabCellHeight(crosstab, designCrosstab);
-        Map<String, GroupCellDimension> columnGroups = new HashMap<String, GroupCellDimension>();
-        Map<String, GroupCellDimension> rowGroups = new HashMap<String, GroupCellDimension>();
+        Map<String, GroupCellDimension> columnGroups = new HashMap<>();
+        Map<String, GroupCellDimension> rowGroups = new HashMap<>();
         int groupWidth = 0;
         int groupHeight = 0;
 

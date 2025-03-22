@@ -41,7 +41,7 @@ public class CrosstabRowGroupBuilder<T> extends AbstractCrosstabGroupBuilder<Cro
      * @param column a {@link ch.unibas.medizin.dynamicreports.report.builder.column.ValueColumnBuilder} object.
      */
     protected CrosstabRowGroupBuilder(ValueColumnBuilder<?, T> column) {
-        super(column, new DRCrosstabRowGroup<T>());
+        super(column, new DRCrosstabRowGroup<>());
     }
 
     /**
@@ -50,7 +50,7 @@ public class CrosstabRowGroupBuilder<T> extends AbstractCrosstabGroupBuilder<Cro
      * @param field a {@link ch.unibas.medizin.dynamicreports.report.builder.FieldBuilder} object.
      */
     protected CrosstabRowGroupBuilder(FieldBuilder<T> field) {
-        super(field, new DRCrosstabRowGroup<T>());
+        super(field, new DRCrosstabRowGroup<>());
     }
 
     /**
@@ -59,7 +59,7 @@ public class CrosstabRowGroupBuilder<T> extends AbstractCrosstabGroupBuilder<Cro
      * @param expression a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
     protected CrosstabRowGroupBuilder(DRIExpression<T> expression) {
-        super(expression, new DRCrosstabRowGroup<T>());
+        super(expression, new DRCrosstabRowGroup<>());
     }
 
     /**

@@ -46,7 +46,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
     protected void configureReport(JasperReportBuilder rb) {
         rb.setLocale(Locale.ENGLISH).title(
                 cmp.text(new Expression1()),
-                cmp.text(new Expression2<String>("text2")),
+                cmp.text(new Expression2<>("text2")),
                 cmp.text(new Expression4()).setDataType(type.integerType())
         );
     }

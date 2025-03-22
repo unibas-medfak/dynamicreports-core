@@ -59,7 +59,7 @@ public class DRGenericElement extends DRDimensionComponent implements DRIGeneric
     @Override
     protected void init() {
         super.init();
-        parameterExpressions = new ArrayList<DRIParameterExpression>();
+        parameterExpressions = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

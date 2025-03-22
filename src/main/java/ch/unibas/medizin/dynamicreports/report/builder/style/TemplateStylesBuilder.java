@@ -46,7 +46,7 @@ public class TemplateStylesBuilder extends AbstractBuilder<TemplateStylesBuilder
      * <p>Constructor for TemplateStylesBuilder.</p>
      */
     protected TemplateStylesBuilder() {
-        super(new ArrayList<StyleBuilder>());
+        super(new ArrayList<>());
     }
 
     /**

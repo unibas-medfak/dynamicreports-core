@@ -36,7 +36,7 @@ public final class PageNumberExpression extends AbstractSystemExpression<Integer
     /**
      * <p>Constructor for PageNumberExpression.</p>
      */
-    protected PageNumberExpression() {
+    PageNumberExpression() {
         super(SystemExpression.PAGE_NUMBER.name());
     }
 }

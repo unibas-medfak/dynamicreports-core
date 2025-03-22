@@ -48,7 +48,7 @@ public class VariableBuilder<T> extends AbstractBuilder<VariableBuilder<T>, DRVa
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected VariableBuilder(ValueColumnBuilder<?, ?> column, Calculation calculation) {
-        super(new DRVariable<T>(column.build(), calculation));
+        super(new DRVariable<>(column.build(), calculation));
     }
 
     /**
@@ -59,7 +59,7 @@ public class VariableBuilder<T> extends AbstractBuilder<VariableBuilder<T>, DRVa
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected VariableBuilder(String name, ValueColumnBuilder<?, ?> column, Calculation calculation) {
-        super(new DRVariable<T>(name, column.build(), calculation));
+        super(new DRVariable<>(name, column.build(), calculation));
     }
 
     // field
@@ -71,7 +71,7 @@ public class VariableBuilder<T> extends AbstractBuilder<VariableBuilder<T>, DRVa
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected VariableBuilder(FieldBuilder<?> field, Calculation calculation) {
-        super(new DRVariable<T>(field.getField(), calculation));
+        super(new DRVariable<>(field.getField(), calculation));
     }
 
     /**
@@ -82,7 +82,7 @@ public class VariableBuilder<T> extends AbstractBuilder<VariableBuilder<T>, DRVa
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected VariableBuilder(String name, FieldBuilder<?> field, Calculation calculation) {
-        super(new DRVariable<T>(name, field.getField(), calculation));
+        super(new DRVariable<>(name, field.getField(), calculation));
     }
 
     // simple expression
@@ -94,7 +94,7 @@ public class VariableBuilder<T> extends AbstractBuilder<VariableBuilder<T>, DRVa
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected VariableBuilder(DRIExpression<?> expression, Calculation calculation) {
-        super(new DRVariable<T>(expression, calculation));
+        super(new DRVariable<>(expression, calculation));
     }
 
     /**
@@ -105,7 +105,7 @@ public class VariableBuilder<T> extends AbstractBuilder<VariableBuilder<T>, DRVa
      * @param calculation a {@link ch.unibas.medizin.dynamicreports.report.constant.Calculation} object.
      */
     protected VariableBuilder(String name, DRIExpression<?> expression, Calculation calculation) {
-        super(new DRVariable<T>(name, expression, calculation));
+        super(new DRVariable<>(name, expression, calculation));
     }
 
     /**

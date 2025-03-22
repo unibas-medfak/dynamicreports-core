@@ -102,7 +102,7 @@ public class PercentageColumnBuilder extends ValueColumnBuilder<PercentageColumn
             getComponent().setDataType(DataTypes.percentageType());
         }
 
-        DRVariable<Number> totalExpression = new DRVariable<Number>(actualExpression, Calculation.SUM);
+        DRVariable<Number> totalExpression = new DRVariable<>(actualExpression, Calculation.SUM);
         if (totalType != null) {
             switch (totalType) {
                 case REPORT:

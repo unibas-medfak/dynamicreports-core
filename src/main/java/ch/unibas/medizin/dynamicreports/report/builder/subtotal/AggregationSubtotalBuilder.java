@@ -126,7 +126,7 @@ public class AggregationSubtotalBuilder<T> extends SubtotalBuilder<AggregationSu
     /** {@inheritDoc} */
     @Override
     protected void configure() {
-        DRVariable<T> subtotalVariable = new DRVariable<T>(expression, calculation);
+        DRVariable<T> subtotalVariable = new DRVariable<>(expression, calculation);
         Evaluation resetType = subtotalPositionToEvaluation(getObject().getPosition());
         subtotalVariable.setResetType(resetType);
         subtotalVariable.setResetGroup(getObject().getGroup());

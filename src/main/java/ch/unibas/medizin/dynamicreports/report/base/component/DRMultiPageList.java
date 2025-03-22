@@ -44,7 +44,7 @@ public class DRMultiPageList extends DRDimensionComponent implements DRIMultiPag
      * <p>Constructor for DRMultiPageList.</p>
      */
     public DRMultiPageList() {
-        components = new ArrayList<DRIComponent>();
+        components = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

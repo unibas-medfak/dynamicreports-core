@@ -53,7 +53,7 @@ public class DRDataSource implements JRRewindableDataSource, Serializable {
      */
     public DRDataSource(String... columns) {
         this.columns = columns;
-        this.values = new ArrayList<Map<String, Object>>();
+        this.values = new ArrayList<>();
     }
 
     /**
@@ -62,7 +62,7 @@ public class DRDataSource implements JRRewindableDataSource, Serializable {
      * @param values a {@link java.lang.Object} object.
      */
     public void add(Object... values) {
-        Map<String, Object> row = new HashMap<String, Object>();
+        Map<String, Object> row = new HashMap<>();
         for (int i = 0; i < values.length; i++) {
             row.put(columns[i], values[i]);
         }

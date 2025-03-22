@@ -54,7 +54,7 @@ public abstract class AbstractDesignComplexExpression implements DRIDesignComple
      */
     protected AbstractDesignComplexExpression(String name) {
         this.name = name;
-        this.expressions = new ArrayList<DRIDesignExpression>();
+        this.expressions = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

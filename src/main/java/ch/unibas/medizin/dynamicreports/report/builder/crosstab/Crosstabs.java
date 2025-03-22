@@ -54,7 +54,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabColumnGroupBuilder} object.
      */
     public static <T> CrosstabColumnGroupBuilder<T> columnGroup(ValueColumnBuilder<?, T> column) {
-        return new CrosstabColumnGroupBuilder<T>(column);
+        return new CrosstabColumnGroupBuilder<>(column);
     }
 
     /**
@@ -65,7 +65,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabColumnGroupBuilder} object.
      */
     public static <T> CrosstabColumnGroupBuilder<T> columnGroup(FieldBuilder<T> field) {
-        return new CrosstabColumnGroupBuilder<T>(field);
+        return new CrosstabColumnGroupBuilder<>(field);
     }
 
     /**
@@ -77,7 +77,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabColumnGroupBuilder} object.
      */
     public static <T> CrosstabColumnGroupBuilder<T> columnGroup(String fieldName, Class<T> valueClass) {
-        return new CrosstabColumnGroupBuilder<T>(DynamicReports.<T>field(fieldName, valueClass));
+        return new CrosstabColumnGroupBuilder<>(DynamicReports.<T>field(fieldName, valueClass));
     }
 
     /**
@@ -88,7 +88,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabColumnGroupBuilder} object.
      */
     public static <T> CrosstabColumnGroupBuilder<T> columnGroup(DRIExpression<T> expression) {
-        return new CrosstabColumnGroupBuilder<T>(expression);
+        return new CrosstabColumnGroupBuilder<>(expression);
     }
 
     // row group
@@ -101,7 +101,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabRowGroupBuilder} object.
      */
     public static <T> CrosstabRowGroupBuilder<T> rowGroup(ValueColumnBuilder<?, T> column) {
-        return new CrosstabRowGroupBuilder<T>(column);
+        return new CrosstabRowGroupBuilder<>(column);
     }
 
     /**
@@ -112,7 +112,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabRowGroupBuilder} object.
      */
     public static <T> CrosstabRowGroupBuilder<T> rowGroup(FieldBuilder<T> field) {
-        return new CrosstabRowGroupBuilder<T>(field);
+        return new CrosstabRowGroupBuilder<>(field);
     }
 
     /**
@@ -124,7 +124,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabRowGroupBuilder} object.
      */
     public static <T> CrosstabRowGroupBuilder<T> rowGroup(String fieldName, Class<T> valueClass) {
-        return new CrosstabRowGroupBuilder<T>(DynamicReports.<T>field(fieldName, valueClass));
+        return new CrosstabRowGroupBuilder<>(DynamicReports.<T>field(fieldName, valueClass));
     }
 
     /**
@@ -135,7 +135,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabRowGroupBuilder} object.
      */
     public static <T> CrosstabRowGroupBuilder<T> rowGroup(DRIExpression<T> expression) {
-        return new CrosstabRowGroupBuilder<T>(expression);
+        return new CrosstabRowGroupBuilder<>(expression);
     }
 
     // variable
@@ -150,7 +150,7 @@ public class Crosstabs {
      */
     public static <T> CrosstabVariableBuilder<T> variable(ValueColumnBuilder<?, ?> column, Calculation calculation) {
         Validate.notNull(column, "column must not be null");
-        return new CrosstabVariableBuilder<T>(column, calculation);
+        return new CrosstabVariableBuilder<>(column, calculation);
     }
 
     /**
@@ -163,7 +163,7 @@ public class Crosstabs {
      */
     public static <T> CrosstabVariableBuilder<T> variable(FieldBuilder<T> field, Calculation calculation) {
         Validate.notNull(field, "field must not be null");
-        return new CrosstabVariableBuilder<T>(field, calculation);
+        return new CrosstabVariableBuilder<>(field, calculation);
     }
 
     /**
@@ -176,7 +176,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabVariableBuilder} object.
      */
     public static <T> CrosstabVariableBuilder<T> variable(String fieldName, Class<?> valueClass, Calculation calculation) {
-        return new CrosstabVariableBuilder<T>(DynamicReports.field(fieldName, valueClass), calculation);
+        return new CrosstabVariableBuilder<>(DynamicReports.field(fieldName, valueClass), calculation);
     }
 
     /**
@@ -188,7 +188,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabVariableBuilder} object.
      */
     public static <T> CrosstabVariableBuilder<T> variable(DRIExpression<?> expression, Calculation calculation) {
-        return new CrosstabVariableBuilder<T>(expression, calculation);
+        return new CrosstabVariableBuilder<>(expression, calculation);
     }
 
     // measure
@@ -203,7 +203,7 @@ public class Crosstabs {
      */
     public static <T> CrosstabMeasureBuilder<T> measure(ValueColumnBuilder<?, ?> column, Calculation calculation) {
         Validate.notNull(column, "column must not be null");
-        return new CrosstabMeasureBuilder<T>(column, calculation);
+        return new CrosstabMeasureBuilder<>(column, calculation);
     }
 
     /**
@@ -230,7 +230,7 @@ public class Crosstabs {
      */
     public static <T> CrosstabMeasureBuilder<T> measure(FieldBuilder<T> field, Calculation calculation) {
         Validate.notNull(field, "field must not be null");
-        return new CrosstabMeasureBuilder<T>(field, calculation);
+        return new CrosstabMeasureBuilder<>(field, calculation);
     }
 
     /**
@@ -256,7 +256,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabMeasureBuilder} object.
      */
     public static <T> CrosstabMeasureBuilder<T> measure(String fieldName, Class<?> valueClass, Calculation calculation) {
-        return new CrosstabMeasureBuilder<T>(DynamicReports.field(fieldName, valueClass), calculation);
+        return new CrosstabMeasureBuilder<>(DynamicReports.field(fieldName, valueClass), calculation);
     }
 
     /**
@@ -283,7 +283,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabMeasureBuilder} object.
      */
     public static <T> CrosstabMeasureBuilder<T> measure(DRIExpression<?> expression, Calculation calculation) {
-        return new CrosstabMeasureBuilder<T>(expression, calculation);
+        return new CrosstabMeasureBuilder<>(expression, calculation);
     }
 
     /**
@@ -308,7 +308,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabMeasureBuilder} object.
      */
     public static <T> CrosstabMeasureBuilder<T> measure(DRIExpression<?> expression) {
-        return new CrosstabMeasureBuilder<T>(expression);
+        return new CrosstabMeasureBuilder<>(expression);
     }
 
     /**

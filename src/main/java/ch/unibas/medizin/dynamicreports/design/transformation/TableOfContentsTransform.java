@@ -56,7 +56,7 @@ public class TableOfContentsTransform {
      */
     public TableOfContentsTransform(DesignTransformAccessor accessor) {
         this.accessor = accessor;
-        this.levels = new HashMap<DRITableOfContentsHeading, Integer>();
+        this.levels = new HashMap<>();
     }
 
     /**
@@ -70,7 +70,7 @@ public class TableOfContentsTransform {
         DRITableOfContentsHeading tocHeading = component.getTableOfContentsHeading();
         boolean tableOfContents = accessor.isTableOfContents();
         if (tableOfContents && tocHeading != null) {
-            DRTextField<String> referenceField = new DRTextField<String>();
+            DRTextField<String> referenceField = new DRTextField<>();
             int level = getLevel(tocHeading);
             DRIExpression<?> labelExpression = tocHeading.getLabelExpression();
             if (labelExpression == null && component instanceof DRITextField) {
@@ -125,7 +125,7 @@ public class TableOfContentsTransform {
         boolean tableOfContents = accessor.isTableOfContents();
         boolean isAddGroupToTableOfContents = accessor.getTemplateTransform().isAddGroupToTableOfContents(group);
         if (tableOfContents && isAddGroupToTableOfContents) {
-            DRTextField<String> referenceField = new DRTextField<String>();
+            DRTextField<String> referenceField = new DRTextField<>();
             DRITextField<?> valueField = group.getValueField();
             referenceField.setValueExpression(new TocReferenceExpression(level, group.getName(), valueField.getValueExpression(), valueField.getAnchorNameExpression(), null));
             referenceField.setAnchorNameExpression(new TocReferenceLinkExpression(group.getName(), valueField.getAnchorNameExpression()));

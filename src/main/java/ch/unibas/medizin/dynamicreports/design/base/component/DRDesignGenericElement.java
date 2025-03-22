@@ -55,7 +55,7 @@ public class DRDesignGenericElement extends DRDesignComponent implements DRIDesi
     @Override
     protected void init() {
         super.init();
-        parameterExpressions = new ArrayList<DRIDesignParameterExpression>();
+        parameterExpressions = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

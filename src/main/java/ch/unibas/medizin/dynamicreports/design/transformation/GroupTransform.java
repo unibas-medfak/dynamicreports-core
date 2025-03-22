@@ -79,8 +79,8 @@ public class GroupTransform {
     private void init() {
         DRIReport report = accessor.getReport();
         groups = report.getGroups();
-        designGroups = new LinkedHashMap<DRIGroup, DRDesignGroup>();
-        hideGroupColumns = new ArrayList<DRIValueColumn<?>>();
+        designGroups = new LinkedHashMap<>();
+        hideGroupColumns = new ArrayList<>();
         groupPadding = 0;
     }
 

@@ -39,7 +39,7 @@ public class ParameterBuilder<T> extends AbstractBuilder<ParameterBuilder<T>, DR
      * @param value a T object.
      */
     protected ParameterBuilder(String name, T value) {
-        super(new DRParameter<T>(name, value));
+        super(new DRParameter<>(name, value));
     }
 
     /**
@@ -49,7 +49,7 @@ public class ParameterBuilder<T> extends AbstractBuilder<ParameterBuilder<T>, DR
      * @param valueClass a {@link java.lang.Class} object.
      */
     protected ParameterBuilder(String name, Class<T> valueClass) {
-        super(new DRParameter<T>(name, valueClass));
+        super(new DRParameter<>(name, valueClass));
     }
 
     /**

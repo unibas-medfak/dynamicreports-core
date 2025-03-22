@@ -55,7 +55,7 @@ public class TextFieldBuilder<T> extends HyperLinkComponentBuilder<TextFieldBuil
      * <p>Constructor for TextFieldBuilder.</p>
      */
     protected TextFieldBuilder() {
-        super(new DRTextField<T>());
+        super(new DRTextField<>());
     }
 
     /**

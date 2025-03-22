@@ -59,7 +59,7 @@ public class DRDesignMeterPlot extends DRDesignAxisPlot implements DRIDesignMete
      * <p>Constructor for DRDesignMeterPlot.</p>
      */
     public DRDesignMeterPlot() {
-        intervals = new ArrayList<DRIDesignMeterInterval>();
+        intervals = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

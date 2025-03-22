@@ -42,7 +42,7 @@ public class DRLayeredBarPlot extends DRBarPlot implements DRILayeredBarPlot {
      * <p>Constructor for DRLayeredBarPlot.</p>
      */
     public DRLayeredBarPlot() {
-        seriesBarWidths = new ArrayList<Double>();
+        seriesBarWidths = new ArrayList<>();
     }
 
     /**

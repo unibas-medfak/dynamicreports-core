@@ -61,8 +61,8 @@ public class DRDesignGroup implements DRIDesignGroup {
     }
 
     private void init() {
-        headerBands = new ArrayList<DRDesignBand>();
-        footerBands = new ArrayList<DRDesignBand>();
+        headerBands = new ArrayList<>();
+        footerBands = new ArrayList<>();
     }
 
     /** {@inheritDoc} */

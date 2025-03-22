@@ -51,7 +51,7 @@ public class DRXyBlockPlot extends DRAxisPlot implements DRIXyBlockPlot {
      * <p>Constructor for DRXyBlockPlot.</p>
      */
     public DRXyBlockPlot() {
-        paintScales = new ArrayList<DRIPaintScale>();
+        paintScales = new ArrayList<>();
     }
 
     /** {@inheritDoc} */
