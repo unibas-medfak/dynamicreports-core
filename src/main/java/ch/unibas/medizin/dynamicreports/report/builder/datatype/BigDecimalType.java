@@ -50,6 +50,6 @@ public class BigDecimalType extends NumberType<BigDecimal> {
     /** {@inheritDoc} */
     @Override
     protected BigDecimal numberToValue(Number number) {
-        return new BigDecimal(number.doubleValue());
+        return BigDecimal.valueOf(number.doubleValue());
     }
 }

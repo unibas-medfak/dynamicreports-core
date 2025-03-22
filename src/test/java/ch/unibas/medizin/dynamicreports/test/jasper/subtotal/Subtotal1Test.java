@@ -147,7 +147,7 @@ public class Subtotal1Test extends AbstractJasperValueTest implements Serializab
     protected JRDataSource createDataSource() {
         final DRDataSource dataSource = new DRDataSource("field1", "field2");
         for (int i = 0; i < 100; i++) {
-            dataSource.add(new BigDecimal(1.01), "v2");
+            dataSource.add(new BigDecimal("1.01"), "v2");
         }
         return dataSource;
     }
@@ -175,7 +175,7 @@ public class Subtotal1Test extends AbstractJasperValueTest implements Serializab
 
         @Override
         public Integer evaluate(ReportParameters reportParameters) {
-            return new Integer(((String) reportParameters.getValue("field2")).substring(1));
+            return Integer.valueOf(((String) reportParameters.getValue("field2")).substring(1));
         }
     }
 }
