@@ -35,9 +35,9 @@ import java.util.ResourceBundle;
 public class BooleanTextValueFormatter extends AbstractValueFormatter<String, Boolean> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String keyTrue;
-    private String keyFalse;
-    private boolean emptyWhenNullValue;
+    private final String keyTrue;
+    private final String keyFalse;
+    private final boolean emptyWhenNullValue;
 
     /**
      * <p>Constructor for BooleanTextValueFormatter.</p>

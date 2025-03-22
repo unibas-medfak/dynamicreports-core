@@ -104,7 +104,7 @@ public class BandChartDataTest extends AbstractJasperChartTest implements Serial
     private class TitleExpression extends AbstractSimpleExpression<String> {
         private static final long serialVersionUID = 1L;
 
-        private String variableName;
+        private final String variableName;
 
         private TitleExpression(String variableName) {
             this.variableName = variableName;

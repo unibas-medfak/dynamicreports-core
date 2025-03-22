@@ -37,10 +37,10 @@ import org.apache.commons.lang3.Validate;
 public class DRVariable<T> implements DRIVariable<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
-    private DRIExpression<?> valueExpression;
+    private final String name;
+    private final DRIExpression<?> valueExpression;
     private DRIExpression<?> initialValueExpression;
-    private Calculation calculation;
+    private final Calculation calculation;
     private Evaluation resetType;
     private DRGroup resetGroup;
 

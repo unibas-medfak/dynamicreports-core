@@ -43,7 +43,7 @@ import java.io.Serializable;
 public class XyBlockRendererCustomizer implements DRIChartCustomizer, Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIXyBlockPlot xyBlockPlot;
+    private final DRIXyBlockPlot xyBlockPlot;
 
     /**
      * <p>Constructor for XyBlockRendererCustomizer.</p>

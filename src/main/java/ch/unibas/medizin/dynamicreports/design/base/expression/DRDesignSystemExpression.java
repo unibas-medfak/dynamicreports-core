@@ -33,7 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRISystemEx
 public class DRDesignSystemExpression implements DRIDesignSystemExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRISystemExpression<?> systemExpression;
+    private final DRISystemExpression<?> systemExpression;
 
     /**
      * <p>Constructor for DRDesignSystemExpression.</p>

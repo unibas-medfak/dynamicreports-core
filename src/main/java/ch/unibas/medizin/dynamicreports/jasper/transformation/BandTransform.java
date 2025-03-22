@@ -38,7 +38,7 @@ import net.sf.jasperreports.engine.design.JasperDesign;
  * 
  */
 public class BandTransform {
-    private JasperTransformAccessor accessor;
+    private final JasperTransformAccessor accessor;
 
     /**
      * <p>Constructor for BandTransform.</p>

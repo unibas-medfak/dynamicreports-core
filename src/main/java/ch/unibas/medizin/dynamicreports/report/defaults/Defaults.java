@@ -40,7 +40,7 @@ import java.io.InputStream;
 public class Defaults {
     private static final Log log = LogFactory.getLog(Defaults.class);
 
-    private static Default defaults;
+    private static final Default defaults;
 
     static {
         defaults = DefaultBinder.bind(load());

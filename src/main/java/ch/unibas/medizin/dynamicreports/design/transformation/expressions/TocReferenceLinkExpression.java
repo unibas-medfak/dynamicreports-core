@@ -36,8 +36,8 @@ import java.util.List;
 public class TocReferenceLinkExpression extends AbstractComplexExpression<String> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String expressionName;
-    private boolean customId;
+    private final String expressionName;
+    private final boolean customId;
 
     /**
      * <p>Constructor for TocReferenceLinkExpression.</p>

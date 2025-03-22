@@ -134,7 +134,7 @@ import java.util.Map;
  * 
  */
 public class ChartTransform {
-    private DesignTransformAccessor accessor;
+    private final DesignTransformAccessor accessor;
 
     /**
      * <p>Constructor for ChartTransform.</p>

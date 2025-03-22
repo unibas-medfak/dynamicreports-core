@@ -38,7 +38,7 @@ public class DRColumnGridListCell implements DRIColumnGridListCell {
 
     private HorizontalCellComponentAlignment horizontalAlignment;
     private VerticalCellComponentAlignment verticalAlignment;
-    private DRIColumnGridComponent component;
+    private final DRIColumnGridComponent component;
 
     /**
      * <p>Constructor for DRColumnGridListCell.</p>

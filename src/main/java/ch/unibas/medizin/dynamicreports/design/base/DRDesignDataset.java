@@ -44,8 +44,8 @@ import java.util.Collection;
 public class DRDesignDataset implements DRIDesignDataset {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
-    private DatasetExpressionTransform datasetExpressionTransform;
+    private final String name;
+    private final DatasetExpressionTransform datasetExpressionTransform;
     private DRDesignQuery query;
     private DRIDesignExpression connectionExpression;
     private DRIDesignExpression dataSourceExpression;

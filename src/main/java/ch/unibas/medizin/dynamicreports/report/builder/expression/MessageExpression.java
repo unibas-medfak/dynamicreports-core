@@ -33,8 +33,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 public class MessageExpression extends AbstractSimpleExpression<String> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String key;
-    private Object[] arguments;
+    private final String key;
+    private final Object[] arguments;
 
     /**
      * <p>Constructor for MessageExpression.</p>

@@ -44,9 +44,9 @@ import java.util.Collection;
  * 
  */
 public class DatasetExpressionTransform extends AbstractExpressionTransform {
-    private DRIDesignDataset dataset;
-    private JRDesignDataset jrDataset;
-    private JasperCustomValues customValues;
+    private final DRIDesignDataset dataset;
+    private final JRDesignDataset jrDataset;
+    private final JasperCustomValues customValues;
 
     /**
      * <p>Constructor for DatasetExpressionTransform.</p>

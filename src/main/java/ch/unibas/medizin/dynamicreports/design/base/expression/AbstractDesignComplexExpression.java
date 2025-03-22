@@ -37,7 +37,7 @@ import java.util.List;
 public abstract class AbstractDesignComplexExpression implements DRIDesignComplexExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
+    private final String name;
     private List<DRIDesignExpression> expressions;
 
     /**

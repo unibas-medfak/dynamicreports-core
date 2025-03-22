@@ -78,9 +78,9 @@ import java.util.ResourceBundle;
 public class DRDesignReport implements DesignTransformAccessor, DRIDesignReport {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIReport report;
-    private Integer pageWidth;
-    private Map<String, JasperTocHeading> tocHeadings;
+    private final DRIReport report;
+    private final Integer pageWidth;
+    private final Map<String, JasperTocHeading> tocHeadings;
     private ReportTransform reportTransform;
     private TemplateTransform templateTransform;
     private PageTransform pageTransform;

@@ -28,7 +28,7 @@ package ch.unibas.medizin.dynamicreports.jasper.base;
  */
 public class ThreadSafeJasperScriptletManager implements JasperScriptletManager {
 
-    private ThreadLocal<JasperScriptlet> threadLocalScriptlet = new ThreadLocal<>();
+    private final ThreadLocal<JasperScriptlet> threadLocalScriptlet = new ThreadLocal<>();
 
     /** {@inheritDoc} */
     @Override

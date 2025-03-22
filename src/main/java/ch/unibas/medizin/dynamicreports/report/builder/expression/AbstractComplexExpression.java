@@ -45,8 +45,8 @@ import java.util.List;
 public abstract class AbstractComplexExpression<T> implements DRIComplexExpression<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
-    private List<DRIExpression<?>> expressions;
+    private final String name;
+    private final List<DRIExpression<?>> expressions;
 
     /**
      * <p>Constructor for AbstractComplexExpression.</p>

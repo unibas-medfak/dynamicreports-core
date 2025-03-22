@@ -39,7 +39,7 @@ import java.util.List;
 public class PageXofYNumberExpression extends AbstractComplexExpression<String> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private int index;
+    private final int index;
 
     /**
      * <p>Constructor for PageXofYNumberExpression.</p>

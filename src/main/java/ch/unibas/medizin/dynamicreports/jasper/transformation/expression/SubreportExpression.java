@@ -52,11 +52,11 @@ public class SubreportExpression extends AbstractDesignComplexExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
     private static final Log log = LogFactory.getLog(SubreportExpression.class);
 
-    private String name;
-    private Integer pageWidth;
+    private final String name;
+    private final Integer pageWidth;
     private ReportBuilder<?> reportBuilder;
-    private Map<ReportBuilder<?>, JasperReportDesign> reportDesigns;
-    private Map<ReportBuilder<?>, JasperReport> jasperReports;
+    private final Map<ReportBuilder<?>, JasperReportDesign> reportDesigns;
+    private final Map<ReportBuilder<?>, JasperReport> jasperReports;
 
     /**
      * <p>Constructor for SubreportExpression.</p>

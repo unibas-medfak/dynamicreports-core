@@ -34,7 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 public class DRDesignTemplateDesign implements DRIDesignTemplateDesign {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRITemplateDesign<?> templateDesign;
+    private final DRITemplateDesign<?> templateDesign;
 
     /**
      * <p>Constructor for DRDesignTemplateDesign.</p>

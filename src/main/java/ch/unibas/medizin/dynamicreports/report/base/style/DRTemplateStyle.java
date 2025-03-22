@@ -32,7 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRITemplateStyle
 public class DRTemplateStyle implements DRITemplateStyle {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
+    private final String name;
 
     /**
      * <p>Constructor for DRTemplateStyle.</p>

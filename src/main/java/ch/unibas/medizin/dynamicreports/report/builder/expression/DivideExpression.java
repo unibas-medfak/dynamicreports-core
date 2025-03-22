@@ -34,7 +34,7 @@ import java.math.BigDecimal;
 public class DivideExpression extends CalculationExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private int scale;
+    private final int scale;
 
     @SafeVarargs
     /**

@@ -60,7 +60,7 @@ import java.util.Properties;
  * 
  */
 public class ReportTransform {
-    private JasperTransformAccessor accessor;
+    private final JasperTransformAccessor accessor;
 
     /**
      * <p>Constructor for ReportTransform.</p>

@@ -35,7 +35,7 @@ import java.util.List;
  * 
  */
 public class JasperReportBuilderHandler implements JasperReportHandler {
-    private List<JasperReportBuilder> jasperReportBuilders;
+    private final List<JasperReportBuilder> jasperReportBuilders;
     private boolean continuousPageNumbering;
 
     /**

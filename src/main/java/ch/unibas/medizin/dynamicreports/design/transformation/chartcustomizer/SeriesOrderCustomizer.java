@@ -40,8 +40,8 @@ import java.util.Comparator;
 public class SeriesOrderCustomizer implements DRIChartCustomizer, Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private Comparator<String> seriesOrderBy;
-    private OrderType seriesOrderType;
+    private final Comparator<String> seriesOrderBy;
+    private final OrderType seriesOrderType;
 
     /**
      * <p>Constructor for SeriesOrderCustomizer.</p>

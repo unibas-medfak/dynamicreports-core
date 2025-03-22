@@ -35,7 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 public class GroupByDataTypeExpression extends AbstractSimpleExpression<String> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
     DRIDataType<?, ?> dataType;
-    private DRIExpression<?> valueExpression;
+    private final DRIExpression<?> valueExpression;
 
     /**
      * <p>Constructor for GroupByDataTypeExpression.</p>

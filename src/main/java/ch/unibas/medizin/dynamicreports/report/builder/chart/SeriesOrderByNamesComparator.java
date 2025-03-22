@@ -38,7 +38,7 @@ import java.util.List;
 public class SeriesOrderByNamesComparator implements Comparator<String>, Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private List<String> seriesNames;
+    private final List<String> seriesNames;
 
     /**
      * <p>Constructor for SeriesOrderByNamesComparator.</p>

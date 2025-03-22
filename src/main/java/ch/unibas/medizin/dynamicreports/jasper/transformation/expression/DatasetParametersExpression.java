@@ -38,7 +38,7 @@ import java.util.Map;
 public class DatasetParametersExpression extends AbstractDesignSimpleExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private Map<String, Object> parameters;
+    private final Map<String, Object> parameters;
 
     /**
      * <p>Constructor for DatasetParametersExpression.</p>

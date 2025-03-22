@@ -32,7 +32,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class AbstractScriptlet implements DRIScriptlet {
-    private String name;
+    private final String name;
 
     /**
      * <p>Constructor for AbstractScriptlet.</p>

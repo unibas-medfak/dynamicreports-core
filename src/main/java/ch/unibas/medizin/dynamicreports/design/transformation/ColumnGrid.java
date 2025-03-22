@@ -34,7 +34,7 @@ import java.util.Map;
  */
 class ColumnGrid {
     private DRDesignList list;
-    private Map<DRIColumn<?>, DRDesignList> columnsLists;
+    private final Map<DRIColumn<?>, DRDesignList> columnsLists;
     private boolean isEmpty;
 
     /**

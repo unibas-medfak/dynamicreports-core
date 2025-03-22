@@ -59,7 +59,7 @@ import java.util.Map;
  * 
  */
 public class GroupTransform {
-    private DesignTransformAccessor accessor;
+    private final DesignTransformAccessor accessor;
     private List<? extends DRIGroup> groups;
     private Map<DRIGroup, DRDesignGroup> designGroups;
     private List<DRIValueColumn<?>> hideGroupColumns;

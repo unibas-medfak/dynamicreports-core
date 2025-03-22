@@ -35,8 +35,8 @@ import org.apache.commons.lang3.Validate;
 public abstract class AbstractValueExpression<T extends Number> extends AbstractSimpleExpression<Boolean> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIValue<T> value;
-    private Number number;
+    private final DRIValue<T> value;
+    private final Number number;
 
     /**
      * <p>Constructor for AbstractValueExpression.</p>

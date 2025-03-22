@@ -38,9 +38,9 @@ import java.util.Map;
  * 
  */
 public class DatasetTransform {
-    private DesignTransformAccessor accessor;
-    private Map<String, DRIDesignDataset> datasets;
-    private Map<DRIDataset, DRDesignDataset> designDatasets;
+    private final DesignTransformAccessor accessor;
+    private final Map<String, DRIDesignDataset> datasets;
+    private final Map<DRIDataset, DRDesignDataset> designDatasets;
 
     /**
      * <p>Constructor for DatasetTransform.</p>

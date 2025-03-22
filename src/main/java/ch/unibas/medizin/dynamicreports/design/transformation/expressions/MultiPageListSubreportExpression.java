@@ -46,12 +46,12 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.rep
 public class MultiPageListSubreportExpression extends AbstractSimpleExpression<JasperReportBuilder> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private Locale locale;
-    private ResourceBundle resourceBundle;
-    private String resourceBundleName;
-    private WhenResourceMissingType whenResourceMissingType;
-    private List<DRIComponent> detailComponents;
-    private Map<String, DRIStyle> templateStyles;
+    private final Locale locale;
+    private final ResourceBundle resourceBundle;
+    private final String resourceBundleName;
+    private final WhenResourceMissingType whenResourceMissingType;
+    private final List<DRIComponent> detailComponents;
+    private final Map<String, DRIStyle> templateStyles;
 
     /**
      * <p>Constructor for MultiPageListSubreportExpression.</p>

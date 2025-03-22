@@ -40,7 +40,7 @@ import java.util.List;
 public class DRColumnGridList implements DRIColumnGridList {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private List<DRColumnGridListCell> listCells;
+    private final List<DRColumnGridListCell> listCells;
     private ListType type;
     private int gap;
 

@@ -35,7 +35,7 @@ import org.apache.commons.lang3.Validate;
 public class ColumnGroupBuilder extends GroupBuilder<ColumnGroupBuilder> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRValueColumn<?> column;
+    private final DRValueColumn<?> column;
 
     /**
      * <p>Constructor for ColumnGroupBuilder.</p>

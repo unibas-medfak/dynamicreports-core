@@ -46,7 +46,7 @@ import java.util.List;
  * 
  */
 public class BandTransform {
-    private DesignTransformAccessor accessor;
+    private final DesignTransformAccessor accessor;
 
     private DRDesignBand titleBand;
     private DRDesignBand pageHeaderBand;
@@ -54,7 +54,7 @@ public class BandTransform {
     private DRDesignBand columnHeaderBand;
     private DRDesignBand columnHeaderForGroupBand;
     private DRDesignBand columnFooterBand;
-    private List<DRDesignBand> detailBands;
+    private final List<DRDesignBand> detailBands;
     private DRDesignBand detailBand;
     private DRDesignBand lastPageFooterBand;
     private DRDesignBand summaryBand;

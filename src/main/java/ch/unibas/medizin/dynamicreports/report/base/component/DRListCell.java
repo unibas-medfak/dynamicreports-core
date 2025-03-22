@@ -37,7 +37,7 @@ public class DRListCell implements DRIListCell {
 
     private HorizontalCellComponentAlignment horizontalAlignment;
     private VerticalCellComponentAlignment verticalAlignment;
-    private DRComponent component;
+    private final DRComponent component;
 
     /**
      * <p>Constructor for DRListCell.</p>

@@ -38,7 +38,7 @@ public class DRDesignSeriesDataset extends DRDesignChartDataset implements DRIDe
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIDesignExpression valueExpression;
-    private List<DRIDesignChartSerie> series;
+    private final List<DRIDesignChartSerie> series;
 
     /**
      * <p>Constructor for DRDesignSeriesDataset.</p>

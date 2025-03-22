@@ -37,10 +37,10 @@ import java.util.List;
 public class TocReferenceExpression extends AbstractComplexExpression<String> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private int level;
-    private String expressionName;
-    private boolean customId;
-    private boolean isCustomValue;
+    private final int level;
+    private final String expressionName;
+    private final boolean customId;
+    private final boolean isCustomValue;
 
     /**
      * <p>Constructor for TocReferenceExpression.</p>

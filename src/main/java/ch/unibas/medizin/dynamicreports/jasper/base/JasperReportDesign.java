@@ -43,8 +43,8 @@ public class JasperReportDesign implements Serializable {
     private JasperCustomValues customValues;
     private JasperDesign design;
     private Map<String, Object> parameters;
-    private ReportParameters masterReportParameters;
-    private Integer startPageNumber;
+    private final ReportParameters masterReportParameters;
+    private final Integer startPageNumber;
     private boolean tableOfContents;
     private DRITableOfContentsCustomizer tableOfContentsCustomizer;
 

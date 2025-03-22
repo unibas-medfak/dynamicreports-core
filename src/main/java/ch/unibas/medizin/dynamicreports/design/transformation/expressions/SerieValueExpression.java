@@ -40,11 +40,11 @@ import java.util.Map;
 public class SerieValueExpression extends AbstractSimpleExpression<Number> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIDesignExpression valueExpression;
-    private DRIDesignExpression serieExpression;
-    private ResetType resetType;
-    private DRDesignGroup resetGroup;
-    private String key;
+    private final DRIDesignExpression valueExpression;
+    private final DRIDesignExpression serieExpression;
+    private final ResetType resetType;
+    private final DRDesignGroup resetGroup;
+    private final String key;
     private Object resetValue;
     private Map<Object, Double> values;
 

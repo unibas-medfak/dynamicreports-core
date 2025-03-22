@@ -67,7 +67,7 @@ import java.util.Map;
  * 
  */
 public class StyleTransform {
-    private DesignTransformAccessor accessor;
+    private final DesignTransformAccessor accessor;
     private Map<String, DRIDesignStyle> styles;
     private Map<String, DRDesignStyle> designStyles;
     private Map<String, DRIStyle> templateStyles;

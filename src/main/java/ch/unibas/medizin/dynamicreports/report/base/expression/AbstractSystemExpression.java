@@ -34,7 +34,7 @@ import org.apache.commons.lang3.Validate;
 public abstract class AbstractSystemExpression<T> implements DRISystemExpression<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
+    private final String name;
 
     /**
      * <p>Constructor for AbstractSystemExpression.</p>

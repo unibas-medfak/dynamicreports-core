@@ -32,8 +32,8 @@ public enum PageType {
     C0(2599, 3679), C1(1836, 2599), C2(1296, 1836), C3(922, 1296), C4(648, 922), C5(461, 648), C6(324, 461), C7(230, 324), C8(158, 230), C9(115, 158), C10(79, 115), ARCH_E(2592, 3456),
     ARCH_D(1728, 2592), ARCH_C(1296, 1728), ARCH_B(864, 1296), ARCH_A(648, 864), FLSA(612, 936), FLSE(612, 936), HALFLETTER(396, 612), _11X17(792, 1224), LEDGER(1224, 792);
 
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
 
     private PageType(int width, int height) {
         this.width = width;

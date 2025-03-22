@@ -33,8 +33,8 @@ import org.apache.commons.lang3.Validate;
 public class DRQuery implements DRIQuery {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String text;
-    private String language;
+    private final String text;
+    private final String language;
 
     /**
      * <p>Constructor for DRQuery.</p>

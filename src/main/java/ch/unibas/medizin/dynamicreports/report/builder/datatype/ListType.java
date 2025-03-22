@@ -40,7 +40,7 @@ import java.util.List;
 public class ListType extends AbstractDataType<List, List> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private static ListFormatter listFormatter = new ListFormatter();
+    private static final ListFormatter listFormatter = new ListFormatter();
 
     /** {@inheritDoc} */
     @Override

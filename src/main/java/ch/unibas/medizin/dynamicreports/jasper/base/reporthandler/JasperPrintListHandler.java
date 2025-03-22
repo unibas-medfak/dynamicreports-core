@@ -32,7 +32,7 @@ import java.util.List;
  * 
  */
 public class JasperPrintListHandler extends AbstractPrintListHandler {
-    private List<JasperPrint> printList;
+    private final List<JasperPrint> printList;
 
     /**
      * <p>Constructor for JasperPrintListHandler.</p>

@@ -44,10 +44,10 @@ import java.util.ListIterator;
 public class JasperPrintListFileHandler extends AbstractPrintListHandler {
     private static final String TEMP_FILE_PREFIX = "JasperPrint";
 
-    private List<JasperPrint> printList;
-    private List<File> tempFiles;
+    private final List<JasperPrint> printList;
+    private final List<File> tempFiles;
     private File directory;
-    private JRVirtualizer virtualizer;
+    private final JRVirtualizer virtualizer;
 
     /**
      * <p>Constructor for JasperPrintListFileHandler.</p>
@@ -122,7 +122,7 @@ public class JasperPrintListFileHandler extends AbstractPrintListHandler {
         @Override
         public Iterator<JasperPrint> iterator() {
             return new Iterator<JasperPrint>() {
-                private Iterator<File> it = tempFiles.iterator();
+                private final Iterator<File> it = tempFiles.iterator();
 
                 @Override
                 public boolean hasNext() {

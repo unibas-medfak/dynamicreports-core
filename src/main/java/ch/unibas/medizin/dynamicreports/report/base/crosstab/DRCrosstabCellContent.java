@@ -36,7 +36,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
 public class DRCrosstabCellContent implements DRICrosstabCellContent {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRList list;
+    private final DRList list;
     private DRIReportStyle style;
 
     /**

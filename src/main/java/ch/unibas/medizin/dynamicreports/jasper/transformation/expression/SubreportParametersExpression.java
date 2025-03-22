@@ -40,7 +40,7 @@ import java.util.Map;
 public class SubreportParametersExpression extends AbstractDesignComplexExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private SubreportExpression subreportExpression;
+    private final SubreportExpression subreportExpression;
 
     /**
      * <p>Constructor for SubreportParametersExpression.</p>

@@ -33,7 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIJasperEx
 public class DRDesignJasperExpression implements DRIDesignJasperExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIJasperExpression<?> jasperExpression;
+    private final DRIJasperExpression<?> jasperExpression;
 
     /**
      * <p>Constructor for DRDesignJasperExpression.</p>

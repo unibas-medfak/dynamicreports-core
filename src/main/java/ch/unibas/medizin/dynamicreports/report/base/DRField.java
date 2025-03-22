@@ -34,8 +34,8 @@ import org.apache.commons.lang3.Validate;
 public class DRField<T> implements DRIField<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
-    private Class<? super T> valueClass;
+    private final String name;
+    private final Class<? super T> valueClass;
     private DRIDataType<? super T, T> dataType;
     private String description;
 

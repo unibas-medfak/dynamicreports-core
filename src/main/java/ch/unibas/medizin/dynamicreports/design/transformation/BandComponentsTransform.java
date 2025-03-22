@@ -45,8 +45,8 @@ import java.util.Map;
  * @author Ricardo Mariaca
  */
 class BandComponentsTransform {
-    private DesignTransformAccessor accessor;
-    private Map<String, Integer> componentNames;
+    private final DesignTransformAccessor accessor;
+    private final Map<String, Integer> componentNames;
 
     /**
      * <p>Constructor for BandComponentsTransform.</p>

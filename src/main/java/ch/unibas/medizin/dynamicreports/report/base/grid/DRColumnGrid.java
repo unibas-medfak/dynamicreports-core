@@ -34,7 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGridComp
 public class DRColumnGrid implements DRIColumnGrid {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRColumnGridList list;
+    private final DRColumnGridList list;
 
     /**
      * <p>Constructor for DRColumnGrid.</p>

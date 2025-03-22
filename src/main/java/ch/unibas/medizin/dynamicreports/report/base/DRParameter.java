@@ -33,8 +33,8 @@ import org.apache.commons.lang3.Validate;
 public class DRParameter<T> implements DRIParameter<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
-    private Class<T> valueClass;
+    private final String name;
+    private final Class<T> valueClass;
     private T value;
 
     @SuppressWarnings("unchecked")

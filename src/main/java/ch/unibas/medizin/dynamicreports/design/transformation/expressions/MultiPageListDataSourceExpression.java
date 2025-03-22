@@ -35,7 +35,7 @@ import net.sf.jasperreports.engine.JREmptyDataSource;
 public class MultiPageListDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private int count;
+    private final int count;
 
     /**
      * <p>Constructor for MultiPageListDataSourceExpression.</p>

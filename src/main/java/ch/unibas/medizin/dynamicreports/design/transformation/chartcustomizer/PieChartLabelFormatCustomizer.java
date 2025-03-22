@@ -39,9 +39,9 @@ import java.text.DecimalFormat;
 public class PieChartLabelFormatCustomizer implements DRIChartCustomizer, Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String labelFormat;
-    private String valuePattern;
-    private String percentValuePattern;
+    private final String labelFormat;
+    private final String valuePattern;
+    private final String percentValuePattern;
 
     /**
      * <p>Constructor for PieChartLabelFormatCustomizer.</p>

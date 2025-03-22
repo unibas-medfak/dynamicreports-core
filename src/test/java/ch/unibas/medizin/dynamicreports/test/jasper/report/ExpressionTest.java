@@ -76,7 +76,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
     private class Expression2<T> extends AbstractSimpleExpression<T> {
         private static final long serialVersionUID = 1L;
 
-        private T value;
+        private final T value;
 
         private Expression2(T value) {
             this.value = value;

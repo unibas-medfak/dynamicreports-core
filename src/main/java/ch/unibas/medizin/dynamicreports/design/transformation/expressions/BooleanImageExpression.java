@@ -42,9 +42,9 @@ import java.util.List;
 public class BooleanImageExpression extends AbstractComplexExpression<Renderable> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private Renderable imageTrue;
-    private Renderable imageFalse;
-    private boolean emptyWhenNullValue;
+    private final Renderable imageTrue;
+    private final Renderable imageFalse;
+    private final boolean emptyWhenNullValue;
 
     /**
      * <p>Constructor for BooleanImageExpression.</p>

@@ -46,8 +46,8 @@ import java.util.Map;
  * 
  */
 public class TableOfContentsTransform {
-    private DesignTransformAccessor accessor;
-    private Map<DRITableOfContentsHeading, Integer> levels;
+    private final DesignTransformAccessor accessor;
+    private final Map<DRITableOfContentsHeading, Integer> levels;
 
     /**
      * <p>Constructor for TableOfContentsTransform.</p>

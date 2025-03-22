@@ -44,8 +44,8 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
 public class AggregationSubtotalBuilder<T> extends SubtotalBuilder<AggregationSubtotalBuilder<T>, T> implements DRIValue<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIExpression<?> expression;
-    private Calculation calculation;
+    private final DRIExpression<?> expression;
+    private final Calculation calculation;
 
     // column
 

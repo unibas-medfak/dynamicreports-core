@@ -35,9 +35,9 @@ import org.apache.commons.lang3.Validate;
 public abstract class AbstractBetweenValueExpression<T extends Number> extends AbstractSimpleExpression<Boolean> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIValue<T> value;
-    private Number min;
-    private Number max;
+    private final DRIValue<T> value;
+    private final Number min;
+    private final Number max;
 
     /**
      * <p>Constructor for AbstractBetweenValueExpression.</p>

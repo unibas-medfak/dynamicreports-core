@@ -33,7 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 public class GroupRowNumberExpression extends AbstractSimpleExpression<Integer> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String groupName;
+    private final String groupName;
 
     /**
      * <p>Constructor for GroupRowNumberExpression.</p>

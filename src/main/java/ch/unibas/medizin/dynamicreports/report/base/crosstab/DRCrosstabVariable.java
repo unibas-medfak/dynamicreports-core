@@ -37,9 +37,9 @@ import org.apache.commons.lang3.Validate;
 public class DRCrosstabVariable<T> implements DRICrosstabVariable<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
-    private DRIExpression<?> valueExpression;
-    private Calculation calculation;
+    private final String name;
+    private final DRIExpression<?> valueExpression;
+    private final Calculation calculation;
     private CrosstabPercentageType percentageType;
 
     /**

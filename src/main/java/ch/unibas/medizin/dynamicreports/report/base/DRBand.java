@@ -38,7 +38,7 @@ public class DRBand implements DRIBand {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private SplitType splitType;
-    private DRList list;
+    private final DRList list;
     private DRIExpression<Boolean> printWhenExpression;
 
     /**

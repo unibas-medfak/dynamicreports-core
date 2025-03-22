@@ -36,7 +36,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 public class DRDesignVariable implements DRIDesignVariable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
+    private final String name;
     private DRIDesignExpression valueExpression;
     private DRIDesignExpression initialValueExpression;
     private Calculation calculation;

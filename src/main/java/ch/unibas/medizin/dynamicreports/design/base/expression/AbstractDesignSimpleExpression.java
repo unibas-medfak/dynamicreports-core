@@ -33,7 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 public abstract class AbstractDesignSimpleExpression implements DRIDesignSimpleExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
+    private final String name;
 
     /**
      * <p>Constructor for AbstractDesignSimpleExpression.</p>

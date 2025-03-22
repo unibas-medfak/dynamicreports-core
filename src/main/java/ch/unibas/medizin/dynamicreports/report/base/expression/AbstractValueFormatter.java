@@ -34,7 +34,7 @@ import org.apache.commons.lang3.Validate;
 public abstract class AbstractValueFormatter<T, U> implements DRIValueFormatter<T, U> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
+    private final String name;
 
     /**
      * <p>Constructor for AbstractValueFormatter.</p>

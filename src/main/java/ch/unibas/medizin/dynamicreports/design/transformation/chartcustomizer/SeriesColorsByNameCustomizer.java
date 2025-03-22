@@ -51,7 +51,7 @@ import java.util.Set;
 public class SeriesColorsByNameCustomizer implements DRIChartCustomizer {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private Map<String, Color> seriesColorsByName;
+    private final Map<String, Color> seriesColorsByName;
 
     /**
      * <p>Constructor for SeriesColorsByNameCustomizer.</p>

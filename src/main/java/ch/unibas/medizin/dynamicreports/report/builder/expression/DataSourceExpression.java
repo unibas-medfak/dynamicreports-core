@@ -36,7 +36,7 @@ import net.sf.jasperreports.engine.JRRewindableDataSource;
 public class DataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private JRDataSource dataSource;
+    private final JRDataSource dataSource;
     private boolean moveFirst = false;
 
     /**

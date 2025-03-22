@@ -41,7 +41,7 @@ import java.util.Locale;
 public class CurrentDateExpression extends AbstractComplexExpression<String> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String datePattern;
+    private final String datePattern;
 
     /**
      * <p>Constructor for CurrentDateExpression.</p>

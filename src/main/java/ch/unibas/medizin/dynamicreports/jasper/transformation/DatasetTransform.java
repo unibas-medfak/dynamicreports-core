@@ -40,9 +40,9 @@ import java.util.Map;
  * 
  */
 public class DatasetTransform {
-    private JasperTransformAccessor accessor;
-    private Map<DRIDesignDataset, Map<String, Object>> datasetParameters;
-    private Map<DRIDesignDataset, DatasetExpressionTransform> datasetExpressions;
+    private final JasperTransformAccessor accessor;
+    private final Map<DRIDesignDataset, Map<String, Object>> datasetParameters;
+    private final Map<DRIDesignDataset, DatasetExpressionTransform> datasetExpressions;
 
     /**
      * <p>Constructor for DatasetTransform.</p>

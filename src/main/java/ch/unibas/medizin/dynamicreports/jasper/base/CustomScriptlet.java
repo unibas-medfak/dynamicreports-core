@@ -31,7 +31,7 @@ import net.sf.jasperreports.engine.JRScriptletException;
  * 
  */
 public class CustomScriptlet extends JRAbstractScriptlet {
-    private DRIScriptlet scriptlet;
+    private final DRIScriptlet scriptlet;
     private JasperReportParameters reportParameters;
 
     /**

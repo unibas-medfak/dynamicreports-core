@@ -55,7 +55,7 @@ public class Column1Test extends AbstractJasperValueTest implements Serializable
     private TextColumnBuilder<Double> column6;
     private TextColumnBuilder<Object> column7;
 
-    private Date date = new Date();
+    private final Date date = new Date();
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {

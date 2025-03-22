@@ -36,7 +36,7 @@ import java.util.List;
 public class DRDesignValueFormatter extends AbstractDesignComplexExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIValueFormatter<?, Object> valueFormatter;
+    private final DRIValueFormatter<?, Object> valueFormatter;
 
     @SuppressWarnings("unchecked")
     /**

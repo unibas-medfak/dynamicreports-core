@@ -43,7 +43,7 @@ import java.util.Locale;
  * 
  */
 public class StyleResolver {
-    private static FontRenderContext context = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB).createGraphics().getFontRenderContext();
+    private static final FontRenderContext context = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB).createGraphics().getFontRenderContext();
 
     /**
      * <p>getFontWidth.</p>

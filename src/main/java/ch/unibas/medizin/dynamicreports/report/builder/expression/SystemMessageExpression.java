@@ -35,7 +35,7 @@ import java.util.ResourceBundle;
 public class SystemMessageExpression extends AbstractSimpleExpression<String> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String key;
+    private final String key;
 
     /**
      * <p>Constructor for SystemMessageExpression.</p>

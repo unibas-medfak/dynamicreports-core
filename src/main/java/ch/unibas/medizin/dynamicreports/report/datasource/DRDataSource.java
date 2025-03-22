@@ -41,8 +41,8 @@ import java.util.Map;
 public class DRDataSource implements JRRewindableDataSource, Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String[] columns;
-    private List<Map<String, Object>> values;
+    private final String[] columns;
+    private final List<Map<String, Object>> values;
     private Iterator<Map<String, Object>> iterator;
     private Map<String, Object> currentRecord;
 

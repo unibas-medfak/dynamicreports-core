@@ -37,7 +37,7 @@ public class DRDesignListCell implements Serializable {
 
     private HorizontalCellComponentAlignment horizontalAlignment;
     private VerticalCellComponentAlignment verticalAlignment;
-    private DRDesignComponent component;
+    private final DRDesignComponent component;
     private Integer x;
     private Integer y;
     private Integer width;

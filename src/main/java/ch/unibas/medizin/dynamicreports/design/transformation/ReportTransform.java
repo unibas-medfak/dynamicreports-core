@@ -44,10 +44,10 @@ import java.util.List;
  * 
  */
 public class ReportTransform {
-    private DesignTransformAccessor accessor;
+    private final DesignTransformAccessor accessor;
     private DRIDesignTemplateDesign templateDesign;
     private DRDesignQuery query;
-    private List<DRIDesignParameter> parameters;
+    private final List<DRIDesignParameter> parameters;
     private DRIDesignExpression filterExpression;
 
     /**

@@ -36,7 +36,7 @@ import java.util.List;
  * 
  */
 public class DatasetExpressionTransform extends AbstractExpressionTransform {
-    private DRIDataset dataset;
+    private final DRIDataset dataset;
 
     /**
      * <p>Constructor for DatasetExpressionTransform.</p>

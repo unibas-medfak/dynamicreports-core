@@ -33,7 +33,7 @@ import java.io.Serializable;
 public abstract class AbstractBuilder<T extends AbstractBuilder<T, U>, U> implements Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
     protected boolean builded;
-    private U object;
+    private final U object;
 
     /**
      * <p>Constructor for AbstractBuilder.</p>

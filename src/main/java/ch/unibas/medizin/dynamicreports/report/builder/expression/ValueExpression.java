@@ -34,8 +34,8 @@ import org.apache.commons.lang3.Validate;
 public class ValueExpression<T> extends AbstractSimpleExpression<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private T value;
-    private Class<? super T> valueClass;
+    private final T value;
+    private final Class<? super T> valueClass;
 
     @SuppressWarnings("unchecked")
     /**

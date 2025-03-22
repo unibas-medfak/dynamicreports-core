@@ -34,9 +34,9 @@ import org.apache.commons.lang3.Validate;
 public class JasperExpression<T> implements DRIJasperExpression<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
-    private String expression;
-    private Class<? super T> valueClass;
+    private final String name;
+    private final String expression;
+    private final Class<? super T> valueClass;
 
     /**
      * <p>Constructor for JasperExpression.</p>

@@ -42,7 +42,7 @@ import java.util.List;
 public abstract class DRDesignComponent implements DRIDesignComponent {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
+    private final String name;
     private String uniqueName;
     private DRDesignStyle style;
     private Integer x;

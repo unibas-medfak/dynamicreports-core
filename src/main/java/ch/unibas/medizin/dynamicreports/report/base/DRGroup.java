@@ -39,8 +39,8 @@ import org.apache.commons.lang3.Validate;
 public class DRGroup implements DRIGroup {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
-    private DRTextField<?> valueField;
+    private final String name;
+    private final DRTextField<?> valueField;
     private DRIExpression<?> titleExpression;
     private DRIReportStyle titleStyle;
     private Integer titleWidth;

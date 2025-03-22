@@ -34,7 +34,7 @@ import org.apache.commons.lang3.Validate;
 public class DRConditionalStyle extends DRBaseStyle implements DRIConditionalStyle {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIExpression<Boolean> conditionExpression;
+    private final DRIExpression<Boolean> conditionExpression;
 
     /**
      * <p>Constructor for DRConditionalStyle.</p>

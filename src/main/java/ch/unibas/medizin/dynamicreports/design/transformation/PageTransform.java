@@ -32,8 +32,8 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRException;
  * 
  */
 public class PageTransform {
-    private TemplateTransform templateTransform;
-    private DRDesignPage page;
+    private final TemplateTransform templateTransform;
+    private final DRDesignPage page;
     private int maxBandWidth;
 
     /**

@@ -53,7 +53,7 @@ import java.util.Map.Entry;
  * 
  */
 public class SubtotalTransform {
-    private DesignTransformAccessor accessor;
+    private final DesignTransformAccessor accessor;
 
     /**
      * <p>Constructor for SubtotalTransform.</p>

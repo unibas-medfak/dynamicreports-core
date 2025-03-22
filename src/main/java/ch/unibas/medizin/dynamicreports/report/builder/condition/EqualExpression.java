@@ -35,8 +35,8 @@ import org.apache.commons.lang3.Validate;
 public class EqualExpression extends AbstractSimpleExpression<Boolean> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIValue<?> value;
-    private Object[] values;
+    private final DRIValue<?> value;
+    private final Object[] values;
 
     @SafeVarargs
     /**

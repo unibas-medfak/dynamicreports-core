@@ -44,7 +44,7 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
 public class PercentageSubtotalBuilder extends BaseSubtotalBuilder<PercentageSubtotalBuilder, Double> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIExpression<? extends Number> expression;
+    private final DRIExpression<? extends Number> expression;
     private PercentageTotalType totalType;
     private DRGroup totalGroup;
 

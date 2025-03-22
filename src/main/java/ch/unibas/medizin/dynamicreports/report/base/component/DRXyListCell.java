@@ -35,7 +35,7 @@ public class DRXyListCell implements DRIXyListCell {
 
     private Integer x;
     private Integer y;
-    private DRComponent component;
+    private final DRComponent component;
 
     /**
      * <p>Constructor for DRXyListCell.</p>

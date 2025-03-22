@@ -34,7 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 public class SubreportWidthExpression extends AbstractDesignSimpleExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private Integer pageWidth;
+    private final Integer pageWidth;
 
     /**
      * <p>Constructor for SubreportWidthExpression.</p>

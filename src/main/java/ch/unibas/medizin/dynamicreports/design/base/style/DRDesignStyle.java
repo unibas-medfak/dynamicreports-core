@@ -38,7 +38,7 @@ import java.util.List;
 public class DRDesignStyle extends DRDesignBaseStyle implements DRIDesignStyle {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private String name;
+    private final String name;
     private DRDesignStyle parentStyle;
     private List<DRDesignConditionalStyle> conditionalStyles;
 

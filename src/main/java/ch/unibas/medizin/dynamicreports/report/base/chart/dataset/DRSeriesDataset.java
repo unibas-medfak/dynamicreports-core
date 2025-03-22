@@ -40,7 +40,7 @@ public class DRSeriesDataset extends DRChartDataset implements DRISeriesDataset 
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<?> valueExpression;
-    private List<DRIChartSerie> series;
+    private final List<DRIChartSerie> series;
     private DRIHyperLink itemHyperLink;
 
     /**

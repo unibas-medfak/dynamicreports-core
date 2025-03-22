@@ -125,7 +125,7 @@ public class CrosstabStyle2Test extends AbstractJasperCrosstabStyleTest implemen
   private class ConditionExpression extends AbstractSimpleExpression<Boolean> {
     private static final long serialVersionUID = 1L;
 
-    private List<Integer> values;
+    private final List<Integer> values;
 
     private ConditionExpression(Integer... values) {
       this.values = Arrays.asList(values);

@@ -33,8 +33,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRISimpleEx
 public class DRDesignSimpleExpression extends AbstractDesignSimpleExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRISimpleExpression<?> simpleExpression;
-    private String parameterName;
+    private final DRISimpleExpression<?> simpleExpression;
+    private final String parameterName;
 
     /**
      * <p>Constructor for DRDesignSimpleExpression.</p>

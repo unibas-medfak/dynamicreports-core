@@ -34,7 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 public class OrderByExpression extends AbstractSimpleExpression<Comparable<?>> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private CrosstabMeasureBuilder<? extends Comparable<?>> measure;
+    private final CrosstabMeasureBuilder<? extends Comparable<?>> measure;
 
     /**
      * <p>Constructor for OrderByExpression.</p>

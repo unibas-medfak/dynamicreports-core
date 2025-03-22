@@ -42,7 +42,7 @@ import java.util.List;
 public class CrosstabExpression<T> extends AbstractComplexExpression<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIExpression<T> expression;
+    private final DRIExpression<T> expression;
 
     /**
      * <p>Constructor for CrosstabExpression.</p>

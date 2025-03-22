@@ -54,7 +54,7 @@ public class JasperReportParameters implements ReportParameters {
      */
     public static final String MASTER_REPORT_PARAMETERS = "MASTER_REPORT_PARAMETERS";
 
-    private JasperScriptlet jasperScriptlet;
+    private final JasperScriptlet jasperScriptlet;
 
     /**
      * <p>Constructor for JasperReportParameters.</p>

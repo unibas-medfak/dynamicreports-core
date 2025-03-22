@@ -37,8 +37,8 @@ import java.util.Map;
  * 
  */
 public class JasperTransform implements JasperTransformAccessor {
-    private DRIDesignReport report;
-    private JasperReportDesign jasperReportDesign;
+    private final DRIDesignReport report;
+    private final JasperReportDesign jasperReportDesign;
     private ReportTransform reportTransform;
     private MainDatasetExpressionTransform mainDatasetExpressionTransform;
     private BandTransform bandTransform;

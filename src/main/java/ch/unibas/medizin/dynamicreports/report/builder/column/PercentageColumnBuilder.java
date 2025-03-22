@@ -43,7 +43,7 @@ import org.apache.commons.lang3.Validate;
 public class PercentageColumnBuilder extends ValueColumnBuilder<PercentageColumnBuilder, Double> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIExpression<? extends Number> actualExpression;
+    private final DRIExpression<? extends Number> actualExpression;
     private PercentageTotalType totalType;
     private DRGroup totalGroup;
 

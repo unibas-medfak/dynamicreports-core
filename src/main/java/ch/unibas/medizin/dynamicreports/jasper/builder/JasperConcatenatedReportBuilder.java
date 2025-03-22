@@ -71,7 +71,7 @@ import java.io.Serializable;
 public class JasperConcatenatedReportBuilder implements Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private JasperReportHandler jasperReportHandler;
+    private final JasperReportHandler jasperReportHandler;
 
     /**
      * <p>Constructor for JasperConcatenatedReportBuilder.</p>

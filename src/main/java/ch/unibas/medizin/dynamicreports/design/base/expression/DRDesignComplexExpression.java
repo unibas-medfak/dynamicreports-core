@@ -35,8 +35,8 @@ import java.util.List;
 public class DRDesignComplexExpression extends AbstractDesignComplexExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    private DRIComplexExpression<?> complexExpression;
-    private String parameterName;
+    private final DRIComplexExpression<?> complexExpression;
+    private final String parameterName;
 
     /**
      * <p>Constructor for DRDesignComplexExpression.</p>
