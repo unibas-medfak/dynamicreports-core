@@ -44,7 +44,6 @@ import ch.unibas.medizin.dynamicreports.design.definition.chart.dataset.DRIDesig
 import ch.unibas.medizin.dynamicreports.design.definition.chart.dataset.DRIDesignXyzChartSerie;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignAxisFormat;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignAxisPlot;
-import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignBar3DPlot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignBarPlot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignBasePlot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignBubblePlot;
@@ -55,7 +54,6 @@ import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignLi
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignMeterInterval;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignMeterPlot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignMultiAxisPlot;
-import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignPie3DPlot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignPiePlot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignSpiderPlot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignThermometerPlot;
@@ -68,7 +66,6 @@ import net.sf.jasperreports.charts.JRChartPlot;
 import net.sf.jasperreports.charts.JRChartPlot.JRSeriesColor;
 import net.sf.jasperreports.charts.base.JRBaseChartPlot;
 import net.sf.jasperreports.charts.design.JRDesignAreaPlot;
-import net.sf.jasperreports.charts.design.JRDesignBar3DPlot;
 import net.sf.jasperreports.charts.design.JRDesignBarPlot;
 import net.sf.jasperreports.charts.design.JRDesignBubblePlot;
 import net.sf.jasperreports.charts.design.JRDesignCandlestickPlot;
@@ -85,7 +82,6 @@ import net.sf.jasperreports.charts.design.JRDesignHighLowPlot;
 import net.sf.jasperreports.charts.design.JRDesignLinePlot;
 import net.sf.jasperreports.charts.design.JRDesignMeterPlot;
 import net.sf.jasperreports.charts.design.JRDesignMultiAxisPlot;
-import net.sf.jasperreports.charts.design.JRDesignPie3DPlot;
 import net.sf.jasperreports.charts.design.JRDesignPieDataset;
 import net.sf.jasperreports.charts.design.JRDesignPiePlot;
 import net.sf.jasperreports.charts.design.JRDesignPieSeries;
@@ -484,16 +480,12 @@ public class ChartTransform {
 
         if (jrPlot instanceof JRDesignAreaPlot) {
             areaPlot((DRIDesignAxisPlot) plot, (JRDesignAreaPlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignBar3DPlot) {
-            bar3DPlot((DRIDesignBar3DPlot) plot, (JRDesignBar3DPlot) jrPlot);
         } else if (jrPlot instanceof JRDesignBarPlot) {
             barPlot((DRIDesignBarPlot) plot, (JRDesignBarPlot) jrPlot);
         } else if (jrPlot instanceof JRDesignLinePlot) {
             linePlot((DRIDesignLinePlot) plot, (JRDesignLinePlot) jrPlot);
         } else if (jrPlot instanceof JRDesignPiePlot) {
             piePlot((DRIDesignPiePlot) plot, (JRDesignPiePlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignPie3DPlot) {
-            pie3DPlot((DRIDesignPie3DPlot) plot, (JRDesignPie3DPlot) jrPlot);
         } else if (jrPlot instanceof JRDesignScatterPlot) {
             scatterPlot((DRIDesignLinePlot) plot, (JRDesignScatterPlot) jrPlot);
         } else if (jrPlot instanceof JRDesignTimeSeriesPlot) {
@@ -550,47 +542,6 @@ public class ChartTransform {
         }
         jrPlot.setRangeAxisMinValueExpression(accessor.getExpressionTransform().getExpression(valueAxisFormat.getRangeMinValueExpression()));
         jrPlot.setRangeAxisMaxValueExpression(accessor.getExpressionTransform().getExpression(valueAxisFormat.getRangeMaxValueExpression()));
-    }
-
-    private void bar3DPlot(DRIDesignBar3DPlot plot, JRDesignBar3DPlot jrPlot) {
-        // category
-        final DRIDesignAxisFormat categoryAxisFormat = plot.getXAxisFormat();
-        jrPlot.setCategoryAxisLabelExpression(accessor.getExpressionTransform().getExpression(categoryAxisFormat.getLabelExpression()));
-        jrPlot.setCategoryAxisTickLabelMask(categoryAxisFormat.getTickLabelMask());
-        jrPlot.setCategoryAxisVerticalTickLabels(categoryAxisFormat.getVerticalTickLabels());
-        jrPlot.setCategoryAxisTickLabelRotation(categoryAxisFormat.getTickLabelRotation());
-        jrPlot.setCategoryAxisLabelColor(categoryAxisFormat.getLabelColor());
-        if (categoryAxisFormat.getLabelFont() != null) {
-            jrPlot.setCategoryAxisLabelFont(accessor.getStyleTransform().font(categoryAxisFormat.getLabelFont()));
-        }
-        jrPlot.setCategoryAxisLineColor(categoryAxisFormat.getLineColor());
-        jrPlot.setCategoryAxisTickLabelColor(categoryAxisFormat.getTickLabelColor());
-        if (categoryAxisFormat.getTickLabelFont() != null) {
-            jrPlot.setCategoryAxisTickLabelFont(accessor.getStyleTransform().font(categoryAxisFormat.getTickLabelFont()));
-        }
-        jrPlot.setDomainAxisMinValueExpression(accessor.getExpressionTransform().getExpression(categoryAxisFormat.getRangeMinValueExpression()));
-        jrPlot.setDomainAxisMaxValueExpression(accessor.getExpressionTransform().getExpression(categoryAxisFormat.getRangeMaxValueExpression()));
-
-        // value
-        final DRIDesignAxisFormat valueAxisFormat = plot.getYAxisFormat();
-        jrPlot.setValueAxisLabelExpression(accessor.getExpressionTransform().getExpression(valueAxisFormat.getLabelExpression()));
-        jrPlot.setValueAxisTickLabelMask(valueAxisFormat.getTickLabelMask());
-        jrPlot.setValueAxisVerticalTickLabels(valueAxisFormat.getVerticalTickLabels());
-        jrPlot.setValueAxisLabelColor(valueAxisFormat.getLabelColor());
-        if (valueAxisFormat.getLabelFont() != null) {
-            jrPlot.setValueAxisLabelFont(accessor.getStyleTransform().font(valueAxisFormat.getLabelFont()));
-        }
-        jrPlot.setValueAxisLineColor(valueAxisFormat.getLineColor());
-        jrPlot.setValueAxisTickLabelColor(valueAxisFormat.getTickLabelColor());
-        if (valueAxisFormat.getTickLabelFont() != null) {
-            jrPlot.setValueAxisTickLabelFont(accessor.getStyleTransform().font(valueAxisFormat.getTickLabelFont()));
-        }
-        jrPlot.setRangeAxisMinValueExpression(accessor.getExpressionTransform().getExpression(valueAxisFormat.getRangeMinValueExpression()));
-        jrPlot.setRangeAxisMaxValueExpression(accessor.getExpressionTransform().getExpression(valueAxisFormat.getRangeMaxValueExpression()));
-
-        jrPlot.setShowLabels(plot.getShowLabels());
-        jrPlot.setXOffset(plot.getXOffset());
-        jrPlot.setYOffset(plot.getYOffset());
     }
 
     private void barPlot(DRIDesignBarPlot plot, JRDesignBarPlot jrPlot) {
@@ -678,13 +629,6 @@ public class ChartTransform {
         jrPlot.setCircular(plot.getCircular());
         jrPlot.setLabelFormat(plot.getLabelFormat());
         jrPlot.setLegendLabelFormat(plot.getLegendLabelFormat());
-    }
-
-    private void pie3DPlot(DRIDesignPie3DPlot plot, JRDesignPie3DPlot jrPlot) {
-        jrPlot.setCircular(plot.getCircular());
-        jrPlot.setLabelFormat(plot.getLabelFormat());
-        jrPlot.setLegendLabelFormat(plot.getLegendLabelFormat());
-        jrPlot.setDepthFactor(plot.getDepthFactor());
     }
 
     private void scatterPlot(DRIDesignLinePlot plot, JRDesignScatterPlot jrPlot) {

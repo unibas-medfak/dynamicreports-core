@@ -167,7 +167,6 @@ public class ConstantTransform {
             case RETAIN_SHAPE, FILL_PROPORTIONALLY -> ScaleImageEnum.RETAIN_SHAPE;
             case REAL_HEIGHT -> ScaleImageEnum.REAL_HEIGHT;
             case REAL_SIZE -> ScaleImageEnum.REAL_SIZE;
-            default -> throw new JasperDesignException("Image scale " + imageScale.name() + " not supported");
         };
     }
 
