@@ -34,6 +34,7 @@ import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import javax.imageio.ImageIO;
 
@@ -133,7 +134,7 @@ public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     public JasperReportBuilder setStartPageNumber(Integer startPageNumber) throws DRException {
-        if (this.startPageNumber == startPageNumber) {
+        if (Objects.equals(this.startPageNumber, startPageNumber)) {
             return this;
         }
         this.startPageNumber = startPageNumber;

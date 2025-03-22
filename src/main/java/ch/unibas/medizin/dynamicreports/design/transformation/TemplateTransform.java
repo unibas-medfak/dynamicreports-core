@@ -21,10 +21,7 @@
 package ch.unibas.medizin.dynamicreports.design.transformation;
 
 import java.awt.Color;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignList;
 import ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstab;
@@ -2275,7 +2272,7 @@ public class TemplateTransform {
             }
         }
         for (final DRDesignCrosstabCell designCell : designCrosstab.getCells()) {
-            if (designCell.getColumnTotalGroup() == columnGroup.getName()) {
+            if (Objects.equals(designCell.getColumnTotalGroup(), columnGroup.getName())) {
                 final int height = detectWidth(designCell.getContent().getList());
                 if (maxWidth < height) {
                     maxWidth = height;
@@ -2349,7 +2346,7 @@ public class TemplateTransform {
             }
         }
         for (final DRDesignCrosstabCell designCell : designCrosstab.getCells()) {
-            if (designCell.getRowTotalGroup() == rowGroup.getName()) {
+            if (Objects.equals(designCell.getRowTotalGroup(), rowGroup.getName())) {
                 final int height = detectHeight(designCell.getContent().getList());
                 if (maxHeight < height) {
                     maxHeight = height;
