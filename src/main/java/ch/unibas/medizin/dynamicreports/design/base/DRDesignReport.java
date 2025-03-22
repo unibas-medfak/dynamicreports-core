@@ -35,7 +35,6 @@ import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignSy
 import ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignStyle;
 import ch.unibas.medizin.dynamicreports.design.transformation.AbstractExpressionTransform;
 import ch.unibas.medizin.dynamicreports.design.transformation.BandTransform;
-import ch.unibas.medizin.dynamicreports.design.transformation.BarcodeTransform;
 import ch.unibas.medizin.dynamicreports.design.transformation.ChartTransform;
 import ch.unibas.medizin.dynamicreports.design.transformation.ColumnGridTransform;
 import ch.unibas.medizin.dynamicreports.design.transformation.ColumnTransform;
@@ -94,7 +93,6 @@ public class DRDesignReport implements DesignTransformAccessor, DRIDesignReport 
     private SubtotalTransform subtotalTransform;
     private StyleTransform styleTransform;
     private ChartTransform chartTransform;
-    private BarcodeTransform barcodeTransform;
     private CrosstabTransform crosstabTransform;
     private DatasetTransform datasetTransform;
     private TableOfContentsTransform tableOfContentsTransform;
@@ -139,7 +137,6 @@ public class DRDesignReport implements DesignTransformAccessor, DRIDesignReport 
         subtotalTransform = new SubtotalTransform(this);
         styleTransform = new StyleTransform(this);
         chartTransform = new ChartTransform(this);
-        barcodeTransform = new BarcodeTransform(this);
         crosstabTransform = new CrosstabTransform(this);
         datasetTransform = new DatasetTransform(this);
         tableOfContentsTransform = new TableOfContentsTransform(this);
@@ -253,12 +250,6 @@ public class DRDesignReport implements DesignTransformAccessor, DRIDesignReport 
     @Override
     public ChartTransform getChartTransform() {
         return chartTransform;
-    }
-
-    /** {@inheritDoc} */
-    @Override
-    public BarcodeTransform getBarcodeTransform() {
-        return barcodeTransform;
     }
 
     /** {@inheritDoc} */

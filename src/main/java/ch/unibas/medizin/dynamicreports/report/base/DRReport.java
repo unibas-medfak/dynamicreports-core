@@ -107,7 +107,6 @@ public class DRReport implements DRIReport {
     private DRIReportStyle subtotalStyle;
     private DRIReportStyle imageStyle;
     private DRIReportStyle chartStyle;
-    private DRIReportStyle barcodeStyle;
 
     private DRBand titleBand;
     private DRBand pageHeaderBand;
@@ -907,21 +906,6 @@ public class DRReport implements DRIReport {
      */
     public void setChartStyle(DRIReportStyle chartStyle) {
         this.chartStyle = chartStyle;
-    }
-
-    /** {@inheritDoc} */
-    @Override
-    public DRIReportStyle getBarcodeStyle() {
-        return barcodeStyle;
-    }
-
-    /**
-     * <p>Setter for the field <code>barcodeStyle</code>.</p>
-     *
-     * @param barcodeStyle a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
-     */
-    public void setBarcodeStyle(DRIReportStyle barcodeStyle) {
-        this.barcodeStyle = barcodeStyle;
     }
 
     /** {@inheritDoc} */

@@ -140,13 +140,6 @@ public interface DesignTransformAccessor {
     public ChartTransform getChartTransform();
 
     /**
-     * <p>getBarcodeTransform.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.design.transformation.BarcodeTransform} object.
-     */
-    public BarcodeTransform getBarcodeTransform();
-
-    /**
      * <p>getCrosstabTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.design.transformation.CrosstabTransform} object.

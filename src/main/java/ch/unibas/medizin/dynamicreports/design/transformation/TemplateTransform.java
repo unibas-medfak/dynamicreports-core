@@ -68,8 +68,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIReportTemplate;
 import ch.unibas.medizin.dynamicreports.report.definition.DRISubtotal;
 import ch.unibas.medizin.dynamicreports.report.definition.DRITableOfContentsCustomizer;
 import ch.unibas.medizin.dynamicreports.report.definition.DRITemplateDesign;
-import ch.unibas.medizin.dynamicreports.report.definition.barcode.DRIBarbecue;
-import ch.unibas.medizin.dynamicreports.report.definition.barcode.DRIBarcode;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChart;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRICategoryDataset;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRITimeSeriesDataset;
@@ -791,21 +789,6 @@ public class TemplateTransform {
             return template.getChartStyle();
         }
         return Defaults.getDefaults().getChartStyle();
-    }
-
-    /**
-     * <p>getBarcodeStyle.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
-     */
-    protected DRIReportStyle getBarcodeStyle() {
-        if (report.getBarcodeStyle() != null) {
-            return report.getBarcodeStyle();
-        }
-        if (template.getBarcodeStyle() != null) {
-            return template.getBarcodeStyle();
-        }
-        return Defaults.getDefaults().getBarcodeStyle();
     }
 
     // page
@@ -2099,74 +2082,6 @@ public class TemplateTransform {
             return template.getChartTheme();
         }
         return Defaults.getDefaults().getChartTheme();
-    }
-
-    // barcode
-
-    /**
-     * <p>getBarcodeWidth.</p>
-     *
-     * @param barcode a {@link ch.unibas.medizin.dynamicreports.report.definition.barcode.DRIBarcode} object.
-     * @return a int.
-     */
-    protected int getBarcodeWidth(final DRIBarcode barcode) {
-        if (barcode.getWidth() != null) {
-            return barcode.getWidth();
-        }
-        if (template.getBarcodeWidth() != null) {
-            return template.getBarcodeWidth();
-        }
-        return Defaults.getDefaults().getBarcodeWidth();
-    }
-
-    /**
-     * <p>getBarcodeHeight.</p>
-     *
-     * @param barcode a {@link ch.unibas.medizin.dynamicreports.report.definition.barcode.DRIBarcode} object.
-     * @return a int.
-     */
-    protected int getBarcodeHeight(final DRIBarcode barcode) {
-        if (barcode.getHeight() != null) {
-            return barcode.getHeight();
-        }
-        if (template.getBarcodeHeight() != null) {
-            return template.getBarcodeHeight();
-        }
-        return Defaults.getDefaults().getBarcodeHeight();
-    }
-
-    // barbecue
-
-    /**
-     * <p>getBarbecueWidth.</p>
-     *
-     * @param barbecue a {@link ch.unibas.medizin.dynamicreports.report.definition.barcode.DRIBarbecue} object.
-     * @return a int.
-     */
-    protected int getBarbecueWidth(final DRIBarbecue barbecue) {
-        if (barbecue.getWidth() != null) {
-            return barbecue.getWidth();
-        }
-        if (template.getBarcodeWidth() != null) {
-            return template.getBarcodeWidth();
-        }
-        return Defaults.getDefaults().getBarcodeWidth();
-    }
-
-    /**
-     * <p>getBarbecueHeight.</p>
-     *
-     * @param barbecue a {@link ch.unibas.medizin.dynamicreports.report.definition.barcode.DRIBarbecue} object.
-     * @return a int.
-     */
-    protected int getBarbecueHeight(final DRIBarbecue barbecue) {
-        if (barbecue.getHeight() != null) {
-            return barbecue.getHeight();
-        }
-        if (template.getBarcodeHeight() != null) {
-            return template.getBarcodeHeight();
-        }
-        return Defaults.getDefaults().getBarcodeHeight();
     }
 
     // subreport

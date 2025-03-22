@@ -148,13 +148,6 @@ public interface JasperTransformAccessor {
     public ChartTransform getChartTransform();
 
     /**
-     * <p>getBarcodeTransform.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.BarcodeTransform} object.
-     */
-    public BarcodeTransform getBarcodeTransform();
-
-    /**
      * <p>getCrosstabTransform.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.transformation.CrosstabTransform} object.

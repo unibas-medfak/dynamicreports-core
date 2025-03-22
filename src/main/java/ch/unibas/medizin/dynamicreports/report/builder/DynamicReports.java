@@ -26,7 +26,6 @@ import ch.unibas.medizin.dynamicreports.jasper.builder.JasperConcatenatedReportB
 import ch.unibas.medizin.dynamicreports.jasper.builder.JasperReportBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.ExporterBuilders;
 import ch.unibas.medizin.dynamicreports.jasper.definition.JasperReportHandler;
-import ch.unibas.medizin.dynamicreports.report.builder.barcode.BarcodeBuilders;
 import ch.unibas.medizin.dynamicreports.report.builder.chart.ChartBuilders;
 import ch.unibas.medizin.dynamicreports.report.builder.column.ColumnBuilders;
 import ch.unibas.medizin.dynamicreports.report.builder.column.TextColumnBuilder;
@@ -100,10 +99,6 @@ public class DynamicReports {
      * A set of methods of creating exporters.
      */
     public static final ExporterBuilders export = new ExporterBuilders();
-    /**
-     * A set of methods of creating barcodes.
-     */
-    public static final BarcodeBuilders bcode = new BarcodeBuilders();
     /**
      * A set of methods of creating and customizing crosstabs.
      */

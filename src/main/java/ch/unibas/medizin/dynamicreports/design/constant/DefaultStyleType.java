@@ -27,5 +27,5 @@ package ch.unibas.medizin.dynamicreports.design.constant;
  * 
  */
 public enum DefaultStyleType {
-    NONE, TEXT, COLUMN, COLUMN_TITLE, GROUP, GROUP_TITLE, SUBTOTAL, IMAGE, CHART, BARCODE
+    NONE, TEXT, COLUMN, COLUMN_TITLE, GROUP, GROUP_TITLE, SUBTOTAL, IMAGE, CHART
 }

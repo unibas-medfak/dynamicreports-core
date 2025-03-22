@@ -563,15 +563,6 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
         return (T) this;
     }
 
-    public T setBarcodeStyle(ReportStyleBuilder barcodeStyle) {
-        if (barcodeStyle != null) {
-            getObject().setBarcodeStyle(barcodeStyle.build());
-        } else {
-            getObject().setBarcodeStyle(null);
-        }
-        return (T) this;
-    }
-
     // row highlighter
     public T highlightDetailOddRows() {
         return setHighlightDetailOddRows(true);

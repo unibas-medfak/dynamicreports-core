@@ -521,21 +521,6 @@ public class ReportTemplateBuilder extends AbstractBuilder<ReportTemplateBuilder
     }
 
     /**
-     * <p>setBarcodeStyle.</p>
-     *
-     * @param barcodeStyle a {@link ch.unibas.medizin.dynamicreports.report.builder.style.ReportStyleBuilder} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.ReportTemplateBuilder} object.
-     */
-    public ReportTemplateBuilder setBarcodeStyle(ReportStyleBuilder barcodeStyle) {
-        if (barcodeStyle != null) {
-            getObject().setBarcodeStyle(barcodeStyle.build());
-        } else {
-            getObject().setBarcodeStyle(null);
-        }
-        return this;
-    }
-
-    /**
      * <p>setPageFormat.</p>
      *
      * @param pageType a {@link ch.unibas.medizin.dynamicreports.report.constant.PageType} object.
@@ -943,28 +928,6 @@ public class ReportTemplateBuilder extends AbstractBuilder<ReportTemplateBuilder
      */
     public ReportTemplateBuilder setChartTheme(String chartTheme) {
         getObject().setChartTheme(chartTheme);
-        return this;
-    }
-
-    /**
-     * <p>setBarcodeHeight.</p>
-     *
-     * @param barcodeHeight a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.ReportTemplateBuilder} object.
-     */
-    public ReportTemplateBuilder setBarcodeHeight(Integer barcodeHeight) {
-        getObject().setBarcodeHeight(barcodeHeight);
-        return this;
-    }
-
-    /**
-     * <p>setBarcodeWidth.</p>
-     *
-     * @param barcodeWidth a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.ReportTemplateBuilder} object.
-     */
-    public ReportTemplateBuilder setBarcodeWidth(Integer barcodeWidth) {
-        getObject().setBarcodeWidth(barcodeWidth);
         return this;
     }
 

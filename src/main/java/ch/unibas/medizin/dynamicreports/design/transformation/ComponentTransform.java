@@ -24,8 +24,6 @@ import ch.unibas.medizin.dynamicreports.design.base.DRDesignGroup;
 import ch.unibas.medizin.dynamicreports.design.base.DRDesignHyperLink;
 import ch.unibas.medizin.dynamicreports.design.base.DRDesignTableOfContentsHeading;
 import ch.unibas.medizin.dynamicreports.design.base.DRDesignVariable;
-import ch.unibas.medizin.dynamicreports.design.base.barcode.DRDesignBarbecue;
-import ch.unibas.medizin.dynamicreports.design.base.barcode.DRDesignBarcode;
 import ch.unibas.medizin.dynamicreports.design.base.chart.DRDesignChart;
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignBreak;
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignComponent;
@@ -84,8 +82,6 @@ import ch.unibas.medizin.dynamicreports.report.constant.ImageScale;
 import ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAlignment;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIGroup;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIHyperLink;
-import ch.unibas.medizin.dynamicreports.report.definition.barcode.DRIBarbecue;
-import ch.unibas.medizin.dynamicreports.report.definition.barcode.DRIBarcode;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChart;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIBooleanField;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIBreak;
@@ -169,12 +165,6 @@ public class ComponentTransform {
         }
         if (component instanceof DRIChart) {
             return chart((DRIChart) component, resetType, resetGroup);
-        }
-        if (component instanceof DRIBarcode) {
-            return barcode((DRIBarcode) component, resetType, resetGroup);
-        }
-        if (component instanceof DRIBarbecue) {
-            return barbecue((DRIBarbecue) component, resetType, resetGroup);
         }
         if (component instanceof DRISubreport) {
             return subreport((DRISubreport) component);
@@ -451,24 +441,6 @@ public class ComponentTransform {
         designChart.setEvaluationTime(evaluationTimeFromResetType(resetType));
         designChart.setEvaluationGroup(resetGroup);
         return designChart;
-    }
-
-    // barcode
-    private DRDesignBarcode barcode(final DRIBarcode barcode, final ResetType resetType, final DRDesignGroup resetGroup) throws DRException {
-        final DRDesignBarcode designBarcode = accessor.getBarcodeTransform().transform(barcode);
-        component(designBarcode, barcode, barcode.getStyle(), false, DefaultStyleType.BARCODE);
-        designBarcode.setEvaluationTime(evaluationTimeFromResetType(resetType));
-        designBarcode.setEvaluationGroup(resetGroup);
-        return designBarcode;
-    }
-
-    // barbecue
-    private DRDesignBarbecue barbecue(final DRIBarbecue barbecue, final ResetType resetType, final DRDesignGroup resetGroup) throws DRException {
-        final DRDesignBarbecue designBarbecue = accessor.getBarcodeTransform().transform(barbecue);
-        component(designBarbecue, barbecue, barbecue.getStyle(), false, DefaultStyleType.BARCODE);
-        designBarbecue.setEvaluationTime(evaluationTimeFromResetType(resetType));
-        designBarbecue.setEvaluationGroup(resetGroup);
-        return designBarbecue;
     }
 
     // subreport

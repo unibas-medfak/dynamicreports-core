@@ -46,7 +46,6 @@ public class JasperTransform implements JasperTransformAccessor {
     private GroupTransform groupTransform;
     private StyleTransform styleTransform;
     private ChartTransform chartTransform;
-    private BarcodeTransform barcodeTransform;
     private CrosstabTransform crosstabTransform;
     private DatasetTransform datasetTransform;
     private AbstractExpressionTransform expressionTransform;
@@ -72,7 +71,6 @@ public class JasperTransform implements JasperTransformAccessor {
         componentTransform = new ComponentTransform(this);
         styleTransform = new StyleTransform(this);
         chartTransform = new ChartTransform(this);
-        barcodeTransform = new BarcodeTransform(this);
         crosstabTransform = new CrosstabTransform(this);
         datasetTransform = new DatasetTransform(this);
         transformToMainDataset();
@@ -103,12 +101,6 @@ public class JasperTransform implements JasperTransformAccessor {
     @Override
     public ChartTransform getChartTransform() {
         return chartTransform;
-    }
-
-    /** {@inheritDoc} */
-    @Override
-    public BarcodeTransform getBarcodeTransform() {
-        return barcodeTransform;
     }
 
     /** {@inheritDoc} */

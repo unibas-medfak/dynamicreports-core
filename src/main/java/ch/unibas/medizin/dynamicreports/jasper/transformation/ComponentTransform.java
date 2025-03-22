@@ -30,8 +30,6 @@ import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignTextField;
 import ch.unibas.medizin.dynamicreports.design.constant.EvaluationTime;
 import ch.unibas.medizin.dynamicreports.design.definition.DRIDesignHyperLink;
 import ch.unibas.medizin.dynamicreports.design.definition.DRIDesignTableOfContentsHeading;
-import ch.unibas.medizin.dynamicreports.design.definition.barcode.DRIDesignBarbecue;
-import ch.unibas.medizin.dynamicreports.design.definition.barcode.DRIDesignBarcode;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.DRIDesignChart;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignBreak;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignComponent;
@@ -107,12 +105,6 @@ public class ComponentTransform {
         JRDesignElement[] jrElements;
         if (component instanceof DRIDesignChart) {
             final JRDesignElement jrElement = accessor.getChartTransform().transform((DRIDesignChart) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignBarcode) {
-            final JRDesignElement jrElement = accessor.getBarcodeTransform().transform((DRIDesignBarcode) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignBarbecue) {
-            final JRDesignElement jrElement = accessor.getBarcodeTransform().transform((DRIDesignBarbecue) component);
             jrElements = component(jrElement, component, listType);
         } else if (component instanceof DRIDesignList) {
             jrElements = list((DRIDesignList) component);

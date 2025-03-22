@@ -20,7 +20,6 @@
  */
 package ch.unibas.medizin.dynamicreports.test.design.report;
 
-import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.bcode;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cht;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
@@ -40,7 +39,6 @@ import org.junit.jupiter.api.Test;
 
 import ch.unibas.medizin.dynamicreports.design.base.DRDesignGroup;
 import ch.unibas.medizin.dynamicreports.design.base.DRDesignReport;
-import ch.unibas.medizin.dynamicreports.design.base.barcode.DRDesignBarcode;
 import ch.unibas.medizin.dynamicreports.design.base.chart.DRDesignChart;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.AbstractDesignBasePlot;
 import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignComponent;
@@ -76,7 +74,7 @@ public class ReportTemplateTest {
         rb.columns(column1 = col.column("Column1", "field1", Integer.class), col.booleanColumn("Column2", "field2"))
           .groupBy(grp.group(column1).header(cmp.horizontalList(cmp.hListCell(cmp.text("")).widthFixed())))
           .title(cmp.horizontalList(cmp.hListCell(cmp.image("")).widthFixed().heightFixedOnTop(), cmp.hListCell(cht.barChart()).widthFixed().heightFixedOnTop(),
-                                    cmp.hListCell(bcode.ean128("12345678")).widthFixed().heightFixedOnTop(), cmp.hListCell(ctab.crosstab()
+                                    cmp.hListCell(ctab.crosstab()
                                                                                                                                .rowGroups(ctab.rowGroup("f1", String.class))
                                                                                                                                .columnGroups(ctab.columnGroup("f2", String.class),
                                                                                                                                              ctab.columnGroup("f3", String.class))
@@ -131,9 +129,6 @@ public class ReportTemplateTest {
                                  .setChartHeight(220)
                                  .chartSeriesColors(Color.BLUE)
                                  .setChartTheme("customTheme")
-
-                                 .setBarcodeWidth(110)
-                                 .setBarcodeHeight(120)
 
                                  .setCrosstabWidth(90)
                                  .setCrosstabHeight(101)
@@ -220,11 +215,7 @@ public class ReportTemplateTest {
             Assertions.assertEquals(Color.BLUE, ((AbstractDesignBasePlot) ((DRDesignChart) chart).getPlot()).getSeriesColors().get(0),"chart colors");
             Assertions.assertEquals("customTheme", ((DRDesignChart) chart).getTheme(),"chart theme");
 
-            final DRDesignComponent barcode = titleList.getComponents().get(2);
-            Assertions.assertEquals(Integer.valueOf(110), barcode.getWidth(), "barcode width");
-            Assertions.assertEquals(Integer.valueOf(120), barcode.getHeight(), "barcode height");
-
-            final DRDesignCrosstab crosstab = (DRDesignCrosstab) titleList.getComponents().get(3);
+            final DRDesignCrosstab crosstab = (DRDesignCrosstab) titleList.getComponents().get(2);
             Assertions.assertEquals(Integer.valueOf(90), crosstab.getWidth(), "crosstab width");
             Assertions.assertEquals(Integer.valueOf(101), crosstab.getHeight(), "crosstab height");
             style = crosstab.getCells().get(0).getContent().getComponent().getStyle();
@@ -279,15 +270,14 @@ public class ReportTemplateTest {
         rb.columns(column1 = col.column("Column1", "field1", Integer.class))
           .groupBy(grp.group(column1).setHeaderLayout(GroupHeaderLayout.TITLE_AND_VALUE).setHideColumn(false))
           .subtotalsAtSummary(sbt.sum(column1))
-          .title(cmp.image(""), cht.areaChart().setCategory("field2", String.class), bcode.ean128("12345678"))
+          .title(cmp.image(""), cht.areaChart().setCategory("field2", String.class))
           .setTemplate(template().setColumnStyle(stl.style().setFontSize(1))
                                  .setColumnTitleStyle(stl.style().setFontSize(2))
                                  .setGroupStyle(stl.style().setFontSize(3))
                                  .setGroupTitleStyle(stl.style().setFontSize(4))
                                  .setSubtotalStyle(stl.style().setFontSize(5))
                                  .setImageStyle(stl.style().setBorder(stl.pen1Point()))
-                                 .setChartStyle(stl.style().setBorder(stl.pen2Point()))
-                                 .setBarcodeStyle(stl.style().setBorder(stl.pen().setLineWidth(3f))));
+                                 .setChartStyle(stl.style().setBorder(stl.pen2Point())));
         try {
             final DRDesignReport report = new DRDesignReport(rb.getReport());
 
@@ -312,9 +302,6 @@ public class ReportTemplateTest {
 
             final DRDesignChart chart = (DRDesignChart) ((DRDesignList) report.getTitleBand().getBandComponent()).getComponents().get(1);
             Assertions.assertEquals(Float.valueOf(2), chart.getStyle().getBorder().getTopPen().getLineWidth(), "chart style");
-
-            final DRDesignBarcode barcode = (DRDesignBarcode) ((DRDesignList) report.getTitleBand().getBandComponent()).getComponents().get(2);
-            Assertions.assertEquals(Float.valueOf(3), barcode.getStyle().getBorder().getTopPen().getLineWidth(), "barcode style");
         } catch (final DRException e) {
             e.printStackTrace();
             Assertions.fail(e.getMessage());

@@ -86,7 +86,6 @@ public class DRReportTemplate implements DRIReportTemplate {
     private DRIReportStyle subtotalStyle;
     private DRIReportStyle imageStyle;
     private DRIReportStyle chartStyle;
-    private DRIReportStyle barcodeStyle;
     // page
     private Integer pageWidth;
     private Integer pageHeight;
@@ -129,9 +128,6 @@ public class DRReportTemplate implements DRIReportTemplate {
     private String chartValuePattern;
     private String chartPercentValuePattern;
     private String chartTheme;
-    // barcode
-    private Integer barcodeWidth;
-    private Integer barcodeHeight;
     // subreport
     private Integer subreportWidth;
     private Integer subreportHeight;
@@ -637,21 +633,6 @@ public class DRReportTemplate implements DRIReportTemplate {
      */
     public void setChartStyle(DRIReportStyle chartStyle) {
         this.chartStyle = chartStyle;
-    }
-
-    /** {@inheritDoc} */
-    @Override
-    public DRIReportStyle getBarcodeStyle() {
-        return barcodeStyle;
-    }
-
-    /**
-     * <p>Setter for the field <code>barcodeStyle</code>.</p>
-     *
-     * @param barcodeStyle a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
-     */
-    public void setBarcodeStyle(DRIReportStyle barcodeStyle) {
-        this.barcodeStyle = barcodeStyle;
     }
 
     /**
@@ -1230,42 +1211,6 @@ public class DRReportTemplate implements DRIReportTemplate {
      */
     public void setChartTheme(String chartTheme) {
         this.chartTheme = chartTheme;
-    }
-
-    /** {@inheritDoc} */
-    @Override
-    public Integer getBarcodeHeight() {
-        return barcodeHeight;
-    }
-
-    /**
-     * <p>Setter for the field <code>barcodeHeight</code>.</p>
-     *
-     * @param barcodeHeight a {@link java.lang.Integer} object.
-     */
-    public void setBarcodeHeight(Integer barcodeHeight) {
-        if (barcodeHeight != null) {
-            Validate.isTrue(barcodeHeight >= 0, "barcodeHeight must be >= 0");
-        }
-        this.barcodeHeight = barcodeHeight;
-    }
-
-    /** {@inheritDoc} */
-    @Override
-    public Integer getBarcodeWidth() {
-        return barcodeWidth;
-    }
-
-    /**
-     * <p>Setter for the field <code>barcodeWidth</code>.</p>
-     *
-     * @param barcodeWidth a {@link java.lang.Integer} object.
-     */
-    public void setBarcodeWidth(Integer barcodeWidth) {
-        if (barcodeWidth != null) {
-            Validate.isTrue(barcodeWidth >= 0, "barcodeWidth must be >= 0");
-        }
-        this.barcodeWidth = barcodeWidth;
     }
 
     /** {@inheritDoc} */

@@ -336,13 +336,6 @@ public interface DRIReport extends Serializable {
     public DRIReportStyle getChartStyle();
 
     /**
-     * <p>getBarcodeStyle.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
-     */
-    public DRIReportStyle getBarcodeStyle();
-
-    /**
      * <p>getHighlightDetailOddRows.</p>
      *
      * @return a {@link java.lang.Boolean} object.

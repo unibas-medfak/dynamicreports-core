@@ -23,9 +23,6 @@ package ch.unibas.medizin.dynamicreports.jasper.transformation;
 import java.util.List;
 
 import org.apache.commons.lang3.EnumUtils;
-import org.krysalis.barcode4j.BaselineAlignment;
-import org.krysalis.barcode4j.ChecksumMode;
-import org.krysalis.barcode4j.impl.datamatrix.SymbolShapeHint;
 
 import com.lowagie.text.pdf.PdfWriter;
 
@@ -37,12 +34,6 @@ import ch.unibas.medizin.dynamicreports.jasper.constant.PdfVersion;
 import ch.unibas.medizin.dynamicreports.jasper.constant.SizeUnit;
 import ch.unibas.medizin.dynamicreports.jasper.exception.JasperDesignException;
 import ch.unibas.medizin.dynamicreports.report.constant.AxisPosition;
-import ch.unibas.medizin.dynamicreports.report.constant.BarbecueType;
-import ch.unibas.medizin.dynamicreports.report.constant.BarcodeBaselinePosition;
-import ch.unibas.medizin.dynamicreports.report.constant.BarcodeChecksumMode;
-import ch.unibas.medizin.dynamicreports.report.constant.BarcodeOrientation;
-import ch.unibas.medizin.dynamicreports.report.constant.BarcodeShape;
-import ch.unibas.medizin.dynamicreports.report.constant.BarcodeTextPosition;
 import ch.unibas.medizin.dynamicreports.report.constant.BreakType;
 import ch.unibas.medizin.dynamicreports.report.constant.Calculation;
 import ch.unibas.medizin.dynamicreports.report.constant.ChartType;
@@ -67,7 +58,6 @@ import ch.unibas.medizin.dynamicreports.report.constant.PageOrientation;
 import ch.unibas.medizin.dynamicreports.report.constant.PdfPrintScaling;
 import ch.unibas.medizin.dynamicreports.report.constant.PdfaConformance;
 import ch.unibas.medizin.dynamicreports.report.constant.Position;
-import ch.unibas.medizin.dynamicreports.report.constant.QrCodeErrorCorrectionLevel;
 import ch.unibas.medizin.dynamicreports.report.constant.RectangleAnchor;
 import ch.unibas.medizin.dynamicreports.report.constant.Rotation;
 import ch.unibas.medizin.dynamicreports.report.constant.RunDirection;
@@ -84,8 +74,6 @@ import ch.unibas.medizin.dynamicreports.report.constant.VerticalImageAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.VerticalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.WhenNoDataType;
 import ch.unibas.medizin.dynamicreports.report.constant.WhenResourceMissingType;
-import net.sf.jasperreports.barcode4j.ErrorCorrectionLevelEnum;
-import net.sf.jasperreports.barcode4j.TextPositionEnum;
 import net.sf.jasperreports.charts.type.AxisPositionEnum;
 import net.sf.jasperreports.charts.type.ChartTypeEnum;
 import net.sf.jasperreports.charts.type.EdgeEnum;
@@ -925,238 +913,6 @@ public class ConstantTransform {
                 return PdfaConformanceEnum.PDFA_1B;
             default:
                 throw new JasperDesignException("Pdfa conformance " + pdfaConformance.name() + " not supported");
-        }
-    }
-
-    /**
-     * <p>barcodeOrientation.</p>
-     *
-     * @param orientation a {@link ch.unibas.medizin.dynamicreports.report.constant.BarcodeOrientation} object.
-     * @return a {@link net.sf.jasperreports.barcode4j.OrientationEnum} object.
-     */
-    public static net.sf.jasperreports.barcode4j.OrientationEnum barcodeOrientation(final BarcodeOrientation orientation) {
-        switch (orientation) {
-            case NONE:
-                return net.sf.jasperreports.barcode4j.OrientationEnum.UP;
-            case LEFT:
-                return net.sf.jasperreports.barcode4j.OrientationEnum.LEFT;
-            case RIGHT:
-                return net.sf.jasperreports.barcode4j.OrientationEnum.RIGHT;
-            case UPSIDE_DOWN:
-                return net.sf.jasperreports.barcode4j.OrientationEnum.DOWN;
-            default:
-                throw new JasperDesignException("BarcodeOrientation " + orientation.name() + " not supported");
-        }
-    }
-
-    /**
-     * <p>barbecueRotation.</p>
-     *
-     * @param orientation a {@link ch.unibas.medizin.dynamicreports.report.constant.BarcodeOrientation} object.
-     * @return a {@link net.sf.jasperreports.engine.type.RotationEnum} object.
-     */
-    public static RotationEnum barbecueRotation(final BarcodeOrientation orientation) {
-        switch (orientation) {
-            case NONE:
-                return RotationEnum.NONE;
-            case LEFT:
-                return RotationEnum.LEFT;
-            case RIGHT:
-                return RotationEnum.RIGHT;
-            case UPSIDE_DOWN:
-                return RotationEnum.UPSIDE_DOWN;
-            default:
-                throw new JasperDesignException("BarcodeOrientation " + orientation.name() + " not supported");
-        }
-    }
-
-    /**
-     * <p>barcodeTextPosition.</p>
-     *
-     * @param textPosition a {@link ch.unibas.medizin.dynamicreports.report.constant.BarcodeTextPosition} object.
-     * @return a {@link net.sf.jasperreports.barcode4j.TextPositionEnum} object.
-     */
-    public static TextPositionEnum barcodeTextPosition(final BarcodeTextPosition textPosition) {
-        if (textPosition == null) {
-            return null;
-        }
-
-        switch (textPosition) {
-            case NONE:
-                return TextPositionEnum.NONE;
-            case BOTTOM:
-                return TextPositionEnum.BOTTOM;
-            case TOP:
-                return TextPositionEnum.TOP;
-            default:
-                throw new JasperDesignException("BarcodeTextPosition " + textPosition.name() + " not supported");
-        }
-    }
-
-    /**
-     * <p>barcodeChecksumMode.</p>
-     *
-     * @param checksumMode a {@link ch.unibas.medizin.dynamicreports.report.constant.BarcodeChecksumMode} object.
-     * @return a {@link org.krysalis.barcode4j.ChecksumMode} object.
-     */
-    public static ChecksumMode barcodeChecksumMode(final BarcodeChecksumMode checksumMode) {
-        if (checksumMode == null) {
-            return null;
-        }
-
-        switch (checksumMode) {
-            case AUTO:
-                return ChecksumMode.CP_AUTO;
-            case IGNORE:
-                return ChecksumMode.CP_IGNORE;
-            case ADD:
-                return ChecksumMode.CP_ADD;
-            case CHECK:
-                return ChecksumMode.CP_CHECK;
-            default:
-                throw new JasperDesignException("BarcodeChecksumMode " + checksumMode.name() + " not supported");
-        }
-    }
-
-    /**
-     * <p>barcodeShape.</p>
-     *
-     * @param shape a {@link ch.unibas.medizin.dynamicreports.report.constant.BarcodeShape} object.
-     * @return a {@link org.krysalis.barcode4j.impl.datamatrix.SymbolShapeHint} object.
-     */
-    public static SymbolShapeHint barcodeShape(final BarcodeShape shape) {
-        if (shape == null) {
-            return null;
-        }
-
-        switch (shape) {
-            case NONE:
-                return SymbolShapeHint.FORCE_NONE;
-            case SQUARE:
-                return SymbolShapeHint.FORCE_SQUARE;
-            case RECTANGLE:
-                return SymbolShapeHint.FORCE_RECTANGLE;
-            default:
-                throw new JasperDesignException("BarcodeShape " + shape.name() + " not supported");
-        }
-    }
-
-    /**
-     * <p>barcodeBaselinePosition.</p>
-     *
-     * @param baselinePosition a {@link ch.unibas.medizin.dynamicreports.report.constant.BarcodeBaselinePosition} object.
-     * @return a {@link org.krysalis.barcode4j.BaselineAlignment} object.
-     */
-    public static BaselineAlignment barcodeBaselinePosition(final BarcodeBaselinePosition baselinePosition) {
-        if (baselinePosition == null) {
-            return null;
-        }
-
-        switch (baselinePosition) {
-            case TOP:
-                return BaselineAlignment.ALIGN_TOP;
-            case BOTTOM:
-                return BaselineAlignment.ALIGN_BOTTOM;
-            default:
-                throw new JasperDesignException("BarcodeBaselinePosition " + baselinePosition.name() + " not supported");
-        }
-    }
-
-    /**
-     * <p>qrCodeErrorCorrectionLevel.</p>
-     *
-     * @param errorCorrectionLevel a {@link ch.unibas.medizin.dynamicreports.report.constant.QrCodeErrorCorrectionLevel} object.
-     * @return a {@link net.sf.jasperreports.barcode4j.ErrorCorrectionLevelEnum} object.
-     */
-    public static ErrorCorrectionLevelEnum qrCodeErrorCorrectionLevel(final QrCodeErrorCorrectionLevel errorCorrectionLevel) {
-        if (errorCorrectionLevel == null) {
-            return null;
-        }
-
-        switch (errorCorrectionLevel) {
-            case L:
-                return ErrorCorrectionLevelEnum.L;
-            case M:
-                return ErrorCorrectionLevelEnum.M;
-            case Q:
-                return ErrorCorrectionLevelEnum.Q;
-            case H:
-                return ErrorCorrectionLevelEnum.H;
-            default:
-                throw new JasperDesignException("QrCodeErrorCorrectionLevel " + errorCorrectionLevel.name() + " not supported");
-        }
-    }
-
-    /**
-     * <p>barbecueType.</p>
-     *
-     * @param barbecueType a {@link ch.unibas.medizin.dynamicreports.report.constant.BarbecueType} object.
-     * @return a {@link java.lang.String} object.
-     */
-    public static String barbecueType(final BarbecueType barbecueType) {
-        if (barbecueType == null) {
-            return null;
-        }
-
-        switch (barbecueType) {
-            case BARCODE_2OF7:
-                return "2of7";
-            case BARCODE_3OF9:
-                return "3of9";
-            case BOOKLAND:
-                return "Bookland";
-            case CODABAR:
-                return "Codabar";
-            case CODE128:
-                return "Code128";
-            case CODE128A:
-                return "Code128A";
-            case CODE128B:
-                return "Code128B";
-            case CODE128C:
-                return "Code128C";
-            case CODE39:
-                return "Code39";
-            case CODE39_EXTENDED:
-                return "Code39 (Extended)";
-            case EAN128:
-                return "EAN128";
-            case EAN13:
-                return "EAN13";
-            case GLOBAL_TRADE_ITEM_NUMBER:
-                return "GlobalTradeItemNumber";
-            case INT_2OF5:
-                return "Int2of5";
-            case MONARCH:
-                return "Monarch";
-            case NW7:
-                return "NW7";
-            case PDF417:
-                return "PDF417";
-            case POSTNET:
-                return "PostNet";
-            case RANDOM_WEIGHT_UPCA:
-                return "RandomWeightUPCA";
-            case SCC14_SHIPPING_CODE:
-                return "SCC14ShippingCode";
-            case SHIPMENT_IDENTIFICATION_NUMBER:
-                return "ShipmentIdentificationNumber";
-            case SSCC18:
-                return "SSCC18";
-            case STD_2OF5:
-                return "Std2of5";
-            case UCC128:
-                return "UCC128";
-            case UPCA:
-                return "UPCA";
-            case USD3:
-                return "USD3";
-            case USD4:
-                return "USD4";
-            case USPS:
-                return "USPS";
-            default:
-                throw new JasperDesignException("BarbecueType " + barbecueType.name() + " not supported");
         }
     }
 

@@ -246,13 +246,6 @@ public interface DRIReportTemplate extends Serializable {
     public DRIReportStyle getChartStyle();
 
     /**
-     * <p>getBarcodeStyle.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
-     */
-    public DRIReportStyle getBarcodeStyle();
-
-    /**
      * <p>getPageWidth.</p>
      *
      * @return a {@link java.lang.Integer} object.
@@ -468,20 +461,6 @@ public interface DRIReportTemplate extends Serializable {
      * @return a {@link java.lang.Integer} object.
      */
     public Integer getChartWidth();
-
-    /**
-     * <p>getBarcodeHeight.</p>
-     *
-     * @return a {@link java.lang.Integer} object.
-     */
-    public Integer getBarcodeHeight();
-
-    /**
-     * <p>getBarcodeWidth.</p>
-     *
-     * @return a {@link java.lang.Integer} object.
-     */
-    public Integer getBarcodeWidth();
 
     /**
      * <p>getSubreportHeight.</p>

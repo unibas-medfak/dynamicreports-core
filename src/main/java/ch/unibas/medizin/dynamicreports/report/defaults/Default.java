@@ -98,7 +98,6 @@ public class Default {
     private DRStyle subtotalStyle;
     private DRStyle imageStyle;
     private DRStyle chartStyle;
-    private DRStyle barcodeStyle;
     // page
     private int pageWidth;
     private int pageHeight;
@@ -187,9 +186,6 @@ public class Default {
     private TimePeriod chartTimeSeriesDatasetTimePeriodType;
     private ValueLocation chartThermometerPlotValueLocation;
     private String chartTheme;
-    // barcode
-    private int barcodeWidth;
-    private int barcodeHeight;
     // subreport
     private int subreportWidth;
     private int subreportHeight;
@@ -314,7 +310,6 @@ public class Default {
         this.imageStyle = new DRStyle();
         imageStyle.setImageScale(ImageScale.RETAIN_SHAPE);
         this.chartStyle = null;
-        this.barcodeStyle = null;
 
         this.pageWidth = PageType.A4.getWidth();
         this.pageHeight = PageType.A4.getHeight();
@@ -406,9 +401,6 @@ public class Default {
         this.chartTimeSeriesDatasetTimePeriodType = TimePeriod.DAY;
         this.chartThermometerPlotValueLocation = ValueLocation.NONE;
         this.chartTheme = null;
-
-        this.barcodeWidth = 100;
-        this.barcodeHeight = 100;
 
         this.subreportWidth = 200;
         this.subreportHeight = 0;
@@ -735,15 +727,6 @@ public class Default {
      */
     public DRStyle getChartStyle() {
         return chartStyle;
-    }
-
-    /**
-     * <p>Getter for the field <code>barcodeStyle</code>.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.base.style.DRStyle} object.
-     */
-    public DRStyle getBarcodeStyle() {
-        return barcodeStyle;
     }
 
     /**
@@ -1365,24 +1348,6 @@ public class Default {
      */
     public String getChartTheme() {
         return chartTheme;
-    }
-
-    /**
-     * <p>Getter for the field <code>barcodeWidth</code>.</p>
-     *
-     * @return a int.
-     */
-    public int getBarcodeWidth() {
-        return barcodeWidth;
-    }
-
-    /**
-     * <p>Getter for the field <code>barcodeHeight</code>.</p>
-     *
-     * @return a int.
-     */
-    public int getBarcodeHeight() {
-        return barcodeHeight;
     }
 
     /**

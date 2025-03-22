@@ -334,8 +334,6 @@ public class StyleTransform {
                 return transformStyle(templateTransform.getImageStyle(), false);
             case CHART:
                 return transformStyle(templateTransform.getChartStyle(), false);
-            case BARCODE:
-                return transformStyle(templateTransform.getBarcodeStyle(), false);
             default:
                 throw new DRDesignReportException("Default style type " + defaultStyleType.name() + " not supported");
         }
