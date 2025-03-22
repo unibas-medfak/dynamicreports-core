@@ -48,7 +48,7 @@ public class JasperTestUtils {
 
     // subtotal
     private static String getSubtotalName(BaseSubtotalBuilder<?, ?> subtotal) {
-        String band = null;
+        String band;
         final DRSubtotal<?> subtl = subtotal.getSubtotal();
         switch (subtl.getPosition()) {
             case TITLE:

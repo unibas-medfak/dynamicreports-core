@@ -55,7 +55,8 @@ public class ConcatenatedReport4Test {
     @Test
     public void test() {
         try {
-            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            new ByteArrayOutputStream();
+            ByteArrayOutputStream bos;
             bos = new ByteArrayOutputStream();
             concatenatedReport.toCsv(bos);
             Assertions.assertEquals( "text1\n1\ntext2\n2\ntext3\n3\n", new String(bos.toByteArray()), "concatenated report ");

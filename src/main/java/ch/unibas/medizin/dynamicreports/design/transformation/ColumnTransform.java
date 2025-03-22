@@ -99,7 +99,7 @@ public class ColumnTransform {
                         columnTitleForGroup.addComponent(column, titleComponent(column));
                     }
                 }
-                DRDesignComponent detailComponent = null;
+                DRDesignComponent detailComponent;
                 if (column instanceof DRIValueColumn<?>) {
                     detailComponent = detailValueComponent((DRIValueColumn<?>) column);
                 } else if (column instanceof DRIBooleanColumn) {

@@ -79,7 +79,7 @@ public class ConcatenatedReport5Test {
                 next = false;
                 return true;
             }
-            return next;
+            return false;
         }
 
         @Override

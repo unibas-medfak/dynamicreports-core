@@ -192,9 +192,7 @@ public abstract class AbstractExpressionTransform {
             throw new DRDesignReportException("Expression " + expression.getClass().getName() + " not supported");
         }
         express = addExpression(express);
-        if (valueFormatter == null) {
-            expressions.put(expression, express);
-        }
+        expressions.put(expression, express);
         return express;
     }
 

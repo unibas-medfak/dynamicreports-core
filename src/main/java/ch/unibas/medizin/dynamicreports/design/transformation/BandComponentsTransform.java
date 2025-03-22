@@ -153,8 +153,7 @@ class BandComponentsTransform {
                     }
                     return null;
                 }
-                if (lComponent != elm && (!(lComponent instanceof DRDesignList) || lComponent instanceof DRDesignList &&
-                    !(lComponent.getStyle() == null && lComponent.getPrintWhenExpression() == null && ((DRDesignList) lComponent).getBackgroundComponent() == null))) {
+                if (lComponent != elm && (!(lComponent instanceof DRDesignList) || !(lComponent.getStyle() == null && lComponent.getPrintWhenExpression() == null && ((DRDesignList) lComponent).getBackgroundComponent() == null))) {
                     elm.setX(lComponent.getX() + elm.getX());
                     elm.setY(lComponent.getY() + elm.getY());
                 }
@@ -302,10 +301,10 @@ class BandComponentsTransform {
         for (
             int i = crosstab.getColumnGroups().size() - 1; i >= 0; i--) {
             DRICrosstabColumnGroup<?> columnGroup = crosstab.getColumnGroups().get(i);
-            int headerWidth = 0;
-            int headerHeight = 0;
+            int headerWidth;
+            int headerHeight;
             int totalHeaderWidth = 0;
-            int totalHeaderHeight = 0;
+            int totalHeaderHeight;
 
             if (previousCellDimension == null) {
                 headerWidth = cellWidth;
@@ -337,9 +336,9 @@ class BandComponentsTransform {
         for (
             int i = crosstab.getRowGroups().size() - 1; i >= 0; i--) {
             DRICrosstabRowGroup<?> rowGroup = crosstab.getRowGroups().get(i);
-            int headerWidth = 0;
-            int headerHeight = 0;
-            int totalHeaderWidth = 0;
+            int headerWidth;
+            int headerHeight;
+            int totalHeaderWidth;
             int totalHeaderHeight = 0;
 
             headerWidth = accessor.getTemplateTransform().getCrosstabRowGroupHeaderWidth(rowGroup, designCrosstab);

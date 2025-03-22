@@ -380,9 +380,6 @@ public class Default {
         this.genericElementWidth = 100;
         this.genericElementHeight = 100;
 
-        this.genericElementWidth = 100;
-        this.genericElementHeight = 100;
-
         this.listWidth = null;
         this.listHeight = null;
         this.listgap = 0;

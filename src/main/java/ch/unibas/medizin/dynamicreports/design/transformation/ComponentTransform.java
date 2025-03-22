@@ -675,7 +675,7 @@ public class ComponentTransform {
         final BooleanComponentType componentType = accessor.getTemplateTransform().getBooleanComponentType(booleanField);
         final boolean emptyWhenNullValue = accessor.getTemplateTransform().getBooleanEmptyWhenNullValue(booleanField);
 
-        DRHyperLinkComponent component = null;
+        DRHyperLinkComponent component;
 
         switch (componentType) {
             case TEXT_TRUE_FALSE:
@@ -863,7 +863,7 @@ public class ComponentTransform {
             final EvaluationTime evalTime = detectEvaluationTime(expression);
             if (evaluationTime == null) {
                 evaluationTime = evalTime;
-            } else if (evaluationTime != evalTime || evaluationTime.equals(EvaluationTime.GROUP) && evalTime.equals(EvaluationTime.GROUP)) {
+            } else if (evaluationTime != evalTime || evaluationTime.equals(EvaluationTime.GROUP)) {
                 return EvaluationTime.AUTO;
             }
         }

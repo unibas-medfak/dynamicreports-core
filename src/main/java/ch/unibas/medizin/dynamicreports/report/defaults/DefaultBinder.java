@@ -90,9 +90,6 @@ public class DefaultBinder {
         }
         if (xmlDataType.getHorizontalAlignment() != null) {
             HorizontalTextAlignment alignment = HorizontalTextAlignment.valueOf(xmlDataType.getHorizontalAlignment().name());
-            if (alignment == null) {
-                throw new DRReportException("Horizontal text alignment " + xmlDataType.getHorizontalAlignment().name() + " not supported");
-            }
             dataType.setHorizontalTextAlignment(alignment);
         }
     }

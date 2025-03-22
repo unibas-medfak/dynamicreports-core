@@ -233,7 +233,7 @@ public class CrosstabTransform {
         if (showTotal) {
             DRIReportStyle totalStyle = group.getTotalHeaderStyle();
             if (totalStyle == null) {
-                DRICrosstabGroup<?> firstGroup = null;
+                DRICrosstabGroup<?> firstGroup;
                 if (group instanceof DRICrosstabRowGroup) {
                     firstGroup = getFirstValue(crosstab.getRowGroups());
                 } else {
@@ -360,7 +360,7 @@ public class CrosstabTransform {
         DRDesignCrosstabCell designCell = cell(crosstab, cellStyle, measuresStyle, null, null, resetType, resetGroup);
         designCrosstab.getCells().add(designCell);
 
-        DRIReportStyle style = null;
+        DRIReportStyle style;
         for (final DRICrosstabColumnGroup<?> columnGroup : crosstab.getColumnGroups()) {
             if (columnGroup == firstColumnGroup) {
                 style = grandTotalStyle;

@@ -531,7 +531,7 @@ public class ChartTransform {
 
     // dataset
     private DRDesignChartDataset dataset(DRIChartDataset dataset, DRIDataset subDataset, ResetType resetType, DRDesignGroup resetGroup) throws DRException {
-        DRDesignDataset designSubDataset = null;
+        DRDesignDataset designSubDataset;
         if (dataset.getSubDataset() != null) {
             designSubDataset = accessor.getDatasetTransform().transform(dataset.getSubDataset());
             accessor.transformToDataset(dataset.getSubDataset());

@@ -159,7 +159,7 @@ public class ColumnGridTransform {
                         horizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(((DRIBooleanColumn) column).getComponent().getWidthType());
                     }
                     if (verticalAlignment == null) {
-                        verticalAlignment = ConstantTransform.toVerticalCellComponentAlignment(((DRIBooleanColumn) column).getComponent().getHeightType());
+                        ConstantTransform.toVerticalCellComponentAlignment(((DRIBooleanColumn) column).getComponent().getHeightType());
                     }
                 } else {
                     final DRIComponent columnComponent = accessor.getColumnTransform().getColumnComponent(column);
@@ -168,7 +168,7 @@ public class ColumnGridTransform {
                             horizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(((DRIDimensionComponent) columnComponent).getWidthType());
                         }
                         if (verticalAlignment == null) {
-                            verticalAlignment = ConstantTransform.toVerticalCellComponentAlignment(((DRIDimensionComponent) columnComponent).getHeightType());
+                            ConstantTransform.toVerticalCellComponentAlignment(((DRIDimensionComponent) columnComponent).getHeightType());
                         }
                     }
                 }
@@ -239,7 +239,7 @@ public class ColumnGridTransform {
             return new GridList(columnList, null);
         }
 
-        columnGrid.setEmpty(!titleGroup);
+        columnGrid.setEmpty(false);
 
         final DRDesignList list = new DRDesignList();
         list.setType(ListType.VERTICAL);
