@@ -101,19 +101,19 @@ public class CandlestickChartTest extends AbstractJasperChartTest {
     JFreeChart chart = getChart("summary.chart1", 0);
     final XYItemRenderer renderer = chart.getXYPlot().getRenderer();
      Assertions.assertEquals( CandlestickRenderer.class, renderer.getClass(),"renderer");
-     Assertions.assertEquals( false, ((CandlestickRenderer) renderer).getDrawVolume(),"show volume");
+      Assertions.assertFalse(((CandlestickRenderer) renderer).getDrawVolume(), "show volume");
     highLowChartDataTest(chart, 0, new Object[][] {{"serie", date1, 50d, 35d, 40d, 47d, 70d},
         {"serie", date2, 55d, 40d, 50d, 45d, 120d}, {"serie", date3, 48d, 41d, 42d, 47d, 90d}});
 
     chart = getChart("summary.chart2", 0);
-    Axis axis = chart.getXYPlot().getDomainAxis();
+    ValueAxis axis = chart.getXYPlot().getDomainAxis();
      Assertions.assertEquals( "time", axis.getLabel(),"category label");
      Assertions.assertEquals( Color.BLUE, axis.getLabelPaint(),"category label color");
      Assertions.assertEquals( ARIMO_BOLD_AWT, axis.getLabelFont(),"category label font");
      Assertions.assertEquals( Color.CYAN, axis.getTickLabelPaint(),"tick label color");
      Assertions.assertEquals( ARIMO_ITALIC_AWT, axis.getTickLabelFont(),"tick label font");
      Assertions.assertEquals( Color.LIGHT_GRAY, axis.getAxisLinePaint(),"line color");
-    Assertions.assertTrue(((ValueAxis) axis).isVerticalTickLabels(), "vertical tick labels");
+    Assertions.assertTrue(axis.isVerticalTickLabels(), "vertical tick labels");
 
     chart = getChart("summary.chart3", 0);
     axis = chart.getXYPlot().getRangeAxis();
@@ -125,9 +125,9 @@ public class CandlestickChartTest extends AbstractJasperChartTest {
     Assertions.assertEquals( "10.00",
         ((NumberAxis) axis).getNumberFormatOverride().format(10), "tick label mask");
     // Assertions.assertEquals("line color", Color.LIGHT_GRAY, axis.getAxisLinePaint());
-     Assertions.assertEquals( 1d, ((ValueAxis) axis).getLowerBound(), 0,"range min value");
-     Assertions.assertEquals( 15d, ((ValueAxis) axis).getUpperBound(), 0,"range max value");
-    Assertions.assertTrue(((ValueAxis) axis).isVerticalTickLabels(), "vertical tick labels");
+     Assertions.assertEquals( 1d, axis.getLowerBound(), 0,"range min value");
+     Assertions.assertEquals( 15d, axis.getUpperBound(), 0,"range max value");
+    Assertions.assertTrue(axis.isVerticalTickLabels(), "vertical tick labels");
   }
 
   @Override

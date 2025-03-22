@@ -59,7 +59,7 @@ public class CurrentDateExpression extends AbstractComplexExpression<String> {
     /** {@inheritDoc} */
     @Override
     public String evaluate(List<?> values, ReportParameters reportParameters) {
-        String pattern = (String) values.get(0);
+        String pattern = (String) values.getFirst();
         Locale locale = reportParameters.getLocale();
         MessageFormat format = new MessageFormat(pattern, locale);
         String date;

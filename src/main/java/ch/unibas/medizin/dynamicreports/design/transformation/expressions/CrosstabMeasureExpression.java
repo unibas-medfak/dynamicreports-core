@@ -50,7 +50,7 @@ public class CrosstabMeasureExpression extends AbstractComplexExpression<Double>
     /** {@inheritDoc} */
     @Override
     public Double evaluate(List<?> values, ReportParameters reportParameters) {
-        Number value = (Number) values.get(0);
+        Number value = (Number) values.getFirst();
         if (value != null) {
             return value.doubleValue();
         }

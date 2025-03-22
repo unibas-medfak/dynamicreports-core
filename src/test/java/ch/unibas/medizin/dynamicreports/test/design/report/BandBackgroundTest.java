@@ -122,10 +122,10 @@ public class BandBackgroundTest {
             Assertions.assertEquals(radius[3], rectangle.getRadius(), "columnHeader background component");
             rectangle = (DRDesignRectangle) ((DRDesignList) report.getColumnFooterBand().getBandComponent()).getBackgroundComponent();
             Assertions.assertEquals(radius[4], rectangle.getRadius(), "columnFooter background component");
-            final DRDesignGroup group = new ArrayList<>(report.getGroups()).get(0);
-            rectangle = (DRDesignRectangle) ((DRDesignList) group.getHeaderBands().get(0).getBandComponent()).getBackgroundComponent();
+            final DRDesignGroup group = new ArrayList<>(report.getGroups()).getFirst();
+            rectangle = (DRDesignRectangle) ((DRDesignList) group.getHeaderBands().getFirst().getBandComponent()).getBackgroundComponent();
             Assertions.assertEquals(radius[5], rectangle.getRadius(), "groupHeader background component");
-            rectangle = (DRDesignRectangle) ((DRDesignList) group.getFooterBands().get(0).getBandComponent()).getBackgroundComponent();
+            rectangle = (DRDesignRectangle) ((DRDesignList) group.getFooterBands().getFirst().getBandComponent()).getBackgroundComponent();
             Assertions.assertEquals(radius[6], rectangle.getRadius(), "groupFooter background component");
             rectangle = (DRDesignRectangle) ((DRDesignList) report.getDetailBands().get(0).getBandComponent()).getBackgroundComponent();
             Assertions.assertEquals(radius[7], rectangle.getRadius(), "detailHeader background component");

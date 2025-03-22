@@ -73,7 +73,7 @@ public class Image1Test extends AbstractJasperTest {
         try {
             final byte[] imageData = JRImageLoader.getInstance(DefaultJasperReportsContext.getInstance()).loadBytesFromAwtImage(image, ImageTypeEnum.JPEG);
             final JRPrintImage jrImage = (JRPrintImage) getElementAt("title.image1", 0);
-            Assertions.assertTrue(Arrays.equals(imageData, ((SimpleDataRenderer) jrImage.getRenderer()).getData(DefaultJasperReportsContext.getInstance())), "image data");
+            Assertions.assertArrayEquals(imageData, ((SimpleDataRenderer) jrImage.getRenderer()).getData(DefaultJasperReportsContext.getInstance()), "image data");
             Assertions.assertEquals(ScaleImageEnum.CLIP, jrImage.getScaleImage(), "scale image");
         } catch (final JRException e) {
             e.printStackTrace();

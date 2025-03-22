@@ -227,36 +227,42 @@ public abstract class AbstractExpressionTransform {
     }
 
     private String getExpressionText(DRIDesignExpression expression) {
-        if (expression instanceof DRIDesignField) {
-            return toFieldValue(expression.getName());
-        } else if (expression instanceof DRIDesignVariable) {
-            return toVariableValue(expression.getName());
-        } else if (expression instanceof DRIDesignComplexExpression) {
-            final DRIDesignComplexExpression complexExpression = (DRIDesignComplexExpression) expression;
-            StringBuilder values = new StringBuilder();
-            for (final DRIDesignExpression valueExpression : complexExpression.getExpressions()) {
-                values.append(", ").append(getExpressionText(valueExpression));
+        switch (expression) {
+            case DRIDesignField driDesignField -> {
+                return toFieldValue(expression.getName());
             }
-            if (!values.isEmpty()) {
-                values = new StringBuilder(values.substring(2));
+            case DRIDesignVariable driDesignVariable -> {
+                return toVariableValue(expression.getName());
             }
-            final String parameterName = getExpressionParameterName(complexExpression.getParameterName());
-            return MessageFormat.format(COMPLEX_VALUE, parameterName, expression.getName(), values.toString());
-        } else if (expression instanceof DRIDesignSimpleExpression) {
-            final String parameterName = getExpressionParameterName(((DRIDesignSimpleExpression) expression).getParameterName());
-            return MessageFormat.format(VALUE, parameterName, expression.getName());
-        } else if (expression instanceof DRIDesignSystemExpression) {
-            final String name = expression.getName();
-            if (name.equals(SystemExpression.PAGE_NUMBER.name())) {
-                return toVariableValue(JRVariable.PAGE_NUMBER);
-            } else {
-                return toVariableValue(name);
+            case DRIDesignComplexExpression complexExpression -> {
+                StringBuilder values = new StringBuilder();
+                for (final DRIDesignExpression valueExpression : complexExpression.getExpressions()) {
+                    values.append(", ").append(getExpressionText(valueExpression));
+                }
+                if (!values.isEmpty()) {
+                    values = new StringBuilder(values.substring(2));
+                }
+                final String parameterName = getExpressionParameterName(complexExpression.getParameterName());
+                return MessageFormat.format(COMPLEX_VALUE, parameterName, expression.getName(), values.toString());
+            }
+            case DRIDesignSimpleExpression driDesignSimpleExpression -> {
+                final String parameterName = getExpressionParameterName(driDesignSimpleExpression.getParameterName());
+                return MessageFormat.format(VALUE, parameterName, expression.getName());
+            }
+            case DRIDesignSystemExpression driDesignSystemExpression -> {
+                final String name = expression.getName();
+                if (name.equals(SystemExpression.PAGE_NUMBER.name())) {
+                    return toVariableValue(JRVariable.PAGE_NUMBER);
+                } else {
+                    return toVariableValue(name);
+                }
             }
             // throw new JasperDesignException("System expression \"" + name + "\" not supported");
-        } else if (expression instanceof DRIDesignJasperExpression) {
-            return ((DRIDesignJasperExpression) expression).getExpression();
-        } else {
-            throw new JasperDesignException("Expression " + expression.getClass().getName() + " not supported");
+            case DRIDesignJasperExpression driDesignJasperExpression -> {
+                return driDesignJasperExpression.getExpression();
+            }
+            default ->
+                    throw new JasperDesignException("Expression " + expression.getClass().getName() + " not supported");
         }
     }
 

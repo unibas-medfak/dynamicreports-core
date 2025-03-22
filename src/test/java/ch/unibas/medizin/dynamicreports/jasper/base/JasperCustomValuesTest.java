@@ -18,13 +18,13 @@ public class JasperCustomValuesTest {
   @Test
   public void shouldUseDefaultScriptletManager() {
     final JasperCustomValues cut = createClassUnderTest(false);
-    Assertions.assertTrue(cut.getScriptletManager() instanceof DefaultJasperScriptletManager);
+      Assertions.assertInstanceOf(DefaultJasperScriptletManager.class, cut.getScriptletManager());
   }
 
   @Test
   public void shouldUseThreadSafeScriptleManagerIfPropertySet() {
     final JasperCustomValues cut = createClassUnderTest(true);
-    Assertions.assertTrue(cut.getScriptletManager() instanceof ThreadSafeJasperScriptletManager);
+      Assertions.assertInstanceOf(ThreadSafeJasperScriptletManager.class, cut.getScriptletManager());
   }
 
   @Test

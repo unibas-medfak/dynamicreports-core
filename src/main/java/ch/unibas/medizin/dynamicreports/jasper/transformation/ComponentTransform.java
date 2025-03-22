@@ -104,46 +104,58 @@ public class ComponentTransform {
      */
     protected JRDesignElement[] component(final DRIDesignComponent component, final ListType listType) {
         JRDesignElement[] jrElements;
-        if (component instanceof DRIDesignChart) {
-            final JRDesignElement jrElement = accessor.getChartTransform().transform((DRIDesignChart) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignList) {
-            jrElements = list((DRIDesignList) component);
-        } else if (component instanceof DRIDesignTextField) {
-            final JRDesignElement jrElement = textField((DRIDesignTextField) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignFiller) {
-            final JRDesignElement jrElement = filler((DRIDesignFiller) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignImage) {
-            final JRDesignElement jrElement = image((DRIDesignImage) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignSubreport) {
-            final JRDesignElement jrElement = subreport((DRIDesignSubreport) component, component.getWidth());
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignLine) {
-            final JRDesignElement jrElement = line((DRIDesignLine) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignEllipse) {
-            final JRDesignElement jrElement = ellipse((DRIDesignEllipse) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignRectangle) {
-            final JRDesignElement jrElement = rectangle((DRIDesignRectangle) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignBreak) {
-            final JRDesignElement jrElement = breakComponent((DRIDesignBreak) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignGenericElement) {
-            final JRDesignElement jrElement = genericElement((DRIDesignGenericElement) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignCrosstab) {
-            final JRDesignElement jrElement = accessor.getCrosstabTransform().transform((DRIDesignCrosstab) component);
-            jrElements = component(jrElement, component, listType);
-        } else if (component instanceof DRIDesignCustomComponent) {
-            final JRDesignElement jrElement = customComponent(component);
-            jrElements = component(jrElement, component, listType);
-        } else {
-            throw new JasperDesignException("Component " + component.getClass().getName() + " not supported");
+        switch (component) {
+            case DRIDesignChart driDesignChart -> {
+                final JRDesignElement jrElement = accessor.getChartTransform().transform(driDesignChart);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignList driDesignList -> jrElements = list(driDesignList);
+            case DRIDesignTextField driDesignTextField -> {
+                final JRDesignElement jrElement = textField(driDesignTextField);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignFiller driDesignFiller -> {
+                final JRDesignElement jrElement = filler(driDesignFiller);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignImage driDesignImage -> {
+                final JRDesignElement jrElement = image(driDesignImage);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignSubreport driDesignSubreport -> {
+                final JRDesignElement jrElement = subreport(driDesignSubreport, component.getWidth());
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignLine driDesignLine -> {
+                final JRDesignElement jrElement = line(driDesignLine);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignEllipse driDesignEllipse -> {
+                final JRDesignElement jrElement = ellipse(driDesignEllipse);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignRectangle driDesignRectangle -> {
+                final JRDesignElement jrElement = rectangle(driDesignRectangle);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignBreak driDesignBreak -> {
+                final JRDesignElement jrElement = breakComponent(driDesignBreak);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignGenericElement driDesignGenericElement -> {
+                final JRDesignElement jrElement = genericElement(driDesignGenericElement);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignCrosstab driDesignCrosstab -> {
+                final JRDesignElement jrElement = accessor.getCrosstabTransform().transform(driDesignCrosstab);
+                jrElements = component(jrElement, component, listType);
+            }
+            case DRIDesignCustomComponent driDesignCustomComponent -> {
+                final JRDesignElement jrElement = customComponent(component);
+                jrElements = component(jrElement, component, listType);
+            }
+            default ->
+                    throw new JasperDesignException("Component " + component.getClass().getName() + " not supported");
         }
 
         return jrElements;

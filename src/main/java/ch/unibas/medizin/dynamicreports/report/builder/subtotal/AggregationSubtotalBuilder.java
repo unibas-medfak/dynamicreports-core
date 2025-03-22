@@ -108,7 +108,6 @@ public class AggregationSubtotalBuilder<T> extends SubtotalBuilder<AggregationSu
             case FIRST_GROUP_HEADER, FIRST_GROUP_FOOTER -> Evaluation.FIRST_GROUP;
             case LAST_GROUP_HEADER, LAST_GROUP_FOOTER -> Evaluation.LAST_GROUP;
             case TITLE, LAST_PAGE_FOOTER, SUMMARY -> Evaluation.REPORT;
-            default -> throw new DRReportException("Subtotal position " + position.name() + " not supported");
         };
     }
 

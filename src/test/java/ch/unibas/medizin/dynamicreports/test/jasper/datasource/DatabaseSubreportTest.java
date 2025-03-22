@@ -135,7 +135,7 @@ public class DatabaseSubreportTest extends AbstractJasperValueTest {
             report.setLocale(Locale.ENGLISH)
                   .columns(column1 = col.column("Column1", "field1", type.stringType()), column2 = col.column("Column2", "field2", type.integerType()),
                            column3 = col.column("Column3", "field3", type.bigDecimalType()))
-                  .setQuery("SELECT * FROM test_table2 WHERE field4 = " + values.get(0));
+                  .setQuery("SELECT * FROM test_table2 WHERE field4 = " + values.getFirst());
             return report;
         }
     }

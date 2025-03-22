@@ -48,8 +48,7 @@ class ComponentPosition {
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     protected static void component(String name, DRDesignComponent component, int maxWidth, int maxHeight) throws DRException {
-        if (component instanceof DRDesignList) {
-            DRDesignList list = (DRDesignList) component;
+        if (component instanceof DRDesignList list) {
             list.setX(0);
             list.setY(0);
             list(name, list, maxWidth, maxHeight, true);
@@ -96,8 +95,7 @@ class ComponentPosition {
 
     private static void list(String name, DRDesignList list) throws DRException {
         for (DRDesignComponent designComponent : list.getComponents()) {
-            if (designComponent instanceof DRDesignList) {
-                DRDesignList listComponent = (DRDesignList) designComponent;
+            if (designComponent instanceof DRDesignList listComponent) {
                 if (!listComponent.isCalculateComponents()) {
                     listComponent.setCalculateComponents(true);
                     list(name, listComponent, listComponent.getWidth(), listComponent.getHeight(), false);
@@ -109,8 +107,7 @@ class ComponentPosition {
 
     private static void alignment(DRDesignList list) {
         for (DRDesignListCell listCell : list.getListCells()) {
-            if (listCell.getComponent() instanceof DRDesignList) {
-                DRDesignList comList = (DRDesignList) listCell.getComponent();
+            if (listCell.getComponent() instanceof DRDesignList comList) {
                 alignment(comList);
                 if (listCell.getHorizontalAlignment() == null) {
                     listCell.setHorizontalAlignment(detectHorizontalCellComponentAlignment(comList));

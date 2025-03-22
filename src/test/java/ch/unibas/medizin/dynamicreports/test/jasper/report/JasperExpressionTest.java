@@ -76,7 +76,7 @@ public class JasperExpressionTest extends AbstractJasperValueTest implements Ser
         try {
             final ByteArrayOutputStream bos = new ByteArrayOutputStream();
             getReportBuilder().toJrXml(bos);
-            final String jrxml = new String(bos.toByteArray());
+            final String jrxml = bos.toString();
             Assertions.assertFalse(StringUtils.contains(jrxml, "ch.unibas.medizin.dynamicreports"), "jrxml contains dependency to dynamicreports");
         } catch (final DRException e) {
             Assertions.fail(e.getMessage());

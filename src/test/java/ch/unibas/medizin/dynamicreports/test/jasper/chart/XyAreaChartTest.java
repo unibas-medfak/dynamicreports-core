@@ -82,7 +82,7 @@ public class XyAreaChartTest extends AbstractJasperChartTest implements Serializ
     numberOfPagesTest(1);
 
     JFreeChart chart = getChart("summary.chart1", 0);
-    Axis axis = chart.getXYPlot().getDomainAxis();
+    ValueAxis axis = chart.getXYPlot().getDomainAxis();
     final XYPlot plot = chart.getXYPlot();
      Assertions.assertEquals( XYAreaRenderer.class, plot.getRenderer().getClass(),"renderer");
      Assertions.assertEquals( "category", axis.getLabel(),"category label");
@@ -101,8 +101,8 @@ public class XyAreaChartTest extends AbstractJasperChartTest implements Serializ
      Assertions.assertEquals( ARIMO_ITALIC_AWT, axis.getTickLabelFont(),"tick label font");
      Assertions.assertEquals( "10.00",        ((NumberAxis) axis).getNumberFormatOverride().format(10),"tick label mask");
      Assertions.assertEquals( Color.LIGHT_GRAY, axis.getAxisLinePaint(),"line color");
-     Assertions.assertEquals( 1d, ((ValueAxis) axis).getLowerBound(), 0,"range min value");
-     Assertions.assertEquals( 15d, ((ValueAxis) axis).getUpperBound(), 0,"range max value");
+     Assertions.assertEquals( 1d, axis.getLowerBound(), 0,"range min value");
+     Assertions.assertEquals( 15d, axis.getUpperBound(), 0,"range max value");
   }
 
   @Override

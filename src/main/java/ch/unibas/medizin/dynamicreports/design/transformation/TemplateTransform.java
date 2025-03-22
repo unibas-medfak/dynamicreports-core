@@ -834,10 +834,7 @@ public class TemplateTransform {
         }
 
         final int bandWidth = detectWidth(band.getList());
-        if (bandWidth > maxWidth) {
-            return bandWidth;
-        }
-        return maxWidth;
+        return Math.max(bandWidth, maxWidth);
     }
 
     private int getStaticPageWidth() throws DRException {
@@ -2279,10 +2276,7 @@ public class TemplateTransform {
                 }
             }
         }
-        if (maxWidth > Defaults.getDefaults().getCrosstabColumnGroupTotalHeaderMaxWidth()) {
-            return Defaults.getDefaults().getCrosstabColumnGroupTotalHeaderMaxWidth();
-        }
-        return maxWidth;
+        return Math.min(maxWidth, Defaults.getDefaults().getCrosstabColumnGroupTotalHeaderMaxWidth());
     }
 
     /**
@@ -2312,10 +2306,7 @@ public class TemplateTransform {
                 break;
             }
         }
-        if (maxWidth > Defaults.getDefaults().getCrosstabRowGroupHeaderMaxWidth()) {
-            return Defaults.getDefaults().getCrosstabRowGroupHeaderMaxWidth();
-        }
-        return maxWidth;
+        return Math.min(maxWidth, Defaults.getDefaults().getCrosstabRowGroupHeaderMaxWidth());
     }
 
     /**
@@ -2382,10 +2373,7 @@ public class TemplateTransform {
                 maxWidth = width;
             }
         }
-        if (maxWidth > Defaults.getDefaults().getCrosstabCellMaxWidth()) {
-            return Defaults.getDefaults().getCrosstabCellMaxWidth();
-        }
-        return maxWidth;
+        return Math.min(maxWidth, Defaults.getDefaults().getCrosstabCellMaxWidth());
     }
 
     /**

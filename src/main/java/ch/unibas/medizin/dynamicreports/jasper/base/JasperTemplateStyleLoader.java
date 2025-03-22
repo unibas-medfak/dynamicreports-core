@@ -253,7 +253,6 @@ public class JasperTemplateStyleLoader {
             case DASHED -> LineStyle.DASHED;
             case DOTTED -> LineStyle.DOTTED;
             case DOUBLE -> LineStyle.DOUBLE;
-            default -> throw new JasperDesignException("Line style " + lineStyle.name() + " not supported");
         };
     }
 
@@ -268,7 +267,6 @@ public class JasperTemplateStyleLoader {
             case RETAIN_SHAPE -> ImageScale.RETAIN_SHAPE;
             case REAL_HEIGHT -> ImageScale.REAL_HEIGHT;
             case REAL_SIZE -> ImageScale.REAL_SIZE;
-            default -> throw new JasperDesignException("Image scale " + imageScale.name() + " not supported");
         };
     }
 
@@ -281,8 +279,6 @@ public class JasperTemplateStyleLoader {
             case LEFT -> HorizontalImageAlignment.LEFT;
             case CENTER -> HorizontalImageAlignment.CENTER;
             case RIGHT -> HorizontalImageAlignment.RIGHT;
-            default ->
-                    throw new JasperDesignException("Horizontal image alignment " + horizontalImageAlignment.name() + " not supported");
         };
     }
 
@@ -295,8 +291,6 @@ public class JasperTemplateStyleLoader {
             case TOP -> VerticalImageAlignment.TOP;
             case MIDDLE -> VerticalImageAlignment.MIDDLE;
             case BOTTOM -> VerticalImageAlignment.BOTTOM;
-            default ->
-                    throw new JasperDesignException("Vertical image alignment " + verticalImageAlignment.name() + " not supported");
         };
     }
 
@@ -310,8 +304,6 @@ public class JasperTemplateStyleLoader {
             case CENTER -> HorizontalTextAlignment.CENTER;
             case RIGHT -> HorizontalTextAlignment.RIGHT;
             case JUSTIFIED -> HorizontalTextAlignment.JUSTIFIED;
-            default ->
-                    throw new JasperDesignException("Horizontal text alignment " + horizontalTextAlignment.name() + " not supported");
         };
     }
 
@@ -325,8 +317,6 @@ public class JasperTemplateStyleLoader {
             case MIDDLE -> VerticalTextAlignment.MIDDLE;
             case BOTTOM -> VerticalTextAlignment.BOTTOM;
             case JUSTIFIED -> VerticalTextAlignment.JUSTIFIED;
-            default ->
-                    throw new JasperDesignException("Vertical text alignment " + verticalTextAlignment.name() + " not supported");
         };
     }
 
@@ -356,7 +346,6 @@ public class JasperTemplateStyleLoader {
             case AT_LEAST -> LineSpacing.AT_LEAST;
             case FIXED -> LineSpacing.FIXED;
             case PROPORTIONAL -> LineSpacing.PROPORTIONAL;
-            default -> throw new JasperDesignException("LineSpacing " + lineSpacing.name() + " not supported");
         };
     }
 
@@ -376,7 +365,6 @@ public class JasperTemplateStyleLoader {
             case LEFT -> Rotation.LEFT;
             case RIGHT -> Rotation.RIGHT;
             case UPSIDE_DOWN -> Rotation.UPSIDE_DOWN;
-            default -> throw new JasperDesignException("Rotation " + rotation.name() + " not supported");
         };
     }
 
@@ -385,7 +373,6 @@ public class JasperTemplateStyleLoader {
             case LEFT -> TabStopAlignment.LEFT;
             case CENTER -> TabStopAlignment.CENTER;
             case RIGHT -> TabStopAlignment.RIGHT;
-            default -> throw new JasperDesignException("TabStopAlignment " + alignment.name() + " not supported");
         };
     }
 }

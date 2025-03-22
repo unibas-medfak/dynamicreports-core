@@ -72,7 +72,6 @@ class ConstantTransform {
                 yield ResetType.GROUP;
             }
             case GROUP -> ResetType.GROUP;
-            default -> throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
         };
     }
 
@@ -122,7 +121,6 @@ class ConstantTransform {
                 }
                 yield resetGroup;
             }
-            default -> throw new DRDesignReportException("Reset group " + resetType.name() + " not supported");
         };
     }
 
@@ -163,7 +161,6 @@ class ConstantTransform {
                 yield EvaluationTime.GROUP;
             }
             case GROUP -> EvaluationTime.GROUP;
-            default -> throw new DRDesignReportException("Evaluation time " + evaluationTime.name() + " not supported");
         };
     }
 
@@ -212,8 +209,6 @@ class ConstantTransform {
                 }
                 yield evaluationGroup;
             }
-            default ->
-                    throw new DRDesignReportException("Evaluation group " + evaluationTime.name() + " not supported");
         };
     }
 
@@ -232,8 +227,6 @@ class ConstantTransform {
             case FIXED -> HorizontalCellComponentAlignment.LEFT;
             case FLOAT -> HorizontalCellComponentAlignment.FLOAT;
             case EXPAND -> HorizontalCellComponentAlignment.EXPAND;
-            default ->
-                    throw new DRDesignReportException("Component dimension type " + widthType.name() + " not supported");
         };
     }
 
@@ -251,8 +244,6 @@ class ConstantTransform {
         return switch (heightType) {
             case FIXED -> VerticalCellComponentAlignment.TOP;
             case FLOAT, EXPAND -> VerticalCellComponentAlignment.EXPAND;
-            default ->
-                    throw new DRDesignReportException("Component dimension type " + heightType.name() + " not supported");
         };
     }
 }

@@ -67,9 +67,7 @@ public class TableOfContentsCustomizer implements DRITableOfContentsCustomizer {
 
     static {
         final StringBuilder dots = new StringBuilder(200);
-        for (int i = 0; i < dots.capacity(); i++) {
-            dots.append(".");
-        }
+        dots.append(".".repeat(Math.max(0, dots.capacity())));
         TableOfContentsCustomizer.dots = dots.toString();
     }
 
@@ -198,7 +196,7 @@ public class TableOfContentsCustomizer implements DRITableOfContentsCustomizer {
             headingComponent.add(cmp.filler().setFixedWidth(level * 10));
         }
 
-        final TextFieldBuilder<String> dotsComponent = cmp.text(dots.toString()).setTextAdjust(TextAdjust.CUT_TEXT).setHyperLink(referenceHyperLink);
+        final TextFieldBuilder<String> dotsComponent = cmp.text(dots).setTextAdjust(TextAdjust.CUT_TEXT).setHyperLink(referenceHyperLink);
         if (dotsFixedWidth != null) {
             dotsComponent.setFixedWidth(dotsFixedWidth);
         }

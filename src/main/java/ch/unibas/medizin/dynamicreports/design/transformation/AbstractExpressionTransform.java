@@ -169,28 +169,18 @@ public abstract class AbstractExpressionTransform {
             return expressions.get(expression);
         }
 
-        DRIDesignExpression express;
-        if (expression instanceof DRISystemExpression<?>) {
-            express = new DRDesignSystemExpression((DRISystemExpression<?>) expression);
-        } else if (expression instanceof DRIJasperExpression<?>) {
-            express = new DRDesignJasperExpression((DRIJasperExpression<?>) expression);
-        } else if (expression instanceof DRISimpleExpression<?>) {
-            express = new DRDesignSimpleExpression((DRISimpleExpression<?>) expression, parameterName);
-        } else if (expression instanceof DRIComplexExpression<?>) {
-            express = transformComplexExpression((DRIComplexExpression<?>) expression, parameterName);
-        } else if (expression instanceof DRIField<?>) {
-            express = transformField((DRIField<?>) expression);
-        } else if (expression instanceof DRIVariable<?>) {
-            express = transformVariable((DRIVariable<?>) expression);
-        } else if (expression instanceof DRIValueColumn<?>) {
-            express = transformExpression(((DRIValueColumn<?>) expression).getComponent().getValueExpression());
-        } else if (expression instanceof DRIBooleanColumn) {
-            express = transformExpression(((DRIBooleanColumn) expression).getComponent().getValueExpression());
-        } else if (expression instanceof DRISubtotal<?>) {
-            express = transformExpression(((DRISubtotal<?>) expression).getValueField().getValueExpression());
-        } else {
-            throw new DRDesignReportException("Expression " + expression.getClass().getName() + " not supported");
-        }
+        DRIDesignExpression express = switch (expression) {
+            case DRISystemExpression<?> driSystemExpression -> new DRDesignSystemExpression(driSystemExpression);
+            case DRIJasperExpression<?> driJasperExpression -> new DRDesignJasperExpression(driJasperExpression);
+            case DRISimpleExpression<?> driSimpleExpression -> new DRDesignSimpleExpression(driSimpleExpression, parameterName);
+            case DRIComplexExpression<?> driComplexExpression -> transformComplexExpression(driComplexExpression, parameterName);
+            case DRIField<?> driField -> transformField(driField);
+            case DRIVariable<?> driVariable -> transformVariable(driVariable);
+            case DRIValueColumn<?> driValueColumn -> transformExpression(driValueColumn.getComponent().getValueExpression());
+            case DRIBooleanColumn driBooleanColumn -> transformExpression(driBooleanColumn.getComponent().getValueExpression());
+            case DRISubtotal<?> driSubtotal -> transformExpression(driSubtotal.getValueField().getValueExpression());
+            default -> throw new DRDesignReportException("Expression " + expression.getClass().getName() + " not supported");
+        };
         express = addExpression(express);
         expressions.put(expression, express);
         return express;
@@ -290,23 +280,19 @@ public abstract class AbstractExpressionTransform {
     }
 
     private DRIDesignExpression addExpression(DRIDesignExpression expression) {
-        if (expression == null) {
-            return null;
-        }
-        if (expression instanceof DRIDesignField) {
-            return addField((DRIDesignField) expression);
-        } else if (expression instanceof DRIDesignVariable) {
-            addVariable((DRDesignVariable) expression);
-        } else if (expression instanceof DRIDesignSystemExpression) {
-            addSystemExpression((DRIDesignSystemExpression) expression);
-        } else if (expression instanceof DRIDesignJasperExpression) {
-            addJasperExpression((DRIDesignJasperExpression) expression);
-        } else if (expression instanceof DRIDesignSimpleExpression) {
-            addSimpleExpression((DRIDesignSimpleExpression) expression);
-        } else if (expression instanceof DRIDesignComplexExpression) {
-            addComplexExpression((DRIDesignComplexExpression) expression);
-        } else {
-            throw new DRDesignReportException("Expression " + expression.getClass().getName() + " not supported");
+        switch (expression) {
+            case null -> {
+                return null;
+            }
+            case DRIDesignField driDesignField -> {
+                return addField(driDesignField);
+            }
+            case DRIDesignVariable ignored -> addVariable((DRDesignVariable) expression);
+            case DRIDesignSystemExpression driDesignSystemExpression -> addSystemExpression(driDesignSystemExpression);
+            case DRIDesignJasperExpression driDesignJasperExpression -> addJasperExpression(driDesignJasperExpression);
+            case DRIDesignSimpleExpression driDesignSimpleExpression -> addSimpleExpression(driDesignSimpleExpression);
+            case DRIDesignComplexExpression driDesignComplexExpression -> addComplexExpression(driDesignComplexExpression);
+            default -> throw new DRDesignReportException("Expression " + expression.getClass().getName() + " not supported");
         }
         return expression;
     }

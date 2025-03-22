@@ -38,8 +38,6 @@ public class CustomHtmlHandler implements GenericElementHtmlHandler {
     public String getHtmlFragment(JRHtmlExporterContext context, JRGenericPrintElement element) {
         String id = (String) element.getParameterValue("id");
         String data = (String) element.getParameterValue("data");
-        StringBuilder script = new StringBuilder();
-        script.append("<div id=\"").append(id).append("\">").append(data).append("</div>");
-        return script.toString();
+        return "<div id=\"" + id + "\">" + data + "</div>";
     }
 }

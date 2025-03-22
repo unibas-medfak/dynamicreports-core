@@ -131,7 +131,7 @@ public class GroupCustomSubtotal1Test extends AbstractJasperValueTest implements
 
         @Override
         public String evaluate(List<?> values, ReportParameters reportParameters) {
-            final String percentage = new DecimalFormat("#,##0.00%", new DecimalFormatSymbols(Locale.ENGLISH)).format(values.get(0));
+            final String percentage = new DecimalFormat("#,##0.00%", new DecimalFormatSymbols(Locale.ENGLISH)).format(values.getFirst());
             return reportParameters.getValue(variable1) + " (" + percentage + ")";
         }
     }

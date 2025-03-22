@@ -162,10 +162,10 @@ public abstract class AbstractJasperTest {
 
     protected List<JRPrintElement> findElement(String key) {
         final List<JRPrintElement> elements = new ArrayList<>();
-        for (final Object name : jasperPrint.getPages()) {
-            final JRPrintPage page = (JRPrintPage) name;
-            for (final Object name2 : page.getElements()) {
-                final JRPrintElement element = (JRPrintElement) name2;
+        for (final JRPrintPage name : jasperPrint.getPages()) {
+            final JRPrintPage page = name;
+            for (final JRPrintElement name2 : page.getElements()) {
+                final JRPrintElement element = name2;
                 findElement(key, elements, element);
             }
         }
@@ -177,8 +177,8 @@ public abstract class AbstractJasperTest {
             elements.add(element);
         }
         if (element instanceof JRPrintFrame) {
-            for (final Object name : ((JRPrintFrame) element).getElements()) {
-            final JRPrintElement element2 = (JRPrintElement) name;
+            for (final JRPrintElement name : ((JRPrintFrame) element).getElements()) {
+            final JRPrintElement element2 = name;
             findElement(key, elements, element2);
       }
         }
@@ -187,8 +187,8 @@ public abstract class AbstractJasperTest {
     protected void containsElement(String key, int pageIndex) {
         final List<JRPrintElement> elements = new ArrayList<>();
         final JRPrintPage page = getJasperPrint().getPages().get(pageIndex);
-        for (final Object name : page.getElements()) {
-        final JRPrintElement element = (JRPrintElement) name;
+        for (final JRPrintElement name : page.getElements()) {
+        final JRPrintElement element = name;
         findElement(key, elements, element);
     }
         if (elements.isEmpty()) {

@@ -134,7 +134,7 @@ public class DataTypeTest {
     try {
       final String stringResult = dataType.valueToString(value, Locale.ENGLISH);
       final U stringToValue = dataType.stringToValue(stringValue, Locale.ENGLISH);
-      assertTrue(stringToValue.getClass().equals(dataType.getValueClass()), name + " stringToValue class ");
+        assertEquals(stringToValue.getClass(), dataType.getValueClass(), name + " stringToValue class ");
       assertEquals(stringResult, dataType.valueToString(stringToValue, Locale.ENGLISH), name + " stringToValue");
     } catch (final DRException e) {
       Assertions.fail(e.getMessage());

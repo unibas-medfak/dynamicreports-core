@@ -59,7 +59,7 @@ public class JasperSubreportParametersExpression extends AbstractDesignComplexEx
     public Object evaluate(List<?> values, ReportParameters reportParameters) {
         Map<String, Object> parameters;
         if (!values.isEmpty()) {
-            parameters = (Map<String, Object>) values.get(0);
+            parameters = (Map<String, Object>) values.getFirst();
         } else {
             parameters = new HashMap<>();
         }

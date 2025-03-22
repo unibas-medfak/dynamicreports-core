@@ -66,7 +66,7 @@ public class MultiPageList4Test extends AbstractJasperValueTest {
         numberOfPagesTest(2);
 
         int count = 0;
-        for (final JRPrintElement element : getJasperPrint().getPages().get(0).getElements()) {
+        for (final JRPrintElement element : getJasperPrint().getPages().getFirst().getElements()) {
             if (element instanceof JRPrintText) {
                 count++;
             }

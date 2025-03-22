@@ -399,7 +399,7 @@ public class CrosstabTransform {
 
     private <T> T getFirstValue(final List<T> values) {
         if (!values.isEmpty()) {
-            return values.get(0);
+            return values.getFirst();
         }
 
         return null;
@@ -407,7 +407,7 @@ public class CrosstabTransform {
 
     private <T> T getLastValue(final List<T> values) {
         if (!values.isEmpty()) {
-            return values.get(values.size() - 1);
+            return values.getLast();
         }
 
         return null;

@@ -127,8 +127,7 @@ class BandComponentsTransform {
             componentNames.put(componentName, componentNames.get(componentName) + 1);
         }
         component.setUniqueName(componentName + componentNames.get(componentName));
-        if (component instanceof DRDesignList) {
-            DRDesignList list = (DRDesignList) component;
+        if (component instanceof DRDesignList list) {
             for (DRDesignComponent lComponent : list.getComponents()) {
                 generateComponentNames(lComponent, bandName);
             }
@@ -139,12 +138,11 @@ class BandComponentsTransform {
     }
 
     private DRDesignComponent removeEmptyComponents(DRDesignComponent component) {
-        if (component instanceof DRDesignList) {
-            DRDesignList list = (DRDesignList) component;
+        if (component instanceof DRDesignList list) {
             if (list.getComponents().isEmpty()) {
                 return null;
             } else if (list.getComponents().size() == 1) {
-                DRDesignComponent lComponent = list.getComponents().get(0);
+                DRDesignComponent lComponent = list.getComponents().getFirst();
                 DRDesignComponent elm = removeEmptyComponents(lComponent);
                 if (elm == null) {
                     if (list.getWidth() > 0 && list.getHeight() > 0 && (list.getStyle() != null || list.getBackgroundComponent() != null)) {
@@ -193,8 +191,7 @@ class BandComponentsTransform {
     }
 
     private void componentGroupType(DRDesignComponent component) {
-        if (component instanceof DRDesignList) {
-            DRDesignList list = (DRDesignList) component;
+        if (component instanceof DRDesignList list) {
             if (list.isRemovable() && list.getStyle() == null && list.getPrintWhenExpression() == null && list.getBackgroundComponent() == null) {
                 list.setComponentGroupType(ComponentGroupType.NONE);
                 for (DRDesignComponent listComponent : list.getComponents()) {
@@ -212,8 +209,7 @@ class BandComponentsTransform {
     }
 
     private void prepareListBackgroundComponents(DRDesignComponent component) throws DRException {
-        if (component instanceof DRDesignList) {
-            DRDesignList list = (DRDesignList) component;
+        if (component instanceof DRDesignList list) {
             if (list.getBackgroundComponent() != null) {
                 DRDesignComponent backgroundComponent = list.getBackgroundComponent();
                 backgroundComponent.setX(0);
@@ -230,8 +226,7 @@ class BandComponentsTransform {
     }
 
     private void prepareCrosstabs(DRDesignComponent component) throws DRException {
-        if (component instanceof DRDesignList) {
-            DRDesignList list = (DRDesignList) component;
+        if (component instanceof DRDesignList list) {
             for (DRDesignComponent listComponent : list.getComponents()) {
                 prepareCrosstabs(listComponent);
             }

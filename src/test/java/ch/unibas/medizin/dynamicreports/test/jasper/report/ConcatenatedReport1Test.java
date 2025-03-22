@@ -55,17 +55,17 @@ public class ConcatenatedReport1Test {
         try {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             concatenatedReport.toCsv(bos);
-            Assertions.assertEquals( "text1\n1\ntext2\n1\ntext3\n1\n", new String(bos.toByteArray()),"concatenated report ");
+            Assertions.assertEquals( "text1\n1\ntext2\n1\ntext3\n1\n", bos.toString(),"concatenated report ");
 
             concatenatedReport.continuousPageNumbering();
             bos = new ByteArrayOutputStream();
             concatenatedReport.toCsv(bos);
-            Assertions.assertEquals( "text1\n1\ntext2\n2\ntext3\n3\n", new String(bos.toByteArray()), "concatenated report ");
+            Assertions.assertEquals( "text1\n1\ntext2\n2\ntext3\n3\n", bos.toString(), "concatenated report ");
 
             concatenatedReport.setContinuousPageNumbering(false);
             bos = new ByteArrayOutputStream();
             concatenatedReport.toCsv(bos);
-            Assertions.assertEquals("text1\n1\ntext2\n1\ntext3\n1\n", new String(bos.toByteArray()), "concatenated report ");
+            Assertions.assertEquals("text1\n1\ntext2\n1\ntext3\n1\n", bos.toString(), "concatenated report ");
         } catch (final DRException e) {
             e.printStackTrace();
             Assertions.fail(e.getMessage());

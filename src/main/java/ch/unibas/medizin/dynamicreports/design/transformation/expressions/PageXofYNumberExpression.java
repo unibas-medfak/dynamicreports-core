@@ -57,7 +57,7 @@ public class PageXofYNumberExpression extends AbstractComplexExpression<String> 
     /** {@inheritDoc} */
     @Override
     public String evaluate(List<?> values, ReportParameters reportParameters) {
-        String pattern = (String) values.get(0);
+        String pattern = (String) values.getFirst();
         Validate.isTrue(StringUtils.contains(pattern, "{0}"), "Wrong format pattern \"" + pattern + "\", missing argument {0}");
         Validate.isTrue(StringUtils.contains(pattern, "{1}"), "Wrong format pattern \"" + pattern + "\", missing argument {1}");
         Validate.isTrue(pattern.indexOf("{0}") < pattern.indexOf("{1}"), "Wrong format pattern \"" + pattern + "\", argument {0} must be before {1}");

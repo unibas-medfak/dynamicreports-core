@@ -89,7 +89,7 @@ public class SpiderChartTest extends AbstractJasperChartTest implements Serializ
 
         final JRPrintFrame printFrame = (JRPrintFrame) getElementAt("summary.list1", 0);
 
-        JRPrintImage image = (JRPrintImage) printFrame.getElements().get(0);
+        JRPrintImage image = (JRPrintImage) printFrame.getElements().getFirst();
         JFreeChart chart = getChart(image);
         SpiderWebPlot plot = (SpiderWebPlot) chart.getPlot();
         Assertions.assertEquals( Double.valueOf(10), Double.valueOf(plot.getMaxValue()),"max value");

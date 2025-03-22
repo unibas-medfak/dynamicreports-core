@@ -183,53 +183,31 @@ public class ChartTransform {
 
     // plot
     private DRIDesignPlot plot(DRIPlot plot, List<DRIChartCustomizer> chartCustomizers, DRIDataset subDataset, ResetType resetType, DRDesignGroup resetGroup) throws DRException {
-        DRIDesignPlot designPlot;
+        DRIDesignPlot designPlot = switch (plot) {
+            case DRIBar3DPlot driBar3DPlot -> bar3DPlot(driBar3DPlot, chartCustomizers);
+            case DRILayeredBarPlot driLayeredBarPlot -> layeredBarPlot(driLayeredBarPlot, chartCustomizers);
+            case DRIWaterfallBarPlot driWaterfallBarPlot -> waterfallBarPlot(driWaterfallBarPlot, chartCustomizers);
+            case DRIGroupedStackedBarPlot driGroupedStackedBarPlot -> groupedStackedBarPlot(driGroupedStackedBarPlot, chartCustomizers);
+            case DRIBarPlot driBarPlot -> barPlot(driBarPlot, chartCustomizers);
+            case DRIDifferencePlot driDifferencePlot -> differencePlot(driDifferencePlot, chartCustomizers);
+            case DRIXyStepPlot driXyStepPlot -> xyStepPlot(driXyStepPlot, chartCustomizers);
+            case DRILinePlot driLinePlot -> linePlot(driLinePlot, chartCustomizers);
+            case DRIMultiAxisPlot driMultiAxisPlot -> multiAxisPlot(driMultiAxisPlot, chartCustomizers, subDataset, resetType, resetGroup);
+            case DRIPie3DPlot driPie3DPlot -> pie3DPlot(driPie3DPlot, chartCustomizers);
+            case DRIPiePlot driPiePlot -> piePlot(driPiePlot, chartCustomizers);
+            case DRISpiderPlot driSpiderPlot -> spiderPlot(driSpiderPlot);
+            case DRIXyBlockPlot driXyBlockPlot -> xyBlockPlot(driXyBlockPlot, chartCustomizers);
+            case DRIBubblePlot driBubblePlot -> bubblePlot(driBubblePlot, chartCustomizers);
+            case DRICandlestickPlot driCandlestickPlot -> candlestickPlot(driCandlestickPlot, chartCustomizers);
+            case DRIHighLowPlot driHighLowPlot -> highLowPlot(driHighLowPlot, chartCustomizers);
+            case DRIMeterPlot driMeterPlot -> meterPlot(driMeterPlot);
+            case DRIThermometerPlot driThermometerPlot -> thermometerPlot(driThermometerPlot);
+            case DRIAxisPlot driAxisPlot -> axisPlot(driAxisPlot, chartCustomizers);
+            default -> throw new DRDesignReportException("Chart plot " + plot.getClass().getName() + " not supported");
+        };
 
-        if (plot instanceof DRIBar3DPlot) {
-            designPlot = bar3DPlot((DRIBar3DPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRILayeredBarPlot) {
-            designPlot = layeredBarPlot((DRILayeredBarPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIWaterfallBarPlot) {
-            designPlot = waterfallBarPlot((DRIWaterfallBarPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIGroupedStackedBarPlot) {
-            designPlot = groupedStackedBarPlot((DRIGroupedStackedBarPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIBarPlot) {
-            designPlot = barPlot((DRIBarPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIDifferencePlot) {
-            designPlot = differencePlot((DRIDifferencePlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIXyStepPlot) {
-            designPlot = xyStepPlot((DRIXyStepPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRILinePlot) {
-            designPlot = linePlot((DRILinePlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIMultiAxisPlot) {
-            designPlot = multiAxisPlot((DRIMultiAxisPlot) plot, chartCustomizers, subDataset, resetType, resetGroup);
-        } else if (plot instanceof DRIPie3DPlot) {
-            designPlot = pie3DPlot((DRIPie3DPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIPiePlot) {
-            designPlot = piePlot((DRIPiePlot) plot, chartCustomizers);
-        } else if (plot instanceof DRISpiderPlot) {
-            designPlot = spiderPlot((DRISpiderPlot) plot);
-        } else if (plot instanceof DRIXyBlockPlot) {
-            designPlot = xyBlockPlot((DRIXyBlockPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIBubblePlot) {
-            designPlot = bubblePlot((DRIBubblePlot) plot, chartCustomizers);
-        } else if (plot instanceof DRICandlestickPlot) {
-            designPlot = candlestickPlot((DRICandlestickPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIHighLowPlot) {
-            designPlot = highLowPlot((DRIHighLowPlot) plot, chartCustomizers);
-        } else if (plot instanceof DRIMeterPlot) {
-            designPlot = meterPlot((DRIMeterPlot) plot);
-        } else if (plot instanceof DRIThermometerPlot) {
-            designPlot = thermometerPlot((DRIThermometerPlot) plot);
-        } else if (plot instanceof DRIAxisPlot) {
-            designPlot = axisPlot((DRIAxisPlot) plot, chartCustomizers);
-        } else {
-            throw new DRDesignReportException("Chart plot " + plot.getClass().getName() + " not supported");
-        }
-
-        if (plot instanceof DRIBasePlot) {
+        if (plot instanceof DRIBasePlot basePlot) {
             AbstractDesignBasePlot designBasePlot = ((AbstractDesignBasePlot) designPlot);
-            DRIBasePlot basePlot = (DRIBasePlot) plot;
             designBasePlot.setOrientation(basePlot.getOrientation());
             designBasePlot.setSeriesColors(accessor.getTemplateTransform().getChartSeriesColors(basePlot));
             Map<String, Color> seriesColorsByName = basePlot.getSeriesColorsByName();
@@ -262,21 +240,18 @@ public class ChartTransform {
     private DRDesignBarPlot groupedStackedBarPlot(DRIGroupedStackedBarPlot groupedStackedBarPlot, List<DRIChartCustomizer> chartCustomizers) throws DRException {
         GroupedStackedBarRendererCustomizer renderer = new GroupedStackedBarRendererCustomizer();
         chartCustomizers.add(renderer);
-        DRDesignBarPlot designBarPlot = barPlot(groupedStackedBarPlot, chartCustomizers);
-        return designBarPlot;
+        return barPlot(groupedStackedBarPlot, chartCustomizers);
     }
 
     private DRDesignBarPlot layeredBarPlot(DRILayeredBarPlot layeredBarPlot, List<DRIChartCustomizer> chartCustomizers) throws DRException {
         chartCustomizers.add(new LayeredBarRendererCustomizer(layeredBarPlot.getSeriesBarWidths()));
-        DRDesignBarPlot designBarPlot = barPlot(layeredBarPlot, chartCustomizers);
-        return designBarPlot;
+        return barPlot(layeredBarPlot, chartCustomizers);
     }
 
     private DRDesignBarPlot waterfallBarPlot(DRIWaterfallBarPlot waterfallBarPlot, List<DRIChartCustomizer> chartCustomizers) throws DRException {
         WaterfallBarRendererCustomizer waterfallBarCustomizer = new WaterfallBarRendererCustomizer(waterfallBarPlot);
         chartCustomizers.add(waterfallBarCustomizer);
-        DRDesignBarPlot designBarPlot = barPlot(waterfallBarPlot, chartCustomizers);
-        return designBarPlot;
+        return barPlot(waterfallBarPlot, chartCustomizers);
     }
 
     private DRDesignLinePlot linePlot(DRILinePlot linePlot, List<DRIChartCustomizer> chartCustomizers) throws DRException {
@@ -540,20 +515,14 @@ public class ChartTransform {
             accessor.transformToDataset(subDataset);
         }
 
-        DRDesignChartDataset designDataset;
-        if (dataset instanceof DRICategoryDataset) {
-            designDataset = categoryDataset((DRICategoryDataset) dataset, resetType, resetGroup);
-        } else if (dataset instanceof DRITimeSeriesDataset) {
-            designDataset = timeSeriesDataset((DRITimeSeriesDataset) dataset, resetType, resetGroup);
-        } else if (dataset instanceof DRISeriesDataset) {
-            designDataset = seriesDataset((DRISeriesDataset) dataset, resetType, resetGroup);
-        } else if (dataset instanceof DRIHighLowDataset) {
-            designDataset = highLowDataset((DRIHighLowDataset) dataset);
-        } else if (dataset instanceof DRIValueDataset) {
-            designDataset = valueDataset((DRIValueDataset) dataset);
-        } else {
-            throw new DRDesignReportException("Dataset " + dataset.getClass().getName() + " not supported");
-        }
+        DRDesignChartDataset designDataset = switch (dataset) {
+            case DRICategoryDataset driCategoryDataset -> categoryDataset(driCategoryDataset, resetType, resetGroup);
+            case DRITimeSeriesDataset driTimeSeriesDataset -> timeSeriesDataset(driTimeSeriesDataset, resetType, resetGroup);
+            case DRISeriesDataset driSeriesDataset -> seriesDataset(driSeriesDataset, resetType, resetGroup);
+            case DRIHighLowDataset driHighLowDataset -> highLowDataset(driHighLowDataset);
+            case DRIValueDataset driValueDataset -> valueDataset(driValueDataset);
+            default -> throw new DRDesignReportException("Dataset " + dataset.getClass().getName() + " not supported");
+        };
 
         designDataset.setSubDataset(designSubDataset);
         if (resetType != null && resetType.equals(ResetType.NONE)) {
@@ -573,20 +542,14 @@ public class ChartTransform {
         designDataset.setValueExpression(valueExpression);
         int index = 0;
         for (DRIChartSerie serie : dataset.getSeries()) {
-            DRDesignChartSerie designSerie;
-            if (serie instanceof DRIGroupedCategoryChartSerie) {
-                designSerie = groupedCategorySerie(dataset.getSubDataset(), (DRIGroupedCategoryChartSerie) serie, valueExpression, resetType, resetGroup, index++);
-            } else if (serie instanceof DRICategoryChartSerie) {
-                designSerie = categorySerie(dataset.getSubDataset(), (DRICategoryChartSerie) serie, valueExpression, resetType, resetGroup, index++);
-            } else if (serie instanceof DRIXyChartSerie) {
-                designSerie = xySerie(dataset.getSubDataset(), (DRIXyChartSerie) serie, valueExpression, resetType, resetGroup, index++);
-            } else if (serie instanceof DRIXyzChartSerie) {
-                designSerie = xyzSerie(dataset.getSubDataset(), (DRIXyzChartSerie) serie, valueExpression, resetType, resetGroup, index++);
-            } else if (serie instanceof DRIGanttChartSerie) {
-                designSerie = ganttSerie(dataset.getSubDataset(), (DRIGanttChartSerie) serie, valueExpression, resetType, resetGroup, index++);
-            } else {
-                throw new DRDesignReportException("Chart serie " + serie.getClass().getName() + " not supported");
-            }
+            DRDesignChartSerie designSerie = switch (serie) {
+                case DRIGroupedCategoryChartSerie driGroupedCategoryChartSerie -> groupedCategorySerie(dataset.getSubDataset(), driGroupedCategoryChartSerie, valueExpression, resetType, resetGroup, index++);
+                case DRICategoryChartSerie driCategoryChartSerie -> categorySerie(dataset.getSubDataset(), driCategoryChartSerie, valueExpression, resetType, resetGroup, index++);
+                case DRIXyChartSerie driXyChartSerie -> xySerie(dataset.getSubDataset(), driXyChartSerie, valueExpression, resetType, resetGroup, index++);
+                case DRIXyzChartSerie driXyzChartSerie -> xyzSerie(dataset.getSubDataset(), driXyzChartSerie, valueExpression, resetType, resetGroup, index++);
+                case DRIGanttChartSerie driGanttChartSerie -> ganttSerie(dataset.getSubDataset(), driGanttChartSerie, valueExpression, resetType, resetGroup, index++);
+                default -> throw new DRDesignReportException("Chart serie " + serie.getClass().getName() + " not supported");
+            };
             DRIDesignHyperLink itemHyperLink = accessor.getReportTransform().hyperlink(serie.getItemHyperLink());
             if (itemHyperLink == null) {
                 itemHyperLink = datasetItemHyperLink;

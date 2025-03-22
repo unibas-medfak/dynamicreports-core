@@ -77,8 +77,7 @@ public class CrosstabExpression<T> extends AbstractComplexExpression<T> {
         for (int i = 0; i < getExpressions().size(); i++) {
             customValues.setSystemValue(getExpressions().get(i).getName(), values.get(i));
         }
-        if (expression instanceof DRIComplexExpression) {
-            DRIComplexExpression<?> express = (DRIComplexExpression<?>) expression;
+        if (expression instanceof DRIComplexExpression<?> express) {
             return (T) express.evaluate(values, reportParameters);
         } else {
             return reportParameters.getValue(expression.getName());

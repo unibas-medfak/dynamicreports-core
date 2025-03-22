@@ -133,7 +133,7 @@ public class HyperLinkCrosstabTest extends AbstractJasperCrosstabValueTest imple
 
         @Override
         public String evaluate(List<?> values, ReportParameters reportParameters) {
-            return (String) values.get(0);
+            return (String) values.getFirst();
         }
 
     }

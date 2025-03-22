@@ -85,14 +85,14 @@ public class MultiAxisChartTest extends AbstractJasperChartTest implements Seria
         final XYItemRenderer renderer = chart.getXYPlot().getRenderer();
          Assertions.assertEquals( XYLineAndShapeRenderer.class, renderer.getClass(),"renderer");
         TimeSeriesCollection dataset = (TimeSeriesCollection) chart.getXYPlot().getDataset(0);
-        TimeSeries serie = (TimeSeries) dataset.getSeries().get(0);
+        TimeSeries serie = (TimeSeries) dataset.getSeries().getFirst();
         Assertions.assertEquals( 1d, serie.getDataItem(0).getValue(),"value");
         Assertions.assertEquals( 4d, serie.getDataItem(1).getValue(),"value");
         Assertions.assertEquals( 6d, serie.getDataItem(2).getValue(),"value");
         Assertions.assertEquals( 8d, serie.getDataItem(3).getValue(),"value");
 
         dataset = (TimeSeriesCollection) chart.getXYPlot().getDataset(1);
-        serie = (TimeSeries) dataset.getSeries().get(0);
+        serie = (TimeSeries) dataset.getSeries().getFirst();
 
         Assertions.assertEquals( 0d, serie.getDataItem(0).getValue(),"value");
         Assertions.assertEquals( 2d, serie.getDataItem(1).getValue(),"value");
@@ -102,10 +102,10 @@ public class MultiAxisChartTest extends AbstractJasperChartTest implements Seria
 
         final JRChart chart2 = (JRChart) getJasperReport().getSummary().getElementByKey("summary.chart2");
         final JRChartPlot plot = chart2.getPlot();
-        Assertions.assertTrue(plot instanceof JRMultiAxisPlot, "plot");
+        Assertions.assertInstanceOf(JRMultiAxisPlot.class, plot, "plot");
         final JRMultiAxisPlot multiAxisPlot = (JRMultiAxisPlot) plot;
          Assertions.assertEquals( 2, multiAxisPlot.getAxes().size(),"axes");
-        JRChartAxis chartAxis = multiAxisPlot.getAxes().get(0);
+        JRChartAxis chartAxis = multiAxisPlot.getAxes().getFirst();
          Assertions.assertEquals( AxisPositionEnum.LEFT_OR_TOP, chartAxis.getPosition(),"position");
          Assertions.assertEquals( ChartTypeEnum.TIMESERIES, chartAxis.getChart().getChartType(),"chart");
         chartAxis = multiAxisPlot.getAxes().get(1);

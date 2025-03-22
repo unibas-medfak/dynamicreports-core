@@ -62,7 +62,7 @@ public abstract class AbstractSubDatasourceExpression<T> extends AbstractComplex
     /** {@inheritDoc} */
     @Override
     public JRDataSource evaluate(List<?> values, ReportParameters reportParameters) {
-        return createSubDatasource((T) values.get(0));
+        return createSubDatasource((T) values.getFirst());
     }
 
     /** {@inheritDoc} */

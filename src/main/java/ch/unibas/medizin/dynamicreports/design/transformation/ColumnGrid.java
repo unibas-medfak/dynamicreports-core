@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * @author Ricardo Mariaca
  */
-class ColumnGrid {
+public class ColumnGrid {
     private DRDesignList list;
     private final Map<DRIColumn<?>, DRDesignList> columnsLists;
     private boolean isEmpty;

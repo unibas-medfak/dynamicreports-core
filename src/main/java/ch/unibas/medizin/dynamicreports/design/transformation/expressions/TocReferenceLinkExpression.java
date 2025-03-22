@@ -60,7 +60,7 @@ public class TocReferenceLinkExpression extends AbstractComplexExpression<String
     public String evaluate(List<?> values, ReportParameters reportParameters) {
         String id;
         if (customId) {
-            id = (String) values.get(0);
+            id = (String) values.getFirst();
         } else {
             id = expressionName + "_" + reportParameters.getReportRowNumber();
         }

@@ -88,7 +88,7 @@ public class XyStepChartTest extends AbstractJasperChartTest implements Serializ
      Assertions.assertEquals( 0.5d, ((XYStepRenderer) renderer).getStepPoint(), 0,"step point");
 
     chart = getChart("summary.chart2", 0);
-    Axis axis = chart.getXYPlot().getDomainAxis();
+    ValueAxis axis = chart.getXYPlot().getDomainAxis();
      Assertions.assertEquals( "category", axis.getLabel(),"category label");
      Assertions.assertEquals( Color.BLUE, axis.getLabelPaint(),"category label color");
      Assertions.assertEquals( ARIMO_BOLD_AWT, axis.getLabelFont(),"category label font");
@@ -106,8 +106,8 @@ public class XyStepChartTest extends AbstractJasperChartTest implements Serializ
     Assertions.assertEquals( "10.00",
         ((NumberAxis) axis).getNumberFormatOverride().format(10), "tick label mask");
      Assertions.assertEquals( Color.LIGHT_GRAY, axis.getAxisLinePaint(),"line color");
-     Assertions.assertEquals( 1d, ((ValueAxis) axis).getLowerBound(), 0,"range min value");
-     Assertions.assertEquals( 15d, ((ValueAxis) axis).getUpperBound(), 0,"range max value");
+     Assertions.assertEquals( 1d, axis.getLowerBound(), 0,"range min value");
+     Assertions.assertEquals( 15d, axis.getUpperBound(), 0,"range max value");
   }
 
   @Override

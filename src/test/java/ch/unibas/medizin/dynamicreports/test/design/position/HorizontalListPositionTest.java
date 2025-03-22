@@ -51,13 +51,13 @@ public class HorizontalListPositionTest extends AbstractBandTest {
     @Override
     protected void titleBandTest(DRDesignBand band) {
         final DRDesignComponent component = band.getBandComponent();
-        Assertions.assertTrue(component instanceof DRDesignList);
+        Assertions.assertInstanceOf(DRDesignList.class, component);
         final DRDesignList list = (DRDesignList) component;
         Assertions.assertEquals(ListType.HORIZONTAL, list.getType());
         Assertions.assertEquals(9, list.getComponents().size());
         componentPositionTest(list, 0, 0, 1170, 23);
         for (int i = 0; i < 9; i++) {
-            Assertions.assertTrue(list.getComponents().get(i) instanceof DRDesignTextField);
+            Assertions.assertInstanceOf(DRDesignTextField.class, list.getComponents().get(i));
         }
 
         componentPositionTest(list.getComponents().get(0), 0, 0, 154, 23);

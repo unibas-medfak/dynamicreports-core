@@ -94,7 +94,7 @@ public class Subreport5Test extends AbstractJasperValueTest implements Serializa
         @Override
         public JasperReportBuilder evaluate(List<?> values, ReportParameters reportParameters) {
             final JasperReportBuilder report = report();
-            report.title(cmp.text("Subreport " + values.get(0))).columns(column1);
+            report.title(cmp.text("Subreport " + values.getFirst())).columns(column1);
 
             return report;
         }
@@ -111,8 +111,8 @@ public class Subreport5Test extends AbstractJasperValueTest implements Serializa
         @Override
         public JRDataSource evaluate(List<?> values, ReportParameters reportParameters) {
             final DRDataSource dataSource = new DRDataSource("field1");
-            dataSource.add(values.get(0) + "a");
-            dataSource.add(values.get(0) + "b");
+            dataSource.add(values.getFirst() + "a");
+            dataSource.add(values.getFirst() + "b");
             return dataSource;
         }
     }

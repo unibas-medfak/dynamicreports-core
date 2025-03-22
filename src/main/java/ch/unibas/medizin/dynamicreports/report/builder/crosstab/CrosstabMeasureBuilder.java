@@ -139,8 +139,7 @@ public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBu
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabMeasureBuilder} object.
      */
     public CrosstabMeasureBuilder<T> setPercentageType(final CrosstabPercentageType percentageType) {
-        if (getObject().getExpression() instanceof DRCrosstabVariable<?>) {
-            final DRCrosstabVariable<?> variable = (DRCrosstabVariable<?>) getObject().getExpression();
+        if (getObject().getExpression() instanceof DRCrosstabVariable<?> variable) {
             if (percentageType != null && percentageType.equals(CrosstabPercentageType.GRAND_TOTAL) && !variable.getCalculation().equals(Calculation.COUNT) &&
                 !variable.getCalculation().equals(Calculation.DISTINCT_COUNT)) {
                 setDataType(DataTypes.doubleType());

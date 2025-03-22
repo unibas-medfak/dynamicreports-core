@@ -122,7 +122,7 @@ public class GroupCustomSubtotal2Test extends AbstractJasperValueTest implements
 
         @Override
         public Integer evaluate(List<?> values, ReportParameters reportParameters) {
-            return (Integer) values.get(0);
+            return (Integer) values.getFirst();
         }
     }
 }

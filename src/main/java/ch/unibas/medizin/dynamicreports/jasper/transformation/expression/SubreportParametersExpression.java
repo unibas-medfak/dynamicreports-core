@@ -66,7 +66,7 @@ public class SubreportParametersExpression extends AbstractDesignComplexExpressi
             parameters.putAll(subreportExpression.getReportBuilder().getReport().getParameterValues());
         }
         if (!values.isEmpty()) {
-            parameters.putAll((Map<String, Object>) values.get(0));
+            parameters.putAll((Map<String, Object>) values.getFirst());
         }
         parameters.put(JasperReportParameters.MASTER_REPORT_PARAMETERS, reportParameters);
         return parameters;

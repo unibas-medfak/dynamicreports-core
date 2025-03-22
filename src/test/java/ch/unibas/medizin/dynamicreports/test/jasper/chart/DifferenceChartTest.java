@@ -105,14 +105,14 @@ public class DifferenceChartTest extends AbstractJasperChartTest implements Seri
      Assertions.assertEquals( Color.MAGENTA,        ((XYDifferenceRenderer) renderer).getNegativePaint(),"negative paint");
 
     chart = getChart("summary.chart2", 0);
-    Axis axis = chart.getXYPlot().getDomainAxis();
+    ValueAxis axis = chart.getXYPlot().getDomainAxis();
      Assertions.assertEquals( "time", axis.getLabel(),"category label");
      Assertions.assertEquals( Color.BLUE, axis.getLabelPaint(),"category label color");
      Assertions.assertEquals( ARIMO_BOLD_AWT, axis.getLabelFont(),"category label font");
      Assertions.assertEquals( Color.CYAN, axis.getTickLabelPaint(),"tick label color");
      Assertions.assertEquals( ARIMO_ITALIC_AWT, axis.getTickLabelFont(),"tick label font");
      Assertions.assertEquals( Color.LIGHT_GRAY, axis.getAxisLinePaint(),"line color");
-     Assertions.assertTrue( ((ValueAxis) axis).isVerticalTickLabels(),"vertical tick labels");
+     Assertions.assertTrue( axis.isVerticalTickLabels(),"vertical tick labels");
 
     chart = getChart("summary.chart3", 0);
     axis = chart.getXYPlot().getRangeAxis();
@@ -123,9 +123,9 @@ public class DifferenceChartTest extends AbstractJasperChartTest implements Seri
      Assertions.assertEquals( ARIMO_ITALIC_AWT, axis.getTickLabelFont(),"tick label font");
     Assertions.assertEquals( "10.00", ((NumberAxis) axis).getNumberFormatOverride().format(10), "tick label mask");
     //  Assertions.assertEquals( Color.LIGHT_GRAY, axis.getAxisLinePaint(),"line color");
-     Assertions.assertEquals( 1d, ((ValueAxis) axis).getLowerBound(), 0,"range min value");
-     Assertions.assertEquals( 15d, ((ValueAxis) axis).getUpperBound(), 0,"range max value");
-     Assertions.assertTrue( ((ValueAxis) axis).isVerticalTickLabels(),"vertical tick labels");
+     Assertions.assertEquals( 1d, axis.getLowerBound(), 0,"range min value");
+     Assertions.assertEquals( 15d, axis.getUpperBound(), 0,"range max value");
+     Assertions.assertTrue( axis.isVerticalTickLabels(),"vertical tick labels");
   }
 
   @Override

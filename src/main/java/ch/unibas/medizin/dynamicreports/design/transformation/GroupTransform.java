@@ -263,7 +263,7 @@ public class GroupTransform {
      */
     protected DRIGroup getFirstGroup() {
         if (!groups.isEmpty()) {
-            return groups.get(0);
+            return groups.getFirst();
         }
         return null;
     }
@@ -288,7 +288,7 @@ public class GroupTransform {
      */
     protected DRIGroup getLastGroup() {
         if (!groups.isEmpty()) {
-            return groups.get(groups.size() - 1);
+            return groups.getLast();
         }
         return null;
     }

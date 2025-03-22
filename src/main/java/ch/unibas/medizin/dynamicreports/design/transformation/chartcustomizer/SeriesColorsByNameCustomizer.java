@@ -88,8 +88,7 @@ public class SeriesColorsByNameCustomizer implements DRIChartCustomizer {
                 }
                 chart.getCategoryPlot().setFixedLegendItems(legendItems);
             }
-        } else if (chart.getPlot() instanceof PiePlot) {
-            PiePlot plot = (PiePlot) chart.getPlot();
+        } else if (chart.getPlot() instanceof PiePlot plot) {
             PieDataset dataset = plot.getDataset();
             for (int i = 0; i < dataset.getItemCount(); i++) {
                 String key = (String) dataset.getKey(i);

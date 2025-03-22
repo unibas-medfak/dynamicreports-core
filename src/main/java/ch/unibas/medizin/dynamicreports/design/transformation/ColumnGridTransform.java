@@ -129,18 +129,21 @@ public class ColumnGridTransform {
     }
 
     private GridList list(final DRIColumnGridComponent columnGridComponent, final ColumnGrid columnGrid, final boolean titleGroup) throws DRException {
-        if (columnGridComponent instanceof DRIColumn<?>) {
-            final DRDesignList list = new DRDesignList(ListType.VERTICAL);
-            final DRIColumn<?> column = (DRIColumn<?>) columnGridComponent;
-            list.setWidth(accessor.getTemplateTransform().getColumnWidth(column, accessor.getStyleTransform().getDefaultStyle(DefaultStyleType.COLUMN)));
-            columnGrid.addList(column, list);
-            return new GridList(list, null);
-        } else if (columnGridComponent instanceof DRIColumnGridList) {
-            return new GridList(columnGridList((DRIColumnGridList) columnGridComponent, columnGrid, titleGroup), null);
-        } else if (columnGridComponent instanceof DRIColumnTitleGroup) {
-            return columnGridTitleGroup((DRIColumnTitleGroup) columnGridComponent, columnGrid, titleGroup);
-        } else {
-            throw new DRDesignReportException("Column grid component " + columnGridComponent.getClass().getName() + " not supported");
+        switch (columnGridComponent) {
+            case DRIColumn<?> column -> {
+                final DRDesignList list = new DRDesignList(ListType.VERTICAL);
+                list.setWidth(accessor.getTemplateTransform().getColumnWidth(column, accessor.getStyleTransform().getDefaultStyle(DefaultStyleType.COLUMN)));
+                columnGrid.addList(column, list);
+                return new GridList(list, null);
+            }
+            case DRIColumnGridList driColumnGridList -> {
+                return new GridList(columnGridList(driColumnGridList, columnGrid, titleGroup), null);
+            }
+            case DRIColumnTitleGroup driColumnTitleGroup -> {
+                return columnGridTitleGroup(driColumnTitleGroup, columnGrid, titleGroup);
+            }
+            default ->
+                    throw new DRDesignReportException("Column grid component " + columnGridComponent.getClass().getName() + " not supported");
         }
     }
 
@@ -152,8 +155,7 @@ public class ColumnGridTransform {
             final DRIColumnGridComponent component = cell.getComponent();
             HorizontalCellComponentAlignment horizontalAlignment = cell.getHorizontalAlignment();
             VerticalCellComponentAlignment verticalAlignment = cell.getVerticalAlignment();
-            if (component instanceof DRIColumn<?>) {
-                final DRIColumn<?> column = (DRIColumn<?>) component;
+            if (component instanceof DRIColumn<?> column) {
                 if (column instanceof DRIBooleanColumn) {
                     if (horizontalAlignment == null) {
                         horizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(((DRIBooleanColumn) column).getComponent().getWidthType());

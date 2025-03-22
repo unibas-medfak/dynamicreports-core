@@ -51,37 +51,37 @@ public class ColumnPosition2Test extends ColumnPosition1Test {
     @Override
     protected void testBand(DRDesignBand band) {
         final DRDesignComponent component = band.getBandComponent();
-        Assertions.assertTrue(component instanceof DRDesignList);
+        Assertions.assertInstanceOf(DRDesignList.class, component);
         final DRDesignList list1 = (DRDesignList) component;
         Assertions.assertEquals(ListType.HORIZONTAL, list1.getType());
         Assertions.assertEquals(2, list1.getComponents().size());
         componentPositionTest(list1, 0, 0, 575, 32);
-        Assertions.assertTrue(list1.getComponents().get(0) instanceof DRDesignTextField);
-        Assertions.assertTrue(list1.getComponents().get(1) instanceof DRDesignList);
+        Assertions.assertInstanceOf(DRDesignTextField.class, list1.getComponents().get(0));
+        Assertions.assertInstanceOf(DRDesignList.class, list1.getComponents().get(1));
 
         final DRDesignList list2 = (DRDesignList) list1.getComponents().get(1);
         Assertions.assertEquals(ListType.VERTICAL, list2.getType());
         Assertions.assertEquals(2, list2.getComponents().size());
         componentPositionTest(list2, 191, 0, 384, 32);
-        Assertions.assertTrue(list2.getComponents().get(0) instanceof DRDesignList);
-        Assertions.assertTrue(list2.getComponents().get(1) instanceof DRDesignList);
+        Assertions.assertInstanceOf(DRDesignList.class, list2.getComponents().get(0));
+        Assertions.assertInstanceOf(DRDesignList.class, list2.getComponents().get(1));
 
         final DRDesignList list3 = (DRDesignList) list2.getComponents().get(0);
         Assertions.assertEquals(ListType.HORIZONTAL, list3.getType());
         Assertions.assertEquals(2, list3.getComponents().size());
         componentPositionTest(list3, 191, 0, 384, 16);
-        Assertions.assertTrue(list3.getComponents().get(0) instanceof DRDesignTextField);
-        Assertions.assertTrue(list3.getComponents().get(1) instanceof DRDesignTextField);
+        Assertions.assertInstanceOf(DRDesignTextField.class, list3.getComponents().get(0));
+        Assertions.assertInstanceOf(DRDesignTextField.class, list3.getComponents().get(1));
 
         final DRDesignList list4 = (DRDesignList) list2.getComponents().get(1);
         Assertions.assertEquals(ListType.HORIZONTAL, list4.getType());
         Assertions.assertEquals(2, list4.getComponents().size());
         componentPositionTest(list4, 191, 16, 384, 16);
-        Assertions.assertTrue(list4.getComponents().get(0) instanceof DRDesignTextField);
-        Assertions.assertTrue(list4.getComponents().get(1) instanceof DRDesignTextField);
+        Assertions.assertInstanceOf(DRDesignTextField.class, list4.getComponents().get(0));
+        Assertions.assertInstanceOf(DRDesignTextField.class, list4.getComponents().get(1));
 
         // column1
-        componentPositionTest(list1.getComponents().get(0), 0, 0, 191, 32);
+        componentPositionTest(list1.getComponents().getFirst(), 0, 0, 191, 32);
 
         // column2
         componentPositionTest(list3.getComponents().get(0), 0, 0, 192, 16);

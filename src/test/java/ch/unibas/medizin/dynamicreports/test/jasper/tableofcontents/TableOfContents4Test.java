@@ -96,7 +96,7 @@ public class TableOfContents4Test extends AbstractJasperValueTest implements Ser
                 return reportParameters.getValue("field1");
             }
             final List<JasperTocHeading> headings = new ArrayList<>(tocHeadings.values());
-            final JasperTocHeading jasperTocHeading = headings.get(headings.size() - 1);
+            final JasperTocHeading jasperTocHeading = headings.getLast();
             return jasperTocHeading.getText();
         }
     }

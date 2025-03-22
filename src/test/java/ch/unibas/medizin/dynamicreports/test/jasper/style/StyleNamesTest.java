@@ -44,9 +44,10 @@ public class StyleNamesTest {
 
     private static final String jrtxStr =
 
-         "<jasperTemplate>\n"
-        + "  <style name=\"MyBoldStyle2\" bold=\"true\"/>\n"
-        + "</jasperTemplate>";
+            """
+                    <jasperTemplate>
+                      <style name="MyBoldStyle2" bold="true"/>
+                    </jasperTemplate>""";
 
     private static void assertContainsStyleWithName(final String name, final Iterable<JRStyle> styles) {
         Assertions.assertNotNull(name);

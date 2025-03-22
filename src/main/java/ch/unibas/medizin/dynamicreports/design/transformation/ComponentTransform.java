@@ -275,8 +275,7 @@ public class ComponentTransform {
             final DRIComponent component = innerComponent.getComponent();
             HorizontalCellComponentAlignment horizontalAlignment = innerComponent.getHorizontalAlignment();
             VerticalCellComponentAlignment verticalAlignment = innerComponent.getVerticalAlignment();
-            if (component instanceof DRIDimensionComponent) {
-                final DRIDimensionComponent dimComponent = (DRIDimensionComponent) component;
+            if (component instanceof DRIDimensionComponent dimComponent) {
                 if (horizontalAlignment == null) {
                     horizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(dimComponent.getWidthType());
                 }
@@ -846,7 +845,6 @@ public class ComponentTransform {
             case PAGE -> EvaluationTime.PAGE;
             case COLUMN -> EvaluationTime.COLUMN;
             case GROUP -> EvaluationTime.GROUP;
-            default -> throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
         };
     }
 

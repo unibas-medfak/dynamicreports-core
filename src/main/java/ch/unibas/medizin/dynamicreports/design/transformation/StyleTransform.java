@@ -192,19 +192,23 @@ public class StyleTransform {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIStyle} object.
      */
     protected DRIStyle getStyle(DRIReportStyle reportStyle) {
-        if (reportStyle == null) {
-            return null;
-        }
-        if (reportStyle instanceof DRIStyle) {
-            return (DRIStyle) reportStyle;
-        }
-        if (reportStyle instanceof DRITemplateStyle) {
-            String name = ((DRITemplateStyle) reportStyle).getName();
-            DRIStyle style = templateStyles.get(name);
-            if (style == null) {
-                throw new DRDesignReportException("Template style " + name + " not found");
+        switch (reportStyle) {
+            case null -> {
+                return null;
             }
-            return style;
+            case DRIStyle driStyle -> {
+                return driStyle;
+            }
+            case DRITemplateStyle driTemplateStyle -> {
+                String name = driTemplateStyle.getName();
+                DRIStyle style = templateStyles.get(name);
+                if (style == null) {
+                    throw new DRDesignReportException("Template style " + name + " not found");
+                }
+                return style;
+            }
+            default -> {
+            }
         }
         throw new DRDesignReportException("Style " + reportStyle.getClass().getName() + " not supported");
     }
@@ -325,8 +329,6 @@ public class StyleTransform {
             case SUBTOTAL -> transformStyle(templateTransform.getSubtotalStyle(), true);
             case IMAGE -> transformStyle(templateTransform.getImageStyle(), false);
             case CHART -> transformStyle(templateTransform.getChartStyle(), false);
-            default ->
-                    throw new DRDesignReportException("Default style type " + defaultStyleType.name() + " not supported");
         };
     }
 

@@ -268,26 +268,17 @@ public class ChartTransform {
         }
 
         accessor.transformToDataset(dataset.getSubDataset());
-        if (jrDataset instanceof JRDesignCategoryDataset) {
-            categoryDataset((DRIDesignCategoryDataset) dataset, (JRDesignCategoryDataset) jrDataset);
-        } else if (jrDataset instanceof JRDesignPieDataset) {
-            pieDataset((DRIDesignSeriesDataset) dataset, (JRDesignPieDataset) jrDataset);
-        } else if (jrDataset instanceof JRDesignTimeSeriesDataset) {
-            timeSeriesDataset((DRIDesignTimeSeriesDataset) dataset, (JRDesignTimeSeriesDataset) jrDataset);
-        } else if (jrDataset instanceof JRDesignXyDataset) {
-            xyDataset((DRIDesignSeriesDataset) dataset, (JRDesignXyDataset) jrDataset);
-        } else if (jrDataset instanceof StandardSpiderDataset) {
-            spiderDataset((DRIDesignCategoryDataset) dataset, (StandardSpiderDataset) jrDataset);
-        } else if (jrDataset instanceof JRDesignXyzDataset) {
-            xyzDataset((DRIDesignSeriesDataset) dataset, (JRDesignXyzDataset) jrDataset);
-        } else if (jrDataset instanceof JRDesignGanttDataset) {
-            ganttDataset((DRIDesignSeriesDataset) dataset, (JRDesignGanttDataset) jrDataset);
-        } else if (jrDataset instanceof JRDesignHighLowDataset) {
-            highLowDataset((DRIDesignHighLowDataset) dataset, (JRDesignHighLowDataset) jrDataset);
-        } else if (jrDataset instanceof JRDesignValueDataset) {
-            valueDataset((DRIDesignValueDataset) dataset, (JRDesignValueDataset) jrDataset);
-        } else {
-            throw new JasperDesignException("Dataset " + dataset.getClass().getName() + " not supported");
+        switch (jrDataset) {
+            case JRDesignCategoryDataset jrDesignCategoryDataset -> categoryDataset((DRIDesignCategoryDataset) dataset, jrDesignCategoryDataset);
+            case JRDesignPieDataset jrDesignPieDataset -> pieDataset((DRIDesignSeriesDataset) dataset, jrDesignPieDataset);
+            case JRDesignTimeSeriesDataset jrDesignTimeSeriesDataset -> timeSeriesDataset((DRIDesignTimeSeriesDataset) dataset, jrDesignTimeSeriesDataset);
+            case JRDesignXyDataset jrDesignXyDataset -> xyDataset((DRIDesignSeriesDataset) dataset, jrDesignXyDataset);
+            case StandardSpiderDataset standardSpiderDataset -> spiderDataset((DRIDesignCategoryDataset) dataset, standardSpiderDataset);
+            case JRDesignXyzDataset jrDesignXyzDataset -> xyzDataset((DRIDesignSeriesDataset) dataset, jrDesignXyzDataset);
+            case JRDesignGanttDataset jrDesignGanttDataset -> ganttDataset((DRIDesignSeriesDataset) dataset, jrDesignGanttDataset);
+            case JRDesignHighLowDataset jrDesignHighLowDataset -> highLowDataset((DRIDesignHighLowDataset) dataset, jrDesignHighLowDataset);
+            case JRDesignValueDataset jrDesignValueDataset -> valueDataset((DRIDesignValueDataset) dataset, jrDesignValueDataset);
+            default -> throw new JasperDesignException("Dataset " + dataset.getClass().getName() + " not supported");
         }
         accessor.transformToMainDataset();
     }
@@ -478,32 +469,20 @@ public class ChartTransform {
             jrPlot.setSeriesColors(colors);
         }
 
-        if (jrPlot instanceof JRDesignAreaPlot) {
-            areaPlot((DRIDesignAxisPlot) plot, (JRDesignAreaPlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignBarPlot) {
-            barPlot((DRIDesignBarPlot) plot, (JRDesignBarPlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignLinePlot) {
-            linePlot((DRIDesignLinePlot) plot, (JRDesignLinePlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignPiePlot) {
-            piePlot((DRIDesignPiePlot) plot, (JRDesignPiePlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignScatterPlot) {
-            scatterPlot((DRIDesignLinePlot) plot, (JRDesignScatterPlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignTimeSeriesPlot) {
-            timeSeriesPlot((DRIDesignLinePlot) plot, (JRDesignTimeSeriesPlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignMultiAxisPlot) {
-            multiAxisPlot((DRIDesignMultiAxisPlot) plot, (JRDesignMultiAxisPlot) jrPlot, jrChart);
-        } else if (jrPlot instanceof JRDesignBubblePlot) {
-            bubblePlot((DRIDesignBubblePlot) plot, (JRDesignBubblePlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignCandlestickPlot) {
-            candlestickPlot((DRIDesignCandlestickPlot) plot, (JRDesignCandlestickPlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignHighLowPlot) {
-            highLowPlot((DRIDesignHighLowPlot) plot, (JRDesignHighLowPlot) jrPlot);
-        } else if (jrPlot instanceof JRDesignMeterPlot) {
-            meterPlot((DRIDesignMeterPlot) plot, (JRDesignMeterPlot) jrPlot, jrChart);
-        } else if (jrPlot instanceof JRDesignThermometerPlot) {
-            thermometerPlot((DRIDesignThermometerPlot) plot, (JRDesignThermometerPlot) jrPlot, jrChart);
-        } else {
-            throw new JasperDesignException("Plot " + plot.getClass().getName() + " not supported");
+        switch (jrPlot) {
+            case JRDesignAreaPlot jrDesignAreaPlot -> areaPlot((DRIDesignAxisPlot) plot, jrDesignAreaPlot);
+            case JRDesignBarPlot jrDesignBarPlot -> barPlot((DRIDesignBarPlot) plot, jrDesignBarPlot);
+            case JRDesignLinePlot jrDesignLinePlot -> linePlot((DRIDesignLinePlot) plot, jrDesignLinePlot);
+            case JRDesignPiePlot jrDesignPiePlot -> piePlot((DRIDesignPiePlot) plot, jrDesignPiePlot);
+            case JRDesignScatterPlot jrDesignScatterPlot -> scatterPlot((DRIDesignLinePlot) plot, jrDesignScatterPlot);
+            case JRDesignTimeSeriesPlot jrDesignTimeSeriesPlot -> timeSeriesPlot((DRIDesignLinePlot) plot, jrDesignTimeSeriesPlot);
+            case JRDesignMultiAxisPlot jrDesignMultiAxisPlot -> multiAxisPlot((DRIDesignMultiAxisPlot) plot, jrDesignMultiAxisPlot, jrChart);
+            case JRDesignBubblePlot jrDesignBubblePlot -> bubblePlot((DRIDesignBubblePlot) plot, jrDesignBubblePlot);
+            case JRDesignCandlestickPlot jrDesignCandlestickPlot -> candlestickPlot((DRIDesignCandlestickPlot) plot, jrDesignCandlestickPlot);
+            case JRDesignHighLowPlot jrDesignHighLowPlot -> highLowPlot((DRIDesignHighLowPlot) plot, jrDesignHighLowPlot);
+            case JRDesignMeterPlot jrDesignMeterPlot -> meterPlot((DRIDesignMeterPlot) plot, jrDesignMeterPlot, jrChart);
+            case JRDesignThermometerPlot jrDesignThermometerPlot -> thermometerPlot((DRIDesignThermometerPlot) plot, jrDesignThermometerPlot, jrChart);
+            case null, default -> throw new JasperDesignException("Plot " + plot.getClass().getName() + " not supported");
         }
     }
 
