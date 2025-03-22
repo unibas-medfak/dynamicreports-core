@@ -338,7 +338,7 @@ public class JasperCustomValues implements DRICustomValues {
     public String toString() {
         StringBuilder result = new StringBuilder();
         for (String name : valueTypes.keySet()) {
-            result.append(valueTypes.get(name).name() + ":" + name);
+            result.append(valueTypes.get(name).name()).append(":").append(name);
             result.append(", ");
         }
         return "{" + StringUtils.removeEnd(result.toString(), ", ") + "}";

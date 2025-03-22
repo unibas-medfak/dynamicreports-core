@@ -28,6 +28,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.typ
 
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -97,7 +98,7 @@ public class SubDatasourceTest extends AbstractJasperValueTest implements Serial
     protected JRDataSource createDataSource() {
         final DRDataSource dataSource = new DRDataSource("field1", "field2", "field3");
         dataSource.add("1", "text1", Arrays.asList(new SubData("texta1", "texta2"), new SubData("texta3", "texta4")));
-        dataSource.add("2", "text2", Arrays.asList(new SubData("textb1", "textb2")));
+        dataSource.add("2", "text2", List.of(new SubData("textb1", "textb2")));
         return dataSource;
     }
 

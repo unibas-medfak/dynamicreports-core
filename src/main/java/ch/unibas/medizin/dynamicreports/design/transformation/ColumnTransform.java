@@ -191,8 +191,7 @@ public class ColumnTransform {
         final DRDesignComponent designComponent = accessor.getComponentTransform().component(getColumnComponent(column), DefaultStyleType.COLUMN, null, null);
         designComponent.setUniqueName("column_" + column.getName());
 
-        final List<DRIConditionalStyle> rowHighlighters = new ArrayList<>();
-        rowHighlighters.addAll(getDetailRowHighlighters());
+        final List<DRIConditionalStyle> rowHighlighters = new ArrayList<>(getDetailRowHighlighters());
         final DRISimpleStyle detailOddRowStyle = accessor.getTemplateTransform().getDetailOddRowStyle();
         if (detailOddRowStyle != null) {
             rowHighlighters.add(detailRowConditionalStyle(detailOddRowStyle, Expressions.printInOddRow()));
@@ -214,13 +213,9 @@ public class ColumnTransform {
             final List<DRIConditionalStyle> conditionalStyles = new ArrayList<>();
             if (style != null) {
                 final DRIStyle stl = accessor.getStyleTransform().getStyle(style);
-                for (final DRIConditionalStyle conditionalStyle : stl.getConditionalStyles()) {
-                    conditionalStyles.add(conditionalStyle);
-                }
+                conditionalStyles.addAll(stl.getConditionalStyles());
             }
-            for (final DRIConditionalStyle conditionalStyle : rowHighlighters) {
-                conditionalStyles.add(conditionalStyle);
-            }
+            conditionalStyles.addAll(rowHighlighters);
             final Color backgroundColor = StyleResolver.getBackgroundColor(style, accessor.getStyleTransform());
             for (final DRIConditionalStyle conditionalStyle : conditionalStyles) {
                 if (backgroundColor != null && conditionalStyle.getBackgroundColor() != null) {

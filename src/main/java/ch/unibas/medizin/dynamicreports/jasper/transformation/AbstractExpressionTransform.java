@@ -233,15 +233,15 @@ public abstract class AbstractExpressionTransform {
             return toVariableValue(expression.getName());
         } else if (expression instanceof DRIDesignComplexExpression) {
             final DRIDesignComplexExpression complexExpression = (DRIDesignComplexExpression) expression;
-            String values = "";
+            StringBuilder values = new StringBuilder();
             for (final DRIDesignExpression valueExpression : complexExpression.getExpressions()) {
-                values += ", " + getExpressionText(valueExpression);
+                values.append(", ").append(getExpressionText(valueExpression));
             }
             if (!values.isEmpty()) {
-                values = values.substring(2);
+                values = new StringBuilder(values.substring(2));
             }
             final String parameterName = getExpressionParameterName(complexExpression.getParameterName());
-            return MessageFormat.format(COMPLEX_VALUE, parameterName, expression.getName(), values);
+            return MessageFormat.format(COMPLEX_VALUE, parameterName, expression.getName(), values.toString());
         } else if (expression instanceof DRIDesignSimpleExpression) {
             final String parameterName = getExpressionParameterName(((DRIDesignSimpleExpression) expression).getParameterName());
             return MessageFormat.format(VALUE, parameterName, expression.getName());

@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.JasperPrint;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -49,9 +50,7 @@ public class JasperReportBuilderHandler implements JasperReportHandler {
     /** {@inheritDoc} */
     @Override
     public void concatenate(JasperReportBuilder... jasperReportBuilders) {
-        for (JasperReportBuilder jasperReportBuilder : jasperReportBuilders) {
-            this.jasperReportBuilders.add(jasperReportBuilder);
-        }
+        this.jasperReportBuilders.addAll(Arrays.asList(jasperReportBuilders));
     }
 
     /** {@inheritDoc} */

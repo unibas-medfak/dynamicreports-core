@@ -21,6 +21,7 @@
 package ch.unibas.medizin.dynamicreports.jasper.transformation;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
@@ -232,11 +233,9 @@ public class ComponentTransform {
                 final List<JRDesignElement> jrElementList = new ArrayList<>();
                 for (final DRIDesignComponent element : list.getComponents()) {
                     final JRDesignElement[] jrElements = component(element, list.getType());
-                    for (final JRDesignElement jrElement : jrElements) {
-                        jrElementList.add(jrElement);
-                    }
+                    jrElementList.addAll(Arrays.asList(jrElements));
                 }
-                return jrElementList.toArray(new JRDesignElement[jrElementList.size()]);
+                return jrElementList.toArray(new JRDesignElement[0]);
             default:
                 throw new JasperDesignException("ComponentGroupType " + list.getComponentGroupType().getClass().getName() + " not supported");
         }

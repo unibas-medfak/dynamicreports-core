@@ -134,14 +134,12 @@ public class Column1Test extends AbstractJasperValueTest implements Serializable
 
         @Override
         public String evaluate(ReportParameters reportParameters) {
-            String pattern = "#,###.0";
+            StringBuilder pattern = new StringBuilder("#,###.0");
             Integer reportRowNumber = reportParameters.getReportRowNumber();
             if (reportRowNumber < 4) {
-                for (int i = 0; i < reportRowNumber; i++) {
-                    pattern += "0";
-                }
+                pattern.append("0".repeat(Math.max(0, reportRowNumber)));
             }
-            return pattern;
+            return pattern.toString();
         }
     }
 }

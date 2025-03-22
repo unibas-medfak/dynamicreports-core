@@ -54,8 +54,7 @@ public class BooleanColumn3Test {
             final JRDataSource dataSource = createDataSource();
 
             final JasperReport report = rb.toJasperReport();
-            final Map<String, Object> params = new HashMap<>();
-            params.putAll(rb.getJasperParameters());
+            final Map<String, Object> params = new HashMap<>(rb.getJasperParameters());
 
             final ByteArrayOutputStream bos = new ByteArrayOutputStream();
             JasperFillManager.fillReportToStream(report, bos, params, dataSource);

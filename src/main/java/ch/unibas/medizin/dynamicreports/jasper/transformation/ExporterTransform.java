@@ -636,7 +636,7 @@ public class ExporterTransform {
     }
     if (jasperExporter.getSheetNames() != null && !jasperExporter.getSheetNames().isEmpty()) {
       final String[] sheetNames = jasperExporter.getSheetNames()
-        .toArray(new String[jasperExporter.getSheetNames().size()]);
+        .toArray(new String[0]);
       reportExportConfiguration.setSheetNames(sheetNames);
     }
     if (jasperExporter.getFontSizeFixEnabled() != null) {
