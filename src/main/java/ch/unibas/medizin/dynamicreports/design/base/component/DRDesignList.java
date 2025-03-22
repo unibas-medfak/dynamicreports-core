@@ -186,7 +186,7 @@ public class DRDesignList extends DRDesignComponent implements DRIDesignList {
     /**
      * <p>Setter for the field <code>gap</code>.</p>
      *
-     * @param gap a int.
+     * @param gap an int.
      */
     public void setGap(int gap) {
         this.gap = gap;

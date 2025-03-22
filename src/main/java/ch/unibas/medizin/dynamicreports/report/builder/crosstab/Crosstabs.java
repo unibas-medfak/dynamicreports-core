@@ -77,7 +77,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabColumnGroupBuilder} object.
      */
     public static <T> CrosstabColumnGroupBuilder<T> columnGroup(String fieldName, Class<T> valueClass) {
-        return new CrosstabColumnGroupBuilder<>(DynamicReports.<T>field(fieldName, valueClass));
+        return new CrosstabColumnGroupBuilder<>(DynamicReports.field(fieldName, valueClass));
     }
 
     /**
@@ -124,7 +124,7 @@ public class Crosstabs {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabRowGroupBuilder} object.
      */
     public static <T> CrosstabRowGroupBuilder<T> rowGroup(String fieldName, Class<T> valueClass) {
-        return new CrosstabRowGroupBuilder<>(DynamicReports.<T>field(fieldName, valueClass));
+        return new CrosstabRowGroupBuilder<>(DynamicReports.field(fieldName, valueClass));
     }
 
     /**

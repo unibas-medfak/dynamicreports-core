@@ -75,7 +75,7 @@ public class SpiderChartBuilder extends AbstractChartBuilder<SpiderChartBuilder>
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.SpiderChartBuilder} object.
      */
     public SpiderChartBuilder setCategory(String fieldName, Class<String> valueClass) {
-        return setCategory(DynamicReports.<String>field(fieldName, valueClass));
+        return setCategory(DynamicReports.field(fieldName, valueClass));
     }
 
     /**

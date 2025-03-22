@@ -75,7 +75,7 @@ public class VerticalColumnGridListBuilder extends AbstractBuilder<VerticalColum
     /**
      * <p>setGap.</p>
      *
-     * @param gap a int.
+     * @param gap an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.grid.VerticalColumnGridListBuilder} object.
      */
     public VerticalColumnGridListBuilder setGap(int gap) {

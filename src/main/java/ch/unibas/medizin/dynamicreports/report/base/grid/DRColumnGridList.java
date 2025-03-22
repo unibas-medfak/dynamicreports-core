@@ -122,10 +122,10 @@ public class DRColumnGridList implements DRIColumnGridList {
     /**
      * <p>Setter for the field <code>gap</code>.</p>
      *
-     * @param gap a int.
+     * @param gap an int.
      */
     public void setGap(int gap) {
-        Validate.notNull(gap < 0, "gap must be >= 0");
+        Validate.isTrue(gap >= 0, "gap must be >= 0");
         this.gap = gap;
     }
 }

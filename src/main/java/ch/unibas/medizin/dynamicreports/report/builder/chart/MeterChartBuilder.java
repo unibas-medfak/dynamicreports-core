@@ -95,7 +95,7 @@ public class MeterChartBuilder extends AbstractChartBuilder<MeterChartBuilder> {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.MeterChartBuilder} object.
      */
     public MeterChartBuilder setValue(String fieldName, Class<? extends Number> valueClass) {
-        return setValue(DynamicReports.<Number>field(fieldName, valueClass));
+        return setValue(DynamicReports.field(fieldName, valueClass));
     }
 
     /**

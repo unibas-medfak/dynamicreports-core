@@ -69,7 +69,7 @@ public class GanttChartBuilder extends AbstractBaseChartBuilder<GanttChartBuilde
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.GanttChartBuilder} object.
      */
     public GanttChartBuilder setTask(String fieldName, Class<String> valueClass) {
-        return setTask(DynamicReports.<String>field(fieldName, valueClass));
+        return setTask(DynamicReports.field(fieldName, valueClass));
     }
 
     /**

@@ -77,7 +77,7 @@ public class Charts {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.CategoryChartSerieBuilder} object.
      */
     public static CategoryChartSerieBuilder serie(String fieldName, Class<? extends Number> valueClass) {
-        return serie(DynamicReports.<Number>field(fieldName, valueClass));
+        return serie(DynamicReports.field(fieldName, valueClass));
     }
 
     /**
@@ -130,7 +130,7 @@ public class Charts {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.GroupedCategoryChartSerieBuilder} object.
      */
     public static GroupedCategoryChartSerieBuilder groupedSerie(String fieldName, Class<? extends Number> valueClass) {
-        return groupedSerie(DynamicReports.<Number>field(fieldName, valueClass));
+        return groupedSerie(DynamicReports.field(fieldName, valueClass));
     }
 
     /**
@@ -183,7 +183,7 @@ public class Charts {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.XyChartSerieBuilder} object.
      */
     public static XyChartSerieBuilder xySerie(String fieldName, Class<? extends Number> valueClass) {
-        return xySerie(DynamicReports.<Number>field(fieldName, valueClass));
+        return xySerie(DynamicReports.field(fieldName, valueClass));
     }
 
     /**

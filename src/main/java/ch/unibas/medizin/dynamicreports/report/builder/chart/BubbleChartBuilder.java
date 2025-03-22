@@ -70,7 +70,7 @@ public class BubbleChartBuilder extends AbstractBaseChartBuilder<BubbleChartBuil
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.BubbleChartBuilder} object.
      */
     public BubbleChartBuilder setXValue(String fieldName, Class<? extends Number> valueClass) {
-        return setXValue(DynamicReports.<Number>field(fieldName, valueClass));
+        return setXValue(DynamicReports.field(fieldName, valueClass));
     }
 
     /**

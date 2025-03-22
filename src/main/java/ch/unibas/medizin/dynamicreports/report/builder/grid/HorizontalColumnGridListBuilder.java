@@ -109,7 +109,7 @@ public class HorizontalColumnGridListBuilder extends AbstractBuilder<HorizontalC
     /**
      * <p>setGap.</p>
      *
-     * @param gap a int.
+     * @param gap an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.grid.HorizontalColumnGridListBuilder} object.
      */
     public HorizontalColumnGridListBuilder setGap(int gap) {
@@ -120,7 +120,7 @@ public class HorizontalColumnGridListBuilder extends AbstractBuilder<HorizontalC
     /**
      * <p>setVerticalGap.</p>
      *
-     * @param gap a int.
+     * @param gap an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.grid.HorizontalColumnGridListBuilder} object.
      */
     public HorizontalColumnGridListBuilder setVerticalGap(int gap) {

@@ -61,8 +61,8 @@ public class GanttChartTest extends AbstractJasperChartTest {
             .series(
                 cht.ganttSerie().setStartDate(field2).setEndDate(field3).setPercent(field4)
                     .setLabel("label"),
-                cht.ganttSerie().setStartDate(DynamicReports.<Date>field("field5", Date.class))
-                    .setEndDate(DynamicReports.<Date>field("field6", Date.class)))
+                cht.ganttSerie().setStartDate(DynamicReports.field("field5", Date.class))
+                    .setEndDate(DynamicReports.field("field6", Date.class)))
             .setShowLabels(true).setShowTickLabels(false).setShowTickMarks(false),
         cht.ganttChart().setTask(field1)
             .series(cht.ganttSerie().setStartDate(field2).setEndDate(field3)).setTaskAxisFormat(
