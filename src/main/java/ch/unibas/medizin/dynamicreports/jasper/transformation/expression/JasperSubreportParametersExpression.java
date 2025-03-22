@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.ReportUtils;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,6 +39,7 @@ import java.util.Map;
  * 
  */
 public class JasperSubreportParametersExpression extends AbstractDesignComplexExpression {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.component;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIPageNumber;
 
+import java.io.Serial;
+
 /**
  * <p>DRPageNumber class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRIPageNumbe
  * 
  */
 public class DRPageNumber extends DRFormatField implements DRIPageNumber {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
 }

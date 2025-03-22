@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.BreakType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIBreak;
 
+import java.io.Serial;
+
 /**
  * <p>DRBreak class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRIBreak;
  * 
  */
 public class DRBreak extends DRComponent implements DRIBreak {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private BreakType breakType;

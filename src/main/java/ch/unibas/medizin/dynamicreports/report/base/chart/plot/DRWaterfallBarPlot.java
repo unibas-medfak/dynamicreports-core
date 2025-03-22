@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIWaterfallBarPlot;
 
 import java.awt.Paint;
+import java.io.Serial;
 
 /**
  * <p>DRWaterfallBarPlot class.</p>
@@ -32,6 +33,7 @@ import java.awt.Paint;
  * 
  */
 public class DRWaterfallBarPlot extends DRBarPlot implements DRIWaterfallBarPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Paint firstBarPaint;

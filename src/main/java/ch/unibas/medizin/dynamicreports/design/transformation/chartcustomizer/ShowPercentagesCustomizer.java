@@ -29,6 +29,7 @@ import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.renderer.category.GroupedStackedBarRenderer;
 import org.jfree.data.category.CategoryDataset;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -38,6 +39,7 @@ import java.io.Serializable;
  * 
  */
 public class ShowPercentagesCustomizer implements DRIChartCustomizer, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

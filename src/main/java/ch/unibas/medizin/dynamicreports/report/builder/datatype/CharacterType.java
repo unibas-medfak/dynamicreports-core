@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.defaults.Defaults;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.Serial;
 import java.util.Locale;
 
 /**
@@ -36,6 +37,7 @@ import java.util.Locale;
  * 
  */
 public class CharacterType extends AbstractDataType<Character, Character> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

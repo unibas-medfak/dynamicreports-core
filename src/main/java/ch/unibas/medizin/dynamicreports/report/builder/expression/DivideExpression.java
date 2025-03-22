@@ -23,6 +23,7 @@ package ch.unibas.medizin.dynamicreports.report.builder.expression;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -33,6 +34,7 @@ import java.math.RoundingMode;
  * 
  */
 public class DivideExpression extends CalculationExpression {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final int scale;

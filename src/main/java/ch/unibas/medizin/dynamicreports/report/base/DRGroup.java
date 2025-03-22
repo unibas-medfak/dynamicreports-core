@@ -30,6 +30,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>DRGroup class.</p>
  *
@@ -37,6 +39,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class DRGroup implements DRIGroup {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 import ch.unibas.medizin.dynamicreports.report.definition.DRISort;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>DRSort class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class DRSort implements DRISort {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<?> expression;

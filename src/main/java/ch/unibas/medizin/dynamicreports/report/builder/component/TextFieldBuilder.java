@@ -20,6 +20,7 @@
  */
 package ch.unibas.medizin.dynamicreports.report.builder.component;
 
+import java.io.Serial;
 import java.util.Date;
 
 import org.apache.commons.lang3.Validate;
@@ -48,6 +49,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFor
  * 
  */
 public class TextFieldBuilder<T> extends HyperLinkComponentBuilder<TextFieldBuilder<T>, DRTextField<T>> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

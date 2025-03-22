@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.builder.expression.Expressions;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>MapBuilder class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class MapBuilder extends DimensionComponentBuilder<MapBuilder, DRMap> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalCellComponentAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAlignment;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -33,6 +34,7 @@ import java.io.Serializable;
  * 
  */
 public class DRDesignListCell implements Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private HorizontalCellComponentAlignment horizontalAlignment;

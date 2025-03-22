@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignEx
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>DRDesignMeterInterval class.</p>
@@ -33,6 +34,7 @@ import java.awt.Color;
  * 
  */
 public class DRDesignMeterInterval implements DRIDesignMeterInterval {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String label;

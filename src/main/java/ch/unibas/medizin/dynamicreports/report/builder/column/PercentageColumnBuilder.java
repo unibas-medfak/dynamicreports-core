@@ -34,6 +34,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * It calculates percentage values from the field or column values.
  *
@@ -41,6 +43,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class PercentageColumnBuilder extends ValueColumnBuilder<PercentageColumnBuilder, Double> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRIExpression<? extends Number> actualExpression;

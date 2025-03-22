@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.chart.plot;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRILinePlot;
 
+import java.io.Serial;
+
 /**
  * <p>DRLinePlot class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRILinePlot
  * 
  */
 public class DRLinePlot extends DRAxisPlot implements DRILinePlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Boolean showShapes;

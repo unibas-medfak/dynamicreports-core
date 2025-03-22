@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.chart.plot;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIPie3DPlot;
 
+import java.io.Serial;
+
 /**
  * <p>DRPie3DPlot class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIPie3DPlo
  * 
  */
 public class DRPie3DPlot extends DRPiePlot implements DRIPie3DPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Double depthFactor;

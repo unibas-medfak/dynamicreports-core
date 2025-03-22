@@ -30,6 +30,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.ChartType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartCustomizer;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +41,7 @@ import java.util.List;
  * 
  */
 public class DRDesignChart extends DRDesignHyperlinkComponent implements DRIDesignChart {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private ChartType chartType;

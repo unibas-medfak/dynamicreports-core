@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.chart.plot;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIHighLowPlot;
 
+import java.io.Serial;
+
 /**
  * <p>DRHighLowPlot class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIHighLowP
  * 
  */
 public class DRHighLowPlot extends DRAxisPlot implements DRIHighLowPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Boolean showOpenTicks;

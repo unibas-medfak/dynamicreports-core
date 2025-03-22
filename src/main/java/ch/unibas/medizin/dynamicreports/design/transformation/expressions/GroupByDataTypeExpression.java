@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>GroupByDataTypeExpression class.</p>
  *
@@ -33,6 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class GroupByDataTypeExpression extends AbstractSimpleExpression<String> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
     final DRIDataType<?, ?> dataType;
     private final DRIExpression<?> valueExpression;

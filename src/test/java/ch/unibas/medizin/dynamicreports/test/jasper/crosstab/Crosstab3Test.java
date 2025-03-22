@@ -32,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperCrosstabValueTest;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Locale;
 
@@ -45,6 +46,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cta
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Crosstab3Test extends AbstractJasperCrosstabValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private CrosstabRowGroupBuilder<String> rowGroup;
@@ -111,6 +113,7 @@ public class Crosstab3Test extends AbstractJasperCrosstabValueTest implements Se
     }
 
     private static class ValueFormatter1 extends AbstractValueFormatter<String, Integer> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -120,6 +123,7 @@ public class Crosstab3Test extends AbstractJasperCrosstabValueTest implements Se
     }
 
     private static class ValueFormatter2 extends AbstractValueFormatter<String, String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

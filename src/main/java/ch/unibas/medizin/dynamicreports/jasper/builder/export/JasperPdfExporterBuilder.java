@@ -28,6 +28,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.PdfPrintScaling;
 import ch.unibas.medizin.dynamicreports.report.constant.PdfaConformance;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>JasperPdfExporterBuilder class.</p>
  *
@@ -35,6 +37,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class JasperPdfExporterBuilder extends AbstractJasperExporterBuilder<JasperPdfExporterBuilder, JasperPdfExporter> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

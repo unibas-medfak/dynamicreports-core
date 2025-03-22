@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRGroupedStackedB
 import ch.unibas.medizin.dynamicreports.report.constant.ChartType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>GroupedStackedBarChartBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class GroupedStackedBarChartBuilder extends AbstractCategoryChartBuilder<GroupedStackedBarChartBuilder, DRGroupedStackedBarPlot> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

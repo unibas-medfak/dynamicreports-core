@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.base.datatype.AbstractDataType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
+import java.io.Serial;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
@@ -37,6 +38,7 @@ import java.util.Locale;
  * 
  */
 public abstract class NumberType<T extends Number> extends AbstractDataType<Number, T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
 import java.io.File;
 import java.io.OutputStream;
+import java.io.Serial;
 import java.io.Writer;
 
 /**
@@ -35,6 +36,7 @@ import java.io.Writer;
  * 
  */
 public abstract class AbstractJasperExporterBuilder<T extends AbstractJasperExporterBuilder<T, U>, U extends AbstractJasperExporter> extends AbstractBuilder<T, U> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

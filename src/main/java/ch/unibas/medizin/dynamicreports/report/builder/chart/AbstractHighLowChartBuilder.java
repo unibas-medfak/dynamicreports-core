@@ -31,6 +31,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.Date;
 
 /**
@@ -41,6 +42,7 @@ import java.util.Date;
  */
 public abstract class AbstractHighLowChartBuilder<T extends AbstractHighLowChartBuilder<T, U>, U extends DRAxisPlot>
     extends AbstractBaseChartBuilder<AbstractHighLowChartBuilder<T, U>, U, DRHighLowDataset> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

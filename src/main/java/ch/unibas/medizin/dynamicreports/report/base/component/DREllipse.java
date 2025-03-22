@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.style.DRPen;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIEllipse;
 
+import java.io.Serial;
+
 /**
  * <p>DREllipse class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRIEllipse;
  * 
  */
 public class DREllipse extends DRDimensionComponent implements DRIEllipse {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRPen pen;

@@ -21,6 +21,7 @@
 package ch.unibas.medizin.dynamicreports.design.transformation.chartcustomizer;
 
 import java.awt.Paint;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -56,6 +57,7 @@ public class GroupedStackedBarRendererCustomizer implements DRIChartCustomizer, 
      * Constant <code>GROUP_SERIES_KEY="-{group-series}-"</code>
      */
     public static final String GROUP_SERIES_KEY = "-{group-series}-";
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
     private KeyToGroupMap map;
     private Map<String, Paint> seriesColors;

@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>SortBuilder class.</p>
  *
@@ -34,6 +36,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class SortBuilder extends AbstractBuilder<SortBuilder, DRSort> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

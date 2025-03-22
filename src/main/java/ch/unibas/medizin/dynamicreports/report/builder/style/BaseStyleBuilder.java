@@ -38,6 +38,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.VerticalTextAlignment;
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>Abstract BaseStyleBuilder class.</p>
@@ -46,6 +47,7 @@ import java.awt.Color;
  * 
  */
 public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U extends DRBaseStyle> extends AbstractBuilder<T, U> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

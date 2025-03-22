@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.builder;
 import ch.unibas.medizin.dynamicreports.report.base.DRQuery;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>QueryBuilder class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class QueryBuilder extends AbstractBuilder<QueryBuilder, DRQuery> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

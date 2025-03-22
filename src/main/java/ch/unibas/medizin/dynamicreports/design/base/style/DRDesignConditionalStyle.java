@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignConditi
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignConditionalStyle class.</p>
  *
@@ -33,6 +35,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
  * 
  */
 public class DRDesignConditionalStyle extends DRDesignBaseStyle implements DRIDesignConditionalStyle {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIDesignExpression conditionExpression;

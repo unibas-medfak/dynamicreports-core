@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.ChartType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>MultiAxisChartBuilder class.</p>
  *
@@ -34,6 +36,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class MultiAxisChartBuilder extends AbstractBaseChartBuilder<MultiAxisChartBuilder, DRMultiAxisPlot, DRChartDataset> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

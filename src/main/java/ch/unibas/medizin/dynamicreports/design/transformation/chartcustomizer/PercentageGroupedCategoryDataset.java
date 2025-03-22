@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.StringUtils;
 import org.jfree.data.category.CategoryDataset;
 
+import java.io.Serial;
+
 /**
  * <p>PercentageGroupedCategoryDataset class.</p>
  *
@@ -31,6 +33,7 @@ import org.jfree.data.category.CategoryDataset;
  * 
  */
 public class PercentageGroupedCategoryDataset extends PercentageCategoryDataset {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

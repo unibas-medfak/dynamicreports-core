@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIField;
 import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>DRField class.</p>
  *
@@ -32,6 +34,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class DRField<T> implements DRIField<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

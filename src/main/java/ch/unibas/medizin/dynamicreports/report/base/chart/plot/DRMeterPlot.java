@@ -29,6 +29,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +40,7 @@ import java.util.List;
  * 
  */
 public class DRMeterPlot implements DRIMeterPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<? extends Number> dataRangeLowExpression;

@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.jasper.base.export;
 import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIXmlExporter;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>JasperXmlExporter class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class JasperXmlExporter extends AbstractJasperExporter implements JasperIXmlExporter {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Boolean embeddingImages;

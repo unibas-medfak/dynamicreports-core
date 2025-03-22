@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.builder.condition;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
 
+import java.io.Serial;
+
 /**
  * <p>SmallerOrEqualsValueExpression class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
  * 
  */
 public class SmallerOrEqualsValueExpression<T extends Number> extends AbstractValueExpression<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -31,6 +31,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIComplexE
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
+import java.io.Serial;
 import java.util.List;
 
 /**
@@ -40,6 +41,7 @@ import java.util.List;
  * 
  */
 public class CrosstabExpression<T> extends AbstractComplexExpression<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRIExpression<T> expression;

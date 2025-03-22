@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -41,6 +42,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TableOfContents8Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -71,6 +73,7 @@ public class TableOfContents8Test extends AbstractJasperValueTest implements Ser
     }
 
     private static class PrintWhenExpression extends AbstractSimpleExpression<Boolean> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

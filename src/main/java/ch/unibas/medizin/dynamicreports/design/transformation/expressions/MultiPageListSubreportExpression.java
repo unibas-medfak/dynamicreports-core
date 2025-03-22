@@ -30,6 +30,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIStyle;
 
+import java.io.Serial;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -44,6 +45,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.rep
  * 
  */
 public class MultiPageListSubreportExpression extends AbstractSimpleExpression<JasperReportBuilder> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final Locale locale;

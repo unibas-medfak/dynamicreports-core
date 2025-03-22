@@ -44,6 +44,8 @@ import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperValueTest;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
+import java.io.Serial;
+
 /**
  * @author Ricardo Mariaca
  */
@@ -119,6 +121,7 @@ public class TableOfContents6Test extends AbstractJasperValueTest {
     }
 
     private class CustomTableOfContentsCustomizer extends TableOfContentsCustomizer {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -140,6 +143,7 @@ public class TableOfContents6Test extends AbstractJasperValueTest {
     }
 
     private static class TocCustomValueExpression extends AbstractSimpleExpression<TocCustomValue> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

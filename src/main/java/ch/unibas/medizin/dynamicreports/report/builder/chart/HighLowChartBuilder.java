@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRHighLowPlot;
 import ch.unibas.medizin.dynamicreports.report.constant.ChartType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>HighLowChartBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class HighLowChartBuilder extends AbstractHighLowChartBuilder<HighLowChartBuilder, DRHighLowPlot> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

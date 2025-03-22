@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.fie
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -51,6 +52,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class CrosstabStyle6Test extends AbstractJasperCrosstabStyleTest implements Serializable {
+  @Serial
   private static final long serialVersionUID = 1L;
 
   private CrosstabRowGroupBuilder<String> rowGroup;
@@ -106,6 +108,7 @@ public class CrosstabStyle6Test extends AbstractJasperCrosstabStyleTest implemen
   }
 
   private static class ConditionExpression extends AbstractSimpleExpression<Boolean> {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override

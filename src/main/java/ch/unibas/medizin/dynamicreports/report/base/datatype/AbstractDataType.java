@@ -29,6 +29,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFormatter;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
+import java.io.Serial;
 import java.util.Locale;
 
 /**
@@ -38,6 +39,7 @@ import java.util.Locale;
  * 
  */
 public abstract class AbstractDataType<U, T extends U> implements DRIDataType<U, T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

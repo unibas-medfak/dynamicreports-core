@@ -29,6 +29,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperValueTest;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -45,6 +46,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.fie
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class PercentageColumnTest extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private PercentageColumnBuilder percentage1;
@@ -88,6 +90,7 @@ public class PercentageColumnTest extends AbstractJasperValueTest implements Ser
     }
 
     private static class ColumnValueFormatter extends AbstractValueFormatter<String, Double> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

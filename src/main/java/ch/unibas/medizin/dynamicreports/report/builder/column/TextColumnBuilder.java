@@ -32,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.math.BigDecimal;
 
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
@@ -43,6 +44,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.typ
  * 
  */
 public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T>, T> implements DRIValue<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

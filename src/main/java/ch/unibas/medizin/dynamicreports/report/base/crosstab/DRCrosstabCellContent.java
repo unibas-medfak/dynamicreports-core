@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.ListType;
 import ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabCellContent;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
 
+import java.io.Serial;
+
 /**
  * <p>DRCrosstabCellContent class.</p>
  *
@@ -34,6 +36,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
  * 
  */
 public class DRCrosstabCellContent implements DRICrosstabCellContent {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRList list;

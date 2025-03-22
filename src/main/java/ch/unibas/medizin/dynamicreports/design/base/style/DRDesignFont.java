@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignFont;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignFont class.</p>
  *
@@ -31,6 +33,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
  * 
  */
 public class DRDesignFont implements DRIDesignFont {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String fontName;

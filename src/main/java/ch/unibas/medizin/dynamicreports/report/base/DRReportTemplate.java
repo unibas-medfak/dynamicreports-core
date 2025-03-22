@@ -42,6 +42,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIStyle;
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -53,6 +54,7 @@ import java.util.Locale;
  * 
  */
 public class DRReportTemplate implements DRIReportTemplate {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
     // table of contents
     public Boolean tableOfContents;

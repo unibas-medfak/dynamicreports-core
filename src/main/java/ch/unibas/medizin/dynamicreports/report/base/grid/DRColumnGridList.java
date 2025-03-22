@@ -28,6 +28,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGridComp
 import ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGridList;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +39,7 @@ import java.util.List;
  * 
  */
 public class DRColumnGridList implements DRIColumnGridList {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final List<DRColumnGridListCell> listCells;

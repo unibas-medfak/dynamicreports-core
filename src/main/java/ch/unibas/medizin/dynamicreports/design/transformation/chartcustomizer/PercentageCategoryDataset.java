@@ -25,6 +25,7 @@ import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.general.DatasetChangeListener;
 import org.jfree.data.general.DatasetGroup;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -35,6 +36,7 @@ import java.util.List;
  * 
  */
 public class PercentageCategoryDataset implements CategoryDataset, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     protected final CategoryDataset dataset;

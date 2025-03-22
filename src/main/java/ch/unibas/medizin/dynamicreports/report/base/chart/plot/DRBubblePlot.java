@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.ScaleType;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIBubblePlot;
 
+import java.io.Serial;
+
 /**
  * <p>DRBubblePlot class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIBubblePl
  * 
  */
 public class DRBubblePlot extends DRAxisPlot implements DRIBubblePlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private ScaleType scaleType;

@@ -32,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.VerticalTextAlignment;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>Abstract DRDesignBaseStyle class.</p>
@@ -40,6 +41,7 @@ import java.awt.Color;
  * 
  */
 public abstract class DRDesignBaseStyle implements DRIDesignBaseStyle {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Color foregroundColor;

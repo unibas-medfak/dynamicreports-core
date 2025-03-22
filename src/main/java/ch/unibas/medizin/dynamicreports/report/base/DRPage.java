@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.PageType;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIPage;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>DRPage class.</p>
  *
@@ -33,6 +35,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class DRPage implements DRIPage {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Integer width;

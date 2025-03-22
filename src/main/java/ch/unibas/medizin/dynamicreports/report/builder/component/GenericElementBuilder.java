@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIParameterExpression;
 
+import java.io.Serial;
+
 /**
  * <p>GenericElementBuilder class.</p>
  *
@@ -33,6 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIParamete
  * 
  */
 public class GenericElementBuilder extends DimensionComponentBuilder<GenericElementBuilder, DRGenericElement> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

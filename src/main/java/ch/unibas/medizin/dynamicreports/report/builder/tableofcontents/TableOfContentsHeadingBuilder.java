@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.builder.expression.Expressions;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>TableOfContentsHeadingBuilder class.</p>
  *
@@ -33,6 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class TableOfContentsHeadingBuilder extends AbstractBuilder<TableOfContentsHeadingBuilder, DRTableOfContentsHeading> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

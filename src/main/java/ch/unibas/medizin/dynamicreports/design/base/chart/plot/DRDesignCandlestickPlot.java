@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.design.base.chart.plot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignCandlestickPlot;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignCandlestickPlot class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignCandlestickPlot extends DRDesignAxisPlot implements DRIDesignCandlestickPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Boolean showVolume;

@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRPie3DPlot;
 import ch.unibas.medizin.dynamicreports.report.constant.ChartType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>Pie3DChartBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class Pie3DChartBuilder extends AbstractPieChartBuilder<Pie3DChartBuilder, DRPie3DPlot> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

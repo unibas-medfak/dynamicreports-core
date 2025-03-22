@@ -29,6 +29,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>AbstractCategoryChartSerieBuilder class.</p>
  *
@@ -36,6 +38,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class AbstractCategoryChartSerieBuilder<T extends AbstractCategoryChartSerieBuilder<T, U>, U extends DRCategoryChartSerie> extends AbstractChartSerieBuilder<T, U> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

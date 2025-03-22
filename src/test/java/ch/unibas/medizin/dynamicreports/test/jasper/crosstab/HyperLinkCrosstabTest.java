@@ -23,6 +23,7 @@ package ch.unibas.medizin.dynamicreports.test.jasper.crosstab;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.ctab;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.hyperLink;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Locale;
@@ -52,6 +53,7 @@ import net.sf.jasperreports.engine.JRPrintText;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class HyperLinkCrosstabTest extends AbstractJasperCrosstabValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private CrosstabRowGroupBuilder<String> rowGroup;
@@ -122,6 +124,7 @@ public class HyperLinkCrosstabTest extends AbstractJasperCrosstabValueTest imple
     }
 
     private static class HyperLinkExpression1 extends AbstractComplexExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         public HyperLinkExpression1(AbstractCrosstabGroupBuilder<?, ?, ?> group) {
@@ -136,6 +139,7 @@ public class HyperLinkCrosstabTest extends AbstractJasperCrosstabValueTest imple
     }
 
     private static class HyperLinkExpression2 extends AbstractComplexExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         public HyperLinkExpression2(AbstractCrosstabGroupBuilder<?, ?, ?> group1, AbstractCrosstabGroupBuilder<?, ?, ?> group2, CrosstabMeasureBuilder<?> measure) {

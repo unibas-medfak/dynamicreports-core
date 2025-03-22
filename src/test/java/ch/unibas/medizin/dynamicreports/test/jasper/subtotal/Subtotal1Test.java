@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.sbt;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Locale;
@@ -47,6 +48,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Subtotal1Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private AggregationSubtotalBuilder<BigDecimal> subtotal1;
@@ -153,6 +155,7 @@ public class Subtotal1Test extends AbstractJasperValueTest implements Serializab
     }
 
     private static class ColumnValueFormatter extends AbstractValueFormatter<String, String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -162,6 +165,7 @@ public class Subtotal1Test extends AbstractJasperValueTest implements Serializab
     }
 
     private static class ColumnValueFormatter2 extends AbstractValueFormatter<String, Integer> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -171,6 +175,7 @@ public class Subtotal1Test extends AbstractJasperValueTest implements Serializab
     }
 
     private static class ColumnCalculationExpression extends AbstractSimpleExpression<Integer> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

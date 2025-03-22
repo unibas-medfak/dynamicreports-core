@@ -22,6 +22,7 @@ package ch.unibas.medizin.dynamicreports.jasper.base.tableofcontents;
 
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -31,6 +32,7 @@ import java.io.Serializable;
  * 
  */
 public class JasperTocHeading implements Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Integer level;

@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.SplitType;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIMultiPageList;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +36,7 @@ import java.util.List;
  * 
  */
 public class DRMultiPageList extends DRDimensionComponent implements DRIMultiPageList {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private List<DRIComponent> components;

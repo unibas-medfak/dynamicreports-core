@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignPadding
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignPadding class.</p>
  *
@@ -31,6 +33,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
  * 
  */
 public class DRDesignPadding implements DRIDesignPadding {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Integer top;

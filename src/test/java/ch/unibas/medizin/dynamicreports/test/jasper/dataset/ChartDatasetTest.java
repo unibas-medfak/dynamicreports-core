@@ -26,6 +26,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.dat
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.field;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.variable;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.jfree.chart.JFreeChart;
@@ -50,6 +51,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ChartDatasetTest extends AbstractJasperChartTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -133,6 +135,7 @@ public class ChartDatasetTest extends AbstractJasperChartTest implements Seriali
     }
 
     private static class ValueExpression extends AbstractSimpleExpression<Double> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -152,6 +155,7 @@ public class ChartDatasetTest extends AbstractJasperChartTest implements Seriali
     }
 
     private static class CategoryExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -168,6 +172,7 @@ public class ChartDatasetTest extends AbstractJasperChartTest implements Seriali
     }
 
     private static class TitleExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -179,6 +184,7 @@ public class ChartDatasetTest extends AbstractJasperChartTest implements Seriali
     }
 
     private static class Customizer implements DRIChartCustomizer, Serializable {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -190,6 +196,7 @@ public class ChartDatasetTest extends AbstractJasperChartTest implements Seriali
     }
 
     private class Datasource3Expression extends AbstractSimpleExpression<JRDataSource> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

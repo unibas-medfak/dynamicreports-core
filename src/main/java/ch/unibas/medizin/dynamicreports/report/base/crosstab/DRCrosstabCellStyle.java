@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabCo
 import ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabRowGroup;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
 
+import java.io.Serial;
+
 /**
  * <p>DRCrosstabCellStyle class.</p>
  *
@@ -33,6 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
  * 
  */
 public class DRCrosstabCellStyle implements DRICrosstabCellStyle {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRICrosstabRowGroup<?> rowGroup;

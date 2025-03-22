@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIImageExp
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>JasperImageExporter class.</p>
  *
@@ -32,6 +34,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class JasperImageExporter extends AbstractJasperExporter implements JasperIImageExporter {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Integer pageGap;

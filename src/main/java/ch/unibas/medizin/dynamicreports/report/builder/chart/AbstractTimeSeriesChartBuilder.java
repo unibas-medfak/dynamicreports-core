@@ -32,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.TimePeriod;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.Date;
 
 /**
@@ -41,6 +42,7 @@ import java.util.Date;
  * 
  */
 public abstract class AbstractTimeSeriesChartBuilder<T extends AbstractTimeSeriesChartBuilder<T, U>, U extends DRAxisPlot> extends AbstractBaseChartBuilder<T, U, DRTimeSeriesDataset> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

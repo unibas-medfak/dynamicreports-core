@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.component.DRCurrentDate;
 import ch.unibas.medizin.dynamicreports.report.builder.expression.SystemMessageExpression;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>CurrentDateBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class CurrentDateBuilder extends AbstractFormatFieldBuilder<CurrentDateBuilder, DRCurrentDate> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

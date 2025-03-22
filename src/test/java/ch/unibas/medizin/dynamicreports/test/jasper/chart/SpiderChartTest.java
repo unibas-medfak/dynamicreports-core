@@ -28,6 +28,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl
 
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.jfree.chart.JFreeChart;
@@ -54,6 +55,7 @@ import net.sf.jasperreports.engine.JRPrintImage;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SpiderChartTest extends AbstractJasperChartTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override

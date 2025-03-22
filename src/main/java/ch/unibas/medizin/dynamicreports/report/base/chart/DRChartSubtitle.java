@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartSubtitle
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>DRChartSubtitle class.</p>
@@ -34,6 +35,7 @@ import java.awt.Color;
  * 
  */
 public class DRChartSubtitle implements DRIChartSubtitle {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Color color;

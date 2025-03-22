@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.chart.dataset;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRICategoryDataset;
 
+import java.io.Serial;
+
 /**
  * <p>DRCategoryDataset class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRICateg
  * 
  */
 public class DRCategoryDataset extends DRSeriesDataset implements DRICategoryDataset {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Boolean useSeriesAsCategory;

@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCros
 import ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignStyle;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignCrosstabCellContent class.</p>
  *
@@ -33,6 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignCrosstabCellContent implements DRIDesignCrosstabCellContent {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private int width;

@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.style;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIBorder;
 
+import java.io.Serial;
+
 /**
  * <p>DRBorder class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIBorder;
  * 
  */
 public class DRBorder implements DRIBorder {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRPen topPen;

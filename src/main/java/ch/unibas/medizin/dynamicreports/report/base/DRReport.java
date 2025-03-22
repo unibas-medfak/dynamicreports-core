@@ -39,6 +39,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIStyle;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -54,6 +55,7 @@ import java.util.ResourceBundle;
  * 
  */
 public class DRReport implements DRIReport {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRReportTemplate template;

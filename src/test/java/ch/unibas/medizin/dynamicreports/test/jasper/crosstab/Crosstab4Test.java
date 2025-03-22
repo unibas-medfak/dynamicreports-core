@@ -31,6 +31,7 @@ import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperCrosstabValueT
 import ch.unibas.medizin.dynamicreports.test.jasper.JasperTestUtils;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Locale;
 
@@ -44,6 +45,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cta
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Crosstab4Test extends AbstractJasperCrosstabValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private CrosstabRowGroupBuilder<String> rowGroup;

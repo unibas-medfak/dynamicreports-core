@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.builder.style.PenBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.LineDirection;
 
+import java.io.Serial;
+
 /**
  * <p>LineBuilder class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.LineDirection;
  * 
  */
 public class LineBuilder extends DimensionComponentBuilder<LineBuilder, DRLine> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -22,6 +22,7 @@ package ch.unibas.medizin.dynamicreports.report.builder;
 
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -31,6 +32,7 @@ import java.io.Serializable;
  * 
  */
 public abstract class AbstractBuilder<T extends AbstractBuilder<T, U>, U> implements Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
     protected boolean builded;
     private final U object;

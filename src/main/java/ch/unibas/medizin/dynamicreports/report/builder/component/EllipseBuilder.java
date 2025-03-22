@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.component.DREllipse;
 import ch.unibas.medizin.dynamicreports.report.builder.style.PenBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>EllipseBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class EllipseBuilder extends DimensionComponentBuilder<EllipseBuilder, DREllipse> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

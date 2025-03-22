@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIPen;
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>DRPen class.</p>
@@ -34,6 +35,7 @@ import java.awt.Color;
  * 
  */
 public class DRPen implements DRIPen {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Float lineWidth;

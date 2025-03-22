@@ -27,6 +27,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.grp
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.report;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
+import java.io.Serial;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -121,6 +122,7 @@ public class DatabaseSubreportTest extends AbstractJasperValueTest {
     }
 
     private class SubreportExpression extends AbstractComplexExpression<JasperReportBuilder> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         public SubreportExpression() {

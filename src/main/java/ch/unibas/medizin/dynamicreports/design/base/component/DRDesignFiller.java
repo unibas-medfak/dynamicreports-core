@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.design.base.component;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignFiller;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignFiller class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignFiller extends DRDesignComponent implements DRIDesignFiller {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

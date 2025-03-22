@@ -24,10 +24,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -107,6 +104,7 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  */
 public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private JasperReportDesign reportDesign;

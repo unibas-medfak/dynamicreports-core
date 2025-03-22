@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.builder.condition;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
 
+import java.io.Serial;
+
 /**
  * <p>BetweenValueExpression class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
  * 
  */
 public class BetweenValueExpression<T extends Number> extends AbstractBetweenValueExpression<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

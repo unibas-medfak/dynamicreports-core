@@ -29,6 +29,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperValueTest;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -46,6 +47,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.fie
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Column1Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private TextColumnBuilder<String> column2;
@@ -121,6 +123,7 @@ public class Column1Test extends AbstractJasperValueTest implements Serializable
     }
 
     private static class ColumnValueFormatter extends AbstractValueFormatter<String, BigDecimal> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -130,6 +133,7 @@ public class Column1Test extends AbstractJasperValueTest implements Serializable
     }
 
     private static class PatternExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

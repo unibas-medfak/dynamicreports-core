@@ -26,6 +26,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.mar
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.report;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -46,6 +47,7 @@ import net.sf.jasperreports.engine.JREmptyDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SubreportPositionTest extends AbstractJasperPositionTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -131,6 +133,7 @@ public class SubreportPositionTest extends AbstractJasperPositionTest implements
     }
 
     private static class SubreportExpression extends AbstractSimpleExpression<JasperReportBuilder> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -148,6 +151,7 @@ public class SubreportPositionTest extends AbstractJasperPositionTest implements
     }
 
     private static class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

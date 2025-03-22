@@ -28,6 +28,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JasperReport;
 
+import java.io.Serial;
 import java.sql.Connection;
 import java.util.Map;
 
@@ -38,6 +39,7 @@ import java.util.Map;
  * 
  */
 public class SubreportBuilder extends DimensionComponentBuilder<SubreportBuilder, DRSubreport> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

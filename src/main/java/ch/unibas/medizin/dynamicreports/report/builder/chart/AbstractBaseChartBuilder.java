@@ -28,6 +28,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Orientation;
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.util.Map;
 
 /**
@@ -37,6 +38,7 @@ import java.util.Map;
  * 
  */
 public abstract class AbstractBaseChartBuilder<T extends AbstractBaseChartBuilder<T, U, V>, U extends AbstractBasePlot, V extends DRChartDataset> extends AbstractChartBuilder<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

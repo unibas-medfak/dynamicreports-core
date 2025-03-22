@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.defaults.Defaults;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
+import java.io.Serial;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -38,6 +39,7 @@ import java.util.Locale;
  * 
  */
 public class DateType extends AbstractDataType<Date, Date> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

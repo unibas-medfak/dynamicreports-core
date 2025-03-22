@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract AbstractFormatFieldBuilder class.</p>
  *
@@ -34,6 +36,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public abstract class AbstractFormatFieldBuilder<T extends AbstractFormatFieldBuilder<T, U>, U extends DRFormatField> extends HyperLinkComponentBuilder<T, U> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

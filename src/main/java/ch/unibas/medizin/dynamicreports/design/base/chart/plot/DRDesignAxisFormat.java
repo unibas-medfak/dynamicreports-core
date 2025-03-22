@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignEx
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>DRDesignAxisFormat class.</p>
@@ -34,6 +35,7 @@ import java.awt.Color;
  * 
  */
 public class DRDesignAxisFormat implements DRIDesignAxisFormat {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIDesignExpression labelExpression;

@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.style.DRFont;
 import ch.unibas.medizin.dynamicreports.report.builder.AbstractBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>FontBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class FontBuilder extends AbstractBuilder<FontBuilder, DRFont> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

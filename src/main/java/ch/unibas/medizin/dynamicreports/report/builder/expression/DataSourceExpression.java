@@ -27,6 +27,8 @@ import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRRewindableDataSource;
 
+import java.io.Serial;
+
 /**
  * <p>DataSourceExpression class.</p>
  *
@@ -34,6 +36,7 @@ import net.sf.jasperreports.engine.JRRewindableDataSource;
  * 
  */
 public class DataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final JRDataSource dataSource;

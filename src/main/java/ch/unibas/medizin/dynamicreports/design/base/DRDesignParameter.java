@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.design.base;
 import ch.unibas.medizin.dynamicreports.design.definition.DRIDesignParameter;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignParameter class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignParameter implements DRIDesignParameter {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String name;

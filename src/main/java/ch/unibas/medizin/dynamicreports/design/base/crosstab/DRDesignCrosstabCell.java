@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.design.base.crosstab;
 import ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCrosstabCell;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignCrosstabCell class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignCrosstabCell implements DRIDesignCrosstabCell {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String name;

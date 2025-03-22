@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.design.base.style.DRDesignPen;
 import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignEllipse;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignEllipse class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignEllipse extends DRDesignComponent implements DRIDesignEllipse {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRDesignPen pen;

@@ -22,6 +22,7 @@ package ch.unibas.medizin.dynamicreports.test.jasper.report;
 
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -43,6 +44,7 @@ import net.sf.jasperreports.engine.JasperReport;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ParametersTest extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -92,6 +94,7 @@ public class ParametersTest extends AbstractJasperValueTest implements Serializa
     }
 
     private static class TitleExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

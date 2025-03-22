@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabMeasureB
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 
+import java.io.Serial;
+
 /**
  * <p>OrderByExpression class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
  * 
  */
 public class OrderByExpression extends AbstractSimpleExpression<Comparable<?>> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final CrosstabMeasureBuilder<? extends Comparable<?>> measure;

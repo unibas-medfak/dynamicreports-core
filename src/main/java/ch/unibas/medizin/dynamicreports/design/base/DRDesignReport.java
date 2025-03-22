@@ -62,6 +62,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIScriptlet;
 import ch.unibas.medizin.dynamicreports.report.definition.DRITableOfContentsCustomizer;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
+import java.io.Serial;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
@@ -76,6 +77,7 @@ import java.util.ResourceBundle;
  * 
  */
 public class DRDesignReport implements DesignTransformAccessor, DRIDesignReport {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRIReport report;

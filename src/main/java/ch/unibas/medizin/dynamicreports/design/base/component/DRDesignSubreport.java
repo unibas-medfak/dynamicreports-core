@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignSub
 import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignSubreport class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignSubreport extends DRDesignComponent implements DRIDesignSubreport {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIDesignExpression reportExpression;

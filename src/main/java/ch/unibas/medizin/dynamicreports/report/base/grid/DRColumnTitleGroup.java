@@ -20,6 +20,7 @@
  */
 package ch.unibas.medizin.dynamicreports.report.base.grid;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +43,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
  * 
  */
 public class DRColumnTitleGroup implements DRIColumnTitleGroup {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRColumnGridList list;

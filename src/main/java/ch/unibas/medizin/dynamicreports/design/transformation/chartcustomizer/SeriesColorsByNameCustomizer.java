@@ -38,6 +38,7 @@ import org.jfree.data.general.PieDataset;
 import org.jfree.data.xy.XYDataset;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
@@ -49,6 +50,7 @@ import java.util.Set;
  * 
  */
 public class SeriesColorsByNameCustomizer implements DRIChartCustomizer {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final Map<String, Color> seriesColorsByName;

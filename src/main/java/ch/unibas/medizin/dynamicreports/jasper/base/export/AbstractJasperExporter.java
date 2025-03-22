@@ -26,6 +26,7 @@ import org.apache.commons.lang3.Validate;
 
 import java.io.File;
 import java.io.OutputStream;
+import java.io.Serial;
 import java.io.Writer;
 
 /**
@@ -35,6 +36,7 @@ import java.io.Writer;
  * 
  */
 public abstract class AbstractJasperExporter implements JasperIExporter {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Writer outputWriter;

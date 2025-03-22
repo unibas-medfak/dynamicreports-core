@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.LineStyle;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>PenBuilder class.</p>
@@ -34,6 +35,7 @@ import java.awt.Color;
  * 
  */
 public class PenBuilder extends AbstractBuilder<PenBuilder, DRPen> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

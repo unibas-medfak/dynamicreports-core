@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFormatter;
 
+import java.io.Serial;
+
 /**
  * <p>DRDataType class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFor
  * 
  */
 public class DRDataType<U, T extends U> extends AbstractDataType<U, T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String pattern;

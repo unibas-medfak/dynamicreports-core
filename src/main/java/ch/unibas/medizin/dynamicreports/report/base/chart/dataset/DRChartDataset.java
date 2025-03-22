@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.DRDataset;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRIChartDataset;
 
+import java.io.Serial;
+
 /**
  * <p>DRChartDataset class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRIChart
  * 
  */
 public class DRChartDataset implements DRIChartDataset {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRDataset subDataset;

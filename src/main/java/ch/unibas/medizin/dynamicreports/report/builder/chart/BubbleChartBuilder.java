@@ -32,6 +32,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.ScaleType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>BubbleChartBuilder class.</p>
  *
@@ -39,6 +41,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class BubbleChartBuilder extends AbstractBaseChartBuilder<BubbleChartBuilder, DRBubblePlot, DRSeriesDataset> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

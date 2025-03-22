@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRISimpleExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract AbstractSimpleExpression class.</p>
  *
@@ -32,6 +34,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class AbstractSimpleExpression<T> implements DRISimpleExpression<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

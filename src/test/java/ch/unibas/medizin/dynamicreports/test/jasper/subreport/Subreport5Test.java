@@ -26,6 +26,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.fie
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.report;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -47,6 +48,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Subreport5Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private final TextColumnBuilder<String> column1 = col.column("field1", type.stringType());
@@ -82,6 +84,7 @@ public class Subreport5Test extends AbstractJasperValueTest implements Serializa
     }
 
     private class SubreportExpression extends AbstractComplexExpression<JasperReportBuilder> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         public SubreportExpression() {
@@ -98,6 +101,7 @@ public class Subreport5Test extends AbstractJasperValueTest implements Serializa
     }
 
     private static class SubreportDataSourceExpression extends AbstractComplexExpression<JRDataSource> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         public SubreportDataSourceExpression() {

@@ -25,6 +25,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -54,6 +55,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ChartSeriesOrderTest extends AbstractJasperChartTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private Map<String, Color> colors;

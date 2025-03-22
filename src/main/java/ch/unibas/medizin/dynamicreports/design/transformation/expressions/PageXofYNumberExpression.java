@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.text.MessageFormat;
 import java.util.List;
 
@@ -37,6 +38,7 @@ import java.util.List;
  * 
  */
 public class PageXofYNumberExpression extends AbstractComplexExpression<String> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final int index;

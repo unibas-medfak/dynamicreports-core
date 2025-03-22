@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.jasper.base.export;
 import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIRtfExporter;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>JasperRtfExporter class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class JasperRtfExporter extends AbstractJasperExporter implements JasperIRtfExporter {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Boolean ignoreHyperLink;

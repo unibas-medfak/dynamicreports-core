@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.component.DRPageNumber;
 import ch.unibas.medizin.dynamicreports.report.builder.expression.SystemMessageExpression;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>PageNumberBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class PageNumberBuilder extends AbstractFormatFieldBuilder<PageNumberBuilder, DRPageNumber> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

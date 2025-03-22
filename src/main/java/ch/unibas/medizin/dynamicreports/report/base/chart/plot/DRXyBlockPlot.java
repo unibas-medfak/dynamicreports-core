@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIXyBlockP
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Paint;
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +38,7 @@ import java.util.List;
  * 
  */
 public class DRXyBlockPlot extends DRAxisPlot implements DRIXyBlockPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Double blockWidth;

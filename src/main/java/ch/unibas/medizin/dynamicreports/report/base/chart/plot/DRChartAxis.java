@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChart;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIChartAxis;
 
+import java.io.Serial;
+
 /**
  * <p>DRChartAxis class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIChartAxi
  * 
  */
 public class DRChartAxis implements DRIChartAxis {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private AxisPosition position;

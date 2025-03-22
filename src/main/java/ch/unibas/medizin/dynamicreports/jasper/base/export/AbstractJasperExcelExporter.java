@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.ImageAnchorType;
 import ch.unibas.medizin.dynamicreports.report.constant.RunDirection;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +37,7 @@ import java.util.Map;
  * 
  */
 public abstract class AbstractJasperExcelExporter extends AbstractJasperExporter implements JasperIExcelExporter {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Boolean onePagePerSheet;

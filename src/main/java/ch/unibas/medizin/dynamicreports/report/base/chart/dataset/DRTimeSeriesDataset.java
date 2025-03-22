@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.TimePeriod;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRITimeSeriesDataset;
 
+import java.io.Serial;
+
 /**
  * <p>DRTimeSeriesDataset class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRITimeS
  * 
  */
 public class DRTimeSeriesDataset extends DRSeriesDataset implements DRITimeSeriesDataset {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private TimePeriod timePeriodType;

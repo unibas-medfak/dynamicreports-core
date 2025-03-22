@@ -29,6 +29,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.Markup;
 import ch.unibas.medizin.dynamicreports.report.constant.TextAdjust;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignTextField class.</p>
  *
@@ -36,6 +38,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.TextAdjust;
  *
  */
 public class DRDesignTextField extends DRDesignHyperlinkComponent implements DRIDesignTextField {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String pattern;

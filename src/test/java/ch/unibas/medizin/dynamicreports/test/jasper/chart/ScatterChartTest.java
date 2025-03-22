@@ -23,6 +23,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cht
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Locale;
 
@@ -48,6 +49,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ScatterChartTest extends AbstractJasperChartTest implements Serializable {
+  @Serial
   private static final long serialVersionUID = 1L;
 
   @Override

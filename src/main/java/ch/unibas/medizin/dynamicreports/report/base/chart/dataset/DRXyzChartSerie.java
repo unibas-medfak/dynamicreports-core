@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRIXyzCh
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>DRXyzChartSerie class.</p>
  *
@@ -32,6 +34,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class DRXyzChartSerie extends DRChartSerie implements DRIXyzChartSerie {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<?> xValueExpression;

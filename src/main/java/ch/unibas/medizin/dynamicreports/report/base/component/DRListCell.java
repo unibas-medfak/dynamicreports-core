@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAli
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIListCell;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>DRListCell class.</p>
  *
@@ -33,6 +35,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class DRListCell implements DRIListCell {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private HorizontalCellComponentAlignment horizontalAlignment;

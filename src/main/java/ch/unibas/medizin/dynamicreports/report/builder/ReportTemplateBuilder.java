@@ -44,6 +44,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRITableOfContentsCust
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.util.Locale;
 
 /**
@@ -53,6 +54,7 @@ import java.util.Locale;
  * 
  */
 public class ReportTemplateBuilder extends AbstractBuilder<ReportTemplateBuilder, DRReportTemplate> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

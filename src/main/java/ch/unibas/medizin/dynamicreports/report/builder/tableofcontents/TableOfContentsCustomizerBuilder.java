@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.builder.style.ReportStyleBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.TableOfContentsPosition;
 
+import java.io.Serial;
+
 /**
  * <p>TableOfContentsCustomizerBuilder class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.TableOfContentsPosition;
  * 
  */
 public class TableOfContentsCustomizerBuilder extends AbstractBuilder<TableOfContentsCustomizerBuilder, TableOfContentsCustomizer> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.style;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRITemplateStyle;
 
+import java.io.Serial;
+
 /**
  * <p>DRTemplateStyle class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRITemplateStyle
  * 
  */
 public class DRTemplateStyle implements DRITemplateStyle {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

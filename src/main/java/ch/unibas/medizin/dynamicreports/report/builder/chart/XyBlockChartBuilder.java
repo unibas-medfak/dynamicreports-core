@@ -33,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Paint;
+import java.io.Serial;
 
 /**
  * <p>XyBlockChartBuilder class.</p>
@@ -41,6 +42,7 @@ import java.awt.Paint;
  * 
  */
 public class XyBlockChartBuilder extends AbstractBaseChartBuilder<XyBlockChartBuilder, DRXyBlockPlot, DRSeriesDataset> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

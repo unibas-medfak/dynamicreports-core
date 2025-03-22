@@ -60,6 +60,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -69,6 +70,7 @@ import java.io.Serializable;
  * 
  */
 public class JasperConcatenatedReportBuilder implements Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final JasperReportHandler jasperReportHandler;

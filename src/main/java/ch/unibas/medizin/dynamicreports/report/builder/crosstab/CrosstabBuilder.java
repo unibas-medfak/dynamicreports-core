@@ -32,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.RunDirection;
 import net.sf.jasperreports.engine.JRDataSource;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.sql.Connection;
 
 /**
@@ -41,6 +42,7 @@ import java.sql.Connection;
  * 
  */
 public class CrosstabBuilder extends DimensionComponentBuilder<CrosstabBuilder, DRCrosstab> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

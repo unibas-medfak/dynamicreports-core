@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.component.DRRectangle;
 import ch.unibas.medizin.dynamicreports.report.builder.style.PenBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>RectangleBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class RectangleBuilder extends DimensionComponentBuilder<RectangleBuilder, DRRectangle> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

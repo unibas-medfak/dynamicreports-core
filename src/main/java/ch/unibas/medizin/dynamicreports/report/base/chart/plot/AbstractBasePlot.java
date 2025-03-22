@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIBasePlot
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,6 +39,7 @@ import java.util.Map;
  * 
  */
 public abstract class AbstractBasePlot implements DRIBasePlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Orientation orientation;

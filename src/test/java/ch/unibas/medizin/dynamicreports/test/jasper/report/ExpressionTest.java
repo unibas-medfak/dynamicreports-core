@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.base.expression.AbstractSimpleExp
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperValueTest;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Locale;
 
@@ -39,6 +40,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.typ
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ExpressionTest extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -63,6 +65,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
     }
 
     private static class Expression1 extends AbstractSimpleExpression {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -72,6 +75,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
     }
 
     private static class Expression2<T> extends AbstractSimpleExpression<T> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         private final T value;
@@ -87,6 +91,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
     }
 
     private static class Expression3 extends AbstractSimpleExpression<Integer> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -96,6 +101,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
     }
 
     private static class Expression4 extends Expression3 {
+        @Serial
         private static final long serialVersionUID = 1L;
     }
 }

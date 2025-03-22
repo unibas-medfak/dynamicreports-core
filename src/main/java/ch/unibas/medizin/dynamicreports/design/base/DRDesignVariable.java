@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.report.ReportUtils;
 import ch.unibas.medizin.dynamicreports.report.constant.Calculation;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignVariable class.</p>
  *
@@ -34,6 +36,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignVariable implements DRIDesignVariable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

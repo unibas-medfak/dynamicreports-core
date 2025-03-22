@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.jasper.constant.BorderCollapse;
 import ch.unibas.medizin.dynamicreports.jasper.constant.SizeUnit;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>JasperHtmlExporterBuilder class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  *
  */
 public class JasperHtmlExporterBuilder extends AbstractJasperExporterBuilder<JasperHtmlExporterBuilder, JasperHtmlExporter> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

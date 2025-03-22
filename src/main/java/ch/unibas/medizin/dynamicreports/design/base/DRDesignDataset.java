@@ -33,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.design.transformation.DatasetExpressionT
 import ch.unibas.medizin.dynamicreports.report.ReportUtils;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
 import java.util.Collection;
 
 /**
@@ -42,6 +43,7 @@ import java.util.Collection;
  * 
  */
 public class DRDesignDataset implements DRIDesignDataset {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

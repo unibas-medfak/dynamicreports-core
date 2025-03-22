@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.ChartType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
 import java.awt.Paint;
+import java.io.Serial;
 
 /**
  * <p>WaterfallBarChartBuilder class.</p>
@@ -33,6 +34,7 @@ import java.awt.Paint;
  * 
  */
 public class WaterfallBarChartBuilder extends AbstractCategoryChartBuilder<WaterfallBarChartBuilder, DRWaterfallBarPlot> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

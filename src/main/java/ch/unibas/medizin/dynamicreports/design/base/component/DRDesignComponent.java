@@ -30,6 +30,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.ComponentPositionType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.StretchType;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +41,7 @@ import java.util.List;
  * 
  */
 public abstract class DRDesignComponent implements DRIDesignComponent {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

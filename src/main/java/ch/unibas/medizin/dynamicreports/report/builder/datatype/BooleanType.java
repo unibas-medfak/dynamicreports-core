@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.defaults.Defaults;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
+import java.io.Serial;
 import java.util.Locale;
 
 /**
@@ -35,6 +36,7 @@ import java.util.Locale;
  * 
  */
 public class BooleanType extends AbstractDataType<Boolean, Boolean> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

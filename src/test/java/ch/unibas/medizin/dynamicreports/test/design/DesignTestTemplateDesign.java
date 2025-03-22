@@ -22,10 +22,13 @@ package ch.unibas.medizin.dynamicreports.test.design;
 
 import ch.unibas.medizin.dynamicreports.report.base.AbstractTemplateDesign;
 
+import java.io.Serial;
+
 /**
  * @author Ricardo Mariaca
  */
 public class DesignTestTemplateDesign extends AbstractTemplateDesign<Object> {
+    @Serial
     private static final long serialVersionUID = 1L;
 
 }

@@ -23,10 +23,13 @@ package ch.unibas.medizin.dynamicreports.test.design;
 import ch.unibas.medizin.dynamicreports.report.builder.ReportBuilder;
 import ch.unibas.medizin.dynamicreports.report.definition.DRITemplateDesign;
 
+import java.io.Serial;
+
 /**
  * @author Ricardo Mariaca
  */
 public class DesignReportBuilder extends ReportBuilder<DesignReportBuilder> {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     public DesignReportBuilder() {

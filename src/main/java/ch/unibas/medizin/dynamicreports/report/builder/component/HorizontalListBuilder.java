@@ -29,6 +29,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.StretchType;
 import ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAlignment;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>HorizontalListBuilder class.</p>
  *
@@ -36,6 +38,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class HorizontalListBuilder extends DimensionComponentBuilder<HorizontalListBuilder, DRList> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRList row;

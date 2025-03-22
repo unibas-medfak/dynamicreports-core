@@ -34,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperCrosstabValueTest;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
@@ -50,6 +51,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.fie
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class GroupExpressionCrosstabTest extends AbstractJasperCrosstabValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private CrosstabRowGroupBuilder<String> rowGroup;
@@ -148,6 +150,7 @@ public class GroupExpressionCrosstabTest extends AbstractJasperCrosstabValueTest
     }
 
     private static class GroupExpression1 extends AbstractSimpleExpression<Integer> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -160,6 +163,7 @@ public class GroupExpressionCrosstabTest extends AbstractJasperCrosstabValueTest
     }
 
     private static class GroupExpression2 extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

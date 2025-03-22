@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.design.base.chart.plot;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignPiePlot;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignPiePlot class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignPiePlot extends AbstractDesignBasePlot implements DRIDesignPiePlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Boolean circular;

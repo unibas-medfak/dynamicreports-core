@@ -20,11 +20,7 @@
  */
 package ch.unibas.medizin.dynamicreports.jasper.base.templatedesign;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +53,7 @@ import net.sf.jasperreports.engine.xml.JRXmlWriter;
  *
  */
 public class JasperTemplateDesign implements DRITemplateDesign<JasperDesign> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private JasperDesign jasperDesign;

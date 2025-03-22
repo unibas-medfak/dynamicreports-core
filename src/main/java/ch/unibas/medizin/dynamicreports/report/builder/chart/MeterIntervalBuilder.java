@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>MeterIntervalBuilder class.</p>
@@ -35,6 +36,7 @@ import java.awt.Color;
  * 
  */
 public class MeterIntervalBuilder extends AbstractBuilder<MeterIntervalBuilder, DRMeterInterval> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

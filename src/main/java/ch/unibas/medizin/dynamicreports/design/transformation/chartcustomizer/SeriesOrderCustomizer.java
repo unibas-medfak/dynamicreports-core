@@ -28,6 +28,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.data.category.CategoryDataset;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Comparator;
 
@@ -38,6 +39,7 @@ import java.util.Comparator;
  * 
  */
 public class SeriesOrderCustomizer implements DRIChartCustomizer, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final Comparator<String> seriesOrderBy;

@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.column.DRIBooleanColumn;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIBooleanField;
 
+import java.io.Serial;
+
 /**
  * <p>DRBooleanColumn class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRIBooleanFi
  * 
  */
 public class DRBooleanColumn extends DRColumn<DRIBooleanField> implements DRIBooleanColumn {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

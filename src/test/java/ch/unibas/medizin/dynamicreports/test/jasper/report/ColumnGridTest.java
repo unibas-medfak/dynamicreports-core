@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.sbt;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -43,6 +44,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ColumnGridTest extends AbstractJasperPositionTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private TextColumnBuilder<Integer> column1;

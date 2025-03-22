@@ -26,6 +26,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.hyp
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +57,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
  * 
  */
 public class TableOfContentsCustomizer implements DRITableOfContentsCustomizer {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**
@@ -294,6 +296,7 @@ public class TableOfContentsCustomizer implements DRITableOfContentsCustomizer {
     }
 
     protected class ReferenceExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
         @Override
@@ -303,6 +306,7 @@ public class TableOfContentsCustomizer implements DRITableOfContentsCustomizer {
     }
 
     protected class PrintHeadingExpression extends AbstractSimpleExpression<Boolean> {
+        @Serial
         private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
         private final int level;

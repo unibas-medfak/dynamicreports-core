@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIPadding;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>DRPadding class.</p>
  *
@@ -31,6 +33,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class DRPadding implements DRIPadding {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Integer top;

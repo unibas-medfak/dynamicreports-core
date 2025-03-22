@@ -28,6 +28,7 @@ import ch.unibas.medizin.dynamicreports.report.defaults.Defaults;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFormatter;
 
+import java.io.Serial;
 import java.util.List;
 
 /**
@@ -37,6 +38,7 @@ import java.util.List;
  * 
  */
 public class ListType extends AbstractDataType<List, List> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private static final ListFormatter listFormatter = new ListFormatter();
@@ -60,6 +62,7 @@ public class ListType extends AbstractDataType<List, List> {
     }
 
     private static class ListFormatter extends AbstractValueFormatter<String, List> {
+        @Serial
         private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
         @Override

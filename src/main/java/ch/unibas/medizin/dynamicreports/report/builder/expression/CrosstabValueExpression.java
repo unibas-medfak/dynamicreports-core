@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabRowGroup
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.DRICrosstabValue;
 
+import java.io.Serial;
+
 /**
  * <p>CrosstabValueExpression class.</p>
  *
@@ -34,6 +36,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRICrosstabValue;
  * 
  */
 public final class CrosstabValueExpression<T> extends AbstractSystemExpression<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

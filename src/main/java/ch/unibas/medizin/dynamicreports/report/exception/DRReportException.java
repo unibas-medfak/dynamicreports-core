@@ -22,6 +22,8 @@ package ch.unibas.medizin.dynamicreports.report.exception;
 
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRReportException class.</p>
  *
@@ -29,6 +31,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRReportException extends RuntimeException {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

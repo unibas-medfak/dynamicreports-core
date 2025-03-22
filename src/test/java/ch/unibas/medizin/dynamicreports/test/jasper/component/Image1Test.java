@@ -29,6 +29,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Arrays;
 
@@ -86,6 +87,7 @@ public class Image1Test extends AbstractJasperTest {
     }
 
     private static class TestImage extends BufferedImage implements Serializable {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         public TestImage() {

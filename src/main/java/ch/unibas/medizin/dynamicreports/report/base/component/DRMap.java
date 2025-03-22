@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIMap;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>DRMap class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class DRMap extends DRDimensionComponent implements DRIMap {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     public DRIExpression<Float> latitudeExpression;

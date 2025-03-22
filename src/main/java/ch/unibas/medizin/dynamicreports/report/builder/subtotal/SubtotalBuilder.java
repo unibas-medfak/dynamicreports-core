@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.builder.subtotal;
 import ch.unibas.medizin.dynamicreports.report.builder.column.ColumnBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract SubtotalBuilder class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public abstract class SubtotalBuilder<T extends SubtotalBuilder<T, U>, U> extends BaseSubtotalBuilder<T, U> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

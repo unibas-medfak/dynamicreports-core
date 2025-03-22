@@ -28,6 +28,7 @@ import ch.unibas.medizin.dynamicreports.report.datasource.DRDataSource;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperPositionTest;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -44,6 +45,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.typ
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ComponentColumnPositionTest extends AbstractJasperPositionTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private TextColumnBuilder<String> column1;

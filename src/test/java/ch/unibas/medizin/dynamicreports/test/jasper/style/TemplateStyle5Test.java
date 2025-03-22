@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl
 
 import java.awt.Color;
 import java.io.InputStream;
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Assertions;
@@ -44,6 +45,7 @@ import net.sf.jasperreports.engine.type.LineStyleEnum;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TemplateStyle5Test extends AbstractJasperStyleTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override

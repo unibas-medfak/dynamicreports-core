@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.SplitType;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>MultiPageListBuilder class.</p>
  *
@@ -34,6 +36,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class MultiPageListBuilder extends DimensionComponentBuilder<MultiPageListBuilder, DRMultiPageList> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**
@@ -82,6 +85,7 @@ public class MultiPageListBuilder extends DimensionComponentBuilder<MultiPageLis
     }
 
     private static class PageBreakExpression extends AbstractSimpleExpression<Boolean> {
+        @Serial
         private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
         @Override

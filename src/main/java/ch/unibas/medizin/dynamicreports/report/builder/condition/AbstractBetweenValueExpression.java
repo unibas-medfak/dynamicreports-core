@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract AbstractBetweenValueExpression class.</p>
  *
@@ -33,6 +35,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class AbstractBetweenValueExpression<T extends Number> extends AbstractSimpleExpression<Boolean> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRIValue<T> value;

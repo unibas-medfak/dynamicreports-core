@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.expression.AbstractSystemExp
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.SystemExpression;
 
+import java.io.Serial;
+
 /**
  * <p>PageNumberExpression class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.SystemExpression;
  * 
  */
 public final class PageNumberExpression extends AbstractSystemExpression<Integer> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

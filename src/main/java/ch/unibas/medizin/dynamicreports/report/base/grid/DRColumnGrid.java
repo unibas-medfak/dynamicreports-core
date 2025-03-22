@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.ListType;
 import ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGrid;
 import ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGridComponent;
 
+import java.io.Serial;
+
 /**
  * <p>DRColumnGrid class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.grid.DRIColumnGridComp
  * 
  */
 public class DRColumnGrid implements DRIColumnGrid {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRColumnGridList list;

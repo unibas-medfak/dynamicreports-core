@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.style.DRStyle;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>StyleBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class StyleBuilder extends BaseStyleBuilder<StyleBuilder, DRStyle> implements ReportStyleBuilder {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

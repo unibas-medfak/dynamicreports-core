@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.report.base.expression.AbstractSimpleExp
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 
+import java.io.Serial;
 import java.util.ResourceBundle;
 
 /**
@@ -33,6 +34,7 @@ import java.util.ResourceBundle;
  * 
  */
 public class SystemMessageExpression extends AbstractSimpleExpression<String> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String key;

@@ -28,6 +28,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIGroup;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIDimensionComponent;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract DRDimensionComponent class.</p>
  *
@@ -35,6 +37,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class DRDimensionComponent extends DRComponent implements DRIDimensionComponent {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Integer width;

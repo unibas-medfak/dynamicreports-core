@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.component.DRTotalPages;
 import ch.unibas.medizin.dynamicreports.report.builder.expression.SystemMessageExpression;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>TotalPagesBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class TotalPagesBuilder extends AbstractFormatFieldBuilder<TotalPagesBuilder, DRTotalPages> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

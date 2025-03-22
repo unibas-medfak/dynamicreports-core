@@ -21,6 +21,7 @@
 package ch.unibas.medizin.dynamicreports.test.jasper.subreport;
 
 import java.io.InputStream;
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Assertions;
@@ -45,6 +46,7 @@ import net.sf.jasperreports.engine.JasperReport;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class JasperSubreportTest extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -92,6 +94,7 @@ public class JasperSubreportTest extends AbstractJasperValueTest implements Seri
     }
 
     private static class SubreportExpression extends AbstractSimpleExpression<JasperReport> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -108,6 +111,7 @@ public class JasperSubreportTest extends AbstractJasperValueTest implements Seri
     }
 
     private static class SubreportDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

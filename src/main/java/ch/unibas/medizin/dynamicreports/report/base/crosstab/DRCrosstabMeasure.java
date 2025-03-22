@@ -20,6 +20,7 @@
  */
 package ch.unibas.medizin.dynamicreports.report.base.crosstab;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +46,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle;
  * 
  */
 public class DRCrosstabMeasure<T> implements DRICrosstabMeasure<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

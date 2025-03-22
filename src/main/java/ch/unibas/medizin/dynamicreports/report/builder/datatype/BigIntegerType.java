@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.defaults.Defaults;
 
+import java.io.Serial;
 import java.math.BigInteger;
 
 /**
@@ -33,6 +34,7 @@ import java.math.BigInteger;
  * 
  */
 public class BigIntegerType extends NumberType<BigInteger> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

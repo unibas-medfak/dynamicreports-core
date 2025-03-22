@@ -23,6 +23,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cta
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.field;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -46,6 +47,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class CrosstabStyle3Test extends AbstractJasperCrosstabStyleTest implements Serializable {
+  @Serial
   private static final long serialVersionUID = 1L;
 
   private CrosstabRowGroupBuilder<String> rowGroup;

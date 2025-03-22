@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.ListType;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>VerticalColumnGridListBuilder class.</p>
  *
@@ -33,6 +35,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class VerticalColumnGridListBuilder extends AbstractBuilder<VerticalColumnGridListBuilder, DRColumnGridList> implements ColumnGridComponentBuilder {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIXyList;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +35,7 @@ import java.util.List;
  * 
  */
 public class DRXyList extends DRDimensionComponent implements DRIXyList {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private List<DRXyListCell> xyListCells;

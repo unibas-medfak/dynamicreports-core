@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.ReportUtils;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,6 +37,7 @@ import java.util.Map;
  * 
  */
 public class CrosstabParametersExpression extends AbstractDesignSimpleExpression {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final Map<String, Object> parameters;

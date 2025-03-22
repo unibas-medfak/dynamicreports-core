@@ -28,6 +28,7 @@ import ch.unibas.medizin.dynamicreports.report.base.expression.AbstractSimpleExp
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,6 +39,7 @@ import java.util.Map;
  * 
  */
 public class SerieValueExpression extends AbstractSimpleExpression<Number> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRIDesignExpression valueExpression;

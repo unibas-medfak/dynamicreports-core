@@ -28,6 +28,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.SplitType;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIBand;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>DRBand class.</p>
  *
@@ -35,6 +37,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class DRBand implements DRIBand {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private SplitType splitType;

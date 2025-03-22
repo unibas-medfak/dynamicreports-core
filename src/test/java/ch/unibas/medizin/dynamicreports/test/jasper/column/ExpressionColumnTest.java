@@ -30,6 +30,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperValueTest;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Locale;
@@ -45,6 +46,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.fie
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ExpressionColumnTest extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private FieldBuilder<Double> field1;
@@ -113,6 +115,7 @@ public class ExpressionColumnTest extends AbstractJasperValueTest implements Ser
     }
 
     private class ValueExpression1 extends AbstractSimpleExpression<Double> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -124,6 +127,7 @@ public class ExpressionColumnTest extends AbstractJasperValueTest implements Ser
     }
 
     private class ValueExpression2 extends AbstractSimpleExpression<Double> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -135,6 +139,7 @@ public class ExpressionColumnTest extends AbstractJasperValueTest implements Ser
     }
 
     private static class ColumnValueFormatter extends AbstractValueFormatter<String, Double> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

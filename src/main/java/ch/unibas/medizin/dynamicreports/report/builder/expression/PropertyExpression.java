@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIPropertyExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>PropertyExpression class.</p>
  *
@@ -32,6 +34,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class PropertyExpression implements DRIPropertyExpression {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String name;

@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRIGenericEl
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIParameterExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +36,7 @@ import java.util.List;
  * 
  */
 public class DRGenericElement extends DRDimensionComponent implements DRIGenericElement {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String genericElementNamespace;

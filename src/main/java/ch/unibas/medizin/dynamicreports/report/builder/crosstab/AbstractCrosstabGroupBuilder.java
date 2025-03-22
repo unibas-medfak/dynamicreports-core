@@ -20,6 +20,7 @@
  */
 package ch.unibas.medizin.dynamicreports.report.builder.crosstab;
 
+import java.io.Serial;
 import java.util.Comparator;
 
 import org.apache.commons.lang3.Validate;
@@ -52,6 +53,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFor
  * 
  */
 public abstract class AbstractCrosstabGroupBuilder<T extends AbstractCrosstabGroupBuilder<T, U, V>, U extends DRCrosstabGroup<V>, V> extends AbstractBuilder<T, U> implements DRIValue<V> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

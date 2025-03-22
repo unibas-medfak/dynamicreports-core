@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cht
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
@@ -55,6 +56,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ShowValuesChartDataTest extends AbstractJasperChartTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override

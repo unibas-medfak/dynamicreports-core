@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.jasper.base.export;
 import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperITextExporter;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>JasperTextExporter class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class JasperTextExporter extends AbstractJasperExporter implements JasperITextExporter {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Float characterWidth;

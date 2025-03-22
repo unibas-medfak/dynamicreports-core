@@ -23,6 +23,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cht
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Calendar;
@@ -57,6 +58,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class DifferenceChartTest extends AbstractJasperChartTest implements Serializable {
+  @Serial
   private static final long serialVersionUID = 1L;
 
   @Override
@@ -139,6 +141,7 @@ public class DifferenceChartTest extends AbstractJasperChartTest implements Seri
   }
 
   private static class ChartCustomizer implements DRIChartCustomizer, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     @Override

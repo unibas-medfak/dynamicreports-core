@@ -30,6 +30,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import net.sf.jasperreports.engine.JRDataSource;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.sql.Connection;
 
 /**
@@ -39,6 +40,7 @@ import java.sql.Connection;
  * 
  */
 public class DatasetBuilder extends AbstractBuilder<DatasetBuilder, DRDataset> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

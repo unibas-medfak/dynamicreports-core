@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.ValueLocation;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>DRDesignThermometerPlot class.</p>
@@ -35,6 +36,7 @@ import java.awt.Color;
  * 
  */
 public class DRDesignThermometerPlot extends DRDesignAxisPlot implements DRIDesignThermometerPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIDesignExpression dataRangeLowExpression;

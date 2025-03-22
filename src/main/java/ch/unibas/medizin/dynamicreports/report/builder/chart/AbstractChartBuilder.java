@@ -35,6 +35,7 @@ import net.sf.jasperreports.engine.JRDataSource;
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.sql.Connection;
 
 /**
@@ -44,6 +45,7 @@ import java.sql.Connection;
  * 
  */
 public abstract class AbstractChartBuilder<T extends AbstractChartBuilder<T>> extends HyperLinkComponentBuilder<T, DRChart> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

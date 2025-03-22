@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignSy
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRISystemExpression;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignSystemExpression class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRISystemEx
  * 
  */
 public class DRDesignSystemExpression implements DRIDesignSystemExpression {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRISystemExpression<?> systemExpression;

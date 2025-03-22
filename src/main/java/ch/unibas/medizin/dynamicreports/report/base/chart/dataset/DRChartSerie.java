@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRIChart
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract DRChartSerie class.</p>
  *
@@ -33,6 +35,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class DRChartSerie implements DRIChartSerie {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<?> seriesExpression;

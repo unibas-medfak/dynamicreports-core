@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalCellComponentAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAlignment;
 
+import java.io.Serial;
+
 /**
  * <p>VerticalColumnGridListCellBuilder class.</p>
  *
@@ -33,6 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAli
  * 
  */
 public class VerticalColumnGridListCellBuilder extends AbstractBuilder<VerticalColumnGridListCellBuilder, DRColumnGridListCell> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

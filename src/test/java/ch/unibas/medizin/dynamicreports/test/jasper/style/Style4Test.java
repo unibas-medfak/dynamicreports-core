@@ -25,6 +25,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
 import java.awt.Color;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -48,6 +49,7 @@ import net.sf.jasperreports.engine.type.HorizontalTextAlignEnum;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Style4Test extends AbstractJasperStyleTest implements Serializable {
+  @Serial
   private static final long serialVersionUID = 1L;
 
   private TextColumnBuilder<Date> column1;

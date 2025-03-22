@@ -34,6 +34,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.SplitType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract GroupBuilder class.</p>
  *
@@ -41,6 +43,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class GroupBuilder<T extends GroupBuilder<T>> extends AbstractBuilder<T, DRGroup> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression valueExpression;

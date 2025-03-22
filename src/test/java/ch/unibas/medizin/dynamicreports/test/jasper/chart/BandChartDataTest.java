@@ -30,6 +30,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperChartTest;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -45,6 +46,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.var
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BandChartDataTest extends AbstractJasperChartTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -102,6 +104,7 @@ public class BandChartDataTest extends AbstractJasperChartTest implements Serial
     }
 
     private static class TitleExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         private final String variableName;

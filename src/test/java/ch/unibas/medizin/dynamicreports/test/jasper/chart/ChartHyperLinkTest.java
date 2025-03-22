@@ -25,6 +25,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.hyperLink;
 
 import java.awt.Rectangle;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -49,6 +50,7 @@ import net.sf.jasperreports.renderers.AreaHyperlinksRenderable;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ChartHyperLinkTest extends AbstractJasperChartTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -125,6 +127,7 @@ public class ChartHyperLinkTest extends AbstractJasperChartTest implements Seria
     }
 
     private static class TooltipExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
         private final String name;
 

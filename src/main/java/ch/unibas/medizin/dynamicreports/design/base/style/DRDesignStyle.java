@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.Validate;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +37,7 @@ import java.util.List;
  * 
  */
 public class DRDesignStyle extends DRDesignBaseStyle implements DRIDesignStyle {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

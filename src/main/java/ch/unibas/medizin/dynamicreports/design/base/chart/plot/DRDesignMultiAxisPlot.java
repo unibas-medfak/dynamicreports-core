@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignCh
 import ch.unibas.medizin.dynamicreports.design.definition.chart.plot.DRIDesignMultiAxisPlot;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +35,7 @@ import java.util.List;
  * 
  */
 public class DRDesignMultiAxisPlot extends DRDesignAxisPlot implements DRIDesignMultiAxisPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private List<DRIDesignChartAxis> axes;

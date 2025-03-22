@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.LineSpacing;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIParagraph;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRITabStop;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +36,7 @@ import java.util.List;
  * 
  */
 public class DRParagraph implements DRIParagraph {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private LineSpacing lineSpacing;

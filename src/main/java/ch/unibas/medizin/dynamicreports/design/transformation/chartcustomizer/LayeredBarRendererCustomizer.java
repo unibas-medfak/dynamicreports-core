@@ -21,6 +21,7 @@
 package ch.unibas.medizin.dynamicreports.design.transformation.chartcustomizer;
 
 import java.awt.Paint;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -41,6 +42,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartCustomiz
  *
  */
 public class LayeredBarRendererCustomizer implements DRIChartCustomizer, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final List<Double> seriesBarWidths;

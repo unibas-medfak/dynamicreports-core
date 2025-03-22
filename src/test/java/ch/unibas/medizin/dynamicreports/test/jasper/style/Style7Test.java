@@ -23,6 +23,7 @@ package ch.unibas.medizin.dynamicreports.test.jasper.style;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Assertions;
@@ -44,6 +45,7 @@ import net.sf.jasperreports.engine.type.TabStopAlignEnum;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Style7Test extends AbstractJasperStyleTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override

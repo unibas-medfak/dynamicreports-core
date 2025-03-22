@@ -32,6 +32,7 @@ import org.jfree.chart.LegendItemCollection;
 import org.jfree.chart.renderer.LookupPaintScale;
 import org.jfree.chart.renderer.xy.XYBlockRenderer;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -41,6 +42,7 @@ import java.io.Serializable;
  * 
  */
 public class XyBlockRendererCustomizer implements DRIChartCustomizer, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRIXyBlockPlot xyBlockPlot;

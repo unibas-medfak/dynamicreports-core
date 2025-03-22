@@ -30,6 +30,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 
 import java.awt.Image;
 import java.io.InputStream;
+import java.io.Serial;
 import java.net.URL;
 
 /**
@@ -39,6 +40,7 @@ import java.net.URL;
  * 
  */
 public class ImageBuilder extends HyperLinkComponentBuilder<ImageBuilder, DRImage> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

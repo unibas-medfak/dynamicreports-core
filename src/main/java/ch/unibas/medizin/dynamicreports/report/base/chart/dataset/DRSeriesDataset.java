@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRISerie
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +38,7 @@ import java.util.List;
  * 
  */
 public class DRSeriesDataset extends DRChartDataset implements DRISeriesDataset {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<?> valueExpression;

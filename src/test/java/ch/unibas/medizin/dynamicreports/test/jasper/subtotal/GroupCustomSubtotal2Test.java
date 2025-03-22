@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.grp;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.sbt;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Locale;
@@ -46,6 +47,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class GroupCustomSubtotal2Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private TextColumnBuilder<Integer> column2;
@@ -111,6 +113,7 @@ public class GroupCustomSubtotal2Test extends AbstractJasperValueTest implements
     }
 
     private class ValueExpression extends AbstractComplexExpression<Integer> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         private ValueExpression() {

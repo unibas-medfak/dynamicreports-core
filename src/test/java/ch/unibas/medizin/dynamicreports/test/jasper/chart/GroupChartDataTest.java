@@ -25,6 +25,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.grp;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.variable;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.jfree.chart.JFreeChart;
@@ -47,6 +48,7 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class GroupChartDataTest extends AbstractJasperChartTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -128,6 +130,7 @@ public class GroupChartDataTest extends AbstractJasperChartTest implements Seria
     }
 
     private static class ValueExpression extends AbstractSimpleExpression<Double> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -139,6 +142,7 @@ public class GroupChartDataTest extends AbstractJasperChartTest implements Seria
     }
 
     private static class TitleExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override
@@ -148,6 +152,7 @@ public class GroupChartDataTest extends AbstractJasperChartTest implements Seria
     }
 
     private static class Customizer implements DRIChartCustomizer, Serializable {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

@@ -34,6 +34,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIPropertyExpression;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFormatter;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract ValueColumnBuilder class.</p>
  *
@@ -41,6 +43,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFor
  * 
  */
 public abstract class ValueColumnBuilder<T extends ValueColumnBuilder<T, U>, U> extends ColumnBuilder<T, DRValueColumn<U>> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

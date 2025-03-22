@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Comparator;
 import java.util.List;
@@ -36,6 +37,7 @@ import java.util.List;
  * 
  */
 public class SeriesOrderByNamesComparator implements Comparator<String>, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final List<String> seriesNames;

@@ -31,6 +31,7 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.renderers.Renderable;
 
+import java.io.Serial;
 import java.util.List;
 
 /**
@@ -40,6 +41,7 @@ import java.util.List;
  * 
  */
 public class BooleanImageExpression extends AbstractComplexExpression<Renderable> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final Renderable imageTrue;

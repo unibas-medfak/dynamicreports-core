@@ -27,6 +27,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
 import org.jfree.chart.plot.PiePlot;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 
@@ -37,6 +38,7 @@ import java.text.DecimalFormat;
  * 
  */
 public class PieChartLabelFormatCustomizer implements DRIChartCustomizer, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String labelFormat;

@@ -35,6 +35,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.PercentageTotalType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
 
+import java.io.Serial;
+
 /**
  * <p>PercentageSubtotalBuilder class.</p>
  *
@@ -42,6 +44,7 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
  * 
  */
 public class PercentageSubtotalBuilder extends BaseSubtotalBuilder<PercentageSubtotalBuilder, Double> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRIExpression<? extends Number> expression;

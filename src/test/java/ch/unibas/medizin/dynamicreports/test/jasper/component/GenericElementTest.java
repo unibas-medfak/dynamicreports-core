@@ -26,6 +26,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.fie
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
 import java.io.ByteArrayOutputStream;
+import java.io.Serial;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -88,6 +89,7 @@ public class GenericElementTest {
     }
 
     private class ParameterExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

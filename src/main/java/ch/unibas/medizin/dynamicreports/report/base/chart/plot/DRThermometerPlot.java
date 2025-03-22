@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIFont;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>DRThermometerPlot class.</p>
@@ -35,6 +36,7 @@ import java.awt.Color;
  * 
  */
 public class DRThermometerPlot implements DRIThermometerPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<? extends Number> dataRangeLowExpression;

@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.HorizontalCellComponentA
 import ch.unibas.medizin.dynamicreports.report.constant.ListType;
 import ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAlignment;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +38,7 @@ import java.util.List;
  * 
  */
 public class DRDesignList extends DRDesignComponent implements DRIDesignList {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private List<DRDesignListCell> listCells;

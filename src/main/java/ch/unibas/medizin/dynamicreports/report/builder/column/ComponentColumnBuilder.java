@@ -29,6 +29,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIDimensionComponent;
 import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
 
+import java.io.Serial;
+
 /**
  * It is used to display custom components (e.g. images or complex content) in columns.
  *
@@ -36,6 +38,7 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
  * 
  */
 public class ComponentColumnBuilder extends ColumnBuilder<ComponentColumnBuilder, DRColumn<DRComponent>> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

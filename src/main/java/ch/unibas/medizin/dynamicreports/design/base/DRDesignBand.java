@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignEx
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.SplitType;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignBand class.</p>
  *
@@ -34,6 +36,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.SplitType;
  * 
  */
 public class DRDesignBand implements DRIDesignBand {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String name;

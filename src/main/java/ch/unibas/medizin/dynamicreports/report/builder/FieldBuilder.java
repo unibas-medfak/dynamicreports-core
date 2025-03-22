@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
 import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 
+import java.io.Serial;
+
 /**
  * <p>FieldBuilder class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
  * 
  */
 public class FieldBuilder<T> extends AbstractBuilder<FieldBuilder<T>, DRField<T>> implements DRIValue<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRICustomValues;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
 import java.util.List;
 
 /**
@@ -35,6 +36,7 @@ import java.util.List;
  * 
  */
 public class TocReferenceExpression extends AbstractComplexExpression<String> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final int level;

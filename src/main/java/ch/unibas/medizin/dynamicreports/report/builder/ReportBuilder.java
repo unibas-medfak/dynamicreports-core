@@ -56,6 +56,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
@@ -68,6 +69,7 @@ import java.util.ResourceBundle;
  * 
  */
 public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T, DRReport> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     public ReportBuilder() {

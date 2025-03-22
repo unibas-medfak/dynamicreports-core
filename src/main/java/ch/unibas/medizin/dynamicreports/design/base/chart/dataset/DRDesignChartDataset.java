@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.design.constant.ResetType;
 import ch.unibas.medizin.dynamicreports.design.definition.chart.dataset.DRIDesignChartDataset;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignChartDataset class.</p>
  *
@@ -33,6 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignChartDataset implements DRIDesignChartDataset {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRDesignDataset subDataset;

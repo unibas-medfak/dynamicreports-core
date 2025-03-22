@@ -22,6 +22,7 @@ package ch.unibas.medizin.dynamicreports.test.jasper.column;
 
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Locale;
 
@@ -44,6 +45,7 @@ import net.sf.jasperreports.engine.JRPrintImage;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BooleanColumn1Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override

@@ -26,6 +26,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.grp
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.tableOfContentsHeading;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.apache.commons.lang3.StringUtils;
@@ -51,6 +52,7 @@ import net.sf.jasperreports.engine.util.JRStyledTextUtil;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TableOfContents1Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private TextColumnBuilder<String> column1;
@@ -199,6 +201,7 @@ public class TableOfContents1Test extends AbstractJasperValueTest implements Ser
     }
 
     private static class LabelExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         private int index = 1;

@@ -29,6 +29,7 @@ import net.sf.jasperreports.renderers.WrappingSvgDataToGraphics2DRenderer;
 
 import java.awt.Dimension;
 import java.awt.geom.Dimension2D;
+import java.io.Serial;
 import java.net.URL;
 
 /**
@@ -38,6 +39,7 @@ import java.net.URL;
  * 
  */
 public class CustomBatikRenderer extends WrappingSvgDataToGraphics2DRenderer {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final Dimension dimension;

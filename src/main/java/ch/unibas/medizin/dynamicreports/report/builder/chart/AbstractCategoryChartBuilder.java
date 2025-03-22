@@ -32,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -43,6 +44,7 @@ import java.util.List;
  * 
  */
 public abstract class AbstractCategoryChartBuilder<T extends AbstractCategoryChartBuilder<T, U>, U extends DRAxisPlot> extends AbstractBaseChartBuilder<T, U, DRCategoryDataset> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

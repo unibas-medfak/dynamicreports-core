@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.builder.AbstractBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
 import java.awt.Paint;
+import java.io.Serial;
 
 /**
  * <p>PaintScaleBuilder class.</p>
@@ -33,6 +34,7 @@ import java.awt.Paint;
  * 
  */
 public class PaintScaleBuilder extends AbstractBuilder<PaintScaleBuilder, DRPaintScale> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -28,6 +28,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>XyzChartSerieBuilder class.</p>
  *
@@ -35,6 +37,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class XyzChartSerieBuilder extends AbstractChartSerieBuilder<XyzChartSerieBuilder, DRXyzChartSerie> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

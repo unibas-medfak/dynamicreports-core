@@ -29,6 +29,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIMargin;
 import ch.unibas.medizin.dynamicreports.report.definition.DRITemplateDesign;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
+import java.io.Serial;
 import java.util.List;
 
 /**
@@ -38,6 +39,7 @@ import java.util.List;
  * 
  */
 public abstract class AbstractTemplateDesign<T> implements DRITemplateDesign<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

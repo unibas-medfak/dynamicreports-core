@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.design.JasperDesign;
 
+import java.io.Serial;
+
 /**
  * <p>JasperEmptyTemplateDesign class.</p>
  *
@@ -32,6 +34,7 @@ import net.sf.jasperreports.engine.design.JasperDesign;
  * 
  */
 public class JasperEmptyTemplateDesign extends AbstractTemplateDesign<JasperDesign> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

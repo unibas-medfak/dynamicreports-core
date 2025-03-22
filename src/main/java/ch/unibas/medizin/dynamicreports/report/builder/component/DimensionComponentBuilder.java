@@ -28,6 +28,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.StretchType;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract DimensionComponentBuilder class.</p>
  *
@@ -35,6 +37,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class DimensionComponentBuilder<T extends DimensionComponentBuilder<T, U>, U extends DRDimensionComponent> extends ComponentBuilder<T, U> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

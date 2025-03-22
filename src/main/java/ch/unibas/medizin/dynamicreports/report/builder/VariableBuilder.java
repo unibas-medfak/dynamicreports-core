@@ -30,6 +30,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIJasperExpression;
 
+import java.io.Serial;
+
 /**
  * <p>VariableBuilder class.</p>
  *
@@ -37,6 +39,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIJasperEx
  * 
  */
 public class VariableBuilder<T> extends AbstractBuilder<VariableBuilder<T>, DRVariable<T>> implements DRIValue<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     // column

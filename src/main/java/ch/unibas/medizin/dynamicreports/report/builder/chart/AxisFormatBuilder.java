@@ -29,6 +29,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import org.apache.commons.lang3.Validate;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>AxisFormatBuilder class.</p>
@@ -37,6 +38,7 @@ import java.awt.Color;
  * 
  */
 public class AxisFormatBuilder extends AbstractBuilder<AxisFormatBuilder, DRAxisFormat> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.LineDirection;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRILine;
 
+import java.io.Serial;
+
 /**
  * <p>DRLine class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRILine;
  * 
  */
 public class DRLine extends DRDimensionComponent implements DRILine {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private LineDirection direction;

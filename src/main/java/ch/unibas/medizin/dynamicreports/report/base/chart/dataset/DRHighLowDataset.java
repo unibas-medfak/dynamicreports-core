@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIHyperLink;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRIHighLowDataset;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>DRHighLowDataset class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class DRHighLowDataset extends DRChartDataset implements DRIHighLowDataset {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<?> seriesExpression;

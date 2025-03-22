@@ -27,6 +27,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.template;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.type;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -50,6 +51,7 @@ import net.sf.jasperreports.engine.type.LineStyleEnum;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TemplateStyle4Test extends AbstractJasperStyleTest implements Serializable {
+  @Serial
   private static final long serialVersionUID = 1L;
 
   private TextColumnBuilder<Integer> column1;

@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.crosstab;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabRowGroup;
 
+import java.io.Serial;
+
 /**
  * <p>DRCrosstabRowGroup class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabRo
  * 
  */
 public class DRCrosstabRowGroup<T> extends DRCrosstabGroup<T> implements DRICrosstabRowGroup<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Integer headerWidth;

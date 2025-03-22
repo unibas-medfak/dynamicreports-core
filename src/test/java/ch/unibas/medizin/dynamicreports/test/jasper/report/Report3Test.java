@@ -22,6 +22,7 @@ package ch.unibas.medizin.dynamicreports.test.jasper.report;
 
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Assertions;
@@ -38,6 +39,7 @@ import net.sf.jasperreports.engine.JasperPrint;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Report3Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override

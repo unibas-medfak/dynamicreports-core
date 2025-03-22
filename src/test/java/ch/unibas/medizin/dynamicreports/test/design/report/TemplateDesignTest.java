@@ -37,6 +37,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIMargin;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 import ch.unibas.medizin.dynamicreports.test.design.DesignReportBuilder;
 
+import java.io.Serial;
+
 /**
  * @author Ricardo Mariaca
  */
@@ -205,6 +207,7 @@ public class TemplateDesignTest {
     }
 
     public static class TestTemplateDesign extends AbstractTemplateDesign<Object> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

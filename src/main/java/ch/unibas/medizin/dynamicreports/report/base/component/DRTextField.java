@@ -33,6 +33,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFormatter;
 
+import java.io.Serial;
+
 /**
  * <p>DRTextField class.</p>
  *
@@ -40,6 +42,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFor
  * 
  */
 public class DRTextField<T> extends DRHyperLinkComponent implements DRITextField<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<T> valueExpression;

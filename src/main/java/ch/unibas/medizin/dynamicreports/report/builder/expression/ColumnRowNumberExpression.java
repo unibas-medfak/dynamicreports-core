@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.expression.AbstractSimpleExp
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 
+import java.io.Serial;
+
 /**
  * <p>ColumnRowNumberExpression class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
  * 
  */
 public class ColumnRowNumberExpression extends AbstractSimpleExpression<Integer> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

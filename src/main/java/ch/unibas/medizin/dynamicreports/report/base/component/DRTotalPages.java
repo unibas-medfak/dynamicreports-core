@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.component;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRITotalPages;
 
+import java.io.Serial;
+
 /**
  * <p>DRTotalPages class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRITotalPage
  * 
  */
 public class DRTotalPages extends DRFormatField implements DRITotalPages {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
 }

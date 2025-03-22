@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JREmptyDataSource;
 
+import java.io.Serial;
+
 /**
  * <p>MultiPageListDataSourceExpression class.</p>
  *
@@ -33,6 +35,7 @@ import net.sf.jasperreports.engine.JREmptyDataSource;
  * 
  */
 public class MultiPageListDataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final int count;

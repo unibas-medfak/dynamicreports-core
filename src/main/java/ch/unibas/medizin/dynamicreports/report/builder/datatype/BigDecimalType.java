@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.defaults.Defaults;
 
+import java.io.Serial;
 import java.math.BigDecimal;
 
 /**
@@ -33,6 +34,7 @@ import java.math.BigDecimal;
  * 
  */
 public class BigDecimalType extends NumberType<BigDecimal> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /** {@inheritDoc} */

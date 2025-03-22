@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.exp;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.report;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.ListResourceBundle;
 import java.util.Locale;
@@ -87,6 +88,7 @@ public class Report5Test extends AbstractJasperValueTest {
     }
 
     private static class SubreportParametersExpression extends AbstractSimpleExpression<Map<String, Object>> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

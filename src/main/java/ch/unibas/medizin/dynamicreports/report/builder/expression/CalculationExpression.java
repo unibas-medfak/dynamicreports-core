@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -32,6 +33,7 @@ import java.util.List;
  * @author Ricardo Mariaca
  */
 abstract class CalculationExpression extends AbstractComplexExpression<BigDecimal> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
 

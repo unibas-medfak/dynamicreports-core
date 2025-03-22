@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIComplexExpression;
 
+import java.io.Serial;
 import java.util.List;
 
 /**
@@ -33,6 +34,7 @@ import java.util.List;
  * 
  */
 public class DRDesignComplexExpression extends AbstractDesignComplexExpression {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRIComplexExpression<?> complexExpression;

@@ -47,6 +47,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIProperty
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFormatter;
 import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
 
+import java.io.Serial;
+
 /**
  * <p>CrosstabMeasureBuilder class.</p>
  *
@@ -54,6 +56,7 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
  * 
  */
 public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBuilder<T>, DRCrosstabMeasure<T>> implements DRICrosstabValue<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

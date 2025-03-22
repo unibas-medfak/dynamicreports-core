@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.Position;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartTitle;
 
+import java.io.Serial;
+
 /**
  * <p>DRChartTitle class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartTitle;
  * 
  */
 public class DRChartTitle extends DRChartSubtitle implements DRIChartTitle {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Position position;

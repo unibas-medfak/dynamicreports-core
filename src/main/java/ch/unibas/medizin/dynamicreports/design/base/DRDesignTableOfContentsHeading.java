@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.design.base.component.DRDesignTextField;
 import ch.unibas.medizin.dynamicreports.design.definition.DRIDesignTableOfContentsHeading;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignTableOfContentsHeading class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class DRDesignTableOfContentsHeading implements DRIDesignTableOfContentsHeading {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRDesignTextField referenceField;

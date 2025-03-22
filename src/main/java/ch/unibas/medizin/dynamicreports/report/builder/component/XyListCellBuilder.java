@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.component.DRXyListCell;
 import ch.unibas.medizin.dynamicreports.report.builder.AbstractBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>XyListCellBuilder class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class XyListCellBuilder extends AbstractBuilder<XyListCellBuilder, DRXyListCell> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

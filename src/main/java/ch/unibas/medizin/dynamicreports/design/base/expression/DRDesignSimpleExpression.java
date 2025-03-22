@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRISimpleExpression;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignSimpleExpression class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRISimpleEx
  * 
  */
 public class DRDesignSimpleExpression extends AbstractDesignSimpleExpression {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRISimpleExpression<?> simpleExpression;

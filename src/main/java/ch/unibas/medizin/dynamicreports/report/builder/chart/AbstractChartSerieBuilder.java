@@ -30,6 +30,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract AbstractChartSerieBuilder class.</p>
  *
@@ -37,6 +39,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class AbstractChartSerieBuilder<T extends AbstractChartSerieBuilder<T, U>, U extends DRChartSerie> extends AbstractBuilder<T, U> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignEx
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignSort class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
  * 
  */
 public class DRDesignSort implements DRIDesignSort {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIDesignExpression expression;

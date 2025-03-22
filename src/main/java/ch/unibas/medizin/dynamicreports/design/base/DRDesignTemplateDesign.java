@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.DRITemplateDesign;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignTemplateDesign class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRException;
  * 
  */
 public class DRDesignTemplateDesign implements DRIDesignTemplateDesign {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final DRITemplateDesign<?> templateDesign;

@@ -30,6 +30,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.CrosstabPercentageType;
 import ch.unibas.medizin.dynamicreports.report.definition.DRICrosstabValue;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>CrosstabVariableBuilder class.</p>
  *
@@ -37,6 +39,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class CrosstabVariableBuilder<T> extends AbstractBuilder<CrosstabVariableBuilder<T>, DRCrosstabVariable<T>> implements DRICrosstabValue<T> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

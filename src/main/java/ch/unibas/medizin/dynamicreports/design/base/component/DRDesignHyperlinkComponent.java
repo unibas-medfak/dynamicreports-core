@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.component.DRIDesignHyp
 import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract DRDesignHyperlinkComponent class.</p>
  *
@@ -32,6 +34,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public abstract class DRDesignHyperlinkComponent extends DRDesignComponent implements DRIDesignHyperLinkComponent {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIDesignExpression anchorNameExpression;

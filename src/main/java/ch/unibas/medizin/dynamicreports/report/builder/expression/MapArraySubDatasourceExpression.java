@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.data.JRMapArrayDataSource;
 
+import java.io.Serial;
+
 /**
  * <p>MapArraySubDatasourceExpression class.</p>
  *
@@ -32,6 +34,7 @@ import net.sf.jasperreports.engine.data.JRMapArrayDataSource;
  * 
  */
 public class MapArraySubDatasourceExpression extends AbstractSubDatasourceExpression<Object[]> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import net.sf.jasperreports.engine.JRDataSource;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.List;
 
 /**
@@ -36,6 +37,7 @@ import java.util.List;
  * 
  */
 public abstract class AbstractSubDatasourceExpression<T> extends AbstractComplexExpression<JRDataSource> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

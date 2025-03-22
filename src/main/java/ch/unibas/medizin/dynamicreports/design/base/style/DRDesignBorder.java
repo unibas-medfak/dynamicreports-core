@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignBorder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignBorder class.</p>
  *
@@ -31,6 +33,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
  * 
  */
 public class DRDesignBorder implements DRIDesignBorder {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRDesignPen topPen;

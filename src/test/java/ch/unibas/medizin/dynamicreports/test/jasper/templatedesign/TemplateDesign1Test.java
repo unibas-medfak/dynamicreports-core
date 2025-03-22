@@ -24,6 +24,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.sbt;
 
 import java.io.InputStream;
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Assertions;
@@ -44,6 +45,7 @@ import net.sf.jasperreports.engine.JasperPrint;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TemplateDesign1Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private TextColumnBuilder<String> column1;

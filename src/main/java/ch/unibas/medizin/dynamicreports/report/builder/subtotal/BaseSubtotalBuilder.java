@@ -36,6 +36,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFormatter;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract BaseSubtotalBuilder class.</p>
  *
@@ -43,6 +45,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public abstract class BaseSubtotalBuilder<T extends BaseSubtotalBuilder<T, U>, U> extends AbstractBuilder<T, DRSubtotal<U>> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRIExpression<U> valueExpression;

@@ -27,6 +27,8 @@ import ch.unibas.medizin.dynamicreports.report.builder.column.ValueColumnBuilder
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
+import java.io.Serial;
+
 /**
  * <p>CategoryChartSerieBuilder class.</p>
  *
@@ -34,6 +36,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * 
  */
 public class CategoryChartSerieBuilder extends AbstractCategoryChartSerieBuilder<CategoryChartSerieBuilder, DRCategoryChartSerie> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

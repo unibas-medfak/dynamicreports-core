@@ -23,6 +23,7 @@ package ch.unibas.medizin.dynamicreports.test.jasper.component;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp;
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Test;
@@ -41,6 +42,7 @@ import net.sf.jasperreports.engine.JREmptyDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BreakTest extends AbstractJasperPositionTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -71,6 +73,7 @@ public class BreakTest extends AbstractJasperPositionTest implements Serializabl
     }
 
     public static class Expression1 extends AbstractSimpleExpression<Boolean> {
+        @Serial
         private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
         @Override
@@ -80,6 +83,7 @@ public class BreakTest extends AbstractJasperPositionTest implements Serializabl
     }
 
     public static class Expression2 extends AbstractSimpleExpression<Boolean> {
+        @Serial
         private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
         @Override

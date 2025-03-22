@@ -22,6 +22,7 @@ package ch.unibas.medizin.dynamicreports.test.jasper.report;
 
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.col;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import org.junit.jupiter.api.Assertions;
@@ -40,6 +41,7 @@ import net.sf.jasperreports.engine.type.OrientationEnum;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class IgnorePaginationTest extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Override

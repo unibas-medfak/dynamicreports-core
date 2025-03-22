@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.design.definition.crosstab.DRIDesignCros
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.RunDirection;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +37,7 @@ import java.util.List;
  * 
  */
 public class DRDesignCrosstab extends DRDesignComponent implements DRIDesignCrosstab {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRDesignCrosstabDataset dataset;

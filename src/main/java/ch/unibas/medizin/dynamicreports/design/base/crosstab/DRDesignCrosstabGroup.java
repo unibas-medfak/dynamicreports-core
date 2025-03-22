@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.CrosstabTotalPosition;
 import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract DRDesignCrosstabGroup class.</p>
  *
@@ -33,6 +35,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
  * 
  */
 public abstract class DRDesignCrosstabGroup implements DRIDesignCrosstabGroup {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String name;

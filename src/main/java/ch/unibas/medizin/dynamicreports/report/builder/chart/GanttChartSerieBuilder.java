@@ -29,6 +29,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.Date;
 
 /**
@@ -38,6 +39,7 @@ import java.util.Date;
  * 
  */
 public class GanttChartSerieBuilder extends AbstractChartSerieBuilder<GanttChartSerieBuilder, DRGanttChartSerie> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

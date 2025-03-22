@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.component;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRICurrentDate;
 
+import java.io.Serial;
+
 /**
  * <p>DRCurrentDate class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRICurrentDa
  * 
  */
 public class DRCurrentDate extends DRFormatField implements DRICurrentDate {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String pattern;

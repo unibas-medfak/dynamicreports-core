@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIQuery;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
+
 /**
  * <p>DRQuery class.</p>
  *
@@ -31,6 +33,7 @@ import org.apache.commons.lang3.Validate;
  * 
  */
 public class DRQuery implements DRIQuery {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String text;

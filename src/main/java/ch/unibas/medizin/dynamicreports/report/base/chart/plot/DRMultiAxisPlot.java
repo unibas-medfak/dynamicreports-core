@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChart;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIChartAxis;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIMultiAxisPlot;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +37,7 @@ import java.util.List;
  * 
  */
 public class DRMultiAxisPlot extends DRAxisPlot implements DRIMultiAxisPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private List<DRIChartAxis> axes;

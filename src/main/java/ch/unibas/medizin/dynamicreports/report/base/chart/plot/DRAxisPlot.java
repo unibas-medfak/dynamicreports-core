@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIAxisPlot;
 import org.apache.commons.lang3.Validate;
 
+import java.io.Serial;
 import java.util.Comparator;
 
 /**
@@ -34,6 +35,7 @@ import java.util.Comparator;
  * 
  */
 public class DRAxisPlot extends AbstractBasePlot implements DRIAxisPlot {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private DRAxisFormat xAxisFormat;

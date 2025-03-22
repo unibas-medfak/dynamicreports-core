@@ -24,6 +24,8 @@ import ch.unibas.medizin.dynamicreports.report.base.style.DRPen;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIRectangle;
 
+import java.io.Serial;
+
 /**
  * <p>DRRectangle class.</p>
  *
@@ -31,6 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRIRectangle
  * 
  */
 public class DRRectangle extends DRDimensionComponent implements DRIRectangle {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Integer radius;

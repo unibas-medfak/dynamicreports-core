@@ -29,6 +29,7 @@ import org.apache.commons.lang3.Validate;
 
 import java.io.File;
 import java.io.InputStream;
+import java.io.Serial;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +41,7 @@ import java.util.List;
  * 
  */
 public class TemplateStylesBuilder extends AbstractBuilder<TemplateStylesBuilder, List<StyleBuilder>> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

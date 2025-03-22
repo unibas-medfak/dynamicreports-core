@@ -20,6 +20,7 @@
  */
 package ch.unibas.medizin.dynamicreports.design.transformation.chartcustomizer;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -48,6 +49,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartCustomiz
  *
  */
 public class ShowValuesCustomizer implements DRIChartCustomizer, Serializable {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private final String valuePattern;

@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Position;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartLegend;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>DRChartLegend class.</p>
@@ -34,6 +35,7 @@ import java.awt.Color;
  * 
  */
 public class DRChartLegend implements DRIChartLegend {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Color color;

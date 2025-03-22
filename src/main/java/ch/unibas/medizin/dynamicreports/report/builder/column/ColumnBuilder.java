@@ -32,6 +32,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.TextAdjust;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIPropertyExpression;
 
+import java.io.Serial;
+
 /**
  * <p>Abstract ColumnBuilder class.</p>
  *
@@ -39,6 +41,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIProperty
  * 
  */
 public abstract class ColumnBuilder<T extends ColumnBuilder<T, U>, U extends DRColumn<?>> extends AbstractBuilder<T, U> implements ColumnGridComponentBuilder {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

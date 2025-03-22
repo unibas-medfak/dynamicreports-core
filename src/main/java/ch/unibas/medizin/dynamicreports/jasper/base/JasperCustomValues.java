@@ -28,6 +28,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRICustomValues;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartCustomizer;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.Serial;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,6 +46,7 @@ import static ch.unibas.medizin.dynamicreports.jasper.base.JasperScriptletManage
  * 
  */
 public class JasperCustomValues implements DRICustomValues {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private Map<String, ValueType> valueTypes;

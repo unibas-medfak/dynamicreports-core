@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.base.component;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIFiller;
 
+import java.io.Serial;
+
 /**
  * <p>DRFiller class.</p>
  *
@@ -30,5 +32,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRIFiller;
  * 
  */
 public class DRFiller extends DRDimensionComponent implements DRIFiller {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 }

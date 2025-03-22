@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.builder;
 import ch.unibas.medizin.dynamicreports.report.base.DRMargin;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>MarginBuilder class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class MarginBuilder extends AbstractBuilder<MarginBuilder, DRMargin> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

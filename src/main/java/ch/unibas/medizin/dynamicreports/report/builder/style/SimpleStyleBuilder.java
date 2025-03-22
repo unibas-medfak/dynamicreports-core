@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.report.builder.style;
 import ch.unibas.medizin.dynamicreports.report.base.style.DRSimpleStyle;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 
+import java.io.Serial;
+
 /**
  * <p>SimpleStyleBuilder class.</p>
  *
@@ -30,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
  * 
  */
 public class SimpleStyleBuilder extends BaseStyleBuilder<SimpleStyleBuilder, DRSimpleStyle> {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     /**

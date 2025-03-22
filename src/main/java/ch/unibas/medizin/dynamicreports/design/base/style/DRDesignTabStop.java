@@ -25,6 +25,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.TabStopAlignment;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
+import java.io.Serial;
+
 /**
  * <p>DRDesignTabStop class.</p>
  *
@@ -32,6 +34,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
  * 
  */
 public class DRDesignTabStop implements DRIDesignTabStop {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private int position;

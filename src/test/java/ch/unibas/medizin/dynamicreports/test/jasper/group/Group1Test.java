@@ -32,6 +32,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import ch.unibas.medizin.dynamicreports.test.jasper.AbstractJasperValueTest;
 import net.sf.jasperreports.engine.JRDataSource;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Locale;
 
@@ -47,6 +48,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.grp
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Group1Test extends AbstractJasperValueTest implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private ColumnGroupBuilder group1;
@@ -124,6 +126,7 @@ public class Group1Test extends AbstractJasperValueTest implements Serializable 
     }
 
     private class ValueExpression extends AbstractSimpleExpression<String> {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         @Override

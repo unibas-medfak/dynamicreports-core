@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIMeterInt
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
 import java.awt.Color;
+import java.io.Serial;
 
 /**
  * <p>DRMeterInterval class.</p>
@@ -33,6 +34,7 @@ import java.awt.Color;
  * 
  */
 public class DRMeterInterval implements DRIMeterInterval {
+    @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
     private String label;
