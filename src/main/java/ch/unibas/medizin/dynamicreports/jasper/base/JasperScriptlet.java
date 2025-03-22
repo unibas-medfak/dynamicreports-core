@@ -23,7 +23,6 @@ package ch.unibas.medizin.dynamicreports.jasper.base;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignComplexExpression;
 import ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignSimpleExpression;
@@ -34,10 +33,6 @@ import net.sf.jasperreports.engine.JRDefaultScriptlet;
 import net.sf.jasperreports.engine.JRScriptlet;
 import net.sf.jasperreports.engine.JRScriptletException;
 import net.sf.jasperreports.engine.fill.JRFillDataset;
-import net.sf.jasperreports.engine.fill.JRFillField;
-import net.sf.jasperreports.engine.fill.JRFillGroup;
-import net.sf.jasperreports.engine.fill.JRFillParameter;
-import net.sf.jasperreports.engine.fill.JRFillVariable;
 
 /**
  * <p>JasperScriptlet class.</p>

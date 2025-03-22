@@ -98,29 +98,15 @@ public class AggregationSubtotalBuilder<T> extends SubtotalBuilder<AggregationSu
     }
 
     private static Evaluation subtotalPositionToEvaluation(SubtotalPosition position) {
-        switch (position) {
-            case PAGE_HEADER:
-            case PAGE_FOOTER:
-                return Evaluation.PAGE;
-            case COLUMN_HEADER:
-            case COLUMN_FOOTER:
-                return Evaluation.COLUMN;
-            case GROUP_HEADER:
-            case GROUP_FOOTER:
-                return Evaluation.GROUP;
-            case FIRST_GROUP_HEADER:
-            case FIRST_GROUP_FOOTER:
-                return Evaluation.FIRST_GROUP;
-            case LAST_GROUP_HEADER:
-            case LAST_GROUP_FOOTER:
-                return Evaluation.LAST_GROUP;
-            case TITLE:
-            case LAST_PAGE_FOOTER:
-            case SUMMARY:
-                return Evaluation.REPORT;
-            default:
-                throw new DRReportException("Subtotal position " + position.name() + " not supported");
-        }
+        return switch (position) {
+            case PAGE_HEADER, PAGE_FOOTER -> Evaluation.PAGE;
+            case COLUMN_HEADER, COLUMN_FOOTER -> Evaluation.COLUMN;
+            case GROUP_HEADER, GROUP_FOOTER -> Evaluation.GROUP;
+            case FIRST_GROUP_HEADER, FIRST_GROUP_FOOTER -> Evaluation.FIRST_GROUP;
+            case LAST_GROUP_HEADER, LAST_GROUP_FOOTER -> Evaluation.LAST_GROUP;
+            case TITLE, LAST_PAGE_FOOTER, SUMMARY -> Evaluation.REPORT;
+            default -> throw new DRReportException("Subtotal position " + position.name() + " not supported");
+        };
     }
 
     /** {@inheritDoc} */

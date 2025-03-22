@@ -99,7 +99,6 @@ public abstract class AbstractDataType<U, T extends U> implements DRIDataType<U,
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public Class<T> getValueClass() {
         return (Class<T>) ReportUtils.getGenericClass(this, 1);
     }

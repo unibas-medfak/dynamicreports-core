@@ -112,41 +112,43 @@ public class DataTypes {
         if (dataTypeLC.equals("date") || dataType.equals(Date.class.getName())) {
             return (T) dateType;
         }
-        if (dataTypeLC.equals("dateyeartomonth")) {
-            return (T) dateYearToMonthType;
-        }
-        if (dataTypeLC.equals("dateyeartohour")) {
-            return (T) dateYearToHourType;
-        }
-        if (dataTypeLC.equals("dateyeartominute")) {
-            return (T) dateYearToMinuteType;
-        }
-        if (dataTypeLC.equals("dateyeartosecond")) {
-            return (T) dateYearToSecondType;
-        }
-        if (dataTypeLC.equals("dateyeartofraction")) {
-            return (T) dateYearToFractionType;
-        }
-        if (dataTypeLC.equals("dateyear")) {
-            return (T) dateYearType;
-        }
-        if (dataTypeLC.equals("datemonth")) {
-            return (T) dateMonthType;
-        }
-        if (dataTypeLC.equals("dateday")) {
-            return (T) dateDayType;
-        }
-        if (dataTypeLC.equals("timehourtominute")) {
-            return (T) timeHourToMinuteType;
-        }
-        if (dataTypeLC.equals("timehourtosecond")) {
-            return (T) timeHourToSecondType;
-        }
-        if (dataTypeLC.equals("timehourtofraction")) {
-            return (T) timeHourToFractionType;
-        }
-        if (dataTypeLC.equals("percentage")) {
-            return (T) percentageType;
+        switch (dataTypeLC) {
+            case "dateyeartomonth" -> {
+                return (T) dateYearToMonthType;
+            }
+            case "dateyeartohour" -> {
+                return (T) dateYearToHourType;
+            }
+            case "dateyeartominute" -> {
+                return (T) dateYearToMinuteType;
+            }
+            case "dateyeartosecond" -> {
+                return (T) dateYearToSecondType;
+            }
+            case "dateyeartofraction" -> {
+                return (T) dateYearToFractionType;
+            }
+            case "dateyear" -> {
+                return (T) dateYearType;
+            }
+            case "datemonth" -> {
+                return (T) dateMonthType;
+            }
+            case "dateday" -> {
+                return (T) dateDayType;
+            }
+            case "timehourtominute" -> {
+                return (T) timeHourToMinuteType;
+            }
+            case "timehourtosecond" -> {
+                return (T) timeHourToSecondType;
+            }
+            case "timehourtofraction" -> {
+                return (T) timeHourToFractionType;
+            }
+            case "percentage" -> {
+                return (T) percentageType;
+            }
         }
         if (dataTypeLC.equals("boolean") || dataType.equals(Boolean.class.getName())) {
             return (T) booleanType;

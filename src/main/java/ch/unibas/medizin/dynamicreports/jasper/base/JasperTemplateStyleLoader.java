@@ -25,7 +25,6 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -62,7 +61,6 @@ import net.sf.jasperreports.engine.JRPen;
 import net.sf.jasperreports.engine.JRStyle;
 import net.sf.jasperreports.engine.JRTemplate;
 import net.sf.jasperreports.engine.TabStop;
-import net.sf.jasperreports.engine.design.JRDesignStyle;
 import net.sf.jasperreports.engine.type.HorizontalImageAlignEnum;
 import net.sf.jasperreports.engine.type.HorizontalTextAlignEnum;
 import net.sf.jasperreports.engine.type.LineSpacingEnum;
@@ -250,18 +248,13 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        switch (lineStyle) {
-            case SOLID:
-                return LineStyle.SOLID;
-            case DASHED:
-                return LineStyle.DASHED;
-            case DOTTED:
-                return LineStyle.DOTTED;
-            case DOUBLE:
-                return LineStyle.DOUBLE;
-            default:
-                throw new JasperDesignException("Line style " + lineStyle.name() + " not supported");
-        }
+        return switch (lineStyle) {
+            case SOLID -> LineStyle.SOLID;
+            case DASHED -> LineStyle.DASHED;
+            case DOTTED -> LineStyle.DOTTED;
+            case DOUBLE -> LineStyle.DOUBLE;
+            default -> throw new JasperDesignException("Line style " + lineStyle.name() + " not supported");
+        };
     }
 
     private static ImageScale imageScale(ScaleImageEnum imageScale) {
@@ -269,20 +262,14 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        switch (imageScale) {
-            case CLIP:
-                return ImageScale.CLIP;
-            case FILL_FRAME:
-                return ImageScale.FILL_FRAME;
-            case RETAIN_SHAPE:
-                return ImageScale.RETAIN_SHAPE;
-            case REAL_HEIGHT:
-                return ImageScale.REAL_HEIGHT;
-            case REAL_SIZE:
-                return ImageScale.REAL_SIZE;
-            default:
-                throw new JasperDesignException("Image scale " + imageScale.name() + " not supported");
-        }
+        return switch (imageScale) {
+            case CLIP -> ImageScale.CLIP;
+            case FILL_FRAME -> ImageScale.FILL_FRAME;
+            case RETAIN_SHAPE -> ImageScale.RETAIN_SHAPE;
+            case REAL_HEIGHT -> ImageScale.REAL_HEIGHT;
+            case REAL_SIZE -> ImageScale.REAL_SIZE;
+            default -> throw new JasperDesignException("Image scale " + imageScale.name() + " not supported");
+        };
     }
 
     private static HorizontalImageAlignment horizontalImageAlignment(HorizontalImageAlignEnum horizontalImageAlignment) {
@@ -290,16 +277,13 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        switch (horizontalImageAlignment) {
-            case LEFT:
-                return HorizontalImageAlignment.LEFT;
-            case CENTER:
-                return HorizontalImageAlignment.CENTER;
-            case RIGHT:
-                return HorizontalImageAlignment.RIGHT;
-            default:
-                throw new JasperDesignException("Horizontal image alignment " + horizontalImageAlignment.name() + " not supported");
-        }
+        return switch (horizontalImageAlignment) {
+            case LEFT -> HorizontalImageAlignment.LEFT;
+            case CENTER -> HorizontalImageAlignment.CENTER;
+            case RIGHT -> HorizontalImageAlignment.RIGHT;
+            default ->
+                    throw new JasperDesignException("Horizontal image alignment " + horizontalImageAlignment.name() + " not supported");
+        };
     }
 
     private static VerticalImageAlignment verticalImageAlignment(VerticalImageAlignEnum verticalImageAlignment) {
@@ -307,16 +291,13 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        switch (verticalImageAlignment) {
-            case TOP:
-                return VerticalImageAlignment.TOP;
-            case MIDDLE:
-                return VerticalImageAlignment.MIDDLE;
-            case BOTTOM:
-                return VerticalImageAlignment.BOTTOM;
-            default:
-                throw new JasperDesignException("Vertical image alignment " + verticalImageAlignment.name() + " not supported");
-        }
+        return switch (verticalImageAlignment) {
+            case TOP -> VerticalImageAlignment.TOP;
+            case MIDDLE -> VerticalImageAlignment.MIDDLE;
+            case BOTTOM -> VerticalImageAlignment.BOTTOM;
+            default ->
+                    throw new JasperDesignException("Vertical image alignment " + verticalImageAlignment.name() + " not supported");
+        };
     }
 
     private static HorizontalTextAlignment horizontalTextAlignment(HorizontalTextAlignEnum horizontalTextAlignment) {
@@ -324,18 +305,14 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        switch (horizontalTextAlignment) {
-            case LEFT:
-                return HorizontalTextAlignment.LEFT;
-            case CENTER:
-                return HorizontalTextAlignment.CENTER;
-            case RIGHT:
-                return HorizontalTextAlignment.RIGHT;
-            case JUSTIFIED:
-                return HorizontalTextAlignment.JUSTIFIED;
-            default:
-                throw new JasperDesignException("Horizontal text alignment " + horizontalTextAlignment.name() + " not supported");
-        }
+        return switch (horizontalTextAlignment) {
+            case LEFT -> HorizontalTextAlignment.LEFT;
+            case CENTER -> HorizontalTextAlignment.CENTER;
+            case RIGHT -> HorizontalTextAlignment.RIGHT;
+            case JUSTIFIED -> HorizontalTextAlignment.JUSTIFIED;
+            default ->
+                    throw new JasperDesignException("Horizontal text alignment " + horizontalTextAlignment.name() + " not supported");
+        };
     }
 
     private static VerticalTextAlignment verticalTextAlignment(VerticalTextAlignEnum verticalTextAlignment) {
@@ -343,18 +320,14 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        switch (verticalTextAlignment) {
-            case TOP:
-                return VerticalTextAlignment.TOP;
-            case MIDDLE:
-                return VerticalTextAlignment.MIDDLE;
-            case BOTTOM:
-                return VerticalTextAlignment.BOTTOM;
-            case JUSTIFIED:
-                return VerticalTextAlignment.JUSTIFIED;
-            default:
-                throw new JasperDesignException("Vertical text alignment " + verticalTextAlignment.name() + " not supported");
-        }
+        return switch (verticalTextAlignment) {
+            case TOP -> VerticalTextAlignment.TOP;
+            case MIDDLE -> VerticalTextAlignment.MIDDLE;
+            case BOTTOM -> VerticalTextAlignment.BOTTOM;
+            case JUSTIFIED -> VerticalTextAlignment.JUSTIFIED;
+            default ->
+                    throw new JasperDesignException("Vertical text alignment " + verticalTextAlignment.name() + " not supported");
+        };
     }
 
     private static Markup markup(String markup) {
@@ -362,19 +335,13 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        if (markup.equals("none")) {
-            return Markup.NONE;
-        }
-        if (markup.equals("styled")) {
-            return Markup.STYLED;
-        }
-        if (markup.equals("rtf")) {
-            return Markup.RTF;
-        }
-        if (markup.equals("html")) {
-            return Markup.HTML;
-        }
-        throw new JasperDesignException("Markup " + markup + " not supported");
+        return switch (markup) {
+            case "none" -> Markup.NONE;
+            case "styled" -> Markup.STYLED;
+            case "rtf" -> Markup.RTF;
+            case "html" -> Markup.HTML;
+            default -> throw new JasperDesignException("Markup " + markup + " not supported");
+        };
     }
 
     private static LineSpacing lineSpacing(LineSpacingEnum lineSpacing) {
@@ -382,22 +349,15 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        switch (lineSpacing) {
-            case SINGLE:
-                return LineSpacing.SINGLE;
-            case ONE_AND_HALF:
-                return LineSpacing.ONE_AND_HALF;
-            case DOUBLE:
-                return LineSpacing.DOUBLE;
-            case AT_LEAST:
-                return LineSpacing.AT_LEAST;
-            case FIXED:
-                return LineSpacing.FIXED;
-            case PROPORTIONAL:
-                return LineSpacing.PROPORTIONAL;
-            default:
-                throw new JasperDesignException("LineSpacing " + lineSpacing.name() + " not supported");
-        }
+        return switch (lineSpacing) {
+            case SINGLE -> LineSpacing.SINGLE;
+            case ONE_AND_HALF -> LineSpacing.ONE_AND_HALF;
+            case DOUBLE -> LineSpacing.DOUBLE;
+            case AT_LEAST -> LineSpacing.AT_LEAST;
+            case FIXED -> LineSpacing.FIXED;
+            case PROPORTIONAL -> LineSpacing.PROPORTIONAL;
+            default -> throw new JasperDesignException("LineSpacing " + lineSpacing.name() + " not supported");
+        };
     }
 
     /**
@@ -411,30 +371,21 @@ public class JasperTemplateStyleLoader {
             return null;
         }
 
-        switch (rotation) {
-            case NONE:
-                return Rotation.NONE;
-            case LEFT:
-                return Rotation.LEFT;
-            case RIGHT:
-                return Rotation.RIGHT;
-            case UPSIDE_DOWN:
-                return Rotation.UPSIDE_DOWN;
-            default:
-                throw new JasperDesignException("Rotation " + rotation.name() + " not supported");
-        }
+        return switch (rotation) {
+            case NONE -> Rotation.NONE;
+            case LEFT -> Rotation.LEFT;
+            case RIGHT -> Rotation.RIGHT;
+            case UPSIDE_DOWN -> Rotation.UPSIDE_DOWN;
+            default -> throw new JasperDesignException("Rotation " + rotation.name() + " not supported");
+        };
     }
 
     private static TabStopAlignment tabStopAlignment(TabStopAlignEnum alignment) {
-        switch (alignment) {
-            case LEFT:
-                return TabStopAlignment.LEFT;
-            case CENTER:
-                return TabStopAlignment.CENTER;
-            case RIGHT:
-                return TabStopAlignment.RIGHT;
-            default:
-                throw new JasperDesignException("TabStopAlignment " + alignment.name() + " not supported");
-        }
+        return switch (alignment) {
+            case LEFT -> TabStopAlignment.LEFT;
+            case CENTER -> TabStopAlignment.CENTER;
+            case RIGHT -> TabStopAlignment.RIGHT;
+            default -> throw new JasperDesignException("TabStopAlignment " + alignment.name() + " not supported");
+        };
     }
 }

@@ -48,7 +48,6 @@ import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.type.HyperlinkTargetEnum;
 import net.sf.jasperreports.engine.type.HyperlinkTypeEnum;
 
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -180,9 +179,8 @@ public class ReportTransform {
     }
 
     private void setProperties(Properties properties) {
-        for (
-            Iterator<Object> iterator = properties.keySet().iterator(); iterator.hasNext(); ) {
-            String key = (String) iterator.next();
+        for (Object o : properties.keySet()) {
+            String key = (String) o;
             accessor.getDesign().setProperty(key, properties.getProperty(key));
         }
     }

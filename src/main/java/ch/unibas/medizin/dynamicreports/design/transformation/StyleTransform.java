@@ -315,28 +315,19 @@ public class StyleTransform {
      */
     protected DRDesignStyle getDefaultStyle(DefaultStyleType defaultStyleType) throws DRException {
         TemplateTransform templateTransform = accessor.getTemplateTransform();
-        switch (defaultStyleType) {
-            case NONE:
-                return null;
-            case TEXT:
-                return transformStyle(templateTransform.getTextStyle(), true);
-            case COLUMN:
-                return transformStyle(templateTransform.getColumnStyle(true), true);
-            case COLUMN_TITLE:
-                return transformStyle(templateTransform.getColumnTitleStyle(), true);
-            case GROUP:
-                return transformStyle(templateTransform.getGroupStyle(), true);
-            case GROUP_TITLE:
-                return transformStyle(templateTransform.getGroupTitleStyle(), true);
-            case SUBTOTAL:
-                return transformStyle(templateTransform.getSubtotalStyle(), true);
-            case IMAGE:
-                return transformStyle(templateTransform.getImageStyle(), false);
-            case CHART:
-                return transformStyle(templateTransform.getChartStyle(), false);
-            default:
-                throw new DRDesignReportException("Default style type " + defaultStyleType.name() + " not supported");
-        }
+        return switch (defaultStyleType) {
+            case NONE -> null;
+            case TEXT -> transformStyle(templateTransform.getTextStyle(), true);
+            case COLUMN -> transformStyle(templateTransform.getColumnStyle(true), true);
+            case COLUMN_TITLE -> transformStyle(templateTransform.getColumnTitleStyle(), true);
+            case GROUP -> transformStyle(templateTransform.getGroupStyle(), true);
+            case GROUP_TITLE -> transformStyle(templateTransform.getGroupTitleStyle(), true);
+            case SUBTOTAL -> transformStyle(templateTransform.getSubtotalStyle(), true);
+            case IMAGE -> transformStyle(templateTransform.getImageStyle(), false);
+            case CHART -> transformStyle(templateTransform.getChartStyle(), false);
+            default ->
+                    throw new DRDesignReportException("Default style type " + defaultStyleType.name() + " not supported");
+        };
     }
 
     private void addStyle(String styleName, DRDesignStyle designStyle) {

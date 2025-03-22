@@ -24,6 +24,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * <p>DivideExpression class.</p>
@@ -51,6 +52,6 @@ public class DivideExpression extends CalculationExpression {
     /** {@inheritDoc} */
     @Override
     protected BigDecimal calculate(BigDecimal value1, BigDecimal value2) {
-        return value1.divide(value2, scale, BigDecimal.ROUND_HALF_UP);
+        return value1.divide(value2, scale, RoundingMode.HALF_UP);
     }
 }

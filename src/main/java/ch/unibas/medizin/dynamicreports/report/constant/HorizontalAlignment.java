@@ -25,8 +25,9 @@ package ch.unibas.medizin.dynamicreports.report.constant;
  *
  * @author Ricardo Mariaca
  * 
- * @deprecated use HorizontalTextAligment for texts or HorizontalImageAligment for images instead
+ * @deprecated use {@link HorizontalTextAlignment} for texts or HorizontalImageAlignment for images instead
  */
+@Deprecated
 public enum HorizontalAlignment {
     LEFT, CENTER, RIGHT, JUSTIFIED
 }

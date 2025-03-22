@@ -48,35 +48,32 @@ class ConstantTransform {
             return ResetType.REPORT;
         }
 
-        switch (resetType) {
-            case NONE:
-                return ResetType.NONE;
-            case REPORT:
-                return ResetType.REPORT;
-            case PAGE:
-                return ResetType.PAGE;
-            case COLUMN:
-                return ResetType.COLUMN;
-            case FIRST_GROUP:
+        return switch (resetType) {
+            case NONE -> ResetType.NONE;
+            case REPORT -> ResetType.REPORT;
+            case PAGE -> ResetType.PAGE;
+            case COLUMN -> ResetType.COLUMN;
+            case FIRST_GROUP -> {
                 if (accessor.getGroupTransform().getFirstGroup() == null) {
-                    return ResetType.REPORT;
+                    yield ResetType.REPORT;
                 }
-                return ResetType.GROUP;
-            case BEFORE_GROUP:
+                yield ResetType.GROUP;
+            }
+            case BEFORE_GROUP -> {
                 if (accessor.getGroupTransform().getBeforeGroup(resetGroup) == null) {
-                    return ResetType.REPORT;
+                    yield ResetType.REPORT;
                 }
-                return ResetType.GROUP;
-            case LAST_GROUP:
+                yield ResetType.GROUP;
+            }
+            case LAST_GROUP -> {
                 if (accessor.getGroupTransform().getLastGroup() == null) {
-                    return ResetType.REPORT;
+                    yield ResetType.REPORT;
                 }
-                return ResetType.GROUP;
-            case GROUP:
-                return ResetType.GROUP;
-            default:
-                throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
-        }
+                yield ResetType.GROUP;
+            }
+            case GROUP -> ResetType.GROUP;
+            default -> throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
+        };
     }
 
     /**
@@ -94,38 +91,39 @@ class ConstantTransform {
             return null;
         }
 
-        switch (resetType) {
-            case NONE:
-            case REPORT:
-            case PAGE:
-            case COLUMN:
+        return switch (resetType) {
+            case NONE, REPORT, PAGE, COLUMN -> {
                 if (resetGroup != null) {
                     throw new DRException("Reset group for variable " + name + " is required only for reset type BEFORE_GROUP or GROUP");
                 }
-                return null;
-            case FIRST_GROUP:
+                yield null;
+            }
+            case FIRST_GROUP -> {
                 if (resetGroup != null) {
                     throw new DRException("Reset group for variable " + name + " is required only for reset type BEFORE_GROUP or GROUP");
                 }
-                return accessor.getGroupTransform().getFirstGroup();
-            case BEFORE_GROUP:
+                yield accessor.getGroupTransform().getFirstGroup();
+            }
+            case BEFORE_GROUP -> {
                 if (resetGroup == null) {
                     throw new DRException("Reset group missing for variable " + name);
                 }
-                return accessor.getGroupTransform().getBeforeGroup(resetGroup);
-            case LAST_GROUP:
+                yield accessor.getGroupTransform().getBeforeGroup(resetGroup);
+            }
+            case LAST_GROUP -> {
                 if (resetGroup != null) {
                     throw new DRException("Reset group for variable " + name + " is required only for reset type BEFORE_GROUP or GROUP");
                 }
-                return accessor.getGroupTransform().getLastGroup();
-            case GROUP:
+                yield accessor.getGroupTransform().getLastGroup();
+            }
+            case GROUP -> {
                 if (resetGroup == null) {
                     throw new DRException("Reset group missing for variable " + name);
                 }
-                return resetGroup;
-            default:
-                throw new DRDesignReportException("Reset group " + resetType.name() + " not supported");
-        }
+                yield resetGroup;
+            }
+            default -> throw new DRDesignReportException("Reset group " + resetType.name() + " not supported");
+        };
     }
 
     /**
@@ -141,35 +139,32 @@ class ConstantTransform {
             return EvaluationTime.NOW;
         }
 
-        switch (evaluationTime) {
-            case NONE:
-                return EvaluationTime.NOW;
-            case REPORT:
-                return EvaluationTime.REPORT;
-            case PAGE:
-                return EvaluationTime.PAGE;
-            case COLUMN:
-                return EvaluationTime.COLUMN;
-            case FIRST_GROUP:
+        return switch (evaluationTime) {
+            case NONE -> EvaluationTime.NOW;
+            case REPORT -> EvaluationTime.REPORT;
+            case PAGE -> EvaluationTime.PAGE;
+            case COLUMN -> EvaluationTime.COLUMN;
+            case FIRST_GROUP -> {
                 if (accessor.getGroupTransform().getFirstGroup() == null) {
-                    return EvaluationTime.REPORT;
+                    yield EvaluationTime.REPORT;
                 }
-                return EvaluationTime.GROUP;
-            case BEFORE_GROUP:
+                yield EvaluationTime.GROUP;
+            }
+            case BEFORE_GROUP -> {
                 if (accessor.getGroupTransform().getBeforeGroup(evaluationGroup) == null) {
-                    return EvaluationTime.REPORT;
+                    yield EvaluationTime.REPORT;
                 }
-                return EvaluationTime.GROUP;
-            case LAST_GROUP:
+                yield EvaluationTime.GROUP;
+            }
+            case LAST_GROUP -> {
                 if (accessor.getGroupTransform().getLastGroup() == null) {
-                    return EvaluationTime.REPORT;
+                    yield EvaluationTime.REPORT;
                 }
-                return EvaluationTime.GROUP;
-            case GROUP:
-                return EvaluationTime.GROUP;
-            default:
-                throw new DRDesignReportException("Evaluation time " + evaluationTime.name() + " not supported");
-        }
+                yield EvaluationTime.GROUP;
+            }
+            case GROUP -> EvaluationTime.GROUP;
+            default -> throw new DRDesignReportException("Evaluation time " + evaluationTime.name() + " not supported");
+        };
     }
 
     /**
@@ -186,38 +181,40 @@ class ConstantTransform {
             return null;
         }
 
-        switch (evaluationTime) {
-            case NONE:
-            case REPORT:
-            case PAGE:
-            case COLUMN:
+        return switch (evaluationTime) {
+            case NONE, REPORT, PAGE, COLUMN -> {
                 if (evaluationGroup != null) {
                     throw new DRException("Evaluation group for textField is required only for evaluation time BEFORE_GROUP or GROUP");
                 }
-                return null;
-            case FIRST_GROUP:
+                yield null;
+            }
+            case FIRST_GROUP -> {
                 if (evaluationGroup != null) {
                     throw new DRException("Evaluation group for textField is required only for evaluation time BEFORE_GROUP or GROUP");
                 }
-                return accessor.getGroupTransform().getFirstGroup();
-            case BEFORE_GROUP:
+                yield accessor.getGroupTransform().getFirstGroup();
+            }
+            case BEFORE_GROUP -> {
                 if (evaluationGroup == null) {
                     throw new DRException("Evaluation group missing for textField");
                 }
-                return accessor.getGroupTransform().getBeforeGroup(evaluationGroup);
-            case LAST_GROUP:
+                yield accessor.getGroupTransform().getBeforeGroup(evaluationGroup);
+            }
+            case LAST_GROUP -> {
                 if (evaluationGroup != null) {
                     throw new DRException("Evaluation group for textField is required only for evaluation time BEFORE_GROUP or GROUP");
                 }
-                return accessor.getGroupTransform().getLastGroup();
-            case GROUP:
+                yield accessor.getGroupTransform().getLastGroup();
+            }
+            case GROUP -> {
                 if (evaluationGroup == null) {
                     throw new DRException("Evaluation group missing for textField");
                 }
-                return evaluationGroup;
-            default:
-                throw new DRDesignReportException("Evaluation group " + evaluationTime.name() + " not supported");
-        }
+                yield evaluationGroup;
+            }
+            default ->
+                    throw new DRDesignReportException("Evaluation group " + evaluationTime.name() + " not supported");
+        };
     }
 
     /**
@@ -231,16 +228,13 @@ class ConstantTransform {
             return null;
         }
 
-        switch (widthType) {
-            case FIXED:
-                return HorizontalCellComponentAlignment.LEFT;
-            case FLOAT:
-                return HorizontalCellComponentAlignment.FLOAT;
-            case EXPAND:
-                return HorizontalCellComponentAlignment.EXPAND;
-            default:
-                throw new DRDesignReportException("Component dimension type " + widthType.name() + " not supported");
-        }
+        return switch (widthType) {
+            case FIXED -> HorizontalCellComponentAlignment.LEFT;
+            case FLOAT -> HorizontalCellComponentAlignment.FLOAT;
+            case EXPAND -> HorizontalCellComponentAlignment.EXPAND;
+            default ->
+                    throw new DRDesignReportException("Component dimension type " + widthType.name() + " not supported");
+        };
     }
 
     /**
@@ -254,14 +248,11 @@ class ConstantTransform {
             return null;
         }
 
-        switch (heightType) {
-            case FIXED:
-                return VerticalCellComponentAlignment.TOP;
-            case FLOAT:
-            case EXPAND:
-                return VerticalCellComponentAlignment.EXPAND;
-            default:
-                throw new DRDesignReportException("Component dimension type " + heightType.name() + " not supported");
-        }
+        return switch (heightType) {
+            case FIXED -> VerticalCellComponentAlignment.TOP;
+            case FLOAT, EXPAND -> VerticalCellComponentAlignment.EXPAND;
+            default ->
+                    throw new DRDesignReportException("Component dimension type " + heightType.name() + " not supported");
+        };
     }
 }

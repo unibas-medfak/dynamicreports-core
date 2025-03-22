@@ -141,18 +141,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (lineStyle) {
-            case SOLID:
-                return LineStyleEnum.SOLID;
-            case DASHED:
-                return LineStyleEnum.DASHED;
-            case DOTTED:
-                return LineStyleEnum.DOTTED;
-            case DOUBLE:
-                return LineStyleEnum.DOUBLE;
-            default:
-                throw new JasperDesignException("Line style " + lineStyle.name() + " not supported");
-        }
+        return switch (lineStyle) {
+            case SOLID -> LineStyleEnum.SOLID;
+            case DASHED -> LineStyleEnum.DASHED;
+            case DOTTED -> LineStyleEnum.DOTTED;
+            case DOUBLE -> LineStyleEnum.DOUBLE;
+            default -> throw new JasperDesignException("Line style " + lineStyle.name() + " not supported");
+        };
     }
 
     /**
@@ -166,23 +161,14 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (imageScale) {
-            case CLIP:
-            case NO_RESIZE:
-                return ScaleImageEnum.CLIP;
-            case FILL_FRAME:
-            case FILL:
-                return ScaleImageEnum.FILL_FRAME;
-            case RETAIN_SHAPE:
-            case FILL_PROPORTIONALLY:
-                return ScaleImageEnum.RETAIN_SHAPE;
-            case REAL_HEIGHT:
-                return ScaleImageEnum.REAL_HEIGHT;
-            case REAL_SIZE:
-                return ScaleImageEnum.REAL_SIZE;
-            default:
-                throw new JasperDesignException("Image scale " + imageScale.name() + " not supported");
-        }
+        return switch (imageScale) {
+            case CLIP, NO_RESIZE -> ScaleImageEnum.CLIP;
+            case FILL_FRAME, FILL -> ScaleImageEnum.FILL_FRAME;
+            case RETAIN_SHAPE, FILL_PROPORTIONALLY -> ScaleImageEnum.RETAIN_SHAPE;
+            case REAL_HEIGHT -> ScaleImageEnum.REAL_HEIGHT;
+            case REAL_SIZE -> ScaleImageEnum.REAL_SIZE;
+            default -> throw new JasperDesignException("Image scale " + imageScale.name() + " not supported");
+        };
     }
 
     /**
@@ -196,16 +182,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (imageAnchorType) {
-            case MOVE_SIZE:
-                return ImageAnchorTypeEnum.MOVE_SIZE;
-            case MOVE_NO_SIZE:
-                return ImageAnchorTypeEnum.MOVE_NO_SIZE;
-            case NO_MOVE_NO_SIZE:
-                return ImageAnchorTypeEnum.NO_MOVE_NO_SIZE;
-            default:
-                throw new JasperDesignException("Image anchor type " + imageAnchorType.name() + " not supported");
-        }
+        return switch (imageAnchorType) {
+            case MOVE_SIZE -> ImageAnchorTypeEnum.MOVE_SIZE;
+            case MOVE_NO_SIZE -> ImageAnchorTypeEnum.MOVE_NO_SIZE;
+            case NO_MOVE_NO_SIZE -> ImageAnchorTypeEnum.NO_MOVE_NO_SIZE;
+            default ->
+                    throw new JasperDesignException("Image anchor type " + imageAnchorType.name() + " not supported");
+        };
     }
 
     /**
@@ -219,18 +202,14 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (horizontalTextAlignment) {
-            case LEFT:
-                return HorizontalTextAlignEnum.LEFT;
-            case CENTER:
-                return HorizontalTextAlignEnum.CENTER;
-            case RIGHT:
-                return HorizontalTextAlignEnum.RIGHT;
-            case JUSTIFIED:
-                return HorizontalTextAlignEnum.JUSTIFIED;
-            default:
-                throw new JasperDesignException("Horizontal text alignment " + horizontalTextAlignment.name() + " not supported");
-        }
+        return switch (horizontalTextAlignment) {
+            case LEFT -> HorizontalTextAlignEnum.LEFT;
+            case CENTER -> HorizontalTextAlignEnum.CENTER;
+            case RIGHT -> HorizontalTextAlignEnum.RIGHT;
+            case JUSTIFIED -> HorizontalTextAlignEnum.JUSTIFIED;
+            default ->
+                    throw new JasperDesignException("Horizontal text alignment " + horizontalTextAlignment.name() + " not supported");
+        };
     }
 
     /**
@@ -244,18 +223,14 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (verticalTextAlignment) {
-            case TOP:
-                return VerticalTextAlignEnum.TOP;
-            case MIDDLE:
-                return VerticalTextAlignEnum.MIDDLE;
-            case BOTTOM:
-                return VerticalTextAlignEnum.BOTTOM;
-            case JUSTIFIED:
-                return VerticalTextAlignEnum.JUSTIFIED;
-            default:
-                throw new JasperDesignException("Vertical text alignment " + verticalTextAlignment.name() + " not supported");
-        }
+        return switch (verticalTextAlignment) {
+            case TOP -> VerticalTextAlignEnum.TOP;
+            case MIDDLE -> VerticalTextAlignEnum.MIDDLE;
+            case BOTTOM -> VerticalTextAlignEnum.BOTTOM;
+            case JUSTIFIED -> VerticalTextAlignEnum.JUSTIFIED;
+            default ->
+                    throw new JasperDesignException("Vertical text alignment " + verticalTextAlignment.name() + " not supported");
+        };
     }
 
     /**
@@ -269,16 +244,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (horizontalImageAlignment) {
-            case LEFT:
-                return HorizontalImageAlignEnum.LEFT;
-            case CENTER:
-                return HorizontalImageAlignEnum.CENTER;
-            case RIGHT:
-                return HorizontalImageAlignEnum.RIGHT;
-            default:
-                throw new JasperDesignException("Horizontal image alignment " + horizontalImageAlignment.name() + " not supported");
-        }
+        return switch (horizontalImageAlignment) {
+            case LEFT -> HorizontalImageAlignEnum.LEFT;
+            case CENTER -> HorizontalImageAlignEnum.CENTER;
+            case RIGHT -> HorizontalImageAlignEnum.RIGHT;
+            default ->
+                    throw new JasperDesignException("Horizontal image alignment " + horizontalImageAlignment.name() + " not supported");
+        };
     }
 
     /**
@@ -292,16 +264,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (verticalImageAlignment) {
-            case TOP:
-                return VerticalImageAlignEnum.TOP;
-            case MIDDLE:
-                return VerticalImageAlignEnum.MIDDLE;
-            case BOTTOM:
-                return VerticalImageAlignEnum.BOTTOM;
-            default:
-                throw new JasperDesignException("Vertical image alignment " + verticalImageAlignment.name() + " not supported");
-        }
+        return switch (verticalImageAlignment) {
+            case TOP -> VerticalImageAlignEnum.TOP;
+            case MIDDLE -> VerticalImageAlignEnum.MIDDLE;
+            case BOTTOM -> VerticalImageAlignEnum.BOTTOM;
+            default ->
+                    throw new JasperDesignException("Vertical image alignment " + verticalImageAlignment.name() + " not supported");
+        };
     }
 
     /**
@@ -315,18 +284,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (rotation) {
-            case NONE:
-                return RotationEnum.NONE;
-            case LEFT:
-                return RotationEnum.LEFT;
-            case RIGHT:
-                return RotationEnum.RIGHT;
-            case UPSIDE_DOWN:
-                return RotationEnum.UPSIDE_DOWN;
-            default:
-                throw new JasperDesignException("Rotation " + rotation.name() + " not supported");
-        }
+        return switch (rotation) {
+            case NONE -> RotationEnum.NONE;
+            case LEFT -> RotationEnum.LEFT;
+            case RIGHT -> RotationEnum.RIGHT;
+            case UPSIDE_DOWN -> RotationEnum.UPSIDE_DOWN;
+            default -> throw new JasperDesignException("Rotation " + rotation.name() + " not supported");
+        };
     }
 
     /**
@@ -336,58 +300,30 @@ public class ConstantTransform {
      * @return a {@link java.lang.Byte} object.
      */
     protected static net.sf.jasperreports.charts.type.ChartTypeEnum chartType(final ChartType chartType) {
-        switch (chartType) {
-            case AREA:
-                return ChartTypeEnum.AREA;
-            case STACKEDAREA:
-                return ChartTypeEnum.STACKEDAREA;
-            case BAR:
-            case LAYEREDBAR:
-            case WATERFALLBAR:
-                return ChartTypeEnum.BAR;
-            case BAR3D:
-                return ChartTypeEnum.BAR3D;
-            case STACKEDBAR:
-            case GROUPEDSTACKEDBAR:
-                return ChartTypeEnum.STACKEDBAR;
-            case STACKEDBAR3D:
-                return ChartTypeEnum.STACKEDBAR3D;
-            case LINE:
-                return ChartTypeEnum.LINE;
-            case PIE:
-                return ChartTypeEnum.PIE;
-            case PIE3D:
-                return ChartTypeEnum.PIE3D;
-            case TIMESERIES:
-            case DIFFERENCE:
-                return ChartTypeEnum.TIMESERIES;
-            case XYAREA:
-                return ChartTypeEnum.XYAREA;
-            case XYBAR:
-                return ChartTypeEnum.XYBAR;
-            case XYLINE:
-            case XYSTEP:
-                return ChartTypeEnum.XYLINE;
-            case SCATTER:
-                return ChartTypeEnum.SCATTER;
-            case MULTI_AXIS:
-                return ChartTypeEnum.MULTI_AXIS;
-            case XYBLOCK:
-            case BUBBLE:
-                return ChartTypeEnum.BUBBLE;
-            case CANDLESTICK:
-                return ChartTypeEnum.CANDLESTICK;
-            case HIGHLOW:
-                return ChartTypeEnum.HIGHLOW;
-            case METER:
-                return ChartTypeEnum.METER;
-            case THERMOMETER:
-                return ChartTypeEnum.THERMOMETER;
-            case GANTT:
-                return ChartTypeEnum.GANTT;
-            default:
-                throw new JasperDesignException("Chart " + chartType.name() + " not supported");
-        }
+        return switch (chartType) {
+            case AREA -> ChartTypeEnum.AREA;
+            case STACKEDAREA -> ChartTypeEnum.STACKEDAREA;
+            case BAR, LAYEREDBAR, WATERFALLBAR -> ChartTypeEnum.BAR;
+            case BAR3D -> ChartTypeEnum.BAR3D;
+            case STACKEDBAR, GROUPEDSTACKEDBAR -> ChartTypeEnum.STACKEDBAR;
+            case STACKEDBAR3D -> ChartTypeEnum.STACKEDBAR3D;
+            case LINE -> ChartTypeEnum.LINE;
+            case PIE -> ChartTypeEnum.PIE;
+            case PIE3D -> ChartTypeEnum.PIE3D;
+            case TIMESERIES, DIFFERENCE -> ChartTypeEnum.TIMESERIES;
+            case XYAREA -> ChartTypeEnum.XYAREA;
+            case XYBAR -> ChartTypeEnum.XYBAR;
+            case XYLINE, XYSTEP -> ChartTypeEnum.XYLINE;
+            case SCATTER -> ChartTypeEnum.SCATTER;
+            case MULTI_AXIS -> ChartTypeEnum.MULTI_AXIS;
+            case XYBLOCK, BUBBLE -> ChartTypeEnum.BUBBLE;
+            case CANDLESTICK -> ChartTypeEnum.CANDLESTICK;
+            case HIGHLOW -> ChartTypeEnum.HIGHLOW;
+            case METER -> ChartTypeEnum.METER;
+            case THERMOMETER -> ChartTypeEnum.THERMOMETER;
+            case GANTT -> ChartTypeEnum.GANTT;
+            default -> throw new JasperDesignException("Chart " + chartType.name() + " not supported");
+        };
     }
 
     /**
@@ -397,18 +333,13 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.WhenNoDataTypeEnum} object.
      */
     protected static WhenNoDataTypeEnum whenNoDataType(final WhenNoDataType whenNoDataType) {
-        switch (whenNoDataType) {
-            case NO_PAGES:
-                return WhenNoDataTypeEnum.NO_PAGES;
-            case BLANK_PAGE:
-                return WhenNoDataTypeEnum.BLANK_PAGE;
-            case ALL_SECTIONS_NO_DETAIL:
-                return WhenNoDataTypeEnum.ALL_SECTIONS_NO_DETAIL;
-            case NO_DATA_SECTION:
-                return WhenNoDataTypeEnum.NO_DATA_SECTION;
-            default:
-                throw new JasperDesignException("When no data type " + whenNoDataType.name() + " not supported");
-        }
+        return switch (whenNoDataType) {
+            case NO_PAGES -> WhenNoDataTypeEnum.NO_PAGES;
+            case BLANK_PAGE -> WhenNoDataTypeEnum.BLANK_PAGE;
+            case ALL_SECTIONS_NO_DETAIL -> WhenNoDataTypeEnum.ALL_SECTIONS_NO_DETAIL;
+            case NO_DATA_SECTION -> WhenNoDataTypeEnum.NO_DATA_SECTION;
+            default -> throw new JasperDesignException("When no data type " + whenNoDataType.name() + " not supported");
+        };
     }
 
     /**
@@ -421,18 +352,13 @@ public class ConstantTransform {
         if (whenNoDataType == null) {
             return null;
         }
-        switch (whenNoDataType) {
-            case NO_PAGES:
-                return WhenNoDataType.NO_PAGES;
-            case BLANK_PAGE:
-                return WhenNoDataType.BLANK_PAGE;
-            case ALL_SECTIONS_NO_DETAIL:
-                return WhenNoDataType.ALL_SECTIONS_NO_DETAIL;
-            case NO_DATA_SECTION:
-                return WhenNoDataType.NO_DATA_SECTION;
-            default:
-                throw new JasperDesignException("When no data type " + whenNoDataType.name() + " not supported");
-        }
+        return switch (whenNoDataType) {
+            case NO_PAGES -> WhenNoDataType.NO_PAGES;
+            case BLANK_PAGE -> WhenNoDataType.BLANK_PAGE;
+            case ALL_SECTIONS_NO_DETAIL -> WhenNoDataType.ALL_SECTIONS_NO_DETAIL;
+            case NO_DATA_SECTION -> WhenNoDataType.NO_DATA_SECTION;
+            default -> throw new JasperDesignException("When no data type " + whenNoDataType.name() + " not supported");
+        };
     }
 
     /**
@@ -442,18 +368,14 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.WhenResourceMissingTypeEnum} object.
      */
     protected static WhenResourceMissingTypeEnum whenResourceMissingType(final WhenResourceMissingType whenResourceMissingType) {
-        switch (whenResourceMissingType) {
-            case NULL:
-                return WhenResourceMissingTypeEnum.NULL;
-            case EMPTY:
-                return WhenResourceMissingTypeEnum.EMPTY;
-            case KEY:
-                return WhenResourceMissingTypeEnum.KEY;
-            case ERROR:
-                return WhenResourceMissingTypeEnum.ERROR;
-            default:
-                throw new JasperDesignException("When resource missing type " + whenResourceMissingType.name() + " not supported");
-        }
+        return switch (whenResourceMissingType) {
+            case NULL -> WhenResourceMissingTypeEnum.NULL;
+            case EMPTY -> WhenResourceMissingTypeEnum.EMPTY;
+            case KEY -> WhenResourceMissingTypeEnum.KEY;
+            case ERROR -> WhenResourceMissingTypeEnum.ERROR;
+            default ->
+                    throw new JasperDesignException("When resource missing type " + whenResourceMissingType.name() + " not supported");
+        };
     }
 
     /**
@@ -463,18 +385,14 @@ public class ConstantTransform {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.WhenResourceMissingType} object.
      */
     public static WhenResourceMissingType whenResourceMissingType(final WhenResourceMissingTypeEnum whenResourceMissingType) {
-        switch (whenResourceMissingType) {
-            case NULL:
-                return WhenResourceMissingType.NULL;
-            case EMPTY:
-                return WhenResourceMissingType.EMPTY;
-            case KEY:
-                return WhenResourceMissingType.KEY;
-            case ERROR:
-                return WhenResourceMissingType.ERROR;
-            default:
-                throw new JasperDesignException("When resource missing type " + whenResourceMissingType.name() + " not supported");
-        }
+        return switch (whenResourceMissingType) {
+            case NULL -> WhenResourceMissingType.NULL;
+            case EMPTY -> WhenResourceMissingType.EMPTY;
+            case KEY -> WhenResourceMissingType.KEY;
+            case ERROR -> WhenResourceMissingType.ERROR;
+            default ->
+                    throw new JasperDesignException("When resource missing type " + whenResourceMissingType.name() + " not supported");
+        };
     }
 
     /**
@@ -484,14 +402,11 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.OrientationEnum} object.
      */
     protected static OrientationEnum pageOrientation(final PageOrientation orientation) {
-        switch (orientation) {
-            case PORTRAIT:
-                return OrientationEnum.PORTRAIT;
-            case LANDSCAPE:
-                return OrientationEnum.LANDSCAPE;
-            default:
-                throw new JasperDesignException("Page orientation " + orientation.name() + " not supported");
-        }
+        return switch (orientation) {
+            case PORTRAIT -> OrientationEnum.PORTRAIT;
+            case LANDSCAPE -> OrientationEnum.LANDSCAPE;
+            default -> throw new JasperDesignException("Page orientation " + orientation.name() + " not supported");
+        };
     }
 
     /**
@@ -501,14 +416,11 @@ public class ConstantTransform {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.PageOrientation} object.
      */
     public static PageOrientation pageOrientation(final OrientationEnum orientation) {
-        switch (orientation) {
-            case PORTRAIT:
-                return PageOrientation.PORTRAIT;
-            case LANDSCAPE:
-                return PageOrientation.LANDSCAPE;
-            default:
-                throw new JasperDesignException("Page orientation " + orientation.name() + " not supported");
-        }
+        return switch (orientation) {
+            case PORTRAIT -> PageOrientation.PORTRAIT;
+            case LANDSCAPE -> PageOrientation.LANDSCAPE;
+            default -> throw new JasperDesignException("Page orientation " + orientation.name() + " not supported");
+        };
     }
 
     /**
@@ -522,20 +434,14 @@ public class ConstantTransform {
             return ResetTypeEnum.NONE;
         }
 
-        switch (resetType) {
-            case NONE:
-                return ResetTypeEnum.NONE;
-            case REPORT:
-                return ResetTypeEnum.REPORT;
-            case PAGE:
-                return ResetTypeEnum.PAGE;
-            case COLUMN:
-                return ResetTypeEnum.COLUMN;
-            case GROUP:
-                return ResetTypeEnum.GROUP;
-            default:
-                throw new JasperDesignException("Variable reset type " + resetType.name() + " not supported");
-        }
+        return switch (resetType) {
+            case NONE -> ResetTypeEnum.NONE;
+            case REPORT -> ResetTypeEnum.REPORT;
+            case PAGE -> ResetTypeEnum.PAGE;
+            case COLUMN -> ResetTypeEnum.COLUMN;
+            case GROUP -> ResetTypeEnum.GROUP;
+            default -> throw new JasperDesignException("Variable reset type " + resetType.name() + " not supported");
+        };
     }
 
     public static DatasetResetTypeEnum variableDatasetResetType(final ResetType resetType) {
@@ -543,20 +449,14 @@ public class ConstantTransform {
           return DatasetResetTypeEnum.NONE;
       }
 
-      switch (resetType) {
-          case NONE:
-              return DatasetResetTypeEnum.NONE;
-          case REPORT:
-              return DatasetResetTypeEnum.REPORT;
-          case PAGE:
-              return DatasetResetTypeEnum.PAGE;
-          case COLUMN:
-              return DatasetResetTypeEnum.COLUMN;
-          case GROUP:
-              return DatasetResetTypeEnum.GROUP;
-          default:
-              throw new JasperDesignException("Variable reset type " + resetType.name() + " not supported");
-      }
+        return switch (resetType) {
+            case NONE -> DatasetResetTypeEnum.NONE;
+            case REPORT -> DatasetResetTypeEnum.REPORT;
+            case PAGE -> DatasetResetTypeEnum.PAGE;
+            case COLUMN -> DatasetResetTypeEnum.COLUMN;
+            case GROUP -> DatasetResetTypeEnum.GROUP;
+            default -> throw new JasperDesignException("Variable reset type " + resetType.name() + " not supported");
+        };
   }
 
     /**
@@ -570,24 +470,16 @@ public class ConstantTransform {
             return EvaluationTimeEnum.NOW;
         }
 
-        switch (evaluationTime) {
-            case NOW:
-                return EvaluationTimeEnum.NOW;
-            case REPORT:
-                return EvaluationTimeEnum.REPORT;
-            case PAGE:
-                return EvaluationTimeEnum.PAGE;
-            case COLUMN:
-                return EvaluationTimeEnum.COLUMN;
-            case GROUP:
-                return EvaluationTimeEnum.GROUP;
-            case BAND:
-                return EvaluationTimeEnum.BAND;
-            case AUTO:
-                return EvaluationTimeEnum.AUTO;
-            default:
-                throw new JasperDesignException("Evaluation time " + evaluationTime.name() + " not supported");
-        }
+        return switch (evaluationTime) {
+            case NOW -> EvaluationTimeEnum.NOW;
+            case REPORT -> EvaluationTimeEnum.REPORT;
+            case PAGE -> EvaluationTimeEnum.PAGE;
+            case COLUMN -> EvaluationTimeEnum.COLUMN;
+            case GROUP -> EvaluationTimeEnum.GROUP;
+            case BAND -> EvaluationTimeEnum.BAND;
+            case AUTO -> EvaluationTimeEnum.AUTO;
+            default -> throw new JasperDesignException("Evaluation time " + evaluationTime.name() + " not supported");
+        };
     }
 
     /**
@@ -600,16 +492,12 @@ public class ConstantTransform {
         if (splitType == null) {
             return null;
         }
-        switch (splitType) {
-            case IMMEDIATE:
-                return SplitTypeEnum.IMMEDIATE;
-            case PREVENT:
-                return SplitTypeEnum.PREVENT;
-            case STRETCH:
-                return SplitTypeEnum.STRETCH;
-            default:
-                throw new JasperDesignException("Split type " + splitType.name() + " not supported");
-        }
+        return switch (splitType) {
+            case IMMEDIATE -> SplitTypeEnum.IMMEDIATE;
+            case PREVENT -> SplitTypeEnum.PREVENT;
+            case STRETCH -> SplitTypeEnum.STRETCH;
+            default -> throw new JasperDesignException("Split type " + splitType.name() + " not supported");
+        };
     }
 
     /**
@@ -619,28 +507,18 @@ public class ConstantTransform {
      * @return a {@link java.lang.Class} object.
      */
     protected static TimePeriodEnum timePeriodType(final TimePeriod timePeriodType) {
-        switch (timePeriodType) {
-            case YEAR:
-                return TimePeriodEnum.YEAR;
-            case QUARTER:
-                return TimePeriodEnum.QUARTER;
-            case MONTH:
-                return TimePeriodEnum.MONTH;
-            case WEEK:
-                return TimePeriodEnum.WEEK;
-            case DAY:
-                return TimePeriodEnum.DAY;
-            case HOUR:
-                return TimePeriodEnum.HOUR;
-            case MINUTE:
-                return TimePeriodEnum.MINUTE;
-            case SECOND:
-                return  TimePeriodEnum.SECOND;
-            case MILLISECOND:
-                return TimePeriodEnum.MILLISECOND;
-            default:
-                throw new JasperDesignException("Time period type " + timePeriodType.name() + " not supported");
-        }
+        return switch (timePeriodType) {
+            case YEAR -> TimePeriodEnum.YEAR;
+            case QUARTER -> TimePeriodEnum.QUARTER;
+            case MONTH -> TimePeriodEnum.MONTH;
+            case WEEK -> TimePeriodEnum.WEEK;
+            case DAY -> TimePeriodEnum.DAY;
+            case HOUR -> TimePeriodEnum.HOUR;
+            case MINUTE -> TimePeriodEnum.MINUTE;
+            case SECOND -> TimePeriodEnum.SECOND;
+            case MILLISECOND -> TimePeriodEnum.MILLISECOND;
+            default -> throw new JasperDesignException("Time period type " + timePeriodType.name() + " not supported");
+        };
     }
 
     /**
@@ -650,14 +528,12 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.charts.type.PlotOrientationEnum} object.
      */
     protected static PlotOrientationEnum chartPlotOrientation(final Orientation orientation) {
-        switch (orientation) {
-            case HORIZONTAL:
-                return PlotOrientationEnum.HORIZONTAL;
-            case VERTICAL:
-                return PlotOrientationEnum.VERTICAL;
-            default:
-                throw new JasperDesignException("Chart plot orientation " + orientation.name() + " not supported");
-        }
+        return switch (orientation) {
+            case HORIZONTAL -> PlotOrientationEnum.HORIZONTAL;
+            case VERTICAL -> PlotOrientationEnum.VERTICAL;
+            default ->
+                    throw new JasperDesignException("Chart plot orientation " + orientation.name() + " not supported");
+        };
     }
 
     /**
@@ -671,18 +547,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (position) {
-            case TOP:
-                return EdgeEnum.TOP;
-            case BOTTOM:
-                return EdgeEnum.BOTTOM;
-            case LEFT:
-                return EdgeEnum.LEFT;
-            case RIGHT:
-                return EdgeEnum.RIGHT;
-            default:
-                throw new JasperDesignException("Position " + position.name() + " not supported");
-        }
+        return switch (position) {
+            case TOP -> EdgeEnum.TOP;
+            case BOTTOM -> EdgeEnum.BOTTOM;
+            case LEFT -> EdgeEnum.LEFT;
+            case RIGHT -> EdgeEnum.RIGHT;
+            default -> throw new JasperDesignException("Position " + position.name() + " not supported");
+        };
     }
 
     /**
@@ -696,14 +567,11 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (axisPosition) {
-            case LEFT_OR_TOP:
-                return AxisPositionEnum.LEFT_OR_TOP;
-            case RIGHT_OR_BOTTOM:
-                return AxisPositionEnum.RIGHT_OR_BOTTOM;
-            default:
-                throw new JasperDesignException("AxisPosition " + axisPosition.name() + " not supported");
-        }
+        return switch (axisPosition) {
+            case LEFT_OR_TOP -> AxisPositionEnum.LEFT_OR_TOP;
+            case RIGHT_OR_BOTTOM -> AxisPositionEnum.RIGHT_OR_BOTTOM;
+            default -> throw new JasperDesignException("AxisPosition " + axisPosition.name() + " not supported");
+        };
     }
 
     /**
@@ -717,18 +585,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (meterShape) {
-            case CHORD:
-                return MeterShapeEnum.CHORD;
-            case CIRCLE:
-                return MeterShapeEnum.CIRCLE;
-            case PIE:
-                return MeterShapeEnum.PIE;
-            case DIAL:
-                return MeterShapeEnum.DIAL;
-            default:
-                throw new JasperDesignException("MeterShape " + meterShape.name() + " not supported");
-        }
+        return switch (meterShape) {
+            case CHORD -> MeterShapeEnum.CHORD;
+            case CIRCLE -> MeterShapeEnum.CIRCLE;
+            case PIE -> MeterShapeEnum.PIE;
+            case DIAL -> MeterShapeEnum.DIAL;
+            default -> throw new JasperDesignException("MeterShape " + meterShape.name() + " not supported");
+        };
     }
 
     /**
@@ -742,18 +605,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (valueLocation) {
-            case NONE:
-                return ValueLocationEnum.NONE;
-            case LEFT:
-                return ValueLocationEnum.LEFT;
-            case RIGHT:
-                return ValueLocationEnum.RIGHT;
-            case BULB:
-                return ValueLocationEnum.BULB;
-            default:
-                throw new JasperDesignException("ValueLocation " + valueLocation.name() + " not supported");
-        }
+        return switch (valueLocation) {
+            case NONE -> ValueLocationEnum.NONE;
+            case LEFT -> ValueLocationEnum.LEFT;
+            case RIGHT -> ValueLocationEnum.RIGHT;
+            case BULB -> ValueLocationEnum.BULB;
+            default -> throw new JasperDesignException("ValueLocation " + valueLocation.name() + " not supported");
+        };
     }
 
     /**
@@ -763,30 +621,19 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.CalculationEnum} object.
      */
     protected static CalculationEnum calculation(final Calculation calculation) {
-        switch (calculation) {
-            case NOTHING:
-                return CalculationEnum.NOTHING;
-            case COUNT:
-                return CalculationEnum.COUNT;
-            case SUM:
-                return CalculationEnum.SUM;
-            case AVERAGE:
-                return CalculationEnum.AVERAGE;
-            case LOWEST:
-                return CalculationEnum.LOWEST;
-            case HIGHEST:
-                return CalculationEnum.HIGHEST;
-            case STANDARD_DEVIATION:
-                return CalculationEnum.STANDARD_DEVIATION;
-            case VARIANCE:
-                return CalculationEnum.VARIANCE;
-            case FIRST:
-                return CalculationEnum.FIRST;
-            case DISTINCT_COUNT:
-                return CalculationEnum.DISTINCT_COUNT;
-            default:
-                throw new JasperDesignException("Calculation " + calculation.name() + " not supported");
-        }
+        return switch (calculation) {
+            case NOTHING -> CalculationEnum.NOTHING;
+            case COUNT -> CalculationEnum.COUNT;
+            case SUM -> CalculationEnum.SUM;
+            case AVERAGE -> CalculationEnum.AVERAGE;
+            case LOWEST -> CalculationEnum.LOWEST;
+            case HIGHEST -> CalculationEnum.HIGHEST;
+            case STANDARD_DEVIATION -> CalculationEnum.STANDARD_DEVIATION;
+            case VARIANCE -> CalculationEnum.VARIANCE;
+            case FIRST -> CalculationEnum.FIRST;
+            case DISTINCT_COUNT -> CalculationEnum.DISTINCT_COUNT;
+            default -> throw new JasperDesignException("Calculation " + calculation.name() + " not supported");
+        };
     }
 
     /**
@@ -796,29 +643,21 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.export.type.HtmlSizeUnitEnum} object.
      */
     protected static HtmlSizeUnitEnum sizeUnit(final SizeUnit sizeUnit) {
-        switch (sizeUnit) {
-            case PIXEL:
-                return HtmlSizeUnitEnum.PIXEL;
-            case POINT:
-                return HtmlSizeUnitEnum.POINT;
-            default:
-                throw new JasperDesignException("SizeUnit " + sizeUnit.name() + " not supported");
-        }
+        return switch (sizeUnit) {
+            case PIXEL -> HtmlSizeUnitEnum.PIXEL;
+            case POINT -> HtmlSizeUnitEnum.POINT;
+            default -> throw new JasperDesignException("SizeUnit " + sizeUnit.name() + " not supported");
+        };
     }
 
     protected static HtmlBorderCollapseEnum borderCollapse(final BorderCollapse borderCollapse) {
-      switch (borderCollapse) {
-        case SEPARATE:
-          return HtmlBorderCollapseEnum.SEPARATE;
-        case COLLAPSE:
-          return HtmlBorderCollapseEnum.COLLAPSE;
-        case INITIAL:
-          return HtmlBorderCollapseEnum.INITIAL;
-        case INHERIT:
-          return HtmlBorderCollapseEnum.INHERIT;
-        default:
-          throw new JasperDesignException("BorderCollapse " + borderCollapse.name() + " not supported");
-      }
+        return switch (borderCollapse) {
+            case SEPARATE -> HtmlBorderCollapseEnum.SEPARATE;
+            case COLLAPSE -> HtmlBorderCollapseEnum.COLLAPSE;
+            case INITIAL -> HtmlBorderCollapseEnum.INITIAL;
+            case INHERIT -> HtmlBorderCollapseEnum.INHERIT;
+            default -> throw new JasperDesignException("BorderCollapse " + borderCollapse.name() + " not supported");
+        };
     }
 
     /**
@@ -828,22 +667,15 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.pdf.type.PdfVersionEnum} object.
      */
     protected static PdfVersionEnum pdfVersion(final PdfVersion pdfVersion) {
-        switch (pdfVersion) {
-            case VERION_1_2:
-                return PdfVersionEnum.VERSION_1_2;
-            case VERION_1_3:
-                return PdfVersionEnum.VERSION_1_3;
-            case VERION_1_4:
-                return PdfVersionEnum.VERSION_1_4;
-            case VERION_1_5:
-                return PdfVersionEnum.VERSION_1_5;
-            case VERION_1_6:
-                return PdfVersionEnum.VERSION_1_6;
-            case VERION_1_7:
-                return PdfVersionEnum.VERSION_1_7;
-            default:
-                throw new JasperDesignException("PdfVersion " + pdfVersion.name() + " not supported");
-        }
+        return switch (pdfVersion) {
+            case VERION_1_2 -> PdfVersionEnum.VERSION_1_2;
+            case VERION_1_3 -> PdfVersionEnum.VERSION_1_3;
+            case VERION_1_4 -> PdfVersionEnum.VERSION_1_4;
+            case VERION_1_5 -> PdfVersionEnum.VERSION_1_5;
+            case VERION_1_6 -> PdfVersionEnum.VERSION_1_6;
+            case VERION_1_7 -> PdfVersionEnum.VERSION_1_7;
+            default -> throw new JasperDesignException("PdfVersion " + pdfVersion.name() + " not supported");
+        };
     }
 
     /**
@@ -855,26 +687,17 @@ public class ConstantTransform {
     protected static Integer pdfPermission(final List<PdfPermission> permissions) {
         final int permission = 0;
         for (final PdfPermission pdfPermission : permissions) {
-            switch (pdfPermission) {
-                case PRINTING:
-                    return permission | PdfWriter.ALLOW_PRINTING;
-                case MODIFY_CONTENTS:
-                    return permission | PdfWriter.ALLOW_MODIFY_CONTENTS;
-                case COPY:
-                    return permission | PdfWriter.ALLOW_COPY;
-                case MODIFY_ANNOTATIONS:
-                    return permission | PdfWriter.ALLOW_MODIFY_ANNOTATIONS;
-                case FILL_IN:
-                    return permission | PdfWriter.ALLOW_FILL_IN;
-                case SCREEN_READERS:
-                    return permission | PdfWriter.ALLOW_SCREENREADERS;
-                case ASSEMBLY:
-                    return permission | PdfWriter.ALLOW_ASSEMBLY;
-                case DEGRADED_PRINTING:
-                    return permission | PdfWriter.ALLOW_DEGRADED_PRINTING;
-                default:
-                    throw new JasperDesignException("PdfPermission " + pdfPermission.name() + " not supported");
-            }
+            return switch (pdfPermission) {
+                case PRINTING -> permission | PdfWriter.ALLOW_PRINTING;
+                case MODIFY_CONTENTS -> permission | PdfWriter.ALLOW_MODIFY_CONTENTS;
+                case COPY -> permission | PdfWriter.ALLOW_COPY;
+                case MODIFY_ANNOTATIONS -> permission | PdfWriter.ALLOW_MODIFY_ANNOTATIONS;
+                case FILL_IN -> permission | PdfWriter.ALLOW_FILL_IN;
+                case SCREEN_READERS -> permission | PdfWriter.ALLOW_SCREENREADERS;
+                case ASSEMBLY -> permission | PdfWriter.ALLOW_ASSEMBLY;
+                case DEGRADED_PRINTING -> permission | PdfWriter.ALLOW_DEGRADED_PRINTING;
+                default -> throw new JasperDesignException("PdfPermission " + pdfPermission.name() + " not supported");
+            };
         }
         return permission;
     }
@@ -886,14 +709,12 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.pdf.type.PdfPrintScalingEnum} object.
      */
     protected static PdfPrintScalingEnum pdfPrintScaling(final PdfPrintScaling pdfPrintScaling) {
-        switch (pdfPrintScaling) {
-            case NONE:
-                return PdfPrintScalingEnum.NONE;
-            case DEFAULT:
-                return PdfPrintScalingEnum.DEFAULT;
-            default:
-                throw new JasperDesignException("Pdf print scaling " + pdfPrintScaling.name() + " not supported");
-        }
+        return switch (pdfPrintScaling) {
+            case NONE -> PdfPrintScalingEnum.NONE;
+            case DEFAULT -> PdfPrintScalingEnum.DEFAULT;
+            default ->
+                    throw new JasperDesignException("Pdf print scaling " + pdfPrintScaling.name() + " not supported");
+        };
     }
 
     /**
@@ -903,16 +724,12 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.pdf.type.PdfaConformanceEnum} object.
      */
     protected static PdfaConformanceEnum pdfaConformance(final PdfaConformance pdfaConformance) {
-        switch (pdfaConformance) {
-            case NONE:
-                return PdfaConformanceEnum.NONE;
-            case PDFA_1A:
-                return PdfaConformanceEnum.PDFA_1A;
-            case PDFA_1B:
-                return PdfaConformanceEnum.PDFA_1B;
-            default:
-                throw new JasperDesignException("Pdfa conformance " + pdfaConformance.name() + " not supported");
-        }
+        return switch (pdfaConformance) {
+            case NONE -> PdfaConformanceEnum.NONE;
+            case PDFA_1A -> PdfaConformanceEnum.PDFA_1A;
+            case PDFA_1B -> PdfaConformanceEnum.PDFA_1B;
+            default -> throw new JasperDesignException("Pdfa conformance " + pdfaConformance.name() + " not supported");
+        };
     }
 
     /**
@@ -926,14 +743,11 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (lineDirection) {
-            case TOP_DOWN:
-                return LineDirectionEnum.TOP_DOWN;
-            case BOTTOM_UP:
-                return LineDirectionEnum.BOTTOM_UP;
-            default:
-                throw new JasperDesignException("LineDirection " + lineDirection.name() + " not supported");
-        }
+        return switch (lineDirection) {
+            case TOP_DOWN -> LineDirectionEnum.TOP_DOWN;
+            case BOTTOM_UP -> LineDirectionEnum.BOTTOM_UP;
+            default -> throw new JasperDesignException("LineDirection " + lineDirection.name() + " not supported");
+        };
     }
 
     /**
@@ -947,18 +761,13 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (markup) {
-            case NONE:
-                return "none";
-            case STYLED:
-                return "styled";
-            case RTF:
-                return "rtf";
-            case HTML:
-                return "html";
-            default:
-                throw new JasperDesignException("Markup " + markup.name() + " not supported");
-        }
+        return switch (markup) {
+            case NONE -> "none";
+            case STYLED -> "styled";
+            case RTF -> "rtf";
+            case HTML -> "html";
+            default -> throw new JasperDesignException("Markup " + markup.name() + " not supported");
+        };
     }
 
     /**
@@ -972,22 +781,15 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (lineSpacing) {
-            case SINGLE:
-                return LineSpacingEnum.SINGLE;
-            case ONE_AND_HALF:
-                return LineSpacingEnum.ONE_AND_HALF;
-            case DOUBLE:
-                return LineSpacingEnum.DOUBLE;
-            case AT_LEAST:
-                return LineSpacingEnum.AT_LEAST;
-            case FIXED:
-                return LineSpacingEnum.FIXED;
-            case PROPORTIONAL:
-                return LineSpacingEnum.PROPORTIONAL;
-            default:
-                throw new JasperDesignException("LineSpacing " + lineSpacing.name() + " not supported");
-        }
+        return switch (lineSpacing) {
+            case SINGLE -> LineSpacingEnum.SINGLE;
+            case ONE_AND_HALF -> LineSpacingEnum.ONE_AND_HALF;
+            case DOUBLE -> LineSpacingEnum.DOUBLE;
+            case AT_LEAST -> LineSpacingEnum.AT_LEAST;
+            case FIXED -> LineSpacingEnum.FIXED;
+            case PROPORTIONAL -> LineSpacingEnum.PROPORTIONAL;
+            default -> throw new JasperDesignException("LineSpacing " + lineSpacing.name() + " not supported");
+        };
     }
 
     /**
@@ -1001,14 +803,11 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (breakType) {
-            case PAGE:
-                return BreakTypeEnum.PAGE;
-            case COLUMN:
-                return BreakTypeEnum.COLUMN;
-            default:
-                throw new JasperDesignException("BreakType " + breakType.name() + " not supported");
-        }
+        return switch (breakType) {
+            case PAGE -> BreakTypeEnum.PAGE;
+            case COLUMN -> BreakTypeEnum.COLUMN;
+            default -> throw new JasperDesignException("BreakType " + breakType.name() + " not supported");
+        };
     }
 
     /**
@@ -1022,14 +821,11 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (runDirection) {
-            case LEFT_TO_RIGHT:
-                return RunDirectionEnum.LTR;
-            case RIGHT_TO_LEFT:
-                return RunDirectionEnum.RTL;
-            default:
-                throw new JasperDesignException("RunDirection " + runDirection.name() + " not supported");
-        }
+        return switch (runDirection) {
+            case LEFT_TO_RIGHT -> RunDirectionEnum.LTR;
+            case RIGHT_TO_LEFT -> RunDirectionEnum.RTL;
+            default -> throw new JasperDesignException("RunDirection " + runDirection.name() + " not supported");
+        };
     }
 
     /**
@@ -1043,14 +839,12 @@ public class ConstantTransform {
             return CrosstabTotalPositionEnum.NONE;
         }
 
-        switch (totalPosition) {
-            case START:
-                return CrosstabTotalPositionEnum.START;
-            case END:
-                return CrosstabTotalPositionEnum.END;
-            default:
-                throw new JasperDesignException("CrosstabTotalPosition " + totalPosition.name() + " not supported");
-        }
+        return switch (totalPosition) {
+            case START -> CrosstabTotalPositionEnum.START;
+            case END -> CrosstabTotalPositionEnum.END;
+            default ->
+                    throw new JasperDesignException("CrosstabTotalPosition " + totalPosition.name() + " not supported");
+        };
     }
 
     /**
@@ -1064,14 +858,12 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (percentageType) {
-            case NONE:
-                return CrosstabPercentageEnum.NONE;
-            case GRAND_TOTAL:
-                return CrosstabPercentageEnum.GRAND_TOTAL;
-            default:
-                throw new JasperDesignException("CrosstabPercentageType " + percentageType.name() + " not supported");
-        }
+        return switch (percentageType) {
+            case NONE -> CrosstabPercentageEnum.NONE;
+            case GRAND_TOTAL -> CrosstabPercentageEnum.GRAND_TOTAL;
+            default ->
+                    throw new JasperDesignException("CrosstabPercentageType " + percentageType.name() + " not supported");
+        };
     }
 
     /**
@@ -1085,14 +877,11 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (orderType) {
-            case ASCENDING:
-                return SortOrderEnum.ASCENDING;
-            case DESCENDING:
-                return SortOrderEnum.DESCENDING;
-            default:
-                throw new JasperDesignException("OrderType " + orderType.name() + " not supported");
-        }
+        return switch (orderType) {
+            case ASCENDING -> SortOrderEnum.ASCENDING;
+            case DESCENDING -> SortOrderEnum.DESCENDING;
+            default -> throw new JasperDesignException("OrderType " + orderType.name() + " not supported");
+        };
     }
 
     /**
@@ -1106,14 +895,11 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (orderType) {
-            case ASCENDING:
-                return BucketOrder.ASCENDING;
-            case DESCENDING:
-                return BucketOrder.DESCENDING;
-            default:
-                throw new JasperDesignException("OrderType " + orderType.name() + " not supported");
-        }
+        return switch (orderType) {
+            case ASCENDING -> BucketOrder.ASCENDING;
+            case DESCENDING -> BucketOrder.DESCENDING;
+            default -> throw new JasperDesignException("OrderType " + orderType.name() + " not supported");
+        };
     }
 
     /**
@@ -1123,16 +909,13 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.PositionTypeEnum} object.
      */
     public static PositionTypeEnum componentPositionType(final ComponentPositionType componentPositionType) {
-        switch (componentPositionType) {
-            case FLOAT:
-                return PositionTypeEnum.FLOAT;
-            case FIX_RELATIVE_TO_TOP:
-                return PositionTypeEnum.FIX_RELATIVE_TO_TOP;
-            case FIX_RELATIVE_TO_BOTTOM:
-                return PositionTypeEnum.FIX_RELATIVE_TO_BOTTOM;
-            default:
-                throw new JasperDesignException("ComponentPositionType " + componentPositionType.name() + " not supported");
-        }
+        return switch (componentPositionType) {
+            case FLOAT -> PositionTypeEnum.FLOAT;
+            case FIX_RELATIVE_TO_TOP -> PositionTypeEnum.FIX_RELATIVE_TO_TOP;
+            case FIX_RELATIVE_TO_BOTTOM -> PositionTypeEnum.FIX_RELATIVE_TO_BOTTOM;
+            default ->
+                    throw new JasperDesignException("ComponentPositionType " + componentPositionType.name() + " not supported");
+        };
     }
 
     /**
@@ -1146,24 +929,16 @@ public class ConstantTransform {
             return StretchTypeEnum.NO_STRETCH;
         }
 
-        switch (stretchType) {
-            case NO_STRETCH:
-                return StretchTypeEnum.NO_STRETCH;
-            case RELATIVE_TO_BAND_HEIGHT:
-                return StretchTypeEnum.CONTAINER_HEIGHT;
-            case RELATIVE_TO_TALLEST_OBJECT:
-                return StretchTypeEnum.ELEMENT_GROUP_HEIGHT;
-            case ELEMENT_GROUP_HEIGHT:
-                return StretchTypeEnum.ELEMENT_GROUP_HEIGHT;
-            case ELEMENT_GROUP_BOTTOM:
-                return StretchTypeEnum.ELEMENT_GROUP_BOTTOM;
-            case CONTAINER_HEIGHT:
-                return StretchTypeEnum.CONTAINER_HEIGHT;
-            case CONTAINER_BOTTOM:
-                return StretchTypeEnum.CONTAINER_BOTTOM;
-            default:
-                throw new JasperDesignException("StretchType " + stretchType.name() + " not supported");
-        }
+        return switch (stretchType) {
+            case NO_STRETCH -> StretchTypeEnum.NO_STRETCH;
+            case RELATIVE_TO_BAND_HEIGHT -> StretchTypeEnum.CONTAINER_HEIGHT;
+            case RELATIVE_TO_TALLEST_OBJECT -> StretchTypeEnum.ELEMENT_GROUP_HEIGHT;
+            case ELEMENT_GROUP_HEIGHT -> StretchTypeEnum.ELEMENT_GROUP_HEIGHT;
+            case ELEMENT_GROUP_BOTTOM -> StretchTypeEnum.ELEMENT_GROUP_BOTTOM;
+            case CONTAINER_HEIGHT -> StretchTypeEnum.CONTAINER_HEIGHT;
+            case CONTAINER_BOTTOM -> StretchTypeEnum.CONTAINER_BOTTOM;
+            default -> throw new JasperDesignException("StretchType " + stretchType.name() + " not supported");
+        };
     }
 
     /**
@@ -1178,22 +953,15 @@ public class ConstantTransform {
         }
 
         final HyperLinkType type = HyperLinkType.valueOf(hyperLinkType);
-        switch (type) {
-            case NONE:
-                return HyperlinkTypeEnum.NONE;
-            case REFERENCE:
-                return HyperlinkTypeEnum.REFERENCE;
-            case LOCAL_ANCHOR:
-                return HyperlinkTypeEnum.LOCAL_ANCHOR;
-            case LOCAL_PAGE:
-                return HyperlinkTypeEnum.LOCAL_PAGE;
-            case REMOTE_ANCHOR:
-                return HyperlinkTypeEnum.REMOTE_ANCHOR;
-            case REMOTE_PAGE:
-                return HyperlinkTypeEnum.REMOTE_PAGE;
-            default:
-                throw new JasperDesignException("HyperLinkType " + type.name() + " not supported");
-        }
+        return switch (type) {
+            case NONE -> HyperlinkTypeEnum.NONE;
+            case REFERENCE -> HyperlinkTypeEnum.REFERENCE;
+            case LOCAL_ANCHOR -> HyperlinkTypeEnum.LOCAL_ANCHOR;
+            case LOCAL_PAGE -> HyperlinkTypeEnum.LOCAL_PAGE;
+            case REMOTE_ANCHOR -> HyperlinkTypeEnum.REMOTE_ANCHOR;
+            case REMOTE_PAGE -> HyperlinkTypeEnum.REMOTE_PAGE;
+            default -> throw new JasperDesignException("HyperLinkType " + type.name() + " not supported");
+        };
     }
 
     /**
@@ -1208,20 +976,14 @@ public class ConstantTransform {
         }
 
         final HyperLinkTarget target = HyperLinkTarget.valueOf(hyperLinkTarget);
-        switch (target) {
-            case NONE:
-                return HyperlinkTargetEnum.NONE;
-            case SELF:
-                return HyperlinkTargetEnum.SELF;
-            case BLANK:
-                return HyperlinkTargetEnum.BLANK;
-            case PARENT:
-                return HyperlinkTargetEnum.PARENT;
-            case TOP:
-                return HyperlinkTargetEnum.TOP;
-            default:
-                throw new JasperDesignException("HyperLinkTarget " + target.name() + " not supported");
-        }
+        return switch (target) {
+            case NONE -> HyperlinkTargetEnum.NONE;
+            case SELF -> HyperlinkTargetEnum.SELF;
+            case BLANK -> HyperlinkTargetEnum.BLANK;
+            case PARENT -> HyperlinkTargetEnum.PARENT;
+            case TOP -> HyperlinkTargetEnum.TOP;
+            default -> throw new JasperDesignException("HyperLinkTarget " + target.name() + " not supported");
+        };
     }
 
     /**
@@ -1231,18 +993,14 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.FooterPositionEnum} object.
      */
     public static FooterPositionEnum groupFooterPosition(final GroupFooterPosition footerPosition) {
-        switch (footerPosition) {
-            case NORMAL:
-                return FooterPositionEnum.NORMAL;
-            case COLLATE_AT_BOTTOM:
-                return FooterPositionEnum.COLLATE_AT_BOTTOM;
-            case FORCE_AT_BOTTOM:
-                return FooterPositionEnum.FORCE_AT_BOTTOM;
-            case STACK_AT_BOTTOM:
-                return FooterPositionEnum.STACK_AT_BOTTOM;
-            default:
-                throw new JasperDesignException("GroupFooterPosition " + footerPosition.name() + " not supported");
-        }
+        return switch (footerPosition) {
+            case NORMAL -> FooterPositionEnum.NORMAL;
+            case COLLATE_AT_BOTTOM -> FooterPositionEnum.COLLATE_AT_BOTTOM;
+            case FORCE_AT_BOTTOM -> FooterPositionEnum.FORCE_AT_BOTTOM;
+            case STACK_AT_BOTTOM -> FooterPositionEnum.STACK_AT_BOTTOM;
+            default ->
+                    throw new JasperDesignException("GroupFooterPosition " + footerPosition.name() + " not supported");
+        };
     }
 
     /**
@@ -1256,14 +1014,11 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (rotation) {
-            case CLOCKWISE:
-                return SpiderRotationEnum.CLOCKWISE;
-            case ANTICLOCKWISE:
-                return SpiderRotationEnum.ANTICLOCKWISE;
-            default:
-                throw new JasperDesignException("SpiderRotation " + rotation.name() + " not supported");
-        }
+        return switch (rotation) {
+            case CLOCKWISE -> SpiderRotationEnum.CLOCKWISE;
+            case ANTICLOCKWISE -> SpiderRotationEnum.ANTICLOCKWISE;
+            default -> throw new JasperDesignException("SpiderRotation " + rotation.name() + " not supported");
+        };
     }
 
     /**
@@ -1277,14 +1032,11 @@ public class ConstantTransform {
             return null;
         }
 
-        switch (tableOrder) {
-            case BY_ROW:
-                return TableOrderEnum.BY_ROW;
-            case BY_COLUMN:
-                return TableOrderEnum.BY_COLUMN;
-            default:
-                throw new JasperDesignException("TableOrder " + tableOrder.name() + " not supported");
-        }
+        return switch (tableOrder) {
+            case BY_ROW -> TableOrderEnum.BY_ROW;
+            case BY_COLUMN -> TableOrderEnum.BY_COLUMN;
+            default -> throw new JasperDesignException("TableOrder " + tableOrder.name() + " not supported");
+        };
     }
 
     /**
@@ -1294,16 +1046,12 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.TabStopAlignEnum} object.
      */
     public static TabStopAlignEnum tabStopAlignment(final TabStopAlignment alignment) {
-        switch (alignment) {
-            case LEFT:
-                return TabStopAlignEnum.LEFT;
-            case CENTER:
-                return TabStopAlignEnum.CENTER;
-            case RIGHT:
-                return TabStopAlignEnum.RIGHT;
-            default:
-                throw new JasperDesignException("TabStopAlignment " + alignment.name() + " not supported");
-        }
+        return switch (alignment) {
+            case LEFT -> TabStopAlignEnum.LEFT;
+            case CENTER -> TabStopAlignEnum.CENTER;
+            case RIGHT -> TabStopAlignEnum.RIGHT;
+            default -> throw new JasperDesignException("TabStopAlignment " + alignment.name() + " not supported");
+        };
     }
 
     /**
@@ -1313,14 +1061,11 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.PrintOrderEnum} object.
      */
     protected static PrintOrderEnum printOrder(final Orientation printOrder) {
-        switch (printOrder) {
-            case HORIZONTAL:
-                return PrintOrderEnum.HORIZONTAL;
-            case VERTICAL:
-                return PrintOrderEnum.VERTICAL;
-            default:
-                throw new JasperDesignException("PrintOrder " + printOrder.name() + " not supported");
-        }
+        return switch (printOrder) {
+            case HORIZONTAL -> PrintOrderEnum.HORIZONTAL;
+            case VERTICAL -> PrintOrderEnum.VERTICAL;
+            default -> throw new JasperDesignException("PrintOrder " + printOrder.name() + " not supported");
+        };
     }
 
     /**
@@ -1330,16 +1075,12 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.charts.type.ScaleTypeEnum} object.
      */
     public static ScaleTypeEnum scaleType(final ScaleType scaleType) {
-        switch (scaleType) {
-            case ON_BOTH_AXES:
-                return ScaleTypeEnum.ON_BOTH_AXES;
-            case ON_DOMAIN_AXIS:
-                return ScaleTypeEnum.ON_DOMAIN_AXIS;
-            case ON_RANGE_AXIS:
-                return ScaleTypeEnum.ON_RANGE_AXIS;
-            default:
-                throw new JasperDesignException("ScaleType " + scaleType.name() + " not supported");
-        }
+        return switch (scaleType) {
+            case ON_BOTH_AXES -> ScaleTypeEnum.ON_BOTH_AXES;
+            case ON_DOMAIN_AXIS -> ScaleTypeEnum.ON_DOMAIN_AXIS;
+            case ON_RANGE_AXIS -> ScaleTypeEnum.ON_RANGE_AXIS;
+            default -> throw new JasperDesignException("ScaleType " + scaleType.name() + " not supported");
+        };
     }
 
     /**
@@ -1349,28 +1090,18 @@ public class ConstantTransform {
      * @return a {@link org.jfree.chart.ui.RectangleAnchor} object.
      */
     public static org.jfree.chart.ui.RectangleAnchor rectangleAnchor(final RectangleAnchor rectangleAnchor) {
-        switch (rectangleAnchor) {
-            case CENTER:
-                return org.jfree.chart.ui.RectangleAnchor.CENTER;
-            case TOP:
-                return org.jfree.chart.ui.RectangleAnchor.TOP;
-            case TOP_LEFT:
-                return org.jfree.chart.ui.RectangleAnchor.TOP_LEFT;
-            case TOP_RIGHT:
-                return org.jfree.chart.ui.RectangleAnchor.TOP_RIGHT;
-            case BOTTOM:
-                return org.jfree.chart.ui.RectangleAnchor.BOTTOM;
-            case BOTTOM_LEFT:
-                return org.jfree.chart.ui.RectangleAnchor.BOTTOM_LEFT;
-            case BOTTOM_RIGHT:
-                return org.jfree.chart.ui.RectangleAnchor.BOTTOM_RIGHT;
-            case LEFT:
-                return org.jfree.chart.ui.RectangleAnchor.LEFT;
-            case RIGHT:
-                return org.jfree.chart.ui.RectangleAnchor.RIGHT;
-            default:
-                throw new JasperDesignException("RectangleAnchor " + rectangleAnchor.name() + " not supported");
-        }
+        return switch (rectangleAnchor) {
+            case CENTER -> org.jfree.chart.ui.RectangleAnchor.CENTER;
+            case TOP -> org.jfree.chart.ui.RectangleAnchor.TOP;
+            case TOP_LEFT -> org.jfree.chart.ui.RectangleAnchor.TOP_LEFT;
+            case TOP_RIGHT -> org.jfree.chart.ui.RectangleAnchor.TOP_RIGHT;
+            case BOTTOM -> org.jfree.chart.ui.RectangleAnchor.BOTTOM;
+            case BOTTOM_LEFT -> org.jfree.chart.ui.RectangleAnchor.BOTTOM_LEFT;
+            case BOTTOM_RIGHT -> org.jfree.chart.ui.RectangleAnchor.BOTTOM_RIGHT;
+            case LEFT -> org.jfree.chart.ui.RectangleAnchor.LEFT;
+            case RIGHT -> org.jfree.chart.ui.RectangleAnchor.RIGHT;
+            default -> throw new JasperDesignException("RectangleAnchor " + rectangleAnchor.name() + " not supported");
+        };
     }
 
     /**
@@ -1380,15 +1111,11 @@ public class ConstantTransform {
      * @return a {@link net.sf.jasperreports.engine.type.TextAdjustEnum} object.
      */
     public static TextAdjustEnum textAdjust(final TextAdjust textAdjust) {
-        switch (textAdjust) {
-            case CUT_TEXT:
-                return TextAdjustEnum.CUT_TEXT;
-            case SCALE_FONT:
-                return TextAdjustEnum.SCALE_FONT;
-            case STRETCH_HEIGHT:
-                return TextAdjustEnum.STRETCH_HEIGHT;
-            default:
-                throw new JasperDesignException("TextAdjust " + textAdjust.name() + " not supported");
-        }
+        return switch (textAdjust) {
+            case CUT_TEXT -> TextAdjustEnum.CUT_TEXT;
+            case SCALE_FONT -> TextAdjustEnum.SCALE_FONT;
+            case STRETCH_HEIGHT -> TextAdjustEnum.STRETCH_HEIGHT;
+            default -> throw new JasperDesignException("TextAdjust " + textAdjust.name() + " not supported");
+        };
     }
 }

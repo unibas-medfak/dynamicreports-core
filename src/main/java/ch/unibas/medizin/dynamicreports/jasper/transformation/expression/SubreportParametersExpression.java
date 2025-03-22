@@ -59,8 +59,7 @@ public class SubreportParametersExpression extends AbstractDesignComplexExpressi
     /** {@inheritDoc} */
     @Override
     public Object evaluate(List<?> values, ReportParameters reportParameters) {
-        Map<String, Object> parameters = new HashMap<>();
-        parameters.putAll(subreportExpression.getReportDesign().getParameters());
+        Map<String, Object> parameters = new HashMap<>(subreportExpression.getReportDesign().getParameters());
         if (subreportExpression.getReportBuilder().getReport().getParameterValues() != null) {
             parameters.putAll(subreportExpression.getReportBuilder().getReport().getParameterValues());
         }

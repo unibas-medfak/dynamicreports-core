@@ -167,25 +167,13 @@ public class GroupExpressionCrosstabTest extends AbstractJasperCrosstabValueTest
             Date date = reportParameters.getValue("field2");
             Calendar c = Calendar.getInstance();
             c.setTime(date);
-            switch (c.get(Calendar.MONTH)) {
-                case 0:
-                case 1:
-                case 2:
-                    return "Q1";
-                case 3:
-                case 4:
-                case 5:
-                    return "Q2";
-                case 6:
-                case 7:
-                case 8:
-                    return "Q3";
-                case 9:
-                case 10:
-                case 11:
-                    return "Q4";
-            }
-            return null;
+            return switch (c.get(Calendar.MONTH)) {
+                case 0, 1, 2 -> "Q1";
+                case 3, 4, 5 -> "Q2";
+                case 6, 7, 8 -> "Q3";
+                case 9, 10, 11 -> "Q4";
+                default -> null;
+            };
         }
     }
 }

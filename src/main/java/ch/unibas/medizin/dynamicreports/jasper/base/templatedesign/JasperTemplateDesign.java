@@ -129,9 +129,7 @@ public class JasperTemplateDesign implements DRITemplateDesign<JasperDesign> {
         Validate.notNull(url, "url must not be null");
         try {
             init(JRXmlLoader.load(url.openStream()));
-        } catch (final JRException e) {
-            throw new DRException(e);
-        } catch (final IOException e) {
+        } catch (final JRException | IOException e) {
             throw new DRException(e);
         }
     }

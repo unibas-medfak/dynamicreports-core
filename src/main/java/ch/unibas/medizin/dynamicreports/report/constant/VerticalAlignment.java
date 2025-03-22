@@ -25,8 +25,9 @@ package ch.unibas.medizin.dynamicreports.report.constant;
  *
  * @author Ricardo Mariaca
  * 
- * @deprecated use VerticalTextAligment for texts or VerticalImageAligment for images instead
+ * @deprecated use {@link VerticalTextAlignment} for texts or VerticalImageAlignment for images instead
  */
+@Deprecated
 public enum VerticalAlignment {
     TOP, MIDDLE, BOTTOM, JUSTIFIED
 }

@@ -25,7 +25,6 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.rep
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 

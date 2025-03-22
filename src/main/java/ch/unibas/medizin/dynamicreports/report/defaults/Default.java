@@ -60,7 +60,6 @@ import ch.unibas.medizin.dynamicreports.report.constant.WhenNoDataType;
 import ch.unibas.medizin.dynamicreports.report.constant.WhenResourceMissingType;
 import ch.unibas.medizin.dynamicreports.report.definition.DRITableOfContentsCustomizer;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIComponent;
-import ch.unibas.medizin.dynamicreports.report.definition.component.DRITextField;
 import ch.unibas.medizin.dynamicreports.report.definition.style.DRIStyle;
 
 /**

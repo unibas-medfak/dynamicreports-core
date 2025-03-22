@@ -183,7 +183,6 @@ public class ColumnGridTransform {
         return list;
     }
 
-    @SuppressWarnings("unchecked")
     private GridList columnGridTitleGroup(final DRIColumnTitleGroup columnGridTitleGroup, final ColumnGrid columnGrid, final boolean titleGroup) throws DRException {
         final DRDesignList columnList = list(columnGridTitleGroup.getList(), columnGrid, titleGroup).getList();
 

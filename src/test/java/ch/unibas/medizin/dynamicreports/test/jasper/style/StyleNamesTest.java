@@ -25,7 +25,6 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.rep
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl;
 
 import java.io.ByteArrayInputStream;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import org.junit.jupiter.api.Assertions;

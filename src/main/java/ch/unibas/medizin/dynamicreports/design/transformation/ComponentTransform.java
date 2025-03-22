@@ -97,7 +97,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.component.DRIImage;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRILine;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIList;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIListCell;
-import ch.unibas.medizin.dynamicreports.report.definition.component.DRIMap;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIMultiPageList;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIPageNumber;
 import ch.unibas.medizin.dynamicreports.report.definition.component.DRIPageXofY;
@@ -841,20 +840,14 @@ public class ComponentTransform {
             return null;
         }
 
-        switch (resetType) {
-            case NONE:
-                return EvaluationTime.NOW;
-            case REPORT:
-                return EvaluationTime.REPORT;
-            case PAGE:
-                return EvaluationTime.PAGE;
-            case COLUMN:
-                return EvaluationTime.COLUMN;
-            case GROUP:
-                return EvaluationTime.GROUP;
-            default:
-                throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
-        }
+        return switch (resetType) {
+            case NONE -> EvaluationTime.NOW;
+            case REPORT -> EvaluationTime.REPORT;
+            case PAGE -> EvaluationTime.PAGE;
+            case COLUMN -> EvaluationTime.COLUMN;
+            case GROUP -> EvaluationTime.GROUP;
+            default -> throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
+        };
     }
 
     private EvaluationTime detectComplexExpressionEvaluationTime(final DRIDesignComplexExpression complexExpression) {

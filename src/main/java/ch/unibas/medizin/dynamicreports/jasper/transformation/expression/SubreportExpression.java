@@ -91,11 +91,7 @@ public class SubreportExpression extends AbstractDesignComplexExpression {
             reportDesigns.put(reportBuilder, reportDesign);
             jasperReports.put(reportBuilder, jasperReport);
             return jasperReport;
-        } catch (JRException e) {
-            if (log.isErrorEnabled()) {
-                log.error("Error encountered while creating subreport design", e);
-            }
-        } catch (DRException e) {
+        } catch (JRException | DRException e) {
             if (log.isErrorEnabled()) {
                 log.error("Error encountered while creating subreport design", e);
             }

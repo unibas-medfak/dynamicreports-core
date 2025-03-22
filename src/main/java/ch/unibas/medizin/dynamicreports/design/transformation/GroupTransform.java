@@ -207,7 +207,7 @@ public class GroupTransform {
 
     // title
     private DRDesignComponent titleComponent(DRIGroup group) throws DRException {
-        @SuppressWarnings("rawtypes") DRTextField titleField = new DRTextField();
+        DRTextField titleField = new DRTextField();
         titleField.setValueExpression(group.getTitleExpression());
         titleField.setStyle(group.getTitleStyle());
         titleField.setWidth(group.getTitleWidth());

@@ -124,7 +124,6 @@ public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBu
      * @param dataType a {@link ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabMeasureBuilder} object.
      */
-    @SuppressWarnings( {"unchecked", "rawtypes"})
     public CrosstabMeasureBuilder<T> setDataType(final DRIDataType dataType) {
         getObject().setDataType(dataType);
         return this;

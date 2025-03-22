@@ -41,7 +41,6 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.typ
 public class ExpressionTest extends AbstractJasperValueTest implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @SuppressWarnings("unchecked")
     @Override
     protected void configureReport(JasperReportBuilder rb) {
         rb.setLocale(Locale.ENGLISH).title(

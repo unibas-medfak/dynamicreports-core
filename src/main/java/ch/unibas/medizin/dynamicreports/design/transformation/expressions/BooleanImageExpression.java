@@ -59,39 +59,38 @@ public class BooleanImageExpression extends AbstractComplexExpression<Renderable
         this.emptyWhenNullValue = emptyWhenNullValue;
         addExpression(booleanField.getValueExpression());
         String fileNameTrue;
-        String fileNameFalse;
-        switch (booleanField.getComponentType()) {
-            case IMAGE_STYLE_1:
+        String fileNameFalse = switch (booleanField.getComponentType()) {
+            case IMAGE_STYLE_1 -> {
                 fileNameTrue = "boolean1_true";
-                fileNameFalse = "boolean1_false";
-                break;
-            case IMAGE_STYLE_2:
+                yield "boolean1_false";
+            }
+            case IMAGE_STYLE_2 -> {
                 fileNameTrue = "boolean2_true";
-                fileNameFalse = "boolean2_false";
-                break;
-            case IMAGE_STYLE_3:
+                yield "boolean2_false";
+            }
+            case IMAGE_STYLE_3 -> {
                 fileNameTrue = "boolean3_true";
-                fileNameFalse = "boolean3_false";
-                break;
-            case IMAGE_STYLE_4:
+                yield "boolean3_false";
+            }
+            case IMAGE_STYLE_4 -> {
                 fileNameTrue = "boolean1_true";
-                fileNameFalse = "boolean4_false";
-                break;
-            case IMAGE_CHECKBOX_1:
+                yield "boolean4_false";
+            }
+            case IMAGE_CHECKBOX_1 -> {
                 fileNameTrue = "checkbox1_true";
-                fileNameFalse = "checkbox_false";
-                break;
-            case IMAGE_CHECKBOX_2:
+                yield "checkbox_false";
+            }
+            case IMAGE_CHECKBOX_2 -> {
                 fileNameTrue = "checkbox2_true";
-                fileNameFalse = "checkbox_false";
-                break;
-            case IMAGE_BALL:
+                yield "checkbox_false";
+            }
+            case IMAGE_BALL -> {
                 fileNameTrue = "ball_green";
-                fileNameFalse = "ball_red";
-                break;
-            default:
-                throw new DRDesignReportException("BooleanComponentType " + booleanField.getComponentType().name() + " not supported");
-        }
+                yield "ball_red";
+            }
+            default ->
+                    throw new DRDesignReportException("BooleanComponentType " + booleanField.getComponentType().name() + " not supported");
+        };
         try {
             imageTrue = new CustomBatikRenderer(ReportUtils.class.getResource("images/" + fileNameTrue + ".svg"), width, height);
             imageFalse = new CustomBatikRenderer(ReportUtils.class.getResource("images/" + fileNameFalse + ".svg"), width, height);

@@ -28,7 +28,6 @@ import java.io.Serializable;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
 import org.jfree.chart.plot.PiePlot;
-import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.chart.plot.Plot;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

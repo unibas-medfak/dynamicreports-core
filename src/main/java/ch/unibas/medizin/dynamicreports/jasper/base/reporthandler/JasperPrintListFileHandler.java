@@ -80,9 +80,7 @@ public class JasperPrintListFileHandler extends AbstractPrintListHandler {
             File tempFile = File.createTempFile(TEMP_FILE_PREFIX, null, directory);
             JRSaver.saveObject(jasperPrint, tempFile);
             tempFiles.add(tempFile);
-        } catch (JRException e) {
-            throw new DRReportException(e);
-        } catch (IOException e) {
+        } catch (JRException | IOException e) {
             throw new DRReportException(e);
         }
     }

@@ -431,7 +431,7 @@ public class ComponentTransform {
         if (componentTransfom == null) {
             throw new DRDesignReportException("Component " + component.getClass().getName() + " not supported");
         }
-        @SuppressWarnings("unchecked") final JRDesignComponentElement jrComponent = (JRDesignComponentElement) componentTransfom.jasperComponent(accessor, component);
+        final JRDesignComponentElement jrComponent = (JRDesignComponentElement) componentTransfom.jasperComponent(accessor, component);
         return jrComponent;
     }
 

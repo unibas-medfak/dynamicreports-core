@@ -160,7 +160,6 @@ public class DynamicReports {
      * @param <T>      a T object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.FieldBuilder} object.
      */
-    @SuppressWarnings({ "rawtypes", "unchecked" })
     public static <T> FieldBuilder<T> field(final String name, final DRIDataType dataType) {
         Validate.notNull(dataType, "dataType must not be null");
         final FieldBuilder<T> fieldBuilder = new FieldBuilder<T>(name, dataType.getValueClass());

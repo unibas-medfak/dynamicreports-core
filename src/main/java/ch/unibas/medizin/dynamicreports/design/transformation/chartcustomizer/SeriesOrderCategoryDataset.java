@@ -59,9 +59,9 @@ public class SeriesOrderCategoryDataset implements CategoryDataset, Serializable
             this.rowKeys.add(serieName);
         }
         if (seriesOrderBy != null) {
-            Collections.sort(this.rowKeys, seriesOrderBy);
+            this.rowKeys.sort(seriesOrderBy);
         } else {
-            Collections.sort(this.rowKeys, new SeriesComparator());
+            this.rowKeys.sort(new SeriesComparator());
         }
         if (seriesOrderType != null && seriesOrderType.equals(OrderType.DESCENDING)) {
             Collections.reverse(this.rowKeys);

@@ -26,7 +26,6 @@ import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.defaults.xml.XmlDataType;
 import ch.unibas.medizin.dynamicreports.report.defaults.xml.XmlDynamicReports;
 import ch.unibas.medizin.dynamicreports.report.defaults.xml.XmlFont;
-import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
 
 /**
  * <p>DefaultBinder class.</p>

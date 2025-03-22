@@ -30,7 +30,6 @@ import net.sf.jasperreports.extensions.ExtensionsRegistry;
 import net.sf.jasperreports.extensions.ExtensionsRegistryFactory;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -55,8 +54,7 @@ public class JasperSystemFontExtensionsRegistryFactory implements ExtensionsRegi
         List<PropertySuffix> fontFamiliesProperties = JRPropertiesUtil.getProperties(properties, SYSTEM_FONT_FAMILIES_PROPERTY_PREFIX);
         List<String> fontFamiliesLocations = new ArrayList<>();
         if (Defaults.getDefaults().isLoadSystemFonts()) {
-            for (Iterator<PropertySuffix> it = fontFamiliesProperties.iterator(); it.hasNext(); ) {
-                PropertySuffix fontFamiliesProp = it.next();
+            for (PropertySuffix fontFamiliesProp : fontFamiliesProperties) {
                 String fontFamiliesLocation = fontFamiliesProp.getValue();
                 fontFamiliesLocations.add(fontFamiliesLocation);
             }
