@@ -34,12 +34,12 @@ import java.math.BigDecimal;
 public class SubtractExpression extends CalculationExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    @SafeVarargs
     /**
      * <p>Constructor for SubtractExpression.</p>
      *
      * @param expressions a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
+    @SafeVarargs
     public SubtractExpression(DRIExpression<? extends Number>... expressions) {
         super(expressions);
     }

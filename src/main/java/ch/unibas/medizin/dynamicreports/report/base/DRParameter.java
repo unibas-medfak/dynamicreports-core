@@ -37,7 +37,6 @@ public class DRParameter<T> implements DRIParameter<T> {
     private final Class<T> valueClass;
     private T value;
 
-    @SuppressWarnings("unchecked")
     /**
      * <p>Constructor for DRParameter.</p>
      *

@@ -124,42 +124,6 @@ public class FontBuilder extends AbstractBuilder<FontBuilder, DRFont> {
         return setItalic(true);
     }
 
-    @Deprecated
-    /**
-     * You should configure the fonts.xml file
-     *
-     * @param pdfEmbedded a {@link java.lang.Boolean} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.style.FontBuilder} object.
-     */
-    public FontBuilder setPdfEmbedded(Boolean pdfEmbedded) {
-        getObject().setPdfEmbedded(pdfEmbedded);
-        return this;
-    }
-
-    @Deprecated
-    /**
-     * You should configure the fonts.xml file
-     *
-     * @param pdfEncoding a {@link java.lang.String} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.style.FontBuilder} object.
-     */
-    public FontBuilder setPdfEncoding(String pdfEncoding) {
-        getObject().setPdfEncoding(pdfEncoding);
-        return this;
-    }
-
-    @Deprecated
-    /**
-     * You should configure the fonts.xml file
-     *
-     * @param pdfFontName a {@link java.lang.String} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.style.FontBuilder} object.
-     */
-    public FontBuilder setPdfFontName(String pdfFontName) {
-        getObject().setPdfFontName(pdfFontName);
-        return this;
-    }
-
     /**
      * <p>strikeThrough.</p>
      *

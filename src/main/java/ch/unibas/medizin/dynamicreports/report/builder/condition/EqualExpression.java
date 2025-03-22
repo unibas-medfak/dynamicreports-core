@@ -38,7 +38,6 @@ public class EqualExpression extends AbstractSimpleExpression<Boolean> {
     private final DRIValue<?> value;
     private final Object[] values;
 
-    @SafeVarargs
     /**
      * Constructor for EqualExpression.
      *
@@ -46,6 +45,7 @@ public class EqualExpression extends AbstractSimpleExpression<Boolean> {
      * @param values a T object.
      * @param <T> a T object.
      */
+    @SafeVarargs
     public <T> EqualExpression(DRIValue<T> value, T... values) {
         Validate.notNull(value, "value must not be null");
         Validate.noNullElements(values, "values must not contains null value");

@@ -34,12 +34,12 @@ import java.math.BigDecimal;
 public class MultiplyExpression extends CalculationExpression {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    @SafeVarargs
     /**
      * <p>Constructor for MultiplyExpression.</p>
      *
      * @param expressions a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
+    @SafeVarargs
     public MultiplyExpression(DRIExpression<? extends Number>... expressions) {
         super(expressions);
     }

@@ -71,12 +71,6 @@ public class JasperProperty {
     public static final String EXPORT_CHARACTER_ENCODING = WriterExporterOutput.PROPERTY_CHARACTER_ENCODING;
     /**
      * @see CommonExportConfiguration#PROPERTY_EXPORT_CONFIGURATION_OVERRIDE_REPORT_HINTS
-     * @deprecated Replaced by {@link EXPORT_CONFIGURATION_OVERRIDE_REPORT_HINTS}.
-     */
-    @Deprecated
-    public static final String EXPORT_PARAMETERS_OVERRIDE_REPORT_HINTS = CommonExportConfiguration.PROPERTY_EXPORT_CONFIGURATION_OVERRIDE_REPORT_HINTS;
-    /**
-     * @see CommonExportConfiguration#PROPERTY_EXPORT_CONFIGURATION_OVERRIDE_REPORT_HINTS
      */
     public static final String EXPORT_CONFIGURATION_OVERRIDE_REPORT_HINTS = CommonExportConfiguration.PROPERTY_EXPORT_CONFIGURATION_OVERRIDE_REPORT_HINTS;
     /**
@@ -129,24 +123,6 @@ public class JasperProperty {
      * @see TextReportConfiguration#PROPERTY_PAGE_HEIGHT
      */
     public static final String EXPORT_TEXT_PAGE_HEIGHT = TextReportConfiguration.PROPERTY_PAGE_HEIGHT;
-
-    // pdf
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_TABLE
-     */
-    //public static final String EXPORT_PDF_TAG_TABLE = JRPdfExporterTagHelper.PROPERTY_TAG_TABLE;
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_TR
-     */
-    //public static final String EXPORT_PDF_TAG_TR = JRPdfExporterTagHelper.PROPERTY_TAG_TR;
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_TH
-     */
-    //public static final String EXPORT_PDF_TAG_TH = JRPdfExporterTagHelper.PROPERTY_TAG_TH;
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_TD
-     */
-    //public static final String EXPORT_PDF_TAG_TD = JRPdfExporterTagHelper.PROPERTY_TAG_TD;
     /**
      * @see JRPdfExporterTagHelper#PROPERTY_TAG_H1
      */
@@ -159,14 +135,6 @@ public class JasperProperty {
      * @see JRPdfExporterTagHelper#PROPERTY_TAG_H3
      */
     public static final String EXPORT_PDF_TAG_H3 = JRPdfExporterTagHelper.PROPERTY_TAG_H3;
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_COLSPAN
-     */
-    //  public static final String EXPORT_PDF_TAG_COLSPAN = JRPdfExporterTagHelper.PROPERTY_TAG_COLSPAN;
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_ROWSPAN
-     */
-   // public static final String EXPORT_PDF_TAG_ROWSPAN = JRPdfExporterTagHelper.PROPERTY_TAG_ROWSPAN;
     /**
      * @see PdfExporterConfiguration#PROPERTY_CREATE_BATCH_MODE_BOOKMARKS
      */
@@ -425,12 +393,6 @@ public class JasperProperty {
      * @see JRXlsAbstractMetadataExporter#PROPERTY_DATA
      */
     public static final String EXPORT_XLSMETADATA_DATA = JRXlsAbstractMetadataExporter.PROPERTY_DATA;
-
-    // xml
-    /**
-     * @see PrintSaxParserFactory#EXPORT_XML_VALIDATION
-     */
-    //public static final String EXPORT_XML_VALIDATION = PrintSaxParserFactory.EXPORT_XML_VALIDATION;
 
     // csv
     /**

@@ -38,7 +38,6 @@ public class DRDesignValueFormatter extends AbstractDesignComplexExpression {
 
     private final DRIValueFormatter<?, Object> valueFormatter;
 
-    @SuppressWarnings("unchecked")
     /**
      * Constructor for DRDesignValueFormatter.
      *

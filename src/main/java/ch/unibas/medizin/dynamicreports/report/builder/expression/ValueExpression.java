@@ -37,7 +37,6 @@ public class ValueExpression<T> extends AbstractSimpleExpression<T> {
     private final T value;
     private final Class<? super T> valueClass;
 
-    @SuppressWarnings("unchecked")
     /**
      * <p>Constructor for ValueExpression.</p>
      *

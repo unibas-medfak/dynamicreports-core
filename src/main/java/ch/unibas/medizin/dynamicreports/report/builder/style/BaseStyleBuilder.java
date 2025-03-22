@@ -253,30 +253,6 @@ public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U exten
         return (T) this;
     }
 
-    @Deprecated
-    /**
-     * You should configure the fonts.xml file
-     *
-     * @param pdfEncoding a {@link java.lang.String} object.
-     * @return a T object.
-     */
-    public T setPdfEncoding(String pdfEncoding) {
-        getObject().getFont().setPdfEncoding(pdfEncoding);
-        return (T) this;
-    }
-
-    @Deprecated
-    /**
-     * You should configure the fonts.xml file
-     *
-     * @param pdfFontName a {@link java.lang.String} object.
-     * @return a T object.
-     */
-    public T setPdfFontName(String pdfFontName) {
-        getObject().getFont().setPdfFontName(pdfFontName);
-        return (T) this;
-    }
-
     /**
      * <p>strikeThrough.</p>
      *

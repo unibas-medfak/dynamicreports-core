@@ -38,7 +38,6 @@ public class UnEqualExpression extends AbstractSimpleExpression<Boolean> {
     private final DRIValue<?> value;
     private final Object[] values;
 
-    @SafeVarargs
     /**
      * <p>Constructor for UnEqualExpression.</p>
      *
@@ -46,6 +45,7 @@ public class UnEqualExpression extends AbstractSimpleExpression<Boolean> {
      * @param values a T object.
      * @param <T> a T object.
      */
+    @SafeVarargs
     public <T> UnEqualExpression(DRIValue<T> value, T... values) {
         Validate.notNull(value, "value must not be null");
         Validate.noNullElements(values, "values must not contains null value");

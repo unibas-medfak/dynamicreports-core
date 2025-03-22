@@ -34,12 +34,13 @@ import java.util.List;
 abstract class CalculationExpression extends AbstractComplexExpression<BigDecimal> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    @SafeVarargs
+
     /**
      * <p>Constructor for CalculationExpression.</p>
      *
      * @param expressions a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
+    @SafeVarargs
     protected CalculationExpression(DRIExpression<? extends Number>... expressions) {
         Validate.notNull(expressions, "expressions must not be null");
         Validate.noNullElements(expressions, "expressions must not contains null expression");

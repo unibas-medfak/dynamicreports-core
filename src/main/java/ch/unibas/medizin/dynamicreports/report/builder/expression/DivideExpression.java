@@ -36,13 +36,13 @@ public class DivideExpression extends CalculationExpression {
 
     private final int scale;
 
-    @SafeVarargs
     /**
      * <p>Constructor for DivideExpression.</p>
      *
      * @param scale a int.
      * @param expressions a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
+    @SafeVarargs
     public DivideExpression(int scale, DRIExpression<? extends Number>... expressions) {
         super(expressions);
         this.scale = scale;
