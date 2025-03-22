@@ -70,7 +70,6 @@ public abstract class NumberType<T extends Number> extends AbstractDataType<Numb
     protected abstract T numberToValue(Number number);
 
     /** {@inheritDoc} */
-    @SuppressWarnings("unchecked")
     @Override
     public Class<T> getValueClass() {
         return (Class<T>) ReportUtils.getGenericClass(this, 0);

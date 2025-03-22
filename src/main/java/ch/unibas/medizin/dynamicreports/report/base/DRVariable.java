@@ -135,7 +135,6 @@ public class DRVariable<T> implements DRIVariable<T> {
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public Class<? super T> getValueClass() {
         return (Class<? super T>) ReportUtils.getVariableValueClass(getCalculation(), valueExpression.getValueClass());
     }

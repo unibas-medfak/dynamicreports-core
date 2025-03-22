@@ -38,7 +38,6 @@ import java.net.URL;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("deprecation")
 public class ImageBuilder extends HyperLinkComponentBuilder<ImageBuilder, DRImage> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

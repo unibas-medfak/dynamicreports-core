@@ -51,7 +51,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFor
  * @author Ricardo Mariaca, Jan Moxter
  * 
  */
-@SuppressWarnings( {"unchecked", "deprecation"})
 public abstract class AbstractCrosstabGroupBuilder<T extends AbstractCrosstabGroupBuilder<T, U, V>, U extends DRCrosstabGroup<V>, V> extends AbstractBuilder<T, U> implements DRIValue<V> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

@@ -41,9 +41,7 @@ import net.sf.jasperreports.engine.JRDataSource;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ListDataTypeTest extends AbstractJasperValueTest {
     private TextColumnBuilder<String> column1;
-    @SuppressWarnings("rawtypes")
     private TextColumnBuilder<List> column2;
-    @SuppressWarnings("rawtypes")
     private TextColumnBuilder<List> column3;
 
     @Override

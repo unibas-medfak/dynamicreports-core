@@ -27,5 +27,5 @@ package ch.unibas.medizin.dynamicreports.report.constant;
  * 
  */
 public enum ComponentPositionType {
-    FLOAT, FIX_RELATIVE_TO_TOP, FIX_RELATIVE_TO_BOTTOM;
+    FLOAT, FIX_RELATIVE_TO_TOP, FIX_RELATIVE_TO_BOTTOM
 }

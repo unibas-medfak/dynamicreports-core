@@ -63,7 +63,6 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
         elementValueTest("title.textField3", "1,000");
     }
 
-    @SuppressWarnings("rawtypes")
     private static class Expression1 extends AbstractSimpleExpression {
         private static final long serialVersionUID = 1L;
 

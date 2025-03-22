@@ -45,5 +45,5 @@ public enum WhenResourceMissingType {
     /**
      * Throw an exception when a resource is missing.
      */
-    ERROR;
+    ERROR
 }

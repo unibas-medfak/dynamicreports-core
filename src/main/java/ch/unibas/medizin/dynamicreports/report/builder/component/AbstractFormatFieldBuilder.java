@@ -33,7 +33,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings( {"unchecked", "deprecation"})
 public abstract class AbstractFormatFieldBuilder<T extends AbstractFormatFieldBuilder<T, U>, U extends DRFormatField> extends HyperLinkComponentBuilder<T, U> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

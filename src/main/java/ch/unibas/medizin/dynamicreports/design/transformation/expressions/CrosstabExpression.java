@@ -69,7 +69,6 @@ public class CrosstabExpression<T> extends AbstractComplexExpression<T> {
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings("unchecked")
     @Override
     public T evaluate(List<?> values, ReportParameters reportParameters) {
         DRICustomValues customValues = reportParameters.getParameterValue(DRICustomValues.NAME);
@@ -85,7 +84,6 @@ public class CrosstabExpression<T> extends AbstractComplexExpression<T> {
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings( {"rawtypes", "unchecked"})
     @Override
     public Class getValueClass() {
         return expression.getValueClass();

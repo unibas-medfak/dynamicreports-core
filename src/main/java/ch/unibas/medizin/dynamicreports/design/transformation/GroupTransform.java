@@ -206,7 +206,6 @@ public class GroupTransform {
     }
 
     // title
-    @SuppressWarnings("unchecked")
     private DRDesignComponent titleComponent(DRIGroup group) throws DRException {
         @SuppressWarnings("rawtypes") DRTextField titleField = new DRTextField();
         titleField.setValueExpression(group.getTitleExpression());
@@ -225,7 +224,6 @@ public class GroupTransform {
     }
 
     // group
-    @SuppressWarnings( {"unchecked", "rawtypes"})
     private DRDesignGroup group(DRIGroup group) throws DRException {
         TemplateTransform templateTransform = accessor.getTemplateTransform();
         DRDesignGroup designGroup = new DRDesignGroup(group.getName());

@@ -181,7 +181,6 @@ public class CrosstabTransform {
         return designCellContents;
     }
 
-    @SuppressWarnings( {"rawtypes", "unchecked"})
     private void group(final DRDesignCrosstabGroup designGroup, final DRICrosstab crosstab, final DRICrosstabGroup group, final boolean showTotal, final ResetType resetType, final DRDesignGroup resetGroup,
                        final DRDesignComponent designTitleComponent, final DRDesignComponent designTotalTitleComponent) throws DRException {
         designGroup.setName(group.getName());
@@ -317,7 +316,6 @@ public class CrosstabTransform {
         designCrosstab.getColumnGroups().add(designColumnGroup);
     }
 
-    @SuppressWarnings( {"rawtypes", "unchecked"})
     private DRDesignComponent getMeasureTitleComponent(final String name, final DRICrosstab crosstab, final DRIReportStyle defaultStyle) throws DRException {
         final DRDesignList titleComponent = new DRDesignList();
         for (final DRICrosstabMeasure<?> measure : crosstab.getMeasures()) {
@@ -459,7 +457,6 @@ public class CrosstabTransform {
         return style;
     }
 
-    @SuppressWarnings( {"rawtypes", "unchecked"})
     private DRDesignCrosstabCell cell(final DRICrosstab crosstab, final DRIReportStyle cellStyle, final MeasuresStyles measuresStyle, final DRICrosstabRowGroup<?> rowGroup, final DRICrosstabColumnGroup<?> columnGroup,
                                       final ResetType resetType, final DRDesignGroup resetGroup) throws DRException {
         final DRDesignCrosstabCell designCell = new DRDesignCrosstabCell();

@@ -38,7 +38,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIProperty
  * @author Ricardo Mariaca, Jan Moxter
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class ColumnBuilder<T extends ColumnBuilder<T, U>, U extends DRColumn<?>> extends AbstractBuilder<T, U> implements ColumnGridComponentBuilder {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

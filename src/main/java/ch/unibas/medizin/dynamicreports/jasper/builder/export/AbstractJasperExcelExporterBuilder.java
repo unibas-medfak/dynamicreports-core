@@ -34,7 +34,6 @@ import java.util.Map;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class AbstractJasperExcelExporterBuilder<T extends AbstractJasperExcelExporterBuilder<T, U>, U extends AbstractJasperExcelExporter> extends AbstractJasperExporterBuilder<T, U> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

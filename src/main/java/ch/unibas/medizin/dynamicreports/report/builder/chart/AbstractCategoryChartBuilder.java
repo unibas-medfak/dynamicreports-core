@@ -42,7 +42,6 @@ import java.util.List;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class AbstractCategoryChartBuilder<T extends AbstractCategoryChartBuilder<T, U>, U extends DRAxisPlot> extends AbstractBaseChartBuilder<T, U, DRCategoryDataset> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

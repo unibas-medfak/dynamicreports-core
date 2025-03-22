@@ -27,5 +27,5 @@ package ch.unibas.medizin.dynamicreports.report.constant;
  * 
  */
 public enum SpiderRotation {
-    CLOCKWISE, ANTICLOCKWISE;
+    CLOCKWISE, ANTICLOCKWISE
 }

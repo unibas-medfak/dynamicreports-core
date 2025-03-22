@@ -159,9 +159,8 @@ public class ColumnTransform {
     }
 
     // title
-    @SuppressWarnings("unchecked")
     private DRDesignComponent titleComponent(final DRIColumn<?> column) throws DRException {
-        @SuppressWarnings("rawtypes") final DRTextField titleField = new DRTextField();
+        final DRTextField titleField = new DRTextField();
         titleField.setValueExpression(column.getTitleExpression());
         titleField.setStyle(column.getTitleStyle());
         titleField.setWidth(accessor.getTemplateTransform().getColumnWidth(column, accessor.getStyleTransform().getDefaultStyle(DefaultStyleType.COLUMN)));

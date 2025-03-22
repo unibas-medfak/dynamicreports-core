@@ -910,7 +910,6 @@ public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
         Validate.notNull(exporterBuilder, "exporterBuilder must not be null");
         try {
             final ExporterTransform exporterTransform = new ExporterTransform(exporterBuilder.build());
-            @SuppressWarnings("unchecked")
             final Exporter<ExporterInput, ?, ?, ?> exporter = (Exporter<ExporterInput, ?, ?, ?>) exporterTransform.transform();
             exporter.setExporterInput(new SimpleExporterInput(toJasperPrint()));
             exporter.exportReport();

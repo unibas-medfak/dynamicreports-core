@@ -251,7 +251,7 @@ public abstract class AbstractExpressionTransform {
         if (expression instanceof DRIDesignField || expression instanceof DRIDesignVariable) {
             sortExpression = expression;
         } else {
-            @SuppressWarnings( {"rawtypes", "unchecked"}) DRVariable variable = new DRVariable(sort.getExpression(), Calculation.NOTHING);
+            DRVariable variable = new DRVariable(sort.getExpression(), Calculation.NOTHING);
             variable.setResetType(Evaluation.NONE);
             sortExpression = transformExpression(variable);
         }

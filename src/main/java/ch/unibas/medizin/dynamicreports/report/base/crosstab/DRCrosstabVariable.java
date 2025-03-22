@@ -91,7 +91,6 @@ public class DRCrosstabVariable<T> implements DRICrosstabVariable<T> {
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public Class<? super T> getValueClass() {
         if (percentageType != null && percentageType.equals(CrosstabPercentageType.GRAND_TOTAL) && !calculation.equals(Calculation.COUNT) && !calculation.equals(Calculation.DISTINCT_COUNT)) {
             return (Class<? super T>) Double.class;

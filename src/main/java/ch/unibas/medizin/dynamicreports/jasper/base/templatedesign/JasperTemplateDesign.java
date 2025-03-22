@@ -142,8 +142,7 @@ public class JasperTemplateDesign implements DRITemplateDesign<JasperDesign> {
 
         this.fields = new ArrayList<>();
         for (final JRField jrField : jasperDesign.getFields()) {
-            @SuppressWarnings( {"unchecked", "rawtypes"})
-            final DRField<?> field = new DRField(jrField.getName(), jrField.getValueClass());
+            final DRField<?> field = new DRField<>(jrField.getName(), jrField.getValueClass());
             fields.add(field);
         }
 

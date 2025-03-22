@@ -35,7 +35,6 @@ import org.apache.commons.lang3.Validate;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public class AbstractCategoryChartSerieBuilder<T extends AbstractCategoryChartSerieBuilder<T, U>, U extends DRCategoryChartSerie> extends AbstractChartSerieBuilder<T, U> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

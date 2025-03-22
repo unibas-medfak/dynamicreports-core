@@ -58,7 +58,6 @@ public abstract class AbstractSubDatasourceExpression<T> extends AbstractComplex
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings("unchecked")
     @Override
     public JRDataSource evaluate(List<?> values, ReportParameters reportParameters) {
         return createSubDatasource((T) values.get(0));
@@ -75,7 +74,6 @@ public abstract class AbstractSubDatasourceExpression<T> extends AbstractComplex
      *
      * @return a {@link java.lang.Class} object.
      */
-    @SuppressWarnings("unchecked")
     protected Class<T> getSubDatasourceDataClass() {
         return (Class<T>) ReportUtils.getGenericClass(this, 0);
     }

@@ -53,7 +53,6 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
  * @author Ricardo Mariaca, Jan Moxter
  * 
  */
-@SuppressWarnings("deprecation")
 public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBuilder<T>, DRCrosstabMeasure<T>> implements DRICrosstabValue<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

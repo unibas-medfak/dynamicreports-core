@@ -189,7 +189,6 @@ public class ConditionsTest {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public <T> T getValue(DRIValue<T> value) {
       return (T) this.value;
     }

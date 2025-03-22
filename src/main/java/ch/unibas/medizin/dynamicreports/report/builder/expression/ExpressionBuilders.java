@@ -292,7 +292,6 @@ public class ExpressionBuilders {
      * @param expression the jasper expression
      * @return the expression
      */
-    @SuppressWarnings("rawtypes")
     public JasperExpression jasperSyntax(String expression) {
         return Expressions.jasperSyntax(expression);
     }

@@ -56,7 +56,6 @@ public class PercentageCategoryDataset implements CategoryDataset, Serializable 
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("rawtypes")
     public int getRowIndex(Comparable key) {
         return dataset.getRowIndex(key);
     }
@@ -75,7 +74,6 @@ public class PercentageCategoryDataset implements CategoryDataset, Serializable 
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("rawtypes")
     public int getColumnIndex(Comparable key) {
         return dataset.getColumnIndex(key);
     }
@@ -88,7 +86,6 @@ public class PercentageCategoryDataset implements CategoryDataset, Serializable 
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("rawtypes")
     public Number getValue(Comparable rowKey, Comparable columnKey) {
         return getValue(getRowIndex(rowKey), getColumnIndex(columnKey));
     }

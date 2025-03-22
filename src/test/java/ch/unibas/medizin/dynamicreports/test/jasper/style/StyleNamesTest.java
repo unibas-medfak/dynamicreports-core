@@ -26,6 +26,7 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.stl
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -63,7 +64,7 @@ public class StyleNamesTest {
 
     @Test
     public void testStyleFromTemplateName() throws DRException {
-        final ByteArrayInputStream is = new ByteArrayInputStream(jrtxStr.getBytes(Charset.forName("UTF-8")));
+        final ByteArrayInputStream is = new ByteArrayInputStream(jrtxStr.getBytes(StandardCharsets.UTF_8));
         // name defined in style template:
         final TemplateStyleBuilder templateStyle = stl.templateStyle("MyBoldStyle2");
         final JasperReportBuilder builder = report().addTemplateStyle(stl.loadStyles(is)).title(cmp.text("Some title").setStyle(templateStyle));

@@ -37,7 +37,6 @@ import org.apache.commons.lang3.Validate;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class ComponentBuilder<T extends ComponentBuilder<T, U>, U extends DRComponent> extends AbstractBuilder<T, U> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

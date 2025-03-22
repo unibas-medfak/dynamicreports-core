@@ -187,7 +187,7 @@ public class ColumnGridTransform {
     private GridList columnGridTitleGroup(final DRIColumnTitleGroup columnGridTitleGroup, final ColumnGrid columnGrid, final boolean titleGroup) throws DRException {
         final DRDesignList columnList = list(columnGridTitleGroup.getList(), columnGrid, titleGroup).getList();
 
-        @SuppressWarnings("rawtypes") final DRTextField titleGroupField = new DRTextField();
+        final DRTextField titleGroupField = new DRTextField();
         titleGroupField.setValueExpression(columnGridTitleGroup.getTitleExpression());
         titleGroupField.setStyle(columnGridTitleGroup.getTitleStyle());
         titleGroupField.setHeight(columnGridTitleGroup.getTitleHeight());

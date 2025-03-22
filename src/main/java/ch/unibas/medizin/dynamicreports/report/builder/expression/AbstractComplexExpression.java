@@ -79,7 +79,7 @@ public abstract class AbstractComplexExpression<T> implements DRIComplexExpressi
      * @param valueClass a {@link java.lang.Class} object.
      */
     protected void addExpression(String fieldName, Class<?> valueClass) {
-        @SuppressWarnings( {"unchecked", "rawtypes"}) DRField<?> field = new DRField(fieldName, valueClass);
+        DRField<?> field = new DRField<>(fieldName, valueClass);
         this.expressions.add(field);
     }
 
@@ -141,7 +141,6 @@ public abstract class AbstractComplexExpression<T> implements DRIComplexExpressi
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public Class<? super T> getValueClass() {
         return (Class<? super T>) ReportUtils.getGenericClass(this, 0);
     }

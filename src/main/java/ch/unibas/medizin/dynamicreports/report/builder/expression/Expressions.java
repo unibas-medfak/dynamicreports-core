@@ -311,7 +311,6 @@ public class Expressions {
      * @param expression the jasper expression
      * @return the expression
      */
-    @SuppressWarnings("rawtypes")
     public static JasperExpression jasperSyntax(final String expression) {
         return jasperSyntax(expression, Object.class);
     }

@@ -149,7 +149,7 @@ public class ReportTemplateTest {
 
     @Test
     public void test() {
-        @SuppressWarnings("rawtypes") final ReportBuilder rb = new DesignReportBuilder();
+        final ReportBuilder<DesignReportBuilder> rb = new DesignReportBuilder();
         configureReport(rb);
         try {
             final DRDesignReport report = new DRDesignReport(rb.getReport());

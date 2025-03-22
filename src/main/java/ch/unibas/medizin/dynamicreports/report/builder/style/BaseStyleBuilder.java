@@ -45,7 +45,6 @@ import java.awt.Color;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings( {"unchecked", "deprecation"})
 public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U extends DRBaseStyle> extends AbstractBuilder<T, U> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

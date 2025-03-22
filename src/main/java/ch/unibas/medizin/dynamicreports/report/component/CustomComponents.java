@@ -38,7 +38,6 @@ public class CustomComponents {
      * @param component a {@link java.lang.Object} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.component.CustomComponentTransform} object.
      */
-    @SuppressWarnings("rawtypes")
     public static CustomComponentTransform<?, ?> getComponentTransform(Object component) {
         List<CustomComponentTransform> transforms = ExtensionsEnvironment.getExtensionsRegistry().getExtensions(CustomComponentTransform.class);
         for (CustomComponentTransform transform : transforms) {

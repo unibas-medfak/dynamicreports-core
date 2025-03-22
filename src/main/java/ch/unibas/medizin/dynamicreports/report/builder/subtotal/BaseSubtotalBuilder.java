@@ -42,7 +42,6 @@ import org.apache.commons.lang3.Validate;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class BaseSubtotalBuilder<T extends BaseSubtotalBuilder<T, U>, U> extends AbstractBuilder<T, DRSubtotal<U>> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

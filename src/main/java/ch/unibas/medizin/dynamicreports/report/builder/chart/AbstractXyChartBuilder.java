@@ -37,7 +37,6 @@ import org.apache.commons.lang3.Validate;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class AbstractXyChartBuilder<T extends AbstractXyChartBuilder<T, U>, U extends DRAxisPlot> extends AbstractBaseChartBuilder<T, U, DRSeriesDataset> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

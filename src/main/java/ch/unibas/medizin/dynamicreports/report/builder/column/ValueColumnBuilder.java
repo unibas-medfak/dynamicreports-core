@@ -40,7 +40,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFor
  * @author Ricardo Mariaca, Jan Moxter
  * 
  */
-@SuppressWarnings( {"unchecked", "deprecation"})
 public abstract class ValueColumnBuilder<T extends ValueColumnBuilder<T, U>, U> extends ColumnBuilder<T, DRValueColumn<U>> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

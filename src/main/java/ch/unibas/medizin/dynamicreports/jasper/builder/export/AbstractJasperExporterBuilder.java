@@ -34,7 +34,6 @@ import java.io.Writer;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class AbstractJasperExporterBuilder<T extends AbstractJasperExporterBuilder<T, U>, U extends AbstractJasperExporter> extends AbstractBuilder<T, U> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

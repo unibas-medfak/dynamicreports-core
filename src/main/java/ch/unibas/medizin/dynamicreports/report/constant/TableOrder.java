@@ -27,5 +27,5 @@ package ch.unibas.medizin.dynamicreports.report.constant;
  * 
  */
 public enum TableOrder {
-    BY_ROW, BY_COLUMN;
+    BY_ROW, BY_COLUMN
 }

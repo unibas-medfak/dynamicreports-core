@@ -142,7 +142,6 @@ public class DynamicReports {
      * @param <T>        a T object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.FieldBuilder} object.
      */
-    @SuppressWarnings({ "rawtypes", "unchecked" })
     public static <T> FieldBuilder<T> field(final String name, final Class valueClass) {
         final FieldBuilder<T> fieldBuilder = new FieldBuilder<>(name, valueClass);
         try {

@@ -54,7 +54,6 @@ public abstract class AbstractSystemExpression<T> implements DRISystemExpression
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public Class<? super T> getValueClass() {
         return (Class<T>) ReportUtils.getGenericClass(this, 0);
     }

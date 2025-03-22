@@ -47,7 +47,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIValueFor
  * @author Ricardo Mariaca, Jan Moxter
  * 
  */
-@SuppressWarnings("deprecation")
 public class TextFieldBuilder<T> extends HyperLinkComponentBuilder<TextFieldBuilder<T>, DRTextField<T>> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
@@ -105,7 +104,6 @@ public class TextFieldBuilder<T> extends HyperLinkComponentBuilder<TextFieldBuil
      * @param text a {@link java.lang.String} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.TextFieldBuilder} object.
      */
-    @SuppressWarnings("unchecked")
     public TextFieldBuilder<T> setText(final String text) {
         getObject().setValueExpression((DRIExpression<T>) Expressions.text(text));
         return this;
@@ -117,7 +115,6 @@ public class TextFieldBuilder<T> extends HyperLinkComponentBuilder<TextFieldBuil
      * @param number a {@link java.lang.Number} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.TextFieldBuilder} object.
      */
-    @SuppressWarnings("unchecked")
     public TextFieldBuilder<T> setText(final Number number) {
         getObject().setValueExpression((DRIExpression<T>) Expressions.number(number));
         return this;
@@ -129,7 +126,6 @@ public class TextFieldBuilder<T> extends HyperLinkComponentBuilder<TextFieldBuil
      * @param date a {@link java.util.Date} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.TextFieldBuilder} object.
      */
-    @SuppressWarnings("unchecked")
     public TextFieldBuilder<T> setText(final Date date) {
         getObject().setValueExpression((DRIExpression<T>) Expressions.date(date));
         return this;

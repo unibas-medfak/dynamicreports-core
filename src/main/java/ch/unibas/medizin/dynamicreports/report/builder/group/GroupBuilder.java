@@ -40,7 +40,6 @@ import org.apache.commons.lang3.Validate;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings( {"unchecked", "rawtypes", "deprecation"})
 public abstract class GroupBuilder<T extends GroupBuilder<T>> extends AbstractBuilder<T, DRGroup> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

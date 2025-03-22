@@ -109,7 +109,6 @@ public abstract class AbstractJasperTest {
         return (JasperReportBuilder) ois.readObject();
     }
 
-    @SuppressWarnings("unchecked")
     private Map<String, Object> serializableParametersTest(Map<String, Object> parameters) throws IOException, ClassNotFoundException {
         final ByteArrayOutputStream bos = new ByteArrayOutputStream();
         final ObjectOutputStream oos = new ObjectOutputStream(bos);

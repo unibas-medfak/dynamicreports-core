@@ -38,7 +38,6 @@ import org.apache.commons.lang3.Validate;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("deprecation")
 public class BooleanColumnBuilder extends ColumnBuilder<BooleanColumnBuilder, DRBooleanColumn> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

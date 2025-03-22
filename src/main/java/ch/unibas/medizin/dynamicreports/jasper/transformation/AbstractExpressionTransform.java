@@ -237,7 +237,7 @@ public abstract class AbstractExpressionTransform {
             for (final DRIDesignExpression valueExpression : complexExpression.getExpressions()) {
                 values += ", " + getExpressionText(valueExpression);
             }
-            if (values.length() > 0) {
+            if (!values.isEmpty()) {
                 values = values.substring(2);
             }
             final String parameterName = getExpressionParameterName(complexExpression.getParameterName());

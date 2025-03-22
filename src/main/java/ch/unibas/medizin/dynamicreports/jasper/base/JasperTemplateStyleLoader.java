@@ -233,7 +233,6 @@ public class JasperTemplateStyleLoader {
         padding.setBottom(jrLineBox.getOwnBottomPadding());
     }
 
-    @SuppressWarnings("deprecation")
     private static void font(JRStyle jrStyle, DRFont font) {
         font.setFontName(jrStyle.getOwnFontName());
         font.setBold(jrStyle.isOwnBold());

@@ -161,7 +161,6 @@ public class ConstantTransform {
      * @param imageScale a {@link ch.unibas.medizin.dynamicreports.report.constant.ImageScale} object.
      * @return a {@link net.sf.jasperreports.engine.type.ScaleImageEnum} object.
      */
-    @SuppressWarnings("deprecation")
     protected static ScaleImageEnum imageScale(final ImageScale imageScale) {
         if (imageScale == null) {
             return null;
@@ -1142,7 +1141,6 @@ public class ConstantTransform {
      * @param stretchType a {@link ch.unibas.medizin.dynamicreports.report.constant.StretchType} object.
      * @return a {@link net.sf.jasperreports.engine.type.StretchTypeEnum} object.
      */
-    @SuppressWarnings("deprecation")
     public static StretchTypeEnum stretchType(final StretchType stretchType) {
         if (stretchType == null) {
             return StretchTypeEnum.NO_STRETCH;

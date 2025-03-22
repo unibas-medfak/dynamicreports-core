@@ -309,9 +309,8 @@ public class SubtotalTransform {
     }
 
     // label
-    @SuppressWarnings("unchecked")
     private DRDesignComponent labelComponent(DRISubtotal<?> subtotal) throws DRException {
-        @SuppressWarnings("rawtypes") DRTextField labelField = new DRTextField();
+        DRTextField labelField = new DRTextField();
         labelField.setValueExpression(subtotal.getLabelExpression());
         labelField.setStyle(subtotal.getLabelStyle());
         labelField.setWidth(accessor.getTemplateTransform().getColumnWidth(subtotal.getShowInColumn(), accessor.getStyleTransform().getDefaultStyle(DefaultStyleType.COLUMN)));

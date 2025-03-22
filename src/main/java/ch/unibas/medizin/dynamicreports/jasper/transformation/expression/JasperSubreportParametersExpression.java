@@ -54,9 +54,8 @@ public class JasperSubreportParametersExpression extends AbstractDesignComplexEx
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public Object evaluate(List<?> values, ReportParameters reportParameters) {
-        Map<String, Object> parameters = null;
+        Map<String, Object> parameters;
         if (!values.isEmpty()) {
             parameters = (Map<String, Object>) values.get(0);
         } else {

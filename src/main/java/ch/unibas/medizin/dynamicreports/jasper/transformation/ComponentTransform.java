@@ -428,7 +428,7 @@ public class ComponentTransform {
 
     // custom component
     private JRDesignElement customComponent(final DRIDesignComponent component) {
-        @SuppressWarnings("rawtypes") final CustomComponentTransform componentTransfom = CustomComponents.getComponentTransform(component);
+        final CustomComponentTransform componentTransfom = CustomComponents.getComponentTransform(component);
         if (componentTransfom == null) {
             throw new DRDesignReportException("Component " + component.getClass().getName() + " not supported");
         }

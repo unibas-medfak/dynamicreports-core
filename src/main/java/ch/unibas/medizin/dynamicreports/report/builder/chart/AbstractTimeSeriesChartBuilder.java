@@ -40,7 +40,6 @@ import java.util.Date;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class AbstractTimeSeriesChartBuilder<T extends AbstractTimeSeriesChartBuilder<T, U>, U extends DRAxisPlot> extends AbstractBaseChartBuilder<T, U, DRTimeSeriesDataset> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

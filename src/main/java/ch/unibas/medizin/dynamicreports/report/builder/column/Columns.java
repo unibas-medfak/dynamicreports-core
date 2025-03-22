@@ -48,7 +48,6 @@ public class Columns {
      * @param <T>        a T object.
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public static <T> TextColumnBuilder<T> column(final String fieldName, final Class<T> valueClass) {
         return column(DynamicReports.field(fieldName, valueClass));
     }
@@ -62,7 +61,6 @@ public class Columns {
      * @param <T>        a T object.
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public static <T> TextColumnBuilder<T> column(final String title, final String fieldName, final Class<T> valueClass) {
         return column(title, DynamicReports.field(fieldName, valueClass));
     }

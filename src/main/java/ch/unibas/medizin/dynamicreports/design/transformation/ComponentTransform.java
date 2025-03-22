@@ -790,11 +790,11 @@ public class ComponentTransform {
 
     // custom component
     private DRDesignComponent customComponent(final DRICustomComponent component, final ResetType resetType, final DRDesignGroup resetGroup) throws DRException {
-        @SuppressWarnings("rawtypes") final CustomComponentTransform componentTransfom = CustomComponents.getComponentTransform(component);
+        final CustomComponentTransform componentTransfom = CustomComponents.getComponentTransform(component);
         if (componentTransfom == null) {
             throw new DRDesignReportException("Component " + component.getClass().getName() + " not supported");
         }
-        @SuppressWarnings("unchecked") final DRDesignComponent designComponent = (DRDesignComponent) componentTransfom.designComponent(accessor, component, resetType, resetGroup);
+        final DRDesignComponent designComponent = (DRDesignComponent) componentTransfom.designComponent(accessor, component, resetType, resetGroup);
         component(designComponent, component, component.getStyle(), false, DefaultStyleType.NONE);
         final DRIDimensionComponent dimensionComponent = component;
         if (designComponent.getWidth() == null) {

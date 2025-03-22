@@ -81,7 +81,6 @@ public class DataTypes {
      * @return a T object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    @SuppressWarnings("unchecked")
     public static <T extends DRIDataType<?, ?>> T detectType(String dataType) throws DRException {
         Validate.notNull(dataType, "dataType must not be null");
 

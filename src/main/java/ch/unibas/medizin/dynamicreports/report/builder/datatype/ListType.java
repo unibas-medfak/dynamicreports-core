@@ -36,7 +36,6 @@ import java.util.List;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("rawtypes")
 public class ListType extends AbstractDataType<List, List> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
@@ -67,7 +66,7 @@ public class ListType extends AbstractDataType<List, List> {
         public String format(List values, ReportParameters reportParameters) {
             StringBuilder result = new StringBuilder();
             for (Object value : values) {
-                if (result.length() > 0) {
+                if (!result.isEmpty()) {
                     result.append("\n");
                 }
                 if (value != null) {

@@ -500,7 +500,7 @@ public class JasperConcatenatedReportBuilder implements Serializable {
         Validate.notNull(exporterBuilder, "exporterBuilder must not be null");
         try {
             ExporterTransform exporterTransform = new ExporterTransform(exporterBuilder.build());
-            @SuppressWarnings("unchecked") Exporter<ExporterInput, ?, ?, ?> exporter = (Exporter<ExporterInput, ?, ?, ?>) exporterTransform.transform();
+            Exporter<ExporterInput, ?, ?, ?> exporter = (Exporter<ExporterInput, ?, ?, ?>) exporterTransform.transform();
             exporter.setExporterInput(SimpleExporterInput.getInstance(jasperReportHandler.getPrintList()));
             exporter.exportReport();
         } catch (JRException e) {

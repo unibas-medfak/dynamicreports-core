@@ -67,7 +67,6 @@ public class JasperReportParameters implements ReportParameters {
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public <T> T getValue(String name) {
         ValueType type = jasperScriptlet.getValueType(name);
         if (type != null) {
@@ -94,7 +93,6 @@ public class JasperReportParameters implements ReportParameters {
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public <T> T getValue(DRIValue<T> value) {
         return getValue(value.getName());
     }
@@ -103,7 +101,6 @@ public class JasperReportParameters implements ReportParameters {
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public <T> T getFieldValue(String name) {
         try {
             return (T) jasperScriptlet.getFieldValue(name);
@@ -116,7 +113,6 @@ public class JasperReportParameters implements ReportParameters {
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public <T> T getVariableValue(String name) {
         try {
             return (T) jasperScriptlet.getVariableValue(name);
@@ -175,7 +171,6 @@ public class JasperReportParameters implements ReportParameters {
 
     /** {@inheritDoc} */
     @Override
-    @SuppressWarnings("unchecked")
     public <T> T getParameterValue(String name) {
         try {
             return (T) ((Map<?, ?>) jasperScriptlet.getParameterValue(JRParameter.REPORT_PARAMETERS_MAP)).get(name);

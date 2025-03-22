@@ -32,7 +32,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpressi
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class HyperLinkComponentBuilder<T extends HyperLinkComponentBuilder<T, U>, U extends DRHyperLinkComponent> extends DimensionComponentBuilder<T, U> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

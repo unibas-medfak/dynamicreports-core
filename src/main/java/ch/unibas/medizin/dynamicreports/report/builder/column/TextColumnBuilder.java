@@ -72,7 +72,6 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * @param column the column builder
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public TextColumnBuilder<BigDecimal> add(TextColumnBuilder<? extends Number> column) {
         Validate.isTrue(Number.class.isAssignableFrom(getObject().getValueClass()), "Only Number column can multiply");
         DRIExpression<? extends Number> value1Expression = (DRIExpression<? extends Number>) this.getComponent().getValueExpression();
@@ -87,7 +86,6 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * @param number the value
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public TextColumnBuilder<BigDecimal> add(Number number) {
         Validate.isTrue(Number.class.isAssignableFrom(getObject().getValueClass()), "Only Number column can multiply");
         DRIExpression<? extends Number> value1Expression = (DRIExpression<? extends Number>) this.getComponent().getValueExpression();
@@ -104,7 +102,6 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * @param column the column builder
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public TextColumnBuilder<BigDecimal> subtract(TextColumnBuilder<? extends Number> column) {
         Validate.isTrue(Number.class.isAssignableFrom(getObject().getValueClass()), "Only Number column can subtract");
         DRIExpression<? extends Number> value1Expression = (DRIExpression<? extends Number>) this.getComponent().getValueExpression();
@@ -119,7 +116,6 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * @param number the value
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public TextColumnBuilder<BigDecimal> subtract(Number number) {
         Validate.isTrue(Number.class.isAssignableFrom(getObject().getValueClass()), "Only Number column can subtract");
         DRIExpression<? extends Number> value1Expression = (DRIExpression<? extends Number>) this.getComponent().getValueExpression();
@@ -136,7 +132,6 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * @param column the column builder
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public TextColumnBuilder<BigDecimal> multiply(TextColumnBuilder<? extends Number> column) {
         Validate.isTrue(Number.class.isAssignableFrom(getObject().getValueClass()), "Only Number column can multiply");
         DRIExpression<? extends Number> value1Expression = (DRIExpression<? extends Number>) this.getComponent().getValueExpression();
@@ -151,7 +146,6 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * @param number the value
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public TextColumnBuilder<BigDecimal> multiply(Number number) {
         Validate.isTrue(Number.class.isAssignableFrom(getObject().getValueClass()), "Only Number column can multiply");
         DRIExpression<? extends Number> value1Expression = (DRIExpression<? extends Number>) this.getComponent().getValueExpression();
@@ -169,7 +163,6 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * @param scale  a int.
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public TextColumnBuilder<BigDecimal> divide(int scale, TextColumnBuilder<? extends Number> column) {
         Validate.isTrue(Number.class.isAssignableFrom(getObject().getValueClass()), "Only Number column can divide");
         DRIExpression<? extends Number> value1Expression = (DRIExpression<? extends Number>) this.getComponent().getValueExpression();
@@ -185,7 +178,6 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * @param scale  a int.
      * @return a column builder
      */
-    @SuppressWarnings("unchecked")
     public TextColumnBuilder<BigDecimal> divide(int scale, Number number) {
         Validate.isTrue(Number.class.isAssignableFrom(getObject().getValueClass()), "Only Number column can divide");
         DRIExpression<? extends Number> value1Expression = (DRIExpression<? extends Number>) this.getComponent().getValueExpression();

@@ -67,7 +67,6 @@ import java.util.ResourceBundle;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T, DRReport> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

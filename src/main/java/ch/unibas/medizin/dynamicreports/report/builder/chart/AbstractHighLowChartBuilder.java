@@ -39,7 +39,6 @@ import java.util.Date;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class AbstractHighLowChartBuilder<T extends AbstractHighLowChartBuilder<T, U>, U extends DRAxisPlot>
     extends AbstractBaseChartBuilder<AbstractHighLowChartBuilder<T, U>, U, DRHighLowDataset> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;

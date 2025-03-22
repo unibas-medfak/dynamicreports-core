@@ -63,7 +63,7 @@ public class ColumnGroupBuilder extends GroupBuilder<ColumnGroupBuilder> {
 
     @SuppressWarnings("unchecked")
     private void init() {
-        @SuppressWarnings("rawtypes") DRIDataType dataType = column.getComponent().getDataType();
+        DRIDataType dataType = column.getComponent().getDataType();
         getObject().getValueField().setDataType(dataType);
         getObject().getValueField().setStyle(column.getComponent().getStyle());
         getObject().getValueField().setPattern(column.getComponent().getPattern());

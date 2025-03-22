@@ -97,7 +97,6 @@ public class DefaultBinder {
         }
     }
 
-    @SuppressWarnings("deprecation")
     private static void bind(DRFont font, XmlFont xmlFont) {
         if (xmlFont == null) {
             return;

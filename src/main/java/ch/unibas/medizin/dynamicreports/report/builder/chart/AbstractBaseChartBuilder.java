@@ -36,7 +36,6 @@ import java.util.Map;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class AbstractBaseChartBuilder<T extends AbstractBaseChartBuilder<T, U, V>, U extends AbstractBasePlot, V extends DRChartDataset> extends AbstractChartBuilder<T> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 

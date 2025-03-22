@@ -38,7 +38,6 @@ public class ConditionBuilders {
      * @param <T>    a T object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.EqualExpression} object.
      */
-    @SuppressWarnings("unchecked")
     public <T> EqualExpression equal(DRIValue<T> value, T... values) {
         return Conditions.equal(value, values);
     }
@@ -62,7 +61,6 @@ public class ConditionBuilders {
      * @param <T>    a T object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.UnEqualExpression} object.
      */
-    @SuppressWarnings("unchecked")
     public <T> UnEqualExpression unEqual(DRIValue<T> value, T... values) {
         return Conditions.unEqual(value, values);
     }

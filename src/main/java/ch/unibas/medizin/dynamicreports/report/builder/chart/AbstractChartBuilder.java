@@ -43,7 +43,6 @@ import java.sql.Connection;
  * @author Ricardo Mariaca
  * 
  */
-@SuppressWarnings("unchecked")
 public abstract class AbstractChartBuilder<T extends AbstractChartBuilder<T>> extends HyperLinkComponentBuilder<T, DRChart> {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
