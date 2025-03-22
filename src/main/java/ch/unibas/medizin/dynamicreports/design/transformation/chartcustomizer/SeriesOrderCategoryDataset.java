@@ -41,8 +41,8 @@ import java.util.List;
 public class SeriesOrderCategoryDataset implements CategoryDataset, Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    protected List<String> rowKeys;
-    protected CategoryDataset dataset;
+    protected final List<String> rowKeys;
+    protected final CategoryDataset dataset;
 
     /**
      * <p>Constructor for SeriesOrderCategoryDataset.</p>

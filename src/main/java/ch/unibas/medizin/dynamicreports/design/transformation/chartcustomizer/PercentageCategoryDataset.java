@@ -37,7 +37,7 @@ import java.util.List;
 public class PercentageCategoryDataset implements CategoryDataset, Serializable {
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
 
-    protected CategoryDataset dataset;
+    protected final CategoryDataset dataset;
 
     /**
      * <p>Constructor for PercentageCategoryDataset.</p>

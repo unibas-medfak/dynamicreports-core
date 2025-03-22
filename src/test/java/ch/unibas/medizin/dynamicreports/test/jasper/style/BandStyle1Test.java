@@ -47,19 +47,19 @@ import net.sf.jasperreports.engine.JRDataSource;
 public class BandStyle1Test extends AbstractJasperStyleTest implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    Color color1 = new Color(240, 240, 240);
-    Color color2 = new Color(230, 230, 230);
-    Color color3 = new Color(220, 220, 220);
-    Color color4 = new Color(210, 210, 210);
-    Color color5 = new Color(190, 190, 190);
-    Color color6 = new Color(180, 180, 180);
-    Color color7 = new Color(170, 170, 170);
-    Color color8 = new Color(160, 160, 160);
-    Color color9 = new Color(150, 150, 150);
-    Color color10 = new Color(140, 140, 140);
-    Color color11 = new Color(130, 130, 130);
-    Color color12 = new Color(120, 120, 120);
-    Color color13 = new Color(110, 110, 110);
+    final Color color1 = new Color(240, 240, 240);
+    final Color color2 = new Color(230, 230, 230);
+    final Color color3 = new Color(220, 220, 220);
+    final Color color4 = new Color(210, 210, 210);
+    final Color color5 = new Color(190, 190, 190);
+    final Color color6 = new Color(180, 180, 180);
+    final Color color7 = new Color(170, 170, 170);
+    final Color color8 = new Color(160, 160, 160);
+    final Color color9 = new Color(150, 150, 150);
+    final Color color10 = new Color(140, 140, 140);
+    final Color color11 = new Color(130, 130, 130);
+    final Color color12 = new Color(120, 120, 120);
+    final Color color13 = new Color(110, 110, 110);
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {

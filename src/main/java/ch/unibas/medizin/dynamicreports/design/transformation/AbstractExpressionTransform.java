@@ -77,7 +77,7 @@ import java.util.Map;
  * 
  */
 public abstract class AbstractExpressionTransform {
-    protected DesignTransformAccessor accessor;
+    protected final DesignTransformAccessor accessor;
     private Map<String, DRIDesignField> fields;
     private Map<String, DRIDesignVariable> variables;
     private Map<String, DRIDesignSystemExpression> systemExpressions;
