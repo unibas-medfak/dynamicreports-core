@@ -1561,9 +1561,8 @@ public class TemplateTransform {
      *
      * @param image       a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIImage} object.
      * @param imageHeight a {@link java.lang.Integer} object.
-     * @param imageHeight a {@link java.lang.Integer} object.
      * @param style       a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getImageHeight(final DRIImage image, final Integer imageHeight, final DRDesignStyle style) {
         if (image.getHeight() != null) {

@@ -53,7 +53,6 @@ public class ValueExpression<T> extends AbstractSimpleExpression<T> {
      *
      * @param value      a T object.
      * @param valueClass a {@link java.lang.Class} object.
-     * @param valueClass a {@link java.lang.Class} object.
      */
     public ValueExpression(T value, Class<? super T> valueClass) {
         Validate.notNull(valueClass, "valueClass must not be null");

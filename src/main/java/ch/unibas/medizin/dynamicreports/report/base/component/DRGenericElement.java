@@ -45,7 +45,6 @@ public class DRGenericElement extends DRDimensionComponent implements DRIGeneric
      * <p>Constructor for DRGenericElement.</p>
      *
      * @param namespace a {@link java.lang.String} object.
-     * @param namespace a {@link java.lang.String} object.
      * @param name      a {@link java.lang.String} object.
      */
     public DRGenericElement(String namespace, String name) {

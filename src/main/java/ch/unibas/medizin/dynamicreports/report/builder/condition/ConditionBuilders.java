@@ -35,7 +35,6 @@ public class ConditionBuilders {
      *
      * @param value  a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIValue} object.
      * @param values a T object.
-     * @param values a T object.
      * @param <T>    a T object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.EqualExpression} object.
      */
@@ -59,7 +58,6 @@ public class ConditionBuilders {
      * <p>unEqual.</p>
      *
      * @param value  a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIValue} object.
-     * @param values a T object.
      * @param values a T object.
      * @param <T>    a T object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.condition.UnEqualExpression} object.

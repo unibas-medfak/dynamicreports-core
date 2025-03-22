@@ -63,7 +63,6 @@ public class SubreportExpression extends AbstractDesignComplexExpression {
      *
      * @param pageWidthExpression a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      * @param reportExpression    a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
-     * @param pageWidthExpression a {@link ch.unibas.medizin.dynamicreports.design.definition.expression.DRIDesignExpression} object.
      * @param pageWidth           a {@link java.lang.Integer} object.
      */
     public SubreportExpression(DRIDesignExpression pageWidthExpression, DRIDesignExpression reportExpression, Integer pageWidth) {

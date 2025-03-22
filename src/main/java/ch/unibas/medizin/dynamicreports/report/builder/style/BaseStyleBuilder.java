@@ -241,18 +241,6 @@ public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U exten
         return setItalic(true);
     }
 
-    @Deprecated
-    /**
-     * You should configure the fonts.xml file
-     *
-     * @param pdfEmbedded a {@link java.lang.Boolean} object.
-     * @return a T object.
-     */
-    public T setPdfEmbedded(Boolean pdfEmbedded) {
-        getObject().getFont().setPdfEmbedded(pdfEmbedded);
-        return (T) this;
-    }
-
     /**
      * <p>strikeThrough.</p>
      *

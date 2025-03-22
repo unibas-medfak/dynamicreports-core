@@ -504,7 +504,6 @@ public class ComponentBuilders {
      * <p>genericElement.</p>
      *
      * @param namespace a {@link java.lang.String} object.
-     * @param namespace a {@link java.lang.String} object.
      * @param name      a {@link java.lang.String} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.GenericElementBuilder} object.
      */

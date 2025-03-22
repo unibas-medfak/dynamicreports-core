@@ -214,7 +214,6 @@ public class BandTransform {
      * <p>band.</p>
      *
      * @param bandName                   a {@link java.lang.String} object.
-     * @param bandName                   a {@link java.lang.String} object.
      * @param band                       a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIBand} object.
      * @param splitType                  a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
      * @param defaultStyle               a {@link ch.unibas.medizin.dynamicreports.report.definition.style.DRIReportStyle} object.
@@ -244,7 +243,6 @@ public class BandTransform {
     /**
      * <p>band.</p>
      *
-     * @param bandName                   a {@link java.lang.String} object.
      * @param bandName                   a {@link java.lang.String} object.
      * @param band                       a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIBand} object.
      * @param splitType                  a {@link ch.unibas.medizin.dynamicreports.report.constant.SplitType} object.
