@@ -163,7 +163,7 @@ public class ChartDatasetTest extends AbstractJasperChartTest implements Seriali
             } catch (final Exception e) {
             }
             Assertions.assertEquals("parameter_value", reportParameters.getMasterParameters().getValue("parameter"));
-            return (String) reportParameters.getValue("field1") + "_exp";
+            return reportParameters.getValue("field1") + "_exp";
         }
     }
 

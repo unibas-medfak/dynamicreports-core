@@ -97,7 +97,7 @@ public class ExpressionTest extends AbstractJasperValueTest implements Serializa
         }
     }
 
-    private class Expression4 extends Expression3 {
+    private static class Expression4 extends Expression3 {
         private static final long serialVersionUID = 1L;
     }
 }

@@ -166,7 +166,7 @@ public class JasperConcatenatedReportBuilder implements Serializable {
                     jrExporter.setConfiguration(exporterConfiguration);
 
                     jrExporter.exportReport();
-                    ((Graphics2D) image.getGraphics()).drawImage(pageImage, offset, 1, null);
+                    image.getGraphics().drawImage(pageImage, offset, 1, null);
                     offset += pageWidth + 1;
                 } catch (JRException e) {
                     throw new DRException(e);

@@ -130,7 +130,7 @@ public class ChartData1Test extends AbstractJasperChartTest implements Serializa
 
         @Override
         public String evaluate(ReportParameters reportParameters) {
-            return (String) reportParameters.getValue("field1") + "_exp";
+            return reportParameters.getValue("field1") + "_exp";
         }
     }
 

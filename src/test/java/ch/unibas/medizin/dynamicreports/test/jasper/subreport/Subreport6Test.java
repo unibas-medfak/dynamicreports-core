@@ -67,7 +67,7 @@ public class Subreport6Test extends AbstractJasperValueTest implements Serializa
         return new JREmptyDataSource(5);
     }
 
-    private class Subreport1Expression extends AbstractSimpleExpression<JasperReportBuilder> {
+    private static class Subreport1Expression extends AbstractSimpleExpression<JasperReportBuilder> {
         private static final long serialVersionUID = 1L;
 
         @Override

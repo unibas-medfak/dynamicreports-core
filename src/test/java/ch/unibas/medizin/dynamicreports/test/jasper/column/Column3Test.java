@@ -113,7 +113,7 @@ public class Column3Test extends AbstractJasperValueTest implements Serializable
         return dataSource;
     }
 
-    private class CustomType extends DoubleType {
+    private static class CustomType extends DoubleType {
         private static final long serialVersionUID = 1L;
 
         @Override

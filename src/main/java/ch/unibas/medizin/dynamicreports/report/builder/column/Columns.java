@@ -50,7 +50,7 @@ public class Columns {
      */
     @SuppressWarnings("unchecked")
     public static <T> TextColumnBuilder<T> column(final String fieldName, final Class<T> valueClass) {
-        return (TextColumnBuilder<T>) column(DynamicReports.field(fieldName, valueClass));
+        return column(DynamicReports.field(fieldName, valueClass));
     }
 
     /**
@@ -64,7 +64,7 @@ public class Columns {
      */
     @SuppressWarnings("unchecked")
     public static <T> TextColumnBuilder<T> column(final String title, final String fieldName, final Class<T> valueClass) {
-        return (TextColumnBuilder<T>) column(title, DynamicReports.field(fieldName, valueClass));
+        return column(title, DynamicReports.field(fieldName, valueClass));
     }
 
     /**

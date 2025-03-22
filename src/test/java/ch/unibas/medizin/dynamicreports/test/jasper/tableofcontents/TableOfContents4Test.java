@@ -87,7 +87,7 @@ public class TableOfContents4Test extends AbstractJasperValueTest implements Ser
 
         @Override
         public String evaluate(ReportParameters reportParameters) {
-            final DRICustomValues customValues = (DRICustomValues) reportParameters.getParameterValue(DRICustomValues.NAME);
+            final DRICustomValues customValues = reportParameters.getParameterValue(DRICustomValues.NAME);
             final Map<String, JasperTocHeading> tocHeadings = customValues.getTocHeadings();
             if (tocHeadings.isEmpty()) {
                 return reportParameters.getValue("field1");

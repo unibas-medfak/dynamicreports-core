@@ -33,7 +33,7 @@ import ch.unibas.medizin.dynamicreports.report.builder.component.TextFieldBuilde
  *         The height in setDimension(Integer width, Integer height) of the
  *         DimensionComponentBuilder class is set with the width.
  */
-public class Bug_2997586_Test {
+public class Bug2997586Test {
 
   @Test
   public void test() {

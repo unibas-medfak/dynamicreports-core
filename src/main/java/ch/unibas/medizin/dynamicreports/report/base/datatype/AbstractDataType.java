@@ -77,7 +77,7 @@ public abstract class AbstractDataType<U, T extends U> implements DRIDataType<U,
     @Override
     @SuppressWarnings("unchecked")
     public String valueToString(String name, ReportParameters reportParameters) {
-        return valueToString((U) reportParameters.getValue(name), reportParameters.getLocale());
+        return valueToString(reportParameters.getValue(name), reportParameters.getLocale());
     }
 
     /** {@inheritDoc} */
@@ -95,7 +95,7 @@ public abstract class AbstractDataType<U, T extends U> implements DRIDataType<U,
     /** {@inheritDoc} */
     @Override
     public T stringToValue(String name, ReportParameters reportParameters) throws DRException {
-        return stringToValue((String) reportParameters.getValue(name), reportParameters.getLocale());
+        return stringToValue(reportParameters.getValue(name), reportParameters.getLocale());
     }
 
     /** {@inheritDoc} */

@@ -73,11 +73,11 @@ public class JasperReportParameters implements ReportParameters {
         if (type != null) {
             switch (type) {
                 case FIELD:
-                    return (T) getFieldValue(name);
+                    return getFieldValue(name);
                 case VARIABLE:
-                    return (T) getVariableValue(name);
+                    return getVariableValue(name);
                 case PARAMETER:
-                    return (T) getParameterValue(name);
+                    return getParameterValue(name);
                 case SIMPLE_EXPRESSION:
                     return (T) getSimpleExpressionValue(name);
                 case COMPLEX_EXPRESSION:
@@ -96,7 +96,7 @@ public class JasperReportParameters implements ReportParameters {
     @Override
     @SuppressWarnings("unchecked")
     public <T> T getValue(DRIValue<T> value) {
-        return (T) getValue(value.getName());
+        return getValue(value.getName());
     }
 
     // field
@@ -128,37 +128,37 @@ public class JasperReportParameters implements ReportParameters {
     /** {@inheritDoc} */
     @Override
     public Integer getPageNumber() {
-        return (Integer) getVariableValue(JRVariable.PAGE_NUMBER);
+        return getVariableValue(JRVariable.PAGE_NUMBER);
     }
 
     /** {@inheritDoc} */
     @Override
     public Integer getColumnNumber() {
-        return (Integer) getVariableValue(JRVariable.COLUMN_NUMBER);
+        return getVariableValue(JRVariable.COLUMN_NUMBER);
     }
 
     /** {@inheritDoc} */
     @Override
     public Integer getReportRowNumber() {
-        return (Integer) getVariableValue(JRVariable.REPORT_COUNT);
+        return getVariableValue(JRVariable.REPORT_COUNT);
     }
 
     /** {@inheritDoc} */
     @Override
     public Integer getPageRowNumber() {
-        return (Integer) getVariableValue(JRVariable.PAGE_COUNT);
+        return getVariableValue(JRVariable.PAGE_COUNT);
     }
 
     /** {@inheritDoc} */
     @Override
     public Integer getColumnRowNumber() {
-        return (Integer) getVariableValue(JRVariable.COLUMN_COUNT);
+        return getVariableValue(JRVariable.COLUMN_COUNT);
     }
 
     /** {@inheritDoc} */
     @Override
     public Integer getCrosstabRowNumber() {
-        CrosstabRowCounter counter = (CrosstabRowCounter) getValue(CROSSTAB_ROW_COUNTER);
+        CrosstabRowCounter counter = getValue(CROSSTAB_ROW_COUNTER);
         if (counter != null) {
             return counter.getRowNumber();
         }
@@ -168,7 +168,7 @@ public class JasperReportParameters implements ReportParameters {
     /** {@inheritDoc} */
     @Override
     public Integer getGroupCount(String groupName) {
-        return (Integer) getVariableValue(groupName + "_COUNT");
+        return getVariableValue(groupName + "_COUNT");
     }
 
     // parameter
@@ -187,13 +187,13 @@ public class JasperReportParameters implements ReportParameters {
     /** {@inheritDoc} */
     @Override
     public Connection getConnection() {
-        return (Connection) getParameterValue(JRParameter.REPORT_CONNECTION);
+        return getParameterValue(JRParameter.REPORT_CONNECTION);
     }
 
     /** {@inheritDoc} */
     @Override
     public Locale getLocale() {
-        return (Locale) getParameterValue(JRParameter.REPORT_LOCALE);
+        return getParameterValue(JRParameter.REPORT_LOCALE);
     }
 
     /** {@inheritDoc} */
@@ -242,7 +242,7 @@ public class JasperReportParameters implements ReportParameters {
     /** {@inheritDoc} */
     @Override
     public ReportParameters getMasterParameters() {
-        return (ReportParameters) getParameterValue(MASTER_REPORT_PARAMETERS);
+        return getParameterValue(MASTER_REPORT_PARAMETERS);
     }
 
     /** {@inheritDoc} */

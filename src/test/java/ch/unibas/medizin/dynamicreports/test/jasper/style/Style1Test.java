@@ -180,7 +180,7 @@ public class Style1Test extends AbstractJasperStyleTest implements Serializable 
 
     @Override
     public Boolean evaluate(ReportParameters reportParameters) {
-      final Integer value = (Integer) reportParameters.getValue("field1");
+      final Integer value = reportParameters.getValue("field1");
       return values.contains(value);
     }
   }

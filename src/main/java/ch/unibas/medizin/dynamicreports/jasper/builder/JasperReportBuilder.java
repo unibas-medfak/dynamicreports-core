@@ -566,7 +566,7 @@ public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
                 jrExporter.setConfiguration(exporterConfiguration);
 
                 jrExporter.exportReport();
-                ((Graphics2D) image.getGraphics()).drawImage(pageImage, offset, offsetY, null);
+                image.getGraphics().drawImage(pageImage, offset, offsetY, null);
                 fromPage++;
                 offset += pageWidth + pageGap;
             } catch (final JRException e) {

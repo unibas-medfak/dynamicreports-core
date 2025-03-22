@@ -82,7 +82,7 @@ public class SubreportExpression extends AbstractDesignComplexExpression {
             return jasperReports.get(reportBuilder);
         }
         try {
-            DRICustomValues customValues = (DRICustomValues) reportParameters.getParameterValue(DRICustomValues.NAME);
+            DRICustomValues customValues = reportParameters.getParameterValue(DRICustomValues.NAME);
             DRIDesignReport report = new DRDesignReport(reportBuilder.build(), pageWidth, customValues.getTocHeadings());
             JasperReportDesign reportDesign = new JasperReportDesign(report, reportParameters, null);
             JasperTransform jasperTransform = new JasperTransform(report, reportDesign);

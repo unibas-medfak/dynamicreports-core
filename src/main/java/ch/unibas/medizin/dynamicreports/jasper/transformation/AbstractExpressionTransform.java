@@ -246,7 +246,7 @@ public abstract class AbstractExpressionTransform {
             final String parameterName = getExpressionParameterName(((DRIDesignSimpleExpression) expression).getParameterName());
             return MessageFormat.format(VALUE, parameterName, expression.getName());
         } else if (expression instanceof DRIDesignSystemExpression) {
-            final String name = ((DRIDesignSystemExpression) expression).getName();
+            final String name = expression.getName();
             if (name.equals(SystemExpression.PAGE_NUMBER.name())) {
                 return toVariableValue(JRVariable.PAGE_NUMBER);
             } else {

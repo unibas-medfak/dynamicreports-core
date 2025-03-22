@@ -81,7 +81,7 @@ public class TocReferenceExpression extends AbstractComplexExpression<String> {
                 customValue = values.get(1);
             }
         }
-        DRICustomValues customValues = (DRICustomValues) reportParameters.getParameterValue(DRICustomValues.NAME);
+        DRICustomValues customValues = reportParameters.getParameterValue(DRICustomValues.NAME);
         String text = String.valueOf(values.get(0));
         customValues.addTocHeading(level, id, text, customValue);
         return null;

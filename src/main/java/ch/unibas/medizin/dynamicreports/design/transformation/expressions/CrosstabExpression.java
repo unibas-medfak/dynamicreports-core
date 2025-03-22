@@ -72,7 +72,7 @@ public class CrosstabExpression<T> extends AbstractComplexExpression<T> {
     @SuppressWarnings("unchecked")
     @Override
     public T evaluate(List<?> values, ReportParameters reportParameters) {
-        DRICustomValues customValues = (DRICustomValues) reportParameters.getParameterValue(DRICustomValues.NAME);
+        DRICustomValues customValues = reportParameters.getParameterValue(DRICustomValues.NAME);
         for (int i = 0; i < getExpressions().size(); i++) {
             customValues.setSystemValue(getExpressions().get(i).getName(), values.get(i));
         }

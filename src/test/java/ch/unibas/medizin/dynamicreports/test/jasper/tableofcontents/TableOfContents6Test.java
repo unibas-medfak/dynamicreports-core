@@ -139,7 +139,7 @@ public class TableOfContents6Test extends AbstractJasperValueTest {
         }
     }
 
-    private class TocCustomValueExpression extends AbstractSimpleExpression<TocCustomValue> {
+    private static class TocCustomValueExpression extends AbstractSimpleExpression<TocCustomValue> {
         private static final long serialVersionUID = 1L;
 
         @Override
