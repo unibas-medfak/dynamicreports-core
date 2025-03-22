@@ -9,7 +9,7 @@
     <version>0.9.0</version>
     <packaging>jar</packaging>
 
-    <name>DynamicReports</name>
+    <name>DynamicReports Core</name>
     <url>https://github.com/unibas-medfak/dynamicreports-core</url>
     <description>
         DynamicReports is an open source Java reporting library based on
@@ -23,24 +23,24 @@
     <licenses>
         <license>
             <name>GNU Lesser General Public License</name>
-            <url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
-            <distribution>repo</distribution>
+            <url>https://www.gnu.org/licenses/lgpl-3.0.txt</url>
         </license>
     </licenses>
+
+    <developers>
+        <developer>
+            <name>Martin Imobersteg</name>
+            <email>m.imobersteg@unibas.ch</email>
+            <organization>Uni Basel</organization>
+            <organizationUrl>https://medizin.unibas.ch</organizationUrl>
+        </developer>
+    </developers>
 
     <scm>
         <connection>scm:git:https://github.com/unibas-medfak/dynamicreports-core.git</connection>
         <developerConnection>scm:git:https://github.com/unibas-medfak/dynamicreports-core.git</developerConnection>
         <url>https://github.com/unibas-medfak/dynamicreports-core</url>
     </scm>
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/unibas-medfak/dynamicreports-core</url>
-        </repository>
-    </distributionManagement>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -201,8 +201,7 @@
                 <configuration>
                     <failOnError>false</failOnError>
                     <sourceFileExcludes>
-                        <sourceFileExclude>
-                            ${project.basedir}/target</sourceFileExclude>
+                        <sourceFileExclude>${project.basedir}/target</sourceFileExclude>
                     </sourceFileExcludes>
                 </configuration>
             </plugin>
