@@ -84,8 +84,4 @@ public class XyLineChartBuilder extends AbstractXyChartBuilder<XyLineChartBuilde
         return this;
     }
 
-    /*public XyLineChartBuilder setPercentValuePattern(String percentValuePattern) {
-        getPlot().setPercentValuePattern(percentValuePattern);
-        return this;
-    }*/
 }

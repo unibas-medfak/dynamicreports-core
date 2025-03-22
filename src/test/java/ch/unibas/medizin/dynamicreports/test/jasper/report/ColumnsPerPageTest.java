@@ -78,10 +78,6 @@ public class ColumnsPerPageTest extends AbstractJasperPositionTest implements Se
 
         numberOfPagesTest(2);
         // column header
-        // elementPositionTest("columnHeader.list1", 0, 10, 10, 185, 28);
-        // elementPositionTest("columnHeader.list1", 1, 205, 10, 185, 28);
-        // elementPositionTest("columnHeader.list1", 2, 400, 10, 185, 28);
-        // elementPositionTest("columnHeader.list1", 3, 10, 10, 185, 28);
 
         elementPositionTest("columnHeader.list2", 0, 10, 10, 185, 14);
         columnTitlePositionTest(column1, 0, 0, 0, 61, 14);
@@ -93,10 +89,6 @@ public class ColumnsPerPageTest extends AbstractJasperPositionTest implements Se
         columnTitlePositionTest(column5, 0, 92, 0, 93, 14);
 
         // detail
-        // elementPositionTest("detail.list1", 0, 10, 38, 185, 28);
-        // elementPositionTest("detail.list1", 24, 205, 38, 185, 28);
-        // elementPositionTest("detail.list1", 48, 400, 38, 185, 28);
-        // elementPositionTest("detail.list1", 72, 10, 38, 185, 28);
 
         elementPositionTest("detail.list2", 0, 10, 38, 185, 14);
         columnDetailPositionTest(column1, 0, 0, 0, 61, 14);
@@ -108,18 +100,12 @@ public class ColumnsPerPageTest extends AbstractJasperPositionTest implements Se
         columnDetailPositionTest(column5, 0, 92, 0, 93, 14);
 
         // subtotal at column footer
-        // elementPositionTest("columnFooter.list1", 0, 10, 720, 185, 112);
-        // elementPositionTest("columnFooter.list1", 1, 205, 720, 185, 112);
-        // elementPositionTest("columnFooter.list1", 2, 400, 720, 185, 112);
-        // elementPositionTest("columnFooter.list1", 3, 10, 720, 185, 112);
 
         elementPositionTest("columnFooter.list2", 0, 10, 720, 185, 56);
         // elementPositionTest("columnFooter.list3", 0, 0, 0, 61, 28);
         subtotalLabelPositionTest(subtotal1, 0, 0, 0, 61, 14);
         subtotalPositionTest(subtotal1, 0, 0, 14, 61, 14);
 
-        // elementPositionTest("columnFooter.list4", 0, 123, 0, 62, 56);
-        // elementPositionTest("columnFooter.list5", 0, 0, 0, 62, 28);
         subtotalLabelPositionTest(subtotal2, 0, 123, 0, 62, 14);
         subtotalPositionTest(subtotal2, 0, 123, 14, 62, 14);
         // elementPositionTest("columnFooter.list6", 0, 0, 28, 62, 28);
@@ -127,8 +113,6 @@ public class ColumnsPerPageTest extends AbstractJasperPositionTest implements Se
         subtotalPositionTest(subtotal3, 0, 123, 14, 62, 14);
 
         elementPositionTest("columnFooter.list7", 0, 10, 776, 185, 56);
-        // elementPositionTest("columnFooter.list8", 0, 0, 0, 92, 56);
-        // elementPositionTest("columnFooter.list9", 0, 0, 0, 92, 28);
         subtotalLabelPositionTest(subtotal4, 0, 0, 0, 92, 14);
         subtotalPositionTest(subtotal4, 0, 0, 14, 92, 14);
         // elementPositionTest("columnFooter.list10", 0, 0, 28, 92, 28);
@@ -143,8 +127,6 @@ public class ColumnsPerPageTest extends AbstractJasperPositionTest implements Se
         subtotalLabelPositionTest(subtotal1, 0, 0, 0, 61, 14);
         subtotalPositionTest(subtotal1, 0, 0, 14, 61, 14);
 
-        // elementPositionTest("summary.list4", 0, 0, 0, 61, 28);
-        // elementPositionTest("summary.list5", 0, 123, 0, 62, 56);
         subtotalLabelPositionTest(subtotal2, 0, 123, 0, 62, 14);
         subtotalPositionTest(subtotal2, 0, 123, 14, 62, 14);
         // elementPositionTest("summary.list6", 0, 0, 0, 62, 28);

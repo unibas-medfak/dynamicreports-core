@@ -86,10 +86,8 @@ public class Bar3DChartTest extends AbstractJasperChartTest implements Serializa
     Assertions.assertEquals(BarRenderer.class, categoryPlot.getRenderer().getClass(), "renderer");
     final BarRenderer renderer = (BarRenderer) categoryPlot.getRenderer();
     Assertions.assertTrue(renderer.getDefaultItemLabelsVisible(), "show labels");
-   // Assertions.assertEquals("x offset", 2d, renderer.getXOffset(), 0);
-   // Assertions.assertEquals("y offset", 3d, renderer.getYOffset(), 0);
 
-    chart = getChart("summary.chart2", 0);
+      chart = getChart("summary.chart2", 0);
     Axis axis = chart.getCategoryPlot().getDomainAxis();
     Assertions.assertEquals(axis.getLabel(), "category", "category label");
     Assertions.assertEquals(Color.BLUE, axis.getLabelPaint(),"category label color");

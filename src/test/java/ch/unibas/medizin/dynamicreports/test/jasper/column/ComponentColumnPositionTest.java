@@ -74,8 +74,6 @@ public class ComponentColumnPositionTest extends AbstractJasperPositionTest impl
 
         // column3
         columnTitlePositionTest(column3, 0, 198, 0, 377, 16);
-        // columnDetailPositionTest(column3, 0, 198, 0, 377, 32);
-        // columnDetailPositionTest(column3, 1, 198, 0, 377, 32);
 
         elementPositionTest("detail.list2", 0, 198, 0, 377, 16);
         elementPositionTest("detail.list2", 1, 198, 0, 377, 16);

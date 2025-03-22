@@ -85,10 +85,8 @@ public class XyBarChartTest extends AbstractJasperChartTest implements Serializa
     final XYPlot plot = chart.getXYPlot();
      Assertions.assertEquals( XYBarRenderer.class, plot.getRenderer().getClass(),"renderer");
     Assertions.assertTrue(plot.getRenderer().getDefaultItemLabelsVisible(), "show labels");
-    // Assertions.assertFalse("show tick labels", plot.getDomainAxis().isTickMarksVisible());
-    // Assertions.assertFalse("show tick marks", plot.getDomainAxis().isTickLabelsVisible());
 
-    chart = getChart("summary.chart2", 0);
+      chart = getChart("summary.chart2", 0);
     Axis axis = chart.getXYPlot().getDomainAxis();
      Assertions.assertEquals( "category", axis.getLabel(),"category label");
      Assertions.assertEquals( Color.BLUE, axis.getLabelPaint(),"category label color");

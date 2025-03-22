@@ -90,10 +90,8 @@ public class StackedBar3DChartTest extends AbstractJasperChartTest implements Se
      Assertions.assertEquals( StackedBarRenderer.class,        categoryPlot.getRenderer().getClass(),"renderer");
     final BarRenderer renderer = (BarRenderer) categoryPlot.getRenderer();
     Assertions.assertTrue(renderer.getDefaultItemLabelsVisible(), "show labels");
-  //   Assertions.assertEquals( 2d, renderer.getXOffset(), 0,"x offset");
-  //   Assertions.assertEquals( 3d, renderer.getYOffset(), 0,"y offset");
 
-    chart = getChart("summary.chart2", 0);
+      chart = getChart("summary.chart2", 0);
     Axis axis = chart.getCategoryPlot().getDomainAxis();
      Assertions.assertEquals( "category", axis.getLabel(),"category label");
      Assertions.assertEquals( Color.BLUE, axis.getLabelPaint(),"category label color");
