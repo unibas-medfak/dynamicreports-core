@@ -47,8 +47,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * <p>DynamicReports class.</p>
@@ -57,7 +57,7 @@ import org.apache.logging.log4j.Logger;
  *
  */
 public class DynamicReports {
-    private static final Logger log = LogManager.getLogger();
+    private static final Log log = LogFactory.getLog(DynamicReports.class);
 
     /**
      * A set of methods of creating report columns.<br/> It is used to display data in a multi-column layout.

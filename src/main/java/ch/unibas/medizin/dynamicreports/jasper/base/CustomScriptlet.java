@@ -23,8 +23,8 @@ package ch.unibas.medizin.dynamicreports.jasper.base;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIScriptlet;
 import net.sf.jasperreports.engine.JRAbstractScriptlet;
 import net.sf.jasperreports.engine.JRScriptletException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * <p>CustomScriptlet class.</p>
@@ -33,7 +33,7 @@ import org.apache.logging.log4j.Logger;
  * 
  */
 public class CustomScriptlet extends JRAbstractScriptlet {
-    private static final Logger log = LogManager.getLogger();
+    private static final Log log = LogFactory.getLog(CustomScriptlet.class);
 
     private final DRIScriptlet scriptlet;
     private JasperReportParameters reportParameters;
