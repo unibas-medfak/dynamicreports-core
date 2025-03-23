@@ -254,21 +254,27 @@ public class JasperReportParameters implements ReportParameters {
         result.append("FIELDS:\n");
         Collection<String> names = jasperScriptlet.getFields();
         for (String name : names) {
-            result.append(name + " = " + getFieldValue(name));
+            result.append(name);
+            result.append(" = ");
+            result.append(getFieldValue(name).toString());
             result.append("\n");
         }
 
         result.append("VARIABLES:\n");
         names = jasperScriptlet.getVariables();
         for (String name : names) {
-            result.append(name + " = " + getVariableValue(name));
+            result.append(name);
+            result.append(" = ");
+            result.append(getVariableValue(name).toString());
             result.append("\n");
         }
 
         result.append("PARAMETERS:\n");
         names = jasperScriptlet.getParameters();
         for (String name : names) {
-            result.append(name + " = " + getParameterValue(name));
+            result.append(name);
+            result.append(" = ");
+            result.append(getParameterValue(name).toString());
             result.append("\n");
         }
 

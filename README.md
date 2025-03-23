@@ -15,7 +15,7 @@ go down and disappear like that.
 This project aims to maintain a fork of the original source code supporting current dependencies.
 
 ## Usage or Build
-DynamicReports is synchronized with a GitHub repository. For Maven projects you just add dependency to your maven configuration. In case you would like to use a development version, add a Sonatype Nexus snapshot repository to your maven configuration. 
+DynamicReports is synchronized with a Maven central repository. For Maven projects you just add dependency to your maven configuration. In case you would like to use a development version, add a Sonatype Nexus snapshot repository to your maven configuration. 
 
 ### Maven
 #### Core module
@@ -23,7 +23,7 @@ DynamicReports is synchronized with a GitHub repository. For Maven projects you 
 <dependency>
     <groupId>ch.unibas.medizin</groupId>
     <artifactId>dynamicreports-core</artifactId>
-    <version>0.0.1</version>
+    <version>7.0.0</version>
 </dependency>
 ```
 

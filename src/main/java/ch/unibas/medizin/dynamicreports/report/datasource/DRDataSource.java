@@ -21,7 +21,6 @@
 package ch.unibas.medizin.dynamicreports.report.datasource;
 
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
-import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRField;
 import net.sf.jasperreports.engine.JRRewindableDataSource;
 

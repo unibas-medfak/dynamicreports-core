@@ -29,7 +29,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabMe
 import ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabVariable;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIComplexExpression;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
-import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 
 import java.io.Serial;
 import java.util.List;

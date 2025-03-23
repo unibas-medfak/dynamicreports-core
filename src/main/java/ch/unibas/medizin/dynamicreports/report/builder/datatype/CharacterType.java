@@ -24,7 +24,6 @@ import ch.unibas.medizin.dynamicreports.report.base.datatype.AbstractDataType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.defaults.Defaults;
-import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serial;
