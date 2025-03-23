@@ -26,6 +26,8 @@ import ch.unibas.medizin.dynamicreports.report.definition.ReportParameters;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRRewindableDataSource;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.Serial;
 
@@ -38,6 +40,8 @@ import java.io.Serial;
 public class DataSourceExpression extends AbstractSimpleExpression<JRDataSource> {
     @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
+
+    private static final Logger log = LogManager.getLogger();
 
     private final JRDataSource dataSource;
     private boolean moveFirst = false;
@@ -57,7 +61,8 @@ public class DataSourceExpression extends AbstractSimpleExpression<JRDataSource>
         if (moveFirst && dataSource != null && dataSource instanceof JRRewindableDataSource) {
             try {
                 ((JRRewindableDataSource) dataSource).moveFirst();
-            } catch (JRException e) {
+            } catch (final JRException e) {
+                log.error(e.getMessage());
             }
         }
         moveFirst = true;

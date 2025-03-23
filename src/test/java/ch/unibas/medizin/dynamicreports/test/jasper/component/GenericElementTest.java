@@ -69,7 +69,7 @@ public class GenericElementTest {
     }
 
     protected void configureReport(JasperReportBuilder rb) {
-        final GenericElementBuilder genericElement = cmp.genericElement("http://www.dynamicreports.org/custom", "custom").addParameter("id", "10").addParameter("data", new ParameterExpression());
+        final GenericElementBuilder genericElement = cmp.genericElement("https://www.dynamicreports.org/custom", "custom").addParameter("id", "10").addParameter("data", new ParameterExpression());
 
         rb.scriptlets(new ReportScriptlet()).fields(field("field1", type.stringType())).summary(genericElement);
     }

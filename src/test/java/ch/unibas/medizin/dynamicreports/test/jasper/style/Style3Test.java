@@ -50,8 +50,7 @@ public class Style3Test extends AbstractJasperStyleTest implements Serializable 
   @Serial
   private static final long serialVersionUID = 1L;
 
-  private TextColumnBuilder<String> column1;
-  private TextColumnBuilder<String> column2;
+    private TextColumnBuilder<String> column2;
   private TextColumnBuilder<String> column3;
   private TextColumnBuilder<String> column4;
   private ColumnGroupBuilder group1;
@@ -61,7 +60,8 @@ public class Style3Test extends AbstractJasperStyleTest implements Serializable 
     final StyleBuilder titleStyle = stl.style().setForegroundColor(Color.RED);
     final StyleBuilder columnStyle = stl.style().setForegroundColor(Color.BLUE);
 
-    rb.setColumnTitleStyle(titleStyle).setColumnStyle(columnStyle).columns(
+      TextColumnBuilder<String> column1;
+      rb.setColumnTitleStyle(titleStyle).setColumnStyle(columnStyle).columns(
         column1 = col.column("Column1", "field1", type.stringType()).setStyle(stl.style().italic())
             .setTitleStyle(stl.style().bold()),
         column2 = col.column("Column2", "field2", type.stringType()),

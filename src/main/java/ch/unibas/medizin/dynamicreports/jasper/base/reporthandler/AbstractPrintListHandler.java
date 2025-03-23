@@ -23,6 +23,8 @@ package ch.unibas.medizin.dynamicreports.jasper.base.reporthandler;
 import ch.unibas.medizin.dynamicreports.jasper.builder.JasperReportBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.definition.JasperReportHandler;
 import net.sf.jasperreports.engine.JasperPrint;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * <p>Abstract AbstractPrintListHandler class.</p>
@@ -31,6 +33,8 @@ import net.sf.jasperreports.engine.JasperPrint;
  * 
  */
 public abstract class AbstractPrintListHandler implements JasperReportHandler {
+    private static final Logger log = LogManager.getLogger();
+
     private boolean continuousPageNumbering;
     private int pageNumber;
 
@@ -56,7 +60,8 @@ public abstract class AbstractPrintListHandler implements JasperReportHandler {
                 add(jasperPrint);
                 pageNumber += jasperPrint.getPages().size();
                 jasperReportBuilder.rebuild();
-            } catch (Exception e) {
+            } catch (final Exception e) {
+                log.error(e.getMessage(), e);
             }
         }
     }

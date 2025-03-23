@@ -48,7 +48,6 @@ public class CrosstabPosition7Test extends AbstractJasperCrosstabPositionTest {
     private CrosstabRowGroupBuilder<String> rowGroup2;
     private CrosstabColumnGroupBuilder<String> columnGroup1;
     private CrosstabColumnGroupBuilder<String> columnGroup2;
-    private CrosstabMeasureBuilder<Integer> measure;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
@@ -58,7 +57,7 @@ public class CrosstabPosition7Test extends AbstractJasperCrosstabPositionTest {
         TextColumnBuilder<String> column4 = col.column("Column4", "field2", String.class);
         TextColumnBuilder<Integer> column5 = col.column("Column5", "field3", Integer.class);
 
-        measure = ctab.measure("measure", column5, Calculation.SUM);
+        CrosstabMeasureBuilder<Integer> measure = ctab.measure("measure", column5, Calculation.SUM);
 
         CrosstabBuilder crosstab = ctab.crosstab()
                                        .rowGroups(rowGroup1 = ctab.rowGroup(column1), rowGroup2 = ctab.rowGroup(column2).setShowTotal(false))

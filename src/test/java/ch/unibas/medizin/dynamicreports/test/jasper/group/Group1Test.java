@@ -60,12 +60,12 @@ public class Group1Test extends AbstractJasperValueTest implements Serializable 
     private FieldBuilder<String> field3;
     private TextColumnBuilder<Integer> column2;
     private TextColumnBuilder<String> column3;
-    private TextColumnBuilder<Integer> column4;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
         TextColumnBuilder<String> column1;
 
+        TextColumnBuilder<Integer> column4;
         rb.setLocale(Locale.ENGLISH)
           .columns(column1 = col.column("Column1", "field1", String.class), column2 = col.column("Column2", "field2", Integer.class), column3 = col.column("Column3", "field4", String.class),
                    column4 = col.column("Column4", "field5", Integer.class).setPattern("#,###.00"))

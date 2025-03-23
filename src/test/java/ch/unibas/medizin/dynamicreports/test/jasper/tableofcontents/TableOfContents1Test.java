@@ -55,8 +55,6 @@ public class TableOfContents1Test extends AbstractJasperValueTest implements Ser
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private TextColumnBuilder<String> column1;
-    private TextColumnBuilder<String> column2;
     private TextColumnBuilder<String> column3;
     private ColumnGroupBuilder group1;
     private ColumnGroupBuilder group2;
@@ -67,6 +65,8 @@ public class TableOfContents1Test extends AbstractJasperValueTest implements Ser
         labelExpression = new LabelExpression();
         final TableOfContentsHeadingBuilder tocHeading = tableOfContentsHeading().setLabel(labelExpression);
 
+        TextColumnBuilder<String> column2;
+        TextColumnBuilder<String> column1;
         rb.tableOfContents()
           .columns(column1 = col.column("Column1", "field1", type.stringType()), column2 = col.column("Column2", "field2", type.stringType()),
                    column3 = col.column("Column3", "field3", type.stringType()))

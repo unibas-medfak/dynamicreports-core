@@ -39,13 +39,13 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TableOfContentsPosition2Test extends AbstractJasperPositionTest {
-    private TextColumnBuilder<String> column1;
-    private TextColumnBuilder<String> column2;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
         final TableOfContentsCustomizerBuilder tableOfContentsCustomizer = tableOfContentsCustomizer().setTextFixedWidth(100).setPageIndexFixedWidth(30);
 
+        TextColumnBuilder<String> column2;
+        TextColumnBuilder<String> column1;
         rb.tableOfContents(tableOfContentsCustomizer)
           .columns(column1 = col.column("Column1", "field1", type.stringType()), column2 = col.column("Column2", "field2", type.stringType()), col.column("Column3", "field3", type.stringType()))
           .groupBy(column1, column2);

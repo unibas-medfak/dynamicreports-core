@@ -39,13 +39,13 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TableOfContentsPosition1Test extends AbstractJasperPositionTest {
-    private TextColumnBuilder<String> column1;
-    private TextColumnBuilder<String> column2;
     private ColumnGroupBuilder group1;
     private ColumnGroupBuilder group2;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
+        TextColumnBuilder<String> column2;
+        TextColumnBuilder<String> column1;
         rb.tableOfContents()
           .columns(column1 = col.column("Column1", "field1", type.stringType()), column2 = col.column("Column2", "field2", type.stringType()), col.column("Column3", "field3", type.stringType()))
           .groupBy(group1 = grp.group(column1), group2 = grp.group(column2));

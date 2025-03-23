@@ -38,31 +38,31 @@ public class PageNumber6Test {
         try {
             report().summary(cmp.pageXofY().setFormatExpression("{1} {0}")).toJasperPrint();
             Assertions.fail("Wrong page number");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         try {
             report().summary(cmp.pageXofY().setFormatExpression("{1} {1}")).toJasperPrint();
             Assertions.fail("Wrong page number");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         try {
             report().summary(cmp.pageXofY().setFormatExpression("{0} {0}")).toJasperPrint();
             Assertions.fail("Wrong page number");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         try {
             report().summary(cmp.pageXofY().setFormatExpression("{0}")).toJasperPrint();
             Assertions.fail("Wrong page number");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         try {
             report().summary(cmp.pageXofY().setFormatExpression("{1}")).toJasperPrint();
             Assertions.fail("Wrong page number");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
     }
 }

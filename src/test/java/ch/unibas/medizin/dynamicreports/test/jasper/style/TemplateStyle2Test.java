@@ -54,8 +54,7 @@ public class TemplateStyle2Test extends AbstractJasperStyleTest implements Seria
   private static final long serialVersionUID = 1L;
 
   private TextColumnBuilder<Integer> column1;
-  private TextColumnBuilder<String> column2;
-  private ColumnGroupBuilder group1;
+    private ColumnGroupBuilder group1;
   private AggregationSubtotalBuilder<Integer> subtotal1;
 
   @Override
@@ -69,7 +68,8 @@ public class TemplateStyle2Test extends AbstractJasperStyleTest implements Seria
     final ReportTemplateBuilder template =
         template().templateStyles(textStyle, titleStyle, subtotalStyle, boldStyle);
 
-    rb.setTemplate(template).setTextStyle(stl.templateStyle("textStyle"))
+      TextColumnBuilder<String> column2;
+      rb.setTemplate(template).setTextStyle(stl.templateStyle("textStyle"))
         .setColumnTitleStyle(stl.templateStyle("titleStyle"))
         .setSubtotalStyle(stl.templateStyle("subtotalStyle"))
         .columns(column1 = col.column("Column1", "field1", type.integerType()),

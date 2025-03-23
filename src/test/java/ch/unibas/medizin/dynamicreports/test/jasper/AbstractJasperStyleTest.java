@@ -122,7 +122,7 @@ public abstract class AbstractJasperStyleTest extends AbstractJasperTest {
       VerticalImageAlignEnum verticalAlignment) {
     final JRImageAlignment element = (JRImageAlignment) getElementAt(name, index);
     if (verticalAlignment == null) {
-      Assertions.assertEquals(VerticalTextAlignEnum.TOP,
+      Assertions.assertEquals(VerticalImageAlignEnum.TOP,
           element.getVerticalImageAlign(), "verticalAlignment");
     }
     Assertions.assertEquals(verticalAlignment, element.getVerticalImageAlign(), "verticalAlignment");

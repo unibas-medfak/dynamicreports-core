@@ -138,7 +138,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - title band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         rb1 = new DesignReportBuilder(new TestTemplateDesign());
@@ -146,7 +146,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - page header band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         rb1 = new DesignReportBuilder(new TestTemplateDesign());
@@ -154,7 +154,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - page footer band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         rb1 = new DesignReportBuilder(new TestTemplateDesign());
@@ -162,7 +162,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - column header band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         rb1 = new DesignReportBuilder(new TestTemplateDesign());
@@ -170,7 +170,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - column footer band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         rb1 = new DesignReportBuilder(new TestTemplateDesign());
@@ -178,7 +178,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - page footer band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         rb1 = new DesignReportBuilder(new TestTemplateDesign());
@@ -186,7 +186,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - summary band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         rb1 = new DesignReportBuilder(new TestTemplateDesign());
@@ -194,7 +194,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - no data band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         rb1 = new DesignReportBuilder(new TestTemplateDesign());
@@ -202,7 +202,7 @@ public class TemplateDesignTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("template design failed - background band");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
     }
 

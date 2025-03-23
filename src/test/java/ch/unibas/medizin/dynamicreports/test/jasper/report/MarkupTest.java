@@ -43,13 +43,13 @@ import net.sf.jasperreports.engine.JRDataSource;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class MarkupTest extends AbstractJasperValueTest {
     private TextColumnBuilder<String> column1;
-    private TextColumnBuilder<Integer> column2;
     private AggregationSubtotalBuilder<Integer> subtotal1;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
         final StyleBuilder style = stl.style().setMarkup(Markup.HTML);
 
+        TextColumnBuilder<Integer> column2;
         rb.setColumnStyle(style)
           .columns(column1 = col.column("Column1", "field1", String.class), column2 = col.column("Column2", "field2", Integer.class))
           .subtotalsAtSummary(subtotal1 = sbt.sum(column2).setLabel("subtotal <b>subtotal</b> subtotal").setLabelStyle(style))

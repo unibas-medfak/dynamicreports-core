@@ -42,12 +42,12 @@ import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.typ
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class DataTypeGroupTest extends AbstractJasperValueTest {
-    private TextColumnBuilder<Date> column1;
     private TextColumnBuilder<Date> column2;
     private ColumnGroupBuilder group1;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
+        TextColumnBuilder<Date> column1;
         rb.setLocale(Locale.ENGLISH)
           .columns(column1 = col.column("Column1", "field1", type.dateMonthType()), column2 = col.column("Column2", "field1", type.dateType()))
           .groupBy(group1 = grp.group(column1).groupByDataType());

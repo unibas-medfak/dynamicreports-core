@@ -144,7 +144,7 @@ public class ChartDatasetTest extends AbstractJasperChartTest implements Seriali
             try {
                 reportParameters.getValue("parameter");
                 Assertions.fail("parameter is not null");
-            } catch (final Exception e) {
+            } catch (final Exception ignored) {
             }
             Assertions.assertEquals("parameter_value", reportParameters.getMasterParameters().getValue("parameter"));
 
@@ -164,7 +164,7 @@ public class ChartDatasetTest extends AbstractJasperChartTest implements Seriali
             try {
                 reportParameters.getValue("parameter");
                 Assertions.fail("parameter is not null");
-            } catch (final Exception e) {
+            } catch (final Exception ignored) {
             }
             Assertions.assertEquals("parameter_value", reportParameters.getMasterParameters().getValue("parameter"));
             return reportParameters.getValue("field1") + "_exp";

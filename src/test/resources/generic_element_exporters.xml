@@ -7,14 +7,12 @@
 
     <bean id="customExportHandlerBundle"
           class="net.sf.jasperreports.engine.export.DefaultElementHandlerBundle">
-        <property name="namespace" value="http://www.dynamicreports.org/custom"/>
+        <property name="namespace" value="https://www.dynamicreports.org/custom"/>
         <property name="elementHandlers">
             <map>
                 <entry key="custom">
                     <map>
-                        <entry key="net.sf.jasperreports.html">
-                            <ref bean="customHtmlExportHandler"/>
-                        </entry>
+                        <entry key="net.sf.jasperreports.html" value-ref="customHtmlExportHandler"/>
                     </map>
                 </entry>
             </map>

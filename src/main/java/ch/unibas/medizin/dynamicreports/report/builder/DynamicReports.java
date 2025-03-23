@@ -47,6 +47,8 @@ import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * <p>DynamicReports class.</p>
@@ -55,6 +57,8 @@ import ch.unibas.medizin.dynamicreports.report.exception.DRException;
  *
  */
 public class DynamicReports {
+    private static final Logger log = LogManager.getLogger();
+
     /**
      * A set of methods of creating report columns.<br/> It is used to display data in a multi-column layout.
      */
@@ -148,6 +152,7 @@ public class DynamicReports {
             final DRIDataType<? super T, T> dataType = DataTypes.detectType(valueClass);
             fieldBuilder.setDataType(dataType);
         } catch (final DRException e) {
+            log.error(e.getMessage());
         }
         return fieldBuilder;
     }

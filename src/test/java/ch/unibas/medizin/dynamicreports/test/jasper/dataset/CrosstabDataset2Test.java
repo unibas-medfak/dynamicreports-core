@@ -123,7 +123,7 @@ public class CrosstabDataset2Test extends AbstractJasperCrosstabValueTest implem
             try {
                 reportParameters.getValue("parameter");
                 Assertions.fail("parameter is not null");
-            } catch (final Exception e) {
+            } catch (final Exception ignored) {
             }
             Assertions.assertEquals("parameter_value", reportParameters.getMasterParameters().getValue("parameter"));
             return "value = " + value;
@@ -140,7 +140,7 @@ public class CrosstabDataset2Test extends AbstractJasperCrosstabValueTest implem
             try {
                 reportParameters.getValue("parameter");
                 Assertions.fail("parameter is not null");
-            } catch (final Exception e) {
+            } catch (final Exception ignored) {
             }
             Assertions.assertEquals("parameter_value", reportParameters.getMasterParameters().getValue("parameter"));
             return "value = " + value;

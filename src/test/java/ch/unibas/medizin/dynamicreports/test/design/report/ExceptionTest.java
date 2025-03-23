@@ -50,7 +50,7 @@ public class ExceptionTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("component fixed width exception");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         final ReportBuilder<?> rb2 = new DesignReportBuilder();
@@ -58,7 +58,7 @@ public class ExceptionTest {
         try {
             new DRDesignReport(rb2.getReport());
             Assertions.fail("component fixed width exception");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         final ReportBuilder<?> rb3 = new DesignReportBuilder();
@@ -66,7 +66,7 @@ public class ExceptionTest {
         try {
             new DRDesignReport(rb3.getReport());
             Assertions.fail("component fixed width exception");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
     }
 
@@ -77,7 +77,7 @@ public class ExceptionTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("component minimum width exception");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         final ReportBuilder<?> rb2 = new DesignReportBuilder();
@@ -85,7 +85,7 @@ public class ExceptionTest {
         try {
             new DRDesignReport(rb2.getReport());
             Assertions.fail("component fixed width exception");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         final ReportBuilder<?> rb3 = new DesignReportBuilder();
@@ -93,7 +93,7 @@ public class ExceptionTest {
         try {
             new DRDesignReport(rb3.getReport());
             Assertions.fail("component fixed width exception");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
     }
 
@@ -106,14 +106,14 @@ public class ExceptionTest {
         try {
             new DRDesignReport(rb1.getReport());
             Assertions.fail("variable exception");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
 
         final ReportBuilder<?> rb2 = new DesignReportBuilder().columns(column).groupBy(group).variables(variable("fieldName", Object.class, Calculation.SUM).setResetType(Evaluation.GROUP));
         try {
             new DRDesignReport(rb2.getReport());
             Assertions.fail("variable exception");
-        } catch (final DRException e) {
+        } catch (final DRException ignored) {
         }
     }
 }

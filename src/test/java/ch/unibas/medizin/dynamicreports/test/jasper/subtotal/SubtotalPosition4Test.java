@@ -43,12 +43,12 @@ import net.sf.jasperreports.engine.JRDataSource;
 public class SubtotalPosition4Test extends AbstractJasperPositionTest {
     private AggregationSubtotalBuilder<Integer> subtotal1;
     private AggregationSubtotalBuilder<Integer> subtotal2;
-    private TextColumnBuilder<String> column1;
     private TextColumnBuilder<Integer> column2;
     private ColumnGroupBuilder group1;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
+        TextColumnBuilder<String> column1;
         rb.columns(column1 = col.column("Column1", "field1", type.stringType()).setFixedWidth(540), column2 = col.column("Column2", "field2", type.integerType()))
           .groupBy(group1 = grp.group(column1).setHeaderWithSubtotal(true))
           .subtotalsAtFirstGroupHeader(subtotal1 = sbt.sum(column2))

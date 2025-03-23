@@ -40,10 +40,10 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TableOfContentsPosition3Test extends AbstractJasperPositionTest {
-    private TextColumnBuilder<String> column1;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
+        TextColumnBuilder<String> column1;
         rb.setPageFormat(PageType.A6, PageOrientation.LANDSCAPE)
           .setPageMargin(margin(10).setLeft(30))
           .tableOfContents()

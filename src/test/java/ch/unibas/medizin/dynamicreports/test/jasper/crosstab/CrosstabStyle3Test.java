@@ -50,17 +50,15 @@ public class CrosstabStyle3Test extends AbstractJasperCrosstabStyleTest implemen
   @Serial
   private static final long serialVersionUID = 1L;
 
-  private CrosstabRowGroupBuilder<String> rowGroup;
-  private CrosstabColumnGroupBuilder<String> columnGroup;
-  private CrosstabMeasureBuilder<Integer> measure1;
+    private CrosstabMeasureBuilder<Integer> measure1;
 
   @Override
   protected void configureReport(JasperReportBuilder rb) {
     FieldBuilder<String> field1 = field("field1", String.class);
     FieldBuilder<String> field2 = field("field2", String.class);
 
-    rowGroup = ctab.rowGroup(field1).setShowTotal(false);
-    columnGroup = ctab.columnGroup(field2).setShowTotal(false);
+      CrosstabRowGroupBuilder<String> rowGroup = ctab.rowGroup(field1).setShowTotal(false);
+      CrosstabColumnGroupBuilder<String> columnGroup = ctab.columnGroup(field2).setShowTotal(false);
 
     measure1 = ctab.measure("field3", Integer.class, Calculation.SUM);
 

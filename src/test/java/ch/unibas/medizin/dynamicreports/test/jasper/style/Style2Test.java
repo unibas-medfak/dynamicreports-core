@@ -52,8 +52,7 @@ public class Style2Test extends AbstractJasperStyleTest implements Serializable 
   private static final long serialVersionUID = 1L;
 
   private TextColumnBuilder<Integer> column1;
-  private TextColumnBuilder<String> column2;
-  private ColumnGroupBuilder group1;
+    private ColumnGroupBuilder group1;
   private AggregationSubtotalBuilder<Integer> subtotal1;
 
   @Override
@@ -62,7 +61,8 @@ public class Style2Test extends AbstractJasperStyleTest implements Serializable 
     final StyleBuilder titleStyle = stl.style(textStyle).bold();
     final StyleBuilder subtotalStyle = stl.style(2).setTopBorder(stl.pen1Point()).bold();
 
-    rb.setTextStyle(textStyle).setColumnTitleStyle(titleStyle).setSubtotalStyle(subtotalStyle)
+      TextColumnBuilder<String> column2;
+      rb.setTextStyle(textStyle).setColumnTitleStyle(titleStyle).setSubtotalStyle(subtotalStyle)
         .columns(column1 = col.column("Column1", "field1", type.integerType()),
             column2 =
                 col.column("Column2", "field2", type.stringType()).setStyle(stl.style().bold()))

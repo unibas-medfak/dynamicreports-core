@@ -42,7 +42,6 @@ import net.sf.jasperreports.engine.JRDataSource;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TableOfContentsPosition4Test extends AbstractJasperPositionTest {
-    private TextColumnBuilder<String> column1;
 
     @Override
     protected void configureReport(JasperReportBuilder rb) {
@@ -50,6 +49,7 @@ public class TableOfContentsPosition4Test extends AbstractJasperPositionTest {
 
         final ReportTemplateBuilder template = template().setTableOfContents(true).setTableOfContentsCustomizer(tableOfContentsCustomizer);
 
+        TextColumnBuilder<String> column1;
         rb.setTemplate(template).columns(column1 = col.column("Column1", "field1", type.stringType()), col.column("Column2", "field2", type.stringType())).groupBy(column1);
     }
 
