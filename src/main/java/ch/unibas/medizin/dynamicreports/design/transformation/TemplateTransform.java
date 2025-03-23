@@ -828,7 +828,7 @@ public class TemplateTransform {
         return maxPageWidth + getPageMargin().getLeft() + getPageMargin().getRight();
     }
 
-    private int getMaxBandWidth(final DRIDesignBand band, final int maxWidth) throws DRException {
+    private int getMaxBandWidth(final DRIDesignBand band, final int maxWidth) {
         if (band == null || band.getList() == null) {
             return maxWidth;
         }
@@ -837,7 +837,7 @@ public class TemplateTransform {
         return Math.max(bandWidth, maxWidth);
     }
 
-    private int getStaticPageWidth() throws DRException {
+    private int getStaticPageWidth() {
         if (accessor.getPageWidth() != null) {
             return accessor.getPageWidth();
         }
@@ -876,9 +876,8 @@ public class TemplateTransform {
      * <p>getPageOrientation.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.PageOrientation} object.
-     * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    protected PageOrientation getPageOrientation() throws DRException {
+    protected PageOrientation getPageOrientation() {
         if (report.getPage().getOrientation() != null) {
             return report.getPage().getOrientation();
         }
@@ -895,9 +894,8 @@ public class TemplateTransform {
      * <p>getPageMargin.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIMargin} object.
-     * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    protected DRIMargin getPageMargin() throws DRException {
+    protected DRIMargin getPageMargin() {
         if (report.getPage().getMargin() != null) {
             return report.getPage().getMargin();
         }
@@ -936,9 +934,8 @@ public class TemplateTransform {
      * <p>getPageColumnSpace.</p>
      *
      * @return an int.
-     * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    protected int getPageColumnSpace() throws DRException {
+    protected int getPageColumnSpace() {
         if (report.getPage().getColumnSpace() != null) {
             return report.getPage().getColumnSpace();
         }

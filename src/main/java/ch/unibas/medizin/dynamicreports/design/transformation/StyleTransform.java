@@ -235,7 +235,7 @@ public class StyleTransform {
         return designConditionalStyle;
     }
 
-    private void baseStyle(DRDesignBaseStyle designBaseStyle, DRIBaseStyle baseStyle) throws DRException {
+    private void baseStyle(DRDesignBaseStyle designBaseStyle, DRIBaseStyle baseStyle) {
         designBaseStyle.setForegroundColor(baseStyle.getForegroundColor());
         designBaseStyle.setBackgroundColor(baseStyle.getBackgroundColor());
         designBaseStyle.setRadius(baseStyle.getRadius());

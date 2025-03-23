@@ -53,7 +53,7 @@ public class BooleanType extends AbstractDataType<Boolean, Boolean> {
 
     /** {@inheritDoc} */
     @Override
-    public Boolean stringToValue(String value, Locale locale) throws DRException {
+    public Boolean stringToValue(String value, Locale locale) {
         return Boolean.valueOf(value);
     }
 }

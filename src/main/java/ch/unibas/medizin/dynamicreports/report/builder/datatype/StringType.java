@@ -53,7 +53,7 @@ public class StringType extends AbstractDataType<String, String> {
 
     /** {@inheritDoc} */
     @Override
-    public String stringToValue(String value, Locale locale) throws DRException {
+    public String stringToValue(String value, Locale locale) {
         return value;
     }
 }

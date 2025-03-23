@@ -413,7 +413,7 @@ public class CrosstabTransform {
         return null;
     }
 
-    private DRIReportStyle getCellStyle(final DRIReportStyle reportStyle) throws DRException {
+    private DRIReportStyle getCellStyle(final DRIReportStyle reportStyle) {
         final DRIStyle style = accessor.getStyleTransform().getStyle(reportStyle);
         if (style == null || style.getBackgroundColor() == null) {
             return null;

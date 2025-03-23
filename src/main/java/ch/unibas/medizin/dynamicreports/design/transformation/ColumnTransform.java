@@ -136,7 +136,7 @@ public class ColumnTransform {
         return columnComponents;
     }
 
-    private DRIComponent createBooleanComponent(final DRIBooleanColumn column) throws DRException {
+    private DRIComponent createBooleanComponent(final DRIBooleanColumn column) {
         final DRIReportStyle booleanColumnStyle = accessor.getTemplateTransform().getBooleanColumnStyle(column);
         if (booleanColumnStyle == null) {
             return column.getComponent();

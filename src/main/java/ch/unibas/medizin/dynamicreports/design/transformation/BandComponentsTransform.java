@@ -208,7 +208,7 @@ class BandComponentsTransform {
         }
     }
 
-    private void prepareListBackgroundComponents(DRDesignComponent component) throws DRException {
+    private void prepareListBackgroundComponents(DRDesignComponent component) {
         if (component instanceof DRDesignList list) {
             if (list.getBackgroundComponent() != null) {
                 DRDesignComponent backgroundComponent = list.getBackgroundComponent();

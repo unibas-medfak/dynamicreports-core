@@ -73,13 +73,13 @@ public class DRDataSource implements JRRewindableDataSource, Serializable {
 
     /** {@inheritDoc} */
     @Override
-    public Object getFieldValue(JRField field) throws JRException {
+    public Object getFieldValue(JRField field) {
         return currentRecord.get(field.getName());
     }
 
     /** {@inheritDoc} */
     @Override
-    public boolean next() throws JRException {
+    public boolean next() {
         if (iterator == null) {
             this.iterator = values.iterator();
         }
@@ -92,7 +92,7 @@ public class DRDataSource implements JRRewindableDataSource, Serializable {
 
     /** {@inheritDoc} */
     @Override
-    public void moveFirst() throws JRException {
+    public void moveFirst() {
         iterator = null;
     }
 }

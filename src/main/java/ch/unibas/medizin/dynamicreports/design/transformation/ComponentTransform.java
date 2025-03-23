@@ -586,7 +586,7 @@ public class ComponentTransform {
     }
 
     // format field
-    private DRTextField<String> formatField(final DRIFormatField formatField, final DRIExpression<String> expression) throws DRException {
+    private DRTextField<String> formatField(final DRIFormatField formatField, final DRIExpression<String> expression) {
         final DRTextField<String> formatFieldTextField = new DRTextField<>();
         formatFieldTextField.setAnchorNameExpression(formatField.getAnchorNameExpression());
         formatFieldTextField.setBookmarkLevel(formatField.getBookmarkLevel());

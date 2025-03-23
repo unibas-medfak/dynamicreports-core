@@ -54,7 +54,7 @@ public class CharacterType extends AbstractDataType<Character, Character> {
 
     /** {@inheritDoc} */
     @Override
-    public Character stringToValue(String value, Locale locale) throws DRException {
+    public Character stringToValue(String value, Locale locale) {
         if (StringUtils.isNotEmpty(value)) {
             return value.charAt(0);
         }

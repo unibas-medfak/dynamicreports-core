@@ -51,9 +51,8 @@ public class CrosstabExpression<T> extends AbstractComplexExpression<T> {
      *
      * @param crosstab   a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstab} object.
      * @param expression a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
-     * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
-    public CrosstabExpression(DRICrosstab crosstab, DRIExpression<T> expression) throws DRException {
+    public CrosstabExpression(DRICrosstab crosstab, DRIExpression<T> expression) {
         this.expression = expression;
         if (expression instanceof DRIComplexExpression) {
             for (DRIExpression<?> express : ((DRIComplexExpression<?>) expression).getExpressions()) {
