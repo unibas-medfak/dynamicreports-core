@@ -59,14 +59,12 @@ public class GroupedStackedBarRendererCustomizer implements DRIChartCustomizer, 
     public static final String GROUP_SERIES_KEY = "-{group-series}-";
     @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
-    private KeyToGroupMap map;
-    private Map<String, Paint> seriesColors;
 
     /** {@inheritDoc} */
     @Override
     public void customize(JFreeChart chart, ReportParameters reportParameters) {
-        this.seriesColors = new LinkedHashMap<>();
-        this.map = null;
+        Map<String, Paint> seriesColors = new LinkedHashMap<>();
+        KeyToGroupMap map = null;
         final Set<String> groups = new LinkedHashSet<>();
         CategoryDataset dataset = chart.getCategoryPlot().getDataset();
 

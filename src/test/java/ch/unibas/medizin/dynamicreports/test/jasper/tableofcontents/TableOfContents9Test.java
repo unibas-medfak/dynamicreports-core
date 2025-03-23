@@ -46,7 +46,7 @@ public class TableOfContents9Test extends AbstractJasperValueTest {
     protected void configureReport(JasperReportBuilder rb) {
         final TextColumnBuilder<String> column1 = col.column("Column1", "field1", type.stringType());
 
-        rb.tableOfContents().setLocale(new Locale("es")).columns(column1, col.column("Column2", "field2", type.stringType())).groupBy(grp.group(column1)).pageFooter(cmp.pageXofY());
+        rb.tableOfContents().setLocale(Locale.of("es")).columns(column1, col.column("Column2", "field2", type.stringType())).groupBy(grp.group(column1)).pageFooter(cmp.pageXofY());
     }
 
     @Override

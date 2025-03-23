@@ -507,10 +507,11 @@ public class ComponentTransform {
         }
 
         final int pageXofYWidth = templateTransform.getPageXofYWidth(pageXofY);
+        int pageXWidth = StyleResolver.getFontWidth(style, 4);
+        int pageYWidth = pageXofYWidth - pageXWidth;
+
         switch (horizontalTextAlignment) {
             case LEFT:
-                int pageXWidth = StyleResolver.getFontWidth(style, 4);
-                int pageYWidth = pageXofYWidth - pageXWidth;
                 if (pageYWidth <= 0) {
                     pageYWidth = 10;
                 }
@@ -788,18 +789,17 @@ public class ComponentTransform {
 
     // custom component
     private DRDesignComponent customComponent(final DRICustomComponent component, final ResetType resetType, final DRDesignGroup resetGroup) throws DRException {
-        final CustomComponentTransform componentTransfom = CustomComponents.getComponentTransform(component);
-        if (componentTransfom == null) {
+        final CustomComponentTransform componentTransform = CustomComponents.getComponentTransform(component);
+        if (componentTransform == null) {
             throw new DRDesignReportException("Component " + component.getClass().getName() + " not supported");
         }
-        final DRDesignComponent designComponent = (DRDesignComponent) componentTransfom.designComponent(accessor, component, resetType, resetGroup);
+        final DRDesignComponent designComponent = (DRDesignComponent) componentTransform.designComponent(accessor, component, resetType, resetGroup);
         component(designComponent, component, component.getStyle(), false, DefaultStyleType.NONE);
-        final DRIDimensionComponent dimensionComponent = component;
         if (designComponent.getWidth() == null) {
-            designComponent.setWidth(accessor.getTemplateTransform().getCustomComponentWidth(dimensionComponent));
+            designComponent.setWidth(accessor.getTemplateTransform().getCustomComponentWidth(component));
         }
         if (designComponent.getHeight() == null) {
-            designComponent.setHeight(accessor.getTemplateTransform().getCustomComponentHeight(dimensionComponent));
+            designComponent.setHeight(accessor.getTemplateTransform().getCustomComponentHeight(component));
         }
         return designComponent;
     }

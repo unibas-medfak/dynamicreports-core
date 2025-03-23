@@ -78,6 +78,7 @@ public class JasperPrintListFileHandler extends AbstractPrintListHandler {
     protected void add(JasperPrint jasperPrint) {
         try {
             File tempFile = File.createTempFile(TEMP_FILE_PREFIX, null, directory);
+            tempFile.deleteOnExit();
             JRSaver.saveObject(jasperPrint, tempFile);
             tempFiles.add(tempFile);
         } catch (JRException | IOException e) {
@@ -89,15 +90,6 @@ public class JasperPrintListFileHandler extends AbstractPrintListHandler {
     @Override
     public List<JasperPrint> getPrintList() {
         return printList;
-    }
-
-    /** {@inheritDoc} */
-    @Override
-    protected void finalize() throws Throwable {
-        for (File tempFile : tempFiles) {
-            tempFile.delete();
-        }
-        super.finalize();
     }
 
     private class PrintList implements List<JasperPrint> {

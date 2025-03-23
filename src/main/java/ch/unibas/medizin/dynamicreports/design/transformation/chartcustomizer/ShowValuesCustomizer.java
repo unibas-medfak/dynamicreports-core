@@ -36,6 +36,7 @@ import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.chart.renderer.category.CategoryItemRenderer;
 import org.jfree.chart.renderer.xy.XYItemRenderer;
+import org.jfree.chart.ui.RectangleInsets;
 import org.jfree.chart.ui.TextAnchor;
 
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
@@ -81,7 +82,7 @@ public class ShowValuesCustomizer implements DRIChartCustomizer, Serializable {
                 chart.getCategoryPlot().getRangeAxis().zoomRange(0, 1.1);
             }
             if (renderer.getClass().equals(BarRenderer.class)) {
-                ((BarRenderer) renderer).setItemLabelAnchorOffset(10D);
+                ((BarRenderer) renderer).setItemLabelInsets(new RectangleInsets(10D, 10D, 10D, 10D));
                 renderer.setDefaultPositiveItemLabelPosition(new ItemLabelPosition(ItemLabelAnchor.OUTSIDE12, TextAnchor.BASELINE_LEFT));
             }
         } else if (chart.getPlot() instanceof XYPlot) {

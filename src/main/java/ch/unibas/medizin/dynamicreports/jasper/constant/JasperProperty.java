@@ -42,7 +42,6 @@ import net.sf.jasperreports.export.WriterExporterOutput;
 import net.sf.jasperreports.export.XlsExporterConfiguration;
 import net.sf.jasperreports.export.XlsMetadataReportConfiguration;
 import net.sf.jasperreports.export.XlsReportConfiguration;
-import net.sf.jasperreports.pdf.JRPdfExporterTagHelper;
 import net.sf.jasperreports.pdf.PdfExporterConfiguration;
 import net.sf.jasperreports.pdf.PdfReportConfiguration;
 
@@ -123,18 +122,6 @@ public class JasperProperty {
      * @see TextReportConfiguration#PROPERTY_PAGE_HEIGHT
      */
     public static final String EXPORT_TEXT_PAGE_HEIGHT = TextReportConfiguration.PROPERTY_PAGE_HEIGHT;
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_H1
-     */
-    public static final String EXPORT_PDF_TAG_H1 = JRPdfExporterTagHelper.PROPERTY_TAG_H1;
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_H2
-     */
-    public static final String EXPORT_PDF_TAG_H2 = JRPdfExporterTagHelper.PROPERTY_TAG_H2;
-    /**
-     * @see JRPdfExporterTagHelper#PROPERTY_TAG_H3
-     */
-    public static final String EXPORT_PDF_TAG_H3 = JRPdfExporterTagHelper.PROPERTY_TAG_H3;
     /**
      * @see PdfExporterConfiguration#PROPERTY_CREATE_BATCH_MODE_BOOKMARKS
      */
