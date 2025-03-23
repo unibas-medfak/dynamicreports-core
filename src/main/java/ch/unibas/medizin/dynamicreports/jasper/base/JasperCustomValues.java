@@ -132,10 +132,6 @@ public class JasperCustomValues implements DRICustomValues {
      * @param valueType a {@link ch.unibas.medizin.dynamicreports.jasper.constant.ValueType} object.
      */
     public void addValueType(String name, ValueType valueType) {
-        /*
-         * if (valueTypes.containsKey(name)) { throw new JasperDesignException("Duplicate value name \""
-         * + name + "\""); }
-         */
         valueTypes.put(name, valueType);
     }
 

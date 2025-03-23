@@ -59,8 +59,7 @@ public class TitleTest extends AbstractJasperValueTest {
     super.test();
 
     numberOfPagesTest(2);
-    //elementCountTest("title.textField1", 2);
-    elementValueTest("title.textField1", "title 1", "test title");
+      elementValueTest("title.textField1", "title 1", "test title");
 
     final JRPrintText textField = (JRPrintText) getElementAt("title.textField1", 0);
     Assertions.assertEquals( "link", textField.getHyperlinkReference(), "hyperlink reference");

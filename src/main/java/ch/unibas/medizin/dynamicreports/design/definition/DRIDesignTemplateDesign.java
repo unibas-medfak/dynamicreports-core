@@ -35,63 +35,63 @@ public interface DRIDesignTemplateDesign extends Serializable {
     /**
      * <p>getTitleComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getTitleComponentsCount();
 
     /**
      * <p>getPageHeaderComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getPageHeaderComponentsCount();
 
     /**
      * <p>getPageFooterComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getPageFooterComponentsCount();
 
     /**
      * <p>getColumnHeaderComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getColumnHeaderComponentsCount();
 
     /**
      * <p>getColumnFooterComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getColumnFooterComponentsCount();
 
     /**
      * <p>getLastPageFooterComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getLastPageFooterComponentsCount();
 
     /**
      * <p>getSummaryComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getSummaryComponentsCount();
 
     /**
      * <p>getNoDataComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getNoDataComponentsCount();
 
     /**
      * <p>getBackgroundComponentsCount.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getBackgroundComponentsCount();
 

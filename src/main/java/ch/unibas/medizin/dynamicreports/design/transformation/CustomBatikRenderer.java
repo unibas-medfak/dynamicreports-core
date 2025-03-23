@@ -48,8 +48,8 @@ public class CustomBatikRenderer extends WrappingSvgDataToGraphics2DRenderer {
      * <p>Constructor for CustomBatikRenderer.</p>
      *
      * @param svgURL a {@link java.net.URL} object.
-     * @param width  a int.
-     * @param height a int.
+     * @param width  an int.
+     * @param height an int.
      * @throws net.sf.jasperreports.engine.JRException if any.
      */
     public CustomBatikRenderer(URL svgURL, int width, int height) throws JRException {

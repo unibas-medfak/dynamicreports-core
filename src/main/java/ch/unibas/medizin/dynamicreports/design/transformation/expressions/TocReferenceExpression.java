@@ -47,7 +47,7 @@ public class TocReferenceExpression extends AbstractComplexExpression<String> {
     /**
      * <p>Constructor for TocReferenceExpression.</p>
      *
-     * @param level                 a int.
+     * @param level                 an int.
      * @param expressionName        a {@link java.lang.String} object.
      * @param labelExpression       a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      * @param anchorNameExpression  a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.

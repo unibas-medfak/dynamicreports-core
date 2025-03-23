@@ -47,7 +47,7 @@ public class PageXofYNumberExpression extends AbstractComplexExpression<String> 
      * <p>Constructor for PageXofYNumberExpression.</p>
      *
      * @param pageNumberFormatExpression a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
-     * @param index                      a int.
+     * @param index                      an int.
      */
     public PageXofYNumberExpression(DRIExpression<String> pageNumberFormatExpression, int index) {
         addExpression(pageNumberFormatExpression);

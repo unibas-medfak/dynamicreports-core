@@ -139,7 +139,7 @@ public class DRDesignGroup implements DRIDesignGroup {
     /**
      * <p>addFooterBand.</p>
      *
-     * @param index      a int.
+     * @param index      an int.
      * @param footerBand a {@link ch.unibas.medizin.dynamicreports.design.base.DRDesignBand} object.
      */
     public void addFooterBand(int index, DRDesignBand footerBand) {

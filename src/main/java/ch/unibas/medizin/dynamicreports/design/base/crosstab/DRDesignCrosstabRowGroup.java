@@ -46,7 +46,7 @@ public class DRDesignCrosstabRowGroup extends DRDesignCrosstabGroup implements D
     /**
      * <p>Setter for the field <code>width</code>.</p>
      *
-     * @param width a int.
+     * @param width an int.
      */
     public void setWidth(int width) {
         this.width = width;

@@ -62,8 +62,8 @@ class BandComponentsTransform {
      * <p>prepareBand.</p>
      *
      * @param band                     a {@link ch.unibas.medizin.dynamicreports.design.base.DRDesignBand} object.
-     * @param maxWidth                 a int.
-     * @param templateDesignComponents a int.
+     * @param maxWidth                 an int.
+     * @param templateDesignComponents an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.design.base.DRDesignBand} object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */

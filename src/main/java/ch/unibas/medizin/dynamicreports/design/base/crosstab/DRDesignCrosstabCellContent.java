@@ -53,7 +53,7 @@ public class DRDesignCrosstabCellContent implements DRIDesignCrosstabCellContent
     /**
      * <p>Setter for the field <code>width</code>.</p>
      *
-     * @param width a int.
+     * @param width an int.
      */
     public void setWidth(int width) {
         this.width = width;
@@ -68,7 +68,7 @@ public class DRDesignCrosstabCellContent implements DRIDesignCrosstabCellContent
     /**
      * <p>Setter for the field <code>height</code>.</p>
      *
-     * @param height a int.
+     * @param height an int.
      */
     public void setHeight(int height) {
         this.height = height;

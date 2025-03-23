@@ -428,7 +428,7 @@ public class DynamicReports {
     /**
      * <p>margin.</p>
      *
-     * @param margin a int.
+     * @param margin an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.MarginBuilder} object.
      */
     public static MarginBuilder margin(final int margin) {
@@ -480,7 +480,7 @@ public class DynamicReports {
      * <p>cm.</p>
      *
      * @param value a {@link java.lang.Number} object.
-     * @return a int.
+     * @return an int.
      */
     public static int cm(final Number value) {
         return Units.cm(value);
@@ -490,7 +490,7 @@ public class DynamicReports {
      * <p>inch.</p>
      *
      * @param value a {@link java.lang.Number} object.
-     * @return a int.
+     * @return an int.
      */
     public static int inch(final Number value) {
         return Units.inch(value);
@@ -500,7 +500,7 @@ public class DynamicReports {
      * <p>mm.</p>
      *
      * @param value a {@link java.lang.Number} object.
-     * @return a int.
+     * @return an int.
      */
     public static int mm(final Number value) {
         return Units.mm(value);

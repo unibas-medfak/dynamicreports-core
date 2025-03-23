@@ -283,11 +283,11 @@ public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U exten
     /**
      * <p>setForegroundColor.</p>
      *
-     * @param foregroudColor a {@link java.awt.Color} object.
+     * @param foregroundColor a {@link java.awt.Color} object.
      * @return a T object.
      */
-    public T setForegroundColor(Color foregroudColor) {
-        getObject().setForegroundColor(foregroudColor);
+    public T setForegroundColor(Color foregroundColor) {
+        getObject().setForegroundColor(foregroundColor);
         return (T) this;
     }
 
@@ -576,7 +576,7 @@ public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U exten
     /**
      * <p>addTabStop.</p>
      *
-     * @param position  a int.
+     * @param position  an int.
      * @param alignment a {@link ch.unibas.medizin.dynamicreports.report.constant.TabStopAlignment} object.
      * @return a T object.
      */

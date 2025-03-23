@@ -49,10 +49,10 @@ public enum BooleanComponentType {
      * Shows a ball image
      */
     IMAGE_BALL, /**
-     * Shows a check box image
+     * Shows a checkbox image
      */
     IMAGE_CHECKBOX_1, /**
-     * Shows a check box image
+     * Shows a checkbox image
      */
     IMAGE_CHECKBOX_2
 }

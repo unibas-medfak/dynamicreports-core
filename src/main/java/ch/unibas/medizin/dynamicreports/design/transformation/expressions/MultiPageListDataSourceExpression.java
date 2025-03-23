@@ -43,7 +43,7 @@ public class MultiPageListDataSourceExpression extends AbstractSimpleExpression<
     /**
      * <p>Constructor for MultiPageListDataSourceExpression.</p>
      *
-     * @param count a int.
+     * @param count an int.
      */
     public MultiPageListDataSourceExpression(int count) {
         this.count = count;

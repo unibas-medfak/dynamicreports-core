@@ -96,7 +96,7 @@ public class DRDesignList extends DRDesignComponent implements DRIDesignList {
     /**
      * <p>addComponent.</p>
      *
-     * @param index     a int.
+     * @param index     an int.
      * @param component a {@link ch.unibas.medizin.dynamicreports.design.base.component.DRDesignComponent} object.
      */
     public void addComponent(int index, DRDesignComponent component) {
@@ -107,7 +107,7 @@ public class DRDesignList extends DRDesignComponent implements DRIDesignList {
     /**
      * <p>addComponent.</p>
      *
-     * @param index               a int.
+     * @param index               an int.
      * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalCellComponentAlignment} object.
      * @param verticalAlignment   a {@link ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAlignment} object.
      * @param component           a {@link ch.unibas.medizin.dynamicreports.design.base.component.DRDesignComponent} object.
@@ -180,7 +180,7 @@ public class DRDesignList extends DRDesignComponent implements DRIDesignList {
     /**
      * <p>Getter for the field <code>gap</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getGap() {
         return gap;

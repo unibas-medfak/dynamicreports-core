@@ -92,7 +92,7 @@ public class PageTransform {
     /**
      * <p>Getter for the field <code>maxBandWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getMaxBandWidth() {
         return maxBandWidth;

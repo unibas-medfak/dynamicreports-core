@@ -50,7 +50,7 @@ public class DRMargin implements DRIMargin {
     /**
      * <p>Constructor for DRMargin.</p>
      *
-     * @param margin a int.
+     * @param margin an int.
      */
     public DRMargin(int margin) {
         Validate.isTrue(margin >= 0, "margin must be >= 0");
@@ -69,7 +69,7 @@ public class DRMargin implements DRIMargin {
     /**
      * <p>Setter for the field <code>top</code>.</p>
      *
-     * @param top a int.
+     * @param top an int.
      */
     public void setTop(int top) {
         Validate.isTrue(top >= 0, "top must be >= 0");
@@ -85,7 +85,7 @@ public class DRMargin implements DRIMargin {
     /**
      * <p>Setter for the field <code>left</code>.</p>
      *
-     * @param left a int.
+     * @param left an int.
      */
     public void setLeft(int left) {
         Validate.isTrue(left >= 0, "left must be >= 0");
@@ -101,7 +101,7 @@ public class DRMargin implements DRIMargin {
     /**
      * <p>Setter for the field <code>bottom</code>.</p>
      *
-     * @param bottom a int.
+     * @param bottom an int.
      */
     public void setBottom(int bottom) {
         Validate.isTrue(bottom >= 0, "bottom must be >= 0");
@@ -117,7 +117,7 @@ public class DRMargin implements DRIMargin {
     /**
      * <p>Setter for the field <code>right</code>.</p>
      *
-     * @param right a int.
+     * @param right an int.
      */
     public void setRight(int right) {
         Validate.isTrue(right >= 0, "right must be >= 0");

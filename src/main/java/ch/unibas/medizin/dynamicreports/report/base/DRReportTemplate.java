@@ -120,7 +120,7 @@ public class DRReportTemplate implements DRIReportTemplate {
     private Integer imageHeight;
     // list
     private Integer listgap;
-    // multi page list
+    // multipage list
     private Integer multiPageListWidth;
     private Integer multiPageListHeight;
     // chart

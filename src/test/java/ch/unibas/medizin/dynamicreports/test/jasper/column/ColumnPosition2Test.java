@@ -60,18 +60,15 @@ public class ColumnPosition2Test extends AbstractJasperPositionTest {
 
     numberOfPagesTest(1);
     elementPositionTest("columnHeader.list1", 0, 10, 10, 575, 43);
-    // elementPositionTest("columnHeader.list2", 0, 191, 0, 384, 42);
-    elementPositionTest("columnHeader.list3", 0, 191, 0, 384, 27);
+      elementPositionTest("columnHeader.list3", 0, 191, 0, 384, 27);
     elementPositionTest("columnHeader.list4", 0, 191, 27, 384, 16);
 
     elementPositionTest("detail.list1", 0, 10, 53, 575, 32);
-    // elementPositionTest("detail.list2", 0, 191, 0, 384, 32);
-    elementPositionTest("detail.list3", 0, 191, 0, 384, 16);
+      elementPositionTest("detail.list3", 0, 191, 0, 384, 16);
     elementPositionTest("detail.list4", 0, 191, 16, 384, 16);
 
     elementPositionTest("detail.list1", 1, 10, 85, 575, 43);
-    // elementPositionTest("detail.list2", 1, 191, 0, 384, 42);
-    elementPositionTest("detail.list3", 1, 191, 0, 384, 27);
+      elementPositionTest("detail.list3", 1, 191, 0, 384, 27);
     elementPositionTest("detail.list4", 1, 191, 27, 384, 16);
 
     // column1

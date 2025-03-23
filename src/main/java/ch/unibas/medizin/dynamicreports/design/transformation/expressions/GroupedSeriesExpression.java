@@ -46,7 +46,7 @@ public class GroupedSeriesExpression extends AbstractComplexExpression<String> {
      * @param groupExpression  a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      * @param seriesExpression a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      * @param labelExpression  a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
-     * @param index            a int.
+     * @param index            an int.
      */
     public GroupedSeriesExpression(DRIExpression<?> groupExpression, DRIExpression<?> seriesExpression, DRIExpression<?> labelExpression, int index) {
         if (groupExpression != null) {

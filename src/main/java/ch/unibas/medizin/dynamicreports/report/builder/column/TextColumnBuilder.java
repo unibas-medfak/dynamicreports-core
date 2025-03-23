@@ -162,7 +162,7 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * Creates a new column by dividing this column instance with a column value.
      *
      * @param column the column builder
-     * @param scale  a int.
+     * @param scale  an int.
      * @return a column builder
      */
     public TextColumnBuilder<BigDecimal> divide(int scale, TextColumnBuilder<? extends Number> column) {
@@ -177,7 +177,7 @@ public class TextColumnBuilder<T> extends ValueColumnBuilder<TextColumnBuilder<T
      * Creates a new column by dividing this column instance with a value.
      *
      * @param number the value
-     * @param scale  a int.
+     * @param scale  an int.
      * @return a column builder
      */
     public TextColumnBuilder<BigDecimal> divide(int scale, Number number) {

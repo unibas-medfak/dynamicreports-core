@@ -169,7 +169,6 @@ public class List1Test extends AbstractJasperPositionTest {
         elementPositionTest("title.textField36", 0, 488, 36, 67, 14);
 
         elementPositionTest("title.list11", 0, 0, 298, 555, 62);
-        // elementPositionTest("title.list12", 0, 0, 0, 535, 42);
         elementPositionTest("title.list13", 0, 0, 0, 535, 14);
         elementPositionTest("title.textField37", 0, 0, 0, 103, 14);
         elementPositionTest("title.textField38", 0, 108, 0, 103, 14);
@@ -195,7 +194,6 @@ public class List1Test extends AbstractJasperPositionTest {
 
         elementPositionTest("title.list16", 0, 0, 378, 555, 28);
         elementPositionTest("title.textField53", 0, 0, 0, 227, 28);
-        // elementPositionTest("title.list17", 0, 227, 0, 100, 28);
         elementPositionTest("title.textField54", 0, 227, 0, 100, 14);
         elementPositionTest("title.textField55", 0, 227, 14, 100, 14);
         elementPositionTest("title.textField56", 0, 327, 0, 228, 28);

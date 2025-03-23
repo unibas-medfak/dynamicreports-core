@@ -305,7 +305,7 @@ public class GroupTransform {
     /**
      * <p>Getter for the field <code>groupPadding</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     protected int getGroupPadding() {
         return groupPadding;

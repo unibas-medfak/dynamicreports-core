@@ -258,7 +258,6 @@ public abstract class AbstractExpressionTransform {
                     return toVariableValue(name);
                 }
             }
-            // throw new JasperDesignException("System expression \"" + name + "\" not supported");
             case DRIDesignJasperExpression driDesignJasperExpression -> {
                 return driDesignJasperExpression.getExpression();
             }

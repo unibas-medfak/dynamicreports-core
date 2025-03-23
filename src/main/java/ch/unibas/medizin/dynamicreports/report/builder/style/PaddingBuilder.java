@@ -46,7 +46,7 @@ public class PaddingBuilder extends AbstractBuilder<PaddingBuilder, DRPadding> {
     /**
      * <p>Constructor for PaddingBuilder.</p>
      *
-     * @param padding a int.
+     * @param padding an int.
      */
     protected PaddingBuilder(int padding) {
         super(new DRPadding(padding));

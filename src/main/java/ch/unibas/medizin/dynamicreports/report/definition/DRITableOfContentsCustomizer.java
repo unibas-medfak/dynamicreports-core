@@ -52,14 +52,14 @@ public interface DRITableOfContentsCustomizer extends Serializable {
     /**
      * <p>setHeadings.</p>
      *
-     * @param headings a int.
+     * @param headings an int.
      */
     void setHeadings(int headings);
 
     /**
      * <p>setLevels.</p>
      *
-     * @param levels a int.
+     * @param levels an int.
      */
     void setLevels(int levels);
 

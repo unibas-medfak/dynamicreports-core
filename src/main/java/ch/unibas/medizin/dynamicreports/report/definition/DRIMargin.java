@@ -33,28 +33,28 @@ public interface DRIMargin extends Serializable {
     /**
      * <p>getTop.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getTop();
 
     /**
      * <p>getLeft.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getLeft();
 
     /**
      * <p>getBottom.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getBottom();
 
     /**
      * <p>getRight.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getRight();
 }

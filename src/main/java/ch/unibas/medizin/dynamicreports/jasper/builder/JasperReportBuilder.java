@@ -98,7 +98,7 @@ import net.sf.jasperreports.view.JasperViewer;
 
 /**
  * The most used report builder for creating reports. It allows constructing and customizing the whole report content. A report consists of bands, columns, subtotals, groups, and other parts. Each
- * part is created and configured using a particular builder method and it's passed to the report builder instance.
+ * part is created and configured using a particular builder method, and it's passed to the report builder instance.
  *
  * @author Ricardo Mariaca
  *

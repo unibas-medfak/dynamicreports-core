@@ -45,7 +45,7 @@ public class MarginBuilder extends AbstractBuilder<MarginBuilder, DRMargin> {
     /**
      * <p>Constructor for MarginBuilder.</p>
      *
-     * @param margin a int.
+     * @param margin an int.
      */
     protected MarginBuilder(int margin) {
         super(new DRMargin(margin));
@@ -54,7 +54,7 @@ public class MarginBuilder extends AbstractBuilder<MarginBuilder, DRMargin> {
     /**
      * <p>setTop.</p>
      *
-     * @param top a int.
+     * @param top an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.MarginBuilder} object.
      */
     public MarginBuilder setTop(int top) {
@@ -65,7 +65,7 @@ public class MarginBuilder extends AbstractBuilder<MarginBuilder, DRMargin> {
     /**
      * <p>setLeft.</p>
      *
-     * @param left a int.
+     * @param left an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.MarginBuilder} object.
      */
     public MarginBuilder setLeft(int left) {
@@ -76,7 +76,7 @@ public class MarginBuilder extends AbstractBuilder<MarginBuilder, DRMargin> {
     /**
      * <p>setBottom.</p>
      *
-     * @param bottom a int.
+     * @param bottom an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.MarginBuilder} object.
      */
     public MarginBuilder setBottom(int bottom) {
@@ -87,7 +87,7 @@ public class MarginBuilder extends AbstractBuilder<MarginBuilder, DRMargin> {
     /**
      * <p>setRight.</p>
      *
-     * @param right a int.
+     * @param right an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.MarginBuilder} object.
      */
     public MarginBuilder setRight(int right) {

@@ -49,7 +49,7 @@ public class DRDesignTabStop implements DRIDesignTabStop {
     /**
      * <p>Setter for the field <code>position</code>.</p>
      *
-     * @param position a int.
+     * @param position an int.
      */
     public void setPosition(int position) {
         this.position = position;

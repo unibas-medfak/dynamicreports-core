@@ -106,7 +106,7 @@ public abstract class ColumnBuilder<T extends ColumnBuilder<T, U>, U extends DRC
     }
 
     /**
-     * Sets the print when expression. The expression must be a type of Boolean and it decides whether or not a column value will be printed.
+     * Sets the print when expression. The expression must be a type of Boolean, and it decides whether a column value will be printed.
      *
      * @param printWhenExpression the print expression
      * @return a column builder

@@ -103,7 +103,7 @@ public class DRDesignBand implements DRIDesignBand {
     /**
      * <p>addComponent.</p>
      *
-     * @param index     a int.
+     * @param index     an int.
      * @param component a {@link ch.unibas.medizin.dynamicreports.design.base.component.DRDesignComponent} object.
      */
     public void addComponent(int index, DRDesignComponent component) {

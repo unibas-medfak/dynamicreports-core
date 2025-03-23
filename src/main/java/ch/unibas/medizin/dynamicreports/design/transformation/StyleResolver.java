@@ -49,8 +49,8 @@ public class StyleResolver {
      * <p>getFontWidth.</p>
      *
      * @param style   a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @param columns a int.
-     * @return a int.
+     * @param columns an int.
+     * @return an int.
      */
     protected static int getFontWidth(DRDesignStyle style, int columns) {
         double width = getFont(style).getStringBounds("m", context).getWidth();
@@ -61,8 +61,8 @@ public class StyleResolver {
      * <p>getFontHeight.</p>
      *
      * @param style a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @param rows  a int.
-     * @return a int.
+     * @param rows  an int.
+     * @return an int.
      */
     protected static int getFontHeight(DRDesignStyle style, int rows) {
         double height = getFont(style).getMaxCharBounds(context).getHeight();
@@ -300,7 +300,7 @@ public class StyleResolver {
      * <p>getHorizontalPadding.</p>
      *
      * @param style a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignStyle} object.
-     * @return a int.
+     * @return an int.
      */
     public static int getHorizontalPadding(DRIDesignStyle style) {
         return getLeftPadding(style) + getRightPadding(style) + getLeftIndent(style) + getRightIndent(style);
@@ -310,7 +310,7 @@ public class StyleResolver {
      * <p>getVerticalPadding.</p>
      *
      * @param style a {@link ch.unibas.medizin.dynamicreports.design.definition.style.DRIDesignStyle} object.
-     * @return a int.
+     * @return an int.
      */
     public static int getVerticalPadding(DRIDesignStyle style) {
         return getTopPadding(style) + getBottomPadding(style) + getFirstLineIndent(style);

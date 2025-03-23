@@ -42,7 +42,7 @@ public class DivideExpression extends CalculationExpression {
     /**
      * <p>Constructor for DivideExpression.</p>
      *
-     * @param scale a int.
+     * @param scale an int.
      * @param expressions a {@link ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression} object.
      */
     @SafeVarargs

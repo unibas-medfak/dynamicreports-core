@@ -48,7 +48,7 @@ public interface DRICustomValues extends Serializable {
     /**
      * <p>addTocHeading.</p>
      *
-     * @param level       a int.
+     * @param level       an int.
      * @param id          a {@link java.lang.String} object.
      * @param text        a {@link java.lang.String} object.
      * @param customValue a {@link java.lang.Object} object.

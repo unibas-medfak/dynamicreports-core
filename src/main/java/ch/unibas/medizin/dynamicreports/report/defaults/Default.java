@@ -172,7 +172,7 @@ public class Default {
     private int listgap;
     private HorizontalCellComponentAlignment horizontalCellComponentAlignment;
     private VerticalCellComponentAlignment verticalCellComponentAlignment;
-    // multi page list
+    // multipage list
     private int multiPageListWidth;
     private int multiPageListHeight;
     // chart
@@ -728,7 +728,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>pageWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getPageWidth() {
         return pageWidth;
@@ -737,7 +737,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>pageHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getPageHeight() {
         return pageHeight;
@@ -773,7 +773,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>pageColumnsPerPage</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getPageColumnsPerPage() {
         return pageColumnsPerPage;
@@ -782,7 +782,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>pageColumnSpace</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getPageColumnSpace() {
         return pageColumnSpace;
@@ -809,7 +809,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>columnWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getColumnWidth() {
         return columnWidth;
@@ -872,7 +872,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>groupPadding</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getGroupPadding() {
         return groupPadding;
@@ -1007,7 +1007,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>textFieldWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getTextFieldWidth() {
         return textFieldWidth;
@@ -1034,7 +1034,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>imageWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getImageWidth() {
         return imageWidth;
@@ -1043,7 +1043,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>imageHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getImageHeight() {
         return imageHeight;
@@ -1052,7 +1052,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>fillerWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getFillerWidth() {
         return fillerWidth;
@@ -1061,7 +1061,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>fillerHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getFillerHeight() {
         return fillerHeight;
@@ -1070,7 +1070,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>lineWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getLineWidth() {
         return lineWidth;
@@ -1079,7 +1079,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>lineHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getLineHeight() {
         return lineHeight;
@@ -1088,7 +1088,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>ellipseWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getEllipseWidth() {
         return ellipseWidth;
@@ -1097,7 +1097,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>ellipseHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getEllipseHeight() {
         return ellipseHeight;
@@ -1115,7 +1115,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>rectangleWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getRectangleWidth() {
         return rectangleWidth;
@@ -1124,7 +1124,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>rectangleHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getRectangleHeight() {
         return rectangleHeight;
@@ -1133,7 +1133,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>mapWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getMapWidth() {
         return mapWidth;
@@ -1142,7 +1142,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>mapHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getMapHeight() {
         return mapHeight;
@@ -1151,7 +1151,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>customComponentWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getCustomComponentWidth() {
         return customComponentWidth;
@@ -1160,7 +1160,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>customComponentHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getCustomComponentHeight() {
         return customComponentHeight;
@@ -1169,7 +1169,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>breakWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getBreakWidth() {
         return breakWidth;
@@ -1178,7 +1178,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>breakHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getBreakHeight() {
         return breakHeight;
@@ -1223,7 +1223,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>listgap</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getListgap() {
         return listgap;
@@ -1250,7 +1250,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>multiPageListWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getMultiPageListWidth() {
         return multiPageListWidth;
@@ -1259,7 +1259,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>multiPageListHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getMultiPageListHeight() {
         return multiPageListHeight;
@@ -1268,7 +1268,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>chartWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getChartWidth() {
         return chartWidth;
@@ -1277,7 +1277,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>chartHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getChartHeight() {
         return chartHeight;
@@ -1349,7 +1349,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>subreportWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getSubreportWidth() {
         return subreportWidth;
@@ -1358,7 +1358,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>subreportHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getSubreportHeight() {
         return subreportHeight;
@@ -1367,7 +1367,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>crosstabWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabWidth() {
         return crosstabWidth;
@@ -1376,7 +1376,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>crosstabHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabHeight() {
         return crosstabHeight;
@@ -1421,7 +1421,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>crosstabColumnGroupTotalHeaderMaxWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabColumnGroupTotalHeaderMaxWidth() {
         return crosstabColumnGroupTotalHeaderMaxWidth;
@@ -1430,7 +1430,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>crosstabRowGroupHeaderMaxWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabRowGroupHeaderMaxWidth() {
         return crosstabRowGroupHeaderMaxWidth;
@@ -1439,7 +1439,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>crosstabCellMaxWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabCellMaxWidth() {
         return crosstabCellMaxWidth;
@@ -1556,7 +1556,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>booleanImageWidth</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getBooleanImageWidth() {
         return booleanImageWidth;
@@ -1565,7 +1565,7 @@ public class Default {
     /**
      * <p>Getter for the field <code>booleanImageHeight</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getBooleanImageHeight() {
         return booleanImageHeight;

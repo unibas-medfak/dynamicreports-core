@@ -79,7 +79,7 @@ public class ReportUtils {
      * </p>
      *
      * @param object a {@link java.lang.Object} object.
-     * @param index  a int.
+     * @param index  an int.
      * @return a {@link java.lang.Class} object.
      */
     public static Class<?> getGenericClass(Object object, int index) {

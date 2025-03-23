@@ -53,7 +53,7 @@ public class DRDesignPage implements DRIDesignPage {
     /**
      * <p>Setter for the field <code>width</code>.</p>
      *
-     * @param width a int.
+     * @param width an int.
      */
     public void setWidth(int width) {
         this.width = width;
@@ -68,7 +68,7 @@ public class DRDesignPage implements DRIDesignPage {
     /**
      * <p>Setter for the field <code>height</code>.</p>
      *
-     * @param height a int.
+     * @param height an int.
      */
     public void setHeight(int height) {
         this.height = height;
@@ -113,7 +113,7 @@ public class DRDesignPage implements DRIDesignPage {
     /**
      * <p>Setter for the field <code>columnsPerPage</code>.</p>
      *
-     * @param columnsPerPage a int.
+     * @param columnsPerPage an int.
      */
     public void setColumnsPerPage(int columnsPerPage) {
         this.columnsPerPage = columnsPerPage;
@@ -128,7 +128,7 @@ public class DRDesignPage implements DRIDesignPage {
     /**
      * <p>Setter for the field <code>columnSpace</code>.</p>
      *
-     * @param columnSpace a int.
+     * @param columnSpace an int.
      */
     public void setColumnSpace(int columnSpace) {
         this.columnSpace = columnSpace;
@@ -143,7 +143,7 @@ public class DRDesignPage implements DRIDesignPage {
     /**
      * <p>Setter for the field <code>columnWidth</code>.</p>
      *
-     * @param columnWidth a int.
+     * @param columnWidth an int.
      */
     public void setColumnWidth(int columnWidth) {
         this.columnWidth = columnWidth;

@@ -1,6 +1,6 @@
 # Dynamic Reports Core
 DynamicReports is an open source Java reporting library based on JasperReports.
-It allows to create dynamic report designs and it doesn't need a visual report designer.
+It allows to create dynamic report designs, and it doesn't need a visual report designer.
 You can very quickly create reports and produce documents that can be displayed, printed
 or exported into many popular formats such as PDF, Excel, Word and others.
 
@@ -8,7 +8,7 @@ The original source code was first hosted on [sourceforge](https://sourceforge.n
 interactions were carried out through [dynamicreports.org]. After
 using this project and libraries, we the maintainers felt compelled to support the development for it has
 been a great tool. However, the source code has not been easily accessible and the original hosting website
-on which this project was first created is no longer responsive and we do not want to see a great project
+on which this project was first created is no longer responsive, and we do not want to see a great project
 go down and disappear like that.
 
 ## Project Goals
@@ -30,4 +30,4 @@ DynamicReports is synchronized with a GitHub repository. For Maven projects you 
 #### Build from source 
 Check release page to download source [release files](https://github.com/unibas-medfak/dynamicreports-core/releases).
 
-Unzip the sources, execute `mvn clean install` from project root directory. This compile project sources and create project jar files.
+Unzip the sources, execute `mvn clean install` from project root directory. This compiles project sources and create project jar files.

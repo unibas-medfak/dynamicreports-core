@@ -31,7 +31,7 @@ public enum Rotation {
      * Constant useful for displaying the text without rotating it
      */
     NONE, /**
-     * Constant useful for rotating the text 90 degrees counter clockwise.
+     * Constant useful for rotating the text 90 degrees counterclockwise.
      */
     LEFT, /**
      * Constant useful for rotating the text 90 degrees clockwise.

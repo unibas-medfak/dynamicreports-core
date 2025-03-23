@@ -62,7 +62,7 @@ public abstract class ValueColumnBuilder<T extends ValueColumnBuilder<T, U>, U> 
     }
 
     /**
-     * Specifies whether or not print a value if the value is the same as the previous value.
+     * Specifies whether print a value if the value is the same as the previous value.
      *
      * @param printRepeatedDetailValues print repeated detail values
      * @return a column builder

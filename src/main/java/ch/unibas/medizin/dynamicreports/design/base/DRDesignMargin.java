@@ -49,7 +49,7 @@ public class DRDesignMargin implements DRIDesignMargin {
     /**
      * <p>Setter for the field <code>top</code>.</p>
      *
-     * @param top a int.
+     * @param top an int.
      */
     public void setTop(int top) {
         this.top = top;
@@ -64,7 +64,7 @@ public class DRDesignMargin implements DRIDesignMargin {
     /**
      * <p>Setter for the field <code>left</code>.</p>
      *
-     * @param left a int.
+     * @param left an int.
      */
     public void setLeft(int left) {
         this.left = left;
@@ -79,7 +79,7 @@ public class DRDesignMargin implements DRIDesignMargin {
     /**
      * <p>Setter for the field <code>bottom</code>.</p>
      *
-     * @param bottom a int.
+     * @param bottom an int.
      */
     public void setBottom(int bottom) {
         this.bottom = bottom;
@@ -94,7 +94,7 @@ public class DRDesignMargin implements DRIDesignMargin {
     /**
      * <p>Setter for the field <code>right</code>.</p>
      *
-     * @param right a int.
+     * @param right an int.
      */
     public void setRight(int right) {
         this.right = right;

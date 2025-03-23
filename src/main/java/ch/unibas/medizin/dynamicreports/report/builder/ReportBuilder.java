@@ -174,7 +174,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
     }
 
     /**
-     * Sets whether or not the title band is printed on a separate page.
+     * Sets whether the title band is printed on a separate page.
      *
      * @param titleOnANewPage print the title band on a separate page
      * @return a report builder
@@ -194,7 +194,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
     }
 
     /**
-     * Sets whether or not the summary band is printed on a separate page.
+     * Sets whether the summary band is printed on a separate page.
      *
      * @param summaryOnANewPage print the summary band on a separate page
      * @return a report builder
@@ -214,7 +214,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
     }
 
     /**
-     * Sets whether or not the summary band is printed with the page header and footer.
+     * Sets whether the summary band is printed with the page header and footer.
      *
      * @param summaryWithPageHeaderAndFooter print the summary band with the page header and footer
      * @return a report builder
@@ -234,7 +234,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
     }
 
     /**
-     * Sets whether or not the column footer band is printed at the bottom of the column
+     * Sets whether the column footer band is printed at the bottom of the column
      *
      * @param floatColumnFooter print the column footer at the bottom of the column
      * @return a report builder
@@ -1128,7 +1128,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the column header band.
-     * The band is printed on each page at the top of the page and it's placed below the page header band.
+     * The band is printed on each page at the top of the page, and it's placed below the page header band.
      *
      * @param components the column header components
      * @return a report builder
@@ -1139,7 +1139,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the column header band.
-     * The band is printed on each page at the top of the page and it's placed below the page header band.
+     * The band is printed on each page at the top of the page, and it's placed below the page header band.
      *
      * @param components the column header components
      * @return a report builder
@@ -1197,7 +1197,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the column footer band.
-     * The band is printed on each page at the bottom of the page and it's placed above the page footer band.
+     * The band is printed on each page at the bottom of the page, and it's placed above the page footer band.
      *
      * @param components the column footer components
      * @return a report builder
@@ -1208,7 +1208,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the column footer band.
-     * The band is printed on each page at the bottom of the page and it's placed above the page footer band.
+     * The band is printed on each page at the bottom of the page, and it's placed above the page footer band.
      *
      * @param components the column footer components
      * @return a report builder
@@ -1452,7 +1452,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the detail band.
-     * The band is printed for each record row in the data source and it's placed between the column header and footer band.
+     * The band is printed for each record row in the data source, and it's placed between the column header and footer band.
      *
      * @param components the detail components
      * @return a report builder
@@ -1463,7 +1463,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the detail band.
-     * The band is printed for each record row in the data source and it's placed between the column header and footer band.
+     * The band is printed for each record row in the data source, and it's placed between the column header and footer band.
      *
      * @param components the detail components
      * @return a report builder
@@ -1521,7 +1521,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the detail header band.
-     * The band is printed for each record row in the data source and it's placed above the detail band.
+     * The band is printed for each record row in the data source, and it's placed above the detail band.
      *
      * @param components the detail header components
      * @return a report builder
@@ -1532,7 +1532,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the detail header band.
-     * The band is printed for each record row in the data source and it's placed above the detail band.
+     * The band is printed for each record row in the data source, and it's placed above the detail band.
      *
      * @param components the detail header components
      * @return a report builder
@@ -1590,7 +1590,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the detail footer band.
-     * The band is printed for each record row in the data source and it's placed below the detail band.
+     * The band is printed for each record row in the data source, and it's placed below the detail band.
      *
      * @param components the detail footer components
      * @return a report builder
@@ -1601,7 +1601,7 @@ public class ReportBuilder<T extends ReportBuilder<T>> extends AbstractBuilder<T
 
     /**
      * Adds components to the detail footer band.
-     * The band is printed for each record row in the data source and it's placed below the detail band.
+     * The band is printed for each record row in the data source, and it's placed below the detail band.
      *
      * @param components the detail footer components
      * @return a report builder

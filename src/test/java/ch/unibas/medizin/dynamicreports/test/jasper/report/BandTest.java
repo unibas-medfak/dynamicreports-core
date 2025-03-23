@@ -99,25 +99,21 @@ public class BandTest extends AbstractJasperPositionTest implements Serializable
         numberOfPagesTest(2);
 
         // title
-        // elementPositionTest("title.list1", 0, 10, 10, 575, 32);
         elementPositionTest("title.textField1", 0, 10, 10, 575, 16);
         elementPositionTest("title.list2", 0, 10, 26, 575, 16);
         subtotalPositionTest(subtotal1, 0, 10, 0, 277, 16);
 
         // page header
-        // elementPositionTest("pageHeader.list1", 0, 10, 42, 575, 32);
         elementPositionTest("pageHeader.textField1", 0, 10, 42, 575, 16);
         elementPositionTest("pageHeader.list2", 0, 10, 58, 575, 16);
         subtotalPositionTest(subtotal2, 0, 10, 0, 277, 16);
 
         // page footer
-        // elementPositionTest("pageFooter.list1", 0, 10, 800, 575, 32);
         elementPositionTest("pageFooter.list2", 0, 10, 800, 575, 16);
         subtotalPositionTest(subtotal3, 0, 10, 0, 277, 16);
         elementPositionTest("pageFooter.textField1", 0, 10, 816, 575, 16);
 
         // column header
-        // elementPositionTest("columnHeader.list1", 0, 10, 74, 287, 48);
         elementPositionTest("columnHeader.list2", 0, 10, 74, 287, 16);
         columnTitlePositionTest(column2, 0, 10, 0, 277, 16);
         elementPositionTest("columnHeader.textField1", 0, 10, 90, 287, 16);
@@ -125,7 +121,6 @@ public class BandTest extends AbstractJasperPositionTest implements Serializable
         subtotalPositionTest(subtotal4, 0, 10, 0, 277, 16);
 
         // column footer
-        // elementPositionTest("columnFooter.list1", 0, 10, 768, 287, 32);
         elementPositionTest("columnFooter.list2", 0, 10, 768, 287, 16);
         subtotalPositionTest(subtotal5, 0, 10, 0, 277, 16);
         elementPositionTest("columnFooter.textField1", 0, 10, 784, 287, 16);
@@ -142,19 +137,16 @@ public class BandTest extends AbstractJasperPositionTest implements Serializable
         elementPositionTest("groupFooter.textField1", 0, 297, 362, 287, 16);
 
         // detail
-        // elementPositionTest("detail.list1", 0, 10, 170, 287, 32);
         elementPositionTest("detail.textField1", 0, 10, 170, 287, 16);
         elementPositionTest("detail.list2", 0, 10, 186, 287, 16);
         columnDetailPositionTest(column2, 0, 10, 0, 277, 16);
 
         // last page footer
-        // elementPositionTest("lastPageFooter.list1", 0, 10, 800, 575, 32);
         elementPositionTest("lastPageFooter.list2", 0, 10, 800, 575, 16);
         subtotalPositionTest(subtotal8, 0, 10, 0, 277, 16);
         elementPositionTest("lastPageFooter.textField1", 0, 10, 816, 575, 16);
 
         // summary
-        // elementPositionTest("summary.list1", 0, 10, 602, 575, 32);
         elementPositionTest("summary.list2", 0, 10, 602, 575, 16);
         subtotalPositionTest(subtotal9, 0, 10, 0, 277, 16);
         elementPositionTest("summary.textField1", 0, 10, 618, 575, 16);

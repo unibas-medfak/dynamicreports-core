@@ -54,11 +54,9 @@ public class VerticalListTest extends AbstractJasperPositionTest {
 
     numberOfPagesTest(1);
 
-    // elementPositionTest("title.list1", 0, 10, 10, 128, 116);
-    elementPositionTest("title.list2", 0, 10, 53, 128, 59);
-    // elementPositionTest("title.list3", 0, 0, 0, 64, 58);
+      elementPositionTest("title.list2", 0, 10, 53, 128, 59);
 
-    elementPositionTest("title.textField1", 0, 10, 10, 128, 16);
+      elementPositionTest("title.textField1", 0, 10, 10, 128, 16);
     elementPositionTest("title.textField2", 0, 10, 26, 128, 27);
     elementPositionTest("title.textField3", 0, 0, 0, 64, 16);
     elementPositionTest("title.textField4", 0, 0, 16, 64, 27);

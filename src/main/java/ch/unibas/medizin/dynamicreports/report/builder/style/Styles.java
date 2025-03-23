@@ -55,7 +55,7 @@ public class Styles {
      * @param fontName a {@link java.lang.String} object.
      * @param bold     a boolean.
      * @param italic   a boolean.
-     * @param fontSize a int.
+     * @param fontSize an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.style.FontBuilder} object.
      */
     public static FontBuilder font(String fontName, boolean bold, boolean italic, int fontSize) {
@@ -228,7 +228,7 @@ public class Styles {
     /**
      * <p>padding.</p>
      *
-     * @param padding a int.
+     * @param padding an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.style.PaddingBuilder} object.
      */
     public static PaddingBuilder padding(int padding) {

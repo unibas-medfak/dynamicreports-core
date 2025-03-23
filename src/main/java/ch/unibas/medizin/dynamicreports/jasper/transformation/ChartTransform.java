@@ -245,7 +245,6 @@ public class ChartTransform {
 
         final JRDesignComponentElement jrComponent = new JRDesignComponentElement();
         jrComponent.setComponent(jrChart);
-        //jrComponent.setComponentKey(new ComponentKey(ComponentsExtensionsRegistryFactory.NAMESPACE, "jr", "spiderChart"));
 
         return jrComponent;
     }

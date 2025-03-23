@@ -793,7 +793,7 @@ public class TemplateTransform {
     /**
      * <p>getPageWidth.</p>
      *
-     * @return a int.
+     * @return an int.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     protected int getPageWidth() throws DRException {
@@ -856,7 +856,7 @@ public class TemplateTransform {
     /**
      * <p>getPageHeight.</p>
      *
-     * @return a int.
+     * @return an int.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     protected int getPageHeight() throws DRException {
@@ -916,7 +916,7 @@ public class TemplateTransform {
     /**
      * <p>getPageColumnsPerPage.</p>
      *
-     * @return a int.
+     * @return an int.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     protected int getPageColumnsPerPage() throws DRException {
@@ -935,7 +935,7 @@ public class TemplateTransform {
     /**
      * <p>getPageColumnSpace.</p>
      *
-     * @return a int.
+     * @return an int.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     protected int getPageColumnSpace() throws DRException {
@@ -955,7 +955,7 @@ public class TemplateTransform {
      * <p>getPageColumnWidth.</p>
      *
      * @param page a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignPage} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getPageColumnWidth(final DRIDesignPage page) {
         int columnWidth = page.getWidth() - page.getMargin().getLeft() - page.getMargin().getRight();
@@ -990,7 +990,7 @@ public class TemplateTransform {
      *
      * @param column a {@link ch.unibas.medizin.dynamicreports.report.definition.column.DRIColumn} object.
      * @param style  a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @return a int.
+     * @return an int.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     protected int getColumnWidth(final DRIColumn<?> column, final DRDesignStyle style) throws DRException {
@@ -1018,7 +1018,7 @@ public class TemplateTransform {
     /**
      * <p>getColumnWidth.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     protected int getColumnWidth() {
         if (template.getColumnWidth() != null) {
@@ -1161,7 +1161,7 @@ public class TemplateTransform {
      * <p>getGroupPadding.</p>
      *
      * @param group a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIGroup} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getGroupPadding(final DRIGroup group) {
         if (group.getPadding() != null) {
@@ -1336,7 +1336,7 @@ public class TemplateTransform {
      *
      * @param textField a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRITextField} object.
      * @param style     a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getTextFieldWidth(final DRITextField<?> textField, final DRDesignStyle style) {
         if (textField.getWidth() != null) {
@@ -1356,7 +1356,7 @@ public class TemplateTransform {
      *
      * @param textField a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRITextField} object.
      * @param style     a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getTextFieldHeight(final DRITextField<?> textField, final DRDesignStyle style) {
         if (textField.getHeight() != null) {
@@ -1380,7 +1380,7 @@ public class TemplateTransform {
             return textField.getPattern();
         }
         if (StyleResolver.getPattern(style) != null) {
-            return null;// StyleResolver.getPattern(style);
+            return null;
         }
         if (textField.getDataType() != null) {
             return textField.getDataType().getPattern();
@@ -1400,7 +1400,7 @@ public class TemplateTransform {
             return textField.getHorizontalTextAlignment();
         }
         if (StyleResolver.getHorizontalTextAlignment(style) != null) {
-            return null;// StyleResolver.getHorizontalTextAlignment(style);
+            return null;
         }
         if (textField.getDataType() != null) {
             return textField.getDataType().getHorizontalTextAlignment();
@@ -1457,7 +1457,7 @@ public class TemplateTransform {
      *
      * @param booleanField a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIBooleanField} object.
      * @param style        a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getBooleanFieldWidth(final DRIBooleanField booleanField, final DRDesignStyle style) {
         if (booleanField.getWidth() != null) {
@@ -1474,7 +1474,7 @@ public class TemplateTransform {
      *
      * @param booleanField a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIBooleanField} object.
      * @param style        a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getBooleanFieldHeight(final DRIBooleanField booleanField, final DRDesignStyle style) {
         if (booleanField.getHeight() != null) {
@@ -1489,7 +1489,7 @@ public class TemplateTransform {
      * <p>getPageXofYWidth.</p>
      *
      * @param pageXofY a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIPageXofY} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getPageXofYWidth(final DRIPageXofY pageXofY) {
         if (pageXofY.getWidth() != null) {
@@ -1506,7 +1506,7 @@ public class TemplateTransform {
      *
      * @param pageXofY a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIPageXofY} object.
      * @param style    a {@link ch.unibas.medizin.dynamicreports.design.base.style.DRDesignStyle} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getPageXofYHeight(final DRIPageXofY pageXofY, final DRDesignStyle style) {
         if (pageXofY.getHeight() != null) {
@@ -1538,7 +1538,7 @@ public class TemplateTransform {
      * <p>getImageWidth.</p>
      *
      * @param image a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIImage} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getImageWidth(final DRIImage image) {
         if (image.getWidth() != null) {
@@ -1577,7 +1577,7 @@ public class TemplateTransform {
      * <p>getFillerWidth.</p>
      *
      * @param filler a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIFiller} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getFillerWidth(final DRIFiller filler) {
         if (filler.getWidth() != null) {
@@ -1590,7 +1590,7 @@ public class TemplateTransform {
      * <p>getFillerHeight.</p>
      *
      * @param filler a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIFiller} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getFillerHeight(final DRIFiller filler) {
         if (filler.getHeight() != null) {
@@ -1605,7 +1605,7 @@ public class TemplateTransform {
      * <p>getLineWidth.</p>
      *
      * @param line a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRILine} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getLineWidth(final DRILine line) {
         if (line.getWidth() != null) {
@@ -1618,7 +1618,7 @@ public class TemplateTransform {
      * <p>getLineHeight.</p>
      *
      * @param line a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRILine} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getLineHeight(final DRILine line) {
         if (line.getHeight() != null) {
@@ -1633,7 +1633,7 @@ public class TemplateTransform {
      * <p>getEllipseWidth.</p>
      *
      * @param ellipse a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIEllipse} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getEllipseWidth(final DRIEllipse ellipse) {
         if (ellipse.getWidth() != null) {
@@ -1646,7 +1646,7 @@ public class TemplateTransform {
      * <p>getEllipseHeight.</p>
      *
      * @param ellipse a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIEllipse} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getEllipseHeight(final DRIEllipse ellipse) {
         if (ellipse.getHeight() != null) {
@@ -1674,7 +1674,7 @@ public class TemplateTransform {
      * <p>getRectangleWidth.</p>
      *
      * @param rectangle a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIRectangle} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getRectangleWidth(final DRIRectangle rectangle) {
         if (rectangle.getWidth() != null) {
@@ -1687,7 +1687,7 @@ public class TemplateTransform {
      * <p>getRectangleHeight.</p>
      *
      * @param rectangle a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIRectangle} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getRectangleHeight(final DRIRectangle rectangle) {
         if (rectangle.getHeight() != null) {
@@ -1702,7 +1702,7 @@ public class TemplateTransform {
      * <p>getMapWidth.</p>
      *
      * @param map a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIMap} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getMapWidth(final DRIMap map) {
         if (map.getWidth() != null) {
@@ -1715,7 +1715,7 @@ public class TemplateTransform {
      * <p>getMapHeight.</p>
      *
      * @param map a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIMap} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getMapHeight(final DRIMap map) {
         if (map.getHeight() != null) {
@@ -1730,7 +1730,7 @@ public class TemplateTransform {
      * <p>getCustomComponentWidth.</p>
      *
      * @param component a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIDimensionComponent} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getCustomComponentWidth(final DRIDimensionComponent component) {
         if (component.getWidth() != null) {
@@ -1743,7 +1743,7 @@ public class TemplateTransform {
      * <p>getCustomComponentHeight.</p>
      *
      * @param component a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIDimensionComponent} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getCustomComponentHeight(final DRIDimensionComponent component) {
         if (component.getHeight() != null) {
@@ -1758,7 +1758,7 @@ public class TemplateTransform {
      * <p>getBreakWidth.</p>
      *
      * @param breakComponent a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIBreak} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getBreakWidth(final DRIBreak breakComponent) {
         return Defaults.getDefaults().getBreakWidth();
@@ -1768,7 +1768,7 @@ public class TemplateTransform {
      * <p>getBreakHeight.</p>
      *
      * @param breakComponent a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIBreak} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getBreakHeight(final DRIBreak breakComponent) {
         return Defaults.getDefaults().getBreakHeight();
@@ -1834,7 +1834,7 @@ public class TemplateTransform {
      * <p>getListGap.</p>
      *
      * @param list a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIList} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getListGap(final DRIList list) {
         if (list.getGap() != null) {
@@ -1874,13 +1874,13 @@ public class TemplateTransform {
         return Defaults.getDefaults().getListHeight();
     }
 
-    // multi page list
+    // multipage list
 
     /**
      * <p>getMultiPageListWidth.</p>
      *
      * @param multiPageList a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIMultiPageList} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getMultiPageListWidth(final DRIMultiPageList multiPageList) {
         if (multiPageList.getWidth() != null) {
@@ -1896,7 +1896,7 @@ public class TemplateTransform {
      * <p>getMultiPageListHeight.</p>
      *
      * @param multiPageList a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIMultiPageList} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getMultiPageListHeight(final DRIMultiPageList multiPageList) {
         if (multiPageList.getHeight() != null) {
@@ -1914,7 +1914,7 @@ public class TemplateTransform {
      * <p>getChartWidth.</p>
      *
      * @param chart a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChart} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getChartWidth(final DRIChart chart) {
         if (chart.getWidth() != null) {
@@ -1930,7 +1930,7 @@ public class TemplateTransform {
      * <p>getChartHeight.</p>
      *
      * @param chart a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChart} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getChartHeight(final DRIChart chart) {
         if (chart.getHeight() != null) {
@@ -2083,7 +2083,7 @@ public class TemplateTransform {
      * <p>getSubreportWidth.</p>
      *
      * @param subreport a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRISubreport} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getSubreportWidth(final DRISubreport subreport) {
         if (subreport.getWidth() != null) {
@@ -2099,7 +2099,7 @@ public class TemplateTransform {
      * <p>getSubreportHeight.</p>
      *
      * @param subreport a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRISubreport} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getSubreportHeight(final DRISubreport subreport) {
         if (subreport.getHeight() != null) {
@@ -2117,7 +2117,7 @@ public class TemplateTransform {
      * <p>getCrosstabWidth.</p>
      *
      * @param crosstab a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstab} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getCrosstabWidth(final DRICrosstab crosstab) {
         if (crosstab.getWidth() != null) {
@@ -2134,7 +2134,7 @@ public class TemplateTransform {
      *
      * @param crosstab       a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstab} object.
      * @param whenNoDataCell a {@link ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstabCellContent} object.
-     * @return a int.
+     * @return an int.
      */
     protected int getCrosstabHeight(final DRICrosstab crosstab, final DRDesignCrosstabCellContent whenNoDataCell) {
         int height;
@@ -2215,8 +2215,8 @@ public class TemplateTransform {
      *
      * @param columnGroup     a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabColumnGroup} object.
      * @param designCrosstab  a {@link ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstab} object.
-     * @param availableHeight a int.
-     * @return a int.
+     * @param availableHeight an int.
+     * @return an int.
      */
     public int getCrosstabColumnGroupHeaderHeight(final DRICrosstabColumnGroup<?> columnGroup, final DRDesignCrosstab designCrosstab, final int availableHeight) {
         if (columnGroup.getHeaderHeight() != null) {
@@ -2247,7 +2247,7 @@ public class TemplateTransform {
      * @param columnGroup    a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabColumnGroup} object.
      * @param cellWidth      a {@link java.lang.Integer} object.
      * @param designCrosstab a {@link ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstab} object.
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabColumnGroupTotalHeaderWidth(final DRICrosstabColumnGroup<?> columnGroup, final Integer cellWidth, final DRDesignCrosstab designCrosstab) {
         if (columnGroup.getTotalHeaderWidth() != null) {
@@ -2284,7 +2284,7 @@ public class TemplateTransform {
      *
      * @param rowGroup       a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabRowGroup} object.
      * @param designCrosstab a {@link ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstab} object.
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabRowGroupHeaderWidth(final DRICrosstabRowGroup<?> rowGroup, final DRDesignCrosstab designCrosstab) {
         if (rowGroup.getHeaderWidth() != null) {
@@ -2315,7 +2315,7 @@ public class TemplateTransform {
      * @param rowGroup       a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstabRowGroup} object.
      * @param cellHeight     a {@link java.lang.Integer} object.
      * @param designCrosstab a {@link ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstab} object.
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabRowGroupTotalHeaderHeight(final DRICrosstabRowGroup<?> rowGroup, final Integer cellHeight, final DRDesignCrosstab designCrosstab) {
         if (rowGroup.getTotalHeaderHeight() != null) {
@@ -2352,7 +2352,7 @@ public class TemplateTransform {
      *
      * @param crosstab       a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstab} object.
      * @param designCrosstab a {@link ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstab} object.
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabCellWidth(final DRICrosstab crosstab, final DRDesignCrosstab designCrosstab) {
         if (crosstab.getCellWidth() != null) {
@@ -2381,7 +2381,7 @@ public class TemplateTransform {
      *
      * @param crosstab       a {@link ch.unibas.medizin.dynamicreports.report.definition.crosstab.DRICrosstab} object.
      * @param designCrosstab a {@link ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstab} object.
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabCellHeight(final DRICrosstab crosstab, final DRDesignCrosstab designCrosstab) {
         if (crosstab.getCellHeight() != null) {
@@ -2409,7 +2409,7 @@ public class TemplateTransform {
      * <p>getCrosstabWhenNoDataCellHeight.</p>
      *
      * @param whenNoDataCell a {@link ch.unibas.medizin.dynamicreports.design.base.crosstab.DRDesignCrosstabCellContent} object.
-     * @return a int.
+     * @return an int.
      */
     public int getCrosstabWhenNoDataCellHeight(final DRDesignCrosstabCellContent whenNoDataCell) {
         return detectHeight(whenNoDataCell.getList());
@@ -2618,7 +2618,7 @@ public class TemplateTransform {
      * <p>getBooleanImageWidth.</p>
      *
      * @param booleanField a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIBooleanField} object.
-     * @return a int.
+     * @return an int.
      */
     public int getBooleanImageWidth(final DRIBooleanField booleanField) {
         if (booleanField.getImageWidth() != null) {
@@ -2634,7 +2634,7 @@ public class TemplateTransform {
      * <p>getBooleanImageHeight.</p>
      *
      * @param booleanField a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIBooleanField} object.
-     * @return a int.
+     * @return an int.
      */
     public int getBooleanImageHeight(final DRIBooleanField booleanField) {
         if (booleanField.getImageHeight() != null) {
@@ -2658,7 +2658,7 @@ public class TemplateTransform {
             return booleanField.getHorizontalImageAlignment();
         }
         if (StyleResolver.getHorizontalImageAlignment(style) != null) {
-            return null;// StyleResolver.getHorizontalAlignment(style);
+            return null;
         }
         return Defaults.getDefaults().getBooleanHorizontalImageAlignment();
     }

@@ -104,43 +104,35 @@ public class ColumnsPerPageTest extends AbstractJasperPositionTest implements Se
         // subtotal at column footer
 
         elementPositionTest("columnFooter.list2", 0, 10, 720, 185, 56);
-        // elementPositionTest("columnFooter.list3", 0, 0, 0, 61, 28);
         subtotalLabelPositionTest(subtotal1, 0, 0, 0, 61, 14);
         subtotalPositionTest(subtotal1, 0, 0, 14, 61, 14);
 
         subtotalLabelPositionTest(subtotal2, 0, 123, 0, 62, 14);
         subtotalPositionTest(subtotal2, 0, 123, 14, 62, 14);
-        // elementPositionTest("columnFooter.list6", 0, 0, 28, 62, 28);
         subtotalLabelPositionTest(subtotal3, 0, 123, 0, 62, 14);
         subtotalPositionTest(subtotal3, 0, 123, 14, 62, 14);
 
         elementPositionTest("columnFooter.list7", 0, 10, 776, 185, 56);
         subtotalLabelPositionTest(subtotal4, 0, 0, 0, 92, 14);
         subtotalPositionTest(subtotal4, 0, 0, 14, 92, 14);
-        // elementPositionTest("columnFooter.list10", 0, 0, 28, 92, 28);
         subtotalLabelPositionTest(subtotal5, 0, 0, 0, 92, 14);
         subtotalPositionTest(subtotal5, 0, 0, 14, 92, 14);
 
         // subtotal at summary
         elementPositionTest("summary.list1", 0, 10, 262, 575, 112);
 
-        // elementPositionTest("summary.list2", 0, 0, 0, 185, 112);
         elementPositionTest("summary.list3", 0, 0, 0, 185, 56);
         subtotalLabelPositionTest(subtotal1, 0, 0, 0, 61, 14);
         subtotalPositionTest(subtotal1, 0, 0, 14, 61, 14);
 
         subtotalLabelPositionTest(subtotal2, 0, 123, 0, 62, 14);
         subtotalPositionTest(subtotal2, 0, 123, 14, 62, 14);
-        // elementPositionTest("summary.list6", 0, 0, 0, 62, 28);
         subtotalLabelPositionTest(subtotal3, 0, 123, 0, 62, 14);
         subtotalPositionTest(subtotal3, 0, 123, 14, 62, 14);
 
-        // elementPositionTest("summary.list7", 0, 0, 28, 62, 28);
         elementPositionTest("summary.list8", 0, 0, 56, 185, 56);
-        // elementPositionTest("summary.list9", 0, 0, 0, 92, 56);
         subtotalLabelPositionTest(subtotal4, 0, 0, 0, 92, 14);
         subtotalPositionTest(subtotal4, 0, 0, 14, 92, 14);
-        // elementPositionTest("summary.list10", 0, 0, 0, 92, 28);
         subtotalLabelPositionTest(subtotal5, 0, 0, 0, 92, 14);
         subtotalPositionTest(subtotal5, 0, 0, 14, 92, 14);
     }

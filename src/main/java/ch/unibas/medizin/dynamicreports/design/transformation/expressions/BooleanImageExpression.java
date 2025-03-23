@@ -53,8 +53,8 @@ public class BooleanImageExpression extends AbstractComplexExpression<Renderable
      *
      * @param booleanField       a {@link ch.unibas.medizin.dynamicreports.report.definition.component.DRIBooleanField} object.
      * @param emptyWhenNullValue a boolean.
-     * @param width              a int.
-     * @param height             a int.
+     * @param width              an int.
+     * @param height             an int.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     public BooleanImageExpression(DRIBooleanField booleanField, boolean emptyWhenNullValue, int width, int height) throws DRException {

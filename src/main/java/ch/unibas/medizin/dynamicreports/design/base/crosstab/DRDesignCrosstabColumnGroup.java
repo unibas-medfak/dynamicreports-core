@@ -46,7 +46,7 @@ public class DRDesignCrosstabColumnGroup extends DRDesignCrosstabGroup implement
     /**
      * <p>Setter for the field <code>height</code>.</p>
      *
-     * @param height a int.
+     * @param height an int.
      */
     public void setHeight(int height) {
         this.height = height;

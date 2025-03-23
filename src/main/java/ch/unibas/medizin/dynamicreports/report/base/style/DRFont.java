@@ -56,7 +56,7 @@ public class DRFont implements DRIFont {
      * <p>Constructor for DRFont.</p>
      *
      * @param fontName a {@link java.lang.String} object.
-     * @param fontSize a int.
+     * @param fontSize an int.
      */
     public DRFont(String fontName, int fontSize) {
         this.fontName = fontName;
@@ -69,7 +69,7 @@ public class DRFont implements DRIFont {
      * @param fontName a {@link java.lang.String} object.
      * @param bold     a boolean.
      * @param italic   a boolean.
-     * @param fontSize a int.
+     * @param fontSize an int.
      */
     public DRFont(String fontName, boolean bold, boolean italic, int fontSize) {
         this.fontName = fontName;

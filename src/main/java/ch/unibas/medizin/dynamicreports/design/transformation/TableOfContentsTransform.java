@@ -117,7 +117,7 @@ public class TableOfContentsTransform {
      * <p>groupHeading.</p>
      *
      * @param group a {@link ch.unibas.medizin.dynamicreports.report.definition.DRIGroup} object.
-     * @param level a int.
+     * @param level an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.design.base.DRDesignTableOfContentsHeading} object.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */

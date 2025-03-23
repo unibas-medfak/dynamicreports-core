@@ -80,7 +80,6 @@ public class SubtotalPosition2Test extends AbstractJasperPositionTest {
         columnTitlePositionTest(column1, 0, 0, 0, 200, 43);
         columnTitlePositionTest(column2, 0, 200, 0, 87, 43);
         columnTitlePositionTest(column3, 0, 287, 0, 87, 43);
-        // elementPositionTest("columnHeader.list2", 0, 374, 0, 201, 43);
         columnTitlePositionTest(column4, 0, 374, 0, 201, 16);
         elementPositionTest("columnHeader.list3", 0, 374, 16, 201, 27);
         columnTitlePositionTest(column5, 0, 0, 0, 85, 27);
@@ -91,7 +90,6 @@ public class SubtotalPosition2Test extends AbstractJasperPositionTest {
         columnDetailPositionTest(column1, 0, 0, 0, 200, 43);
         columnDetailPositionTest(column2, 0, 200, 0, 87, 43);
         columnDetailPositionTest(column3, 0, 287, 0, 87, 43);
-        // elementPositionTest("detail.list2", 0, 374, 0, 201, 43);
         columnDetailPositionTest(column4, 0, 374, 0, 201, 27);
         elementPositionTest("detail.list3", 0, 374, 27, 201, 16);
         columnDetailPositionTest(column5, 0, 0, 0, 85, 16);
@@ -100,7 +98,6 @@ public class SubtotalPosition2Test extends AbstractJasperPositionTest {
 
         // summary
         elementPositionTest("summary.list1", 0, 10, 96, 575, 43);
-        // elementPositionTest("summary.list2", 0, 374, 0, 201, 43);
         subtotalPositionTest(subtotal1, 0, 374, 0, 201, 16);
         elementPositionTest("summary.list3", 0, 374, 16, 201, 27);
         subtotalPositionTest(subtotal2, 0, 0, 0, 85, 27);

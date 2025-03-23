@@ -200,7 +200,7 @@ public class ComponentBuilders {
         return Components.xyListCell(x, y, width, height, component);
     }
 
-    // multi page list
+    // multipage list
 
     /**
      * <p>multiPageList.</p>
@@ -345,7 +345,7 @@ public class ComponentBuilders {
     /**
      * <p>horizontalGap.</p>
      *
-     * @param width a int.
+     * @param width an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.FillerBuilder} object.
      */
     public FillerBuilder horizontalGap(int width) {
@@ -355,7 +355,7 @@ public class ComponentBuilders {
     /**
      * <p>verticalGap.</p>
      *
-     * @param height a int.
+     * @param height an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.FillerBuilder} object.
      */
     public FillerBuilder verticalGap(int height) {
@@ -365,8 +365,8 @@ public class ComponentBuilders {
     /**
      * <p>gap.</p>
      *
-     * @param width  a int.
-     * @param height a int.
+     * @param width  an int.
+     * @param height an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.FillerBuilder} object.
      */
     public FillerBuilder gap(int width, int height) {
@@ -577,7 +577,7 @@ public class ComponentBuilders {
     /**
      * <p>roundRectangle.</p>
      *
-     * @param radius a int.
+     * @param radius an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.RectangleBuilder} object.
      */
     public RectangleBuilder roundRectangle(int radius) {

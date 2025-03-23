@@ -80,7 +80,6 @@ public class GroupPosition3Test extends AbstractJasperPositionTest {
 
         final JRGroup jrGroup = getJasperReport().getGroups()[0];
         Assertions.assertTrue(jrGroup.isKeepTogether(), "Keep together");
-        // Assertions.assertEquals("Min height to start new page", new Integer(100), jrGroup.getMinHeightToStartNewPage()); // remove this ambiguous function call
         Assertions.assertEquals( 100, jrGroup.getMinHeightToStartNewPage(),"Min height to start new page");
     }
 

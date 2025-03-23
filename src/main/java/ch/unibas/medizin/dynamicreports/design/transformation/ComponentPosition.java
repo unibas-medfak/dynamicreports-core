@@ -43,8 +43,8 @@ class ComponentPosition {
      *
      * @param name      a {@link java.lang.String} object.
      * @param component a {@link ch.unibas.medizin.dynamicreports.design.base.component.DRDesignComponent} object.
-     * @param maxWidth  a int.
-     * @param maxHeight a int.
+     * @param maxWidth  an int.
+     * @param maxHeight an int.
      * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
      */
     protected static void component(String name, DRDesignComponent component, int maxWidth, int maxHeight) throws DRException {

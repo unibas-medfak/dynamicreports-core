@@ -43,7 +43,7 @@ public enum PageType {
     /**
      * <p>Getter for the field <code>width</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getWidth() {
         return width;
@@ -52,7 +52,7 @@ public enum PageType {
     /**
      * <p>Getter for the field <code>height</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getHeight() {
         return height;

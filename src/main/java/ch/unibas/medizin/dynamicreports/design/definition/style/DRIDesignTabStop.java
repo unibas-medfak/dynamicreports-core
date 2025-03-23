@@ -35,7 +35,7 @@ public interface DRIDesignTabStop extends Serializable {
     /**
      * <p>getPosition.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getPosition();
 

@@ -128,7 +128,7 @@ public abstract class AbstractHighLowChartBuilder<T extends AbstractHighLowChart
         return (T) this;
     }
 
-    // hight
+    // high
 
     /**
      * <p>setHigh.</p>

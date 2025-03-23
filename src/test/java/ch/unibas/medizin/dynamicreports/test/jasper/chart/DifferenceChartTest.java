@@ -121,8 +121,7 @@ public class DifferenceChartTest extends AbstractJasperChartTest implements Seri
      Assertions.assertEquals( Color.CYAN, axis.getTickLabelPaint(),"tick label color");
      Assertions.assertEquals( ARIMO_ITALIC_AWT, axis.getTickLabelFont(),"tick label font");
     Assertions.assertEquals( "10.00", ((NumberAxis) axis).getNumberFormatOverride().format(10), "tick label mask");
-    //  Assertions.assertEquals( Color.LIGHT_GRAY, axis.getAxisLinePaint(),"line color");
-     Assertions.assertEquals( 1d, axis.getLowerBound(), 0,"range min value");
+      Assertions.assertEquals( 1d, axis.getLowerBound(), 0,"range min value");
      Assertions.assertEquals( 15d, axis.getUpperBound(), 0,"range max value");
      Assertions.assertTrue( axis.isVerticalTickLabels(),"vertical tick labels");
   }

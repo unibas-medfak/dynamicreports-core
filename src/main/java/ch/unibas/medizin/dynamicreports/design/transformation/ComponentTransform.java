@@ -338,7 +338,7 @@ public class ComponentTransform {
         return null;
     }
 
-    // multi page list
+    // multipage list
     private DRDesignSubreport multiPageList(final DRIMultiPageList multiPageList) throws DRException {
         final DRDesignSubreport designSubreport = new DRDesignSubreport();
         component(designSubreport, multiPageList, multiPageList.getStyle(), false, DefaultStyleType.NONE);

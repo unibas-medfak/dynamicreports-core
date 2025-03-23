@@ -35,14 +35,14 @@ public interface DRIDesignPage extends Serializable {
     /**
      * <p>getWidth.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getWidth();
 
     /**
      * <p>getHeight.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getHeight();
 
@@ -63,21 +63,21 @@ public interface DRIDesignPage extends Serializable {
     /**
      * <p>getColumnsPerPage.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getColumnsPerPage();
 
     /**
      * <p>getColumnSpace.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getColumnSpace();
 
     /**
      * <p>getColumnWidth.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getColumnWidth();
 }

@@ -36,14 +36,14 @@ public interface DRIDesignCrosstabCellContent extends Serializable {
     /**
      * <p>getWidth.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getWidth();
 
     /**
      * <p>getHeight.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getHeight();
 

@@ -176,7 +176,7 @@ public class TableOfContentsCustomizer implements DRITableOfContentsCustomizer {
     /**
      * <p>headingComponent.</p>
      *
-     * @param level a int.
+     * @param level an int.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.ComponentBuilder} object.
      */
     protected ComponentBuilder<?, ?> headingComponent(final int level) {
@@ -244,7 +244,7 @@ public class TableOfContentsCustomizer implements DRITableOfContentsCustomizer {
     /**
      * <p>Setter for the field <code>headingStyle</code>.</p>
      *
-     * @param level        a int.
+     * @param level        an int.
      * @param headingStyle a {@link ch.unibas.medizin.dynamicreports.report.builder.style.ReportStyleBuilder} object.
      */
     public void setHeadingStyle(final int level, final ReportStyleBuilder headingStyle) {

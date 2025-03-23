@@ -49,9 +49,9 @@ public class Units {
     }
 
     /**
-     * Converts a value in milimeters to pixels.
+     * Converts a value in millimeters to pixels.
      *
-     * @param value - the value in milimeters
+     * @param value - the value in millimeters
      * @return pixels
      */
     public static int mm(Number value) {

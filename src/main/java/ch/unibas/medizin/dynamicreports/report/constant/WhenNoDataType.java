@@ -34,7 +34,7 @@ public enum WhenNoDataType {
      * Specifies that in case of empty datasources, there will be a report with just one blank page.
      */
     BLANK_PAGE, /**
-     * Specifies that in case of empty datasources, all sections except detail will displayed.
+     * Specifies that in case of empty datasources, all sections except detail will be displayed.
      */
     ALL_SECTIONS_NO_DETAIL, /**
      * Specifies that in case of empty datasources, the NoData section will be displayed.

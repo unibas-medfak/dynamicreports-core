@@ -54,7 +54,7 @@ public class CrosstabRowCounter extends AbstractSimpleExpression<CrosstabRowCoun
     /**
      * <p>Getter for the field <code>rowNumber</code>.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     public int getRowNumber() {
         return rowNumber;

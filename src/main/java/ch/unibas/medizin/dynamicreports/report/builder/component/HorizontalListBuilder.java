@@ -76,7 +76,7 @@ public class HorizontalListBuilder extends DimensionComponentBuilder<HorizontalL
     /**
      * <p>add.</p>
      *
-     * @param gap        a int.
+     * @param gap        an int.
      * @param components a {@link ch.unibas.medizin.dynamicreports.report.builder.component.ComponentBuilder} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.HorizontalListBuilder} object.
      */
@@ -107,7 +107,7 @@ public class HorizontalListBuilder extends DimensionComponentBuilder<HorizontalL
     /**
      * <p>add.</p>
      *
-     * @param gap   a int.
+     * @param gap   an int.
      * @param cells a {@link ch.unibas.medizin.dynamicreports.report.builder.component.HorizontalListCellBuilder} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.HorizontalListBuilder} object.
      */

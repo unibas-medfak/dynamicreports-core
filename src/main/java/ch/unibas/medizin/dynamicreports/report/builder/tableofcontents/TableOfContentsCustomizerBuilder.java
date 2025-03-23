@@ -78,7 +78,7 @@ public class TableOfContentsCustomizerBuilder extends AbstractBuilder<TableOfCon
     /**
      * <p>setHeadingStyle.</p>
      *
-     * @param level        a int.
+     * @param level        an int.
      * @param headingStyle a {@link ch.unibas.medizin.dynamicreports.report.builder.style.ReportStyleBuilder} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.tableofcontents.TableOfContentsCustomizerBuilder} object.
      */

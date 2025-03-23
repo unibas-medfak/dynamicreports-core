@@ -49,7 +49,7 @@ public interface DRIColumnGridList extends DRIColumnGridComponent {
     /**
      * <p>getGap.</p>
      *
-     * @return a int.
+     * @return an int.
      */
     int getGap();
 }
