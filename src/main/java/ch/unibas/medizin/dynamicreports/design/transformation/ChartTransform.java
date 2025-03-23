@@ -40,7 +40,6 @@ import ch.unibas.medizin.dynamicreports.design.base.chart.dataset.DRDesignXyzCha
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.AbstractDesignBasePlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignAxisFormat;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignAxisPlot;
-import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignBar3DPlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignBarPlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignBubblePlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignCandlestickPlot;
@@ -50,7 +49,6 @@ import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignLinePlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignMeterInterval;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignMeterPlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignMultiAxisPlot;
-import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignPie3DPlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignPiePlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignSpiderPlot;
 import ch.unibas.medizin.dynamicreports.design.base.chart.plot.DRDesignThermometerPlot;
@@ -97,7 +95,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRIXyCha
 import ch.unibas.medizin.dynamicreports.report.definition.chart.dataset.DRIXyzChartSerie;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIAxisFormat;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIAxisPlot;
-import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIBar3DPlot;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIBarPlot;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIBasePlot;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIBubblePlot;
@@ -111,7 +108,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRILinePlot
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIMeterInterval;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIMeterPlot;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIMultiAxisPlot;
-import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIPie3DPlot;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIPiePlot;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRIPlot;
 import ch.unibas.medizin.dynamicreports.report.definition.chart.plot.DRISpiderPlot;
@@ -184,7 +180,6 @@ public class ChartTransform {
     // plot
     private DRIDesignPlot plot(DRIPlot plot, List<DRIChartCustomizer> chartCustomizers, DRIDataset subDataset, ResetType resetType, DRDesignGroup resetGroup) throws DRException {
         DRIDesignPlot designPlot = switch (plot) {
-            case DRIBar3DPlot driBar3DPlot -> bar3DPlot(driBar3DPlot, chartCustomizers);
             case DRILayeredBarPlot driLayeredBarPlot -> layeredBarPlot(driLayeredBarPlot, chartCustomizers);
             case DRIWaterfallBarPlot driWaterfallBarPlot -> waterfallBarPlot(driWaterfallBarPlot, chartCustomizers);
             case DRIGroupedStackedBarPlot driGroupedStackedBarPlot -> groupedStackedBarPlot(driGroupedStackedBarPlot, chartCustomizers);
@@ -193,7 +188,6 @@ public class ChartTransform {
             case DRIXyStepPlot driXyStepPlot -> xyStepPlot(driXyStepPlot, chartCustomizers);
             case DRILinePlot driLinePlot -> linePlot(driLinePlot, chartCustomizers);
             case DRIMultiAxisPlot driMultiAxisPlot -> multiAxisPlot(driMultiAxisPlot, chartCustomizers, subDataset, resetType, resetGroup);
-            case DRIPie3DPlot driPie3DPlot -> pie3DPlot(driPie3DPlot, chartCustomizers);
             case DRIPiePlot driPiePlot -> piePlot(driPiePlot, chartCustomizers);
             case DRISpiderPlot driSpiderPlot -> spiderPlot(driSpiderPlot);
             case DRIXyBlockPlot driXyBlockPlot -> xyBlockPlot(driXyBlockPlot, chartCustomizers);
@@ -217,15 +211,6 @@ public class ChartTransform {
         }
 
         return designPlot;
-    }
-
-    private DRDesignBar3DPlot bar3DPlot(DRIBar3DPlot bar3DPlot, List<DRIChartCustomizer> chartCustomizers) throws DRException {
-        DRDesignBar3DPlot designBar3DPlot = new DRDesignBar3DPlot();
-        axisPlot(designBar3DPlot, bar3DPlot, chartCustomizers);
-        designBar3DPlot.setXOffset(bar3DPlot.getXOffset());
-        designBar3DPlot.setYOffset(bar3DPlot.getYOffset());
-        designBar3DPlot.setShowLabels(bar3DPlot.getShowLabels());
-        return designBar3DPlot;
     }
 
     private DRDesignBarPlot barPlot(DRIBarPlot barPlot, List<DRIChartCustomizer> chartCustomizers) throws DRException {
@@ -290,13 +275,6 @@ public class ChartTransform {
             designMultiAxisPlot.getAxes().add(designAxis);
         }
         return designMultiAxisPlot;
-    }
-
-    private DRDesignPie3DPlot pie3DPlot(DRIPie3DPlot pie3DPlot, List<DRIChartCustomizer> chartCustomizers) {
-        DRDesignPie3DPlot designPie3DPlot = new DRDesignPie3DPlot();
-        piePlot(designPie3DPlot, pie3DPlot, chartCustomizers);
-        designPie3DPlot.setDepthFactor(pie3DPlot.getDepthFactor());
-        return designPie3DPlot;
     }
 
     private DRDesignPiePlot piePlot(DRIPiePlot piePlot, List<DRIChartCustomizer> chartCustomizers) {

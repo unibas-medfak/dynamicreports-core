@@ -598,33 +598,6 @@ public class Components {
         return new RectangleBuilder().setRadius(radius);
     }
 
-    // map
-
-    /**
-     * <p>map.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.MapBuilder} object.
-     */
-    public static MapBuilder map() {
-        return new MapBuilder();
-    }
-
-    /**
-     * <p>map.</p>
-     *
-     * @param latitude  a {@link java.lang.Float} object.
-     * @param longitude a {@link java.lang.Float} object.
-     * @param zoom      a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.MapBuilder} object.
-     */
-    public static MapBuilder map(Float latitude, Float longitude, Integer zoom) {
-        final MapBuilder mapBuilder = new MapBuilder();
-        mapBuilder.setLatitude(latitude);
-        mapBuilder.setLongitude(longitude);
-        mapBuilder.setZoom(zoom);
-        return mapBuilder;
-    }
-
     // alignment
 
     /**

@@ -303,24 +303,6 @@ public class ChartBuilders {
     }
 
     /**
-     * <p>bar3DChart.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.Bar3DChartBuilder} object.
-     */
-    public Bar3DChartBuilder bar3DChart() {
-        return Charts.bar3DChart();
-    }
-
-    /**
-     * <p>stackedBar3DChart.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.StackedBar3DChartBuilder} object.
-     */
-    public StackedBar3DChartBuilder stackedBar3DChart() {
-        return Charts.stackedBar3DChart();
-    }
-
-    /**
      * <p>lineChart.</p>
      *
      * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.LineChartBuilder} object.
@@ -336,15 +318,6 @@ public class ChartBuilders {
      */
     public PieChartBuilder pieChart() {
         return Charts.pieChart();
-    }
-
-    /**
-     * <p>pie3DChart.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.chart.Pie3DChartBuilder} object.
-     */
-    public Pie3DChartBuilder pie3DChart() {
-        return Charts.pie3DChart();
     }
 
     /**

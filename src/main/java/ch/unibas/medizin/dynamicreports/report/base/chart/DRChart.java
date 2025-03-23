@@ -27,7 +27,6 @@ import ch.unibas.medizin.dynamicreports.report.base.chart.dataset.DRSeriesDatase
 import ch.unibas.medizin.dynamicreports.report.base.chart.dataset.DRTimeSeriesDataset;
 import ch.unibas.medizin.dynamicreports.report.base.chart.dataset.DRValueDataset;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRAxisPlot;
-import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRBar3DPlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRBarPlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRBubblePlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRCandlestickPlot;
@@ -38,7 +37,6 @@ import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRLayeredBarPlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRLinePlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRMeterPlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRMultiAxisPlot;
-import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRPie3DPlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRPiePlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRSpiderPlot;
 import ch.unibas.medizin.dynamicreports.report.base.chart.plot.DRThermometerPlot;
@@ -129,11 +127,6 @@ public class DRChart extends DRHyperLinkComponent implements DRIChart {
                 dataset = new DRCategoryDataset();
                 plot = new DRWaterfallBarPlot();
                 break;
-            case BAR3D:
-            case STACKEDBAR3D:
-                dataset = new DRCategoryDataset();
-                plot = new DRBar3DPlot();
-                break;
             case LINE:
                 dataset = new DRCategoryDataset();
                 plot = new DRLinePlot();
@@ -141,10 +134,6 @@ public class DRChart extends DRHyperLinkComponent implements DRIChart {
             case PIE:
                 dataset = new DRSeriesDataset();
                 plot = new DRPiePlot();
-                break;
-            case PIE3D:
-                dataset = new DRSeriesDataset();
-                plot = new DRPie3DPlot();
                 break;
             case TIMESERIES:
                 dataset = new DRTimeSeriesDataset();

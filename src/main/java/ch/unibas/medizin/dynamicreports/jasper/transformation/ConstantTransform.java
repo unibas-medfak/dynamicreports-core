@@ -291,12 +291,9 @@ public class ConstantTransform {
             case AREA -> ChartTypeEnum.AREA;
             case STACKEDAREA -> ChartTypeEnum.STACKEDAREA;
             case BAR, LAYEREDBAR, WATERFALLBAR -> ChartTypeEnum.BAR;
-            case BAR3D -> ChartTypeEnum.BAR3D;
             case STACKEDBAR, GROUPEDSTACKEDBAR -> ChartTypeEnum.STACKEDBAR;
-            case STACKEDBAR3D -> ChartTypeEnum.STACKEDBAR3D;
             case LINE -> ChartTypeEnum.LINE;
             case PIE -> ChartTypeEnum.PIE;
-            case PIE3D -> ChartTypeEnum.PIE3D;
             case TIMESERIES, DIFFERENCE -> ChartTypeEnum.TIMESERIES;
             case XYAREA -> ChartTypeEnum.XYAREA;
             case XYBAR -> ChartTypeEnum.XYBAR;

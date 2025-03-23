@@ -584,29 +584,6 @@ public class ComponentBuilders {
         return Components.roundRectangle(radius);
     }
 
-    // map
-
-    /**
-     * <p>map.</p>
-     *
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.MapBuilder} object.
-     */
-    public MapBuilder map() {
-        return Components.map();
-    }
-
-    /**
-     * <p>map.</p>
-     *
-     * @param latitude  a {@link java.lang.Float} object.
-     * @param longitude a {@link java.lang.Float} object.
-     * @param zoom      a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.MapBuilder} object.
-     */
-    public MapBuilder map(Float latitude, Float longitude, Integer zoom) {
-        return Components.map(latitude, longitude, zoom);
-    }
-
     // alignment
 
     /**
