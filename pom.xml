@@ -200,6 +200,7 @@
                 </executions>
                 <configuration>
                     <failOnError>false</failOnError>
+                    <doclint>all,-missing</doclint>
                     <sourceFileExcludes>
                         <sourceFileExclude>${project.basedir}/target</sourceFileExclude>
                     </sourceFileExcludes>
