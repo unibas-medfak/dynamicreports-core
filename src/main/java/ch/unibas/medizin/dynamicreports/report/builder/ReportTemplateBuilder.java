@@ -1145,17 +1145,6 @@ public class ReportTemplateBuilder extends AbstractBuilder<ReportTemplateBuilder
     }
 
     /**
-     * Use setBooleanImageWidth(Integer booleanImageWidth)
-     *
-     * @param booleanColumnImageWidth a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.ReportTemplateBuilder} object.
-     */
-    @Deprecated
-    public ReportTemplateBuilder setBooleanColumnImageWidth(Integer booleanColumnImageWidth) {
-        return setBooleanImageWidth(booleanColumnImageWidth);
-    }
-
-    /**
      * <p>setBooleanImageWidth.</p>
      *
      * @param booleanImageWidth a {@link java.lang.Integer} object.
@@ -1164,17 +1153,6 @@ public class ReportTemplateBuilder extends AbstractBuilder<ReportTemplateBuilder
     public ReportTemplateBuilder setBooleanImageWidth(Integer booleanImageWidth) {
         getObject().setBooleanImageWidth(booleanImageWidth);
         return this;
-    }
-
-    /**
-     * Use setBooleanImageHeight(Integer booleanImageHeight)
-     *
-     * @param booleanColumnImageHeight a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.ReportTemplateBuilder} object.
-     */
-    @Deprecated
-    public ReportTemplateBuilder setBooleanColumnImageHeight(Integer booleanColumnImageHeight) {
-        return setBooleanImageHeight(booleanColumnImageHeight);
     }
 
     /**

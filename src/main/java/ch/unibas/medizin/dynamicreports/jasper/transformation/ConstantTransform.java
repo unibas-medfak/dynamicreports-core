@@ -161,9 +161,9 @@ public class ConstantTransform {
         }
 
         return switch (imageScale) {
-            case CLIP, NO_RESIZE -> ScaleImageEnum.CLIP;
-            case FILL_FRAME, FILL -> ScaleImageEnum.FILL_FRAME;
-            case RETAIN_SHAPE, FILL_PROPORTIONALLY -> ScaleImageEnum.RETAIN_SHAPE;
+            case CLIP -> ScaleImageEnum.CLIP;
+            case FILL_FRAME -> ScaleImageEnum.FILL_FRAME;
+            case RETAIN_SHAPE -> ScaleImageEnum.RETAIN_SHAPE;
             case REAL_HEIGHT -> ScaleImageEnum.REAL_HEIGHT;
             case REAL_SIZE -> ScaleImageEnum.REAL_SIZE;
         };
@@ -878,8 +878,8 @@ public class ConstantTransform {
 
         return switch (stretchType) {
             case NO_STRETCH -> StretchTypeEnum.NO_STRETCH;
-            case RELATIVE_TO_BAND_HEIGHT, CONTAINER_HEIGHT -> StretchTypeEnum.CONTAINER_HEIGHT;
-            case RELATIVE_TO_TALLEST_OBJECT, ELEMENT_GROUP_HEIGHT -> StretchTypeEnum.ELEMENT_GROUP_HEIGHT;
+            case CONTAINER_HEIGHT -> StretchTypeEnum.CONTAINER_HEIGHT;
+            case ELEMENT_GROUP_HEIGHT -> StretchTypeEnum.ELEMENT_GROUP_HEIGHT;
             case ELEMENT_GROUP_BOTTOM -> StretchTypeEnum.ELEMENT_GROUP_BOTTOM;
             case CONTAINER_BOTTOM -> StretchTypeEnum.CONTAINER_BOTTOM;
         };

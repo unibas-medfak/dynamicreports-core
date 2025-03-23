@@ -27,17 +27,7 @@ package ch.unibas.medizin.dynamicreports.report.constant;
  * 
  */
 public enum ImageScale {
-
     /**
-     * Use CLIP instead
-     */
-    @Deprecated NO_RESIZE, /**
-     * Use FILL_FRAME instead
-     */
-    @Deprecated FILL, /**
-     * Use RETAIN_SHAPE instead
-     */
-    @Deprecated FILL_PROPORTIONALLY, /**
      * A constant value specifying that if the actual image is larger than the image element size, it will be cut off so that it keeps its original resolution, and only the region that fits the
      * specified size will be displayed.
      */

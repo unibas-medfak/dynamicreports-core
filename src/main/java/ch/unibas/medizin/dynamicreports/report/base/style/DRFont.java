@@ -182,7 +182,6 @@ public class DRFont implements DRIFont {
      *
      * @param pdfFontName a {@link java.lang.String} object.
      */
-    @Deprecated
     public void setPdfFontName(String pdfFontName) {
         this.pdfFontName = pdfFontName;
     }
@@ -198,7 +197,6 @@ public class DRFont implements DRIFont {
      *
      * @param pdfEncoding a {@link java.lang.String} object.
      */
-    @Deprecated
     public void setPdfEncoding(String pdfEncoding) {
         this.pdfEncoding = pdfEncoding;
     }
@@ -214,7 +212,6 @@ public class DRFont implements DRIFont {
      *
      * @param pdfEmbedded a {@link java.lang.Boolean} object.
      */
-    @Deprecated
     public void setPdfEmbedded(Boolean pdfEmbedded) {
         this.pdfEmbedded = pdfEmbedded;
     }

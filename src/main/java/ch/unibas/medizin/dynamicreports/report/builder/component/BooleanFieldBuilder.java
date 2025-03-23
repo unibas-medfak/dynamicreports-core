@@ -25,7 +25,6 @@ import ch.unibas.medizin.dynamicreports.report.builder.FieldBuilder;
 import ch.unibas.medizin.dynamicreports.report.builder.expression.Expressions;
 import ch.unibas.medizin.dynamicreports.report.constant.BooleanComponentType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalImageAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
@@ -149,23 +148,6 @@ public class BooleanFieldBuilder extends HyperLinkComponentBuilder<BooleanFieldB
      */
     public BooleanFieldBuilder setHorizontalImageAlignment(HorizontalImageAlignment horizontalImageAlignment) {
         getObject().setHorizontalImageAlignment(horizontalImageAlignment);
-        return this;
-    }
-
-    /**
-     * <p>setHorizontalAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.BooleanFieldBuilder} object.
-     * @deprecated use setHorizontalImageAlignment instead
-     */
-    @Deprecated
-    public BooleanFieldBuilder setHorizontalAlignment(HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().setHorizontalImageAlignment(HorizontalImageAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().setHorizontalImageAlignment(null);
-        }
         return this;
     }
 

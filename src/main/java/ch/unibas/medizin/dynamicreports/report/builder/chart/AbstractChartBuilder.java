@@ -58,17 +58,6 @@ public abstract class AbstractChartBuilder<T extends AbstractChartBuilder<T>> ex
     }
 
     /**
-     * Use addCustomizer or customizers
-     *
-     * @param customizer a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartCustomizer} object.
-     * @return a T object.
-     */
-    @Deprecated
-    public T setCustomizer(DRIChartCustomizer customizer) {
-        return customizers(customizer);
-    }
-
-    /**
      * <p>addCustomizer.</p>
      *
      * @param customizers a {@link ch.unibas.medizin.dynamicreports.report.definition.chart.DRIChartCustomizer} object.

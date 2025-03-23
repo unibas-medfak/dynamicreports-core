@@ -24,6 +24,7 @@ import java.text.MessageFormat;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import ch.unibas.medizin.dynamicreports.design.constant.ResetType;
 import ch.unibas.medizin.dynamicreports.design.definition.DRIDesignField;
@@ -267,11 +268,7 @@ public abstract class AbstractExpressionTransform {
     }
 
     private String getExpressionParameterName(String parameterName) {
-        if (parameterName == null) {
-            return JasperCustomValues.NAME;
-        } else {
-            return parameterName;
-        }
+        return Objects.requireNonNullElse(parameterName, JasperCustomValues.NAME);
     }
 
     private String toFieldValue(String expression) {

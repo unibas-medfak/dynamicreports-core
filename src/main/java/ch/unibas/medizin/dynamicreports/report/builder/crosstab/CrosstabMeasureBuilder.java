@@ -35,7 +35,6 @@ import ch.unibas.medizin.dynamicreports.report.builder.style.ReportStyleBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Calculation;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.CrosstabPercentageType;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.TextAdjust;
 import ch.unibas.medizin.dynamicreports.report.definition.DRICrosstabValue;
@@ -159,23 +158,6 @@ public class CrosstabMeasureBuilder<T> extends AbstractBuilder<CrosstabMeasureBu
      */
     public CrosstabMeasureBuilder<T> setPattern(final String pattern) {
         getObject().setPattern(pattern);
-        return this;
-    }
-
-    /**
-     * <p>setHorizontalAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabMeasureBuilder} object.
-     * @deprecated use setHorizontalTextAlignment instead
-     */
-    @Deprecated
-    public CrosstabMeasureBuilder<T> setHorizontalAlignment(final HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().setHorizontalTextAlignment(HorizontalTextAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().setHorizontalTextAlignment(null);
-        }
         return this;
     }
 

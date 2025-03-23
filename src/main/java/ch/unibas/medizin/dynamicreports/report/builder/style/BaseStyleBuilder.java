@@ -24,7 +24,6 @@ import ch.unibas.medizin.dynamicreports.report.base.style.DRBaseStyle;
 import ch.unibas.medizin.dynamicreports.report.base.style.DRTabStop;
 import ch.unibas.medizin.dynamicreports.report.builder.AbstractBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalImageAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.ImageScale;
@@ -32,7 +31,6 @@ import ch.unibas.medizin.dynamicreports.report.constant.LineSpacing;
 import ch.unibas.medizin.dynamicreports.report.constant.Markup;
 import ch.unibas.medizin.dynamicreports.report.constant.Rotation;
 import ch.unibas.medizin.dynamicreports.report.constant.TabStopAlignment;
-import ch.unibas.medizin.dynamicreports.report.constant.VerticalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.VerticalImageAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.VerticalTextAlignment;
 import org.apache.commons.lang3.Validate;
@@ -294,23 +292,6 @@ public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U exten
     }
 
     /**
-     * <p>setHorizontalAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a T object.
-     * @deprecated use setHorizontalTextAlignment instead
-     */
-    @Deprecated
-    public T setHorizontalAlignment(HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().setHorizontalTextAlignment(HorizontalTextAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().setHorizontalTextAlignment(null);
-        }
-        return (T) this;
-    }
-
-    /**
      * <p>setHorizontalTextAlignment.</p>
      *
      * @param horizontalTextAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment} object.
@@ -446,29 +427,6 @@ public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U exten
     }
 
     /**
-     * <p>setAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @param verticalAlignment   a {@link ch.unibas.medizin.dynamicreports.report.constant.VerticalAlignment} object.
-     * @return a T object.
-     * @deprecated use setTextAlignment instead
-     */
-    @Deprecated
-    public T setAlignment(HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().setHorizontalTextAlignment(HorizontalTextAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().setHorizontalTextAlignment(null);
-        }
-        if (verticalAlignment != null) {
-            getObject().setVerticalTextAlignment(VerticalTextAlignment.valueOf(verticalAlignment.name()));
-        } else {
-            getObject().setVerticalTextAlignment(null);
-        }
-        return (T) this;
-    }
-
-    /**
      * <p>setTextAlignment.</p>
      *
      * @param horizontalTextAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment} object.
@@ -491,23 +449,6 @@ public abstract class BaseStyleBuilder<T extends BaseStyleBuilder<T, U>, U exten
     public T setImageAlignment(HorizontalImageAlignment horizontalImageAlignment, VerticalImageAlignment verticalImageAlignment) {
         getObject().setHorizontalImageAlignment(horizontalImageAlignment);
         getObject().setVerticalImageAlignment(verticalImageAlignment);
-        return (T) this;
-    }
-
-    /**
-     * <p>setVerticalAlignment.</p>
-     *
-     * @param verticalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.VerticalAlignment} object.
-     * @return a T object.
-     * @deprecated use setVerticalTextAlignment instead
-     */
-    @Deprecated
-    public T setVerticalAlignment(VerticalAlignment verticalAlignment) {
-        if (verticalAlignment != null) {
-            getObject().setVerticalTextAlignment(VerticalTextAlignment.valueOf(verticalAlignment.name()));
-        } else {
-            getObject().setVerticalTextAlignment(null);
-        }
         return (T) this;
     }
 

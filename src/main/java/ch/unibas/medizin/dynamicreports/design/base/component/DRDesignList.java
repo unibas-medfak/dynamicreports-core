@@ -30,6 +30,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.VerticalCellComponentAli
 import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * <p>DRDesignList class.</p>
@@ -218,11 +219,7 @@ public class DRDesignList extends DRDesignComponent implements DRIDesignList {
      * @return a boolean.
      */
     public boolean isRemovable() {
-        if (removable != null) {
-            return removable;
-        } else {
-            return ListType.VERTICAL.equals(type);
-        }
+        return Objects.requireNonNullElseGet(removable, () -> ListType.VERTICAL.equals(type));
     }
 
     /**

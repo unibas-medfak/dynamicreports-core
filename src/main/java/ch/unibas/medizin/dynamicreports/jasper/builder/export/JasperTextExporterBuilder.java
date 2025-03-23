@@ -45,36 +45,12 @@ public class JasperTextExporterBuilder extends AbstractJasperExporterBuilder<Jas
     /**
      * <p>setCharacterWidth.</p>
      *
-     * @param characterWidth a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder} object.
-     * @deprecated To be removed. Use setCharacterWidth(Float characterWidth) instead.
-     */
-    @Deprecated
-    public JasperTextExporterBuilder setCharacterWidth(Integer characterWidth) {
-        return setCharacterWidth(characterWidth != null ? characterWidth.floatValue() : null);
-    }
-
-    /**
-     * <p>setCharacterWidth.</p>
-     *
      * @param characterWidth a {@link java.lang.Float} object.
      * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder} object.
      */
     public JasperTextExporterBuilder setCharacterWidth(Float characterWidth) {
         this.getObject().setCharacterWidth(characterWidth);
         return this;
-    }
-
-    /**
-     * <p>setCharacterHeight.</p>
-     *
-     * @param characterHeight a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder} object.
-     * @deprecated To be removed. Use setCharacterHeight(Float characterHeight) instead.
-     */
-    @Deprecated
-    public JasperTextExporterBuilder setCharacterHeight(Integer characterHeight) {
-        return setCharacterHeight(characterHeight != null ? characterHeight.floatValue() : null);
     }
 
     /**
@@ -89,18 +65,6 @@ public class JasperTextExporterBuilder extends AbstractJasperExporterBuilder<Jas
     }
 
     /**
-     * <p>setPageWidth.</p>
-     *
-     * @param pageWidth a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder} object.
-     * @deprecated To be removed. Use setPageWidthInChars instead.
-     */
-    @Deprecated
-    public JasperTextExporterBuilder setPageWidth(Integer pageWidth) {
-        return setPageWidthInChars(pageWidth);
-    }
-
-    /**
      * <p>setPageWidthInChars.</p>
      *
      * @param pageWidth a {@link java.lang.Integer} object.
@@ -112,18 +76,6 @@ public class JasperTextExporterBuilder extends AbstractJasperExporterBuilder<Jas
     }
 
     /**
-     * <p>setPageHeight.</p>
-     *
-     * @param pageHeight a {@link java.lang.Integer} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder} object.
-     * @deprecated To be removed. Use setPageHeightInChars instead.
-     */
-    @Deprecated
-    public JasperTextExporterBuilder setPageHeight(Integer pageHeight) {
-        return setPageHeightInChars(pageHeight);
-    }
-
-    /**
      * <p>setPageHeightInChars.</p>
      *
      * @param pageHeight a {@link java.lang.Integer} object.
@@ -132,18 +84,6 @@ public class JasperTextExporterBuilder extends AbstractJasperExporterBuilder<Jas
     public JasperTextExporterBuilder setPageHeightInChars(Integer pageHeight) {
         this.getObject().setPageHeightInChars(pageHeight);
         return this;
-    }
-
-    /**
-     * <p>setBetweenPagesText.</p>
-     *
-     * @param betweenPagesText a {@link java.lang.String} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder} object.
-     * @deprecated To be removed. Use setPageSeparator instead.
-     */
-    @Deprecated
-    public JasperTextExporterBuilder setBetweenPagesText(String betweenPagesText) {
-        return setPageSeparator(betweenPagesText);
     }
 
     /**

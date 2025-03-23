@@ -66,18 +66,6 @@ public class JasperImageExporterBuilder extends AbstractJasperExporterBuilder<Ja
     }
 
     /**
-     * <p>setZoom.</p>
-     *
-     * @param zoom a {@link java.lang.Float} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperImageExporterBuilder} object.
-     * @deprecated To be removed. Use setZoomRatio instead.
-     */
-    @Deprecated
-    public JasperImageExporterBuilder setZoom(Float zoom) {
-        return setZoomRatio(zoom);
-    }
-
-    /**
      * <p>setZoomRatio.</p>
      *
      * @param zoom a {@link java.lang.Float} object.

@@ -33,7 +33,6 @@ import ch.unibas.medizin.dynamicreports.report.definition.DRIField;
 import ch.unibas.medizin.dynamicreports.report.definition.DRIValue;
 import ch.unibas.medizin.dynamicreports.report.definition.column.DRIValueColumn;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
-import ch.unibas.medizin.dynamicreports.report.exception.DRReportException;
 
 import java.io.Serial;
 

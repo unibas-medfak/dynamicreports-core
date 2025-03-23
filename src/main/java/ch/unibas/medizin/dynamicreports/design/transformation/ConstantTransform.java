@@ -22,7 +22,6 @@ package ch.unibas.medizin.dynamicreports.design.transformation;
 
 import ch.unibas.medizin.dynamicreports.design.constant.EvaluationTime;
 import ch.unibas.medizin.dynamicreports.design.constant.ResetType;
-import ch.unibas.medizin.dynamicreports.design.exception.DRDesignReportException;
 import ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType;
 import ch.unibas.medizin.dynamicreports.report.constant.Evaluation;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalCellComponentAlignment;

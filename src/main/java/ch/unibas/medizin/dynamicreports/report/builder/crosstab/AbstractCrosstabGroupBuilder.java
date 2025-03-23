@@ -35,7 +35,6 @@ import ch.unibas.medizin.dynamicreports.report.builder.expression.Expressions;
 import ch.unibas.medizin.dynamicreports.report.builder.style.ReportStyleBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.CrosstabTotalPosition;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.OrderType;
 import ch.unibas.medizin.dynamicreports.report.constant.TextAdjust;
@@ -106,23 +105,6 @@ public abstract class AbstractCrosstabGroupBuilder<T extends AbstractCrosstabGro
      */
     public T setHeaderPattern(final String pattern) {
         getObject().setHeaderPattern(pattern);
-        return (T) this;
-    }
-
-    /**
-     * <p>setHeaderHorizontalAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a T object.
-     * @deprecated use setHeaderHorizontalTextAlignment instead
-     */
-    @Deprecated
-    public T setHeaderHorizontalAlignment(final HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().setHeaderHorizontalTextAlignment(HorizontalTextAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().setHeaderHorizontalTextAlignment(null);
-        }
         return (T) this;
     }
 

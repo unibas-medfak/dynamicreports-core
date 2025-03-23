@@ -200,7 +200,7 @@ public class StyleTransform {
                 return driStyle;
             }
             case DRITemplateStyle driTemplateStyle -> {
-                String name = driTemplateStyle.getName();
+                String name = driTemplateStyle.name();
                 DRIStyle style = templateStyles.get(name);
                 if (style == null) {
                     throw new DRDesignReportException("Template style " + name + " not found");

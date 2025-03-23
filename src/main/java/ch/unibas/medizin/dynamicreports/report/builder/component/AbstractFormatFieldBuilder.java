@@ -23,7 +23,6 @@ package ch.unibas.medizin.dynamicreports.report.builder.component;
 import ch.unibas.medizin.dynamicreports.report.base.component.DRFormatField;
 import ch.unibas.medizin.dynamicreports.report.builder.expression.Expressions;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
 
@@ -67,23 +66,6 @@ public abstract class AbstractFormatFieldBuilder<T extends AbstractFormatFieldBu
      */
     public T setFormatExpression(DRIExpression<String> formatExpression) {
         getObject().setFormatExpression(formatExpression);
-        return (T) this;
-    }
-
-    /**
-     * <p>setHorizontalAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a T object.
-     * @deprecated use setHorizontalTextAlignment instead
-     */
-    @Deprecated
-    public T setHorizontalAlignment(HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().setHorizontalTextAlignment(HorizontalTextAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().setHorizontalTextAlignment(null);
-        }
         return (T) this;
     }
 

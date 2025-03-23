@@ -30,37 +30,35 @@ import java.io.Serial;
  * <p>DRQuery class.</p>
  *
  * @author Ricardo Mariaca
- * 
  */
-public class DRQuery implements DRIQuery {
+public record DRQuery(String text, String language) implements DRIQuery {
     @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
-
-    private final String text;
-    private final String language;
 
     /**
      * <p>Constructor for DRQuery.</p>
      *
-     * @param text     a {@link java.lang.String} object.
-     * @param language a {@link java.lang.String} object.
+     * @param text     a {@link String} object.
+     * @param language a {@link String} object.
      */
-    public DRQuery(String text, String language) {
+    public DRQuery {
         Validate.notNull(text, "text must not be null");
         Validate.notNull(language, "language must not be null");
-        this.text = text;
-        this.language = language;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public String getText() {
+    public String text() {
         return text;
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public String getLanguage() {
+    public String language() {
         return language;
     }
 }

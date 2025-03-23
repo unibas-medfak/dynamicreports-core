@@ -26,7 +26,6 @@ import ch.unibas.medizin.dynamicreports.report.builder.FieldBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.BooleanComponentType;
 import ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalImageAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
@@ -203,23 +202,6 @@ public class BooleanColumnBuilder extends ColumnBuilder<BooleanColumnBuilder, DR
      */
     public BooleanColumnBuilder setImageHeight(Integer height) {
         getComponent().setImageHeight(height);
-        return this;
-    }
-
-    /**
-     * Sets the column value horizontal alignment.
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a column builder
-     * @deprecated use setHorizontalImageAlignment instead
-     */
-    @Deprecated
-    public BooleanColumnBuilder setHorizontalAlignment(HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getComponent().setHorizontalImageAlignment(HorizontalImageAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getComponent().setHorizontalImageAlignment(null);
-        }
         return this;
     }
 

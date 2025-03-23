@@ -133,19 +133,6 @@ public class JasperHtmlExporterBuilder extends AbstractJasperExporterBuilder<Jas
     }
 
     /**
-     * <p>setUsingImagesToAlign.</p>
-     *
-     * @param usingImagesToAlign a {@link java.lang.Boolean} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperHtmlExporterBuilder} object.
-     * @deprecated To be removed.
-     */
-    @Deprecated
-    public JasperHtmlExporterBuilder setUsingImagesToAlign(Boolean usingImagesToAlign) {
-        this.getObject().setUsingImagesToAlign(usingImagesToAlign);
-        return this;
-    }
-
-    /**
      * <p>setWrapBreakWord.</p>
      *
      * @param wrapBreakWord a {@link java.lang.Boolean} object.
@@ -164,19 +151,6 @@ public class JasperHtmlExporterBuilder extends AbstractJasperExporterBuilder<Jas
      */
     public JasperHtmlExporterBuilder setSizeUnit(SizeUnit sizeUnit) {
         this.getObject().setSizeUnit(sizeUnit);
-        return this;
-    }
-
-    /**
-     * <p>setFramesAsNestedTables.</p>
-     *
-     * @param framesAsNestedTables a {@link java.lang.Boolean} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperHtmlExporterBuilder} object.
-     * @deprecated To be removed.
-     */
-    @Deprecated
-    public JasperHtmlExporterBuilder setFramesAsNestedTables(Boolean framesAsNestedTables) {
-        this.getObject().setFramesAsNestedTables(framesAsNestedTables);
         return this;
     }
 

@@ -26,7 +26,6 @@ import ch.unibas.medizin.dynamicreports.report.builder.HyperLinkBuilder;
 import ch.unibas.medizin.dynamicreports.report.builder.expression.Expressions;
 import ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.TextAdjust;
 import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
@@ -70,24 +69,6 @@ public abstract class ValueColumnBuilder<T extends ValueColumnBuilder<T, U>, U> 
      */
     public T setPrintRepeatedDetailValues(final Boolean printRepeatedDetailValues) {
         getObject().setPrintRepeatedDetailValues(printRepeatedDetailValues);
-        return (T) this;
-    }
-
-    /**
-     * Sets the column value horizontal alignment.
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a column builder
-     * @deprecated use setHorizontalTextAlignment instead
-     */
-    @Deprecated
-    public T setHorizontalAlignment(final HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getComponent().setHorizontalTextAlignment(HorizontalTextAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getComponent().setHorizontalTextAlignment(null);
-        }
-
         return (T) this;
     }
 

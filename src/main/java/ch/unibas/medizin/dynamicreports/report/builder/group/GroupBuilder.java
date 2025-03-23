@@ -28,7 +28,6 @@ import ch.unibas.medizin.dynamicreports.report.builder.style.ReportStyleBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.GroupFooterPosition;
 import ch.unibas.medizin.dynamicreports.report.constant.GroupHeaderLayout;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.SplitType;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
@@ -310,23 +309,6 @@ public abstract class GroupBuilder<T extends GroupBuilder<T>> extends AbstractBu
             getObject().getValueField().setStyle(style.getStyle());
         } else {
             getObject().getValueField().setStyle(null);
-        }
-        return (T) this;
-    }
-
-    /**
-     * <p>setHorizontalAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a T object.
-     * @deprecated use setHorizontalTextAlignment instead
-     */
-    @Deprecated
-    public T setHorizontalAlignment(HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().getValueField().setHorizontalTextAlignment(HorizontalTextAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().getValueField().setHorizontalTextAlignment(null);
         }
         return (T) this;
     }

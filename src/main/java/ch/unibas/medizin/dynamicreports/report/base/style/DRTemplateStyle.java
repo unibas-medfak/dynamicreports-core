@@ -29,26 +29,24 @@ import java.io.Serial;
  * <p>DRTemplateStyle class.</p>
  *
  * @author Ricardo Mariaca
- * 
  */
-public class DRTemplateStyle implements DRITemplateStyle {
+public record DRTemplateStyle(String name) implements DRITemplateStyle {
     @Serial
     private static final long serialVersionUID = Constants.SERIAL_VERSION_UID;
-
-    private final String name;
 
     /**
      * <p>Constructor for DRTemplateStyle.</p>
      *
-     * @param name a {@link java.lang.String} object.
+     * @param name a {@link String} object.
      */
-    public DRTemplateStyle(String name) {
-        this.name = name;
+    public DRTemplateStyle {
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public String getName() {
+    public String name() {
         return name;
     }
 

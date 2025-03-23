@@ -23,7 +23,6 @@ package ch.unibas.medizin.dynamicreports.report.builder.component;
 import ch.unibas.medizin.dynamicreports.report.base.component.DRImage;
 import ch.unibas.medizin.dynamicreports.report.builder.expression.Expressions;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalImageAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.ImageScale;
 import ch.unibas.medizin.dynamicreports.report.definition.expression.DRIExpression;
@@ -139,23 +138,6 @@ public class ImageBuilder extends HyperLinkComponentBuilder<ImageBuilder, DRImag
      */
     public ImageBuilder setLazy(Boolean lazy) {
         getObject().setLazy(lazy);
-        return this;
-    }
-
-    /**
-     * <p>setHorizontalAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.ImageBuilder} object.
-     * @deprecated use setHorizontalImageAlignment instead
-     */
-    @Deprecated
-    public ImageBuilder setHorizontalAlignment(HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().setHorizontalImageAlignment(HorizontalImageAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().setHorizontalImageAlignment(null);
-        }
         return this;
     }
 

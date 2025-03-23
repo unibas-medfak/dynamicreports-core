@@ -22,8 +22,6 @@ package ch.unibas.medizin.dynamicreports.test.jasper.component;
 
 import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.cmp;
 
-import java.util.Arrays;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;

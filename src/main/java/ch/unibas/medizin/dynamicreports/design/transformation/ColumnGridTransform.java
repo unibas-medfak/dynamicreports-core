@@ -115,7 +115,7 @@ public class ColumnGridTransform {
 
     private ColumnGrid createColumnGrid(final DRIColumnGridList columnGridList, final DRDesignStyle groupPaddingStyle, final boolean titleGroup) throws DRException {
         final ColumnGrid columnGrid = new ColumnGrid();
-        final DRDesignList list = list(columnGridList, columnGrid, titleGroup).getList();
+        final DRDesignList list = list(columnGridList, columnGrid, titleGroup).list();
         final int groupPadding = accessor.getGroupTransform().getGroupPadding();
         if (groupPadding > 0) {
             final DRDesignFiller filler = new DRDesignFiller();
@@ -176,17 +176,17 @@ public class ColumnGridTransform {
                 }
             }
             final GridList gridList = list(component, columnGrid, titleGroup);
-            if (gridList.getHorizontalCellAlignment() != null) {
-                list.addComponent(gridList.getHorizontalCellAlignment(), cell.getVerticalAlignment(), gridList.getList());
+            if (gridList.horizontalCellAlignment() != null) {
+                list.addComponent(gridList.horizontalCellAlignment(), cell.getVerticalAlignment(), gridList.list());
             } else {
-                list.addComponent(horizontalAlignment, cell.getVerticalAlignment(), gridList.getList());
+                list.addComponent(horizontalAlignment, cell.getVerticalAlignment(), gridList.list());
             }
         }
         return list;
     }
 
     private GridList columnGridTitleGroup(final DRIColumnTitleGroup columnGridTitleGroup, final ColumnGrid columnGrid, final boolean titleGroup) throws DRException {
-        final DRDesignList columnList = list(columnGridTitleGroup.getList(), columnGrid, titleGroup).getList();
+        final DRDesignList columnList = list(columnGridTitleGroup.getList(), columnGrid, titleGroup).list();
 
         final DRTextField titleGroupField = new DRTextField();
         titleGroupField.setValueExpression(columnGridTitleGroup.getTitleExpression());
@@ -256,21 +256,6 @@ public class ColumnGridTransform {
         }
     }
 
-    private static class GridList {
-        private final HorizontalCellComponentAlignment horizontalCellAlignment;
-        private final DRDesignList list;
-
-        private GridList(final DRDesignList list, final HorizontalCellComponentAlignment horizontalCellAlignment) {
-            this.list = list;
-            this.horizontalCellAlignment = horizontalCellAlignment;
-        }
-
-        public HorizontalCellComponentAlignment getHorizontalCellAlignment() {
-            return horizontalCellAlignment;
-        }
-
-        public DRDesignList getList() {
-            return list;
-        }
+    private record GridList(DRDesignList list, HorizontalCellComponentAlignment horizontalCellAlignment) {
     }
 }

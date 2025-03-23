@@ -33,7 +33,6 @@ import ch.unibas.medizin.dynamicreports.report.builder.group.GroupBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.ComponentDimensionType;
 import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.Evaluation;
-import ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.HorizontalTextAlignment;
 import ch.unibas.medizin.dynamicreports.report.constant.Markup;
 import ch.unibas.medizin.dynamicreports.report.constant.TextAdjust;
@@ -152,23 +151,6 @@ public class TextFieldBuilder<T> extends HyperLinkComponentBuilder<TextFieldBuil
      */
     public TextFieldBuilder<T> setPattern(final DRIExpression<String> patternExpression) {
         getObject().setPatternExpression(patternExpression);
-        return this;
-    }
-
-    /**
-     * <p>setHorizontalAlignment.</p>
-     *
-     * @param horizontalAlignment a {@link ch.unibas.medizin.dynamicreports.report.constant.HorizontalAlignment} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.report.builder.component.TextFieldBuilder} object.
-     * @deprecated use setHorizontalTextAlignment instead
-     */
-    @Deprecated
-    public TextFieldBuilder<T> setHorizontalAlignment(final HorizontalAlignment horizontalAlignment) {
-        if (horizontalAlignment != null) {
-            getObject().setHorizontalTextAlignment(HorizontalTextAlignment.valueOf(horizontalAlignment.name()));
-        } else {
-            getObject().setHorizontalTextAlignment(null);
-        }
         return this;
     }
 
