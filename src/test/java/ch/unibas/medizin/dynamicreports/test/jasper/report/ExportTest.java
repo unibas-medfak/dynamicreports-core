@@ -67,7 +67,6 @@ public class ExportTest {
             report.toPdf(new ByteArrayOutputStream());
             report.toRtf(new ByteArrayOutputStream());
             report.toText(new ByteArrayOutputStream());
-            report.toXls(new ByteArrayOutputStream());
             report.toXlsx(new ByteArrayOutputStream());
             report.toXml(new ByteArrayOutputStream());
             report.toPptx(new ByteArrayOutputStream());
@@ -89,7 +88,6 @@ public class ExportTest {
             concatenatedReport.toPdf(new ByteArrayOutputStream());
             concatenatedReport.toRtf(new ByteArrayOutputStream());
             concatenatedReport.toText(new ByteArrayOutputStream());
-            concatenatedReport.toXls(new ByteArrayOutputStream());
             concatenatedReport.toXlsx(new ByteArrayOutputStream());
             concatenatedReport.toXml(new ByteArrayOutputStream());
             concatenatedReport.toPptx(new ByteArrayOutputStream());

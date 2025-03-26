@@ -35,7 +35,6 @@ import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIPdfExpor
 import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIPptxExporter;
 import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIRtfExporter;
 import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperITextExporter;
-import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIXlsExporter;
 import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIXlsxExporter;
 import ch.unibas.medizin.dynamicreports.jasper.definition.export.JasperIXmlExporter;
 import ch.unibas.medizin.dynamicreports.jasper.exception.JasperDesignException;
@@ -78,8 +77,6 @@ import net.sf.jasperreports.export.SimpleRtfReportConfiguration;
 import net.sf.jasperreports.export.SimpleTextExporterConfiguration;
 import net.sf.jasperreports.export.SimpleTextReportConfiguration;
 import net.sf.jasperreports.export.SimpleWriterExporterOutput;
-import net.sf.jasperreports.export.SimpleXlsExporterConfiguration;
-import net.sf.jasperreports.export.SimpleXlsReportConfiguration;
 import net.sf.jasperreports.export.SimpleXlsxExporterConfiguration;
 import net.sf.jasperreports.export.SimpleXlsxReportConfiguration;
 import net.sf.jasperreports.export.SimpleXmlExporterOutput;
@@ -90,7 +87,6 @@ import net.sf.jasperreports.json.export.SimpleJsonMetadataReportConfiguration;
 import net.sf.jasperreports.pdf.JRPdfExporter;
 import net.sf.jasperreports.pdf.SimplePdfExporterConfiguration;
 import net.sf.jasperreports.pdf.SimplePdfReportConfiguration;
-import net.sf.jasperreports.poi.export.JRXlsExporter;
 import net.sf.jasperreports.web.util.WebHtmlResourceHandler;
 
 /**
@@ -126,25 +122,21 @@ public class ExporterTransform {
    * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
    */
   public Exporter<?, ?, ?, ?> transform() throws DRException {
-    Exporter<?, ?, ?, ?> jrExporter = switch (jasperExporter) {
-        case JasperICsvExporter jasperICsvExporter -> csv(jasperICsvExporter);
-        case JasperIDocxExporter jasperIDocxExporter -> docx(jasperIDocxExporter);
-        case JasperIXlsExporter jasperIXlsExporter -> xls(jasperIXlsExporter);
-        case JasperIXlsxExporter jasperIXlsxExporter -> xlsx(jasperIXlsxExporter);
-        case JasperIHtmlExporter jasperIHtmlExporter -> html(jasperIHtmlExporter);
-        case JasperIOdsExporter jasperIOdsExporter -> ods(jasperIOdsExporter);
-        case JasperIOdtExporter jasperIOdtExporter -> odt(jasperIOdtExporter);
-        case JasperIPdfExporter jasperIPdfExporter -> pdf(jasperIPdfExporter);
-        case JasperIRtfExporter jasperIRtfExporter -> rtf(jasperIRtfExporter);
-        case JasperITextExporter jasperITextExporter -> text(jasperITextExporter);
-        case JasperIXmlExporter jasperIXmlExporter -> xml(jasperIXmlExporter);
-        case JasperIPptxExporter jasperIPptxExporter -> pptx(jasperIPptxExporter);
-        case JasperIJsonExporter jasperIJsonExporter -> json(jasperIJsonExporter);
-        default ->
-                throw new JasperDesignException("Exporter " + jasperExporter.getClass().getName() + " not supported");
-    };
-
-      return jrExporter;
+      return switch (jasperExporter) {
+          case JasperICsvExporter jasperICsvExporter -> csv(jasperICsvExporter);
+          case JasperIDocxExporter jasperIDocxExporter -> docx(jasperIDocxExporter);
+          case JasperIXlsxExporter jasperIXlsxExporter -> xlsx(jasperIXlsxExporter);
+          case JasperIHtmlExporter jasperIHtmlExporter -> html(jasperIHtmlExporter);
+          case JasperIOdsExporter jasperIOdsExporter -> ods(jasperIOdsExporter);
+          case JasperIOdtExporter jasperIOdtExporter -> odt(jasperIOdtExporter);
+          case JasperIPdfExporter jasperIPdfExporter -> pdf(jasperIPdfExporter);
+          case JasperIRtfExporter jasperIRtfExporter -> rtf(jasperIRtfExporter);
+          case JasperITextExporter jasperITextExporter -> text(jasperITextExporter);
+          case JasperIXmlExporter jasperIXmlExporter -> xml(jasperIXmlExporter);
+          case JasperIPptxExporter jasperIPptxExporter -> pptx(jasperIPptxExporter);
+          case JasperIJsonExporter jasperIJsonExporter -> json(jasperIJsonExporter);
+          default -> throw new JasperDesignException("Exporter " + jasperExporter.getClass().getName() + " not supported");
+      };
   }
 
   private SimpleWriterExporterOutput simpleWriterExporterOutput(JasperIExporter jasperExporter) {
@@ -743,20 +735,6 @@ public class ExporterTransform {
     }
 
     final JRXlsxExporter jrExporter = new JRXlsxExporter();
-    jrExporter.setExporterOutput(exporterOutput);
-    jrExporter.setConfiguration(reportExportConfiguration);
-    jrExporter.setConfiguration(exporterConfiguration);
-    return jrExporter;
-  }
-
-  private JRXlsExporter xls(JasperIXlsExporter jasperExporter) {
-    final SimpleOutputStreamExporterOutput exporterOutput = simpleOutputStreamExporterOutput(jasperExporter);
-    final SimpleXlsReportConfiguration reportExportConfiguration = new SimpleXlsReportConfiguration();
-    reportExcelExportConfiguration(reportExportConfiguration, jasperExporter);
-    final SimpleXlsExporterConfiguration exporterConfiguration = new SimpleXlsExporterConfiguration();
-    reportExcelExporterConfiguration(exporterConfiguration, jasperExporter);
-
-    final JRXlsExporter jrExporter = new JRXlsExporter();
     jrExporter.setExporterOutput(exporterOutput);
     jrExporter.setConfiguration(reportExportConfiguration);
     jrExporter.setConfiguration(exporterConfiguration);

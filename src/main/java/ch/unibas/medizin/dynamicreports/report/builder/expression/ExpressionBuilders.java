@@ -265,16 +265,6 @@ public class ExpressionBuilders {
     // jasper
 
     /**
-     * Creates a new jasper string expression, useful only for showing a static text.<br/> This method escapes the characters in a {@code String} using Java String rules.
-     *
-     * @param text text to be shown
-     * @return the expression
-     */
-    public JasperExpression<String> jasperSyntaxText(String text) {
-        return Expressions.jasperSyntaxText(text);
-    }
-
-    /**
      * Creates a new jasper expression.<br/> This expression allows declaring an expression in a Jasper native syntax. Knowledge of the jasper syntax is also required for proper use.
      *
      * @param expression the jasper expression

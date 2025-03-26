@@ -58,7 +58,6 @@ import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperPdfExporterB
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperPptxExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperRtfExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder;
-import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsxExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXmlExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.constant.ImageType;
@@ -800,31 +799,7 @@ public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
         return export(textExporterBuilder);
     }
 
-    // text
-
-    /**
-     * <p>toXls.</p>
-     *
-     * @param outputStream a {@link java.io.OutputStream} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.JasperReportBuilder} object.
-     * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
-     */
-    public JasperReportBuilder toXls(OutputStream outputStream) throws DRException {
-        return toXls(Exporters.xlsExporter(outputStream));
-    }
-
-    /**
-     * <p>toXls.</p>
-     *
-     * @param xlsExporterBuilder a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsExporterBuilder} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.JasperReportBuilder} object.
-     * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
-     */
-    public JasperReportBuilder toXls(JasperXlsExporterBuilder xlsExporterBuilder) throws DRException {
-        return export(xlsExporterBuilder);
-    }
-
-    // xls
+    // xlsx
 
     /**
      * <p>toXlsx.</p>
@@ -848,7 +823,7 @@ public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
         return export(xlsxExporterBuilder);
     }
 
-    // xlsx
+    // xml
 
     /**
      * <p>toXml.</p>
@@ -872,7 +847,7 @@ public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
         return export(xmlExporterBuilder);
     }
 
-    // xml
+    // pptx
 
     /**
      * <p>toPptx.</p>
@@ -895,8 +870,6 @@ public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
     public JasperReportBuilder toPptx(JasperPptxExporterBuilder pptxExporterBuilder) throws DRException {
         return export(pptxExporterBuilder);
     }
-
-    // pptx
 
     /**
      * <p>export.</p>

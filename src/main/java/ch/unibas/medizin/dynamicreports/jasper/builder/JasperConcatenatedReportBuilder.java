@@ -33,7 +33,6 @@ import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperPdfExporterB
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperPptxExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperRtfExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperTextExporterBuilder;
-import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsxExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXmlExporterBuilder;
 import ch.unibas.medizin.dynamicreports.jasper.definition.JasperReportHandler;
@@ -393,30 +392,6 @@ public class JasperConcatenatedReportBuilder implements Serializable {
      */
     public JasperConcatenatedReportBuilder toText(JasperTextExporterBuilder textExporterBuilder) throws DRException {
         return export(textExporterBuilder);
-    }
-
-    // xls
-
-    /**
-     * <p>toXls.</p>
-     *
-     * @param outputStream a {@link java.io.OutputStream} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.JasperConcatenatedReportBuilder} object.
-     * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
-     */
-    public JasperConcatenatedReportBuilder toXls(OutputStream outputStream) throws DRException {
-        return toXls(Exporters.xlsExporter(outputStream));
-    }
-
-    /**
-     * <p>toXls.</p>
-     *
-     * @param xlsExporterBuilder a {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsExporterBuilder} object.
-     * @return a {@link ch.unibas.medizin.dynamicreports.jasper.builder.JasperConcatenatedReportBuilder} object.
-     * @throws ch.unibas.medizin.dynamicreports.report.exception.DRException if any.
-     */
-    public JasperConcatenatedReportBuilder toXls(JasperXlsExporterBuilder xlsExporterBuilder) throws DRException {
-        return export(xlsExporterBuilder);
     }
 
     // xlsx

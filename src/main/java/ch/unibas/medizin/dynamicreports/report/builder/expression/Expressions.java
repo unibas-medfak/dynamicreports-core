@@ -28,7 +28,6 @@ import java.util.Date;
 import java.util.Map;
 
 import org.apache.commons.lang3.Validate;
-import org.apache.commons.text.StringEscapeUtils;
 
 import ch.unibas.medizin.dynamicreports.report.builder.crosstab.AbstractCrosstabGroupBuilder;
 import ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabColumnGroupBuilder;
@@ -282,16 +281,6 @@ public class Expressions {
     }
 
     // jasper
-
-    /**
-     * Creates a new jasper string expression, useful only for showing a static text.<br/> This method escapes the characters in a {@code String} using Java String rules.
-     *
-     * @param text text to be shown
-     * @return the expression
-     */
-    public static JasperExpression<String> jasperSyntaxText(final String text) {
-        return new JasperExpression<>("\"" + StringEscapeUtils.escapeJava(text) + "\"", String.class);
-    }
 
     /**
      * Creates a new jasper expression.<br/> This expression allows declaring an expression in a Jasper native syntax. Knowledge of the jasper syntax is also required for proper use.

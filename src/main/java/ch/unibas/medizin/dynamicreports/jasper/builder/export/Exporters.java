@@ -556,64 +556,6 @@ public class Exporters {
     return new JasperTextExporterBuilder().setOutputFileName(outputFileName);
   }
 
-  // xls
-
-  /**
-   * <p>
-   * xlsExporter.
-   * </p>
-   *
-   * @param outputWriter a {@link java.io.Writer} object.
-   * @return a
-   *         {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsExporterBuilder}
-   *         object.
-   */
-  public static JasperXlsExporterBuilder xlsExporter(Writer outputWriter) {
-    return new JasperXlsExporterBuilder().setOutputWriter(outputWriter);
-  }
-
-  /**
-   * <p>
-   * xlsExporter.
-   * </p>
-   *
-   * @param outputStream a {@link java.io.OutputStream} object.
-   * @return a
-   *         {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsExporterBuilder}
-   *         object.
-   */
-  public static JasperXlsExporterBuilder xlsExporter(OutputStream outputStream) {
-    return new JasperXlsExporterBuilder().setOutputStream(outputStream);
-  }
-
-  /**
-   * <p>
-   * xlsExporter.
-   * </p>
-   *
-   * @param outputFile a {@link java.io.File} object.
-   * @return a
-   *         {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsExporterBuilder}
-   *         object.
-   */
-  public static JasperXlsExporterBuilder xlsExporter(File outputFile) {
-    return new JasperXlsExporterBuilder().setOutputFile(outputFile);
-  }
-
-  /**
-   * <p>
-   * xlsExporter.
-   * </p>
-   *
-   * @param outputFileName a {@link java.lang.String} object.
-   * @return a
-   *         {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.JasperXlsExporterBuilder}
-   *         object.
-   */
-  public static JasperXlsExporterBuilder xlsExporter(String outputFileName) {
-    return new JasperXlsExporterBuilder().setOutputFileName(outputFileName);
-  }
-
   // xlsx
 
   /**
