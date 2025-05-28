@@ -234,6 +234,9 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <configuration>
+                                    <keyname>1411A464E5F9C9C5</keyname>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>

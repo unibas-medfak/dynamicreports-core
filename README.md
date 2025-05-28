@@ -28,6 +28,12 @@ DynamicReports is synchronized with a Maven central repository. For Maven projec
 ```
 
 #### Build from source 
-Check release page to download source [release files](https://github.com/unibas-medfak/dynamicreports-core/releases).
+Check the release page to download source [release files](https://github.com/unibas-medfak/dynamicreports-core/releases).
 
 Unzip the sources, execute `mvn clean install` from project root directory. This compiles project sources and create project jar files.
+
+### Deploy to maven central
+
+```shell
+mvn deploy -P release-sign-artifacts
+```
