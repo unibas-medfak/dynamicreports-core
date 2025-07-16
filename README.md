@@ -23,7 +23,7 @@ DynamicReports is synchronized with a Maven central repository. For Maven projec
 <dependency>
     <groupId>ch.unibas.medizin</groupId>
     <artifactId>dynamicreports-core</artifactId>
-    <version>7.0.2</version>
+    <version>7.0.3</version>
 </dependency>
 ```
 
