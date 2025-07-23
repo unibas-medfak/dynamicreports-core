@@ -27,6 +27,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.io.Serial;
+import java.util.Objects;
 
 /**
  * <p>DRDesignConditionalStyle class.</p>
@@ -80,5 +81,13 @@ public class DRDesignConditionalStyle extends DRDesignBaseStyle implements DRIDe
             equalsBuilder.append(conditionExpression, o.conditionExpression).append(dataset, o.dataset);
         }
         return equalsBuilder.isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + Objects.hashCode(getConditionExpression());
+        result = 31 * result + Objects.hashCode(getDataset());
+        return result;
     }
 }

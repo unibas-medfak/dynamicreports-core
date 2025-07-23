@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.io.Serial;
+import java.util.Objects;
 
 /**
  * <p>DRDesignBorder class.</p>
@@ -117,5 +118,14 @@ public class DRDesignBorder implements DRIDesignBorder {
         DRDesignBorder o = (DRDesignBorder) obj;
         EqualsBuilder equalsBuilder = new EqualsBuilder().append(topPen, o.topPen).append(leftPen, o.leftPen).append(bottomPen, o.bottomPen).append(rightPen, o.rightPen);
         return equalsBuilder.isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(getTopPen());
+        result = 31 * result + Objects.hashCode(getLeftPen());
+        result = 31 * result + Objects.hashCode(getBottomPen());
+        result = 31 * result + Objects.hashCode(getRightPen());
+        return result;
     }
 }

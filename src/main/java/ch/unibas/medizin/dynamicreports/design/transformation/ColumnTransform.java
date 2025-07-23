@@ -122,7 +122,7 @@ public class ColumnTransform {
         }
     }
 
-    private Map<DRIColumn<?>, DRIComponent> getColumnComponents() throws DRException {
+    private Map<DRIColumn<?>, DRIComponent> getColumnComponents() {
         final Map<DRIColumn<?>, DRIComponent> columnComponents = new HashMap<>();
         for (final DRIColumn<?> column : accessor.getReport().getColumns()) {
             if (!accessor.getGroupTransform().getHideGroupColumns().contains(column)) {

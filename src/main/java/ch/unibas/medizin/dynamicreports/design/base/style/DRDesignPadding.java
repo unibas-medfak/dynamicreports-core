@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.io.Serial;
+import java.util.Objects;
 
 /**
  * <p>DRDesignPadding class.</p>
@@ -117,5 +118,14 @@ public class DRDesignPadding implements DRIDesignPadding {
         DRDesignPadding o = (DRDesignPadding) obj;
         EqualsBuilder equalsBuilder = new EqualsBuilder().append(top, o.top).append(left, o.left).append(bottom, o.bottom).append(right, o.right);
         return equalsBuilder.isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(getTop());
+        result = 31 * result + Objects.hashCode(getLeft());
+        result = 31 * result + Objects.hashCode(getBottom());
+        result = 31 * result + Objects.hashCode(getRight());
+        return result;
     }
 }

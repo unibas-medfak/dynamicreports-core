@@ -25,6 +25,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.io.Serial;
+import java.util.Objects;
 
 /**
  * <p>DRDesignFont class.</p>
@@ -205,5 +206,19 @@ public class DRDesignFont implements DRIDesignFont {
                                                          .append(pdfEncoding, o.pdfEncoding)
                                                          .append(pdfEmbedded, o.pdfEmbedded);
         return equalsBuilder.isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(getFontName());
+        result = 31 * result + Objects.hashCode(getFontSize());
+        result = 31 * result + Objects.hashCode(getBold());
+        result = 31 * result + Objects.hashCode(getItalic());
+        result = 31 * result + Objects.hashCode(getUnderline());
+        result = 31 * result + Objects.hashCode(getStrikeThrough());
+        result = 31 * result + Objects.hashCode(getPdfFontName());
+        result = 31 * result + Objects.hashCode(getPdfEncoding());
+        result = 31 * result + Objects.hashCode(getPdfEmbedded());
+        return result;
     }
 }

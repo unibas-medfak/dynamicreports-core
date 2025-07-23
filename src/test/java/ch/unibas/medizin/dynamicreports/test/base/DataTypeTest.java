@@ -104,7 +104,7 @@ public class DataTypeTest {
     valueConversionTest("Short", type.shortType(), 1000, "1,000");
 
     final Calendar c = Calendar.getInstance();
-    c.set(2010, 0, 2, 15, 5, 20);
+    c.set(2010, Calendar.JANUARY, 2, 15, 5, 20);
     c.set(Calendar.MILLISECOND, 100);
     final Date date = c.getTime();
     valueConversionTest("Date", type.dateType(), date, "01/02/2010");

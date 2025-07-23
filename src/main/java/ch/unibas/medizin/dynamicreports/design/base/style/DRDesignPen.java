@@ -27,6 +27,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.awt.Color;
 import java.io.Serial;
+import java.util.Objects;
 
 /**
  * <p>DRDesignPen class.</p>
@@ -103,5 +104,13 @@ public class DRDesignPen implements DRIDesignPen {
         DRDesignPen o = (DRDesignPen) obj;
         EqualsBuilder equalsBuilder = new EqualsBuilder().append(lineWidth, o.lineWidth).append(lineStyle, o.lineStyle).append(lineColor, o.lineColor);
         return equalsBuilder.isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(getLineWidth());
+        result = 31 * result + Objects.hashCode(getLineStyle());
+        result = 31 * result + Objects.hashCode(getLineColor());
+        return result;
     }
 }

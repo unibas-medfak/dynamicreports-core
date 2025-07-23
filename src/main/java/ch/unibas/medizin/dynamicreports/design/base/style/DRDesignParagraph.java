@@ -28,6 +28,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.io.Serial;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * <p>DRDesignParagraph class.</p>
@@ -208,5 +209,19 @@ public class DRDesignParagraph implements DRIDesignParagraph {
                                                          .append(tabStopWidth, o.tabStopWidth)
                                                          .append(tabStops, o.tabStops);
         return equalsBuilder.isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(getLineSpacing());
+        result = 31 * result + Objects.hashCode(getLineSpacingSize());
+        result = 31 * result + Objects.hashCode(getFirstLineIndent());
+        result = 31 * result + Objects.hashCode(getLeftIndent());
+        result = 31 * result + Objects.hashCode(getRightIndent());
+        result = 31 * result + Objects.hashCode(getSpacingBefore());
+        result = 31 * result + Objects.hashCode(getSpacingAfter());
+        result = 31 * result + Objects.hashCode(getTabStopWidth());
+        result = 31 * result + Objects.hashCode(getTabStops());
+        return result;
     }
 }

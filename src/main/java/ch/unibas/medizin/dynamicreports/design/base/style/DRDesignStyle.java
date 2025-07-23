@@ -29,6 +29,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * <p>DRDesignStyle class.</p>
@@ -118,5 +119,13 @@ public class DRDesignStyle extends DRDesignBaseStyle implements DRIDesignStyle {
             equalsBuilder.append(name, o.name).append(conditionalStyles, o.conditionalStyles);
         }
         return equalsBuilder.isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(getName());
+        result = 31 * result + Objects.hashCode(getParentStyle());
+        result = 31 * result + Objects.hashCode(getConditionalStyles());
+        return result;
     }
 }

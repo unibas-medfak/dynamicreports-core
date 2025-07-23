@@ -26,6 +26,7 @@ import ch.unibas.medizin.dynamicreports.report.constant.TabStopAlignment;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.io.Serial;
+import java.util.Objects;
 
 /**
  * <p>DRDesignTabStop class.</p>
@@ -86,5 +87,12 @@ public class DRDesignTabStop implements DRIDesignTabStop {
         DRDesignTabStop o = (DRDesignTabStop) obj;
         EqualsBuilder equalsBuilder = new EqualsBuilder().append(position, o.position).append(alignment, o.alignment);
         return equalsBuilder.isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getPosition();
+        result = 31 * result + Objects.hashCode(getAlignment());
+        return result;
     }
 }

@@ -35,7 +35,6 @@ import ch.unibas.medizin.dynamicreports.jasper.builder.JasperReportBuilder;
 import ch.unibas.medizin.dynamicreports.report.constant.WhenNoDataType;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.JRDataSource;
-import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRField;
 
 /**
@@ -74,7 +73,7 @@ public class ConcatenatedReport5Test {
         private boolean next = true;
 
         @Override
-        public boolean next() throws JRException {
+        public boolean next() {
             if (next) {
                 next = false;
                 return true;
@@ -83,7 +82,7 @@ public class ConcatenatedReport5Test {
         }
 
         @Override
-        public Object getFieldValue(JRField jrField) throws JRException {
+        public Object getFieldValue(JRField jrField) {
             return null;
         }
 

@@ -33,6 +33,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.awt.Color;
 import java.io.Serial;
+import java.util.Objects;
 
 /**
  * <p>Abstract DRDesignBaseStyle class.</p>
@@ -334,4 +335,24 @@ public abstract class DRDesignBaseStyle implements DRIDesignBaseStyle {
         return equalsBuilder.isEquals();
     }
 
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(getForegroundColor());
+        result = 31 * result + Objects.hashCode(getBackgroundColor());
+        result = 31 * result + Objects.hashCode(getRadius());
+        result = 31 * result + Objects.hashCode(getImageScale());
+        result = 31 * result + Objects.hashCode(getHorizontalTextAlignment());
+        result = 31 * result + Objects.hashCode(getVerticalTextAlignment());
+        result = 31 * result + Objects.hashCode(getHorizontalImageAlignment());
+        result = 31 * result + Objects.hashCode(getVerticalImageAlignment());
+        result = 31 * result + Objects.hashCode(getBorder());
+        result = 31 * result + Objects.hashCode(getPadding());
+        result = 31 * result + Objects.hashCode(getFont());
+        result = 31 * result + Objects.hashCode(getRotation());
+        result = 31 * result + Objects.hashCode(getPattern());
+        result = 31 * result + Objects.hashCode(getMarkup());
+        result = 31 * result + Objects.hashCode(getParagraph());
+        result = 31 * result + Objects.hashCode(getLinePen());
+        return result;
+    }
 }

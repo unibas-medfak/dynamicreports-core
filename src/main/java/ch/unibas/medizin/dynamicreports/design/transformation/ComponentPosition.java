@@ -602,23 +602,22 @@ class ComponentPosition {
             switch (type) {
                 case HORIZONTAL:
                 case HORIZONTAL_FLOW:
-                    int maxHeight = availableHeight;
                     for (DRDesignListCell listCell : list.getListCells()) {
-                        if (listCell.getComponent().getHeight() > maxHeight) {
-                            maxHeight = listCell.getComponent().getHeight();
+                        if (listCell.getComponent().getHeight() > availableHeight) {
+                            availableHeight = listCell.getComponent().getHeight();
                         }
                     }
                     for (DRDesignListCell listCell : list.getListCells()) {
                         DRDesignComponent component = listCell.getComponent();
                         switch (listCell.getVerticalAlignment()) {
                             case EXPAND:
-                                listCell.setHeight(maxHeight);
+                                listCell.setHeight(availableHeight);
                                 if (component instanceof DRDesignList) {
-                                    listCellHeight((DRDesignList) component, maxHeight - StyleResolver.getVerticalPadding(component.getStyle()));
+                                    listCellHeight((DRDesignList) component, availableHeight - StyleResolver.getVerticalPadding(component.getStyle()));
                                 }
                                 break;
                             default:
-                                listCell.setHeight(maxHeight);
+                                listCell.setHeight(availableHeight);
                                 if (component instanceof DRDesignList) {
                                     listCellHeight((DRDesignList) component, component.getHeight() - StyleResolver.getVerticalPadding(component.getStyle()));
                                 }
@@ -627,7 +626,7 @@ class ComponentPosition {
                     }
                     break;
                 case VERTICAL:
-                    maxHeight = 0;
+                    int maxHeight = 0;
                     int expandCellsHeight = 0;
                     int expandCells = 0;
                     for (DRDesignListCell listCell : list.getListCells()) {

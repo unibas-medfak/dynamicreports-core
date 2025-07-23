@@ -131,7 +131,7 @@ public class JasperTemplateDesign implements DRITemplateDesign<JasperDesign> {
         }
     }
 
-    private void init(JasperDesign jasperDesign) throws DRException {
+    private void init(JasperDesign jasperDesign) {
         Validate.notNull(jasperDesign, "jasperDesign must not be null");
         this.jasperDesign = jasperDesign;
 

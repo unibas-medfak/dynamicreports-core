@@ -63,7 +63,7 @@ public class JasperTransform implements JasperTransformAccessor {
         init();
     }
 
-    private void init() throws DRException {
+    private void init() {
         reportTransform = new ReportTransform(this);
         mainDatasetExpressionTransform = new MainDatasetExpressionTransform(this);
         groupTransform = new GroupTransform(this);
