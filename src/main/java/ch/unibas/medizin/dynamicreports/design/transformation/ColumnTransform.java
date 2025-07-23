@@ -182,9 +182,7 @@ public class ColumnTransform {
     }
 
     private DRDesignComponent detailBooleanComponent(final DRIBooleanColumn column) throws DRException {
-        final DRDesignComponent detailComponent = detailComponent(column);
-
-        return detailComponent;
+        return detailComponent(column);
     }
 
     private DRDesignComponent detailComponent(final DRIColumn<?> column) throws DRException {

@@ -40,7 +40,6 @@ public class JasperEmptyTemplateDesign extends AbstractTemplateDesign<JasperDesi
     /** {@inheritDoc} */
     @Override
     public JasperDesign getDesign() throws DRException {
-        JasperDesign design = new JasperDesign();
-        return design;
+        return new JasperDesign();
     }
 }

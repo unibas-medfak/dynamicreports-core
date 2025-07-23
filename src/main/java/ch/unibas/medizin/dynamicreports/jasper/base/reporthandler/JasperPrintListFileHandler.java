@@ -123,8 +123,7 @@ public class JasperPrintListFileHandler extends AbstractPrintListHandler {
                 public JasperPrint next() {
                     File tempFile = it.next();
                     try {
-                        JasperPrint jasperPrint = JRLoader.loadJasperPrint(tempFile, virtualizer);
-                        return jasperPrint;
+                        return JRLoader.loadJasperPrint(tempFile, virtualizer);
                     } catch (JRException e) {
                         throw new DRReportException(e);
                     }
@@ -192,8 +191,7 @@ public class JasperPrintListFileHandler extends AbstractPrintListHandler {
         public JasperPrint get(int index) {
             try {
                 File tempFile = tempFiles.get(index);
-                JasperPrint jasperPrint = JRLoader.loadJasperPrint(tempFile, virtualizer);
-                return jasperPrint;
+                return JRLoader.loadJasperPrint(tempFile, virtualizer);
             } catch (JRException e) {
                 throw new DRReportException(e);
             }

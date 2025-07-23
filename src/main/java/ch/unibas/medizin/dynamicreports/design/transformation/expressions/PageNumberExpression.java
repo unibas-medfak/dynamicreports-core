@@ -53,7 +53,6 @@ public class PageNumberExpression extends AbstractComplexExpression<String> {
     public String evaluate(List<?> values, ReportParameters reportParameters) {
         String pattern = (String) values.getFirst();
         MessageFormat format = new MessageFormat(pattern, reportParameters.getLocale());
-        String result = format.format(new Object[] {reportParameters.getPageNumber()});
-        return result;
+        return format.format(new Object[] {reportParameters.getPageNumber()});
     }
 }

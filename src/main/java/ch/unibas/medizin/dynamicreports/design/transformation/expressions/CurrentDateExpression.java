@@ -68,7 +68,6 @@ public class CurrentDateExpression extends AbstractComplexExpression<String> {
         } else {
             date = new SimpleDateFormat(datePattern, locale).format(new Date());
         }
-        String result = format.format(new Object[] {date});
-        return result;
+        return format.format(new Object[] {date});
     }
 }

@@ -7,7 +7,7 @@ or exported into many popular formats such as PDF, Excel, Word and others.
 The original source code was first hosted on [sourceforge](https://sourceforge.net/p/dynamicreports) and
 interactions were carried out through [dynamicreports.org]. After
 using this project and libraries, we the maintainers felt compelled to support the development for it has
-been a great tool. However, the source code has not been easily accessible and the original hosting website
+been a great tool. However, the source code has not been easily accessible, and the original hosting website
 on which this project was first created is no longer responsive, and we do not want to see a great project
 go down and disappear like that.
 
@@ -15,7 +15,7 @@ go down and disappear like that.
 This project aims to maintain a fork of the original source code supporting current dependencies.
 
 ## Usage or Build
-DynamicReports is synchronized with a Maven central repository. For Maven projects you just add dependency to your maven configuration. In case you would like to use a development version, add a Sonatype Nexus snapshot repository to your maven configuration. 
+DynamicReports is synchronized with a Maven central repository. For Maven projects, you add a dependency to your maven configuration. In case you would like to use a development version, add a Sonatype Nexus snapshot repository to your maven configuration. 
 
 ### Maven
 #### Core module

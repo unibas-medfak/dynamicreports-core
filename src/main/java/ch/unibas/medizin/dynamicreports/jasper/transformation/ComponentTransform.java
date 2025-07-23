@@ -312,8 +312,7 @@ public class ComponentTransform {
 
     // filler
     private JRDesignElement filler(final DRIDesignFiller filler) {
-        final JRDesignStaticText jrDesignStaticText = new JRDesignStaticText();
-        return jrDesignStaticText;
+        return new JRDesignStaticText();
     }
 
     // image
@@ -443,8 +442,7 @@ public class ComponentTransform {
         if (componentTransfom == null) {
             throw new DRDesignReportException("Component " + component.getClass().getName() + " not supported");
         }
-        final JRDesignComponentElement jrComponent = (JRDesignComponentElement) componentTransfom.jasperComponent(accessor, component);
-        return jrComponent;
+        return (JRDesignComponentElement) componentTransfom.jasperComponent(accessor, component);
     }
 
 }
