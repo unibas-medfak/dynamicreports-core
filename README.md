@@ -14,7 +14,7 @@ go down and disappear like that.
 ## Project Goals
 This project aims to maintain a fork of the original source code supporting current dependencies.
 
-## Usage or Build
+## Usage
 DynamicReports is synchronized with a Maven central repository. For Maven projects, you add a dependency to your maven configuration. In case you would like to use a development version, add a Sonatype Nexus snapshot repository to your maven configuration. 
 
 ### Maven
@@ -27,6 +27,7 @@ DynamicReports is synchronized with a Maven central repository. For Maven projec
 </dependency>
 ```
 
+## Build
 #### Build from source 
 Check the release page to download source [release files](https://github.com/unibas-medfak/dynamicreports-core/releases).
 
