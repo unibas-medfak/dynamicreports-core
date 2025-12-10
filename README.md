@@ -15,7 +15,9 @@ go down and disappear like that.
 This project aims to maintain a fork of the original source code supporting current dependencies.
 
 ## Usage
-DynamicReports is synchronized with a Maven central repository. For Maven projects, you add a dependency to your maven configuration. In case you would like to use a development version, add a Sonatype Nexus snapshot repository to your maven configuration. 
+DynamicReports is synchronized with a Maven central repository. For Maven projects, you add a dependency to your maven configuration. In case you would like to use a development version, add a Sonatype Nexus snapshot repository to your maven configuration.
+
+For examples and detailed usage demonstrations of DynamicReports, please refer to the [dynamicreports-examples](https://github.com/unibas-medfak/dynamicreports-examples) repository. This companion project provides a comprehensive collection of working examples that showcase various features and capabilities of the DynamicReports library, helping you get started quickly with creating dynamic reports in your own projects. 
 
 ### Maven
 #### Core module
