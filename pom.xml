@@ -62,7 +62,7 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-pdf</artifactId>
-            <version>7.0.3</version>
+            <version>7.0.4</version>
         </dependency>
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
@@ -94,13 +94,19 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-spring</artifactId>
-            <version>7.0.3</version>
+            <version>7.0.4</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-groovy</artifactId>
             <version>7.0.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.groovy</groupId>
+            <artifactId>groovy</artifactId>
+            <version>4.0.30</version>
             <scope>test</scope>
         </dependency>
         <dependency>
