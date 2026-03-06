@@ -136,13 +136,12 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.15.0</version>
                 <configuration>
-                    <source>21</source>
-                    <target>21</target>
+                    <release>21</release>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <arg>-XDcompilePolicy=simple</arg>
                         <arg>--should-stop=ifError=FLOW</arg>
-                        <arg>-Xplugin:ErrorProne -XepOpt:NullAway:AnnotatedPackages=com.uber</arg>
+                        <arg>-Xplugin:ErrorProne -XepOpt:NullAway:AnnotatedPackages=com.uber -XepPatchChecks:DeadException,EmptyMethodCheck,StatementSwitchToExpressionSwitch,PatternMatchingInstanceof,StringCaseLocaleUsage -XepPatchLocation:IN_PLACE</arg>
                     </compilerArgs>
                     <annotationProcessorPaths>
                         <path>
