@@ -57,8 +57,8 @@ abstract class CalculationExpression extends AbstractComplexExpression<BigDecima
         BigDecimal result = null;
         for (Object value : values) {
             BigDecimal bigDecimalValue;
-            if (value instanceof BigDecimal) {
-                bigDecimalValue = (BigDecimal) value;
+            if (value instanceof BigDecimal bigDecimal) {
+                bigDecimalValue = bigDecimal;
             } else {
                 bigDecimalValue = BigDecimal.valueOf(((Number) value).doubleValue());
             }

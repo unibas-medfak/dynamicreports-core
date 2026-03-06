@@ -224,7 +224,7 @@ public class ComponentTransform {
     // list
     private JRDesignElement[] list(final DRIDesignList list) {
         switch (list.getComponentGroupType()) {
-            case FRAME:
+            case FRAME -> {
                 final JRDesignFrame frame = new JRDesignFrame();
                 final JRDesignElement[] jrElems = component(frame, list, list.getType());
 
@@ -241,15 +241,17 @@ public class ComponentTransform {
                     }
                 }
                 return jrElems;
-            case NONE:
+            }
+            case NONE -> {
                 final List<JRDesignElement> jrElementList = new ArrayList<>();
                 for (final DRIDesignComponent element : list.getComponents()) {
                     final JRDesignElement[] jrElements = component(element, list.getType());
                     jrElementList.addAll(Arrays.asList(jrElements));
                 }
                 return jrElementList.toArray(new JRDesignElement[0]);
-            default:
-                throw new JasperDesignException("ComponentGroupType " + list.getComponentGroupType().getClass().getName() + " not supported");
+            }
+            default ->
+                    throw new JasperDesignException("ComponentGroupType " + list.getComponentGroupType().getClass().getName() + " not supported");
         }
     }
 

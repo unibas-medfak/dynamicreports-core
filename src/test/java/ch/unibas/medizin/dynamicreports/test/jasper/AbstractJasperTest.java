@@ -109,7 +109,7 @@ public abstract class AbstractJasperTest {
         return (JasperReportBuilder) ois.readObject();
     }
 
-    private Map<String, Object> serializableParametersTest(Map<String, Object> parameters) throws IOException, ClassNotFoundException {
+    private void serializableParametersTest(Map<String, Object> parameters) throws IOException, ClassNotFoundException {
         final ByteArrayOutputStream bos = new ByteArrayOutputStream();
         final ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(parameters);
@@ -118,7 +118,7 @@ public abstract class AbstractJasperTest {
 
         final InputStream stream = new ByteArrayInputStream(bos.toByteArray());
         final ObjectInputStream ois = new ObjectInputStream(stream);
-        return (Map<String, Object>) ois.readObject();
+        ois.readObject();
     }
 
     private JasperPrint serializableTest(JasperPrint jasperPrint) throws IOException, JRException {
@@ -176,8 +176,8 @@ public abstract class AbstractJasperTest {
         if (key.equals(element.getKey())) {
             elements.add(element);
         }
-        if (element instanceof JRPrintFrame) {
-            for (final JRPrintElement name : ((JRPrintFrame) element).getElements()) {
+        if (element instanceof JRPrintFrame jrPrintFrame) {
+            for (final JRPrintElement name : jrPrintFrame.getElements()) {
             final JRPrintElement element2 = name;
             findElement(key, elements, element2);
       }

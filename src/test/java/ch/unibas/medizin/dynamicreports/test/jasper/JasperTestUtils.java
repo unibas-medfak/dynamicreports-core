@@ -51,41 +51,29 @@ public class JasperTestUtils {
         String band;
         final DRSubtotal<?> subtl = subtotal.getSubtotal();
         switch (subtl.getPosition()) {
-            case TITLE:
-                band = "title";
-                break;
-            case PAGE_HEADER:
-                band = "pageHeader";
-                break;
-            case PAGE_FOOTER:
-                band = "pageFooter";
-                break;
-            case COLUMN_HEADER:
-                band = "columnHeader";
-                break;
-            case COLUMN_FOOTER:
-                band = "columnFooter";
-                break;
-            case GROUP_HEADER:
-            case FIRST_GROUP_HEADER:
-            case LAST_GROUP_HEADER:
-                band = "subtotalGroupHeader";
-                break;
-            case GROUP_FOOTER:
-            case FIRST_GROUP_FOOTER:
-            case LAST_GROUP_FOOTER:
-                band = "subtotalGroupFooter";
-                break;
-            case LAST_PAGE_FOOTER:
-                band = "lastPageFooter";
-                break;
-            case SUMMARY:
-                band = "summary";
-                break;
-            default:
-                Assertions.fail("Subtotal position " + subtl.getPosition().name() + " not found");
+  case TITLE -> 
+band = "title";
+  case PAGE_HEADER -> 
+band = "pageHeader";
+  case PAGE_FOOTER -> 
+band = "pageFooter";
+  case COLUMN_HEADER -> 
+band = "columnHeader";
+  case COLUMN_FOOTER -> 
+band = "columnFooter";
+  case GROUP_HEADER, FIRST_GROUP_HEADER, LAST_GROUP_HEADER -> 
+band = "subtotalGroupHeader";
+  case GROUP_FOOTER, FIRST_GROUP_FOOTER, LAST_GROUP_FOOTER -> 
+band = "subtotalGroupFooter";
+  case LAST_PAGE_FOOTER -> 
+band = "lastPageFooter";
+  case SUMMARY -> 
+band = "summary";
+  default -> {
+Assertions.fail("Subtotal position " + subtl.getPosition().name() + " not found");
                 return null;
-        }
+}
+}
         return band + ".column_" + subtl.getShowInColumn().getName() + ".subtotal";
     }
 

@@ -130,10 +130,10 @@ public class GroupTransform {
             header.addComponent(designTocHeading.getReferenceField());
         }
 
+        DRDesignTextField valueComponent;
         switch (templateTransform.getGroupHeaderLayout(group)) {
-            case EMPTY:
-                break;
-            case TITLE_AND_VALUE:
+            case EMPTY -> {}
+            case TITLE_AND_VALUE -> {
                 if (groupPadding > 0) {
                     DRDesignFiller filler = new DRDesignFiller();
                     filler.setWidth(groupPadding);
@@ -141,15 +141,15 @@ public class GroupTransform {
                     header.addComponent(HorizontalCellComponentAlignment.CENTER, null, filler);
                 }
                 header.addComponent(HorizontalCellComponentAlignment.LEFT, null, titleComponent(group));
-                DRDesignTextField valueComponent = valueComponent(group);
+                valueComponent = valueComponent(group);
                 header.addComponent(valueComponent);
                 if (designTocHeading != null) {
                     valueComponent.setAnchorNameExpression(designTocHeading.getReferenceField().getAnchorNameExpression());
                     valueComponent.setBookmarkLevel(designTocHeading.getReferenceField().getBookmarkLevel());
                     valueComponent.setHyperLink(designTocHeading.getReferenceField().getHyperLink());
                 }
-                break;
-            case VALUE:
+            }
+            case VALUE -> {
                 if (groupPadding > 0) {
                     DRDesignFiller filler = new DRDesignFiller();
                     filler.setWidth(groupPadding);
@@ -163,15 +163,15 @@ public class GroupTransform {
                     valueComponent.setBookmarkLevel(designTocHeading.getReferenceField().getBookmarkLevel());
                     valueComponent.setHyperLink(designTocHeading.getReferenceField().getHyperLink());
                 }
-                break;
-            default:
-                throw new DRDesignReportException("Group header layout " + templateTransform.getGroupHeaderLayout(group).name() + " not supported");
+            }
+            default ->
+                    throw new DRDesignReportException("Group header layout " + templateTransform.getGroupHeaderLayout(group).name() + " not supported");
         }
         if (!header.isEmpty()) {
             DRIBand bnd = group.getHeaderBand();
             DRDesignBand band = accessor.getBandTransform()
-                                        .band("groupHeaderTitleAndValue", bnd, templateTransform.getGroupHeaderSplitType(bnd), templateTransform.getGroupHeaderStyle(bnd),
-                                              templateTransform.getGroupHeaderBackgroundComponent(bnd));
+                    .band("groupHeaderTitleAndValue", bnd, templateTransform.getGroupHeaderSplitType(bnd), templateTransform.getGroupHeaderStyle(bnd),
+                            templateTransform.getGroupHeaderBackgroundComponent(bnd));
             band.addComponent(header);
             designGroup.addHeaderBand(band);
         }

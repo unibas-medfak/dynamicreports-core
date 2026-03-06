@@ -71,20 +71,25 @@ public class JasperReportParameters implements ReportParameters {
         ValueType type = jasperScriptlet.getValueType(name);
         if (type != null) {
             switch (type) {
-                case FIELD:
+                case FIELD -> {
                     return getFieldValue(name);
-                case VARIABLE:
+                }
+                case VARIABLE -> {
                     return getVariableValue(name);
-                case PARAMETER:
+                }
+                case PARAMETER -> {
                     return getParameterValue(name);
-                case SIMPLE_EXPRESSION:
+                }
+                case SIMPLE_EXPRESSION -> {
                     return (T) getSimpleExpressionValue(name);
-                case COMPLEX_EXPRESSION:
+                }
+                case COMPLEX_EXPRESSION -> {
                     return (T) getComplexExpressionValue(name);
-                case SYSTEM_EXPRESSION:
+                }
+                case SYSTEM_EXPRESSION -> {
                     return (T) getSystemExpressionValue(name);
-                default:
-                    break;
+                }
+                default -> {}
             }
         }
 

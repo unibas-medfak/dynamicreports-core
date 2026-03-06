@@ -20,23 +20,6 @@
  */
 package ch.unibas.medizin.dynamicreports.jasper.builder;
 
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
-import java.io.*;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-
-import javax.imageio.ImageIO;
-
-import org.apache.commons.lang3.Validate;
-
 import ch.unibas.medizin.dynamicreports.design.base.DRDesignReport;
 import ch.unibas.medizin.dynamicreports.design.definition.DRIDesignReport;
 import ch.unibas.medizin.dynamicreports.jasper.base.JasperReportDesign;
@@ -71,6 +54,20 @@ import ch.unibas.medizin.dynamicreports.report.constant.Constants;
 import ch.unibas.medizin.dynamicreports.report.constant.QueryLanguage;
 import ch.unibas.medizin.dynamicreports.report.definition.DRITemplateDesign;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
+import java.io.*;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Objects;
+import javax.imageio.ImageIO;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRParameter;
@@ -94,6 +91,7 @@ import net.sf.jasperreports.export.SimpleGraphics2DExporterOutput;
 import net.sf.jasperreports.export.SimpleGraphics2DReportConfiguration;
 import net.sf.jasperreports.view.JasperDesignViewer;
 import net.sf.jasperreports.view.JasperViewer;
+import org.apache.commons.lang3.Validate;
 
 /**
  * The most used report builder for creating reports. It allows constructing and customizing the whole report content. A report consists of bands, columns, subtotals, groups, and other parts. Each
@@ -501,7 +499,7 @@ public class JasperReportBuilder extends ReportBuilder<JasperReportBuilder> {
         Integer fromPage = null;
         Integer toPage = null;
         float zoom = 1;
-        final String imageType = imageExporter.getImageType().name().toLowerCase();
+        final String imageType = imageExporter.getImageType().name().toLowerCase(Locale.ROOT);
         int offsetX = 0;
         int offsetY = 0;
         int pageGap = 0;

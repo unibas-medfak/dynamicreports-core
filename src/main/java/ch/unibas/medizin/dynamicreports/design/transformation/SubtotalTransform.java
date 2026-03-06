@@ -92,39 +92,37 @@ public class SubtotalTransform {
             if (subtotal.getLabelExpression() != null) {
                 subtotalComponent = subtotalWithLabelComponent(subtotal, subtotalComponent);
             }
+            EvaluationTime evaluationTime;
+            DRIGroup firstGroup;
+            DRIGroup lastGroup;
             switch (position) {
-                case TITLE:
-                    title.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                case PAGE_HEADER:
-                    pageHeader.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                case PAGE_FOOTER:
-                    pageFooter.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                case COLUMN_HEADER:
-                    columnHeader.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                case COLUMN_FOOTER:
-                    columnFooter.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                case GROUP_HEADER:
-                    EvaluationTime evaluationTime = accessor.getComponentTransform().detectEvaluationTime(subtotalValueComponent.getValueExpression());
+                case TITLE ->
+                        title.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
+                case PAGE_HEADER ->
+                        pageHeader.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
+                case PAGE_FOOTER ->
+                        pageFooter.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
+                case COLUMN_HEADER ->
+                        columnHeader.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
+                case COLUMN_FOOTER ->
+                        columnFooter.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
+                case GROUP_HEADER -> {
+                    evaluationTime = accessor.getComponentTransform().detectEvaluationTime(subtotalValueComponent.getValueExpression());
                     if (evaluationTime == null || !evaluationTime.equals(EvaluationTime.AUTO)) {
                         subtotalValueComponent.setEvaluationTime(EvaluationTime.GROUP);
                         subtotalValueComponent.setEvaluationGroup(accessor.getGroupTransform().getGroup(subtotal.getGroup()));
                     }
                     getGroupGrid(subtotal.getGroup(), groupHeader).addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                case GROUP_FOOTER:
+                }
+                case GROUP_FOOTER -> {
                     evaluationTime = accessor.getComponentTransform().detectEvaluationTime(subtotalValueComponent.getValueExpression());
                     if (evaluationTime == null || !evaluationTime.equals(EvaluationTime.AUTO)) {
                         subtotalValueComponent.setEvaluationTime(EvaluationTime.NOW);
                     }
                     getGroupGrid(subtotal.getGroup(), groupFooter).addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                case FIRST_GROUP_HEADER:
-                    DRIGroup firstGroup = accessor.getGroupTransform().getFirstGroup();
+                }
+                case FIRST_GROUP_HEADER -> {
+                    firstGroup = accessor.getGroupTransform().getFirstGroup();
                     evaluationTime = accessor.getComponentTransform().detectEvaluationTime(subtotalValueComponent.getValueExpression());
                     if (evaluationTime == null || !evaluationTime.equals(EvaluationTime.AUTO)) {
                         subtotalValueComponent.setEvaluationTime(EvaluationTime.GROUP);
@@ -133,8 +131,8 @@ public class SubtotalTransform {
                     if (firstGroup != null) {
                         getGroupGrid(firstGroup, groupHeader).addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
                     }
-                    break;
-                case FIRST_GROUP_FOOTER:
+                }
+                case FIRST_GROUP_FOOTER -> {
                     firstGroup = accessor.getGroupTransform().getFirstGroup();
                     if (firstGroup != null) {
                         evaluationTime = accessor.getComponentTransform().detectEvaluationTime(subtotalValueComponent.getValueExpression());
@@ -143,9 +141,9 @@ public class SubtotalTransform {
                         }
                         getGroupGrid(firstGroup, groupFooter).addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
                     }
-                    break;
-                case LAST_GROUP_HEADER:
-                    DRIGroup lastGroup = accessor.getGroupTransform().getLastGroup();
+                }
+                case LAST_GROUP_HEADER -> {
+                    lastGroup = accessor.getGroupTransform().getLastGroup();
                     evaluationTime = accessor.getComponentTransform().detectEvaluationTime(subtotalValueComponent.getValueExpression());
                     if (evaluationTime == null || !evaluationTime.equals(EvaluationTime.AUTO)) {
                         subtotalValueComponent.setEvaluationTime(EvaluationTime.GROUP);
@@ -154,8 +152,8 @@ public class SubtotalTransform {
                     if (lastGroup != null) {
                         getGroupGrid(lastGroup, groupHeader).addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
                     }
-                    break;
-                case LAST_GROUP_FOOTER:
+                }
+                case LAST_GROUP_FOOTER -> {
                     lastGroup = accessor.getGroupTransform().getLastGroup();
                     if (lastGroup != null) {
                         evaluationTime = accessor.getComponentTransform().detectEvaluationTime(subtotalValueComponent.getValueExpression());
@@ -164,16 +162,15 @@ public class SubtotalTransform {
                         }
                         getGroupGrid(lastGroup, groupFooter).addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
                     }
-                    break;
-                case LAST_PAGE_FOOTER:
-                    lastPageFooter.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                case SUMMARY:
+                }
+                case LAST_PAGE_FOOTER ->
+                        lastPageFooter.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
+                case SUMMARY -> {
                     subtotalValueComponent.setEvaluationTime(EvaluationTime.NOW);
                     summary.addComponent(showInColumn, horizontalAlignment, verticalAlignment, subtotalComponent);
-                    break;
-                default:
-                    throw new DRDesignReportException("Subtotal position " + position.name() + " not supported");
+                }
+                default ->
+                        throw new DRDesignReportException("Subtotal position " + position.name() + " not supported");
             }
         }
 
@@ -222,31 +219,33 @@ public class SubtotalTransform {
         DRDesignList list = new DRDesignList();
 
         Position labelPosition = accessor.getTemplateTransform().getSubtotalLabelPosition(subtotal);
+        DRDesignComponent labelComponent;
+        HorizontalCellComponentAlignment labelHorizontalAlignment;
         switch (labelPosition) {
-            case TOP:
+            case TOP -> {
                 list.setType(ListType.VERTICAL);
                 list.addComponent(horizontalAlignment, verticalAlignment, labelComponent(subtotal));
                 list.addComponent(horizontalAlignment, verticalAlignment, subtotalComponent);
-                break;
-            case BOTTOM:
+            }
+            case BOTTOM -> {
                 list.setType(ListType.VERTICAL);
                 list.addComponent(horizontalAlignment, verticalAlignment, subtotalComponent);
                 list.addComponent(horizontalAlignment, verticalAlignment, labelComponent(subtotal));
-                break;
-            case LEFT:
+            }
+            case LEFT -> {
                 list.setType(ListType.HORIZONTAL);
-                DRDesignComponent labelComponent = labelComponent(subtotal);
+                labelComponent = labelComponent(subtotal);
                 if (subtotal.getLabelWidth() != null) {
                     labelComponent.setWidth(subtotal.getLabelWidth());
                 }
-                HorizontalCellComponentAlignment labelHorizontalAlignment = horizontalAlignment;
+                labelHorizontalAlignment = horizontalAlignment;
                 if (subtotal.getLabelWidthType() != null) {
                     labelHorizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(subtotal.getLabelWidthType());
                 }
                 list.addComponent(labelHorizontalAlignment, VerticalCellComponentAlignment.EXPAND, labelComponent);
                 list.addComponent(horizontalAlignment, VerticalCellComponentAlignment.EXPAND, subtotalComponent);
-                break;
-            case RIGHT:
+            }
+            case RIGHT -> {
                 list.setType(ListType.HORIZONTAL);
                 labelComponent = labelComponent(subtotal);
                 if (subtotal.getLabelWidth() != null) {
@@ -258,9 +257,9 @@ public class SubtotalTransform {
                 }
                 list.addComponent(horizontalAlignment, VerticalCellComponentAlignment.EXPAND, subtotalComponent);
                 list.addComponent(labelHorizontalAlignment, VerticalCellComponentAlignment.EXPAND, labelComponent);
-                break;
-            default:
-                throw new DRDesignReportException("Subtotal label position " + labelPosition.name() + " not supported");
+            }
+            default ->
+                    throw new DRDesignReportException("Subtotal label position " + labelPosition.name() + " not supported");
         }
 
         return list;

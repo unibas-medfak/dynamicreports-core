@@ -105,94 +105,91 @@ public class DRChart extends DRHyperLinkComponent implements DRIChart {
         this.chartType = chartType;
 
         switch (chartType) {
-            case AREA:
-            case STACKEDAREA:
+            case AREA, STACKEDAREA -> {
                 dataset = new DRCategoryDataset();
                 plot = new DRAxisPlot();
-                break;
-            case BAR:
-            case STACKEDBAR:
+            }
+            case BAR, STACKEDBAR -> {
                 dataset = new DRCategoryDataset();
                 plot = new DRBarPlot();
-                break;
-            case GROUPEDSTACKEDBAR:
+            }
+            case GROUPEDSTACKEDBAR -> {
                 dataset = new DRCategoryDataset();
                 plot = new DRGroupedStackedBarPlot();
-                break;
-            case LAYEREDBAR:
+            }
+            case LAYEREDBAR -> {
                 dataset = new DRCategoryDataset();
                 plot = new DRLayeredBarPlot();
-                break;
-            case WATERFALLBAR:
+            }
+            case WATERFALLBAR -> {
                 dataset = new DRCategoryDataset();
                 plot = new DRWaterfallBarPlot();
-                break;
-            case LINE:
+            }
+            case LINE -> {
                 dataset = new DRCategoryDataset();
                 plot = new DRLinePlot();
-                break;
-            case PIE:
+            }
+            case PIE -> {
                 dataset = new DRSeriesDataset();
                 plot = new DRPiePlot();
-                break;
-            case TIMESERIES:
+            }
+            case TIMESERIES -> {
                 dataset = new DRTimeSeriesDataset();
                 plot = new DRLinePlot();
-                break;
-            case DIFFERENCE:
+            }
+            case DIFFERENCE -> {
                 dataset = new DRTimeSeriesDataset();
                 plot = new DRDifferencePlot();
-                break;
-            case XYAREA:
+            }
+            case XYAREA -> {
                 dataset = new DRSeriesDataset();
                 plot = new DRAxisPlot();
-                break;
-            case XYBAR, GANTT:
+            }
+            case XYBAR, GANTT -> {
                 dataset = new DRSeriesDataset();
                 plot = new DRBarPlot();
-                break;
-            case XYLINE, SCATTER:
+            }
+            case XYLINE, SCATTER -> {
                 dataset = new DRSeriesDataset();
                 plot = new DRLinePlot();
-                break;
-            case XYSTEP:
+            }
+            case XYSTEP -> {
                 dataset = new DRSeriesDataset();
                 plot = new DRXyStepPlot();
-                break;
-            case SPIDER:
+            }
+            case SPIDER -> {
                 dataset = new DRCategoryDataset();
                 plot = new DRSpiderPlot();
-                break;
-            case MULTI_AXIS:
+            }
+            case MULTI_AXIS -> {
                 dataset = new DRChartDataset();
                 plot = new DRMultiAxisPlot();
-                break;
-            case XYBLOCK:
+            }
+            case XYBLOCK -> {
                 dataset = new DRSeriesDataset();
                 plot = new DRXyBlockPlot();
-                break;
-            case BUBBLE:
+            }
+            case BUBBLE -> {
                 dataset = new DRSeriesDataset();
                 plot = new DRBubblePlot();
-                break;
-            case CANDLESTICK:
+            }
+            case CANDLESTICK -> {
                 dataset = new DRHighLowDataset();
                 plot = new DRCandlestickPlot();
-                break;
-            case HIGHLOW:
+            }
+            case HIGHLOW -> {
                 dataset = new DRHighLowDataset();
                 plot = new DRHighLowPlot();
-                break;
-            case METER:
+            }
+            case METER -> {
                 dataset = new DRValueDataset();
                 plot = new DRMeterPlot();
-                break;
-            case THERMOMETER:
+            }
+            case THERMOMETER -> {
                 dataset = new DRValueDataset();
                 plot = new DRThermometerPlot();
-                break;
-            default:
-                throw new DRReportException("Chart type not supported.");
+            }
+            default -> throw new DRReportException("Chart type not supported.");
         }
     }
 

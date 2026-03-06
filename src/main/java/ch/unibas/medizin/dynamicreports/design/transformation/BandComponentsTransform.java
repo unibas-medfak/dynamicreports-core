@@ -151,7 +151,7 @@ class BandComponentsTransform {
                     }
                     return null;
                 }
-                if (lComponent != elm && (!(lComponent instanceof DRDesignList) || !(lComponent.getStyle() == null && lComponent.getPrintWhenExpression() == null && ((DRDesignList) lComponent).getBackgroundComponent() == null))) {
+                if (lComponent != elm && (!(lComponent instanceof DRDesignList drDesignList) || !(lComponent.getStyle() == null && lComponent.getPrintWhenExpression() == null && drDesignList.getBackgroundComponent() == null))) {
                     elm.setX(lComponent.getX() + elm.getX());
                     elm.setY(lComponent.getY() + elm.getY());
                 }
@@ -230,8 +230,8 @@ class BandComponentsTransform {
             for (DRDesignComponent listComponent : list.getComponents()) {
                 prepareCrosstabs(listComponent);
             }
-        } else if (component instanceof DRDesignCrosstab) {
-            prepareCrosstab((DRDesignCrosstab) component);
+        } else if (component instanceof DRDesignCrosstab drDesignCrosstab) {
+            prepareCrosstab(drDesignCrosstab);
         }
     }
 

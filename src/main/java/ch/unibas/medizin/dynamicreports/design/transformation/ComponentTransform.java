@@ -147,62 +147,62 @@ public class ComponentTransform {
         if (component instanceof DRITextField<?>) {
             return textField((DRITextField<?>) component, defaultStyleType);
         }
-        if (component instanceof DRIList) {
-            return list((DRIList) component, defaultStyleType, resetType, resetGroup);
+        if (component instanceof DRIList driList) {
+            return list(driList, defaultStyleType, resetType, resetGroup);
         }
-        if (component instanceof DRIXyList) {
-            return xyList((DRIXyList) component, defaultStyleType, resetType, resetGroup);
+        if (component instanceof DRIXyList driXyList) {
+            return xyList(driXyList, defaultStyleType, resetType, resetGroup);
         }
-        if (component instanceof DRIMultiPageList) {
-            return multiPageList((DRIMultiPageList) component);
+        if (component instanceof DRIMultiPageList driMultiPageList) {
+            return multiPageList(driMultiPageList);
         }
-        if (component instanceof DRIFiller) {
-            return filler((DRIFiller) component);
+        if (component instanceof DRIFiller driFiller) {
+            return filler(driFiller);
         }
-        if (component instanceof DRIImage) {
-            return image((DRIImage) component);
+        if (component instanceof DRIImage driImage) {
+            return image(driImage);
         }
-        if (component instanceof DRIChart) {
-            return chart((DRIChart) component, resetType, resetGroup);
+        if (component instanceof DRIChart driChart) {
+            return chart(driChart, resetType, resetGroup);
         }
-        if (component instanceof DRISubreport) {
-            return subreport((DRISubreport) component);
+        if (component instanceof DRISubreport driSubreport) {
+            return subreport(driSubreport);
         }
-        if (component instanceof DRIPageXofY) {
-            return pageXofY((DRIPageXofY) component, defaultStyleType);
+        if (component instanceof DRIPageXofY driPageXofY) {
+            return pageXofY(driPageXofY, defaultStyleType);
         }
-        if (component instanceof DRITotalPages) {
-            return totalPages((DRITotalPages) component, defaultStyleType);
+        if (component instanceof DRITotalPages driTotalPages) {
+            return totalPages(driTotalPages, defaultStyleType);
         }
-        if (component instanceof DRIPageNumber) {
-            return pageNumber((DRIPageNumber) component, defaultStyleType);
+        if (component instanceof DRIPageNumber driPageNumber) {
+            return pageNumber(driPageNumber, defaultStyleType);
         }
-        if (component instanceof DRICurrentDate) {
-            return currentDate((DRICurrentDate) component, defaultStyleType);
+        if (component instanceof DRICurrentDate driCurrentDate) {
+            return currentDate(driCurrentDate, defaultStyleType);
         }
-        if (component instanceof DRILine) {
-            return line((DRILine) component);
+        if (component instanceof DRILine driLine) {
+            return line(driLine);
         }
-        if (component instanceof DRIEllipse) {
-            return ellipse((DRIEllipse) component);
+        if (component instanceof DRIEllipse driEllipse) {
+            return ellipse(driEllipse);
         }
-        if (component instanceof DRIRectangle) {
-            return rectangle((DRIRectangle) component);
+        if (component instanceof DRIRectangle driRectangle) {
+            return rectangle(driRectangle);
         }
-        if (component instanceof DRIBooleanField) {
-            return booleanField((DRIBooleanField) component, defaultStyleType, resetType, resetGroup);
+        if (component instanceof DRIBooleanField driBooleanField) {
+            return booleanField(driBooleanField, defaultStyleType, resetType, resetGroup);
         }
-        if (component instanceof DRIBreak) {
-            return breakComponent((DRIBreak) component);
+        if (component instanceof DRIBreak driBreak) {
+            return breakComponent(driBreak);
         }
-        if (component instanceof DRIGenericElement) {
-            return genericElement((DRIGenericElement) component, resetType, resetGroup);
+        if (component instanceof DRIGenericElement driGenericElement) {
+            return genericElement(driGenericElement, resetType, resetGroup);
         }
-        if (component instanceof DRICrosstab) {
-            return crosstab((DRICrosstab) component, resetType, resetGroup);
+        if (component instanceof DRICrosstab driCrosstab) {
+            return crosstab(driCrosstab, resetType, resetGroup);
         }
-        if (component instanceof DRICustomComponent) {
-            return customComponent((DRICustomComponent) component, resetType, resetGroup);
+        if (component instanceof DRICustomComponent driCustomComponent) {
+            return customComponent(driCustomComponent, resetType, resetGroup);
         }
         throw new DRDesignReportException("Component " + component.getClass().getName() + " not supported");
     }
@@ -225,10 +225,10 @@ public class ComponentTransform {
             final DRIDesignExpression anchorNameExpression = designTocHeading.getReferenceField().getAnchorNameExpression();
             final Integer bookmarkLevel = designTocHeading.getReferenceField().getBookmarkLevel();
             final DRDesignHyperLink designHyperLink = designTocHeading.getReferenceField().getHyperLink();
-            if (designComponent instanceof DRDesignHyperlinkComponent) {
-                ((DRDesignHyperlinkComponent) designComponent).setAnchorNameExpression(anchorNameExpression);
-                ((DRDesignHyperlinkComponent) designComponent).setBookmarkLevel(bookmarkLevel);
-                ((DRDesignHyperlinkComponent) designComponent).setHyperLink(designHyperLink);
+            if (designComponent instanceof DRDesignHyperlinkComponent drDesignHyperlinkComponent) {
+                drDesignHyperlinkComponent.setAnchorNameExpression(anchorNameExpression);
+                drDesignHyperlinkComponent.setBookmarkLevel(bookmarkLevel);
+                drDesignHyperlinkComponent.setHyperLink(designHyperLink);
             }
         }
     }
@@ -511,7 +511,7 @@ public class ComponentTransform {
         int pageYWidth = pageXofYWidth - pageXWidth;
 
         switch (horizontalTextAlignment) {
-            case LEFT:
+            case LEFT -> {
                 if (pageYWidth <= 0) {
                     pageYWidth = 10;
                 }
@@ -519,8 +519,8 @@ public class ComponentTransform {
                 pageXField.setWidthType(ComponentDimensionType.FIXED);
                 pageYField.setWidth(pageYWidth);
                 pageYField.setWidthType(pageXofY.getWidthType());
-                break;
-            case RIGHT:
+            }
+            case RIGHT -> {
                 pageYWidth = StyleResolver.getFontWidth(style, 6);
                 pageXWidth = pageXofYWidth - pageYWidth;
                 if (pageXWidth <= 0) {
@@ -530,13 +530,13 @@ public class ComponentTransform {
                 pageXField.setWidthType(pageXofY.getWidthType());
                 pageYField.setWidth(pageYWidth);
                 pageYField.setWidthType(ComponentDimensionType.FIXED);
-                break;
-            default:
+            }
+            default -> {
                 pageXField.setWidth(pageXofYWidth / 2);
                 pageXField.setWidthType(pageXofY.getWidthType());
                 pageYField.setWidth(pageXofYWidth / 2);
                 pageYField.setWidthType(pageXofY.getWidthType());
-                break;
+            }
         }
 
         if (pageXofY.getPageXWidth() != null) {
@@ -677,8 +677,7 @@ public class ComponentTransform {
         DRHyperLinkComponent component;
 
         switch (componentType) {
-            case TEXT_TRUE_FALSE:
-            case TEXT_YES_NO:
+            case TEXT_TRUE_FALSE, TEXT_YES_NO -> {
                 String keyTrue;
                 String keyFalse;
                 if (componentType.equals(BooleanComponentType.TEXT_TRUE_FALSE)) {
@@ -694,23 +693,17 @@ public class ComponentTransform {
                 textField.setHorizontalTextAlignment(booleanField.getHorizontalTextAlignment());
                 textField.setValueFormatter(new BooleanTextValueFormatter(keyTrue, keyFalse, emptyWhenNullValue));
                 component = textField;
-                break;
-            case IMAGE_STYLE_1:
-            case IMAGE_STYLE_2:
-            case IMAGE_STYLE_3:
-            case IMAGE_STYLE_4:
-            case IMAGE_CHECKBOX_1:
-            case IMAGE_CHECKBOX_2:
-            case IMAGE_BALL:
+            }
+            case IMAGE_STYLE_1, IMAGE_STYLE_2, IMAGE_STYLE_3, IMAGE_STYLE_4, IMAGE_CHECKBOX_1, IMAGE_CHECKBOX_2, IMAGE_BALL -> {
                 final DRImage image = new DRImage();
                 image.setImageScale(ImageScale.CLIP);
                 final int width = accessor.getTemplateTransform().getBooleanImageWidth(booleanField);
                 final int height = accessor.getTemplateTransform().getBooleanImageHeight(booleanField);
                 image.setImageExpression(new BooleanImageExpression(booleanField, emptyWhenNullValue, width, height));
                 component = image;
-                break;
-            default:
-                throw new DRDesignReportException("Boolean component type " + componentType.name() + " not supported");
+            }
+            default ->
+                    throw new DRDesignReportException("Boolean component type " + componentType.name() + " not supported");
         }
 
         component.setWidth(booleanField.getWidth());
@@ -725,9 +718,9 @@ public class ComponentTransform {
         component.setPropertyExpressions(booleanField.getPropertyExpressions());
 
         DRDesignComponent designComponent;
-        if (component instanceof DRIImage) {
+        if (component instanceof DRIImage driImage) {
             final int imageHeight = accessor.getTemplateTransform().getBooleanImageHeight(booleanField);
-            designComponent = image((DRIImage) component, imageHeight, defaultStyleType);
+            designComponent = image(driImage, imageHeight, defaultStyleType);
             final TemplateTransform templateTransform = accessor.getTemplateTransform();
             ((DRDesignImage) designComponent).setHorizontalImageAlignment(templateTransform.getBooleanHorizontalImageAlignment(booleanField, designComponent.getStyle()));
         } else {
@@ -819,11 +812,11 @@ public class ComponentTransform {
             expression instanceof DRIDesignJasperExpression) {
             return EvaluationTime.NOW;
         }
-        if (expression instanceof DRIDesignVariable) {
-            return evaluationTimeFromResetType(((DRIDesignVariable) expression).getResetType());
+        if (expression instanceof DRIDesignVariable driDesignVariable) {
+            return evaluationTimeFromResetType(driDesignVariable.getResetType());
         }
-        if (expression instanceof DRIDesignComplexExpression) {
-            return detectComplexExpressionEvaluationTime((DRIDesignComplexExpression) expression);
+        if (expression instanceof DRIDesignComplexExpression driDesignComplexExpression) {
+            return detectComplexExpressionEvaluationTime(driDesignComplexExpression);
         }
         throw new DRDesignReportException("Expression " + expression.getClass().getName() + " not supported");
     }
@@ -876,11 +869,11 @@ public class ComponentTransform {
         if (expression instanceof DRIDesignField || expression instanceof DRIDesignSimpleExpression) {
             return null;
         }
-        if (expression instanceof DRDesignVariable) {
-            return ((DRDesignVariable) expression).getResetGroup();
+        if (expression instanceof DRDesignVariable drDesignVariable) {
+            return drDesignVariable.getResetGroup();
         }
-        if (expression instanceof DRIDesignComplexExpression) {
-            return detectComplexExpressionEvaluationGroup((DRIDesignComplexExpression) expression);
+        if (expression instanceof DRIDesignComplexExpression driDesignComplexExpression) {
+            return detectComplexExpressionEvaluationGroup(driDesignComplexExpression);
         }
         throw new DRDesignReportException("Expression " + expression.getClass().getName() + " not supported");
     }

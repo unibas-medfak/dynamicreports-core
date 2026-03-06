@@ -128,29 +128,18 @@ public class PercentageSubtotalBuilder extends BaseSubtotalBuilder<PercentageSub
         DRVariable<Number> totalExpression = new DRVariable<>(expression, Calculation.SUM);
         if (totalType != null) {
             switch (totalType) {
-                case REPORT:
-                    totalExpression.setResetType(Evaluation.REPORT);
-                    break;
-                case GROUP:
-                    totalExpression.setResetType(Evaluation.GROUP);
-                    break;
-                case FIRST_GROUP:
-                    totalExpression.setResetType(Evaluation.FIRST_GROUP);
-                    break;
-                case LAST_GROUP:
-                    totalExpression.setResetType(Evaluation.LAST_GROUP);
-                    break;
-                default:
-                    throw new DRReportException("Percentage total type " + totalType.name() + " not supported.");
+                case REPORT -> totalExpression.setResetType(Evaluation.REPORT);
+                case GROUP -> totalExpression.setResetType(Evaluation.GROUP);
+                case FIRST_GROUP -> totalExpression.setResetType(Evaluation.FIRST_GROUP);
+                case LAST_GROUP -> totalExpression.setResetType(Evaluation.LAST_GROUP);
+                default -> throw new DRReportException("Percentage total type " + totalType.name() + " not supported.");
             }
         } else {
             totalExpression.setResetType(Evaluation.BEFORE_GROUP);
             totalGroup = getObject().getGroup();
         }
         totalExpression.setResetGroup(totalGroup);
-
         setValueExpression(new PercentageExpression(actualExpression, totalExpression));
-
         super.configure();
     }
 }

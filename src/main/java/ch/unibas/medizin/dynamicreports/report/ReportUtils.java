@@ -107,15 +107,15 @@ public class ReportUtils {
         if (classs == null) {
             return null;
         }
-        if (classs.getGenericSuperclass() instanceof ParameterizedType) {
-            return (ParameterizedType) classs.getGenericSuperclass();
+        if (classs.getGenericSuperclass() instanceof ParameterizedType parameterizedType) {
+            return parameterizedType;
         }
         return getParameterizedType((Class<?>) classs.getGenericSuperclass());
     }
 
     private static Class<?> getRawType(Object typeArgument) {
-        if (typeArgument instanceof ParameterizedType) {
-            return getRawType(((ParameterizedType) typeArgument).getRawType());
+        if (typeArgument instanceof ParameterizedType parameterizedType) {
+            return getRawType(parameterizedType.getRawType());
         } else {
             if (typeArgument instanceof Class<?>) {
                 return (Class<?>) typeArgument;

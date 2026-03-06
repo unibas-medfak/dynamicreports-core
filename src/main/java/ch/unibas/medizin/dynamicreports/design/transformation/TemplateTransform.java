@@ -993,12 +993,12 @@ public class TemplateTransform {
     protected int getColumnWidth(final DRIColumn<?> column, final DRDesignStyle style) throws DRException {
         final DRIComponent component = accessor.getColumnTransform().getColumnComponent(column);
         if (component != null) {
-            if (component instanceof DRIList) {
-                final DRDesignList list = accessor.getComponentTransform().list((DRIList) component, DefaultStyleType.COLUMN, null, null);
+            if (component instanceof DRIList driList) {
+                final DRDesignList list = accessor.getComponentTransform().list(driList, DefaultStyleType.COLUMN, null, null);
                 return detectWidth(list);
-            } else if (component instanceof DRIDimensionComponent) {
-                if (((DRIDimensionComponent) component).getWidth() != null) {
-                    return ((DRIDimensionComponent) component).getWidth();
+            } else if (component instanceof DRIDimensionComponent driDimensionComponent) {
+                if (driDimensionComponent.getWidth() != null) {
+                    return driDimensionComponent.getWidth();
                 }
                 if (component instanceof DRITextField<?>) {
                     if (((DRITextField<?>) component).getColumns() != null) {
@@ -1046,8 +1046,8 @@ public class TemplateTransform {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.ComponentPositionType} object.
      */
     protected ComponentPositionType getPositionType(final DRIComponent component) {
-        if (component instanceof DRIDimensionComponent && ((DRIDimensionComponent) component).getPositionType() != null) {
-            return ((DRIDimensionComponent) component).getPositionType();
+        if (component instanceof DRIDimensionComponent driDimensionComponent && driDimensionComponent.getPositionType() != null) {
+            return driDimensionComponent.getPositionType();
         }
         return null;
     }
@@ -1059,8 +1059,8 @@ public class TemplateTransform {
      * @return a {@link ch.unibas.medizin.dynamicreports.report.constant.StretchType} object.
      */
     protected StretchType getStretchType(final DRIComponent component) {
-        if (component instanceof DRIDimensionComponent && ((DRIDimensionComponent) component).getStretchType() != null) {
-            return ((DRIDimensionComponent) component).getStretchType();
+        if (component instanceof DRIDimensionComponent driDimensionComponent && driDimensionComponent.getStretchType() != null) {
+            return driDimensionComponent.getStretchType();
         }
         return null;
     }
@@ -1072,8 +1072,8 @@ public class TemplateTransform {
      * @return a boolean.
      */
     protected boolean getPrintInFirstWholeBand(final DRIComponent component) {
-        if (component instanceof DRIDimensionComponent && ((DRIDimensionComponent) component).getPrintInFirstWholeBand() != null) {
-            return ((DRIDimensionComponent) component).getPrintInFirstWholeBand();
+        if (component instanceof DRIDimensionComponent driDimensionComponent && driDimensionComponent.getPrintInFirstWholeBand() != null) {
+            return driDimensionComponent.getPrintInFirstWholeBand();
         }
         return Defaults.getDefaults().isPrintInFirstWholeBand();
     }
@@ -1085,8 +1085,8 @@ public class TemplateTransform {
      * @return a boolean.
      */
     protected boolean getPrintWhenDetailOverflows(final DRIComponent component) {
-        if (component instanceof DRIDimensionComponent && ((DRIDimensionComponent) component).getPrintWhenDetailOverflows() != null) {
-            return ((DRIDimensionComponent) component).getPrintWhenDetailOverflows();
+        if (component instanceof DRIDimensionComponent driDimensionComponent && driDimensionComponent.getPrintWhenDetailOverflows() != null) {
+            return driDimensionComponent.getPrintWhenDetailOverflows();
         }
         return Defaults.getDefaults().isPrintWhenDetailOverflows();
     }
@@ -1098,8 +1098,8 @@ public class TemplateTransform {
      * @return a {@link ch.unibas.medizin.dynamicreports.design.definition.DRIDesignGroup} object.
      */
     protected DRIDesignGroup getPrintWhenGroupChanges(final DRIComponent component) {
-        if (component instanceof DRIDimensionComponent && ((DRIDimensionComponent) component).getPrintWhenGroupChanges() != null) {
-            return accessor.getGroupTransform().getGroup(((DRIDimensionComponent) component).getPrintWhenGroupChanges());
+        if (component instanceof DRIDimensionComponent driDimensionComponent && driDimensionComponent.getPrintWhenGroupChanges() != null) {
+            return accessor.getGroupTransform().getGroup(driDimensionComponent.getPrintWhenGroupChanges());
         }
         return null;
     }

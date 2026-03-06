@@ -81,8 +81,8 @@ public class TableOfContentsTransform {
             }
             String expressionName = labelExpression.getName();
             DRIExpression<String> anchorNameExpression = null;
-            if (component instanceof DRIHyperLinkComponent) {
-                anchorNameExpression = ((DRIHyperLinkComponent) component).getAnchorNameExpression();
+            if (component instanceof DRIHyperLinkComponent driHyperLinkComponent) {
+                anchorNameExpression = driHyperLinkComponent.getAnchorNameExpression();
             }
             DRIExpression<?> customValueExpression = tocHeading.getCustomValueExpression();
             referenceField.setValueExpression(new TocReferenceExpression(level, expressionName, labelExpression, anchorNameExpression, customValueExpression));

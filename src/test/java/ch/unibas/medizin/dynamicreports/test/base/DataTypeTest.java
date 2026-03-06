@@ -87,8 +87,8 @@ public class DataTypeTest {
   public <U, T extends U> void detectTypeTest(DRIDataType<U, T> dataType, String... dataTypes) throws DRException {
     for (final String stringDataType : dataTypes) {
       assertEquals(dataType.getClass(), type.detectType(stringDataType).getClass(), "Detect data type");
-      assertEquals(dataType.getClass(), type.detectType(stringDataType.toLowerCase()).getClass(), "Detect data type");
-      assertEquals(dataType.getClass(), type.detectType(stringDataType.toUpperCase()).getClass(), "Detect data type");
+      assertEquals(dataType.getClass(), type.detectType(stringDataType.toLowerCase(Locale.ROOT)).getClass(), "Detect data type");
+      assertEquals(dataType.getClass(), type.detectType(stringDataType.toUpperCase(Locale.ROOT)).getClass(), "Detect data type");
     }
   }
 

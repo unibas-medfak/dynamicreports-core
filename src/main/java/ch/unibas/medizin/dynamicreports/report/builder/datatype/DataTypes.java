@@ -22,12 +22,12 @@ package ch.unibas.medizin.dynamicreports.report.builder.datatype;
 
 import ch.unibas.medizin.dynamicreports.report.definition.datatype.DRIDataType;
 import ch.unibas.medizin.dynamicreports.report.exception.DRException;
-import org.apache.commons.lang3.Validate;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import org.apache.commons.lang3.Validate;
 
 /**
  * A set of build in data types
@@ -84,7 +84,7 @@ public class DataTypes {
     public static <T extends DRIDataType<?, ?>> T detectType(String dataType) throws DRException {
         Validate.notNull(dataType, "dataType must not be null");
 
-        String dataTypeLC = dataType.toLowerCase().trim();
+        String dataTypeLC = dataType.toLowerCase(Locale.ROOT).trim();
         if (dataTypeLC.equals("bigdecimal") || dataType.equals(BigDecimal.class.getName())) {
             return (T) bigDecimalType;
         }

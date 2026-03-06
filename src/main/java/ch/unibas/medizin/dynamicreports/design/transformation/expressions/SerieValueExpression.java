@@ -77,20 +77,11 @@ public class SerieValueExpression extends AbstractSimpleExpression<Number> {
 
         Object resetValue = null;
         switch (resetType) {
-            case NONE:
-            case REPORT:
-                break;
-            case PAGE:
-                resetValue = reportParameters.getPageNumber();
-                break;
-            case COLUMN:
-                resetValue = reportParameters.getColumnNumber();
-                break;
-            case GROUP:
-                resetValue = reportParameters.getValue(resetGroup.getGroupExpression().getName());
-                break;
-            default:
-                throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
+            case NONE, REPORT -> {}
+            case PAGE -> resetValue = reportParameters.getPageNumber();
+            case COLUMN -> resetValue = reportParameters.getColumnNumber();
+            case GROUP -> resetValue = reportParameters.getValue(resetGroup.getGroupExpression().getName());
+            default -> throw new DRDesignReportException("Reset type " + resetType.name() + " not supported");
         }
         if (this.resetValue != null && !this.resetValue.equals(resetValue)) {
             this.values = new HashMap<>();

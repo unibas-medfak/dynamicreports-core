@@ -156,21 +156,21 @@ public class ColumnGridTransform {
             HorizontalCellComponentAlignment horizontalAlignment = cell.getHorizontalAlignment();
             VerticalCellComponentAlignment verticalAlignment = cell.getVerticalAlignment();
             if (component instanceof DRIColumn<?> column) {
-                if (column instanceof DRIBooleanColumn) {
+                if (column instanceof DRIBooleanColumn driBooleanColumn) {
                     if (horizontalAlignment == null) {
-                        horizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(((DRIBooleanColumn) column).getComponent().getWidthType());
+                        horizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(driBooleanColumn.getComponent().getWidthType());
                     }
                     if (verticalAlignment == null) {
-                        ConstantTransform.toVerticalCellComponentAlignment(((DRIBooleanColumn) column).getComponent().getHeightType());
+                        ConstantTransform.toVerticalCellComponentAlignment(driBooleanColumn.getComponent().getHeightType());
                     }
                 } else {
                     final DRIComponent columnComponent = accessor.getColumnTransform().getColumnComponent(column);
-                    if (columnComponent instanceof DRIDimensionComponent) {
+                    if (columnComponent instanceof DRIDimensionComponent driDimensionComponent) {
                         if (horizontalAlignment == null) {
-                            horizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(((DRIDimensionComponent) columnComponent).getWidthType());
+                            horizontalAlignment = ConstantTransform.toHorizontalCellComponentAlignment(driDimensionComponent.getWidthType());
                         }
                         if (verticalAlignment == null) {
-                            ConstantTransform.toVerticalCellComponentAlignment(((DRIDimensionComponent) columnComponent).getHeightType());
+                            ConstantTransform.toVerticalCellComponentAlignment(driDimensionComponent.getHeightType());
                         }
                     }
                 }

@@ -102,8 +102,8 @@ public class ColumnTransform {
                 DRDesignComponent detailComponent;
                 if (column instanceof DRIValueColumn<?>) {
                     detailComponent = detailValueComponent((DRIValueColumn<?>) column);
-                } else if (column instanceof DRIBooleanColumn) {
-                    detailComponent = detailBooleanComponent((DRIBooleanColumn) column);
+                } else if (column instanceof DRIBooleanColumn driBooleanColumn) {
+                    detailComponent = detailBooleanComponent(driBooleanColumn);
                 } else {
                     detailComponent = detailComponent(column);
                 }
@@ -127,8 +127,8 @@ public class ColumnTransform {
         for (final DRIColumn<?> column : accessor.getReport().getColumns()) {
             if (!accessor.getGroupTransform().getHideGroupColumns().contains(column)) {
                 DRIComponent component = column.getComponent();
-                if (column instanceof DRIBooleanColumn) {
-                    component = createBooleanComponent((DRIBooleanColumn) column);
+                if (column instanceof DRIBooleanColumn driBooleanColumn) {
+                    component = createBooleanComponent(driBooleanColumn);
                 }
                 columnComponents.put(column, component);
             }

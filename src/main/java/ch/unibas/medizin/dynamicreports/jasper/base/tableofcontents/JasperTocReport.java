@@ -122,14 +122,9 @@ public class JasperTocReport {
                 int i = 0; i < tocJasperPrint.getPages().size(); i++) {
                 final JRPrintPage page = tocJasperPrint.getPages().get(i);
                 switch (tableOfContentsPosition) {
-                    case TOP:
-                        jasperPrint.addPage(i, page);
-                        break;
-                    case BOTTOM:
-                        jasperPrint.addPage(page);
-                        break;
-                    default:
-                        throw new JasperDesignException("Table of contents position " + tableOfContentsPosition.name() + " not supported");
+                    case TOP -> jasperPrint.addPage(i, page);
+                    case BOTTOM -> jasperPrint.addPage(page);
+                    default -> throw new JasperDesignException("Table of contents position " + tableOfContentsPosition.name() + " not supported");
                 }
             }
             for (final JRStyle style : tocJasperPrint.getStyles()) {
@@ -139,14 +134,14 @@ public class JasperTocReport {
     }
 
     private static void addTocHeading(Map<String, JasperTocHeading> headings, List<JasperTocHeading> headingList, JRPrintElement element, int pageNumber) {
-        if (element instanceof JRPrintText && StringUtils.contains(element.getKey(), ".tocReference")) {
-            final String id = ((JRPrintText) element).getAnchorName();
+        if (element instanceof JRPrintText jrPrintText && StringUtils.contains(element.getKey(), ".tocReference")) {
+            final String id = jrPrintText.getAnchorName();
             final JasperTocHeading heading = headings.get(id);
             heading.setPageIndex(pageNumber);
             headingList.add(heading);
         }
-        if (element instanceof JRPrintFrame) {
-            for (final JRPrintElement element2 : ((JRPrintFrame) element).getElements()) {
+        if (element instanceof JRPrintFrame jrPrintFrame) {
+            for (final JRPrintElement element2 : jrPrintFrame.getElements()) {
                 addTocHeading(headings, headingList, element2, pageNumber);
             }
         }
