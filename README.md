@@ -25,7 +25,7 @@ For examples and detailed usage demonstrations of DynamicReports, please refer t
 <dependency>
     <groupId>ch.unibas.medizin</groupId>
     <artifactId>dynamicreports-core</artifactId>
-    <version>7.0.5</version>
+    <version>7.0.6</version>
 </dependency>
 ```
 
