@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DynamicReports Core API Overview</title>
+</head>
+<body>
+<p>
+    DynamicReports Core is an open-source Java reporting library based on
+    <a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReports</a>.
+    It allows you to create dynamic report designs entirely in Java code, without requiring a visual
+    report designer or pre-built templates. Reports can be displayed, printed, or exported to many
+    popular formats such as PDF, Excel, Word, HTML, and others.
+</p>
+
+<h2>Getting Started</h2>
+<p>
+    The main entry point is {@link ch.unibas.medizin.dynamicreports.report.builder.DynamicReports},
+    a utility class that provides static factory methods and pre-built builder instances for all
+    major report elements. A typical report is built using a fluent API:
+</p>
+<pre><code>
+import static ch.unibas.medizin.dynamicreports.report.builder.DynamicReports.*;
+
+JasperReportBuilder report = report()
+    .columns(
+        col.column("Name", "name", type.stringType()),
+        col.column("Quantity", "quantity", type.integerType()),
+        col.column("Unit Price", "unitPrice", type.bigDecimalType()))
+    .subtotalsAtSummary(
+        sbt.sum("quantity", type.integerType()),
+        sbt.sum("unitPrice", type.bigDecimalType()))
+    .setDataSource(dataSource);
+
+report.toPdf(new FileOutputStream("report.pdf"));
+</code></pre>
+<p>
+    For practical, runnable examples covering all features of the library, see the companion
+    <a href="https://github.com/unibas-medfak/dynamicreports-examples">dynamicreports-examples</a>
+    repository.
+</p>
+
+<h2>Core Classes</h2>
+
+<h3>Report Building</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.DynamicReports} &ndash;
+        The primary entry point. Provides static factory fields and methods for constructing all
+        report elements (columns, groups, subtotals, styles, charts, expressions, etc.).
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.jasper.builder.JasperReportBuilder} &ndash;
+        The main report builder. Used to configure report bands (title, page header/footer, column
+        header/footer, detail, summary), data sources, page layout, styles, and more. Supports
+        direct export to PDF, Excel, Word, HTML, CSV, XML, and other formats.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.jasper.builder.JasperConcatenatedReportBuilder} &ndash;
+        Combines multiple {@code JasperReportBuilder} instances into a single output document.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.ReportBuilder} &ndash;
+        Base class for all report builders, providing the fluent configuration API shared across
+        report types.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.ReportTemplateBuilder} &ndash;
+        Defines a reusable report template with common defaults (fonts, styles, column widths,
+        page margins, etc.) that can be applied to multiple reports.
+    </li>
+</ul>
+
+<h3>Columns</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.column.ColumnBuilders} &ndash;
+        Factory for all column builder types. Accessed via {@code DynamicReports.col}.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.column.TextColumnBuilder} &ndash;
+        The most commonly used column type; binds a report field to a typed, formatted column.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.column.ComponentColumnBuilder} &ndash;
+        A column whose cell content is a custom component (e.g. an image or a chart).
+    </li>
+</ul>
+
+<h3>Groups</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.group.GroupBuilders} &ndash;
+        Factory for group builders. Accessed via {@code DynamicReports.grp}.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.group.ColumnGroupBuilder} &ndash;
+        Groups report rows by the values of a given column, with optional group header and footer bands.
+    </li>
+</ul>
+
+<h3>Subtotals</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.subtotal.SubtotalBuilders} &ndash;
+        Factory for subtotal builders. Accessed via {@code DynamicReports.sbt}.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.subtotal.AggregationSubtotalBuilder} &ndash;
+        Produces aggregated values (sum, count, average, min, max, etc.) at group, page, or report
+        summary level.
+    </li>
+</ul>
+
+<h3>Styles</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.style.StyleBuilders} &ndash;
+        Factory for style builders. Accessed via {@code DynamicReports.stl}.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.style.StyleBuilder} &ndash;
+        Defines a complete visual style: font, foreground/background colour, borders, padding,
+        alignment, and format pattern. Styles can inherit from a parent style.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.style.FontBuilder} &ndash;
+        Specifies font name, size, bold, italic, and underline attributes.
+    </li>
+</ul>
+
+<h3>Components</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.component.ComponentBuilders} &ndash;
+        Factory for report band components (text fields, images, lines, page breaks, subreports,
+        etc.). Accessed via {@code DynamicReports.cmp}.
+    </li>
+</ul>
+
+<h3>Expressions &amp; Conditions</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.expression.ExpressionBuilders} &ndash;
+        Factory for built-in expressions (field references, parameter references, today's date,
+        page number, etc.). Accessed via {@code DynamicReports.exp}.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.condition.ConditionBuilders} &ndash;
+        Factory for condition expressions used in conditional styles. Accessed via
+        {@code DynamicReports.cnd}.
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.VariableBuilder} &ndash;
+        Declares a report variable that accumulates or transforms data values during report
+        generation (e.g. running totals).
+    </li>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.FieldBuilder} &ndash;
+        Declares a typed data-source field used as input to columns, expressions, and variables.
+    </li>
+</ul>
+
+<h3>Charts</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.chart.ChartBuilders} &ndash;
+        Factory for chart builders (bar, line, pie, area, bubble, Gantt, etc.).
+        Accessed via {@code DynamicReports.cht}.
+    </li>
+</ul>
+
+<h3>Crosstabs</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.crosstab.CrosstabBuilders} &ndash;
+        Factory for crosstab (pivot table) builders. Accessed via {@code DynamicReports.ctab}.
+    </li>
+</ul>
+
+<h3>Data Types</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.report.builder.datatype.DataTypeBuilders} &ndash;
+        Factory for typed data-type descriptors that control how values are formatted in columns
+        and components. Accessed via {@code DynamicReports.type}.
+    </li>
+</ul>
+
+<h3>Export</h3>
+<ul>
+    <li>
+        {@link ch.unibas.medizin.dynamicreports.jasper.builder.export.ExporterBuilders} &ndash;
+        Factory for exporter configuration builders (PDF, Excel, Word, HTML, CSV, XML, ODS, ODP,
+        RTF, and image formats). Accessed via {@code DynamicReports.export}.
+    </li>
+</ul>
+
+<h2>Package Overview</h2>
+<ul>
+    <li>
+        {@code ch.unibas.medizin.dynamicreports.report.builder} &ndash;
+        Public builder API for declaring report structure and content.
+    </li>
+    <li>
+        {@code ch.unibas.medizin.dynamicreports.jasper.builder} &ndash;
+        JasperReports-backed builders for compiling, running, and exporting reports.
+    </li>
+    <li>
+        {@code ch.unibas.medizin.dynamicreports.report.definition} &ndash;
+        Core interfaces that define the report model consumed by the design and transformation layers.
+    </li>
+    <li>
+        {@code ch.unibas.medizin.dynamicreports.design} &ndash;
+        Internal design-time representation of a report, produced by transforming the builder model.
+    </li>
+    <li>
+        {@code ch.unibas.medizin.dynamicreports.jasper.transformation} &ndash;
+        Converts the design model into JasperReports objects ready for compilation.
+    </li>
+    <li>
+        {@code ch.unibas.medizin.dynamicreports.report.constant} &ndash;
+        Enumerations for page orientation, calculation types, position, evaluation times, and more.
+    </li>
+</ul>
+
+<h2>Further Resources</h2>
+<ul>
+    <li>
+        <a href="https://github.com/unibas-medfak/dynamicreports-core">DynamicReports Core on GitHub</a>
+    </li>
+    <li>
+        <a href="https://github.com/unibas-medfak/dynamicreports-examples">dynamicreports-examples</a>
+        &ndash; A companion repository with comprehensive, ready-to-run examples demonstrating charts,
+        crosstabs, groups, styles, subreports, exporters, and more.
+    </li>
+    <li>
+        <a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReports Library</a>
+    </li>
+</ul>
+</body>
+</html>
