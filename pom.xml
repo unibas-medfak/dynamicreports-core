@@ -213,6 +213,7 @@
                 <configuration>
                     <failOnError>false</failOnError>
                     <doclint>all,-missing</doclint>
+                    <overview>${project.basedir}/src/main/javadoc/overview.html</overview>
                     <sourceFileExcludes>
                         <sourceFileExclude>${project.basedir}/target</sourceFileExclude>
                     </sourceFileExcludes>

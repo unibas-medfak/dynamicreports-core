@@ -14,6 +14,9 @@ go down and disappear like that.
 ## Project Goals
 This project aims to maintain a fork of the original source code supporting current dependencies.
 
+## Documentation
+The API documentation is available as a [Javadoc](https://unibas-medfak.github.io/dynamicreports-core/index.html).
+
 ## Usage
 DynamicReports is synchronized with a Maven central repository. For Maven projects, you add a dependency to your maven configuration. In case you would like to use a development version, add a Sonatype Nexus snapshot repository to your maven configuration.
 
