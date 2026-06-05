@@ -1,0 +1,8 @@
+<jasperReport name="subreport" language="java" pageWidth="575" pageHeight="100" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3f291b24-87fb-40e7-999a-64b081820916">
+    <title height="79" splitType="Stretch">
+        <element kind="rectangle" uuid="edb187b5-eaba-4751-be0d-138f7977154a" x="30" y="15" width="515" height="47"/>
+        <element kind="staticText" uuid="2e96837b-9ab8-4e0e-b36a-7daad8dd4865" x="30" y="27" width="515" height="20" hTextAlign="Center">
+            <text><![CDATA[Subreport - static design defined in subreport.jrxml file]]></text>
+        </element>
+    </title>
+</jasperReport>

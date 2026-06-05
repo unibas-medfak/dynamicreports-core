@@ -1,0 +1,35 @@
+<jasperReport name="templatedesign1" language="java" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="0ae871cd-9d10-406e-b964-e46589baa0b0">
+    <field name="item" class="java.lang.String"/>
+    <title height="79" splitType="Stretch"/>
+    <pageHeader height="79" splitType="Stretch">
+        <element kind="rectangle" uuid="e352389c-8a9f-4ba8-a2a6-9fd3f4151f71" x="30" y="15" width="515" height="47"/>
+        <element kind="staticText" uuid="0f76bc00-2c6e-4798-a4a3-bea2f6e97465" x="30" y="27" width="515" height="20" hTextAlign="Center">
+            <text><![CDATA[Page header defined in jrxml file]]></text>
+        </element>
+    </pageHeader>
+    <detail>
+        <band height="20">
+            <element kind="line" uuid="528da6ed-4a4c-4e54-b6ff-edb7a759c89c" x="30" y="10" width="100" height="1"/>
+            <element kind="line" uuid="cff0b93a-822f-4bd8-ac60-088e885ebe93" x="445" y="10" width="100" height="1"/>
+            <element kind="textField" uuid="7147a790-030f-4d14-a97f-7f4df61a3dda" x="135" y="0" width="305" height="20" hTextAlign="Center" vTextAlign="Middle">
+                <expression><![CDATA["row " + $V{REPORT_COUNT} +
+", item = " + $F{item} +
+", quantity = " + $F{quantity} +
+", unit price = " + $F{unitprice} +
+", defined in jrxml file"]]></expression>
+            </element>
+        </band>
+    </detail>
+    <pageFooter height="79" splitType="Stretch">
+        <element kind="rectangle" uuid="7714734d-d847-453a-a4a0-00f0e8e65dc3" x="30" y="15" width="515" height="47"/>
+        <element kind="staticText" uuid="0edad79c-b5c5-4a37-a6a5-19eca38134e8" x="30" y="27" width="515" height="20" hTextAlign="Center">
+            <text><![CDATA[Page footer defined in jrxml file]]></text>
+        </element>
+    </pageFooter>
+    <summary height="79" splitType="Stretch">
+        <element kind="rectangle" uuid="3a975aa5-f151-4631-8953-9427393e1621" x="30" y="15" width="515" height="47"/>
+        <element kind="staticText" uuid="67b25fca-a4f3-46a4-944f-e4ebbcbf9b2e" x="30" y="27" width="515" height="20" hTextAlign="Center">
+            <text><![CDATA[Summary defined in jrxml file]]></text>
+        </element>
+    </summary>
+</jasperReport>

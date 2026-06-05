@@ -121,15 +121,75 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>6.1.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <version>2.7.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Dependencies of the integrated examples and their baseline test (src/test). -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20260522</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.26.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>1.84</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.20.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!--
+            Bundles the DejaVu TrueType fonts so the example baseline test renders text from a fixed
+            font instead of whatever the host happens to have installed. The font-alias extension
+            under src/test/resources maps the families the examples use (Arial, SansSerif, ...) onto
+            these TTFs, making the rendered images reproducible across macOS, Linux and CI.
+        -->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports-fonts</artifactId>
+            <version>7.0.7</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.5</version>
+                <configuration>
+                    <!--
+                        Renders the example reports reproducibly so the baseline images are stable:
+                        - headless: the shadow JasperViewer never opens a window, but stay safe on CI
+                        - add-opens: lets ExampleBaselineTest reseed Math.random()'s generator
+                        - EnableDynamicAgentLoading: lets Mockito self-attach to freeze the clock
+                          (examples using Calendar.getInstance()/Instant.now()) without a warning
+                        @{argLine} preserves the argLine the JaCoCo agent prepends.
+                    -->
+                    <argLine>@{argLine} -Djava.awt.headless=true -XX:+EnableDynamicAgentLoading --add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

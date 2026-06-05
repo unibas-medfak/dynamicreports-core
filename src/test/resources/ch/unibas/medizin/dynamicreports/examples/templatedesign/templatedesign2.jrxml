@@ -1,0 +1,22 @@
+<jasperReport name="templatedesign2" language="java" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="dadde2cb-59e9-4c88-a03d-170a20f50ac8">
+    <field name="item" class="java.lang.String"/>
+    <title height="79" splitType="Stretch"/>
+    <pageHeader height="79" splitType="Stretch">
+        <element kind="rectangle" uuid="609161d5-b86b-4cea-84cd-b85c85e71223" x="30" y="15" width="515" height="47"/>
+        <element kind="staticText" uuid="5b3076cb-2704-4285-b892-32dbe9163913" x="30" y="27" width="515" height="20" hTextAlign="Center">
+            <text><![CDATA[Page header defined in templatedesign2.jrxml file]]></text>
+        </element>
+    </pageHeader>
+    <pageFooter height="79" splitType="Stretch">
+        <element kind="rectangle" uuid="193f0adb-ec33-4849-8598-bc305983cc73" x="30" y="15" width="515" height="47"/>
+        <element kind="staticText" uuid="bbf58454-39b3-47f0-9c04-6e0f28b0c875" x="30" y="27" width="515" height="20" hTextAlign="Center">
+            <text><![CDATA[Page footer defined in templatedesign2.jrxml file]]></text>
+        </element>
+    </pageFooter>
+    <summary height="79" splitType="Stretch">
+        <element kind="rectangle" uuid="15cc14a1-fc2d-4dbd-ab4b-947e83c11260" x="30" y="15" width="515" height="47"/>
+        <element kind="staticText" uuid="3ce3aecc-9518-4972-ac33-bf574c5a7e8c" x="30" y="27" width="515" height="20" hTextAlign="Center">
+            <text><![CDATA[Summary defined in templatedesign2.jrxml file]]></text>
+        </element>
+    </summary>
+</jasperReport>

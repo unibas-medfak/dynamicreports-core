@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Aliases the font families the example reports request onto the DejaVu TrueType fonts shipped by
+    the jasperreports-fonts dependency (test scope). The TTF paths below resolve against that jar on
+    the test classpath. Mapping the common host fonts (Arial/Helvetica/sans-serif, Times/serif,
+    Courier/monospaced) plus the logical AWT names guarantees JasperReports rasterises identical
+    glyphs everywhere, which is what makes the rendered baselines reproducible across platforms.
+-->
+<fontFamilies>
+
+    <fontFamily name="Arial">
+        <normal>net/sf/jasperreports/fonts/dejavu/DejaVuSans.ttf</normal>
+        <bold>net/sf/jasperreports/fonts/dejavu/DejaVuSans-Bold.ttf</bold>
+        <italic>net/sf/jasperreports/fonts/dejavu/DejaVuSans-Oblique.ttf</italic>
+        <boldItalic>net/sf/jasperreports/fonts/dejavu/DejaVuSans-BoldOblique.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+        <exportFonts>
+            <export key="net.sf.jasperreports.html">Arial, Helvetica, sans-serif</export>
+        </exportFonts>
+    </fontFamily>
+
+    <fontFamily name="Helvetica">
+        <normal>net/sf/jasperreports/fonts/dejavu/DejaVuSans.ttf</normal>
+        <bold>net/sf/jasperreports/fonts/dejavu/DejaVuSans-Bold.ttf</bold>
+        <italic>net/sf/jasperreports/fonts/dejavu/DejaVuSans-Oblique.ttf</italic>
+        <boldItalic>net/sf/jasperreports/fonts/dejavu/DejaVuSans-BoldOblique.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+
+    <fontFamily name="SansSerif">
+        <normal>net/sf/jasperreports/fonts/dejavu/DejaVuSans.ttf</normal>
+        <bold>net/sf/jasperreports/fonts/dejavu/DejaVuSans-Bold.ttf</bold>
+        <italic>net/sf/jasperreports/fonts/dejavu/DejaVuSans-Oblique.ttf</italic>
+        <boldItalic>net/sf/jasperreports/fonts/dejavu/DejaVuSans-BoldOblique.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+
+    <fontFamily name="Serif">
+        <normal>net/sf/jasperreports/fonts/dejavu/DejaVuSerif.ttf</normal>
+        <bold>net/sf/jasperreports/fonts/dejavu/DejaVuSerif-Bold.ttf</bold>
+        <italic>net/sf/jasperreports/fonts/dejavu/DejaVuSerif-Italic.ttf</italic>
+        <boldItalic>net/sf/jasperreports/fonts/dejavu/DejaVuSerif-BoldItalic.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+
+    <fontFamily name="Times New Roman">
+        <normal>net/sf/jasperreports/fonts/dejavu/DejaVuSerif.ttf</normal>
+        <bold>net/sf/jasperreports/fonts/dejavu/DejaVuSerif-Bold.ttf</bold>
+        <italic>net/sf/jasperreports/fonts/dejavu/DejaVuSerif-Italic.ttf</italic>
+        <boldItalic>net/sf/jasperreports/fonts/dejavu/DejaVuSerif-BoldItalic.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+
+    <fontFamily name="Monospaced">
+        <normal>net/sf/jasperreports/fonts/dejavu/DejaVuSansMono.ttf</normal>
+        <bold>net/sf/jasperreports/fonts/dejavu/DejaVuSansMono-Bold.ttf</bold>
+        <italic>net/sf/jasperreports/fonts/dejavu/DejaVuSansMono-Oblique.ttf</italic>
+        <boldItalic>net/sf/jasperreports/fonts/dejavu/DejaVuSansMono-BoldOblique.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+
+    <fontFamily name="Courier New">
+        <normal>net/sf/jasperreports/fonts/dejavu/DejaVuSansMono.ttf</normal>
+        <bold>net/sf/jasperreports/fonts/dejavu/DejaVuSansMono-Bold.ttf</bold>
+        <italic>net/sf/jasperreports/fonts/dejavu/DejaVuSansMono-Oblique.ttf</italic>
+        <boldItalic>net/sf/jasperreports/fonts/dejavu/DejaVuSansMono-BoldOblique.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+
+</fontFamilies>

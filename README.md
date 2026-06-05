@@ -32,6 +32,20 @@ For examples and detailed usage demonstrations of DynamicReports, please refer t
 </dependency>
 ```
 
+## Examples
+A collection of runnable example reports lives in the test sources under
+`src/test/java/ch/unibas/medizin/dynamicreports/examples`. They double as a regression
+suite: `ExampleBaselineTest` renders every example and compares it against a stored
+baseline image, so they are exercised on each build.
+
+Each example exposes a `main` method that calls `JasperReportBuilder.show()`. Note that the
+test classpath contains a shadow `net.sf.jasperreports.view.JasperViewer`
+(`src/test/java/net/sf/jasperreports/view/JasperViewer.java`) that captures the rendered
+report headlessly instead of opening a Swing window. Because it is loaded ahead of the
+library class, running an example's `main` from an IDE renders the report but shows nothing.
+To open the real viewer, temporarily remove/rename that shadow class, or export the report
+(e.g. `.toPdf(...)`) instead of calling `.show()`.
+
 ## Build
 #### Build from source 
 Check the release page to download source [release files](https://github.com/unibas-medfak/dynamicreports-core/releases).

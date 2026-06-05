@@ -97,3 +97,9 @@ DerivedData
 !default.perspectivev3
 
 .flattened-pom.xml
+
+# Scratch files the export-only examples write to the working directory when the
+# example baseline test runs (report.pdf, report.xlsx, report.html, report.html_files/, ...).
+report.*
+# ...but the committed text baselines under report-baselines/ must stay tracked.
+!src/test/resources/report-baselines/**/report.html

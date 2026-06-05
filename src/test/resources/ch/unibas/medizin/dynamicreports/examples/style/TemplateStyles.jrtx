@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperTemplate>
+	<style name="style1" bold="true"/>
+	<style name="style2" style="style1" italic="true"/>
+	<style name="columnStyle" vTextAlign="Middle"/>
+	<style name="columnTitleStyle" style="columnStyle" backcolor="#C0C0C0" hTextAlign="Center">
+		<box>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+</jasperTemplate>

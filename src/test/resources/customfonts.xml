@@ -10,8 +10,17 @@
     <pdfEmbedded>true</pdfEmbedded>
   </fontFamily>
 
+  <!--
+    FreeUniversal in all four variants, as the fonts examples (FontsReport, DefaultFontReport)
+    require. The TTFs live under the examples resources copied into src/test/resources.
+  -->
   <fontFamily name="FreeUniversal">
-    <normal>ch/unibas/medizin/dynamicreports/test/fonts/FreeUniversal-Regular.ttf</normal>
+    <normal>ch/unibas/medizin/dynamicreports/examples/fonts/FreeUniversal-Regular.ttf</normal>
+    <bold>ch/unibas/medizin/dynamicreports/examples/fonts/FreeUniversal-Bold.ttf</bold>
+    <italic>ch/unibas/medizin/dynamicreports/examples/fonts/FreeUniversal-Italic.ttf</italic>
+    <boldItalic>ch/unibas/medizin/dynamicreports/examples/fonts/FreeUniversal-BoldItalic.ttf</boldItalic>
+    <pdfEncoding>Cp1252</pdfEncoding>
+    <pdfEmbedded>true</pdfEmbedded>
   </fontFamily>
 
 </fontFamilies>

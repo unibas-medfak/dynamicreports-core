@@ -1,0 +1,54 @@
+<jasperReport name="Report" language="java" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" scriptletClass="ch.unibas.medizin.dynamicreports.jasper.base.JasperScriptlet" uuid="a87daefc-cbcb-45c4-ad94-0196e6a61baf">
+    <style name="style_27_" blankWhenNull="true" fontName="SansSerif" fontSize="10.0" pdfFontName="Helvetica" pdfEncoding="Cp1252" pdfEmbedded="false">
+        <box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+    </style>
+    <style name="style_26_" style="style_27_" blankWhenNull="true" bold="true"/>
+    <style name="style_25_" style="style_26_" hTextAlign="Center" vTextAlign="Middle" hImageAlign="Center" vImageAlign="Middle" blankWhenNull="true"/>
+    <style name="style_24_" style="style_25_" blankWhenNull="true" fontSize="12.0"/>
+    <style name="style_29_" style="style_27_" vTextAlign="Middle" vImageAlign="Middle" blankWhenNull="true"/>
+    <style name="style_28_" style="style_29_" mode="Opaque" backcolor="#C0C0C0" hTextAlign="Center" hImageAlign="Center" blankWhenNull="true" bold="true">
+        <box style="style_29_">
+            <topPen lineWidth="1.0" lineStyle="Solid"/>
+            <leftPen lineWidth="1.0" lineStyle="Solid"/>
+            <bottomPen lineWidth="1.0" lineStyle="Solid"/>
+            <rightPen lineWidth="1.0" lineStyle="Solid"/>
+        </box>
+    </style>
+    <parameter name="MASTER_REPORT_PARAMETERS" class="ch.unibas.medizin.dynamicreports.report.definition.ReportParameters"/>
+    <field name="item" class="java.lang.String"/>
+    <field name="quantity" class="java.lang.Integer"/>
+    <field name="unitprice" class="java.math.BigDecimal"/>
+    <title height="20">
+        <element kind="textField" uuid="dd1f7e18-1abe-45c5-8b01-2d7dfa685efd" key="title.textField1" positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="575" height="20" textAdjust="StretchHeight" blankWhenNull="true" style="style_24_">
+            <expression><![CDATA["Subreport" + $P{MASTER_REPORT_PARAMETERS}.getReportRowNumber()]]></expression>
+        </element>
+    </title>
+    <columnHeader height="17">
+        <element kind="frame" uuid="ac9cf112-f154-4b62-92bc-5bf12b10622d" key="columnHeader.list1" positionType="Float" x="0" y="0" width="575" height="17">
+            <element kind="textField" uuid="2f0d4ac1-0524-4082-95b3-e5ea6ec2adc5" key="columnHeader.column_item.title1" positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="191" height="17" textAdjust="StretchHeight" blankWhenNull="true" style="style_28_">
+                <expression><![CDATA["Item"]]></expression>
+            </element>
+            <element kind="textField" uuid="554435db-ae10-4051-ad09-2230a6029219" key="columnHeader.column_quantity.title1" positionType="Float" stretchType="ElementGroupHeight" x="191" y="0" width="192" height="17" textAdjust="StretchHeight" blankWhenNull="true" style="style_28_">
+                <expression><![CDATA["Quantity"]]></expression>
+            </element>
+            <element kind="textField" uuid="9b8cc4e3-2d60-404e-965b-31ffc222c8f7" key="columnHeader.column_unitprice.title1" positionType="Float" stretchType="ElementGroupHeight" x="383" y="0" width="192" height="17" textAdjust="StretchHeight" blankWhenNull="true" style="style_28_">
+                <expression><![CDATA["Unit price"]]></expression>
+            </element>
+        </element>
+    </columnHeader>
+    <detail>
+        <band height="17">
+            <element kind="frame" uuid="411f067c-751e-4506-bc0a-df6a9f0ee067" key="detail.list1" positionType="Float" x="0" y="0" width="575" height="17">
+                <element kind="textField" uuid="7b285129-8a62-4c3d-88e6-fe57d77ba8a8" key="detail.column_item1" positionType="Float" stretchType="ElementGroupHeight" x="0" y="0" width="191" height="17" textAdjust="StretchHeight" blankWhenNull="true" hTextAlign="Left" style="style_29_">
+                    <expression><![CDATA[$F{item}]]></expression>
+                </element>
+                <element kind="textField" uuid="3c220bd5-af83-4dab-a029-1f096df5c9eb" key="detail.column_quantity1" positionType="Float" stretchType="ElementGroupHeight" x="191" y="0" width="192" height="17" textAdjust="StretchHeight" pattern="#,##0" blankWhenNull="true" hTextAlign="Right" style="style_29_">
+                    <expression><![CDATA[$F{quantity}]]></expression>
+                </element>
+                <element kind="textField" uuid="321c7509-770e-413e-8edf-cb3489241c90" key="detail.column_unitprice1" positionType="Float" stretchType="ElementGroupHeight" x="383" y="0" width="192" height="17" textAdjust="StretchHeight" pattern="#,##0.00#" blankWhenNull="true" hTextAlign="Right" style="style_29_">
+                    <expression><![CDATA[$F{unitprice}]]></expression>
+                </element>
+            </element>
+        </band>
+    </detail>
+</jasperReport>
