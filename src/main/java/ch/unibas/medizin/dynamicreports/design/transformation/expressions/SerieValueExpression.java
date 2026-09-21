@@ -49,6 +49,8 @@ public class SerieValueExpression extends AbstractSimpleExpression<Number> {
     private final String key;
     private Object resetValue;
     private Map<Object, Double> values;
+    private int lastRowNumber = -1;
+    private Number lastValue;
 
     /**
      * <p>Constructor for SerieValueExpression.</p>
@@ -70,9 +72,19 @@ public class SerieValueExpression extends AbstractSimpleExpression<Number> {
     /** {@inheritDoc} */
     @Override
     public Number evaluate(ReportParameters reportParameters) {
-        if (reportParameters.getReportRowNumber() <= 1) {
+        final int rowNumber = reportParameters.getReportRowNumber();
+        if (rowNumber <= 1) {
             resetValue = null;
             values = new HashMap<>();
+            lastRowNumber = -1;
+            lastValue = null;
+        }
+
+        // for a chart embedded in a multi-axis plot, the fill engine evaluates this expression
+        // more than once for the same data row; only the first evaluation for a given row must
+        // update the accumulated series values, otherwise the value is counted multiple times
+        if (rowNumber == lastRowNumber) {
+            return lastValue;
         }
 
         Object resetValue = null;
@@ -104,6 +116,9 @@ public class SerieValueExpression extends AbstractSimpleExpression<Number> {
             }
             values.put(keyValue, value);
         }
+
+        lastRowNumber = rowNumber;
+        lastValue = value;
 
         return value;
     }
