@@ -167,7 +167,7 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-fonts</artifactId>
-            <version>7.0.8</version>
+            <version>7.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
