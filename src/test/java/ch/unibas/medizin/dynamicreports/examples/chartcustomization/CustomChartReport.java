@@ -135,7 +135,7 @@ public class CustomChartReport {
         @Override
         public Renderable evaluate(ReportParameters reportParameters) {
             JFreeChart chart = ChartFactory.createBoxAndWhiskerChart("Box and Whisker chart", "Category", "Value", dataset, true);
-            return new DrawChartRendererImpl(chart, null);
+            return new DrawChartRendererImpl(chart, null, 72);
         }
     }
 
