@@ -67,24 +67,29 @@ public abstract class AbstractJasperStyleTest extends AbstractJasperTest {
     final JRStyle style = getElementAt(name, index).getStyle();
 
     JRBoxPen pen = style.getLineBox().getTopPen();
-    Assertions.assertEquals(top, pen.getLineWidth(), 0);
+    Assertions.assertEquals(top, lineWidth(pen), 0);
     Assertions.assertEquals(topColor, pen.getLineColor());
     Assertions.assertEquals(topLineStyle, pen.getLineStyle());
 
     pen = style.getLineBox().getBottomPen();
-    Assertions.assertEquals(bottom, pen.getLineWidth(), 0);
+    Assertions.assertEquals(bottom, lineWidth(pen), 0);
     Assertions.assertEquals(bottomColor, pen.getLineColor());
     Assertions.assertEquals(bottomLineStyle, pen.getLineStyle());
 
     pen = style.getLineBox().getLeftPen();
-    Assertions.assertEquals(left, pen.getLineWidth(), 0);
+    Assertions.assertEquals(left, lineWidth(pen), 0);
     Assertions.assertEquals(leftColor, pen.getLineColor());
     Assertions.assertEquals(leftLineStyle, pen.getLineStyle());
 
     pen = style.getLineBox().getRightPen();
-    Assertions.assertEquals(right, pen.getLineWidth(), 0);
+    Assertions.assertEquals(right, lineWidth(pen), 0);
     Assertions.assertEquals(rightColor, pen.getLineColor());
     Assertions.assertEquals(rightLineStyle, pen.getLineStyle());
+  }
+
+  private static float lineWidth(JRBoxPen pen) {
+    final Float width = pen.getLineWidth();
+    return width != null ? width : 0f;
   }
 
   protected void paddingTest(String name, int index, Integer top, Integer bottom, Integer left,
