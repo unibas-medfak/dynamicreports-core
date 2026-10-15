@@ -24,7 +24,7 @@ import java.util.List;
 
 import org.apache.commons.lang3.EnumUtils;
 
-import com.lowagie.text.pdf.PdfWriter;
+import org.openpdf.text.pdf.PdfWriter;
 
 import ch.unibas.medizin.dynamicreports.design.constant.EvaluationTime;
 import ch.unibas.medizin.dynamicreports.design.constant.ResetType;

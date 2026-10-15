@@ -60,7 +60,7 @@
         </dependency>
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
-            <artifactId>jasperreports-pdf</artifactId>
+            <artifactId>jasperreports-openpdf</artifactId>
             <version>7.1.0</version>
         </dependency>
         <dependency>
