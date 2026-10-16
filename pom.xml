@@ -181,13 +181,14 @@
                 <configuration>
                     <!--
                         Renders the example reports reproducibly so the baseline images are stable:
+                        - user.language/user.country: fixed en_US locale so number formats (5,000) do not depend on the machine
                         - headless: the shadow JasperViewer never opens a window, but stay safe on CI
                         - add-opens: lets ExampleBaselineTest reseed Math.random()'s generator
                         - EnableDynamicAgentLoading: lets Mockito self-attach to freeze the clock
                           (examples using Calendar.getInstance()/Instant.now()) without a warning
                         @{argLine} preserves the argLine the JaCoCo agent prepends.
                     -->
-                    <argLine>@{argLine} -Djava.awt.headless=true -XX:+EnableDynamicAgentLoading --add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+                    <argLine>@{argLine} -Duser.language=en -Duser.country=US -Djava.awt.headless=true -XX:+EnableDynamicAgentLoading --add-opens java.base/java.lang=ALL-UNNAMED</argLine>
                 </configuration>
             </plugin>
             <plugin>
